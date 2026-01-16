@@ -94,7 +94,7 @@ jobs:
           path: frontend/dist
 
   deploy:
-    runs-on: self-hosted
+    runs-on: [self-hosted, fedora]
     needs: [build-backend, build-frontend, check-changes]
     if: |
       always() &&
