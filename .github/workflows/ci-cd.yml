@@ -1,0 +1,196 @@
+name: CI/CD
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  check-changes:
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+    outputs:
+      frontend: ${{ steps.filter.outputs.frontend }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dorny/paths-filter@v3
+        id: filter
+        with:
+          filters: |
+            frontend:
+              - 'frontend/**'
+
+  test-backend:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: backend
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: '1.21'
+
+      - name: Download dependencies
+        run: go mod download
+
+      - name: Run tests
+        run: go test ./...
+
+  build-backend:
+    runs-on: ubuntu-latest
+    needs: test-backend
+    defaults:
+      run:
+        working-directory: backend
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: '1.21'
+
+      - name: Download dependencies
+        run: go mod download
+
+      - name: Build
+        run: GOOS=linux GOARCH=amd64 go build -o tcg-server ./cmd/server
+
+      - name: Upload backend artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: backend-binary
+          path: backend/tcg-server
+
+  build-frontend:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: frontend
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: frontend/package-lock.json
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+
+      - name: Upload frontend artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: frontend-dist
+          path: frontend/dist
+
+  deploy:
+    runs-on: self-hosted
+    needs: [build-backend, build-frontend, check-changes]
+    if: |
+      always() &&
+      github.ref == 'refs/heads/main' &&
+      github.event_name == 'push' &&
+      needs.build-backend.result == 'success' &&
+      needs.build-frontend.result == 'success'
+    environment: production
+    env:
+      SERVER: "192.168.86.227"
+      APP_DIR: "/opt/tcg-tracker"
+      SERVICE_NAME: "tcg-tracker"
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Download backend artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: backend-binary
+          path: backend
+
+      - name: Download frontend artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: frontend-dist
+          path: frontend/dist
+
+      - name: Make backend binary executable
+        run: chmod +x backend/tcg-server
+
+      - name: Stop service
+        run: |
+          ssh $SERVER "sudo systemctl stop $SERVICE_NAME || true"
+
+      - name: Prepare remote directory
+        run: |
+          ssh $SERVER "sudo mkdir -p $APP_DIR && sudo chown \$(whoami) $APP_DIR"
+          ssh $SERVER "mkdir -p $APP_DIR/data"
+
+      - name: Transfer binary and frontend
+        run: |
+          scp backend/tcg-server $SERVER:$APP_DIR/
+          scp -r frontend/dist $SERVER:$APP_DIR/
+
+      - name: Setup environment variables
+        run: |
+          ssh $SERVER 'cat > /opt/tcg-tracker/config.env << EOF
+          DB_PATH=/opt/tcg-tracker/tcg_tracker.db
+          PORT=8081
+          FRONTEND_DIST_PATH=/opt/tcg-tracker/dist
+          POKEMON_DATA_DIR=/opt/tcg-tracker/data
+          POKEMON_PRICE_DAILY_LIMIT=100
+          EOF'
+          ssh $SERVER "sed -i 's/^[[:space:]]*//' /opt/tcg-tracker/config.env"
+
+      - name: Backup database (if exists)
+        run: |
+          ssh $SERVER "if [ -f $APP_DIR/tcg_tracker.db ]; then cp $APP_DIR/tcg_tracker.db $APP_DIR/tcg_tracker.db.backup.\$(date +%Y%m%d_%H%M%S); fi"
+
+      - name: Setup systemd service
+        run: |
+          scp deployment/tcg-tracker.service $SERVER:/tmp/
+          ssh $SERVER "sudo mv /tmp/tcg-tracker.service /etc/systemd/system/"
+          ssh $SERVER "sudo systemctl daemon-reload"
+          ssh $SERVER "sudo systemctl enable $SERVICE_NAME"
+
+      - name: Start service
+        run: |
+          ssh $SERVER "sudo systemctl start $SERVICE_NAME"
+          sleep 3
+
+      - name: Verify service health
+        run: |
+          echo "Checking service status..."
+          ssh $SERVER "sudo systemctl status $SERVICE_NAME --no-pager | head -10"
+          echo "Testing health endpoint..."
+          ssh $SERVER "curl -sf http://127.0.0.1:8081/api/health || echo 'Warning: Health check failed'"
+
+      - name: Configure nginx
+        run: |
+          scp deployment/tcg.seavey.dev.conf $SERVER:/tmp/
+          ssh $SERVER "sudo mv /tmp/tcg.seavey.dev.conf /etc/nginx/sites-available/tcg.seavey.dev.conf"
+          ssh $SERVER "sudo ln -sf /etc/nginx/sites-available/tcg.seavey.dev.conf /etc/nginx/sites-enabled/"
+          ssh $SERVER "sudo nginx -t && sudo systemctl reload nginx"
+
+      - name: Purge Cloudflare cache
+        if: needs.check-changes.outputs.frontend == 'true'
+        run: |
+          curl -X POST "https://api.cloudflare.com/client/v4/zones/${{ secrets.CLOUDFLARE_ZONE_ID }}/purge_cache" \
+            -H "Authorization: Bearer ${{ secrets.CLOUDFLARE_API_TOKEN }}" \
+            -H "Content-Type: application/json" \
+            --data '{"hosts":["tcg.seavey.dev"]}'
+
+      - name: Deployment summary
+        run: |
+          echo "=== Deployment Complete ==="
+          echo "App URL: https://tcg.seavey.dev"
+          echo "Database: $APP_DIR/tcg_tracker.db (preserved across deploys)"
+          echo "Pokemon data: $APP_DIR/data/ (auto-downloaded on first run)"

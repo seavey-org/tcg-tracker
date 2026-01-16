@@ -1,0 +1,22 @@
+[Unit]
+Description=TCG Tracker Web Server
+After=network.target
+
+[Service]
+# Load environment variables
+EnvironmentFile=/opt/tcg-tracker/config.env
+
+User=root
+Group=root
+
+# The directory where the binary and 'dist' folder are located
+WorkingDirectory=/opt/tcg-tracker
+
+# The command to start the server
+ExecStart=/opt/tcg-tracker/tcg-server
+
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

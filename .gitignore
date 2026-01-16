@@ -1,0 +1,50 @@
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+
+# Binary
+/backend/tcg-tracker
+/backend/server
+
+# Build outputs
+/backend/bin/
+/frontend/dist/
+/mobile/build/
+
+# Dependencies
+/frontend/node_modules/
+/mobile/.dart_tool/
+/mobile/.packages
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Test coverage
+coverage/
+*.cover
+
+# Temporary files
+tmp/
+temp/
+
+# Pokemon TCG data (downloaded automatically)
+backend/data/pokemon-tcg-data-master/
+backend/data/pokemon-tcg-data.zip
