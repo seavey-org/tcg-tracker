@@ -157,6 +157,12 @@ func (h *CardHandler) IdentifyCard(c *gin.Context) {
 		result.Cards = rankCardMatches(result.Cards, parsed)
 	}
 
+	// Cache cards in database (so they can be added to collection)
+	db := database.GetDB()
+	for _, card := range result.Cards {
+		db.Save(&card)
+	}
+
 	// Include parsing info in response for debugging
 	c.JSON(http.StatusOK, gin.H{
 		"cards":       result.Cards,
