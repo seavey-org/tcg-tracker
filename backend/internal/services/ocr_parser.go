@@ -1,6 +1,7 @@
 package services
 
 import (
+	"log"
 	"regexp"
 	"sort"
 	"strconv"
@@ -293,10 +294,40 @@ var pokemonSetTotalToCode = map[string][]string{
 	"146": {"dp6"},        // Legends Awakened (146 cards)
 }
 
-// knownPokemonNamesSorted contains Pokemon names sorted by length (longest first)
-// to prevent partial matches (e.g., "mewtwo" is checked before "mew").
-// Sorted once at package initialization for efficiency.
-var knownPokemonNamesSorted = func() []string {
+// dynamicPokemonNames holds Pokemon names loaded from the card database
+// This is set by InitPokemonNamesFromData() and takes priority over the fallback list
+var dynamicPokemonNames []string
+var dynamicNamesInitialized bool
+
+// InitPokemonNamesFromData initializes the Pokemon name list from card database data
+// This should be called after the Pokemon data is loaded to enable comprehensive name matching
+func InitPokemonNamesFromData(names []string) {
+	if len(names) == 0 {
+		return
+	}
+	dynamicPokemonNames = names
+	dynamicNamesInitialized = true
+	log.Printf("OCR Parser: Initialized with %d Pokemon names from database", len(names))
+}
+
+// GetPokemonNameCount returns the number of Pokemon names available for OCR matching
+func GetPokemonNameCount() int {
+	return len(getPokemonNames())
+}
+
+// getPokemonNames returns the best available Pokemon name list
+// Prefers dynamically loaded names from database, falls back to hardcoded list
+func getPokemonNames() []string {
+	if dynamicNamesInitialized && len(dynamicPokemonNames) > 0 {
+		return dynamicPokemonNames
+	}
+	return fallbackPokemonNames
+}
+
+// fallbackPokemonNames contains a hardcoded list of common Pokemon names
+// Used when dynamic names from the database are not available
+// Sorted by length (longest first) to prevent partial matches
+var fallbackPokemonNames = func() []string {
 	names := []string{
 		// Original 151 Pokemon (Base Set era)
 		"bulbasaur", "ivysaur", "venusaur", "charmander", "charmeleon", "charizard",
@@ -499,7 +530,7 @@ func fuzzyMatchPokemonName(input string) (string, bool) {
 	}
 
 	// First try exact match
-	for _, name := range knownPokemonNamesSorted {
+	for _, name := range getPokemonNames() {
 		if input == name {
 			return name, true
 		}
@@ -507,7 +538,7 @@ func fuzzyMatchPokemonName(input string) (string, bool) {
 
 	// Try normalized match
 	normalizedInput := strings.ToLower(normalizeLineForNameMatch(input))
-	for _, name := range knownPokemonNamesSorted {
+	for _, name := range getPokemonNames() {
 		if normalizedInput == name {
 			return name, true
 		}
@@ -518,7 +549,7 @@ func fuzzyMatchPokemonName(input string) (string, bool) {
 	bestMatch := ""
 	bestDistance := 999
 
-	for _, name := range knownPokemonNamesSorted {
+	for _, name := range getPokemonNames() {
 		// Skip if lengths are too different (optimization)
 		if abs(len(input)-len(name)) > 3 {
 			continue
@@ -938,7 +969,7 @@ func extractPokemonCardName(lines []string, detectedRarity string) string {
 		}
 
 		// Check if this line contains a known Pokemon name (sorted by length, longest first)
-		for _, pokeName := range knownPokemonNamesSorted {
+		for _, pokeName := range getPokemonNames() {
 			if strings.Contains(lower, pokeName) {
 				// Check for gym leader or team rocket prefixes
 				for _, prefix := range gymLeaderPrefixes {
@@ -967,7 +998,7 @@ func extractPokemonCardName(lines []string, detectedRarity string) string {
 	// - normalizedAllText: aggressive normalization for finding names with OCR errors
 	lowerAllText := strings.ToLower(allText)
 	normalizedAllText := strings.ToLower(normalizeLineForNameMatch(allText))
-	for _, pokeName := range knownPokemonNamesSorted {
+	for _, pokeName := range getPokemonNames() {
 		if strings.Contains(normalizedAllText, pokeName) {
 			// Skip if this name only appears in "evolves from" context
 			// e.g., "Evolves from Charmeleon" should not match for a Charizard card

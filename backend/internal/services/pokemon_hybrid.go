@@ -425,6 +425,69 @@ func (s *PokemonHybridService) GetCardBySetAndNumber(setCode, cardNumber string)
 	return nil
 }
 
+// GetAllPokemonNames returns all unique Pokemon names from the loaded card data
+// Names are returned in lowercase and sorted by length (longest first) for OCR matching
+// Includes both Pokemon creature names and all card names for comprehensive matching
+func (s *PokemonHybridService) GetAllPokemonNames() []string {
+	s.mu.RLock()
+	defer s.mu.RUnlock()
+
+	// Use a map to deduplicate names
+	nameSet := make(map[string]bool)
+
+	for _, card := range s.cards {
+		name := strings.ToLower(card.Name)
+
+		// For Pokemon cards, extract base name without suffixes
+		if card.Supertype == "Pokémon" || card.Supertype == "Pokemon" {
+			baseName := extractBasePokemonName(name)
+			if baseName != "" && len(baseName) >= 3 {
+				nameSet[baseName] = true
+			}
+		}
+
+		// Add the full card name for all card types (Pokemon, Trainer, Energy)
+		// This enables matching Trainer cards like "Professor Oak", "Bill", etc.
+		if len(name) >= 3 {
+			nameSet[name] = true
+		}
+	}
+
+	// Convert to slice
+	names := make([]string, 0, len(nameSet))
+	for name := range nameSet {
+		names = append(names, name)
+	}
+
+	// Sort by length descending (longest first) to prevent partial matches
+	sort.Slice(names, func(i, j int) bool {
+		return len(names[i]) > len(names[j])
+	})
+
+	return names
+}
+
+// extractBasePokemonName removes common Pokemon card suffixes to get the base name
+func extractBasePokemonName(name string) string {
+	// Common suffixes to remove (order matters - check longer ones first)
+	suffixes := []string{
+		" vmax", " vstar", " v-union", " v",
+		" gx", " ex", " mega", " prime",
+		" lv.x", " lvx", " legend", " star",
+		" δ", " delta", " radiant",
+	}
+
+	result := name
+	for _, suffix := range suffixes {
+		if strings.HasSuffix(result, suffix) {
+			result = strings.TrimSuffix(result, suffix)
+			break
+		}
+	}
+
+	return strings.TrimSpace(result)
+}
+
 func downloadPokemonData(dataDir string) error {
 	// Ensure data directory exists
 	if err := os.MkdirAll(dataDir, 0755); err != nil {

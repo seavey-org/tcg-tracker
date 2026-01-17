@@ -43,6 +43,11 @@ func main() {
 	}
 	log.Printf("Loaded %d Pokemon cards from %d sets", pokemonService.GetCardCount(), pokemonService.GetSetCount())
 
+	// Initialize OCR parser with Pokemon names from the database
+	// This enables comprehensive name matching for all cards in the database
+	pokemonNames := pokemonService.GetAllPokemonNames()
+	services.InitPokemonNamesFromData(pokemonNames)
+
 	// Initialize JustTCG service for condition-based pricing
 	justTCGAPIKey := os.Getenv("JUSTTCG_API_KEY")
 	justTCGDailyLimit := 100 // Default free tier limit
