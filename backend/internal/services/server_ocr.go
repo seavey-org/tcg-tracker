@@ -159,16 +159,38 @@ func (s *ServerOCRService) ProcessImageBytes(imageData []byte) (*ServerOCRResult
 		}
 	}
 
-	// Also try with binarized (black/white) versions for cleaner text
-	binarized := binarizeImage(img)
-	binarizedData := encodeImagePNG(binarized)
-	binarizedLines := s.runTesseract(binarizedData, "6")
-	if len(binarizedLines) > 0 {
-		allResults = append(allResults, struct {
-			lines    []string
-			priority int
-			region   string
-		}{binarizedLines, 6, "binarized_full"})
+	// Try multiple binarization approaches for different card backgrounds
+	// Otsu's method works well for high contrast cards but fails on dark cards
+	// Fixed thresholds help with specific card types (dark backgrounds, foils, etc.)
+	thresholds := []struct {
+		name     string
+		pct      float64
+		useOtsu  bool
+		priority int
+	}{
+		{"binarized_otsu", 0, true, 6},
+		{"binarized_35pct", 35, false, 5},
+		{"binarized_40pct", 40, false, 5},
+		{"binarized_45pct", 45, false, 5},
+		{"binarized_50pct", 50, false, 4},
+	}
+
+	for _, thresh := range thresholds {
+		var binarized image.Image
+		if thresh.useOtsu {
+			binarized = binarizeImage(img)
+		} else {
+			binarized = binarizeImageWithThreshold(img, thresh.pct)
+		}
+		binarizedData := encodeImagePNG(binarized)
+		binarizedLines := s.runTesseract(binarizedData, "6")
+		if len(binarizedLines) > 0 {
+			allResults = append(allResults, struct {
+				lines    []string
+				priority int
+				region   string
+			}{binarizedLines, thresh.priority, thresh.name})
+		}
 	}
 
 	// Combine results: merge unique lines, prioritize by region importance
@@ -285,6 +307,27 @@ func binarizeImage(img image.Image) image.Image {
 	for y := bounds.Min.Y; y < bounds.Max.Y; y++ {
 		for x := bounds.Min.X; x < bounds.Max.X; x++ {
 			if gray.GrayAt(x, y).Y > threshold {
+				binary.SetGray(x, y, color.Gray{Y: 255})
+			} else {
+				binary.SetGray(x, y, color.Gray{Y: 0})
+			}
+		}
+	}
+
+	return binary
+}
+
+// binarizeImageWithThreshold converts image to black and white using a fixed threshold percentage
+func binarizeImageWithThreshold(img image.Image, thresholdPct float64) image.Image {
+	bounds := img.Bounds()
+	threshold := uint8(255 * thresholdPct / 100)
+
+	binary := image.NewGray(bounds)
+	for y := bounds.Min.Y; y < bounds.Max.Y; y++ {
+		for x := bounds.Min.X; x < bounds.Max.X; x++ {
+			r, g, b, _ := img.At(x, y).RGBA()
+			lum := uint8((0.299*float64(r) + 0.587*float64(g) + 0.114*float64(b)) / 256)
+			if lum > threshold {
 				binary.SetGray(x, y, color.Gray{Y: 255})
 			} else {
 				binary.SetGray(x, y, color.Gray{Y: 0})
@@ -484,23 +527,47 @@ func postProcessOCRLines(lines []string) []string {
 func correctOCRErrors(text string) string {
 	// Common OCR error corrections
 	corrections := map[string]string{
-		"lllus":    "Illus",
-		"llus":     "Illus",
-		"1llus":    "Illus",
-		"|llus":    "Illus",
-		"Wisards":  "Wizards",
-		"Wizarcls": "Wizards",
+		// Illustrator misspellings
+		"lllus":     "Illus",
+		"llus":      "Illus",
+		"1llus":     "Illus",
+		"|llus":     "Illus",
+		// Company names
+		"Wisards":   "Wizards",
+		"Wizarcls":  "Wizards",
 		"Nintenclo": "Nintendo",
-		"Pokérnon": "Pokémon",
-		"Pokermon": "Pokémon",
-		"Pokernon": "Pokémon",
-		"Pokéman":  "Pokémon",
+		// Pokemon misspellings
+		"Pokérnon":  "Pokémon",
+		"Pokermon":  "Pokémon",
+		"Pokernon":  "Pokémon",
+		"Pokéman":   "Pokémon",
+		// HP misreads (common on dark cards)
+		" HED ":    " HP ",
+		" HEP ":    " HP ",
+		" HB ":     " HP ",
+		" H P ":    " HP ",
+		"HED ":     "HP ",
+		"HEP ":     "HP ",
+		" HED":     " HP",
+		" HEP":     " HP",
+		// Number corrections - l/1 and O/0 confusion
 		" l ":      " 1 ",
 		" O ":      " 0 ",
 		"l/":       "1/",
 		"/l":       "/1",
 		"O/":       "0/",
 		"/O":       "/0",
+		// Modern card HP patterns: "~3l0@" → "~310@", "2l0" → "210"
+		"0l0":      "010",
+		"1l0":      "110",
+		"2l0":      "210",
+		"3l0":      "310",
+		"4l0":      "410",
+		// Also O → 0 in number contexts
+		"0O0":      "000",
+		"1O0":      "100",
+		"2O0":      "200",
+		"3O0":      "300",
 	}
 
 	result := text

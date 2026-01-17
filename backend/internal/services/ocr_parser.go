@@ -331,6 +331,17 @@ var knownPokemonNamesSorted = func() []string {
 		"rayquaza", "arceus", "giratina", "dialga", "palkia",
 		"jirachi", "deoxys", "darkrai", "shaymin", "lucario", "garchomp",
 		"sylveon", "greninja", "zekrom", "reshiram",
+		// Sword/Shield and Scarlet/Violet Pokemon
+		"zacian", "zamazenta", "eternatus", "urshifu", "calyrex",
+		"miraidon", "koraidon", "chien-pao", "wo-chien", "ting-lu", "chi-yu",
+		"iron valiant", "iron hands", "iron thorns", "roaring moon", "great tusk",
+		"slither wing", "brute bonnet", "flutter mane", "sandy shocks",
+		"lechonk", "smoliv", "fidough", "cetitan", "baxcalibur",
+		"kingambit", "palafin", "tinkaton", "armarouge", "ceruledge",
+		"gholdengo", "annihilape", "pawmot", "rabsca", "garganacl",
+		"dondozo", "tatsugiri", "orthworm", "glimmora", "greavard",
+		"houndstone", "revavroom", "cyclizar", "flamigo", "klawf",
+		"lokix", "grafaiai", "squawkabilly", "nacli", "charcadet",
 	}
 	// Sort by length descending (longest first)
 	sort.Slice(names, func(i, j int) bool {
@@ -554,23 +565,62 @@ func parsePokemonOCR(result *OCRResult) {
 		// Don't set SetTotal for SV format as it's a subset total, not the main set
 	}
 
-	// Extract HP: "HP 170" or "170 HP" or just "D170" pattern
-	// Also handle OCR variations like "w 130" (H looks like w), "4P 60" (HP with noise)
-	hpPatterns := []*regexp.Regexp{
-		regexp.MustCompile(`(?i)HP\s*(\d{2,3})`),     // "HP 170", "HP170"
-		regexp.MustCompile(`(?i)(\d{2,3})\s*HP`),     // "170 HP", "170HP"
-		regexp.MustCompile(`(?i)[HhWw]\s*(\d{2,3})`), // "w 130" (OCR error for HP)
-		regexp.MustCompile(`(?i)4P\s*(\d{2,3})`),     // "4P 60" (OCR error for HP)
-		regexp.MustCompile(`[A-Z](\d{2,3})\s*[&@©]`), // "D170 @" pattern
+	// Extract HP using two tiers of patterns:
+	// Tier 1: Explicit HP patterns (with "HP" text) - most reliable
+	// Tier 2: Fallback patterns (modern cards without HP text)
+	explicitHPPatterns := []*regexp.Regexp{
+		regexp.MustCompile(`(?i)HP[ ]*(\d{2,3})`),    // "HP 170", "HP170"
+		regexp.MustCompile(`(?i)(\d{2,3})[ ]*HP`),    // "170 HP", "170HP"
+		// Note: Removed [HhWw][ ]+(\d{2,3}) as it caused false positives with attack names like "Gnaw 10"
+		regexp.MustCompile(`(?i)4P[ ]*(\d{2,3})`),    // "4P 60" (OCR error for HP)
 	}
 
-	for _, hpRegex := range hpPatterns {
-		if matches := hpRegex.FindStringSubmatch(text); len(matches) >= 2 {
-			hp := matches[1]
-			// Validate HP is in reasonable range (10-340 for Pokemon)
-			if hpVal := parseInt(hp); hpVal >= 10 && hpVal <= 400 {
-				result.HP = hp
-				break
+	fallbackHPPatterns := []*regexp.Regexp{
+		regexp.MustCompile(`[A-Z](\d{2,3})\s*[&@©]`),     // "D170 @" pattern
+		regexp.MustCompile(`[~.,]?(\d{3})\s*[&@©®)>]`),   // Modern card: "~310@", "220©", ".330)"
+		regexp.MustCompile(`(?i)VMAX[^0-9]*(\d{3})`),     // VMAX cards: number near VMAX text
+		regexp.MustCompile(`(?i)ex[^0-9]*(\d{2,3})\s*[©®]`), // ex cards: "ex...220©"
+	}
+
+	// First try explicit HP patterns - collect all and pick most common/highest
+	hpCounts := make(map[string]int)
+	for _, hpRegex := range explicitHPPatterns {
+		allMatches := hpRegex.FindAllStringSubmatch(text, -1)
+		for _, matches := range allMatches {
+			if len(matches) >= 2 {
+				hp := matches[1]
+				if hpVal := parseInt(hp); hpVal >= 10 && hpVal <= 400 {
+					hpCounts[hp]++
+				}
+			}
+		}
+	}
+
+	// Pick best from explicit patterns: prefer higher frequency, then higher value
+	if len(hpCounts) > 0 {
+		var bestHP string
+		var bestCount int
+		var bestVal int
+		for hp, count := range hpCounts {
+			val := parseInt(hp)
+			if count > bestCount || (count == bestCount && val > bestVal) {
+				bestHP = hp
+				bestCount = count
+				bestVal = val
+			}
+		}
+		result.HP = bestHP
+	}
+
+	// If no explicit HP found, try fallback patterns (for modern cards)
+	if result.HP == "" {
+		for _, hpRegex := range fallbackHPPatterns {
+			if matches := hpRegex.FindStringSubmatch(text); len(matches) >= 2 {
+				hp := matches[1]
+				if hpVal := parseInt(hp); hpVal >= 10 && hpVal <= 400 {
+					result.HP = hp
+					break
+				}
 			}
 		}
 	}
