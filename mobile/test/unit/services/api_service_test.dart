@@ -76,10 +76,10 @@ void main() {
         expect(url, 'http://test:8080');
       });
 
-      test('returns default localhost:8080 when no URL stored', () async {
+      test('returns default production URL when no URL stored', () async {
         final url = await apiService.getServerUrl();
 
-        expect(url, 'http://localhost:8080');
+        expect(url, 'https://tcg.seavey.dev');
       });
     });
 

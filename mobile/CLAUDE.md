@@ -72,7 +72,7 @@ Helper getters: `CardModel.displayPrice` returns formatted price or "N/A", `Card
 
 ## Backend Integration
 
-- Server URL stored in SharedPreferences (default: `http://localhost:8080`)
+- Server URL stored in secure storage (default: `https://tcg.seavey.dev`)
 - 35-second timeout on all HTTP requests
 - ApiService methods: `searchCards(query, game)`, `identifyCard(text, game)`, `addToCollection(cardId, quantity, condition, foil)`
 

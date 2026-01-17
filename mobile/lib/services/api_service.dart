@@ -10,7 +10,7 @@ import 'image_analysis_service.dart';
 
 class ApiService {
   static const String _serverUrlKey = 'server_url';
-  static const String _defaultServerUrl = 'http://localhost:8080';
+  static const String _defaultServerUrl = 'https://tcg.seavey.dev';
 
   // Use legacy key for migration from SharedPreferences
   static const String _legacyServerUrlKey = 'server_url';
