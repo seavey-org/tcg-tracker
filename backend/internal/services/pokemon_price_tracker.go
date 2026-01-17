@@ -59,9 +59,14 @@ type pptPrices struct {
 }
 
 func (s *PokemonPriceTrackerService) SearchCards(query string) (*models.CardSearchResult, error) {
+	return s.SearchCardsWithTimeout(query, 30*time.Second)
+}
+
+// SearchCardsWithTimeout searches for cards with a custom timeout
+func (s *PokemonPriceTrackerService) SearchCardsWithTimeout(query string, timeout time.Duration) (*models.CardSearchResult, error) {
 	reqURL := fmt.Sprintf("%s/cards?search=%s&limit=20", pokemonPriceTrackerBaseURL, url.QueryEscape(query))
 
-	ctx, cancel := context.WithTimeout(context.Background(), 30*time.Second)
+	ctx, cancel := context.WithTimeout(context.Background(), timeout)
 	defer cancel()
 	req, err := http.NewRequestWithContext(ctx, "GET", reqURL, nil)
 	if err != nil {

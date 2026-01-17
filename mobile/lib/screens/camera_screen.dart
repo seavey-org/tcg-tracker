@@ -209,21 +209,25 @@ class _CameraScreenState extends State<CameraScreen> {
           ),
           // Camera preview
           Expanded(
-            child: _isInitialized && _controller != null
-                ? ClipRRect(
-                    borderRadius: BorderRadius.circular(12),
-                    child: CameraPreview(_controller!),
-                  )
-                : const Center(child: CircularProgressIndicator()),
+            child: Center(
+              child: _isInitialized && _controller != null
+                  ? ClipRRect(
+                      borderRadius: BorderRadius.circular(12),
+                      child: CameraPreview(_controller!),
+                    )
+                  : const CircularProgressIndicator(),
+            ),
           ),
           // Capture button
           Padding(
             padding: const EdgeInsets.all(24.0),
-            child: FloatingActionButton.large(
-              onPressed: _isProcessing ? null : _captureAndProcess,
-              child: _isProcessing
-                  ? const CircularProgressIndicator(color: Colors.white)
-                  : const Icon(Icons.camera_alt),
+            child: Center(
+              child: FloatingActionButton.large(
+                onPressed: _isProcessing ? null : _captureAndProcess,
+                child: _isProcessing
+                    ? const CircularProgressIndicator(color: Colors.white)
+                    : const Icon(Icons.camera_alt),
+              ),
             ),
           ),
         ],

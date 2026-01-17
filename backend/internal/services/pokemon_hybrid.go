@@ -232,8 +232,11 @@ func (s *PokemonHybridService) enrichWithPrices(cards []models.Card, query strin
 
 	// Otherwise, fetch prices from API for cards that need it
 	// Note: This still uses quota, but only for uncached cards
-	priceResult, err := s.priceService.SearchCards(query)
+	// Use short timeout (5s) so searches complete quickly even if price API is slow
+	priceResult, err := s.priceService.SearchCardsWithTimeout(query, 5*time.Second)
 	if err != nil || priceResult == nil {
+		// Price fetch failed or timed out - return cards without prices
+		// The background worker will update prices later
 		return
 	}
 
