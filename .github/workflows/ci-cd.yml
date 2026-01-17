@@ -264,13 +264,16 @@ jobs:
           scp -r frontend/dist $SERVER:$APP_DIR/
 
       - name: Setup environment variables
+        env:
+          POKEMON_API_KEY: ${{ secrets.POKEMON_PRICE_TRACKER_API_KEY }}
         run: |
-          ssh $SERVER "cat > $APP_DIR/config.env << 'EOF'
+          ssh $SERVER "cat > $APP_DIR/config.env << EOF
           DB_PATH=/opt/tcg-tracker/tcg_tracker.db
           PORT=8081
           FRONTEND_DIST_PATH=/opt/tcg-tracker/dist
           POKEMON_DATA_DIR=/opt/tcg-tracker/data
           POKEMON_PRICE_DAILY_LIMIT=100
+          POKEMON_PRICE_TRACKER_API_KEY=${POKEMON_API_KEY}
           EOF"
           ssh $SERVER "sed -i 's/^[[:space:]]*//' $APP_DIR/config.env"
 
