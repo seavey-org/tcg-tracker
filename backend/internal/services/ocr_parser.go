@@ -439,12 +439,116 @@ func normalizeLineForNameMatch(line string) string {
 	result = strings.ReplaceAll(result, "0", "o")
 	result = strings.ReplaceAll(result, "1", "i")
 	result = strings.ReplaceAll(result, "5", "s")
+	result = strings.ReplaceAll(result, "8", "b")
+	result = strings.ReplaceAll(result, "4", "a")
 	// Replace common character confusions
 	result = strings.ReplaceAll(result, "rn", "m")
 	result = strings.ReplaceAll(result, "RN", "M")
+	result = strings.ReplaceAll(result, "cl", "d")
+	result = strings.ReplaceAll(result, "CL", "D")
+	result = strings.ReplaceAll(result, "ii", "u")
+	result = strings.ReplaceAll(result, "ll", "u")
 	// Replace spaces in the middle of names
 	result = regexp.MustCompile(`(\w)\s(\w)`).ReplaceAllString(result, "$1$2")
 	return result
+}
+
+// levenshteinDistance calculates the edit distance between two strings
+func levenshteinDistance(s1, s2 string) int {
+	if len(s1) == 0 {
+		return len(s2)
+	}
+	if len(s2) == 0 {
+		return len(s1)
+	}
+
+	// Create matrix
+	matrix := make([][]int, len(s1)+1)
+	for i := range matrix {
+		matrix[i] = make([]int, len(s2)+1)
+		matrix[i][0] = i
+	}
+	for j := 0; j <= len(s2); j++ {
+		matrix[0][j] = j
+	}
+
+	// Fill in the matrix
+	for i := 1; i <= len(s1); i++ {
+		for j := 1; j <= len(s2); j++ {
+			cost := 1
+			if s1[i-1] == s2[j-1] {
+				cost = 0
+			}
+			matrix[i][j] = min(
+				matrix[i-1][j]+1,      // deletion
+				matrix[i][j-1]+1,      // insertion
+				matrix[i-1][j-1]+cost, // substitution
+			)
+		}
+	}
+
+	return matrix[len(s1)][len(s2)]
+}
+
+// fuzzyMatchPokemonName attempts to find a Pokemon name that closely matches the input
+// Returns the matched name and whether a match was found
+func fuzzyMatchPokemonName(input string) (string, bool) {
+	input = strings.ToLower(strings.TrimSpace(input))
+	if len(input) < 3 {
+		return "", false
+	}
+
+	// First try exact match
+	for _, name := range knownPokemonNamesSorted {
+		if input == name {
+			return name, true
+		}
+	}
+
+	// Try normalized match
+	normalizedInput := strings.ToLower(normalizeLineForNameMatch(input))
+	for _, name := range knownPokemonNamesSorted {
+		if normalizedInput == name {
+			return name, true
+		}
+	}
+
+	// Try fuzzy matching with Levenshtein distance
+	// Allow 1 error for names <= 6 chars, 2 errors for longer names
+	bestMatch := ""
+	bestDistance := 999
+
+	for _, name := range knownPokemonNamesSorted {
+		// Skip if lengths are too different (optimization)
+		if abs(len(input)-len(name)) > 3 {
+			continue
+		}
+
+		distance := levenshteinDistance(normalizedInput, name)
+		maxAllowedDistance := 1
+		if len(name) > 6 {
+			maxAllowedDistance = 2
+		}
+
+		if distance <= maxAllowedDistance && distance < bestDistance {
+			bestDistance = distance
+			bestMatch = name
+		}
+	}
+
+	if bestMatch != "" {
+		return bestMatch, true
+	}
+
+	return "", false
+}
+
+// abs returns the absolute value of an integer
+func abs(x int) int {
+	if x < 0 {
+		return -x
+	}
+	return x
 }
 
 // normalizeCardName applies OCR corrections specifically for Pokemon names
@@ -883,7 +987,42 @@ func extractPokemonCardName(lines []string, detectedRarity string) string {
 		}
 	}
 
-	// Fallback 2: Try to find a reasonable first line that could be a name
+	// Fallback 2: Try fuzzy matching on early lines (handles OCR errors in names)
+	for i, line := range lines {
+		// Only check the first few lines (card name is near the top)
+		if i >= 5 {
+			break
+		}
+
+		// Skip lines that describe evolution
+		if strings.Contains(strings.ToLower(line), "evolves from") {
+			continue
+		}
+
+		// Skip lines that are clearly not names
+		shouldSkip := false
+		for _, pattern := range skipPatterns {
+			if strings.Contains(strings.ToLower(line), pattern) {
+				shouldSkip = true
+				break
+			}
+		}
+		if shouldSkip {
+			continue
+		}
+
+		// Extract potential words from the line and try fuzzy matching
+		words := regexp.MustCompile(`[A-Za-z]{3,}`).FindAllString(line, -1)
+		for _, word := range words {
+			if matchedName, found := fuzzyMatchPokemonName(word); found {
+				// Capitalize first letter
+				result := strings.ToUpper(string(matchedName[0])) + matchedName[1:]
+				return result
+			}
+		}
+	}
+
+	// Fallback 3: Try to find a reasonable first line that could be a name
 	for _, line := range lines {
 		lower := strings.ToLower(line)
 
@@ -933,14 +1072,25 @@ func extractPokemonCardName(lines []string, detectedRarity string) string {
 		// Clean it up - remove HP values, etc.
 		name := cleanPokemonName(line, "")
 		if len(name) >= 3 {
+			// Try fuzzy match on cleaned name
+			if matchedName, found := fuzzyMatchPokemonName(name); found {
+				result := strings.ToUpper(string(matchedName[0])) + matchedName[1:]
+				return result
+			}
 			return name
 		}
 	}
 
-	// Fallback 3: return first line with letters
+	// Fallback 4: return first line with letters
 	for _, line := range lines {
 		if regexp.MustCompile(`[a-zA-Z]{3,}`).MatchString(line) {
-			return cleanPokemonName(line, "")
+			name := cleanPokemonName(line, "")
+			// Try fuzzy match as last resort
+			if matchedName, found := fuzzyMatchPokemonName(name); found {
+				result := strings.ToUpper(string(matchedName[0])) + matchedName[1:]
+				return result
+			}
+			return name
 		}
 	}
 
@@ -1192,6 +1342,19 @@ func detectWotCEra(result *OCRResult, upperText string) {
 		"WIZARDS OF THE COAST",
 		"WIZARDS",
 		"WOTC",
+		// Common OCR errors for Wizards
+		"WIZAROS",
+		"W1ZARDS",
+		"WlZARDS",
+		"WTZARDS",
+		"WI2ARDS",
+		"WIZARD5",
+		"WIZARO5",
+		"W!ZARDS",
+		"WIZBROS",
+		"WIZAPDS",
+		"WIZARDS.",
+		// Nintendo copyright years (with various OCR errors for © symbol)
 		"©1995",
 		"©1996",
 		"©1997",
@@ -1201,16 +1364,26 @@ func detectWotCEra(result *OCRResult, upperText string) {
 		"©2001",
 		"©2002",
 		"©2003",
-		// OCR variations of copyright
-		"C1995",
-		"C1996",
-		"C1999",
-		"01995",
-		"01999",
-		// Common OCR errors for Wizards
-		"WIZAROS",
-		"W1ZARDS",
-		"WlZARDS",
+		// OCR variations - C for ©
+		"C1995", "C1996", "C1997", "C1998", "C1999",
+		"C2000", "C2001", "C2002", "C2003",
+		// OCR variations - 0 for ©
+		"01995", "01996", "01997", "01998", "01999",
+		"02000", "02001", "02002", "02003",
+		// OCR variations - @ for ©
+		"@1995", "@1996", "@1997", "@1998", "@1999",
+		"@2000", "@2001", "@2002", "@2003",
+		// OCR variations - ( for ©
+		"(1995", "(1996", "(1997", "(1998", "(1999",
+		"(2000", "(2001", "(2002", "(2003",
+		// OCR variations - space before year
+		"© 1995", "© 1996", "© 1997", "© 1998", "© 1999",
+		"© 2000", "© 2001", "© 2002", "© 2003",
+		// Additional patterns for WotC era detection
+		"NINTENDO", // All WotC cards have Nintendo copyright
+		"CREATURES",
+		"GAMEFREAK",
+		"GAME FREAK",
 	}
 
 	for _, pattern := range wotcPatterns {
@@ -1218,6 +1391,14 @@ func detectWotCEra(result *OCRResult, upperText string) {
 			result.IsWotCEra = true
 			return
 		}
+	}
+
+	// Use regex to catch more year patterns with OCR errors
+	// Matches patterns like: c1999, C 1999, @1999, etc.
+	yearRegex := regexp.MustCompile(`[©C@O0(\[][\ ]?(199[5-9]|200[0-3])`)
+	if yearRegex.MatchString(upperText) {
+		result.IsWotCEra = true
+		return
 	}
 
 	// Also check for WotC era based on low set totals without modern set codes

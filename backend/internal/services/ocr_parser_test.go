@@ -2611,6 +2611,125 @@ HP 120
 	}
 }
 
+// TestFuzzyMatchPokemonName tests the fuzzy matching function for Pokemon names with OCR errors
+func TestFuzzyMatchPokemonName(t *testing.T) {
+	tests := []struct {
+		name      string
+		input     string
+		wantMatch string
+		wantFound bool
+	}{
+		{
+			name:      "Exact match",
+			input:     "charizard",
+			wantMatch: "charizard",
+			wantFound: true,
+		},
+		{
+			name:      "One character off - Char1zard",
+			input:     "char1zard",
+			wantMatch: "charizard",
+			wantFound: true,
+		},
+		{
+			name:      "One character off - Charizarc",
+			input:     "charizarc",
+			wantMatch: "charizard",
+			wantFound: true,
+		},
+		{
+			name:      "Two characters off - Char1zaro",
+			input:     "char1zaro",
+			wantMatch: "charizard",
+			wantFound: true,
+		},
+		{
+			name:      "OCR error - Blastolse",
+			input:     "blastolse",
+			wantMatch: "blastoise",
+			wantFound: true,
+		},
+		{
+			name:      "OCR error - Plkachu",
+			input:     "plkachu",
+			wantMatch: "pikachu",
+			wantFound: true,
+		},
+		{
+			name:      "OCR error - P1kachu",
+			input:     "p1kachu",
+			wantMatch: "pikachu",
+			wantFound: true,
+		},
+		{
+			name:      "OCR error - Alakazarn (rn->m)",
+			input:     "alakazarn",
+			wantMatch: "alakazam",
+			wantFound: true,
+		},
+		{
+			name:      "OCR error - Genqar (q->g)",
+			input:     "genqar",
+			wantMatch: "gengar",
+			wantFound: true,
+		},
+		{
+			name:      "OCR error - Venusaur (correct)",
+			input:     "venusaur",
+			wantMatch: "venusaur",
+			wantFound: true,
+		},
+		{
+			name:      "OCR error - Mewtw0 (0->o)",
+			input:     "mewtw0",
+			wantMatch: "mewtwo",
+			wantFound: true,
+		},
+		{
+			name:      "Too many errors - no match",
+			input:     "xyzabc",
+			wantMatch: "",
+			wantFound: false,
+		},
+		{
+			name:      "Short string - no match",
+			input:     "ab",
+			wantMatch: "",
+			wantFound: false,
+		},
+		{
+			name:      "OCR error - Snorl4x (4->a)",
+			input:     "snorl4x",
+			wantMatch: "snorlax",
+			wantFound: true,
+		},
+		{
+			name:      "OCR error - Gyarad0s (0->o)",
+			input:     "gyarad0s",
+			wantMatch: "gyarados",
+			wantFound: true,
+		},
+		{
+			name:      "OCR error - Dragonlte (l->i)",
+			input:     "dragonlte",
+			wantMatch: "dragonite",
+			wantFound: true,
+		},
+	}
+
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			match, found := fuzzyMatchPokemonName(tt.input)
+			if found != tt.wantFound {
+				t.Errorf("fuzzyMatchPokemonName(%q) found = %v, want %v", tt.input, found, tt.wantFound)
+			}
+			if match != tt.wantMatch {
+				t.Errorf("fuzzyMatchPokemonName(%q) match = %q, want %q", tt.input, match, tt.wantMatch)
+			}
+		})
+	}
+}
+
 // TestBaseSetRealWorldOCR tests realistic OCR output from Base Set card scans
 func TestBaseSetRealWorldOCR(t *testing.T) {
 	tests := []struct {

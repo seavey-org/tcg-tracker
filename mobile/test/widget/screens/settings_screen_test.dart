@@ -3,6 +3,9 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
 import 'package:mobile/screens/settings_screen.dart';
 import 'package:mobile/services/api_service.dart';
+import 'package:mobile/providers/theme_provider.dart';
+import 'package:provider/provider.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class MockApiService extends Mock implements ApiService {}
 
@@ -10,12 +13,16 @@ void main() {
   late MockApiService mockApiService;
 
   setUp(() {
+    SharedPreferences.setMockInitialValues({});
     mockApiService = MockApiService();
   });
 
   Widget createWidget() {
-    return MaterialApp(
-      home: SettingsScreen(apiService: mockApiService),
+    return ChangeNotifierProvider(
+      create: (_) => ThemeProvider(),
+      child: MaterialApp(
+        home: SettingsScreen(apiService: mockApiService),
+      ),
     );
   }
 
