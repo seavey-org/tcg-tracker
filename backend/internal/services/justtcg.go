@@ -1,6 +1,7 @@
 package services
 
 import (
+	"context"
 	"encoding/json"
 	"fmt"
 	"net/http"
@@ -141,7 +142,7 @@ func (s *JustTCGService) GetCardPrices(cardName, setCode string, game models.Gam
 
 	reqURL := fmt.Sprintf("%s/cards/price?%s", s.baseURL, params.Encode())
 
-	req, err := http.NewRequest("GET", reqURL, nil)
+	req, err := http.NewRequestWithContext(context.Background(), "GET", reqURL, nil)
 	if err != nil {
 		return nil, fmt.Errorf("failed to create request: %w", err)
 	}
@@ -212,7 +213,7 @@ func (s *JustTCGService) SearchCards(query string, game models.Game) ([]JustTCGC
 
 	reqURL := fmt.Sprintf("%s/cards/search?%s", s.baseURL, params.Encode())
 
-	req, err := http.NewRequest("GET", reqURL, nil)
+	req, err := http.NewRequestWithContext(context.Background(), "GET", reqURL, nil)
 	if err != nil {
 		return nil, fmt.Errorf("failed to create request: %w", err)
 	}
