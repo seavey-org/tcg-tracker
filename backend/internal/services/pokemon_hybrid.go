@@ -5,6 +5,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"io"
+	"log"
 	"net/http"
 	"os"
 	"path/filepath"
@@ -112,12 +113,14 @@ func (s *PokemonHybridService) loadData(dataDir string) error {
 		cardFile := filepath.Join(cardsDir, file.Name())
 		cardData, err := os.ReadFile(cardFile)
 		if err != nil {
-			continue // Skip files that can't be read
+			log.Printf("Warning: failed to read card file %s: %v", cardFile, err)
+			continue
 		}
 
 		var cards []LocalPokemonCard
 		if err := json.Unmarshal(cardData, &cards); err != nil {
-			continue // Skip files that can't be parsed
+			log.Printf("Warning: failed to parse card file %s: %v", cardFile, err)
+			continue
 		}
 
 		for i := range cards {
@@ -365,7 +368,12 @@ func downloadPokemonData(dataDir string) error {
 
 	// Download the zip file
 	zipPath := filepath.Join(dataDir, "pokemon-tcg-data.zip")
-	resp, err := http.Get(pokemonDataURL)
+
+	// Use a client with timeout for large downloads
+	client := &http.Client{
+		Timeout: 5 * time.Minute,
+	}
+	resp, err := client.Get(pokemonDataURL)
 	if err != nil {
 		return fmt.Errorf("failed to download: %w", err)
 	}
@@ -375,21 +383,29 @@ func downloadPokemonData(dataDir string) error {
 		return fmt.Errorf("download failed with status: %d", resp.StatusCode)
 	}
 
-	// Create zip file
+	// Create zip file with deferred close
 	zipFile, err := os.Create(zipPath)
 	if err != nil {
 		return fmt.Errorf("failed to create zip file: %w", err)
 	}
+	defer zipFile.Close()
 
 	_, err = io.Copy(zipFile, resp.Body)
-	zipFile.Close()
 	if err != nil {
 		return fmt.Errorf("failed to write zip file: %w", err)
 	}
 
+	// Close file before extracting
+	zipFile.Close()
+
 	// Extract zip file
 	if err := extractZip(zipPath, dataDir); err != nil {
 		return fmt.Errorf("failed to extract zip: %w", err)
+	}
+
+	// Clean up zip file after successful extraction
+	if err := os.Remove(zipPath); err != nil {
+		log.Printf("Warning: failed to clean up zip file: %v", err)
 	}
 
 	// Rename extracted folder (github adds -master suffix)
@@ -398,7 +414,9 @@ func downloadPokemonData(dataDir string) error {
 		// Try alternate name
 		altPath := filepath.Join(dataDir, "pokemon-tcg-data")
 		if _, err := os.Stat(altPath); err == nil {
-			os.Rename(altPath, extractedPath)
+			if renameErr := os.Rename(altPath, extractedPath); renameErr != nil {
+				return fmt.Errorf("failed to rename extracted directory: %w", renameErr)
+			}
 		}
 	}
 

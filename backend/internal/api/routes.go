@@ -19,11 +19,16 @@ func SetupRouter(scryfallService *services.ScryfallService, pokemonService *serv
 	frontendPath := os.Getenv("FRONTEND_DIST_PATH")
 	serveFrontend := frontendPath != "" && dirExists(frontendPath)
 
-	// CORS configuration
+	// CORS configuration - allow origins from environment or use defaults
 	config := cors.DefaultConfig()
-	config.AllowOrigins = []string{"http://localhost:5173", "http://localhost:3000"}
+	if corsOrigins := os.Getenv("CORS_ALLOWED_ORIGINS"); corsOrigins != "" {
+		config.AllowOrigins = strings.Split(corsOrigins, ",")
+	} else {
+		config.AllowOrigins = []string{"http://localhost:5173", "http://localhost:3000"}
+	}
 	config.AllowMethods = []string{"GET", "POST", "PUT", "DELETE", "OPTIONS"}
 	config.AllowHeaders = []string{"Origin", "Content-Type", "Accept", "Authorization"}
+	config.AllowCredentials = false // Explicitly set
 	router.Use(cors.New(config))
 
 	// Initialize handlers

@@ -1,12 +1,23 @@
 import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:camera/camera.dart';
-import 'package:google_mlkit_text_recognition/google_mlkit_text_recognition.dart';
+import 'package:permission_handler/permission_handler.dart';
 import '../services/api_service.dart';
+import '../services/camera_service.dart';
+import '../services/ocr_service.dart';
 import 'scan_result_screen.dart';
 
 class CameraScreen extends StatefulWidget {
-  const CameraScreen({super.key});
+  final CameraService? cameraService;
+  final OcrService? ocrService;
+  final ApiService? apiService;
+
+  const CameraScreen({
+    super.key,
+    this.cameraService,
+    this.ocrService,
+    this.apiService,
+  });
 
   @override
   State<CameraScreen> createState() => _CameraScreenState();
@@ -18,17 +29,41 @@ class _CameraScreenState extends State<CameraScreen> {
   bool _isInitialized = false;
   bool _isProcessing = false;
   String _selectedGame = 'mtg';
-  final TextRecognizer _textRecognizer = TextRecognizer();
-  final ApiService _apiService = ApiService();
+  late final CameraService _cameraService;
+  late final OcrService _ocrService;
+  late final ApiService _apiService;
 
   @override
   void initState() {
     super.initState();
+    _cameraService = widget.cameraService ?? CameraService();
+    _ocrService = widget.ocrService ?? OcrService();
+    _apiService = widget.apiService ?? ApiService();
     _initializeCamera();
   }
 
   Future<void> _initializeCamera() async {
-    _cameras = await availableCameras();
+    // Check camera permission first
+    final status = await Permission.camera.status;
+    if (!status.isGranted) {
+      final result = await Permission.camera.request();
+      if (!result.isGranted) {
+        if (mounted) {
+          ScaffoldMessenger.of(context).showSnackBar(
+            SnackBar(
+              content: const Text('Camera permission denied'),
+              action: SnackBarAction(
+                label: 'Settings',
+                onPressed: () => openAppSettings(),
+              ),
+            ),
+          );
+        }
+        return;
+      }
+    }
+
+    _cameras = await _cameraService.getAvailableCameras();
     if (_cameras == null || _cameras!.isEmpty) {
       if (mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
@@ -38,15 +73,23 @@ class _CameraScreenState extends State<CameraScreen> {
       return;
     }
 
-    _controller = CameraController(
+    _controller = _cameraService.createController(
       _cameras!.first,
-      ResolutionPreset.high,
+      resolutionPreset: ResolutionPreset.high,
       enableAudio: false,
     );
 
-    await _controller!.initialize();
-    if (mounted) {
-      setState(() => _isInitialized = true);
+    try {
+      await _controller!.initialize();
+      if (mounted) {
+        setState(() => _isInitialized = true);
+      }
+    } catch (e) {
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text('Failed to initialize camera: $e')),
+        );
+      }
     }
   }
 
@@ -59,14 +102,7 @@ class _CameraScreenState extends State<CameraScreen> {
 
     try {
       final image = await _controller!.takePicture();
-      final inputImage = InputImage.fromFilePath(image.path);
-      final recognizedText = await _textRecognizer.processImage(inputImage);
-
-      // Extract text from image
-      final lines = recognizedText.blocks
-          .expand((block) => block.lines)
-          .map((line) => line.text)
-          .toList();
+      final lines = await _ocrService.extractTextFromImage(image.path);
 
       if (lines.isEmpty) {
         if (mounted) {
@@ -81,14 +117,14 @@ class _CameraScreenState extends State<CameraScreen> {
       final fullText = lines.join('\n');
 
       // Search for matching cards using identify endpoint
-      final cards = await _apiService.identifyCard(fullText, _selectedGame);
+      final scanResult = await _apiService.identifyCard(fullText, _selectedGame);
 
       if (!mounted) return;
 
       // Clean up temp image
       await File(image.path).delete();
 
-      if (cards.isEmpty) {
+      if (scanResult.cards.isEmpty) {
         ScaffoldMessenger.of(context).showSnackBar(
           const SnackBar(content: Text('No cards found')),
         );
@@ -100,15 +136,32 @@ class _CameraScreenState extends State<CameraScreen> {
         context,
         MaterialPageRoute(
           builder: (context) => ScanResultScreen(
-            cards: cards,
+            cards: scanResult.cards,
             searchQuery: 'Scanned Card',
+            scanMetadata: scanResult.metadata,
           ),
         ),
       );
-    } catch (e) {
+    } on OcrException catch (e) {
       if (mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(content: Text('Error: ${e.toString()}')),
+          SnackBar(content: Text('OCR Error: ${e.message}')),
+        );
+      }
+    } catch (e) {
+      if (mounted) {
+        // Show user-friendly error message
+        String message = 'An error occurred';
+        final errorStr = e.toString();
+        if (errorStr.contains('timed out')) {
+          message = 'Request timed out. Check your connection.';
+        } else if (errorStr.contains('SocketException') || errorStr.contains('Connection')) {
+          message = 'Cannot connect to server. Check your network.';
+        } else {
+          message = 'Error: ${e.toString().replaceAll('Exception: ', '')}';
+        }
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text(message)),
         );
       }
     } finally {
@@ -121,7 +174,7 @@ class _CameraScreenState extends State<CameraScreen> {
   @override
   void dispose() {
     _controller?.dispose();
-    _textRecognizer.close();
+    _ocrService.dispose();
     super.dispose();
   }
 

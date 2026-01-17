@@ -5,6 +5,30 @@ const api = axios.create({
   timeout: 10000,
 })
 
+// Response interceptor for error handling
+api.interceptors.response.use(
+  response => response,
+  error => {
+    // Handle timeout errors
+    if (error.code === 'ECONNABORTED') {
+      error.message = 'Request timed out. Please try again.'
+    }
+    // Handle network errors
+    else if (!error.response) {
+      error.message = 'Network error. Please check your connection.'
+    }
+    // Handle server errors
+    else if (error.response.status >= 500) {
+      error.message = error.response.data?.error || 'Server error. Please try again later.'
+    }
+    // Handle client errors
+    else if (error.response.status >= 400) {
+      error.message = error.response.data?.error || 'Request failed.'
+    }
+    return Promise.reject(error)
+  }
+)
+
 export const cardService = {
   async search(query, game) {
     const response = await api.get('/cards/search', {

@@ -7,6 +7,7 @@ import CardGrid from '../components/CardGrid.vue'
 
 const store = useCollectionStore()
 const priceStatus = ref(null)
+const priceStatusError = ref(null)
 
 const recentCards = computed(() => {
   return store.items.slice(0, 12)
@@ -36,7 +37,11 @@ onMounted(async () => {
     store.fetchStats(),
     priceService.getStatus().then(status => {
       priceStatus.value = status
-    }).catch(() => {})
+      priceStatusError.value = null
+    }).catch(err => {
+      console.error('Failed to fetch price status:', err)
+      priceStatusError.value = err.message
+    })
   ])
 })
 </script>

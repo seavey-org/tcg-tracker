@@ -10,6 +10,16 @@ import (
 	"github.com/codyseavey/tcg-tracker/backend/internal/models"
 )
 
+// Constants for price worker configuration
+const (
+	// reservedManualQuota is the number of requests reserved for manual refreshes
+	reservedManualQuota = 10
+	// defaultBatchSize is the number of cards to update per batch (with 100/day limit, ~4 per hour is safe)
+	defaultBatchSize = 4
+	// apiRequestDelay is the delay between API requests to be nice to the API
+	apiRequestDelay = 500 * time.Millisecond
+)
+
 type PriceWorker struct {
 	pokemonService *PokemonHybridService
 
@@ -40,9 +50,39 @@ func NewPriceWorker(pokemonService *PokemonHybridService, dailyLimit int) *Price
 		dailyLimit:     dailyLimit,
 		requestsToday:  0,
 		lastResetDate:  time.Now().Truncate(24 * time.Hour),
-		batchSize:      4, // With 100/day limit, ~4 per hour is safe (96/day)
+		batchSize:      defaultBatchSize,
 		updateInterval: 1 * time.Hour,
 	}
+}
+
+// calculateBatchSize determines how many cards to update, resetting daily counter if needed.
+// Returns 0 if quota is exhausted.
+func (w *PriceWorker) calculateBatchSize() int {
+	w.mu.Lock()
+	defer w.mu.Unlock()
+
+	// Reset daily counter if it's a new day
+	today := time.Now().Truncate(24 * time.Hour)
+	if today.After(w.lastResetDate) {
+		w.requestsToday = 0
+		w.lastResetDate = today
+		log.Println("Price worker: daily quota reset")
+	}
+
+	// Check if we have quota remaining
+	backgroundQuota := w.dailyLimit - reservedManualQuota
+	if w.requestsToday >= backgroundQuota {
+		log.Printf("Price worker: daily background quota exhausted (%d/%d used)", w.requestsToday, backgroundQuota)
+		return 0
+	}
+
+	remainingQuota := backgroundQuota - w.requestsToday
+	batchSize := w.batchSize
+	if remainingQuota < batchSize {
+		batchSize = remainingQuota
+	}
+
+	return batchSize
 }
 
 // Start begins the background price update worker
@@ -68,32 +108,7 @@ func (w *PriceWorker) Start(ctx context.Context) {
 
 // UpdateBatch updates a batch of cards with the oldest prices
 func (w *PriceWorker) UpdateBatch() (updated int, err error) {
-	w.mu.Lock()
-
-	// Reset daily counter if it's a new day
-	today := time.Now().Truncate(24 * time.Hour)
-	if today.After(w.lastResetDate) {
-		w.requestsToday = 0
-		w.lastResetDate = today
-		log.Println("Price worker: daily quota reset")
-	}
-
-	// Check if we have quota remaining
-	backgroundQuota := w.dailyLimit - 10 // Reserve 10 for manual refreshes
-	if w.requestsToday >= backgroundQuota {
-		w.mu.Unlock()
-		log.Printf("Price worker: daily background quota exhausted (%d/%d used)", w.requestsToday, backgroundQuota)
-		return 0, nil
-	}
-
-	remainingQuota := backgroundQuota - w.requestsToday
-	batchSize := w.batchSize
-	if remainingQuota < batchSize {
-		batchSize = remainingQuota
-	}
-
-	w.mu.Unlock()
-
+	batchSize := w.calculateBatchSize()
 	if batchSize <= 0 {
 		return 0, nil
 	}
@@ -151,7 +166,7 @@ func (w *PriceWorker) UpdateBatch() (updated int, err error) {
 		updated++
 
 		// Small delay between requests to be nice to the API
-		time.Sleep(500 * time.Millisecond)
+		time.Sleep(apiRequestDelay)
 	}
 
 	log.Printf("Price worker: updated %d card prices", updated)

@@ -2,6 +2,7 @@ package handlers
 
 import (
 	"net/http"
+	"sort"
 	"strings"
 
 	"github.com/codyseavey/tcg-tracker/backend/internal/database"
@@ -132,7 +133,7 @@ func (h *CardHandler) IdentifyCard(c *gin.Context) {
 		result, err = h.pokemonService.SearchCards(searchQuery)
 
 		// If we have a set code and card number, try to find the exact card
-		if parsed.SetCode != "" && parsed.CardNumber != "" {
+		if result != nil && parsed.SetCode != "" && parsed.CardNumber != "" {
 			exactCard := h.pokemonService.GetCardBySetAndNumber(
 				strings.ToLower(parsed.SetCode),
 				parsed.CardNumber,
@@ -163,17 +164,23 @@ func (h *CardHandler) IdentifyCard(c *gin.Context) {
 		db.Save(&card)
 	}
 
-	// Include parsing info in response for debugging
+	// Include full parsing info in response for mobile app
 	c.JSON(http.StatusOK, gin.H{
 		"cards":       result.Cards,
 		"total_count": result.TotalCount,
 		"has_more":    result.HasMore,
 		"parsed": gin.H{
-			"card_name":   parsed.CardName,
-			"card_number": parsed.CardNumber,
-			"set_total":   parsed.SetTotal,
-			"set_code":    parsed.SetCode,
-			"confidence":  parsed.Confidence,
+			"card_name":       parsed.CardName,
+			"card_number":     parsed.CardNumber,
+			"set_total":       parsed.SetTotal,
+			"set_code":        parsed.SetCode,
+			"set_name":        parsed.SetName,
+			"hp":              parsed.HP,
+			"rarity":          parsed.Rarity,
+			"is_foil":         parsed.IsFoil,
+			"foil_indicators": parsed.FoilIndicators,
+			"confidence":      parsed.Confidence,
+			"condition_hints": parsed.ConditionHints,
 		},
 	})
 }
@@ -218,14 +225,10 @@ func rankCardMatches(cards []models.Card, parsed *services.OCRResult) []models.C
 		scored[i] = scoredCard{card: card, score: score}
 	}
 
-	// Sort by score descending
-	for i := 0; i < len(scored)-1; i++ {
-		for j := i + 1; j < len(scored); j++ {
-			if scored[j].score > scored[i].score {
-				scored[i], scored[j] = scored[j], scored[i]
-			}
-		}
-	}
+	// Sort by score descending using standard library
+	sort.Slice(scored, func(i, j int) bool {
+		return scored[i].score > scored[j].score
+	})
 
 	// Extract sorted cards
 	result := make([]models.Card, len(scored))

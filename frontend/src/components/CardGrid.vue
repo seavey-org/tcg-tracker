@@ -20,10 +20,12 @@ const formatPrice = (price) => {
 }
 
 const getItemValue = (item) => {
-  if (item.foil && item.card.price_foil_usd) {
-    return item.card.price_foil_usd * item.quantity
+  const card = item.card || item
+  const quantity = item.quantity || 1
+  if (item.foil && card?.price_foil_usd) {
+    return card.price_foil_usd * quantity
   }
-  return (item.card.price_usd || 0) * item.quantity
+  return (card?.price_usd || 0) * quantity
 }
 
 const isPriceStale = (item) => {
@@ -38,8 +40,8 @@ const isPriceStale = (item) => {
 <template>
   <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4">
     <div
-      v-for="item in cards"
-      :key="item.id || item.card?.id"
+      v-for="(item, index) in cards"
+      :key="item.id || item.card?.id || `card-${index}`"
       class="bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg transition-shadow"
       @click="emit('select', item)"
     >

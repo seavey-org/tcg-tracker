@@ -43,6 +43,9 @@ func (h *CollectionHandler) GetCollection(c *gin.Context) {
 	c.JSON(http.StatusOK, items)
 }
 
+// Maximum quantity allowed per collection item
+const maxQuantity = 9999
+
 func (h *CollectionHandler) AddToCollection(c *gin.Context) {
 	var req models.AddToCollectionRequest
 	if err := c.ShouldBindJSON(&req); err != nil {
@@ -59,10 +62,18 @@ func (h *CollectionHandler) AddToCollection(c *gin.Context) {
 		return
 	}
 
-	// Set defaults
+	// Validate and set defaults
 	quantity := req.Quantity
 	if quantity == 0 {
 		quantity = 1
+	}
+	if quantity < 0 {
+		c.JSON(http.StatusBadRequest, gin.H{"error": "quantity must be positive"})
+		return
+	}
+	if quantity > maxQuantity {
+		c.JSON(http.StatusBadRequest, gin.H{"error": "quantity exceeds maximum allowed (9999)"})
+		return
 	}
 	condition := req.Condition
 	if condition == "" {
@@ -129,8 +140,16 @@ func (h *CollectionHandler) UpdateCollectionItem(c *gin.Context) {
 		return
 	}
 
-	// Update fields if provided
+	// Update fields if provided with validation
 	if req.Quantity != nil {
+		if *req.Quantity < 0 {
+			c.JSON(http.StatusBadRequest, gin.H{"error": "quantity must be positive"})
+			return
+		}
+		if *req.Quantity > maxQuantity {
+			c.JSON(http.StatusBadRequest, gin.H{"error": "quantity exceeds maximum allowed (9999)"})
+			return
+		}
 		item.Quantity = *req.Quantity
 	}
 	if req.Condition != nil {

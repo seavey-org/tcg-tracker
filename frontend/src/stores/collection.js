@@ -8,17 +8,22 @@ export const useCollectionStore = defineStore('collection', {
     loading: false,
     error: null,
     searchResults: [],
-    searchLoading: false
+    searchLoading: false,
+    actionLoading: false
   }),
 
   getters: {
     totalCards: (state) => state.stats?.total_cards || 0,
     totalValue: (state) => state.stats?.total_value || 0,
-    mtgCards: (state) => state.items.filter(i => i.card.game === 'mtg'),
-    pokemonCards: (state) => state.items.filter(i => i.card.game === 'pokemon')
+    mtgCards: (state) => state.items.filter(i => i.card?.game === 'mtg'),
+    pokemonCards: (state) => state.items.filter(i => i.card?.game === 'pokemon')
   },
 
   actions: {
+    clearError() {
+      this.error = null
+    },
+
     async fetchCollection(game = null) {
       this.loading = true
       this.error = null
@@ -41,6 +46,7 @@ export const useCollectionStore = defineStore('collection', {
 
     async searchCards(query, game) {
       this.searchLoading = true
+      this.error = null
       try {
         const result = await cardService.search(query, game)
         this.searchResults = result.cards
@@ -54,47 +60,83 @@ export const useCollectionStore = defineStore('collection', {
     },
 
     async addToCollection(cardId, options = {}) {
+      this.actionLoading = true
+      this.error = null
       try {
         const item = await collectionService.add(cardId, options)
-        await this.fetchCollection()
-        await this.fetchStats()
+        // Optimistic update: add to local state immediately
+        this.items.unshift(item)
+        // Fetch stats in background (don't await)
+        this.fetchStats()
         return item
       } catch (err) {
         this.error = err.message
         throw err
+      } finally {
+        this.actionLoading = false
       }
     },
 
     async updateItem(id, updates) {
+      this.actionLoading = true
+      this.error = null
       try {
-        await collectionService.update(id, updates)
-        await this.fetchCollection()
-        await this.fetchStats()
+        const updatedItem = await collectionService.update(id, updates)
+        // Optimistic update: update in local state
+        const index = this.items.findIndex(i => i.id === id)
+        if (index !== -1) {
+          this.items[index] = updatedItem
+        }
+        // Fetch stats in background (don't await)
+        this.fetchStats()
+        return updatedItem
       } catch (err) {
         this.error = err.message
         throw err
+      } finally {
+        this.actionLoading = false
       }
     },
 
     async removeItem(id) {
+      this.actionLoading = true
+      this.error = null
+      // Optimistic update: remove from local state immediately
+      const removedIndex = this.items.findIndex(i => i.id === id)
+      const removedItem = removedIndex !== -1 ? this.items[removedIndex] : null
+      if (removedIndex !== -1) {
+        this.items.splice(removedIndex, 1)
+      }
       try {
         await collectionService.remove(id)
-        await this.fetchCollection()
-        await this.fetchStats()
+        // Fetch stats in background (don't await)
+        this.fetchStats()
       } catch (err) {
+        // Rollback on error
+        if (removedItem && removedIndex !== -1) {
+          this.items.splice(removedIndex, 0, removedItem)
+        }
         this.error = err.message
         throw err
+      } finally {
+        this.actionLoading = false
       }
     },
 
     async refreshPrices() {
+      this.actionLoading = true
+      this.error = null
       try {
-        await collectionService.refreshPrices()
+        const result = await collectionService.refreshPrices()
+        // Refetch collection to get updated prices
         await this.fetchCollection()
         await this.fetchStats()
+        return result
       } catch (err) {
         this.error = err.message
         throw err
+      } finally {
+        this.actionLoading = false
       }
     },
 
