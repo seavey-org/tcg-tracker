@@ -25,6 +25,7 @@ linters-settings:
     enable-all: true
     disable:
       - shadow
+      - fieldalignment
   goimports:
     local-prefixes: github.com/codyseavey/tcg-tracker
 
