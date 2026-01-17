@@ -370,6 +370,34 @@ class _CardDetailScreenState extends State<CardDetailScreen> {
             ),
           ],
         ),
+        // Total value for collection items with quantity > 1
+        if (_isCollectionItem && _quantity > 1) ...[
+          const SizedBox(height: 12),
+          Card(
+            color: colorScheme.primaryContainer,
+            child: Padding(
+              padding: const EdgeInsets.all(12),
+              child: Row(
+                children: [
+                  Text(
+                    'Total Value (x$_quantity)',
+                    style: theme.textTheme.bodyMedium?.copyWith(
+                      color: colorScheme.onPrimaryContainer,
+                    ),
+                  ),
+                  const Spacer(),
+                  Text(
+                    widget.collectionItem!.displayTotalValue,
+                    style: theme.textTheme.titleMedium?.copyWith(
+                      fontWeight: FontWeight.bold,
+                      color: colorScheme.onPrimaryContainer,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+        ],
       ],
     );
   }

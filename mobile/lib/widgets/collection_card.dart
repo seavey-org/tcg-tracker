@@ -153,16 +153,25 @@ class CollectionCard extends StatelessWidget {
                       overflow: TextOverflow.ellipsis,
                     ),
                     const SizedBox(height: 2),
-                    // Price
+                    // Per-card price
                     Text(
                       _isCollectionItem
-                          ? collectionItem!.displayTotalValue
+                          ? collectionItem!.displayPrice
                           : _card.displayPrice,
                       style: theme.textTheme.bodySmall?.copyWith(
                         fontWeight: FontWeight.bold,
                         color: colorScheme.primary,
                       ),
                     ),
+                    // Total value if quantity > 1
+                    if (_isCollectionItem && _quantity != null && _quantity! > 1)
+                      Text(
+                        'Total: ${collectionItem!.displayTotalValue}',
+                        style: theme.textTheme.bodySmall?.copyWith(
+                          fontSize: 9,
+                          color: colorScheme.onSurfaceVariant,
+                        ),
+                      ),
                   ],
                 ),
               ),
