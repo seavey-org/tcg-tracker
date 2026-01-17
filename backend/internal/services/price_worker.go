@@ -21,27 +21,27 @@ const (
 )
 
 type PriceWorker struct {
+	mu             sync.RWMutex
 	pokemonService *PokemonHybridService
+	lastResetDate  time.Time
+	updateInterval time.Duration
 
 	// Rate limiting
 	dailyLimit    int
 	requestsToday int
-	lastResetDate time.Time
-	mu            sync.RWMutex
 
 	// Batch config
-	batchSize      int
-	updateInterval time.Duration
+	batchSize int
 }
 
 type PriceStatus struct {
-	Remaining       int       `json:"remaining"`
-	DailyLimit      int       `json:"daily_limit"`
-	RequestsToday   int       `json:"requests_today"`
-	ResetsAt        time.Time `json:"resets_at"`
-	LastUpdateTime  time.Time `json:"last_update_time"`
-	NextUpdateTime  time.Time `json:"next_update_time"`
-	CardsUpdated    int       `json:"cards_updated_today"`
+	ResetsAt       time.Time `json:"resets_at"`
+	LastUpdateTime time.Time `json:"last_update_time"`
+	NextUpdateTime time.Time `json:"next_update_time"`
+	Remaining      int       `json:"remaining"`
+	DailyLimit     int       `json:"daily_limit"`
+	RequestsToday  int       `json:"requests_today"`
+	CardsUpdated   int       `json:"cards_updated_today"`
 }
 
 func NewPriceWorker(pokemonService *PokemonHybridService, dailyLimit int) *PriceWorker {
@@ -90,7 +90,7 @@ func (w *PriceWorker) Start(ctx context.Context) {
 	log.Printf("Price worker started: will update up to %d Pokemon cards per hour (limit: %d/day)", w.batchSize, w.dailyLimit)
 
 	// Run immediately on startup
-	w.UpdateBatch()
+	_, _ = w.UpdateBatch()
 
 	ticker := time.NewTicker(w.updateInterval)
 	defer ticker.Stop()
@@ -101,7 +101,7 @@ func (w *PriceWorker) Start(ctx context.Context) {
 			log.Println("Price worker stopping...")
 			return
 		case <-ticker.C:
-			w.UpdateBatch()
+			_, _ = w.UpdateBatch()
 		}
 	}
 }

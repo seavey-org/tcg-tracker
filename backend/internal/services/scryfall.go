@@ -1,6 +1,7 @@
 package services
 
 import (
+	"context"
 	"encoding/json"
 	"fmt"
 	"net/http"
@@ -25,22 +26,22 @@ func NewScryfallService() *ScryfallService {
 }
 
 type scryfallSearchResponse struct {
+	Data       []scryfallCard `json:"data"`
 	Object     string         `json:"object"`
 	TotalCards int            `json:"total_cards"`
 	HasMore    bool           `json:"has_more"`
-	Data       []scryfallCard `json:"data"`
 }
 
 type scryfallCard struct {
-	ID            string            `json:"id"`
-	Name          string            `json:"name"`
-	SetName       string            `json:"set_name"`
-	Set           string            `json:"set"`
-	CollectorNum  string            `json:"collector_number"`
-	Rarity        string            `json:"rarity"`
-	ImageURIs     *scryfallImages   `json:"image_uris"`
-	CardFaces     []scryfallFace    `json:"card_faces"`
-	Prices        scryfallPrices    `json:"prices"`
+	ImageURIs    *scryfallImages  `json:"image_uris"`
+	CardFaces    []scryfallFace   `json:"card_faces"`
+	Prices       scryfallPrices   `json:"prices"`
+	ID           string           `json:"id"`
+	Name         string           `json:"name"`
+	SetName      string           `json:"set_name"`
+	Set          string           `json:"set"`
+	CollectorNum string           `json:"collector_number"`
+	Rarity       string           `json:"rarity"`
 }
 
 type scryfallImages struct {
@@ -62,7 +63,13 @@ func (s *ScryfallService) SearchCards(query string) (*models.CardSearchResult, e
 	encodedQuery := url.QueryEscape(query)
 	reqURL := fmt.Sprintf("%s/cards/search?q=%s", scryfallBaseURL, encodedQuery)
 
-	resp, err := s.client.Get(reqURL)
+	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
+	defer cancel()
+	req, err := http.NewRequestWithContext(ctx, "GET", reqURL, nil)
+	if err != nil {
+		return nil, fmt.Errorf("failed to create request: %w", err)
+	}
+	resp, err := s.client.Do(req)
 	if err != nil {
 		return nil, fmt.Errorf("failed to search scryfall: %w", err)
 	}
@@ -100,7 +107,13 @@ func (s *ScryfallService) SearchCards(query string) (*models.CardSearchResult, e
 func (s *ScryfallService) GetCard(id string) (*models.Card, error) {
 	reqURL := fmt.Sprintf("%s/cards/%s", scryfallBaseURL, id)
 
-	resp, err := s.client.Get(reqURL)
+	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
+	defer cancel()
+	req, err := http.NewRequestWithContext(ctx, "GET", reqURL, nil)
+	if err != nil {
+		return nil, fmt.Errorf("failed to create request: %w", err)
+	}
+	resp, err := s.client.Do(req)
 	if err != nil {
 		return nil, fmt.Errorf("failed to get card from scryfall: %w", err)
 	}
@@ -136,10 +149,10 @@ func (s *ScryfallService) convertToCard(sc scryfallCard) models.Card {
 
 	var priceUSD, priceFoilUSD float64
 	if sc.Prices.USD != "" {
-		fmt.Sscanf(sc.Prices.USD, "%f", &priceUSD)
+		_, _ = fmt.Sscanf(sc.Prices.USD, "%f", &priceUSD)
 	}
 	if sc.Prices.USDFoil != "" {
-		fmt.Sscanf(sc.Prices.USDFoil, "%f", &priceFoilUSD)
+		_, _ = fmt.Sscanf(sc.Prices.USDFoil, "%f", &priceFoilUSD)
 	}
 
 	now := time.Now()

@@ -1,6 +1,7 @@
 package services
 
 import (
+	"context"
 	"encoding/json"
 	"fmt"
 	"net/http"
@@ -40,27 +41,29 @@ type pptMetadata struct {
 }
 
 type pptCard struct {
-	ID           string    `json:"id"`
-	TCGPlayerID  string    `json:"tcgPlayerId"`
-	Name         string    `json:"name"`
-	SetName      string    `json:"setName"`
-	SetID        string    `json:"setId"`
-	CardNumber   string    `json:"cardNumber"`
-	Rarity       string    `json:"rarity"`
-	ImageURL     string    `json:"imageUrl"`
-	ImageCdnUrl  string    `json:"imageCdnUrl"`
-	Prices       pptPrices `json:"prices"`
+	Prices      pptPrices `json:"prices"`
+	ID          string    `json:"id"`
+	TCGPlayerID string    `json:"tcgPlayerId"`
+	Name        string    `json:"name"`
+	SetName     string    `json:"setName"`
+	SetID       string    `json:"setId"`
+	CardNumber  string    `json:"cardNumber"`
+	Rarity      string    `json:"rarity"`
+	ImageURL    string    `json:"imageUrl"`
+	ImageCdnUrl string    `json:"imageCdnUrl"`
 }
 
 type pptPrices struct {
-	Market   float64                   `json:"market"`
 	Variants map[string]map[string]any `json:"variants"`
+	Market   float64                   `json:"market"`
 }
 
 func (s *PokemonPriceTrackerService) SearchCards(query string) (*models.CardSearchResult, error) {
 	reqURL := fmt.Sprintf("%s/cards?search=%s&limit=20", pokemonPriceTrackerBaseURL, url.QueryEscape(query))
 
-	req, err := http.NewRequest("GET", reqURL, nil)
+	ctx, cancel := context.WithTimeout(context.Background(), 30*time.Second)
+	defer cancel()
+	req, err := http.NewRequestWithContext(ctx, "GET", reqURL, nil)
 	if err != nil {
 		return nil, fmt.Errorf("failed to create request: %w", err)
 	}
@@ -98,7 +101,9 @@ func (s *PokemonPriceTrackerService) GetCard(id string) (*models.Card, error) {
 	// PokemonPriceTracker uses tcgPlayerId for lookups
 	reqURL := fmt.Sprintf("%s/cards?tcgPlayerId=%s", pokemonPriceTrackerBaseURL, id)
 
-	req, err := http.NewRequest("GET", reqURL, nil)
+	ctx, cancel := context.WithTimeout(context.Background(), 30*time.Second)
+	defer cancel()
+	req, err := http.NewRequestWithContext(ctx, "GET", reqURL, nil)
 	if err != nil {
 		return nil, fmt.Errorf("failed to create request: %w", err)
 	}

@@ -1,6 +1,7 @@
 package services
 
 import (
+	"context"
 	"encoding/json"
 	"fmt"
 	"net/http"
@@ -35,13 +36,13 @@ type pokemonSearchResponse struct {
 }
 
 type pokemonCard struct {
+	TCGPlayer *pokemonTCGPrice `json:"tcgplayer"`
+	Set       pokemonSet       `json:"set"`
+	Images    pokemonImages    `json:"images"`
 	ID        string           `json:"id"`
 	Name      string           `json:"name"`
-	Set       pokemonSet       `json:"set"`
 	Number    string           `json:"number"`
 	Rarity    string           `json:"rarity"`
-	Images    pokemonImages    `json:"images"`
-	TCGPlayer *pokemonTCGPrice `json:"tcgplayer"`
 }
 
 type pokemonSet struct {
@@ -55,9 +56,9 @@ type pokemonImages struct {
 }
 
 type pokemonTCGPrice struct {
+	Prices    map[string]pokemonPriceSet `json:"prices"`
 	URL       string                     `json:"url"`
 	UpdatedAt string                     `json:"updatedAt"`
-	Prices    map[string]pokemonPriceSet `json:"prices"`
 }
 
 type pokemonPriceSet struct {
@@ -71,7 +72,9 @@ func (s *PokemonTCGService) SearchCards(query string) (*models.CardSearchResult,
 	encodedQuery := url.QueryEscape(fmt.Sprintf("name:%s*", query))
 	reqURL := fmt.Sprintf("%s/cards?q=%s", pokemonTCGBaseURL, encodedQuery)
 
-	req, err := http.NewRequest("GET", reqURL, nil)
+	ctx, cancel := context.WithTimeout(context.Background(), 30*time.Second)
+	defer cancel()
+	req, err := http.NewRequestWithContext(ctx, "GET", reqURL, nil)
 	if err != nil {
 		return nil, fmt.Errorf("failed to create request: %w", err)
 	}
@@ -110,7 +113,9 @@ func (s *PokemonTCGService) SearchCards(query string) (*models.CardSearchResult,
 func (s *PokemonTCGService) GetCard(id string) (*models.Card, error) {
 	reqURL := fmt.Sprintf("%s/cards/%s", pokemonTCGBaseURL, id)
 
-	req, err := http.NewRequest("GET", reqURL, nil)
+	ctx, cancel := context.WithTimeout(context.Background(), 30*time.Second)
+	defer cancel()
+	req, err := http.NewRequestWithContext(ctx, "GET", reqURL, nil)
 	if err != nil {
 		return nil, fmt.Errorf("failed to create request: %w", err)
 	}

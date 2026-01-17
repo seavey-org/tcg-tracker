@@ -7,19 +7,19 @@ import (
 
 // OCRResult contains parsed information from OCR text
 type OCRResult struct {
-	RawText           string   `json:"raw_text"`
-	CardName          string   `json:"card_name"`
-	CardNumber        string   `json:"card_number"`         // e.g., "25" from "025/185"
-	SetTotal          string   `json:"set_total"`           // e.g., "185" from "025/185"
-	SetCode           string   `json:"set_code"`            // e.g., "SWSH4" if detected
-	SetName           string   `json:"set_name"`            // e.g., "Vivid Voltage" if detected
-	HP                string   `json:"hp"`                  // e.g., "170" from "HP 170"
-	Rarity            string   `json:"rarity"`              // if detected
-	IsFoil            bool     `json:"is_foil"`             // detected foil indicators
-	FoilIndicators    []string `json:"foil_indicators"`     // what triggered foil detection
-	AllLines          []string `json:"all_lines"`
-	Confidence        float64  `json:"confidence"`          // 0-1 based on how much we extracted
-	ConditionHints    []string `json:"condition_hints"`     // hints about card condition
+	FoilIndicators []string `json:"foil_indicators"` // what triggered foil detection
+	AllLines       []string `json:"all_lines"`
+	ConditionHints []string `json:"condition_hints"` // hints about card condition
+	RawText        string   `json:"raw_text"`
+	CardName       string   `json:"card_name"`
+	CardNumber     string   `json:"card_number"` // e.g., "25" from "025/185"
+	SetTotal       string   `json:"set_total"`   // e.g., "185" from "025/185"
+	SetCode        string   `json:"set_code"`    // e.g., "SWSH4" if detected
+	SetName        string   `json:"set_name"`    // e.g., "Vivid Voltage" if detected
+	HP             string   `json:"hp"`          // e.g., "170" from "HP 170"
+	Rarity         string   `json:"rarity"`      // if detected
+	Confidence     float64  `json:"confidence"`  // 0-1 based on how much we extracted
+	IsFoil         bool     `json:"is_foil"`     // detected foil indicators
 }
 
 // Maximum allowed OCR text length to prevent regex DoS
@@ -120,20 +120,20 @@ func parsePokemonOCR(result *OCRResult) {
 // detectFoilIndicators checks for foil/holographic card indicators
 func detectFoilIndicators(result *OCRResult, upperText string) {
 	foilPatterns := map[string]string{
-		"HOLO":           "Holographic text detected",
-		"HOLOFOIL":       "Holofoil text detected",
-		"REVERSE HOLO":   "Reverse holo text detected",
-		"REVERSE":        "Reverse holo indicator",
-		"SHINY":          "Shiny variant text",
-		"GOLD":           "Gold card indicator",
-		"RAINBOW":        "Rainbow rare indicator",
-		"FULL ART":       "Full art card",
-		"ALT ART":        "Alternate art card",
-		"ALTERNATE ART":  "Alternate art card",
-		"SECRET":         "Secret rare indicator",
-		"ILLUSTRATION":   "Special illustration rare",
-		"SPECIAL ART":    "Special art rare",
-		"CROWN ZENITH":   "Crown Zenith (often special)",
+		"HOLO":          "Holographic text detected",
+		"HOLOFOIL":      "Holofoil text detected",
+		"REVERSE HOLO":  "Reverse holo text detected",
+		"REVERSE":       "Reverse holo indicator",
+		"SHINY":         "Shiny variant text",
+		"GOLD":          "Gold card indicator",
+		"RAINBOW":       "Rainbow rare indicator",
+		"FULL ART":      "Full art card",
+		"ALT ART":       "Alternate art card",
+		"ALTERNATE ART": "Alternate art card",
+		"SECRET":        "Secret rare indicator",
+		"ILLUSTRATION":  "Special illustration rare",
+		"SPECIAL ART":   "Special art rare",
+		"CROWN ZENITH":  "Crown Zenith (often special)",
 	}
 
 	for pattern, hint := range foilPatterns {
@@ -155,17 +155,17 @@ func detectFoilIndicators(result *OCRResult, upperText string) {
 func detectPokemonRarity(result *OCRResult, upperText string) {
 	// Rarity symbols often appear as text in OCR
 	rarityPatterns := map[string]string{
-		"ILLUSTRATION RARE":     "Illustration Rare",
-		"SPECIAL ART RARE":      "Special Art Rare",
-		"HYPER RARE":            "Hyper Rare",
-		"SECRET RARE":           "Secret Rare",
-		"ULTRA RARE":            "Ultra Rare",
-		"DOUBLE RARE":           "Double Rare",
-		"RARE HOLO":             "Rare Holo",
-		"RARE":                  "Rare",
-		"UNCOMMON":              "Uncommon",
-		"COMMON":                "Common",
-		"PROMO":                 "Promo",
+		"ILLUSTRATION RARE": "Illustration Rare",
+		"SPECIAL ART RARE":  "Special Art Rare",
+		"HYPER RARE":        "Hyper Rare",
+		"SECRET RARE":       "Secret Rare",
+		"ULTRA RARE":        "Ultra Rare",
+		"DOUBLE RARE":       "Double Rare",
+		"RARE HOLO":         "Rare Holo",
+		"RARE":              "Rare",
+		"UNCOMMON":          "Uncommon",
+		"COMMON":            "Common",
+		"PROMO":             "Promo",
 	}
 
 	for pattern, rarity := range rarityPatterns {

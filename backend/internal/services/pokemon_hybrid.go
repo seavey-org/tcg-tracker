@@ -2,6 +2,7 @@ package services
 
 import (
 	"archive/zip"
+	"context"
 	"encoding/json"
 	"fmt"
 	"io"
@@ -20,26 +21,26 @@ import (
 const pokemonDataURL = "https://github.com/PokemonTCG/pokemon-tcg-data/archive/refs/heads/master.zip"
 
 type PokemonHybridService struct {
+	mu           sync.RWMutex
 	cards        []LocalPokemonCard
 	sets         map[string]LocalSet
 	cardIndex    map[string][]int // name -> card indices for fast lookup
 	priceService *PokemonPriceTrackerService
-	mu           sync.RWMutex
 }
 
 type LocalPokemonCard struct {
-	ID         string            `json:"id"`
-	Name       string            `json:"name"`
-	Supertype  string            `json:"supertype"`
-	Subtypes   []string          `json:"subtypes"`
-	HP         string            `json:"hp"`
-	Types      []string          `json:"types"`
-	Number     string            `json:"number"`
-	Artist     string            `json:"artist"`
-	Rarity     string            `json:"rarity"`
-	FlavorText string            `json:"flavorText"`
-	Images     LocalCardImages   `json:"images"`
-	SetID      string            // Populated from filename
+	Subtypes   []string        `json:"subtypes"`
+	Types      []string        `json:"types"`
+	Images     LocalCardImages `json:"images"`
+	ID         string          `json:"id"`
+	Name       string          `json:"name"`
+	Supertype  string          `json:"supertype"`
+	HP         string          `json:"hp"`
+	Number     string          `json:"number"`
+	Artist     string          `json:"artist"`
+	Rarity     string          `json:"rarity"`
+	FlavorText string          `json:"flavorText"`
+	SetID      string          // Populated from filename
 }
 
 type LocalCardImages struct {
@@ -51,8 +52,8 @@ type LocalSet struct {
 	ID          string `json:"id"`
 	Name        string `json:"name"`
 	Series      string `json:"series"`
-	Total       int    `json:"total"`
 	ReleaseDate string `json:"releaseDate"`
+	Total       int    `json:"total"`
 }
 
 func NewPokemonHybridService(dataDir string, priceTrackerAPIKey string) (*PokemonHybridService, error) {
@@ -341,7 +342,7 @@ func (s *PokemonHybridService) GetCardBySetAndNumber(setCode, cardNumber string)
 
 	for _, localCard := range s.cards {
 		// Check if set code matches
-		if strings.ToLower(localCard.SetID) != strings.ToLower(setCode) {
+		if !strings.EqualFold(localCard.SetID, setCode) {
 			continue
 		}
 
@@ -373,7 +374,13 @@ func downloadPokemonData(dataDir string) error {
 	client := &http.Client{
 		Timeout: 5 * time.Minute,
 	}
-	resp, err := client.Get(pokemonDataURL)
+	ctx, cancel := context.WithTimeout(context.Background(), 5*time.Minute)
+	defer cancel()
+	req, err := http.NewRequestWithContext(ctx, "GET", pokemonDataURL, nil)
+	if err != nil {
+		return fmt.Errorf("failed to create request: %w", err)
+	}
+	resp, err := client.Do(req)
 	if err != nil {
 		return fmt.Errorf("failed to download: %w", err)
 	}
@@ -439,7 +446,9 @@ func extractZip(zipPath, destDir string) error {
 		}
 
 		if f.FileInfo().IsDir() {
-			os.MkdirAll(fpath, os.ModePerm)
+			if err := os.MkdirAll(fpath, os.ModePerm); err != nil {
+				return err
+			}
 			continue
 		}
 
