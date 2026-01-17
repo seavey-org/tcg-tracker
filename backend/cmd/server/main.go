@@ -26,14 +26,13 @@ func main() {
 	// Initialize services
 	scryfallService := services.NewScryfallService()
 
-	// Initialize Pokemon hybrid service (local data + PriceTracker for prices)
-	pokemonAPIKey := os.Getenv("POKEMON_PRICE_TRACKER_API_KEY")
+	// Initialize Pokemon hybrid service (local data + TCGdex for prices)
 	dataDir := os.Getenv("POKEMON_DATA_DIR")
 	if dataDir == "" {
 		dataDir = "./data"
 	}
 
-	pokemonService, err := services.NewPokemonHybridService(dataDir, pokemonAPIKey)
+	pokemonService, err := services.NewPokemonHybridService(dataDir)
 	if err != nil {
 		log.Fatalf("Failed to initialize Pokemon service: %v", err)
 	}

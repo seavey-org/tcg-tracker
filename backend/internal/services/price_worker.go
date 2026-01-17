@@ -12,83 +12,44 @@ import (
 
 // Constants for price worker configuration
 const (
-	// reservedManualQuota is the number of requests reserved for manual refreshes
-	reservedManualQuota = 10
-	// defaultBatchSize is the number of cards to update per batch (with 100/day limit, ~4 per hour is safe)
-	defaultBatchSize = 2
-	// apiRequestDelay is the delay between API requests to respect rate limits
-	// Free tier has strict burst limits, so we use a longer delay
-	apiRequestDelay = 10 * time.Second
+	// defaultBatchSize is the number of cards to update per batch
+	// TCGdex has no rate limits, so we can be more aggressive
+	defaultBatchSize = 20
+	// apiRequestDelay is the delay between API requests (minimal for TCGdex)
+	apiRequestDelay = 100 * time.Millisecond
 )
 
 type PriceWorker struct {
 	pokemonService *PokemonHybridService
-	lastResetDate  time.Time
 	updateInterval time.Duration
 	mu             sync.RWMutex
 
-	// Rate limiting
-	dailyLimit    int
-	requestsToday int
-
 	// Batch config
 	batchSize int
+
+	// Stats
+	cardsUpdatedToday int
+	lastUpdateTime    time.Time
 }
 
 type PriceStatus struct {
-	ResetsAt       time.Time `json:"resets_at"`
-	LastUpdateTime time.Time `json:"last_update_time"`
-	NextUpdateTime time.Time `json:"next_update_time"`
-	Remaining      int       `json:"remaining"`
-	DailyLimit     int       `json:"daily_limit"`
-	RequestsToday  int       `json:"requests_today"`
-	CardsUpdated   int       `json:"cards_updated_today"`
+	LastUpdateTime    time.Time `json:"last_update_time"`
+	NextUpdateTime    time.Time `json:"next_update_time"`
+	CardsUpdatedToday int       `json:"cards_updated_today"`
+	BatchSize         int       `json:"batch_size"`
 }
 
-func NewPriceWorker(pokemonService *PokemonHybridService, dailyLimit int) *PriceWorker {
+func NewPriceWorker(pokemonService *PokemonHybridService, _ int) *PriceWorker {
 	return &PriceWorker{
 		pokemonService: pokemonService,
-		dailyLimit:     dailyLimit,
-		requestsToday:  0,
-		lastResetDate:  time.Now().Truncate(24 * time.Hour),
 		batchSize:      defaultBatchSize,
 		updateInterval: 1 * time.Hour,
 	}
 }
 
-// calculateBatchSize determines how many cards to update, resetting daily counter if needed.
-// Returns 0 if quota is exhausted.
-func (w *PriceWorker) calculateBatchSize() int {
-	w.mu.Lock()
-	defer w.mu.Unlock()
-
-	// Reset daily counter if it's a new day
-	today := time.Now().Truncate(24 * time.Hour)
-	if today.After(w.lastResetDate) {
-		w.requestsToday = 0
-		w.lastResetDate = today
-		log.Println("Price worker: daily quota reset")
-	}
-
-	// Check if we have quota remaining
-	backgroundQuota := w.dailyLimit - reservedManualQuota
-	if w.requestsToday >= backgroundQuota {
-		log.Printf("Price worker: daily background quota exhausted (%d/%d used)", w.requestsToday, backgroundQuota)
-		return 0
-	}
-
-	remainingQuota := backgroundQuota - w.requestsToday
-	batchSize := w.batchSize
-	if remainingQuota < batchSize {
-		batchSize = remainingQuota
-	}
-
-	return batchSize
-}
-
 // Start begins the background price update worker
 func (w *PriceWorker) Start(ctx context.Context) {
-	log.Printf("Price worker started: will update up to %d Pokemon cards per hour (limit: %d/day)", w.batchSize, w.dailyLimit)
+	log.Printf("Price worker started: will update %d Pokemon cards per hour using TCGdex (no rate limits)", w.batchSize)
 
 	// Run immediately on startup
 	_, _ = w.UpdateBatch()
@@ -109,11 +70,6 @@ func (w *PriceWorker) Start(ctx context.Context) {
 
 // UpdateBatch updates a batch of cards with the oldest prices
 func (w *PriceWorker) UpdateBatch() (updated int, err error) {
-	batchSize := w.calculateBatchSize()
-	if batchSize <= 0 {
-		return 0, nil
-	}
-
 	db := database.GetDB()
 
 	// Get cards that need price updates
@@ -127,11 +83,11 @@ func (w *PriceWorker) UpdateBatch() (updated int, err error) {
 		WHERE c.game = ?
 		ORDER BY c.price_updated_at ASC NULLS FIRST
 		LIMIT ?
-	`, models.GamePokemon, batchSize).Scan(&cards)
+	`, models.GamePokemon, w.batchSize).Scan(&cards)
 
 	// If we don't have enough, add cached cards not in collection
-	if len(cards) < batchSize {
-		remaining := batchSize - len(cards)
+	if len(cards) < w.batchSize {
+		remaining := w.batchSize - len(cards)
 		var moreCards []models.Card
 		db.Where("game = ?", models.GamePokemon).
 			Order("price_updated_at ASC NULLS FIRST").
@@ -160,15 +116,16 @@ func (w *PriceWorker) UpdateBatch() (updated int, err error) {
 			continue
 		}
 
-		w.mu.Lock()
-		w.requestsToday++
-		w.mu.Unlock()
-
 		updated++
 
 		// Small delay between requests to be nice to the API
 		time.Sleep(apiRequestDelay)
 	}
+
+	w.mu.Lock()
+	w.cardsUpdatedToday += updated
+	w.lastUpdateTime = time.Now()
+	w.mu.Unlock()
 
 	log.Printf("Price worker: updated %d card prices", updated)
 	return updated, nil
@@ -176,17 +133,6 @@ func (w *PriceWorker) UpdateBatch() (updated int, err error) {
 
 // UpdateCard updates a single card's price (for manual refresh)
 func (w *PriceWorker) UpdateCard(cardID string) (*models.Card, error) {
-	w.mu.Lock()
-
-	// Check quota for manual requests
-	if w.requestsToday >= w.dailyLimit {
-		w.mu.Unlock()
-		return nil, nil // Quota exhausted
-	}
-
-	w.requestsToday++
-	w.mu.Unlock()
-
 	db := database.GetDB()
 
 	var card models.Card
@@ -207,13 +153,17 @@ func (w *PriceWorker) UpdateCard(cardID string) (*models.Card, error) {
 		return nil, err
 	}
 
+	w.mu.Lock()
+	w.cardsUpdatedToday++
+	w.mu.Unlock()
+
 	log.Printf("Price worker: manually refreshed price for %s", card.Name)
 	return &card, nil
 }
 
 func (w *PriceWorker) updateCardPrice(card *models.Card) error {
-	// Search for the card by name to get price
-	priceResult, err := w.pokemonService.priceService.SearchCards(card.Name)
+	// Search for the card by name to get price from TCGdex
+	priceResult, err := w.pokemonService.tcgdexService.SearchCards(card.Name)
 	if err != nil {
 		return err
 	}
@@ -260,27 +210,17 @@ func (w *PriceWorker) updateCardPrice(card *models.Card) error {
 	return nil
 }
 
-// GetStatus returns the current quota status
+// GetStatus returns the current status
 func (w *PriceWorker) GetStatus() PriceStatus {
 	w.mu.RLock()
 	defer w.mu.RUnlock()
 
-	// Calculate reset time (next midnight)
 	now := time.Now()
-	tomorrow := now.Truncate(24 * time.Hour).Add(24 * time.Hour)
 
 	return PriceStatus{
-		Remaining:      w.dailyLimit - w.requestsToday,
-		DailyLimit:     w.dailyLimit,
-		RequestsToday:  w.requestsToday,
-		ResetsAt:       tomorrow,
-		NextUpdateTime: now.Add(w.updateInterval),
+		LastUpdateTime:    w.lastUpdateTime,
+		NextUpdateTime:    now.Add(w.updateInterval),
+		CardsUpdatedToday: w.cardsUpdatedToday,
+		BatchSize:         w.batchSize,
 	}
-}
-
-// GetRemainingQuota returns the number of requests remaining today
-func (w *PriceWorker) GetRemainingQuota() int {
-	w.mu.RLock()
-	defer w.mu.RUnlock()
-	return w.dailyLimit - w.requestsToday
 }
