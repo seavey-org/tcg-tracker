@@ -14,11 +14,11 @@ func TestEnhancedOCRPokemonCards(t *testing.T) {
 	}
 
 	testCases := []struct {
-		filename     string
-		wantName     string
-		wantNumber   string
-		wantHP       bool
-		mustPass     bool // If false, test logs warnings instead of failing
+		filename   string
+		wantName   string
+		wantNumber string
+		wantHP     bool
+		mustPass   bool // If false, test logs warnings instead of failing
 	}{
 		{"charizard_base1_4.png", "Charizard", "4/102", true, true},
 		{"pikachu_base1_58.png", "Pikachu", "58/102", true, true},
@@ -33,7 +33,7 @@ func TestEnhancedOCRPokemonCards(t *testing.T) {
 	}
 
 	testDir := "testdata/pokemon_cards"
-	
+
 	for _, tc := range testCases {
 		t.Run(tc.filename, func(t *testing.T) {
 			data, err := os.ReadFile(filepath.Join(testDir, tc.filename))
@@ -49,7 +49,7 @@ func TestEnhancedOCRPokemonCards(t *testing.T) {
 			}
 
 			text := strings.ToUpper(strings.Join(result.Lines, " "))
-			
+
 			t.Logf("Confidence: %.2f", result.Confidence)
 			t.Logf("Extracted %d lines", len(result.Lines))
 			for i, line := range result.Lines {
@@ -98,10 +98,10 @@ func TestEnhancedOCRMTGCards(t *testing.T) {
 	// MTG OCR is more challenging due to varied typography across eras
 	// These tests log warnings rather than fail to track OCR quality
 	testCases := []struct {
-		filename   string
-		wantName   string
-		wantType   string
-		mustPass   bool
+		filename string
+		wantName string
+		wantType string
+		mustPass bool
 	}{
 		{"black_lotus_lea_232.jpg", "Black Lotus", "Artifact", false}, // Vintage card
 		{"lightning_bolt_lea_161.jpg", "Lightning Bolt", "Instant", false},
@@ -113,7 +113,7 @@ func TestEnhancedOCRMTGCards(t *testing.T) {
 	}
 
 	testDir := "testdata/mtg_cards"
-	
+
 	for _, tc := range testCases {
 		t.Run(tc.filename, func(t *testing.T) {
 			data, err := os.ReadFile(filepath.Join(testDir, tc.filename))
@@ -129,7 +129,7 @@ func TestEnhancedOCRMTGCards(t *testing.T) {
 			}
 
 			text := strings.ToUpper(strings.Join(result.Lines, " "))
-			
+
 			t.Logf("Confidence: %.2f", result.Confidence)
 			t.Logf("Extracted %d lines", len(result.Lines))
 			for i, line := range result.Lines {

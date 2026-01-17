@@ -14,12 +14,12 @@ func TestServerOCREndToEnd(t *testing.T) {
 	}
 
 	testCases := []struct {
-		filename     string
-		game         string
-		wantName     string
-		wantNumber   string
-		wantSetCode  string
-		wantHP       string
+		filename    string
+		game        string
+		wantName    string
+		wantNumber  string
+		wantSetCode string
+		wantHP      string
 	}{
 		// Base Set - these should work well
 		{"pokemon_cards/charizard_base1_4.png", "pokemon", "Charizard", "4", "base1", "120"},
@@ -36,7 +36,7 @@ func TestServerOCREndToEnd(t *testing.T) {
 	}
 
 	testDir := "testdata"
-	
+
 	for _, tc := range testCases {
 		t.Run(tc.filename, func(t *testing.T) {
 			data, err := os.ReadFile(filepath.Join(testDir, tc.filename))
@@ -53,12 +53,12 @@ func TestServerOCREndToEnd(t *testing.T) {
 			}
 
 			t.Logf("OCR extracted %d lines, confidence: %.2f", len(ocrResult.Lines), ocrResult.Confidence)
-			
+
 			// Step 2: Parse OCR text
 			parseResult := ParseOCRText(ocrResult.Text, tc.game)
-			
+
 			t.Logf("Parse result: Name=%q, Number=%q, Set=%q, HP=%q, Confidence=%.2f",
-				parseResult.CardName, parseResult.CardNumber, parseResult.SetCode, 
+				parseResult.CardName, parseResult.CardNumber, parseResult.SetCode,
 				parseResult.HP, parseResult.Confidence)
 
 			// Check results - we're more lenient here since OCR is noisy
@@ -102,7 +102,7 @@ func TestServerOCRMTGEndToEnd(t *testing.T) {
 	}
 
 	testDir := "testdata"
-	
+
 	for _, tc := range testCases {
 		t.Run(tc.filename, func(t *testing.T) {
 			data, err := os.ReadFile(filepath.Join(testDir, tc.filename))
@@ -119,12 +119,12 @@ func TestServerOCRMTGEndToEnd(t *testing.T) {
 			}
 
 			t.Logf("OCR extracted %d lines, confidence: %.2f", len(ocrResult.Lines), ocrResult.Confidence)
-			
+
 			// Step 2: Parse OCR text
 			parseResult := ParseOCRText(ocrResult.Text, "mtg")
-			
+
 			t.Logf("Parse result: Name=%q, Number=%q, Set=%q, Confidence=%.2f",
-				parseResult.CardName, parseResult.CardNumber, parseResult.SetCode, 
+				parseResult.CardName, parseResult.CardNumber, parseResult.SetCode,
 				parseResult.Confidence)
 
 			// Check results
