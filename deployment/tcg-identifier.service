@@ -4,7 +4,7 @@ After=network.target
 
 [Service]
 Type=simple
-WorkingDirectory=/opt/tcg-tracker/identifier
+WorkingDirectory=/opt/tcg-tracker
 Environment=HOST=127.0.0.1
 Environment=PORT=8099
 Environment=SETID_INDEX_DIR=/opt/tcg-tracker/setid/indexes
