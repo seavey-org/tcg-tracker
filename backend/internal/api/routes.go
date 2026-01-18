@@ -53,6 +53,7 @@ func SetupRouter(scryfallService *services.ScryfallService, pokemonService *serv
 			cards.GET("/:id/prices", priceHandler.GetCardPrices)
 			cards.POST("/identify", cardHandler.IdentifyCard)
 			cards.POST("/identify-image", cardHandler.IdentifyCardFromImage)
+			cards.POST("/identify-set", cardHandler.IdentifySetFromImage)
 			cards.GET("/ocr-status", cardHandler.GetOCRStatus)
 			cards.POST("/:id/refresh-price", priceHandler.RefreshCardPrice)
 		}

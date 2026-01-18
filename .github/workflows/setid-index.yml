@@ -1,0 +1,92 @@
+name: Build Set-ID Indexes
+
+on:
+  schedule:
+    - cron: '0 2 * * 0'
+  workflow_dispatch: {}
+
+env:
+  PYTHON_VERSION: '3.11'
+
+jobs:
+  build-indexes:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+          cache: pip
+          cache-dependency-path: identifier/requirements.txt
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r identifier/requirements.txt
+          pip install requests
+
+      - name: Build Pokemon index
+        env:
+          POKEMONTCG_API_KEY: ${{ secrets.POKEMONTCG_API_KEY }}
+        run: |
+          mkdir -p dist/setid-indexes
+          python identifier/index_builder/build_index_pokemon.py --repo-root . --out dist/setid-indexes --per-set 6 --min-coverage 0.95
+
+      - name: Build MTG index
+        run: |
+          python identifier/index_builder/build_index_mtg.py --out dist/setid-indexes --per-set 6 --min-coverage 0.90
+
+      - name: Validate indexes
+        run: |
+          echo "=== Pokemon Index Validation ==="
+          cat dist/setid-indexes/pokemon_validation_report.json | python -c "import sys,json; r=json.load(sys.stdin); print(f'Coverage: {r[\"coverage_pct\"]}%'); print(f'Indexed: {r[\"indexed_sets\"]}/{r[\"total_sets\"]} sets'); print(f'Failed: {r[\"failed_sets_count\"]} sets')"
+
+          echo ""
+          echo "=== MTG Index Validation ==="
+          cat dist/setid-indexes/mtg_validation_report.json | python -c "import sys,json; r=json.load(sys.stdin); print(f'Coverage: {r[\"coverage_pct\"]}%'); print(f'Indexed: {r[\"indexed_sets\"]}/{r[\"total_sets\"]} sets'); print(f'Failed: {r[\"failed_sets_count\"]} sets')"
+
+      - name: Write version info
+        run: |
+          python - <<'PY'
+          import json, os, time
+          out = {
+            'built_at': time.strftime('%Y-%m-%dT%H:%M:%SZ', time.gmtime()),
+            'git_sha': os.environ.get('GITHUB_SHA',''),
+            'run_id': os.environ.get('GITHUB_RUN_ID',''),
+            'model': 'openai/clip-vit-base-patch32',
+          }
+          with open('dist/setid-indexes/version.json','w',encoding='utf-8') as f:
+            json.dump(out,f)
+          PY
+
+      - name: Upload set-id indexes
+        uses: actions/upload-artifact@v4
+        with:
+          name: setid-indexes
+          path: dist/setid-indexes
+          retention-days: 60
+
+  deploy-indexes:
+    runs-on: [self-hosted, fedora]
+    needs: build-indexes
+    if: github.event_name == 'workflow_dispatch' || github.event_name == 'schedule'
+    env:
+      SERVER: "192.168.86.227"
+      INDEX_DIR: "/opt/tcg-tracker/setid/indexes"
+    steps:
+      - name: Download index artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: setid-indexes
+          path: indexes
+
+      - name: Deploy indexes to server
+        run: |
+          ssh $SERVER "mkdir -p $INDEX_DIR"
+          scp indexes/*.faiss indexes/*_meta.json indexes/version.json $SERVER:$INDEX_DIR/
+
+      - name: Restart identifier service
+        run: |
+          ssh $SERVER "sudo systemctl restart tcg-identifier || true"

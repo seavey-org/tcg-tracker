@@ -1,0 +1,17 @@
+[Unit]
+Description=TCG Identifier Service
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/opt/tcg-tracker/identifier
+Environment=HOST=127.0.0.1
+Environment=PORT=8099
+Environment=SETID_INDEX_DIR=/opt/tcg-tracker/setid/indexes
+Environment=SET_ID_DEBUG=0
+ExecStart=/opt/tcg-tracker/identifier/venv/bin/uvicorn identifier.app:app --host 127.0.0.1 --port 8099
+Restart=always
+RestartSec=2
+
+[Install]
+WantedBy=multi-user.target

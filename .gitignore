@@ -54,3 +54,28 @@ backend/data/pokemon-tcg-data.zip
 
 # Test images (downloaded during testing)
 backend/internal/services/testdata/images/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+*.egg-info/
+venv/
+.venv/
+
+# Identifier service debug/temp files
+identifier/_debug_crops/
+identifier/*.egg-info/
+
+# User shell config files (should never be in repo)
+.bash_profile
+.bashrc
+.profile
+.zprofile
+.zshrc
+.gitconfig
+.ripgreprc
+
+# MCP config
+.mcp.json

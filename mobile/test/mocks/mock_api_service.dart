@@ -20,12 +20,16 @@ extension MockApiServiceExtension on MockApiService {
 
   /// Stubs searchCards to return the given result
   void stubSearchCards(CardSearchResult result) {
-    when(() => searchCards(any(), any())).thenAnswer((_) async => result);
+    when(
+      () => searchCards(any(), any(), setIDs: any(named: 'setIDs')),
+    ).thenAnswer((_) async => result);
   }
 
   /// Stubs searchCards to throw an exception
   void stubSearchCardsError(String message) {
-    when(() => searchCards(any(), any())).thenThrow(Exception(message));
+    when(
+      () => searchCards(any(), any(), setIDs: any(named: 'setIDs')),
+    ).thenThrow(Exception(message));
   }
 
   /// Stubs identifyCard to return the given result
@@ -40,36 +44,87 @@ extension MockApiServiceExtension on MockApiService {
 
   /// Stubs identifyCard to throw a timeout exception
   void stubIdentifyCardTimeout() {
-    when(() => identifyCard(any(), any()))
-        .thenThrow(Exception('Request timed out'));
+    when(
+      () => identifyCard(any(), any()),
+    ).thenThrow(Exception('Request timed out'));
   }
 
   /// Stubs addToCollection to complete successfully
   void stubAddToCollection([CollectionItem? item]) {
-    final defaultItem = item ?? CollectionItem(
-      id: 1,
-      cardId: 'test-card-id',
-      card: CardModel(id: 'test-card-id', game: 'pokemon', name: 'Test Card'),
-      quantity: 1,
-      condition: 'NM',
-      foil: false,
-      addedAt: DateTime.now(),
-    );
-    when(() => addToCollection(
-          any(),
-          quantity: any(named: 'quantity'),
-          condition: any(named: 'condition'),
-          foil: any(named: 'foil'),
-        )).thenAnswer((_) async => defaultItem);
+    final defaultItem =
+        item ??
+        CollectionItem(
+          id: 1,
+          cardId: 'test-card-id',
+          card: CardModel(
+            id: 'test-card-id',
+            game: 'pokemon',
+            name: 'Test Card',
+          ),
+          quantity: 1,
+          condition: 'NM',
+          foil: false,
+          addedAt: DateTime.now(),
+        );
+    when(
+      () => addToCollection(
+        any(),
+        quantity: any(named: 'quantity'),
+        condition: any(named: 'condition'),
+        foil: any(named: 'foil'),
+      ),
+    ).thenAnswer((_) async => defaultItem);
   }
 
   /// Stubs addToCollection to throw an exception
   void stubAddToCollectionError(String message) {
-    when(() => addToCollection(
-          any(),
-          quantity: any(named: 'quantity'),
-          condition: any(named: 'condition'),
-          foil: any(named: 'foil'),
-        )).thenThrow(Exception(message));
+    when(
+      () => addToCollection(
+        any(),
+        quantity: any(named: 'quantity'),
+        condition: any(named: 'condition'),
+        foil: any(named: 'foil'),
+      ),
+    ).thenThrow(Exception(message));
+  }
+
+  /// Stubs identifySetFromImage to return the given result
+  void stubIdentifySetFromImage(SetIdentificationResult? result) {
+    when(
+      () => identifySetFromImage(any(), any()),
+    ).thenAnswer((_) async => result);
+  }
+
+  /// Stubs identifySetFromImage to throw an exception
+  void stubIdentifySetFromImageError(String message) {
+    when(
+      () => identifySetFromImage(any(), any()),
+    ).thenThrow(Exception(message));
+  }
+
+  /// Stubs identifySetFromImage to return null (service unavailable)
+  void stubIdentifySetFromImageUnavailable() {
+    when(
+      () => identifySetFromImage(any(), any()),
+    ).thenAnswer((_) async => null);
+  }
+
+  /// Stubs identifyCardFromImage to return the given result
+  void stubIdentifyCardFromImage(ScanResult result) {
+    when(
+      () => identifyCardFromImage(any(), any()),
+    ).thenAnswer((_) async => result);
+  }
+
+  /// Stubs identifyCardFromImage to throw an exception
+  void stubIdentifyCardFromImageError(String message) {
+    when(
+      () => identifyCardFromImage(any(), any()),
+    ).thenThrow(Exception(message));
+  }
+
+  /// Stubs isServerOCRAvailable to return the given value
+  void stubIsServerOCRAvailable(bool available) {
+    when(() => isServerOCRAvailable()).thenAnswer((_) async => available);
   }
 }

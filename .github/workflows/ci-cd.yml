@@ -267,6 +267,29 @@ jobs:
           scp backend/tcg-server $SERVER:$APP_DIR/
           scp -r frontend/dist $SERVER:$APP_DIR/
 
+      - name: Deploy identifier service
+        run: |
+          ssh $SERVER "mkdir -p $APP_DIR/identifier/index_builder"
+          scp identifier/*.py identifier/requirements.txt $SERVER:$APP_DIR/identifier/
+          scp identifier/index_builder/*.py $SERVER:$APP_DIR/identifier/index_builder/
+          ssh $SERVER "cd $APP_DIR/identifier && (test -d venv || python3 -m venv venv)"
+          ssh $SERVER "cd $APP_DIR/identifier && ./venv/bin/pip install -q -r requirements.txt"
+
+      - name: Setup identifier systemd service
+        run: |
+          scp deployment/tcg-identifier.service $SERVER:/tmp/
+          ssh $SERVER "sudo mv /tmp/tcg-identifier.service /etc/systemd/system/"
+          ssh $SERVER "sudo systemctl daemon-reload"
+          ssh $SERVER "sudo systemctl enable tcg-identifier"
+
+      - name: Create index directory
+        run: |
+          ssh $SERVER "mkdir -p $APP_DIR/setid/indexes"
+
+      - name: Start identifier service
+        run: |
+          ssh $SERVER "sudo systemctl restart tcg-identifier || true"
+
       - name: Setup environment variables
         run: |
           ssh $SERVER "cat > $APP_DIR/config.env << EOF
@@ -274,6 +297,7 @@ jobs:
           PORT=8081
           FRONTEND_DIST_PATH=/opt/tcg-tracker/dist
           POKEMON_DATA_DIR=/opt/tcg-tracker/data
+          SET_ID_SERVICE_URL=http://127.0.0.1:8099
           GIN_MODE=release
           GORM_LOG_LEVEL=warn
           EOF"

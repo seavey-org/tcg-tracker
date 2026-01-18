@@ -59,7 +59,8 @@ class CardSearchResult {
 
   factory CardSearchResult.fromJson(Map<String, dynamic> json) {
     return CardSearchResult(
-      cards: (json['cards'] as List<dynamic>?)
+      cards:
+          (json['cards'] as List<dynamic>?)
               ?.map((c) => CardModel.fromJson(c as Map<String, dynamic>))
               .toList() ??
           [],
@@ -121,12 +122,14 @@ class ScanMetadata {
       hp: json['hp'],
       rarity: json['rarity'],
       isFoil: json['is_foil'] ?? false,
-      foilIndicators: (json['foil_indicators'] as List<dynamic>?)
+      foilIndicators:
+          (json['foil_indicators'] as List<dynamic>?)
               ?.map((e) => e.toString())
               .toList() ??
           [],
       confidence: (json['confidence'] as num?)?.toDouble() ?? 0.0,
-      conditionHints: (json['condition_hints'] as List<dynamic>?)
+      conditionHints:
+          (json['condition_hints'] as List<dynamic>?)
               ?.map((e) => e.toString())
               .toList() ??
           [],
@@ -137,7 +140,8 @@ class ScanMetadata {
       ),
       foilConfidence: (json['foil_confidence'] as num?)?.toDouble(),
       isFirstEdition: json['is_first_edition'] ?? false,
-      firstEdIndicators: (json['first_ed_indicators'] as List<dynamic>?)
+      firstEdIndicators:
+          (json['first_ed_indicators'] as List<dynamic>?)
               ?.map((e) => e.toString())
               .toList() ??
           [],
@@ -185,23 +189,70 @@ class ScanMetadata {
 }
 
 /// Result from card identification (OCR scan)
+class SetIconCandidate {
+  final String setId;
+  final double score;
+
+  SetIconCandidate({required this.setId, required this.score});
+
+  factory SetIconCandidate.fromJson(Map<String, dynamic> json) {
+    return SetIconCandidate(
+      setId: json['set_id'] ?? '',
+      score: (json['score'] as num?)?.toDouble() ?? 0.0,
+    );
+  }
+}
+
+class SetIconResult {
+  final String bestSetId;
+  final double confidence;
+  final bool lowConfidence;
+  final List<SetIconCandidate> candidates;
+
+  SetIconResult({
+    required this.bestSetId,
+    required this.confidence,
+    required this.lowConfidence,
+    required this.candidates,
+  });
+
+  factory SetIconResult.fromJson(Map<String, dynamic> json) {
+    return SetIconResult(
+      bestSetId: json['best_set_id'] ?? '',
+      confidence: (json['confidence'] as num?)?.toDouble() ?? 0.0,
+      lowConfidence: json['low_confidence'] ?? false,
+      candidates:
+          (json['candidates'] as List<dynamic>?)
+              ?.map((c) => SetIconCandidate.fromJson(c as Map<String, dynamic>))
+              .toList() ??
+          [],
+    );
+  }
+}
+
+/// Result from card identification (OCR scan)
 class ScanResult {
   final List<CardModel> cards;
   final int totalCount;
   final bool hasMore;
   final ScanMetadata metadata;
+  final SetIconResult? setIcon;
 
   ScanResult({
     required this.cards,
     required this.totalCount,
     required this.hasMore,
     required this.metadata,
+    this.setIcon,
   });
 
   factory ScanResult.fromJson(Map<String, dynamic> json) {
     final parsedData = json['parsed'];
+    final setIconData = json['set_icon'];
+
     return ScanResult(
-      cards: (json['cards'] as List<dynamic>?)
+      cards:
+          (json['cards'] as List<dynamic>?)
               ?.map((c) => CardModel.fromJson(c as Map<String, dynamic>))
               .toList() ??
           [],
@@ -210,6 +261,9 @@ class ScanResult {
       metadata: ScanMetadata.fromJson(
         parsedData != null ? Map<String, dynamic>.from(parsedData) : {},
       ),
+      setIcon: setIconData is Map<String, dynamic>
+          ? SetIconResult.fromJson(setIconData)
+          : null,
     );
   }
 }
