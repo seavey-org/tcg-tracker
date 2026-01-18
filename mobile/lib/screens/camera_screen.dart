@@ -188,7 +188,6 @@ class _CameraScreenState extends State<CameraScreen> {
             // If we have set ID hints, re-rank the results
             if (setIdHints != null &&
                 setIdHints.isNotEmpty &&
-                scanResult != null &&
                 scanResult.cards.isNotEmpty) {
               scanResult = _boostCardsBySetId(scanResult, setIdResult!);
             }
@@ -228,13 +227,15 @@ class _CameraScreenState extends State<CameraScreen> {
             )
           : null);
 
+      final detectedCardName = result.metadata.cardName ?? '';
+
       Navigator.push(
         context,
         MaterialPageRoute(
           builder: (context) => ScanResultScreen(
             cards: result.cards,
-            searchQuery: (result.metadata?.cardName?.isNotEmpty ?? false)
-                ? (result.metadata?.cardName ?? '')
+            searchQuery: detectedCardName.isNotEmpty
+                ? detectedCardName
                 : (usedServerOCR
                       ? 'Scanned Card (Server OCR)'
                       : 'Scanned Card'),

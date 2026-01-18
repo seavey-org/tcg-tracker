@@ -38,7 +38,6 @@ class _ScanResultScreenState extends State<ScanResultScreen> {
 
   bool _isBrowsing = false;
   List<CardModel>? _browseResults;
-  String? _browseError;
 
   // Use unified condition codes from constants
   List<String> get _conditions => CardConditions.codes;
@@ -83,13 +82,12 @@ class _ScanResultScreenState extends State<ScanResultScreen> {
 
     final setIDs = setIcon.candidates.isNotEmpty
         ? setIcon.candidates.map((c) => c.setId).toList()
-        : (setIcon.bestSetId != null ? [setIcon.bestSetId!] : <String>[]);
+        : (setIcon.bestSetId.isNotEmpty ? [setIcon.bestSetId] : <String>[]);
 
     if (setIDs.isEmpty) return;
 
     setState(() {
       _isBrowsing = true;
-      _browseError = null;
       _browseResults = null;
     });
 
@@ -136,7 +134,7 @@ class _ScanResultScreenState extends State<ScanResultScreen> {
                           )
                         : ListView.separated(
                             itemCount: results.length,
-                            separatorBuilder: (_, __) =>
+                            separatorBuilder: (_, index) =>
                                 const Divider(height: 1),
                             itemBuilder: (context, idx) {
                               final card = results[idx];
@@ -185,9 +183,6 @@ class _ScanResultScreenState extends State<ScanResultScreen> {
       );
     } catch (e) {
       if (!mounted) return;
-      setState(() {
-        _browseError = e.toString();
-      });
       ScaffoldMessenger.of(
         context,
       ).showSnackBar(SnackBar(content: Text('Browse failed: ${e.toString()}')));

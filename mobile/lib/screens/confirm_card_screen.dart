@@ -85,7 +85,7 @@ class _ConfirmCardScreenState extends State<ConfirmCardScreen> {
 
     final setIDs = setIcon.candidates.isNotEmpty
         ? setIcon.candidates.map((c) => c.setId).toList()
-        : (setIcon.bestSetId != null ? [setIcon.bestSetId!] : <String>[]);
+        : (setIcon.bestSetId.isNotEmpty ? [setIcon.bestSetId] : <String>[]);
 
     if (setIDs.isEmpty) return;
 
@@ -131,8 +131,8 @@ class _ConfirmCardScreenState extends State<ConfirmCardScreen> {
       final setIDs = (setIcon != null)
           ? (setIcon.candidates.isNotEmpty
                 ? setIcon.candidates.map((c) => c.setId).toList()
-                : (setIcon.bestSetId != null
-                      ? [setIcon.bestSetId!]
+                : (setIcon.bestSetId.isNotEmpty
+                      ? [setIcon.bestSetId]
                       : <String>[]))
           : <String>[];
 
@@ -316,7 +316,7 @@ class _ConfirmCardScreenState extends State<ConfirmCardScreen> {
                                     )
                                   : ListView.separated(
                                       itemCount: _browseResults!.length,
-                                      separatorBuilder: (_, __) =>
+                                      separatorBuilder: (_, index) =>
                                           const Divider(height: 1),
                                       itemBuilder: (context, idx) {
                                         final card = _browseResults![idx];
@@ -443,7 +443,7 @@ class _ConfirmCardScreenState extends State<ConfirmCardScreen> {
                       ? const Center(child: Text('No results'))
                       : ListView.separated(
                           itemCount: _searchResults!.length,
-                          separatorBuilder: (_, __) => const Divider(height: 1),
+                          separatorBuilder: (_, index) => const Divider(height: 1),
                           itemBuilder: (context, idx) {
                             final card = _searchResults![idx];
                             return ListTile(
