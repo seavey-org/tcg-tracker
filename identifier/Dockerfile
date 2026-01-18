@@ -7,9 +7,9 @@ FROM ${BASE_IMAGE}
 
 WORKDIR /app
 
-# Install system dependencies (no Tesseract needed - using EasyOCR)
+# Install system dependencies for OpenCV (used by EasyOCR)
 RUN apt-get update && apt-get install -y --no-install-recommends \
-    libgl1-mesa-glx \
+    libgl1 \
     libglib2.0-0 \
     && rm -rf /var/lib/apt/lists/*
 
