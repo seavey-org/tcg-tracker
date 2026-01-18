@@ -293,6 +293,47 @@ jobs:
         run: |
           ssh $SERVER "mkdir -p $APP_DIR/setid/indexes"
 
+      - name: Build FAISS indexes if missing
+        run: |
+          # Check if indexes already exist on server
+          POKEMON_EXISTS=$(ssh $SERVER "test -f $APP_DIR/setid/indexes/pokemon.faiss && echo yes || echo no")
+          MTG_EXISTS=$(ssh $SERVER "test -f $APP_DIR/setid/indexes/mtg.faiss && echo yes || echo no")
+
+          if [ "$POKEMON_EXISTS" = "yes" ] && [ "$MTG_EXISTS" = "yes" ]; then
+            echo "All indexes already exist on server, skipping build"
+            exit 0
+          fi
+
+          # Set up Python environment on the self-hosted runner
+          echo "Setting up Python environment for index building..."
+          python3 -m venv /tmp/index-builder-venv
+          /tmp/index-builder-venv/bin/pip install -q -r identifier/requirements.txt
+          /tmp/index-builder-venv/bin/pip install -q requests
+
+          mkdir -p /tmp/setid-indexes
+
+          # Build Pokemon index if missing
+          if [ "$POKEMON_EXISTS" = "no" ]; then
+            echo "Building Pokemon FAISS index..."
+            /tmp/index-builder-venv/bin/python -m identifier.index_builder.build_index_pokemon \
+              --repo-root . --out /tmp/setid-indexes --per-set 6 --min-coverage 0.90
+          fi
+
+          # Build MTG index if missing
+          if [ "$MTG_EXISTS" = "no" ]; then
+            echo "Building MTG FAISS index..."
+            /tmp/index-builder-venv/bin/python -m identifier.index_builder.build_index_mtg \
+              --out /tmp/setid-indexes --per-set 6 --min-coverage 0.85
+          fi
+
+          # Copy indexes to server
+          echo "Deploying indexes to server..."
+          scp /tmp/setid-indexes/*.faiss /tmp/setid-indexes/*_meta.json $SERVER:$APP_DIR/setid/indexes/ 2>/dev/null || true
+          scp /tmp/setid-indexes/*_validation_report.json $SERVER:$APP_DIR/setid/indexes/ 2>/dev/null || true
+
+          # Cleanup
+          rm -rf /tmp/index-builder-venv /tmp/setid-indexes
+
       - name: Start identifier service
         run: |
           ssh $SERVER "sudo systemctl restart tcg-identifier || true"
