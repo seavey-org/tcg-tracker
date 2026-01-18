@@ -273,7 +273,14 @@ jobs:
           scp identifier/*.py identifier/requirements.txt $SERVER:$APP_DIR/identifier/
           scp identifier/index_builder/*.py $SERVER:$APP_DIR/identifier/index_builder/
           ssh $SERVER "cd $APP_DIR/identifier && (test -d venv || python3 -m venv venv)"
+          # Install base requirements (excluding torch/faiss which we install with GPU support)
           ssh $SERVER "cd $APP_DIR/identifier && ./venv/bin/pip install -q -r requirements.txt"
+          # Install PyTorch with CUDA 11.8 support for GPU acceleration
+          # Using cu118 for 1080ti (Pascal architecture, compute capability 6.1)
+          ssh $SERVER "cd $APP_DIR/identifier && ./venv/bin/pip install -q torch torchvision --index-url https://download.pytorch.org/whl/cu118"
+          # Install FAISS with GPU support (requires matching CUDA version)
+          # faiss-gpu from conda-forge/pip may have CUDA version requirements
+          ssh $SERVER "cd $APP_DIR/identifier && ./venv/bin/pip install -q faiss-gpu || ./venv/bin/pip install -q faiss-cpu"
 
       - name: Setup identifier systemd service
         run: |
@@ -289,6 +296,9 @@ jobs:
       - name: Start identifier service
         run: |
           ssh $SERVER "sudo systemctl restart tcg-identifier || true"
+          sleep 5
+          echo "Checking identifier service GPU status..."
+          ssh $SERVER "curl -sf http://127.0.0.1:8099/health | python3 -c \"import sys,json; d=json.load(sys.stdin); print(f'Device: {d.get(\\\"device\\\")}, CUDA: {d.get(\\\"cuda_available\\\")}, GPU: {d.get(\\\"cuda_device_name\\\")}')\" || echo 'Identifier health check pending (indexes may not be loaded yet)'"
 
       - name: Setup environment variables
         run: |
@@ -347,3 +357,6 @@ jobs:
           echo "App URL: https://tcg.seavey.dev"
           echo "Database: $APP_DIR/tcg_tracker.db (preserved across deploys)"
           echo "Pokemon data: $APP_DIR/data/ (auto-downloaded on first run)"
+          echo ""
+          echo "=== Identifier Service Status ==="
+          ssh $SERVER "curl -sf http://127.0.0.1:8099/health 2>/dev/null | python3 -m json.tool || echo 'Service starting...'"

@@ -32,6 +32,9 @@ def health() -> dict[str, Any]:
         "status": "ok",
         "index_dir": SETID_INDEX_DIR,
         "games_loaded": matcher.games_loaded(),
+        "device": str(matcher.device),
+        "cuda_available": matcher.cuda_available,
+        "cuda_device_name": matcher.cuda_device_name,
     }
 
 

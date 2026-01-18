@@ -4,10 +4,16 @@ python-multipart==0.0.9
 pillow==10.4.0
 numpy==1.26.4
 opencv-python-headless==4.10.0.84
-faiss-cpu==1.8.0.post1
-torch==2.2.2
-torchvision==0.17.2
 transformers==4.45.2
+
+# PyTorch and FAISS - install with GPU support on production:
+#   For 1080ti (Pascal, compute capability 6.1), use CUDA 11.8:
+#   pip install torch torchvision --index-url https://download.pytorch.org/whl/cu118
+#   pip install faiss-gpu
+# For CPU-only (development/testing):
+#   pip install torch torchvision faiss-cpu
+torch>=2.2.0
+torchvision>=0.17.0
 
 # Test dependencies
 pytest>=8.0.0

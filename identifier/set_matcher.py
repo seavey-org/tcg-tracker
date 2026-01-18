@@ -198,7 +198,15 @@ class SetMatcher:
             )
 
         self.index_dir = index_dir
-        self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+        self.cuda_available = torch.cuda.is_available()
+        self.device = torch.device("cuda" if self.cuda_available else "cpu")
+        self.cuda_device_name = torch.cuda.get_device_name(0) if self.cuda_available else None
+
+        print(f"[SetMatcher] Using device: {self.device}")
+        if self.cuda_available:
+            print(f"[SetMatcher] CUDA device: {self.cuda_device_name}")
+        else:
+            print("[SetMatcher] WARNING: CUDA not available, using CPU (slower inference)")
 
         self.model = CLIPModel.from_pretrained("openai/clip-vit-base-patch32")
         self.processor = CLIPProcessor.from_pretrained("openai/clip-vit-base-patch32")
