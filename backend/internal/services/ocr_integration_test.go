@@ -1,11 +1,9 @@
 package services
 
 import (
-	"bytes"
 	"context"
 	"encoding/json"
 	"fmt"
-	"image"
 	_ "image/jpeg"
 	_ "image/png"
 	"io"
@@ -208,111 +206,6 @@ func TestOCRWithRealMTGCards(t *testing.T) {
 	}
 }
 
-// TestPreprocessImageForOCR tests the image preprocessing function
-func TestPreprocessImageForOCR(t *testing.T) {
-	// Create a simple test image
-	testdataDir := "testdata/images"
-	if err := os.MkdirAll(testdataDir, 0755); err != nil {
-		t.Fatalf("Failed to create testdata dir: %v", err)
-	}
-
-	// Download a test image
-	testImagePath := filepath.Join(testdataDir, "test_preprocess.png")
-	testURL := "https://images.pokemontcg.io/swsh4/25_hires.png" // Pikachu
-
-	if _, err := os.Stat(testImagePath); os.IsNotExist(err) {
-		if err := downloadImage(testURL, testImagePath); err != nil {
-			t.Skipf("Failed to download test image: %v", err)
-		}
-	}
-
-	// Read image
-	imageData, err := os.ReadFile(testImagePath)
-	if err != nil {
-		t.Fatalf("Failed to read image: %v", err)
-	}
-
-	// Decode image
-	img, _, err := decodeImage(imageData)
-	if err != nil {
-		t.Fatalf("Failed to decode image: %v", err)
-	}
-
-	// Preprocess
-	processed, err := preprocessImageForOCR(img)
-	if err != nil {
-		t.Fatalf("Failed to preprocess image: %v", err)
-	}
-
-	// Verify output is valid PNG
-	if len(processed) == 0 {
-		t.Error("Preprocessed image is empty")
-	}
-
-	// PNG header check
-	if len(processed) >= 8 {
-		pngHeader := []byte{0x89, 0x50, 0x4E, 0x47, 0x0D, 0x0A, 0x1A, 0x0A}
-		for i := 0; i < 8; i++ {
-			if processed[i] != pngHeader[i] {
-				t.Error("Preprocessed image is not valid PNG")
-				break
-			}
-		}
-	}
-
-	t.Logf("Original image size: %d bytes", len(imageData))
-	t.Logf("Preprocessed image size: %d bytes", len(processed))
-}
-
-// TestHasCardPatterns tests the card pattern detection
-func TestHasCardPatterns(t *testing.T) {
-	tests := []struct {
-		name     string
-		lines    []string
-		expected bool
-	}{
-		{
-			name:     "Pokemon with HP",
-			lines:    []string{"Pikachu", "HP 60", "Lightning"},
-			expected: true,
-		},
-		{
-			name:     "Pokemon with card number",
-			lines:    []string{"Pikachu", "025/185"},
-			expected: true,
-		},
-		{
-			name:     "MTG creature",
-			lines:    []string{"Grizzly Bears", "Creature - Bear"},
-			expected: true,
-		},
-		{
-			name:     "MTG instant",
-			lines:    []string{"Lightning Bolt", "Instant"},
-			expected: true,
-		},
-		{
-			name:     "No card patterns",
-			lines:    []string{"Random text", "More text"},
-			expected: false,
-		},
-		{
-			name:     "Empty",
-			lines:    []string{},
-			expected: false,
-		},
-	}
-
-	for _, tt := range tests {
-		t.Run(tt.name, func(t *testing.T) {
-			result := hasCardPatterns(tt.lines)
-			if result != tt.expected {
-				t.Errorf("hasCardPatterns(%v) = %v, want %v", tt.lines, result, tt.expected)
-			}
-		})
-	}
-}
-
 // Helper functions
 
 func downloadImage(url, destPath string) error {
@@ -381,8 +274,4 @@ func getScryfallImageURL(setCode, number string) (string, error) {
 		return data.ImageURIs.PNG, nil
 	}
 	return data.ImageURIs.Large, nil
-}
-
-func decodeImage(data []byte) (image.Image, string, error) {
-	return image.Decode(bytes.NewReader(data))
 }

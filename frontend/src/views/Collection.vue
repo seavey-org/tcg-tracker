@@ -21,10 +21,11 @@ const filteredItems = computed(() => {
     switch (sortBy.value) {
       case 'name':
         return a.card.name.localeCompare(b.card.name)
-      case 'value':
+      case 'value': {
         const valueA = a.foil ? a.card.price_foil_usd : a.card.price_usd
         const valueB = b.foil ? b.card.price_foil_usd : b.card.price_usd
         return (valueB || 0) - (valueA || 0)
+      }
       case 'added_at':
       default:
         return new Date(b.added_at) - new Date(a.added_at)

@@ -1,0 +1,52 @@
+# TCG Tracker - Docker Compose
+#
+# Production (pull from GHCR):
+#   IMAGE_TAG=<commit-sha> docker compose up -d
+#
+# Local development (build locally):
+#   docker compose -f docker-compose.yml -f docker-compose.local.yml up
+#
+# Data is preserved via bind mounts:
+#   - Database: ./data/tcg_tracker.db
+#   - Pokemon data: ./data/pokemon-tcg-data/
+
+services:
+  # Go Backend API
+  backend:
+    image: ghcr.io/codyseavey/tcg-tracker/backend:${IMAGE_TAG:-latest}
+    container_name: tcg-backend
+    ports:
+      - "8080:8080"
+    environment:
+      - PORT=8080
+      - DB_PATH=/app/data/tcg_tracker.db
+      - POKEMON_DATA_DIR=/app/data/pokemon-tcg-data
+      - GIN_MODE=release
+      - IDENTIFIER_SERVICE_URL=http://identifier:8099
+    depends_on:
+      - identifier
+    volumes:
+      - ./data:/app/data
+    restart: always
+
+  # Frontend (Nginx serving static build)
+  frontend:
+    image: ghcr.io/codyseavey/tcg-tracker/frontend:${IMAGE_TAG:-latest}
+    container_name: tcg-frontend
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend
+    restart: always
+
+  # Identifier service (Python OCR) - optional, for server-side OCR
+  identifier:
+    image: ghcr.io/codyseavey/tcg-tracker/identifier:${IMAGE_TAG:-latest}
+    container_name: tcg-identifier
+    ports:
+      - "8099:8099"
+    environment:
+      - HOST=0.0.0.0
+      - PORT=8099
+      - USE_GPU=0
+    restart: always

@@ -23,6 +23,7 @@ type OCRResult struct {
 	FirstEdIndicators  []string           `json:"first_ed_indicators"` // what triggered first edition detection
 	AllLines           []string           `json:"all_lines"`
 	ConditionHints     []string           `json:"condition_hints"` // hints about card condition
+	CandidateSets      []string           `json:"candidate_sets"`  // possible sets when ambiguous (from set total)
 	RawText            string             `json:"raw_text"`
 	CardName           string             `json:"card_name"`
 	CardNumber         string             `json:"card_number"`          // e.g., "25" from "025/185"
@@ -31,6 +32,7 @@ type OCRResult struct {
 	SetName            string             `json:"set_name"`             // e.g., "Vivid Voltage" if detected
 	HP                 string             `json:"hp"`                   // e.g., "170" from "HP 170"
 	Rarity             string             `json:"rarity"`               // if detected
+	MatchReason        string             `json:"match_reason"`         // how set was determined: "set_code", "set_name", "set_total", "inferred"
 	Confidence         float64            `json:"confidence"`           // 0-1 based on how much we extracted
 	IsFoil             bool               `json:"is_foil"`              // detected foil indicators (conservative)
 	IsFirstEdition     bool               `json:"is_first_edition"`     // detected first edition
@@ -235,31 +237,27 @@ var pokemonPTCGOToCode = map[string]string{
 // Pokemon TCG set total to possible set codes mapping
 // When a card has XX/YYY format, we can sometimes infer the set from the total
 // Note: Some totals are shared between sets, those are listed with multiple options
+// Sets are ordered by preference (newer/more common first)
 var pokemonSetTotalToCode = map[string][]string{
 	// Scarlet & Violet Era - unique totals
-	"193": {"sv2"}, // Paldea Evolved (193 cards)
-	"197": {"sv3"}, // Obsidian Flames (197 cards)
-	// "165" handled below (151 + Expedition)
+	"193": {"sv2"},    // Paldea Evolved (193 cards)
+	"197": {"sv3"},    // Obsidian Flames (197 cards)
 	"182": {"sv4"},    // Paradox Rift (182 cards)
-	"091": {"sv4pt5"}, // Paldean Fates (91 cards in main set)
 	"218": {"sv5"},    // Temporal Forces (218 cards)
 	"167": {"sv6"},    // Twilight Masquerade (167 cards)
-	// "064" handled by "64" entry below (Jungle + Shrouded Fable)
-	"175": {"sv7"}, // Stellar Crown (175 cards)
-	"191": {"sv8"}, // Surging Sparks (191 cards)
+	"175": {"sv7"},    // Stellar Crown (175 cards)
+	"191": {"sv8"},    // Surging Sparks (191 cards)
+	"186": {"sv8pt5"}, // Prismatic Evolutions (186 cards)
+	"169": {"sv9"},    // Journey Together (169 cards)
 
 	// Sword & Shield Era - unique totals
 	"202": {"swsh1"},     // Sword & Shield base
 	"192": {"swsh2"},     // Rebel Clash
-	"073": {"swsh3pt5"},  // Champion's Path
 	"185": {"swsh4"},     // Vivid Voltage
-	"072": {"swsh4pt5"},  // Shining Fates main set
 	"163": {"swsh5"},     // Battle Styles
 	"203": {"swsh7"},     // Evolving Skies
-	"025": {"cel25"},     // Celebrations main
 	"264": {"swsh8"},     // Fusion Strike
 	"172": {"swsh9"},     // Brilliant Stars
-	"078": {"pgo"},       // Pokemon GO
 	"196": {"swsh11"},    // Lost Origin
 	"195": {"swsh12"},    // Silver Tempest
 	"159": {"swsh12pt5"}, // Crown Zenith main set
@@ -268,6 +266,32 @@ var pokemonSetTotalToCode = map[string][]string{
 	"198": {"sv1", "swsh6"},    // SV1 or Chilling Reign
 	"189": {"swsh10", "swsh3"}, // Astral Radiance or Darkness Ablaze
 
+	// Sun & Moon Era
+	"156": {"sm5"},     // Ultra Prism (156 cards)
+	"131": {"sm6"},     // Forbidden Light (131 cards)
+	"168": {"sm7"},     // Celestial Storm (168 cards)
+	"214": {"sm8"},     // Lost Thunder (214 cards)
+	"181": {"sm9"},     // Team Up (181 cards)
+	"234": {"sm10"},    // Unbroken Bonds (234 cards)
+	"236": {"sm11"},    // Unified Minds (236 cards)
+	"271": {"sm12"},    // Cosmic Eclipse (271 cards)
+	"69":  {"sm7pt5"},  // Dragon Majesty (69 cards)
+	"68":  {"sm11pt5"}, // Hidden Fates (68 cards in main set)
+
+	// XY Era
+	"119": {"xy4"},  // Phantom Forces (119 cards)
+	"164": {"xy5"},  // Primal Clash (164 cards)
+	"162": {"xy8"},  // BREAKthrough (162 cards)
+	"125": {"xy10"}, // Fates Collide (125 cards)
+
+	// Black & White Era
+	"135": {"bw8"},  // Plasma Storm (135 cards)
+	"116": {"bw9"},  // Plasma Freeze (116 cards)
+	"115": {"bw11"}, // Legendary Treasures (115 cards)
+
+	// Platinum Era
+	"127": {"pl1"}, // Platinum (127 cards)
+
 	// Base Era set totals (combined with other eras that share same totals)
 	"102": {"base1", "hgss4"},   // Base Set (102) or Triumphant (102)
 	"64":  {"base2", "sv6pt5"},  // Jungle (64) or Shrouded Fable (64)
@@ -275,13 +299,12 @@ var pokemonSetTotalToCode = map[string][]string{
 	"130": {"base4", "dp1"},     // Base Set 2 (130) or DP Base (130)
 	"82":  {"base5"},            // Team Rocket (82 cards)
 	"83":  {"base5"},            // Team Rocket alternate count (83 with Dark Raichu)
-	"110": {"base6"},            // Legendary Collection (110 cards)
 	"132": {"gym1", "dp3"},      // Gym Heroes (132) or Secret Wonders (132)
-	"111": {"neo1"},             // Neo Genesis (111 cards)
+	"129": {"gym2"},             // Gym Challenge (129 cards)
 	"75":  {"neo2"},             // Neo Discovery (75 cards)
 	"66":  {"neo3"},             // Neo Revelation (66 cards)
-	"113": {"neo4"},             // Neo Destiny (113 cards)
 	"165": {"sv3pt5", "ecard1"}, // 151 or Expedition (both have ~165)
+	"144": {"ecard3"},           // Skyridge (144 cards)
 
 	// HeartGold & SoulSilver Era
 	"123": {"hgss1", "dp2"}, // HGSS Base (123) or Mysterious Treasures (123)
@@ -289,9 +312,51 @@ var pokemonSetTotalToCode = map[string][]string{
 	"90":  {"hgss3"},        // Undaunted (90 cards)
 
 	// Diamond & Pearl Era
-	"106": {"dp4", "dp7"}, // Great Encounters (106) or Stormfront (106)
-	"100": {"dp5"},        // Majestic Dawn (100 cards)
-	"146": {"dp6"},        // Legends Awakened (146 cards)
+	"100": {"dp5"}, // Majestic Dawn (100 cards)
+
+	// Consolidated shared totals (many sets share these)
+	// 73: Champion's Path, Shining Legends
+	"73": {"swsh3pt5", "sm3pt5"},
+	// 72: Shining Fates
+	"72": {"swsh4pt5"},
+	// 78: Pokemon GO
+	"78": {"pgo"},
+	// 25: Celebrations
+	"25": {"cel25"},
+	// 91: Paldean Fates
+	"91": {"sv4pt5"},
+	// 98/098: Ancient Origins, Emerging Powers
+	"98": {"xy7", "bw2"},
+	// 99: Next Destinies, Arceus
+	"99": {"bw4", "pl4"},
+	// 101: Noble Victories, Plasma Blast
+	"101": {"bw3", "bw10"},
+	// 106: Call of Legends, Great Encounters, Stormfront
+	"106": {"col1", "dp4", "dp7"},
+	// 108: Roaring Skies, Evolutions, Dark Explorers
+	"108": {"xy6", "xy12", "bw5"},
+	// 109: Flashfire
+	"109": {"xy2"},
+	// 110: Legendary Collection
+	"110": {"base6"},
+	// 111: Neo Genesis, Furious Fists, Rising Rivals
+	"111": {"neo1", "xy3", "pl2"},
+	// 113: Neo Destiny
+	"113": {"neo4"},
+	// 114: Steam Siege, B&W Base
+	"114": {"xy11", "bw1"},
+	// 122: BREAKpoint
+	"122": {"xy9"},
+	// 124: Crimson Invasion, Dragons Exalted
+	"124": {"sm4", "bw6"},
+	// 145: Guardians Rising
+	"145": {"sm2"},
+	// 146: XY Base, Legends Awakened
+	"146": {"xy1", "dp6"},
+	// 147: Burning Shadows, Aquapolis, Supreme Victors
+	"147": {"sm3", "ecard2", "pl3"},
+	// 149: Sun & Moon Base, Boundaries Crossed
+	"149": {"sm1", "bw7"},
 }
 
 // dynamicPokemonNames holds Pokemon names loaded from the card database
@@ -772,6 +837,7 @@ func parsePokemonOCR(result *OCRResult) {
 	}
 	if matches := setCodeRegex.FindStringSubmatch(upperText); len(matches) >= 1 {
 		result.SetCode = strings.ToLower(matches[0])
+		result.MatchReason = "set_code"
 	}
 
 	// Detect WotC era (Wizards of the Coast - Base Set through Expedition)
@@ -784,11 +850,13 @@ func parsePokemonOCR(result *OCRResult) {
 	}
 
 	// Try to detect set from PTCGO code (2-letter codes like BS, JU, FO)
+	// PTCGO codes are specific identifiers so check these first.
 	if result.SetCode == "" {
 		detectSetFromPTCGO(result, upperText)
 	}
 
-	// Try to detect set from card number total if still no set code
+	// Try to detect set from card number total if still no set code.
+	// This is a fallback when PTCGO code isn't detected.
 	if result.SetCode == "" {
 		detectSetFromTotal(result)
 	}
@@ -1257,6 +1325,7 @@ func parseMTGOCR(result *OCRResult) {
 			// Valid MTG set codes are 3-4 characters
 			if len(code) >= 3 && len(code) <= 4 {
 				result.SetCode = code
+				result.MatchReason = "set_code"
 				break
 			}
 		}
@@ -1550,10 +1619,12 @@ func detectSetFromName(result *OCRResult, upperText string) {
 		}
 		result.SetCode = longest.code
 		result.SetName = longest.name
+		result.MatchReason = "set_name"
 	}
 }
 
 // detectSetFromTotal tries to infer set code from card set total (e.g., /185 -> Vivid Voltage)
+// Sets CandidateSets when there are multiple possible sets, and MatchReason accordingly
 func detectSetFromTotal(result *OCRResult) {
 	if result.SetTotal == "" || result.SetCode != "" {
 		return
@@ -1565,15 +1636,29 @@ func detectSetFromTotal(result *OCRResult) {
 		normalizedTotal = "0"
 	}
 
-	// Also try with the original (padded) version
-	if possibleSets, ok := pokemonSetTotalToCode[result.SetTotal]; ok {
-		result.SetCode = selectBestSetFromTotal(possibleSets, result.IsWotCEra)
+	var possibleSets []string
+
+	// Try with the original (padded) version first
+	if sets, ok := pokemonSetTotalToCode[result.SetTotal]; ok {
+		possibleSets = sets
+	} else if sets, ok := pokemonSetTotalToCode[normalizedTotal]; ok {
+		// Try with normalized total (without leading zeros)
+		possibleSets = sets
+	}
+
+	if len(possibleSets) == 0 {
 		return
 	}
 
-	// Try with normalized total (without leading zeros)
-	if possibleSets, ok := pokemonSetTotalToCode[normalizedTotal]; ok {
-		result.SetCode = selectBestSetFromTotal(possibleSets, result.IsWotCEra)
+	// Set the best candidate as SetCode
+	result.SetCode = selectBestSetFromTotal(possibleSets, result.IsWotCEra)
+
+	// If multiple possible sets, populate CandidateSets for the frontend
+	if len(possibleSets) > 1 {
+		result.CandidateSets = possibleSets
+		result.MatchReason = "inferred_from_total"
+	} else {
+		result.MatchReason = "unique_set_total"
 	}
 }
 
@@ -1636,6 +1721,7 @@ func detectSetFromPTCGO(result *OCRResult, upperText string) {
 		code := match[1]
 		if setCode, ok := pokemonPTCGOToCode[code]; ok {
 			result.SetCode = setCode
+			result.MatchReason = "ptcgo_code"
 			return
 		}
 	}

@@ -4,7 +4,6 @@
 .env.*.local
 
 # Database
-*.db
 *.sqlite
 *.sqlite3
 
@@ -28,6 +27,9 @@
 *.swp
 *.swo
 *~
+
+# Git artifacts
+.gitmodules
 
 # Claude Code
 .claude/
@@ -66,7 +68,34 @@ venv/
 
 # Identifier service debug/temp files
 identifier/_debug_crops/
+identifier/_debug_*.png
+identifier/_debug_*.jpg
+identifier/_prod_test_images/
 identifier/*.egg-info/
+
+# Debug/analysis scripts (one-off files)
+identifier/debug_*.py
+identifier/analyze_*.py
+identifier/test_prod_*.py
+identifier/validate_*.py
+
+# Nested module directories (development artifacts)
+identifier/identifier/
+
+# Data directories (generated/downloaded data)
+data/
+*.faiss
+*.pkl
+
+# Large ML model files
+*.pt
+*.pth
+*.onnx
+*.bin
+
+# Database files
+*.db
+tcg_scanner.db
 
 # User shell config files (should never be in repo)
 .bash_profile

@@ -1,7 +1,10 @@
 import 'dart:convert';
+import 'dart:math';
+import 'dart:typed_data';
 import 'package:http/http.dart' as http;
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:image/image.dart' as img;
 import '../models/card.dart';
 import '../models/collection_item.dart';
 import '../models/collection_stats.dart';
@@ -14,6 +17,9 @@ class ApiService {
 
   // Use legacy key for migration from SharedPreferences
   static const String _legacyServerUrlKey = 'server_url';
+
+  // Maximum image dimension for upload (matches server expectation)
+  static const int _maxImageDimension = 1280;
 
   final http.Client _httpClient;
   final FlutterSecureStorage _secureStorage;
@@ -382,6 +388,30 @@ class ApiService {
     }
   }
 
+  /// Downscale image to max dimension while preserving aspect ratio
+  /// Returns JPEG-encoded bytes
+  Uint8List _downscaleImage(List<int> imageBytes) {
+    final image = img.decodeImage(Uint8List.fromList(imageBytes));
+    if (image == null) {
+      return Uint8List.fromList(imageBytes);
+    }
+
+    final maxDim = max(image.width, image.height);
+    if (maxDim <= _maxImageDimension) {
+      // Already small enough, just return as JPEG
+      return Uint8List.fromList(img.encodeJpg(image, quality: 85));
+    }
+
+    // Calculate new dimensions
+    final scale = _maxImageDimension / maxDim;
+    final newWidth = (image.width * scale).round();
+    final newHeight = (image.height * scale).round();
+
+    // Resize and encode as JPEG
+    final resized = img.copyResize(image, width: newWidth, height: newHeight);
+    return Uint8List.fromList(img.encodeJpg(resized, quality: 85));
+  }
+
   /// Identify card from an image using server-side OCR
   /// This is an alternative to client-side ML Kit OCR
   Future<ScanResult> identifyCardFromImage(
@@ -391,13 +421,16 @@ class ApiService {
     final serverUrl = await getServerUrl();
     final uri = Uri.parse('$serverUrl/api/cards/identify-image');
 
+    // Downscale image for faster upload and processing
+    final scaledBytes = _downscaleImage(imageBytes);
+
     // Create multipart request
     final request = http.MultipartRequest('POST', uri);
     request.fields['game'] = game;
     request.files.add(
       http.MultipartFile.fromBytes(
         'image',
-        imageBytes,
+        scaledBytes,
         filename: 'card_image.jpg',
       ),
     );
@@ -418,99 +451,5 @@ class ApiService {
       final error = _safeJsonDecode(response.body);
       throw Exception(error['error'] ?? 'Failed to identify card from image');
     }
-  }
-
-  /// Identify set from an image (set icon matching only, no OCR)
-  /// This can be used in parallel with client-side OCR to improve card matching
-  Future<SetIdentificationResult?> identifySetFromImage(
-    List<int> imageBytes,
-    String game,
-  ) async {
-    final serverUrl = await getServerUrl();
-    final uri = Uri.parse('$serverUrl/api/cards/identify-set');
-
-    // Create multipart request
-    final request = http.MultipartRequest('POST', uri);
-    request.fields['game'] = game;
-    request.files.add(
-      http.MultipartFile.fromBytes(
-        'image',
-        imageBytes,
-        filename: 'card_image.jpg',
-      ),
-    );
-
-    final streamedResponse = await request.send().timeout(
-      const Duration(seconds: 30),
-      onTimeout: () => throw Exception('Request timed out'),
-    );
-
-    final response = await http.Response.fromStream(streamedResponse);
-
-    if (response.statusCode == 200) {
-      final data = json.decode(response.body);
-      return SetIdentificationResult.fromJson(data);
-    } else if (response.statusCode == 503) {
-      // Service unavailable - return null to indicate set ID not available
-      return null;
-    } else {
-      final error = _safeJsonDecode(response.body);
-      throw Exception(error['error'] ?? 'Failed to identify set from image');
-    }
-  }
-}
-
-/// Result of set identification from image
-class SetIdentificationResult {
-  final String bestSetId;
-  final double confidence;
-  final bool lowConfidence;
-  final List<SetCandidate> candidates;
-
-  SetIdentificationResult({
-    required this.bestSetId,
-    required this.confidence,
-    required this.lowConfidence,
-    required this.candidates,
-  });
-
-  factory SetIdentificationResult.fromJson(Map<String, dynamic> json) {
-    return SetIdentificationResult(
-      bestSetId: json['best_set_id'] ?? '',
-      confidence: (json['confidence'] ?? 0.0).toDouble(),
-      lowConfidence: json['low_confidence'] ?? true,
-      candidates: (json['candidates'] as List<dynamic>?)
-              ?.map((c) => SetCandidate.fromJson(c as Map<String, dynamic>))
-              .toList() ??
-          [],
-    );
-  }
-
-  Map<String, dynamic> toJson() {
-    return {
-      'best_set_id': bestSetId,
-      'confidence': confidence,
-      'low_confidence': lowConfidence,
-      'candidates': candidates.map((c) => c.toJson()).toList(),
-    };
-  }
-}
-
-/// A candidate set from set identification
-class SetCandidate {
-  final String setId;
-  final double score;
-
-  SetCandidate({required this.setId, required this.score});
-
-  factory SetCandidate.fromJson(Map<String, dynamic> json) {
-    return SetCandidate(
-      setId: json['set_id'] ?? '',
-      score: (json['score'] ?? 0.0).toDouble(),
-    );
-  }
-
-  Map<String, dynamic> toJson() {
-    return {'set_id': setId, 'score': score};
   }
 }

@@ -1,6 +1,40 @@
 import 'dart:io';
 import 'dart:math';
+import 'dart:typed_data';
 import 'package:image/image.dart' as img;
+
+/// Result of real-time image quality check for camera preview
+class ImageQualityResult {
+  final bool isAcceptable;
+  final bool isBlurry;
+  final bool isTooDark;
+  final bool isTooBright;
+  final double blurScore;
+  final double brightnessScore;
+  final String feedbackMessage;
+
+  ImageQualityResult({
+    required this.isAcceptable,
+    required this.isBlurry,
+    required this.isTooDark,
+    required this.isTooBright,
+    required this.blurScore,
+    required this.brightnessScore,
+    required this.feedbackMessage,
+  });
+
+  factory ImageQualityResult.acceptable() {
+    return ImageQualityResult(
+      isAcceptable: true,
+      isBlurry: false,
+      isTooDark: false,
+      isTooBright: false,
+      blurScore: 1.0,
+      brightnessScore: 0.5,
+      feedbackMessage: 'Ready to scan',
+    );
+  }
+}
 
 /// Result of image analysis for foil detection and condition assessment
 class ImageAnalysisResult {
@@ -19,12 +53,12 @@ class ImageAnalysisResult {
   });
 
   Map<String, dynamic> toJson() => {
-        'is_foil_detected': isFoilDetected,
-        'foil_confidence': foilConfidence,
-        'suggested_condition': suggestedCondition,
-        'edge_whitening_score': edgeWhiteningScore,
-        'corner_scores': cornerScores,
-      };
+    'is_foil_detected': isFoilDetected,
+    'foil_confidence': foilConfidence,
+    'suggested_condition': suggestedCondition,
+    'edge_whitening_score': edgeWhiteningScore,
+    'corner_scores': cornerScores,
+  };
 }
 
 /// Service for analyzing card images to detect foil and assess condition
@@ -38,6 +72,117 @@ class ImageAnalysisService {
   // Region size as percentage of image dimensions
   static const double cornerSizePercent = 0.10;
   static const double edgeWidthPercent = 0.05;
+
+  // Quality thresholds
+  static const double blurThreshold = 100.0; // Laplacian variance threshold
+  static const double tooDarkThreshold = 0.2; // Average brightness 0-1
+  static const double tooBrightThreshold = 0.85; // Average brightness 0-1
+
+  /// Check image quality from raw bytes (for camera preview frames)
+  /// Returns quality assessment with feedback for user
+  ImageQualityResult checkImageQuality(Uint8List imageBytes) {
+    final image = img.decodeImage(imageBytes);
+    if (image == null) {
+      return ImageQualityResult(
+        isAcceptable: false,
+        isBlurry: false,
+        isTooDark: false,
+        isTooBright: false,
+        blurScore: 0.0,
+        brightnessScore: 0.0,
+        feedbackMessage: 'Cannot process image',
+      );
+    }
+
+    return checkImageQualityFromImage(image);
+  }
+
+  /// Check image quality from a decoded image
+  ImageQualityResult checkImageQualityFromImage(img.Image image) {
+    // Calculate average brightness
+    final brightness = _calculateAverageBrightness(image);
+
+    // Calculate blur score using Laplacian variance approximation
+    final blurScore = _calculateBlurScore(image);
+
+    final isTooDark = brightness < tooDarkThreshold;
+    final isTooBright = brightness > tooBrightThreshold;
+    final isBlurry = blurScore < blurThreshold;
+
+    String feedbackMessage;
+    if (isBlurry) {
+      feedbackMessage = 'Hold steady - image is blurry';
+    } else if (isTooDark) {
+      feedbackMessage = 'Too dark - move to better lighting';
+    } else if (isTooBright) {
+      feedbackMessage = 'Too bright - reduce glare';
+    } else {
+      feedbackMessage = 'Ready to scan';
+    }
+
+    return ImageQualityResult(
+      isAcceptable: !isBlurry && !isTooDark && !isTooBright,
+      isBlurry: isBlurry,
+      isTooDark: isTooDark,
+      isTooBright: isTooBright,
+      blurScore: blurScore,
+      brightnessScore: brightness,
+      feedbackMessage: feedbackMessage,
+    );
+  }
+
+  /// Calculate average brightness of the image (0-1 scale)
+  double _calculateAverageBrightness(img.Image image) {
+    var totalBrightness = 0.0;
+    var pixelCount = 0;
+
+    // Sample every 8th pixel for performance
+    for (var y = 0; y < image.height; y += 8) {
+      for (var x = 0; x < image.width; x += 8) {
+        final pixel = image.getPixel(x, y);
+        // Perceived brightness using luminance formula
+        final brightness =
+            (0.299 * pixel.r + 0.587 * pixel.g + 0.114 * pixel.b) / 255.0;
+        totalBrightness += brightness;
+        pixelCount++;
+      }
+    }
+
+    return pixelCount > 0 ? totalBrightness / pixelCount : 0.0;
+  }
+
+  /// Calculate blur score using Laplacian variance approximation
+  /// Higher value = sharper image
+  double _calculateBlurScore(img.Image image) {
+    // Convert to grayscale first
+    var totalVariance = 0.0;
+    var count = 0;
+
+    // Simple Laplacian approximation: sum of absolute differences with neighbors
+    // Sample every 4th pixel for performance
+    for (var y = 4; y < image.height - 4; y += 4) {
+      for (var x = 4; x < image.width - 4; x += 4) {
+        final center = _getLuminance(image.getPixel(x, y));
+        final left = _getLuminance(image.getPixel(x - 1, y));
+        final right = _getLuminance(image.getPixel(x + 1, y));
+        final top = _getLuminance(image.getPixel(x, y - 1));
+        final bottom = _getLuminance(image.getPixel(x, y + 1));
+
+        // Laplacian = 4 * center - left - right - top - bottom
+        final laplacian = (4 * center - left - right - top - bottom).abs();
+        totalVariance += laplacian * laplacian;
+        count++;
+      }
+    }
+
+    // Return variance (higher = sharper)
+    return count > 0 ? totalVariance / count : 0.0;
+  }
+
+  /// Get luminance value (0-255) from a pixel
+  double _getLuminance(img.Pixel pixel) {
+    return 0.299 * pixel.r + 0.587 * pixel.g + 0.114 * pixel.b;
+  }
 
   /// Analyze an image file for foil detection and condition assessment
   Future<ImageAnalysisResult> analyzeImage(String imagePath) async {
@@ -93,7 +238,8 @@ class ImageAnalysisService {
     // Calculate variance of brightnesses across regions
     final mean =
         regionBrightnesses.reduce((a, b) => a + b) / regionBrightnesses.length;
-    final variance = regionBrightnesses
+    final variance =
+        regionBrightnesses
             .map((b) => pow(b - mean, 2))
             .reduce((a, b) => a + b) /
         regionBrightnesses.length;
@@ -105,8 +251,8 @@ class ImageAnalysisService {
     // Convert variance to confidence score
     final confidence = isDetected
         ? ((normalizedVariance - foilVarianceThreshold) /
-                (1.0 - foilVarianceThreshold))
-            .clamp(0.0, 1.0)
+                  (1.0 - foilVarianceThreshold))
+              .clamp(0.0, 1.0)
         : 0.0;
 
     return _FoilDetectionResult(isDetected: isDetected, confidence: confidence);
@@ -114,8 +260,10 @@ class ImageAnalysisService {
 
   /// Assess card condition by analyzing edge whitening
   _ConditionAssessmentResult _assessCondition(img.Image image) {
-    final cornerSize = (min(image.width, image.height) * cornerSizePercent).round();
-    final edgeWidth = (min(image.width, image.height) * edgeWidthPercent).round();
+    final cornerSize = (min(image.width, image.height) * cornerSizePercent)
+        .round();
+    final edgeWidth = (min(image.width, image.height) * edgeWidthPercent)
+        .round();
 
     // Extract corner regions and calculate whitening scores
     final cornerScores = <String, double>{};
@@ -160,40 +308,48 @@ class ImageAnalysisService {
     final edgeScores = <double>[];
 
     // Top edge
-    edgeScores.add(_calculateWhiteningScore(
-      image,
-      cornerSize,
-      0,
-      image.width - 2 * cornerSize,
-      edgeWidth,
-    ));
+    edgeScores.add(
+      _calculateWhiteningScore(
+        image,
+        cornerSize,
+        0,
+        image.width - 2 * cornerSize,
+        edgeWidth,
+      ),
+    );
 
     // Bottom edge
-    edgeScores.add(_calculateWhiteningScore(
-      image,
-      cornerSize,
-      image.height - edgeWidth,
-      image.width - 2 * cornerSize,
-      edgeWidth,
-    ));
+    edgeScores.add(
+      _calculateWhiteningScore(
+        image,
+        cornerSize,
+        image.height - edgeWidth,
+        image.width - 2 * cornerSize,
+        edgeWidth,
+      ),
+    );
 
     // Left edge
-    edgeScores.add(_calculateWhiteningScore(
-      image,
-      0,
-      cornerSize,
-      edgeWidth,
-      image.height - 2 * cornerSize,
-    ));
+    edgeScores.add(
+      _calculateWhiteningScore(
+        image,
+        0,
+        cornerSize,
+        edgeWidth,
+        image.height - 2 * cornerSize,
+      ),
+    );
 
     // Right edge
-    edgeScores.add(_calculateWhiteningScore(
-      image,
-      image.width - edgeWidth,
-      cornerSize,
-      edgeWidth,
-      image.height - 2 * cornerSize,
-    ));
+    edgeScores.add(
+      _calculateWhiteningScore(
+        image,
+        image.width - edgeWidth,
+        cornerSize,
+        edgeWidth,
+        image.height - 2 * cornerSize,
+      ),
+    );
 
     // Calculate overall score (weighted: corners are more important)
     final cornerAverage =
@@ -281,10 +437,7 @@ class _FoilDetectionResult {
   final bool isDetected;
   final double confidence;
 
-  _FoilDetectionResult({
-    required this.isDetected,
-    required this.confidence,
-  });
+  _FoilDetectionResult({required this.isDetected, required this.confidence});
 }
 
 class _ConditionAssessmentResult {

@@ -1,0 +1,14 @@
+# GPU override for production deployment with NVIDIA GPU
+# Usage: IMAGE_TAG=<sha> docker compose -f docker-compose.yml -f docker-compose.gpu.yml up -d
+
+services:
+  identifier:
+    environment:
+      - USE_GPU=1
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]

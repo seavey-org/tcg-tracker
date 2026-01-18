@@ -505,6 +505,11 @@ class _ScanResultScreenState extends State<ScanResultScreen> {
               if (meta != null) const SizedBox(height: 8),
               _buildSetIconIndicator(setIcon),
             ],
+            // Match reason indicator (shows how set was identified)
+            if (meta?.matchReason != null) ...[
+              const SizedBox(height: 8),
+              _buildMatchReasonIndicator(meta!),
+            ],
             // Condition assessment display
             if (meta?.suggestedCondition != null) ...[
               const SizedBox(height: 8),
@@ -576,6 +581,65 @@ class _ScanResultScreenState extends State<ScanResultScreen> {
           ],
         ),
       ),
+    );
+  }
+
+  Widget _buildMatchReasonIndicator(ScanMetadata meta) {
+    final isAmbiguous = meta.isSetAmbiguous;
+    final hasHighConfidence = meta.hasHighConfidenceSet;
+
+    final bg = hasHighConfidence
+        ? Theme.of(context).colorScheme.tertiaryContainer
+        : (isAmbiguous ? Colors.amber.shade100 : Colors.grey.shade200);
+    final fg = hasHighConfidence
+        ? Theme.of(context).colorScheme.onTertiaryContainer
+        : (isAmbiguous ? Colors.amber.shade900 : Colors.grey.shade700);
+
+    return Row(
+      children: [
+        Icon(
+          hasHighConfidence
+              ? Icons.check_circle
+              : (isAmbiguous ? Icons.help_outline : Icons.info_outline),
+          size: 16,
+          color: fg,
+        ),
+        const SizedBox(width: 4),
+        Text(
+          'Set match: ',
+          style: TextStyle(
+            fontSize: 12,
+            color: Theme.of(context).colorScheme.onPrimaryContainer,
+          ),
+        ),
+        Container(
+          padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
+          decoration: BoxDecoration(
+            color: bg,
+            borderRadius: BorderRadius.circular(8),
+          ),
+          child: Text(
+            meta.matchReasonDescription,
+            style: TextStyle(
+              fontSize: 12,
+              color: fg,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+        ),
+        if (isAmbiguous) ...[
+          const SizedBox(width: 8),
+          Text(
+            'Sets: ${meta.candidateSets.join(", ")}',
+            style: TextStyle(
+              fontSize: 11,
+              color: Theme.of(
+                context,
+              ).colorScheme.onPrimaryContainer.withValues(alpha: 0.7),
+            ),
+          ),
+        ],
+      ],
     );
   }
 

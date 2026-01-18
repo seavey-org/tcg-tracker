@@ -88,27 +88,6 @@ extension MockApiServiceExtension on MockApiService {
     ).thenThrow(Exception(message));
   }
 
-  /// Stubs identifySetFromImage to return the given result
-  void stubIdentifySetFromImage(SetIdentificationResult? result) {
-    when(
-      () => identifySetFromImage(any(), any()),
-    ).thenAnswer((_) async => result);
-  }
-
-  /// Stubs identifySetFromImage to throw an exception
-  void stubIdentifySetFromImageError(String message) {
-    when(
-      () => identifySetFromImage(any(), any()),
-    ).thenThrow(Exception(message));
-  }
-
-  /// Stubs identifySetFromImage to return null (service unavailable)
-  void stubIdentifySetFromImageUnavailable() {
-    when(
-      () => identifySetFromImage(any(), any()),
-    ).thenAnswer((_) async => null);
-  }
-
   /// Stubs identifyCardFromImage to return the given result
   void stubIdentifyCardFromImage(ScanResult result) {
     when(

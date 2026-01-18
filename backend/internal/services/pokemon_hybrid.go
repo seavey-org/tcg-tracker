@@ -25,23 +25,44 @@ type PokemonHybridService struct {
 	tcgdexService *TCGdexService
 	sets          map[string]LocalSet
 	cardIndex     map[string][]int // name -> card indices for fast lookup
+	wordIndex     map[string][]int // word -> card indices for full-text search
 	cards         []LocalPokemonCard
 	mu            sync.RWMutex
 }
 
+// LocalAttack represents an attack on a Pokemon card
+type LocalAttack struct {
+	Name   string `json:"name"`
+	Text   string `json:"text"`
+	Damage string `json:"damage"`
+}
+
+// LocalAbility represents an ability on a Pokemon card
+type LocalAbility struct {
+	Name string `json:"name"`
+	Text string `json:"text"`
+	Type string `json:"type"`
+}
+
 type LocalPokemonCard struct {
-	Subtypes   []string        `json:"subtypes"`
-	Types      []string        `json:"types"`
-	Images     LocalCardImages `json:"images"`
-	ID         string          `json:"id"`
-	Name       string          `json:"name"`
-	Supertype  string          `json:"supertype"`
-	HP         string          `json:"hp"`
-	Number     string          `json:"number"`
-	Artist     string          `json:"artist"`
-	Rarity     string          `json:"rarity"`
-	FlavorText string          `json:"flavorText"`
-	SetID      string          // Populated from filename
+	Subtypes    []string        `json:"subtypes"`
+	Types       []string        `json:"types"`
+	Images      LocalCardImages `json:"images"`
+	Attacks     []LocalAttack   `json:"attacks"`
+	Abilities   []LocalAbility  `json:"abilities"`
+	ID          string          `json:"id"`
+	Name        string          `json:"name"`
+	Supertype   string          `json:"supertype"`
+	HP          string          `json:"hp"`
+	Number      string          `json:"number"`
+	Artist      string          `json:"artist"`
+	Rarity      string          `json:"rarity"`
+	FlavorText  string          `json:"flavorText"`
+	EvolvesFrom string          `json:"evolvesFrom"`
+	SetID       string          // Populated from filename
+
+	// Pre-computed searchable text (built at load time)
+	searchableText string
 }
 
 type LocalCardImages struct {
@@ -57,11 +78,121 @@ type LocalSet struct {
 	Total       int    `json:"total"`
 }
 
+// buildSearchableText creates a lowercase concatenation of all text on the card
+// for efficient full-text matching during OCR identification
+func (c *LocalPokemonCard) buildSearchableText() {
+	var parts []string
+	parts = append(parts, c.Name)
+
+	for _, attack := range c.Attacks {
+		parts = append(parts, attack.Name)
+		if attack.Text != "" {
+			parts = append(parts, attack.Text)
+		}
+	}
+
+	for _, ability := range c.Abilities {
+		parts = append(parts, ability.Name)
+		if ability.Text != "" {
+			parts = append(parts, ability.Text)
+		}
+	}
+
+	if c.FlavorText != "" {
+		parts = append(parts, c.FlavorText)
+	}
+
+	if c.EvolvesFrom != "" {
+		parts = append(parts, c.EvolvesFrom)
+	}
+
+	c.searchableText = strings.ToLower(strings.Join(parts, " "))
+}
+
+// tokenizeText splits text into significant words (4+ characters)
+func tokenizeText(text string) []string {
+	words := strings.Fields(text)
+	result := make([]string, 0, len(words))
+	for _, word := range words {
+		// Clean punctuation and keep only words 4+ chars
+		cleaned := strings.Trim(word, ".,!?\"'();:-")
+		if len(cleaned) >= 4 {
+			result = append(result, cleaned)
+		}
+	}
+	return result
+}
+
+// countWordMatches counts how many OCR words appear in the card's searchable text
+func countWordMatches(ocrWords []string, cardText string) int {
+	count := 0
+	for _, word := range ocrWords {
+		if strings.Contains(cardText, word) {
+			count++
+		}
+	}
+	return count
+}
+
+// normalizeWordForIndex normalizes a word for indexing
+// Handles common OCR errors and returns empty string if word should be skipped
+func normalizeWordForIndex(word string) string {
+	// Skip very short words
+	if len(word) < 3 {
+		return ""
+	}
+
+	// Skip pure numbers
+	isAllDigits := true
+	for _, c := range word {
+		if c < '0' || c > '9' {
+			isAllDigits = false
+			break
+		}
+	}
+	if isAllDigits {
+		return ""
+	}
+
+	// Skip common stop words that appear in card text but aren't useful for matching
+	stopWords := map[string]bool{
+		"the": true, "and": true, "for": true, "you": true, "your": true,
+		"this": true, "that": true, "with": true, "from": true, "into": true,
+		"each": true, "all": true, "any": true, "can": true, "may": true,
+		"one": true, "two": true, "pokemon": true, "card": true, "cards": true,
+		"energy": true, "damage": true, "attack": true, "turn": true,
+	}
+	if stopWords[word] {
+		return ""
+	}
+
+	return word
+}
+
+// extractIndexWords extracts normalized words from text for indexing
+func extractIndexWords(text string) []string {
+	words := strings.Fields(text)
+	result := make([]string, 0, len(words))
+	seen := make(map[string]bool)
+
+	for _, word := range words {
+		// Clean punctuation
+		cleaned := strings.Trim(word, ".,!?\"'();:-")
+		normalized := normalizeWordForIndex(cleaned)
+		if normalized != "" && !seen[normalized] {
+			seen[normalized] = true
+			result = append(result, normalized)
+		}
+	}
+	return result
+}
+
 func NewPokemonHybridService(dataDir string) (*PokemonHybridService, error) {
 	service := &PokemonHybridService{
 		cards:         make([]LocalPokemonCard, 0),
 		sets:          make(map[string]LocalSet),
 		cardIndex:     make(map[string][]int),
+		wordIndex:     make(map[string][]int),
 		tcgdexService: NewTCGdexService(),
 	}
 
@@ -127,6 +258,9 @@ func (s *PokemonHybridService) loadData(dataDir string) error {
 
 		for i := range cards {
 			cards[i].SetID = setID
+			// Build searchable text for full-text matching
+			cards[i].buildSearchableText()
+
 			idx := len(s.cards)
 			s.cards = append(s.cards, cards[i])
 
@@ -141,8 +275,18 @@ func (s *PokemonHybridService) loadData(dataDir string) error {
 					s.cardIndex[part] = append(s.cardIndex[part], idx)
 				}
 			}
+
+			// Build inverted index for full-text search
+			// Index all significant words from searchable text
+			indexWords := extractIndexWords(cards[i].searchableText)
+			for _, word := range indexWords {
+				s.wordIndex[word] = append(s.wordIndex[word], idx)
+			}
 		}
 	}
+
+	log.Printf("Pokemon data loaded: %d cards, %d sets, %d indexed words",
+		len(s.cards), len(s.sets), len(s.wordIndex))
 
 	return nil
 }
@@ -245,6 +389,13 @@ func (s *PokemonHybridService) SearchCards(query string) (*models.CardSearchResu
 // loadCachedPrices loads prices from database cache only (fast, no API calls)
 func (s *PokemonHybridService) loadCachedPrices(cards []models.Card) {
 	db := database.GetDB()
+	if db == nil {
+		// Database not initialized (e.g., in tests), mark all as pending
+		for i := range cards {
+			cards[i].PriceSource = "pending"
+		}
+		return
+	}
 	cacheThreshold := 24 * time.Hour
 
 	for i := range cards {
@@ -423,6 +574,357 @@ func (s *PokemonHybridService) GetCardBySetAndNumber(setCode, cardNumber string)
 	}
 
 	return nil
+}
+
+// SearchByNameAndNumber searches for cards matching name and number across candidate sets
+// Returns cards ranked by match quality (exact matches first, then partial matches)
+// If candidateSets is empty, searches all sets
+func (s *PokemonHybridService) SearchByNameAndNumber(name, cardNumber string, candidateSets []string) *models.CardSearchResult {
+	s.mu.RLock()
+	defer s.mu.RUnlock()
+
+	nameLower := strings.ToLower(strings.TrimSpace(name))
+	if nameLower == "" {
+		return &models.CardSearchResult{Cards: []models.Card{}}
+	}
+
+	// Build set filter map for O(1) lookup
+	setFilter := make(map[string]bool)
+	for _, setCode := range candidateSets {
+		setFilter[strings.ToLower(setCode)] = true
+	}
+	filterBySet := len(candidateSets) > 0
+
+	// Normalize card number (remove leading zeros)
+	normalizedNum := strings.TrimLeft(cardNumber, "0")
+	if normalizedNum == "" && cardNumber != "" {
+		normalizedNum = "0"
+	}
+
+	type scoredCard struct {
+		card  models.Card
+		score int
+	}
+
+	scored := []scoredCard{}
+
+	for _, localCard := range s.cards {
+		// Filter by candidate sets if specified
+		if filterBySet {
+			if !setFilter[strings.ToLower(localCard.SetID)] {
+				continue
+			}
+		}
+
+		cardNameLower := strings.ToLower(localCard.Name)
+		score := 0
+
+		// Name matching (required for inclusion)
+		if cardNameLower == nameLower {
+			score = 1000 // Exact name match
+		} else if strings.HasPrefix(cardNameLower, nameLower+" ") {
+			score = 800 // Name with suffix (e.g., "Charizard" matches "Charizard V")
+		} else if strings.Contains(cardNameLower, nameLower) {
+			score = 500 // Partial name match
+		} else {
+			continue // Skip cards that don't match the name
+		}
+
+		// Card number matching (bonus points)
+		if cardNumber != "" {
+			localNum := strings.TrimLeft(localCard.Number, "0")
+			if localNum == "" {
+				localNum = "0"
+			}
+			if localNum == normalizedNum || localCard.Number == cardNumber {
+				score += 200 // Exact number match
+			}
+		}
+
+		card := s.convertToCard(localCard)
+		scored = append(scored, scoredCard{card: card, score: score})
+	}
+
+	// Sort by score descending
+	sort.Slice(scored, func(i, j int) bool {
+		if scored[i].score != scored[j].score {
+			return scored[i].score > scored[j].score
+		}
+		return scored[i].card.Name < scored[j].card.Name
+	})
+
+	// Convert to result (limit to 50 for performance)
+	maxResults := 50
+	if len(scored) < maxResults {
+		maxResults = len(scored)
+	}
+
+	cards := make([]models.Card, maxResults)
+	for i := 0; i < maxResults; i++ {
+		cards[i] = scored[i].card
+	}
+
+	// Load cached prices
+	s.loadCachedPrices(cards)
+
+	return &models.CardSearchResult{
+		Cards:      cards,
+		TotalCount: len(scored),
+		HasMore:    len(scored) > maxResults,
+	}
+}
+
+// FullTextMatchResult contains a matched card with details about what matched
+type FullTextMatchResult struct {
+	Card          models.Card
+	Score         int
+	MatchedFields []string // For debugging/confidence: ["name", "attack:Confuse Ray", "ability:Damage Swap"]
+}
+
+// scoredCard is used internally for ranking card matches
+type scoredCard struct {
+	card          models.Card
+	score         int
+	matchedFields []string
+}
+
+// findCandidatesByIndex uses the inverted index to find card indices that match any OCR word
+// Returns a deduplicated slice of card indices
+func (s *PokemonHybridService) findCandidatesByIndex(ocrWords []string, setFilter map[string]bool, filterBySet bool) []int {
+	// Use map to deduplicate candidate indices
+	candidateSet := make(map[int]bool)
+
+	for _, word := range ocrWords {
+		// Normalize word for index lookup
+		normalized := normalizeWordForIndex(word)
+		if normalized == "" {
+			continue
+		}
+
+		// Look up word in index
+		if indices, ok := s.wordIndex[normalized]; ok {
+			for _, idx := range indices {
+				// Apply set filter if specified
+				if filterBySet {
+					if !setFilter[strings.ToLower(s.cards[idx].SetID)] {
+						continue
+					}
+				}
+				candidateSet[idx] = true
+			}
+		}
+	}
+
+	// Convert to slice
+	candidates := make([]int, 0, len(candidateSet))
+	for idx := range candidateSet {
+		candidates = append(candidates, idx)
+	}
+
+	return candidates
+}
+
+// scoreCards scores a specific set of card indices against OCR text
+func (s *PokemonHybridService) scoreCards(indices []int, ocrLower string, ocrWords []string, setFilter map[string]bool, filterBySet bool) []scoredCard {
+	scored := make([]scoredCard, 0, len(indices))
+
+	for _, idx := range indices {
+		localCard := s.cards[idx]
+
+		// Apply set filter (redundant if already filtered in findCandidatesByIndex, but safe)
+		if filterBySet && !setFilter[strings.ToLower(localCard.SetID)] {
+			continue
+		}
+
+		score, matched := s.scoreCard(&localCard, ocrLower, ocrWords)
+		if score > 0 {
+			card := s.convertToCard(localCard)
+			scored = append(scored, scoredCard{card: card, score: score, matchedFields: matched})
+		}
+	}
+
+	// Sort by score descending
+	sort.Slice(scored, func(i, j int) bool {
+		if scored[i].score != scored[j].score {
+			return scored[i].score > scored[j].score
+		}
+		return scored[i].card.Name < scored[j].card.Name
+	})
+
+	return scored
+}
+
+// scoreAllCards scores all cards against OCR text (used as fallback)
+func (s *PokemonHybridService) scoreAllCards(ocrLower string, ocrWords []string, setFilter map[string]bool, filterBySet bool) []scoredCard {
+	scored := make([]scoredCard, 0)
+
+	for i := range s.cards {
+		localCard := &s.cards[i]
+
+		// Apply set filter
+		if filterBySet && !setFilter[strings.ToLower(localCard.SetID)] {
+			continue
+		}
+
+		score, matched := s.scoreCard(localCard, ocrLower, ocrWords)
+		if score > 0 {
+			card := s.convertToCard(*localCard)
+			scored = append(scored, scoredCard{card: card, score: score, matchedFields: matched})
+		}
+	}
+
+	// Sort by score descending
+	sort.Slice(scored, func(i, j int) bool {
+		if scored[i].score != scored[j].score {
+			return scored[i].score > scored[j].score
+		}
+		return scored[i].card.Name < scored[j].card.Name
+	})
+
+	return scored
+}
+
+// scoreCard scores a single card against OCR text
+// Returns score and list of matched fields
+func (s *PokemonHybridService) scoreCard(localCard *LocalPokemonCard, ocrLower string, ocrWords []string) (int, []string) {
+	score := 0
+	matched := []string{}
+
+	// Name match (highest priority)
+	nameLower := strings.ToLower(localCard.Name)
+	if strings.Contains(ocrLower, nameLower) {
+		score += 1000
+		matched = append(matched, "name")
+	} else {
+		// Check if name words appear in OCR (partial name match)
+		nameWords := strings.Fields(nameLower)
+		nameWordsFound := 0
+		for _, word := range nameWords {
+			if len(word) >= 3 && strings.Contains(ocrLower, word) {
+				nameWordsFound++
+			}
+		}
+		if nameWordsFound > 0 && nameWordsFound == len(nameWords) {
+			score += 500
+			matched = append(matched, "name_partial")
+		}
+	}
+
+	// Attack name matches
+	for _, attack := range localCard.Attacks {
+		attackNameLower := strings.ToLower(attack.Name)
+		if len(attackNameLower) >= 4 && strings.Contains(ocrLower, attackNameLower) {
+			score += 200
+			matched = append(matched, "attack:"+attack.Name)
+		}
+	}
+
+	// Ability name matches
+	for _, ability := range localCard.Abilities {
+		abilityNameLower := strings.ToLower(ability.Name)
+		if len(abilityNameLower) >= 4 && strings.Contains(ocrLower, abilityNameLower) {
+			score += 200
+			matched = append(matched, "ability:"+ability.Name)
+		}
+	}
+
+	// Card number match
+	if localCard.Number != "" {
+		// Check for both padded and unpadded number
+		normalizedNum := strings.TrimLeft(localCard.Number, "0")
+		if normalizedNum == "" {
+			normalizedNum = "0"
+		}
+		// Look for number patterns like "025/185" or just "25"
+		if strings.Contains(ocrLower, "/"+localCard.Number) ||
+			strings.Contains(ocrLower, localCard.Number+"/") ||
+			strings.Contains(ocrLower, " "+normalizedNum+"/") ||
+			strings.Contains(ocrLower, "/"+normalizedNum+" ") {
+			score += 300
+			matched = append(matched, "number:"+localCard.Number)
+		}
+	}
+
+	// Word overlap scoring (for partial text matches)
+	if len(ocrWords) > 0 && localCard.searchableText != "" {
+		wordMatches := countWordMatches(ocrWords, localCard.searchableText)
+		score += wordMatches * 10
+	}
+
+	return score, matched
+}
+
+// MatchByFullText scores cards by matching OCR text against all card text
+// (name, attacks, abilities, flavor text, evolution info).
+// Returns cards sorted by match score (highest first).
+// If candidateSets is provided, only searches within those sets.
+//
+// Uses inverted index for fast candidate lookup, with fallback to full scan
+// if index results are poor (ensures no false negatives).
+func (s *PokemonHybridService) MatchByFullText(ocrText string, candidateSets []string) (*models.CardSearchResult, []string) {
+	s.mu.RLock()
+	defer s.mu.RUnlock()
+
+	// Tokenize OCR text into significant words
+	ocrLower := strings.ToLower(ocrText)
+	ocrWords := tokenizeText(ocrLower)
+
+	// Build set filter for O(1) lookup
+	setFilter := make(map[string]bool)
+	for _, setCode := range candidateSets {
+		setFilter[strings.ToLower(setCode)] = true
+	}
+	filterBySet := len(candidateSets) > 0
+
+	// Use inverted index to find candidate cards
+	// This is much faster than scanning all cards
+	candidateIndices := s.findCandidatesByIndex(ocrWords, setFilter, filterBySet)
+
+	// Score candidate cards
+	scored := s.scoreCards(candidateIndices, ocrLower, ocrWords, setFilter, filterBySet)
+
+	// RELIABILITY FALLBACK: If best score is low, do full scan to catch
+	// cards that might have been missed due to OCR errors
+	const minConfidentScore = 500 // Name partial match or better
+	if len(scored) == 0 || scored[0].score < minConfidentScore {
+		// Full scan as fallback - this is the original behavior
+		fullScored := s.scoreAllCards(ocrLower, ocrWords, setFilter, filterBySet)
+		if len(fullScored) > 0 && (len(scored) == 0 || fullScored[0].score > scored[0].score) {
+			scored = fullScored
+		}
+	}
+
+	// Sort by score descending, then by name for consistency
+	sort.Slice(scored, func(i, j int) bool {
+		if scored[i].score != scored[j].score {
+			return scored[i].score > scored[j].score
+		}
+		return scored[i].card.Name < scored[j].card.Name
+	})
+
+	// Return top results (limit to 50 for performance)
+	maxResults := 50
+	if len(scored) < maxResults {
+		maxResults = len(scored)
+	}
+
+	cards := make([]models.Card, maxResults)
+	var topMatchedFields []string
+	for i := 0; i < maxResults; i++ {
+		cards[i] = scored[i].card
+		if i == 0 {
+			topMatchedFields = scored[i].matchedFields
+		}
+	}
+
+	// Load cached prices
+	s.loadCachedPrices(cards)
+
+	return &models.CardSearchResult{
+		Cards:      cards,
+		TotalCount: len(scored),
+		HasMore:    len(scored) > maxResults,
+	}, topMatchedFields
 }
 
 // GetAllPokemonNames returns all unique Pokemon names from the loaded card data

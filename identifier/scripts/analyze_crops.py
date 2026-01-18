@@ -7,7 +7,6 @@ This script examines the debug output from debug_crops.py and reports on:
 """
 
 import argparse
-import json
 import sys
 from pathlib import Path
 
@@ -60,7 +59,7 @@ def analyze_crops(debug_dir: Path) -> dict:
 
         # Parse boxes
         try:
-            boxes_line = [l for l in content.split("\n") if l.startswith("boxes=")][0]
+            boxes_line = [line for line in content.split("\n") if line.startswith("boxes=")][0]
             boxes_str = boxes_line.replace("boxes=", "")
             boxes = eval(boxes_str)  # Safe since we generated this
         except (IndexError, SyntaxError):
@@ -84,7 +83,7 @@ def analyze_crops(debug_dir: Path) -> dict:
         has_modern = False
 
         for box in boxes:
-            x, y, w, h = box["x"], box["y"], box["w"], box["h"]
+            x, y, h = box["x"], box["y"], box["h"]
             # Assuming 744x1040 standard size
             x_pct = x / 744
             y_pct = y / 1040

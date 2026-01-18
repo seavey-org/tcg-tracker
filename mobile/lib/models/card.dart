@@ -91,6 +91,9 @@ class ScanMetadata {
   // First edition detection
   final bool isFirstEdition;
   final List<String> firstEdIndicators;
+  // Set identification metadata
+  final String? matchReason;    // How set was determined: "set_code", "set_name", "unique_set_total", "inferred_from_total"
+  final List<String> candidateSets; // Possible sets when ambiguous
 
   ScanMetadata({
     this.cardName,
@@ -110,6 +113,8 @@ class ScanMetadata {
     this.foilConfidence,
     this.isFirstEdition = false,
     this.firstEdIndicators = const [],
+    this.matchReason,
+    this.candidateSets = const [],
   });
 
   factory ScanMetadata.fromJson(Map<String, dynamic> json) {
@@ -142,6 +147,12 @@ class ScanMetadata {
       isFirstEdition: json['is_first_edition'] ?? false,
       firstEdIndicators:
           (json['first_ed_indicators'] as List<dynamic>?)
+              ?.map((e) => e.toString())
+              .toList() ??
+          [],
+      matchReason: json['match_reason'],
+      candidateSets:
+          (json['candidate_sets'] as List<dynamic>?)
               ?.map((e) => e.toString())
               .toList() ??
           [],
@@ -186,6 +197,34 @@ class ScanMetadata {
   bool get hasConditionIssues =>
       suggestedCondition != null &&
       (suggestedCondition == 'MP' || suggestedCondition == 'HP');
+
+  /// Returns true if the set identification is ambiguous (multiple candidate sets)
+  bool get isSetAmbiguous => candidateSets.length > 1;
+
+  /// Returns a human-readable description of how the set was matched
+  String get matchReasonDescription {
+    switch (matchReason) {
+      case 'set_code':
+        return 'Set code detected in text';
+      case 'set_name':
+        return 'Set name detected in text';
+      case 'ptcgo_code':
+        return 'PTCGO code detected';
+      case 'unique_set_total':
+        return 'Unique set size ($setTotal cards)';
+      case 'inferred_from_total':
+        return 'Inferred from set size (${candidateSets.length} possible sets)';
+      default:
+        return 'Name match only';
+    }
+  }
+
+  /// Returns true if the set was identified with high confidence
+  bool get hasHighConfidenceSet =>
+      matchReason == 'set_code' ||
+      matchReason == 'set_name' ||
+      matchReason == 'ptcgo_code' ||
+      matchReason == 'unique_set_total';
 }
 
 /// Result from card identification (OCR scan)

@@ -9,6 +9,7 @@ Environment=HOST=127.0.0.1
 Environment=PORT=8099
 Environment=SETID_INDEX_DIR=/opt/tcg-tracker/setid/indexes
 Environment=SET_ID_DEBUG=0
+Environment=POKEMON_SETS_JSON=/opt/tcg-tracker/data/pokemon-tcg-data-master/sets/en.json
 ExecStart=/opt/tcg-tracker/identifier/venv/bin/uvicorn identifier.app:app --host 127.0.0.1 --port 8099
 Restart=always
 RestartSec=2

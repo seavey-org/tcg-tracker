@@ -7,7 +7,6 @@ Usage:
 
 import argparse
 import json
-import os
 import sys
 import time
 from pathlib import Path
@@ -126,14 +125,14 @@ def main() -> int:
                     break
 
         if not success:
-            print(f"  FAILED - no images available")
+            print("  FAILED - no images available")
             failed += 1
 
         # Rate limiting
         time.sleep(0.2)
 
     print()
-    print(f"Summary:")
+    print("Summary:")
     print(f"  Downloaded: {downloaded}")
     print(f"  Failed: {failed}")
     print(f"  Skipped: {skipped}")

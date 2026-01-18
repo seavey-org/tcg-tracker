@@ -1,16 +1,14 @@
 """Tests for FastAPI app endpoints."""
 
+import base64
 import io
-import os
-import sys
 
-import numpy as np
 import pytest
 from PIL import Image
 
 # Skip entire module if FastAPI is not installed
 fastapi = pytest.importorskip("fastapi")
-from fastapi.testclient import TestClient
+from fastapi.testclient import TestClient  # noqa: E402
 
 
 class TestHealthEndpoint:
@@ -18,7 +16,6 @@ class TestHealthEndpoint:
 
     def test_health_returns_ok(self) -> None:
         """Test that health endpoint returns ok status."""
-        # Import here to avoid import errors if deps missing
         from identifier.app import app
 
         client = TestClient(app)
@@ -27,137 +24,101 @@ class TestHealthEndpoint:
         assert response.status_code == 200
         data = response.json()
         assert data["status"] == "ok"
-        assert "games_loaded" in data
+        assert data["ocr_engine"] == "easyocr"
+        assert "ocr_engine_ready" in data
+        assert "gpu_available" in data
 
 
-class TestIdentifySetEndpoint:
-    """Tests for the /identify-set endpoint."""
+class TestOCREndpoint:
+    """Tests for the /ocr endpoint."""
 
     @pytest.fixture
     def client(self):
         """Create test client."""
         from identifier.app import app
-
         return TestClient(app)
 
     @pytest.fixture
-    def sample_image_bytes(self) -> bytes:
-        """Create a sample card-like image for testing."""
-        # Create a simple test image
-        img = Image.new("RGB", (744, 1040), color=(200, 200, 200))
-        # Add some features in the set icon region
+    def sample_image_b64(self) -> str:
+        """Create a sample image with some text-like features."""
+        # Create a simple test image with high contrast text area
+        img = Image.new("RGB", (400, 300), color=(255, 255, 255))
         pixels = img.load()
-        for y in range(850, 950):
-            for x in range(550, 650):
-                pixels[x, y] = (100, 50, 50)
+        
+        # Add some dark text-like pixels
+        for y in range(100, 130):
+            for x in range(50, 200):
+                if (x + y) % 10 < 5:  # Create striped pattern
+                    pixels[x, y] = (0, 0, 0)
 
         buf = io.BytesIO()
         img.save(buf, format="JPEG")
-        return buf.getvalue()
+        return base64.b64encode(buf.getvalue()).decode("ascii")
 
-    def test_identify_set_requires_game(self, client, sample_image_bytes) -> None:
-        """Test that game parameter is required."""
-        response = client.post(
-            "/identify-set",
-            files={"image": ("card.jpg", sample_image_bytes, "image/jpeg")},
-        )
-
-        # Should fail with 422 (missing required field)
+    def test_ocr_requires_image(self, client) -> None:
+        """Test that image_b64 parameter is required."""
+        response = client.post("/ocr", json={})
         assert response.status_code == 422
 
-    def test_identify_set_rejects_invalid_game(
-        self, client, sample_image_bytes
-    ) -> None:
-        """Test that invalid game values are rejected."""
-        response = client.post(
-            "/identify-set",
-            files={"image": ("card.jpg", sample_image_bytes, "image/jpeg")},
-            data={"game": "yugioh"},
-        )
-
+    def test_ocr_rejects_invalid_base64(self, client) -> None:
+        """Test that invalid base64 data is rejected."""
+        response = client.post("/ocr", json={"image_b64": "not-valid-base64!!!"})
         assert response.status_code == 400
-        assert "game must be" in response.json()["detail"]
+        assert "base64" in response.json()["detail"].lower()
 
-    def test_identify_set_rejects_empty_image(self, client) -> None:
-        """Test that empty images are rejected."""
-        response = client.post(
-            "/identify-set",
-            files={"image": ("card.jpg", b"", "image/jpeg")},
-            data={"game": "pokemon"},
-        )
-
-        assert response.status_code == 400
-        assert "empty image" in response.json()["detail"]
-
-    def test_identify_set_rejects_invalid_image(self, client) -> None:
+    def test_ocr_rejects_invalid_image(self, client) -> None:
         """Test that invalid image data is rejected."""
-        response = client.post(
-            "/identify-set",
-            files={"image": ("card.jpg", b"not an image", "image/jpeg")},
-            data={"game": "pokemon"},
-        )
-
+        # Valid base64, but not an image
+        invalid_b64 = base64.b64encode(b"not an image").decode("ascii")
+        response = client.post("/ocr", json={"image_b64": invalid_b64})
         assert response.status_code == 400
         assert "decode" in response.json()["detail"].lower()
 
-
-class TestIdentifySetWithIndexes:
-    """Tests that require loaded indexes - skipped if indexes unavailable."""
-
-    @pytest.fixture
-    def client_with_indexes(self):
-        """Create test client with index loading check."""
-        from identifier.app import app, matcher
-
-        if not matcher.games_loaded():
-            pytest.skip("No indexes loaded - skipping integration tests")
-
-        return TestClient(app)
-
-    @pytest.fixture
-    def pokemon_card_image(self) -> bytes:
-        """Create a more realistic Pokemon card mock image."""
-        img = Image.new("RGB", (744, 1040), color=(255, 255, 240))
-
-        # Simulate set icon region with distinct color
-        pixels = img.load()
-        for y in range(880, 970):
-            for x in range(600, 690):
-                pixels[x, y] = (220, 180, 50)  # Goldish color
-
-        buf = io.BytesIO()
-        img.save(buf, format="JPEG", quality=95)
-        return buf.getvalue()
-
-    def test_identify_set_returns_candidates(
-        self, client_with_indexes, pokemon_card_image
-    ) -> None:
-        """Test that identify-set returns candidates when indexes are loaded."""
-        response = client_with_indexes.post(
-            "/identify-set",
-            files={"image": ("card.jpg", pokemon_card_image, "image/jpeg")},
-            data={"game": "pokemon"},
-        )
-
+    def test_ocr_returns_expected_fields(self, client, sample_image_b64) -> None:
+        """Test that OCR returns all expected fields."""
+        response = client.post("/ocr", json={"image_b64": sample_image_b64})
+        
         assert response.status_code == 200
         data = response.json()
-        assert "best_set_id" in data
+        
+        assert "text" in data
+        assert "lines" in data
         assert "confidence" in data
-        assert "low_confidence" in data
-        assert "candidates" in data
-        assert "timings_ms" in data
+        assert "auto_rotated" in data
+        assert "original_size" in data
+        assert "processed_size" in data
+        assert "elapsed_ms" in data
 
-    def test_identify_set_returns_timings(
-        self, client_with_indexes, pokemon_card_image
-    ) -> None:
-        """Test that timing information is included."""
-        response = client_with_indexes.post(
-            "/identify-set",
-            files={"image": ("card.jpg", pokemon_card_image, "image/jpeg")},
-            data={"game": "pokemon"},
+    def test_ocr_respects_auto_rotate_false(self, client, sample_image_b64) -> None:
+        """Test that auto_rotate=false is respected."""
+        response = client.post(
+            "/ocr",
+            json={"image_b64": sample_image_b64, "auto_rotate": False}
         )
-
+        
+        assert response.status_code == 200
         data = response.json()
-        timings = data["timings_ms"]
-        assert "total" in timings
-        assert timings["total"] >= 0
+        assert data["auto_rotated"] is False
+
+    def test_ocr_respects_max_dimension(self, client) -> None:
+        """Test that max_dimension parameter affects processing."""
+        # Create a larger image
+        img = Image.new("RGB", (2000, 1500), color=(255, 255, 255))
+        buf = io.BytesIO()
+        img.save(buf, format="JPEG")
+        large_image_b64 = base64.b64encode(buf.getvalue()).decode("ascii")
+        
+        response = client.post(
+            "/ocr",
+            json={"image_b64": large_image_b64, "max_dimension": 800}
+        )
+        
+        assert response.status_code == 200
+        data = response.json()
+        
+        # Original should be 2000x1500
+        assert data["original_size"] == [1500, 2000]
+        
+        # Processed should be scaled down to max 800
+        processed = data["processed_size"]
+        assert max(processed) <= 800

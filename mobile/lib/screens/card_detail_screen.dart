@@ -11,12 +11,11 @@ class CardDetailScreen extends StatefulWidget {
   final CollectionItem? collectionItem;
   final CardModel? card;
 
-  const CardDetailScreen({
-    super.key,
-    this.collectionItem,
-    this.card,
-  }) : assert(collectionItem != null || card != null,
-            'Either collectionItem or card must be provided');
+  const CardDetailScreen({super.key, this.collectionItem, this.card})
+    : assert(
+        collectionItem != null || card != null,
+        'Either collectionItem or card must be provided',
+      );
 
   @override
   State<CardDetailScreen> createState() => _CardDetailScreenState();
@@ -66,9 +65,7 @@ class _CardDetailScreenState extends State<CardDetailScreen> {
         ],
       ),
       body: SafeArea(
-        child: isWide
-            ? _buildWideLayout(context)
-            : _buildNarrowLayout(context),
+        child: isWide ? _buildWideLayout(context) : _buildNarrowLayout(context),
       ),
     );
   }
@@ -157,7 +154,9 @@ class _CardDetailScreenState extends State<CardDetailScreen> {
                       if (!snapshot.hasData) {
                         return Container(
                           color: colorScheme.surfaceContainerHighest,
-                          child: const Center(child: CircularProgressIndicator()),
+                          child: const Center(
+                            child: CircularProgressIndicator(),
+                          ),
                         );
                       }
                       final imageUrl =
@@ -167,7 +166,9 @@ class _CardDetailScreenState extends State<CardDetailScreen> {
                         fit: BoxFit.cover,
                         placeholder: (context, url) => Container(
                           color: colorScheme.surfaceContainerHighest,
-                          child: const Center(child: CircularProgressIndicator()),
+                          child: const Center(
+                            child: CircularProgressIndicator(),
+                          ),
                         ),
                         errorWidget: (context, url, error) => Container(
                           color: colorScheme.surfaceContainerHighest,
@@ -181,30 +182,30 @@ class _CardDetailScreenState extends State<CardDetailScreen> {
                     },
                   )
                 : _card.imageUrl != null && _card.imageUrl!.isNotEmpty
-                    ? CachedNetworkImage(
-                        imageUrl: _card.imageUrl!,
-                        fit: BoxFit.cover,
-                        placeholder: (context, url) => Container(
-                          color: colorScheme.surfaceContainerHighest,
-                          child: const Center(child: CircularProgressIndicator()),
-                        ),
-                        errorWidget: (context, url, error) => Container(
-                          color: colorScheme.surfaceContainerHighest,
-                          child: Icon(
-                            Icons.broken_image_outlined,
-                            size: 64,
-                            color: colorScheme.onSurfaceVariant,
-                          ),
-                        ),
-                      )
-                    : Container(
-                        color: colorScheme.surfaceContainerHighest,
-                        child: Icon(
-                          Icons.image_not_supported_outlined,
-                          size: 64,
-                          color: colorScheme.onSurfaceVariant,
-                        ),
+                ? CachedNetworkImage(
+                    imageUrl: _card.imageUrl!,
+                    fit: BoxFit.cover,
+                    placeholder: (context, url) => Container(
+                      color: colorScheme.surfaceContainerHighest,
+                      child: const Center(child: CircularProgressIndicator()),
+                    ),
+                    errorWidget: (context, url, error) => Container(
+                      color: colorScheme.surfaceContainerHighest,
+                      child: Icon(
+                        Icons.broken_image_outlined,
+                        size: 64,
+                        color: colorScheme.onSurfaceVariant,
                       ),
+                    ),
+                  )
+                : Container(
+                    color: colorScheme.surfaceContainerHighest,
+                    child: Icon(
+                      Icons.image_not_supported_outlined,
+                      size: 64,
+                      color: colorScheme.onSurfaceVariant,
+                    ),
+                  ),
           ),
         ),
       ],
@@ -267,10 +268,7 @@ class _CardDetailScreenState extends State<CardDetailScreen> {
                 padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
                 decoration: BoxDecoration(
                   gradient: LinearGradient(
-                    colors: [
-                      Colors.purple.shade300,
-                      Colors.blue.shade300,
-                    ],
+                    colors: [Colors.purple.shade300, Colors.blue.shade300],
                   ),
                   borderRadius: BorderRadius.circular(8),
                 ),
@@ -333,12 +331,7 @@ class _CardDetailScreenState extends State<CardDetailScreen> {
               ),
             ),
           ),
-          Expanded(
-            child: Text(
-              value,
-              style: theme.textTheme.bodyMedium,
-            ),
-          ),
+          Expanded(child: Text(value, style: theme.textTheme.bodyMedium)),
         ],
       ),
     );
@@ -507,12 +500,10 @@ class _CardDetailScreenState extends State<CardDetailScreen> {
 
         // Condition
         DropdownButtonFormField<String>(
-          value: _condition,
+          initialValue: _condition,
           decoration: InputDecoration(
             labelText: 'Condition',
-            border: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(8),
-            ),
+            border: OutlineInputBorder(borderRadius: BorderRadius.circular(8)),
           ),
           items: _conditions.map((c) {
             return DropdownMenuItem(
@@ -599,12 +590,10 @@ class _CardDetailScreenState extends State<CardDetailScreen> {
 
         // Condition
         DropdownButtonFormField<String>(
-          value: _condition,
+          initialValue: _condition,
           decoration: InputDecoration(
             labelText: 'Condition',
-            border: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(8),
-            ),
+            border: OutlineInputBorder(borderRadius: BorderRadius.circular(8)),
           ),
           items: _conditions.map((c) {
             return DropdownMenuItem(
@@ -665,6 +654,7 @@ class _CardDetailScreenState extends State<CardDetailScreen> {
         foil: _foil,
         firstEdition: _firstEdition,
       );
+      if (!mounted) return;
       messenger.showSnackBar(
         const SnackBar(
           content: Text('Card updated'),
@@ -673,6 +663,7 @@ class _CardDetailScreenState extends State<CardDetailScreen> {
       );
       navigator.pop();
     } catch (e) {
+      if (!mounted) return;
       messenger.showSnackBar(
         SnackBar(
           content: Text('Error: $e'),
@@ -700,6 +691,7 @@ class _CardDetailScreenState extends State<CardDetailScreen> {
         foil: _foil,
         firstEdition: _firstEdition,
       );
+      if (!mounted) return;
       messenger.showSnackBar(
         const SnackBar(
           content: Text('Added to collection'),
@@ -708,6 +700,7 @@ class _CardDetailScreenState extends State<CardDetailScreen> {
       );
       navigator.pop();
     } catch (e) {
+      if (!mounted) return;
       messenger.showSnackBar(
         SnackBar(
           content: Text('Error: $e'),
@@ -728,6 +721,7 @@ class _CardDetailScreenState extends State<CardDetailScreen> {
 
     try {
       await provider.refreshCardPrice(_card.id);
+      if (!mounted) return;
       messenger.showSnackBar(
         const SnackBar(
           content: Text('Price refreshed'),
@@ -735,6 +729,7 @@ class _CardDetailScreenState extends State<CardDetailScreen> {
         ),
       );
     } catch (e) {
+      if (!mounted) return;
       messenger.showSnackBar(
         SnackBar(
           content: Text('Error: $e'),
@@ -780,6 +775,7 @@ class _CardDetailScreenState extends State<CardDetailScreen> {
 
     try {
       await provider.removeItem(widget.collectionItem!.id);
+      if (!mounted) return;
       messenger.showSnackBar(
         const SnackBar(
           content: Text('Card removed from collection'),
@@ -788,6 +784,7 @@ class _CardDetailScreenState extends State<CardDetailScreen> {
       );
       navigator.pop();
     } catch (e) {
+      if (!mounted) return;
       messenger.showSnackBar(
         SnackBar(
           content: Text('Error: $e'),

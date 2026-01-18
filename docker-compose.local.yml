@@ -1,0 +1,21 @@
+# Local development override - builds images locally instead of pulling from GHCR
+# Usage: docker compose -f docker-compose.yml -f docker-compose.local.yml up --build
+
+services:
+  backend:
+    image: tcg-tracker/backend:local
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+
+  frontend:
+    image: tcg-tracker/frontend:local
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+
+  identifier:
+    image: tcg-tracker/identifier:local
+    build:
+      context: ./identifier
+      dockerfile: Dockerfile

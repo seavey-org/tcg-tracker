@@ -2,7 +2,6 @@ package services
 
 import (
 	"os"
-	"os/exec"
 	"testing"
 )
 
@@ -20,12 +19,8 @@ func TestNewServerOCRService(t *testing.T) {
 func TestServerOCRServiceIsAvailable(t *testing.T) {
 	service := NewServerOCRService()
 
-	// Check if tesseract is installed
-	_, err := exec.LookPath("tesseract")
-	tesseractAvailable := err == nil
-
-	if service.IsAvailable() != tesseractAvailable {
-		t.Errorf("IsAvailable() = %v, expected %v", service.IsAvailable(), tesseractAvailable)
+	if service.identifierURL == "" {
+		t.Fatal("Expected identifierURL to be set")
 	}
 }
 
@@ -169,7 +164,7 @@ func TestProcessImageFileNotFound(t *testing.T) {
 	service := NewServerOCRService()
 
 	if !service.IsAvailable() {
-		t.Skip("Tesseract not available")
+		t.Skip("Identifier OCR service not available")
 	}
 
 	// Test with non-existent file
@@ -187,7 +182,7 @@ func TestProcessImageIntegration(t *testing.T) {
 	service := NewServerOCRService()
 
 	if !service.IsAvailable() {
-		t.Skip("Tesseract not available")
+		t.Skip("Identifier OCR service not available")
 	}
 
 	// Create a simple test image with text

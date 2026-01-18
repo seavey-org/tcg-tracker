@@ -11,7 +11,6 @@ import argparse
 import io
 import sys
 import time
-from pathlib import Path
 
 import requests
 from PIL import Image

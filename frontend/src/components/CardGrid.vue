@@ -1,7 +1,7 @@
 <script setup>
 import { formatPrice, isPriceStale, getItemValue } from '../utils/formatters'
 
-const props = defineProps({
+defineProps({
   cards: {
     type: Array,
     required: true

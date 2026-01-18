@@ -21,6 +21,7 @@ class _CollectionScreenState extends State<CollectionScreen> {
     super.initState();
     // Fetch collection on first load
     WidgetsBinding.instance.addPostFrameCallback((_) {
+      if (!mounted) return;
       final provider = context.read<CollectionProvider>();
       if (provider.allItems.isEmpty && !provider.loading) {
         provider.fetchCollection();
@@ -52,9 +53,7 @@ class _CollectionScreenState extends State<CollectionScreen> {
               // Filter and sort row
               _buildFilterSortRow(context, provider),
               // Content
-              Expanded(
-                child: _buildContent(context, provider),
-              ),
+              Expanded(child: _buildContent(context, provider)),
             ],
           );
         },
@@ -62,7 +61,10 @@ class _CollectionScreenState extends State<CollectionScreen> {
     );
   }
 
-  Widget _buildFilterSortRow(BuildContext context, CollectionProvider provider) {
+  Widget _buildFilterSortRow(
+    BuildContext context,
+    CollectionProvider provider,
+  ) {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
       child: Row(
@@ -70,10 +72,13 @@ class _CollectionScreenState extends State<CollectionScreen> {
           // Game filter
           Expanded(
             child: DropdownButtonFormField<String?>(
-              value: provider.gameFilter,
+              initialValue: provider.gameFilter,
               decoration: InputDecoration(
                 labelText: 'Game',
-                contentPadding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+                contentPadding: const EdgeInsets.symmetric(
+                  horizontal: 12,
+                  vertical: 8,
+                ),
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(8),
                 ),
@@ -91,10 +96,13 @@ class _CollectionScreenState extends State<CollectionScreen> {
           // Sort option
           Expanded(
             child: DropdownButtonFormField<SortOption>(
-              value: provider.sortOption,
+              initialValue: provider.sortOption,
               decoration: InputDecoration(
                 labelText: 'Sort By',
-                contentPadding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+                contentPadding: const EdgeInsets.symmetric(
+                  horizontal: 12,
+                  vertical: 8,
+                ),
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(8),
                 ),
@@ -105,14 +113,8 @@ class _CollectionScreenState extends State<CollectionScreen> {
                   value: SortOption.dateAdded,
                   child: Text('Recently Added'),
                 ),
-                DropdownMenuItem(
-                  value: SortOption.name,
-                  child: Text('Name'),
-                ),
-                DropdownMenuItem(
-                  value: SortOption.value,
-                  child: Text('Value'),
-                ),
+                DropdownMenuItem(value: SortOption.name, child: Text('Name')),
+                DropdownMenuItem(value: SortOption.value, child: Text('Value')),
               ],
               onChanged: (value) {
                 if (value != null) provider.setSortOption(value);
@@ -173,7 +175,9 @@ class _CollectionScreenState extends State<CollectionScreen> {
         builder: (context, constraints) {
           // Calculate number of columns based on screen width
           final crossAxisCount = calculateColumns(constraints.maxWidth);
-          final childAspectRatio = calculateGridAspectRatio(constraints.maxWidth);
+          final childAspectRatio = calculateGridAspectRatio(
+            constraints.maxWidth,
+          );
 
           return GridView.builder(
             padding: const EdgeInsets.all(12),
@@ -243,9 +247,7 @@ class _CollectionScreenState extends State<CollectionScreen> {
     Navigator.push(
       context,
       MaterialPageRoute(
-        builder: (context) => CardDetailScreen(
-          collectionItem: item,
-        ),
+        builder: (context) => CardDetailScreen(collectionItem: item),
       ),
     );
   }
@@ -256,6 +258,7 @@ class _CollectionScreenState extends State<CollectionScreen> {
 
     try {
       final updated = await provider.refreshAllPrices();
+      if (!mounted) return;
       messenger.showSnackBar(
         SnackBar(
           content: Text('Queued $updated cards for price refresh'),
@@ -263,6 +266,7 @@ class _CollectionScreenState extends State<CollectionScreen> {
         ),
       );
     } catch (e) {
+      if (!mounted) return;
       messenger.showSnackBar(
         SnackBar(
           content: Text('Error: $e'),

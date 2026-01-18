@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:camera/camera.dart';
@@ -5,8 +6,12 @@ import 'package:permission_handler/permission_handler.dart';
 import '../models/card.dart';
 import '../services/api_service.dart';
 import '../services/camera_service.dart';
+import '../services/image_analysis_service.dart';
 import '../services/ocr_service.dart';
 import 'scan_result_screen.dart';
+
+/// Card aspect ratio (width / height) - standard for Pokemon and MTG cards (2.5" x 3.5")
+const double cardAspectRatio = 0.714;
 
 /// Camera screen for scanning trading cards.
 ///
@@ -37,7 +42,13 @@ class _CameraScreenState extends State<CameraScreen> {
   late final CameraService _cameraService;
   late final OcrService _ocrService;
   late final ApiService _apiService;
+  late final ImageAnalysisService _imageAnalysisService;
   bool? _serverOCRAvailable;
+
+  // Quality feedback state
+  String _qualityFeedback = 'Initializing...';
+  bool _isQualityAcceptable = false;
+  Timer? _qualityCheckTimer;
 
   @override
   void initState() {
@@ -45,6 +56,7 @@ class _CameraScreenState extends State<CameraScreen> {
     _cameraService = widget.cameraService ?? CameraService();
     _ocrService = widget.ocrService ?? OcrService();
     _apiService = widget.apiService ?? ApiService();
+    _imageAnalysisService = ImageAnalysisService();
     _initializeCamera();
     _checkServerOCR();
   }
@@ -103,7 +115,11 @@ class _CameraScreenState extends State<CameraScreen> {
     try {
       await _controller!.initialize();
       if (mounted) {
-        setState(() => _isInitialized = true);
+        setState(() {
+          _isInitialized = true;
+          _qualityFeedback = 'Position card in frame';
+        });
+        _startQualityChecking();
       }
     } catch (e) {
       if (mounted) {
@@ -111,6 +127,42 @@ class _CameraScreenState extends State<CameraScreen> {
           SnackBar(content: Text('Failed to initialize camera: $e')),
         );
       }
+    }
+  }
+
+  void _startQualityChecking() {
+    // Check quality every 500ms from camera preview
+    _qualityCheckTimer = Timer.periodic(
+      const Duration(milliseconds: 500),
+      (_) => _checkQuality(),
+    );
+  }
+
+  Future<void> _checkQuality() async {
+    if (_controller == null ||
+        !_controller!.value.isInitialized ||
+        _isProcessing) {
+      return;
+    }
+
+    try {
+      // Take a preview image for quality analysis
+      final image = await _controller!.takePicture();
+      final bytes = await File(image.path).readAsBytes();
+
+      final quality = _imageAnalysisService.checkImageQuality(bytes);
+
+      // Clean up temp file
+      await File(image.path).delete();
+
+      if (mounted) {
+        setState(() {
+          _qualityFeedback = quality.feedbackMessage;
+          _isQualityAcceptable = quality.isAcceptable;
+        });
+      }
+    } catch (e) {
+      // Ignore errors during quality checking
     }
   }
 
@@ -130,7 +182,6 @@ class _CameraScreenState extends State<CameraScreen> {
 
       ScanResult? scanResult;
       bool usedServerOCR = false;
-      SetIdentificationResult? setIdResult;
 
       // Prefer server-side OCR when available (better parsing and accuracy)
       if (_serverOCRAvailable == true) {
@@ -148,35 +199,12 @@ class _CameraScreenState extends State<CameraScreen> {
       // Fall back to client-side OCR if server OCR unavailable or failed
       if (scanResult == null || scanResult.cards.isEmpty) {
         try {
-          // Run client-side OCR and set identification in parallel
-          final ocrFuture = _ocrService.processImage(image.path);
-          final setIdFuture = _apiService
-              .identifySetFromImage(imageBytesAsList, _selectedGame)
-              .catchError((_) => null as SetIdentificationResult?);
-
-          final results = await Future.wait([ocrFuture, setIdFuture]);
-          final ocrResult = results[0] as OcrResult;
-          setIdResult = results[1] as SetIdentificationResult?;
+          // Use client-side ML Kit OCR as fallback
+          final ocrResult = await _ocrService.processImage(image.path);
 
           if (ocrResult.textLines.isNotEmpty) {
             // Send full OCR text to server for parsing
             final fullText = ocrResult.textLines.join('\n');
-
-            // Include set ID hints if we got a result
-            List<String>? setIdHints;
-            if (setIdResult != null &&
-                setIdResult.bestSetId.isNotEmpty &&
-                !setIdResult.lowConfidence) {
-              setIdHints = [setIdResult.bestSetId];
-            } else if (setIdResult != null &&
-                setIdResult.candidates.isNotEmpty) {
-              // Use top 3 candidates as hints
-              setIdHints = setIdResult.candidates
-                  .take(3)
-                  .map((c) => c.setId)
-                  .where((id) => id.isNotEmpty)
-                  .toList();
-            }
 
             scanResult = await _apiService.identifyCard(
               fullText,
@@ -184,13 +212,6 @@ class _CameraScreenState extends State<CameraScreen> {
               imageAnalysis: ocrResult.imageAnalysis,
             );
             usedServerOCR = false;
-
-            // If we have set ID hints, re-rank the results
-            if (setIdHints != null &&
-                setIdHints.isNotEmpty &&
-                scanResult.cards.isNotEmpty) {
-              scanResult = _boostCardsBySetId(scanResult, setIdResult!);
-            }
           }
         } on OcrException {
           // Client OCR also failed
@@ -214,19 +235,6 @@ class _CameraScreenState extends State<CameraScreen> {
 
       // Navigate to results - best match should be first
       final result = scanResult;
-
-      // Merge set icon info if we got it from parallel identification
-      final setIcon = result.setIcon ?? (setIdResult != null
-          ? SetIconResult(
-              bestSetId: setIdResult.bestSetId,
-              confidence: setIdResult.confidence,
-              lowConfidence: setIdResult.lowConfidence,
-              candidates: setIdResult.candidates
-                  .map((c) => SetIconCandidate(setId: c.setId, score: c.score))
-                  .toList(),
-            )
-          : null);
-
       final detectedCardName = result.metadata.cardName ?? '';
 
       Navigator.push(
@@ -241,7 +249,7 @@ class _CameraScreenState extends State<CameraScreen> {
                       : 'Scanned Card'),
             game: _selectedGame,
             scanMetadata: result.metadata,
-            setIcon: setIcon,
+            setIcon: result.setIcon,
             scannedImageBytes: imageBytesAsList,
           ),
         ),
@@ -273,49 +281,9 @@ class _CameraScreenState extends State<CameraScreen> {
     }
   }
 
-  /// Re-rank cards based on set identification results
-  ScanResult _boostCardsBySetId(
-    ScanResult scanResult,
-    SetIdentificationResult setIdResult,
-  ) {
-    if (scanResult.cards.isEmpty) return scanResult;
-
-    final candidateBoost = <String, int>{};
-    for (var i = 0; i < setIdResult.candidates.length; i++) {
-      final candidate = setIdResult.candidates[i];
-      if (candidate.setId.isNotEmpty) {
-        candidateBoost[candidate.setId.toLowerCase()] = 25 - i;
-      }
-    }
-
-    final scoredCards = scanResult.cards.map((card) {
-      int score = 0;
-      final setCode = card.setCode?.toLowerCase() ?? '';
-
-      if (setIdResult.bestSetId.isNotEmpty &&
-          setCode == setIdResult.bestSetId.toLowerCase()) {
-        score += setIdResult.lowConfidence ? 40 : 120;
-      } else if (candidateBoost.containsKey(setCode)) {
-        score += candidateBoost[setCode]!;
-      }
-
-      return MapEntry(card, score);
-    }).toList();
-
-    // Sort by score descending (stable sort to preserve original order for ties)
-    scoredCards.sort((a, b) => b.value.compareTo(a.value));
-
-    return ScanResult(
-      cards: scoredCards.map((e) => e.key).toList(),
-      totalCount: scanResult.totalCount,
-      hasMore: scanResult.hasMore,
-      metadata: scanResult.metadata,
-      setIcon: scanResult.setIcon,
-    );
-  }
-
   @override
   void dispose() {
+    _qualityCheckTimer?.cancel();
     _controller?.dispose();
     _ocrService.dispose();
     super.dispose();
@@ -350,15 +318,54 @@ class _CameraScreenState extends State<CameraScreen> {
               },
             ),
           ),
-          // Camera preview
+          // Camera preview with card guide overlay
           Expanded(
             child: Center(
               child: _isInitialized && _controller != null
                   ? ClipRRect(
                       borderRadius: BorderRadius.circular(12),
-                      child: CameraPreview(_controller!),
+                      child: Stack(
+                        fit: StackFit.expand,
+                        children: [
+                          CameraPreview(_controller!),
+                          const CardGuideOverlay(),
+                        ],
+                      ),
                     )
                   : const CircularProgressIndicator(),
+            ),
+          ),
+          // Quality feedback
+          Padding(
+            padding: const EdgeInsets.symmetric(
+              horizontal: 16.0,
+              vertical: 8.0,
+            ),
+            child: Container(
+              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+              decoration: BoxDecoration(
+                color: _isQualityAcceptable
+                    ? const Color.fromRGBO(
+                        76,
+                        175,
+                        80,
+                        0.8,
+                      ) // Colors.green with 0.8 alpha
+                    : const Color.fromRGBO(
+                        255,
+                        152,
+                        0,
+                        0.8,
+                      ), // Colors.orange with 0.8 alpha
+                borderRadius: BorderRadius.circular(20),
+              ),
+              child: Text(
+                _qualityFeedback,
+                style: const TextStyle(
+                  color: Colors.white,
+                  fontWeight: FontWeight.w500,
+                ),
+              ),
             ),
           ),
           // Capture button
@@ -376,5 +383,149 @@ class _CameraScreenState extends State<CameraScreen> {
         ],
       ),
     );
+  }
+}
+
+/// Overlay widget that draws a card guide frame on the camera preview
+class CardGuideOverlay extends StatelessWidget {
+  final double aspectRatio;
+
+  const CardGuideOverlay({super.key, this.aspectRatio = cardAspectRatio});
+
+  @override
+  Widget build(BuildContext context) {
+    return LayoutBuilder(
+      builder: (context, constraints) {
+        // Calculate card frame size - use 80% of the smaller dimension
+        final maxWidth = constraints.maxWidth * 0.8;
+        final maxHeight = constraints.maxHeight * 0.75;
+
+        // Calculate actual card dimensions based on aspect ratio
+        double cardWidth;
+        double cardHeight;
+
+        if (maxWidth / aspectRatio <= maxHeight) {
+          cardWidth = maxWidth;
+          cardHeight = maxWidth / aspectRatio;
+        } else {
+          cardHeight = maxHeight;
+          cardWidth = maxHeight * aspectRatio;
+        }
+
+        return CustomPaint(
+          size: Size(constraints.maxWidth, constraints.maxHeight),
+          painter: CardGuidePainter(
+            cardWidth: cardWidth,
+            cardHeight: cardHeight,
+          ),
+        );
+      },
+    );
+  }
+}
+
+/// Custom painter that draws the card guide frame
+class CardGuidePainter extends CustomPainter {
+  final double cardWidth;
+  final double cardHeight;
+
+  CardGuidePainter({required this.cardWidth, required this.cardHeight});
+
+  @override
+  void paint(Canvas canvas, Size size) {
+    final centerX = size.width / 2;
+    final centerY = size.height / 2;
+
+    final cardRect = Rect.fromCenter(
+      center: Offset(centerX, centerY),
+      width: cardWidth,
+      height: cardHeight,
+    );
+
+    // Draw semi-transparent overlay outside the card area
+    final overlayPath = Path()
+      ..addRect(Rect.fromLTWH(0, 0, size.width, size.height))
+      ..addRRect(RRect.fromRectAndRadius(cardRect, const Radius.circular(12)))
+      ..fillType = PathFillType.evenOdd;
+
+    final overlayPaint = Paint()
+      ..color = const Color.fromRGBO(0, 0, 0, 0.5)
+      ..style = PaintingStyle.fill;
+
+    canvas.drawPath(overlayPath, overlayPaint);
+
+    // Draw card frame border
+    final borderPaint = Paint()
+      ..color = Colors.white
+      ..style = PaintingStyle.stroke
+      ..strokeWidth = 3.0;
+
+    canvas.drawRRect(
+      RRect.fromRectAndRadius(cardRect, const Radius.circular(12)),
+      borderPaint,
+    );
+
+    // Draw corner markers for visual alignment
+    const cornerLength = 30.0;
+    const cornerOffset = 8.0;
+    final cornerPaint = Paint()
+      ..color = Colors.white
+      ..style = PaintingStyle.stroke
+      ..strokeWidth = 4.0
+      ..strokeCap = StrokeCap.round;
+
+    // Top-left corner
+    canvas.drawLine(
+      Offset(cardRect.left - cornerOffset, cardRect.top + cornerLength),
+      Offset(cardRect.left - cornerOffset, cardRect.top - cornerOffset),
+      cornerPaint,
+    );
+    canvas.drawLine(
+      Offset(cardRect.left - cornerOffset, cardRect.top - cornerOffset),
+      Offset(cardRect.left + cornerLength, cardRect.top - cornerOffset),
+      cornerPaint,
+    );
+
+    // Top-right corner
+    canvas.drawLine(
+      Offset(cardRect.right - cornerLength, cardRect.top - cornerOffset),
+      Offset(cardRect.right + cornerOffset, cardRect.top - cornerOffset),
+      cornerPaint,
+    );
+    canvas.drawLine(
+      Offset(cardRect.right + cornerOffset, cardRect.top - cornerOffset),
+      Offset(cardRect.right + cornerOffset, cardRect.top + cornerLength),
+      cornerPaint,
+    );
+
+    // Bottom-left corner
+    canvas.drawLine(
+      Offset(cardRect.left - cornerOffset, cardRect.bottom - cornerLength),
+      Offset(cardRect.left - cornerOffset, cardRect.bottom + cornerOffset),
+      cornerPaint,
+    );
+    canvas.drawLine(
+      Offset(cardRect.left - cornerOffset, cardRect.bottom + cornerOffset),
+      Offset(cardRect.left + cornerLength, cardRect.bottom + cornerOffset),
+      cornerPaint,
+    );
+
+    // Bottom-right corner
+    canvas.drawLine(
+      Offset(cardRect.right - cornerLength, cardRect.bottom + cornerOffset),
+      Offset(cardRect.right + cornerOffset, cardRect.bottom + cornerOffset),
+      cornerPaint,
+    );
+    canvas.drawLine(
+      Offset(cardRect.right + cornerOffset, cardRect.bottom + cornerOffset),
+      Offset(cardRect.right + cornerOffset, cardRect.bottom - cornerLength),
+      cornerPaint,
+    );
+  }
+
+  @override
+  bool shouldRepaint(CardGuidePainter oldDelegate) {
+    return oldDelegate.cardWidth != cardWidth ||
+        oldDelegate.cardHeight != cardHeight;
   }
 }

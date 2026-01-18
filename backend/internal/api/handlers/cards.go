@@ -2,7 +2,6 @@ package handlers
 
 import (
 	"bytes"
-	"encoding/base64"
 	"net/http"
 	"sort"
 	"strings"
@@ -157,7 +156,7 @@ func (h *CardHandler) IdentifyCard(c *gin.Context) {
 	parsed := services.ParseOCRTextWithAnalysis(req.Text, req.Game, req.ImageAnalysis)
 
 	// Search and match cards using shared logic
-	result, err := h.searchAndMatchCards(c, parsed, req.Game, req.Text)
+	result, textMatches, err := h.searchAndMatchCards(c, parsed, req.Game, req.Text)
 	if err != nil {
 		c.JSON(http.StatusInternalServerError, gin.H{"error": err.Error()})
 		return
@@ -186,6 +185,9 @@ func (h *CardHandler) IdentifyCard(c *gin.Context) {
 			"suggested_condition":  parsed.SuggestedCondition,
 			"edge_whitening_score": parsed.EdgeWhiteningScore,
 			"corner_scores":        parsed.CornerScores,
+			"match_reason":         parsed.MatchReason,
+			"candidate_sets":       parsed.CandidateSets,
+			"text_matches":         textMatches,
 		},
 	})
 }
@@ -214,8 +216,6 @@ func (h *CardHandler) IdentifyCardFromImage(c *gin.Context) {
 	// Handle image - check both file upload and base64 JSON body
 	var ocrResult *services.ServerOCRResult
 	var err error
-	var imgBytes []byte
-	var setID *services.SetIDResult
 
 	// Try to get uploaded file
 	file, err := c.FormFile("image")
@@ -235,8 +235,7 @@ func (h *CardHandler) IdentifyCardFromImage(c *gin.Context) {
 			return
 		}
 
-		imgBytes = buf.Bytes()
-		ocrResult, err = h.serverOCRService.ProcessImageBytes(imgBytes)
+		ocrResult, err = h.serverOCRService.ProcessImageBytes(buf.Bytes())
 		if err != nil {
 			c.JSON(http.StatusInternalServerError, gin.H{
 				"error":   "OCR processing failed",
@@ -278,18 +277,8 @@ func (h *CardHandler) IdentifyCardFromImage(c *gin.Context) {
 	text := strings.Join(ocrResult.Lines, "\n")
 	parsed := services.ParseOCRText(text, game)
 
-	// Best-effort set identification (does not fail the request)
-	if len(imgBytes) > 0 && h.setIdentifierService != nil && h.setIdentifierService.IsHealthy() {
-		if res, err := h.setIdentifierService.IdentifyFromImageBytes(c.Request.Context(), game, imgBytes); err == nil {
-			setID = res
-		}
-	}
-
 	// Search and match cards using shared logic
-	result, err := h.searchAndMatchCards(c, parsed, game, text)
-	if err == nil && setID != nil && len(result.Cards) > 0 {
-		result.Cards = boostBySetID(result.Cards, setID)
-	}
+	result, textMatches, err := h.searchAndMatchCards(c, parsed, game, text)
 	if err != nil {
 		c.JSON(http.StatusInternalServerError, gin.H{"error": err.Error()})
 		return
@@ -305,12 +294,6 @@ func (h *CardHandler) IdentifyCardFromImage(c *gin.Context) {
 			"lines":      ocrResult.Lines,
 			"confidence": ocrResult.Confidence,
 		},
-		"set_icon": func() any {
-			if setID == nil {
-				return nil
-			}
-			return setID
-		}(),
 		"parsed": gin.H{
 			"card_name":            parsed.CardName,
 			"card_number":          parsed.CardNumber,
@@ -329,106 +312,20 @@ func (h *CardHandler) IdentifyCardFromImage(c *gin.Context) {
 			"suggested_condition":  parsed.SuggestedCondition,
 			"edge_whitening_score": parsed.EdgeWhiteningScore,
 			"corner_scores":        parsed.CornerScores,
+			"match_reason":         parsed.MatchReason,
+			"candidate_sets":       parsed.CandidateSets,
+			"text_matches":         textMatches,
 		},
 	})
 }
 
-// IdentifySetFromImage processes an uploaded image and returns only set identification
-// (no OCR). This is useful for mobile apps that use client-side OCR but want to
-// leverage server-side set icon matching to improve card matching accuracy.
+// IdentifySetFromImage is deprecated - the ML-based set identifier has been removed.
+// Set identification now relies on OCR text parsing and set total inference.
 func (h *CardHandler) IdentifySetFromImage(c *gin.Context) {
-	// Get game parameter
-	game := c.PostForm("game")
-	if game == "" {
-		game = c.Query("game")
-	}
-	if game != "pokemon" && game != "mtg" {
-		c.JSON(http.StatusBadRequest, gin.H{"error": "game must be 'pokemon' or 'mtg'"})
-		return
-	}
-
-	// Check if set identifier service is available
-	if h.setIdentifierService == nil || !h.setIdentifierService.IsHealthy() {
-		c.JSON(http.StatusServiceUnavailable, gin.H{
-			"error":   "Set identifier service is not available",
-			"message": "Set identification requires the identifier service to be running",
-		})
-		return
-	}
-
-	// Get image bytes
-	var imgBytes []byte
-
-	// Try to get uploaded file
-	file, err := c.FormFile("image")
-	if err == nil {
-		src, err := file.Open()
-		if err != nil {
-			c.JSON(http.StatusBadRequest, gin.H{"error": "Failed to open uploaded file"})
-			return
-		}
-		defer src.Close()
-
-		var buf bytes.Buffer
-		if _, err := buf.ReadFrom(src); err != nil {
-			c.JSON(http.StatusBadRequest, gin.H{"error": "Failed to read uploaded file"})
-			return
-		}
-		imgBytes = buf.Bytes()
-	} else {
-		// Try JSON body with base64 image
-		var req struct {
-			Image string `json:"image"` // Base64 encoded image
-			Game  string `json:"game"`
-		}
-
-		if err := c.ShouldBindJSON(&req); err != nil {
-			c.JSON(http.StatusBadRequest, gin.H{
-				"error":   "No image provided",
-				"message": "Upload an image file or provide base64 encoded image in JSON body",
-			})
-			return
-		}
-
-		if req.Game != "" {
-			game = req.Game
-		}
-
-		// Decode base64 image
-		decoded, err := decodeBase64Image(req.Image)
-		if err != nil {
-			c.JSON(http.StatusBadRequest, gin.H{"error": "Invalid base64 image data"})
-			return
-		}
-		imgBytes = decoded
-	}
-
-	if len(imgBytes) == 0 {
-		c.JSON(http.StatusBadRequest, gin.H{"error": "Empty image data"})
-		return
-	}
-
-	// Call set identifier service
-	result, err := h.setIdentifierService.IdentifyFromImageBytes(c.Request.Context(), game, imgBytes)
-	if err != nil {
-		c.JSON(http.StatusInternalServerError, gin.H{
-			"error":   "Set identification failed",
-			"details": err.Error(),
-		})
-		return
-	}
-
-	c.JSON(http.StatusOK, result)
-}
-
-// decodeBase64Image decodes a base64 encoded image, handling optional data URI prefix
-func decodeBase64Image(data string) ([]byte, error) {
-	// Strip data URI prefix if present (e.g., "data:image/jpeg;base64,")
-	if idx := strings.Index(data, ","); idx != -1 {
-		data = data[idx+1:]
-	}
-
-	return base64.StdEncoding.DecodeString(data)
+	c.JSON(http.StatusServiceUnavailable, gin.H{
+		"error":   "Set identifier service has been removed",
+		"message": "Set identification now uses OCR text parsing. Use /cards/identify with OCR text instead.",
+	})
 }
 
 // GetOCRStatus returns the status of server-side OCR capability
@@ -459,7 +356,8 @@ func (h *CardHandler) GetOCRStatus(c *gin.Context) {
 
 // searchAndMatchCards performs card search and matching based on OCR results.
 // This is shared logic between IdentifyCard and IdentifyCardFromImage.
-func (h *CardHandler) searchAndMatchCards(c *gin.Context, parsed *services.OCRResult, game, fallbackText string) (*models.CardSearchResult, error) {
+// Returns: result, textMatches (fields that matched for top result), error
+func (h *CardHandler) searchAndMatchCards(c *gin.Context, parsed *services.OCRResult, game, fallbackText string) (*models.CardSearchResult, []string, error) {
 	// Determine search query (use card name or fall back to raw text)
 	searchQuery := parsed.CardName
 	if searchQuery == "" {
@@ -468,10 +366,38 @@ func (h *CardHandler) searchAndMatchCards(c *gin.Context, parsed *services.OCRRe
 
 	// Search using the extracted text
 	var result *models.CardSearchResult
+	var textMatches []string
 	var err error
 
 	if game == "pokemon" {
-		result, err = h.pokemonService.SearchCards(searchQuery)
+		// Use full-text matching when we have substantial OCR text
+		// This matches against card name, attacks, abilities, and flavor text
+		if len(fallbackText) >= 20 {
+			result, textMatches = h.pokemonService.MatchByFullText(
+				fallbackText,
+				parsed.CandidateSets,
+			)
+			// If full-text matching found good results, use them
+			// Otherwise fall back to traditional search
+			if result == nil || len(result.Cards) == 0 {
+				result = nil // Reset to trigger fallback
+				textMatches = nil
+			}
+		}
+
+		// Fallback: If we have candidate sets from set total inference, use targeted search
+		if result == nil && len(parsed.CandidateSets) > 0 && parsed.CardName != "" {
+			result = h.pokemonService.SearchByNameAndNumber(
+				parsed.CardName,
+				parsed.CardNumber,
+				parsed.CandidateSets,
+			)
+		}
+
+		// Fallback: Standard name-based search
+		if result == nil {
+			result, err = h.pokemonService.SearchCards(searchQuery)
+		}
 
 		// If we have a set code and card number, try to find the exact card
 		if result != nil && parsed.SetCode != "" && parsed.CardNumber != "" {
@@ -480,8 +406,10 @@ func (h *CardHandler) searchAndMatchCards(c *gin.Context, parsed *services.OCRRe
 				parsed.CardNumber,
 			)
 			if exactCard != nil {
-				// Put exact match at the front
-				result.Cards = append([]models.Card{*exactCard}, result.Cards...)
+				// Put exact match at the front (if not already there)
+				if len(result.Cards) == 0 || result.Cards[0].ID != exactCard.ID {
+					result.Cards = append([]models.Card{*exactCard}, result.Cards...)
+				}
 			}
 		}
 	} else {
@@ -490,7 +418,7 @@ func (h *CardHandler) searchAndMatchCards(c *gin.Context, parsed *services.OCRRe
 	}
 
 	if err != nil {
-		return nil, err
+		return nil, nil, err
 	}
 
 	// Filter and rank results based on parsed OCR data
@@ -507,58 +435,10 @@ func (h *CardHandler) searchAndMatchCards(c *gin.Context, parsed *services.OCRRe
 		}
 	}
 
-	return result, nil
+	return result, textMatches, nil
 }
 
 // rankCardMatches reorders cards based on how well they match the OCR data
-func boostBySetID(cards []models.Card, setID *services.SetIDResult) []models.Card {
-	if setID == nil || (setID.BestSetID == "" && len(setID.Candidates) == 0) {
-		return cards
-	}
-
-	candidateBoost := map[string]int{}
-	for i, c := range setID.Candidates {
-		if c.SetID == "" {
-			continue
-		}
-		// Higher boost for earlier candidates.
-		candidateBoost[c.SetID] = 25 - i
-	}
-
-	type scoredCard struct {
-		card  models.Card
-		score int
-	}
-
-	scored := make([]scoredCard, len(cards))
-	for i, card := range cards {
-		score := 0
-
-		if setID.BestSetID != "" && card.SetCode == setID.BestSetID {
-			if setID.LowConfidence {
-				score += 40
-			} else {
-				score += 120
-			}
-		} else if b, ok := candidateBoost[card.SetCode]; ok {
-			score += b
-		}
-
-		scored[i] = scoredCard{card: card, score: score}
-	}
-
-	sort.SliceStable(scored, func(i, j int) bool {
-		return scored[i].score > scored[j].score
-	})
-
-	out := make([]models.Card, len(scored))
-	for i := range scored {
-		out[i] = scored[i].card
-	}
-
-	return out
-}
-
 func rankCardMatches(cards []models.Card, parsed *services.OCRResult) []models.Card {
 	if parsed.CardNumber == "" && parsed.SetCode == "" {
 		return cards // No additional info to filter on

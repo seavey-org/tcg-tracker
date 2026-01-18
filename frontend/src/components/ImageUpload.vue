@@ -23,7 +23,7 @@ const isOCRAvailable = computed(() => ocrStatus.value?.server_ocr_available === 
 onMounted(async () => {
   try {
     ocrStatus.value = await cardService.getOCRStatus()
-  } catch (e) {
+  } catch {
     ocrStatus.value = { server_ocr_available: false }
   }
 })
