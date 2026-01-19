@@ -4,10 +4,12 @@ import { useCollectionStore } from '../stores/collection'
 import { priceService } from '../services/api'
 import StatsPanel from '../components/StatsPanel.vue'
 import CardGrid from '../components/CardGrid.vue'
+import CardDetail from '../components/CardDetail.vue'
 
 const store = useCollectionStore()
 const priceStatus = ref(null)
 const priceStatusError = ref(null)
+const selectedItem = ref(null)
 
 const recentCards = computed(() => {
   return store.items.slice(0, 12)
@@ -44,6 +46,31 @@ onMounted(async () => {
     })
   ])
 })
+
+const handleSelect = (item) => {
+  selectedItem.value = item
+}
+
+const handleUpdate = async (data) => {
+  await store.updateItem(data.id, data)
+  selectedItem.value = null
+}
+
+const handleRemove = async (id) => {
+  await store.removeItem(id)
+  selectedItem.value = null
+}
+
+const handlePriceUpdated = (updatedCard) => {
+  // Update the card in the store
+  const item = store.items.find(i => i.card?.id === updatedCard.id || i.card_id === updatedCard.id)
+  if (item && item.card) {
+    item.card.price_usd = updatedCard.price_usd
+    item.card.price_foil_usd = updatedCard.price_foil_usd
+    item.card.price_updated_at = updatedCard.price_updated_at
+    item.card.price_source = updatedCard.price_source
+  }
+}
 </script>
 
 <template>
@@ -100,7 +127,18 @@ onMounted(async () => {
         v-else
         :cards="recentCards"
         :show-quantity="true"
+        @select="handleSelect"
       />
     </div>
+
+    <CardDetail
+      v-if="selectedItem"
+      :item="selectedItem"
+      :is-collection-item="true"
+      @close="selectedItem = null"
+      @update="handleUpdate"
+      @remove="handleRemove"
+      @priceUpdated="handlePriceUpdated"
+    />
   </div>
 </template>

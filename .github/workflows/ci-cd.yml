@@ -450,6 +450,17 @@ jobs:
             -H "Content-Type: application/json" \
             --data '{"hosts":["tcg.seavey.dev"]}'
 
+      - name: Clean up old Docker images
+        run: |
+          echo "=== Docker disk usage before cleanup ==="
+          ssh $SERVER "docker system df"
+          echo ""
+          echo "Pruning unused Docker images..."
+          ssh $SERVER "docker image prune -af --filter 'until=168h'"
+          echo ""
+          echo "=== Docker disk usage after cleanup ==="
+          ssh $SERVER "docker system df"
+
       - name: Deployment summary
         run: |
           echo "=== Deployment Complete ==="
