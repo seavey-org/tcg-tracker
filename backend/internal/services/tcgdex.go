@@ -5,7 +5,6 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"net/url"
 	"time"
 
 	"github.com/codyseavey/tcg-tracker/backend/internal/models"
@@ -59,13 +58,6 @@ type tcgdexPriceVariant struct {
 	MarketPrice float64 `json:"marketPrice"`
 }
 
-type tcgdexSearchResult struct {
-	ID      string `json:"id"`
-	LocalID string `json:"localId"`
-	Name    string `json:"name"`
-	Image   string `json:"image"`
-}
-
 // GetCard fetches a single card with pricing data from TCGdex
 func (s *TCGdexService) GetCard(id string) (*models.Card, error) {
 	reqURL := fmt.Sprintf("%s/cards/%s", tcgdexBaseURL, id)
@@ -97,64 +89,6 @@ func (s *TCGdexService) GetCard(id string) (*models.Card, error) {
 	}
 
 	return s.convertToCard(card), nil
-}
-
-// SearchCards searches for cards by name using TCGdex
-func (s *TCGdexService) SearchCards(query string) (*models.CardSearchResult, error) {
-	// TCGdex search endpoint
-	reqURL := fmt.Sprintf("%s/cards?name=%s", tcgdexBaseURL, url.QueryEscape(query))
-
-	ctx, cancel := context.WithTimeout(context.Background(), 30*time.Second)
-	defer cancel()
-	req, err := http.NewRequestWithContext(ctx, "GET", reqURL, nil)
-	if err != nil {
-		return nil, fmt.Errorf("failed to create request: %w", err)
-	}
-
-	resp, err := s.client.Do(req)
-	if err != nil {
-		return nil, fmt.Errorf("failed to search tcgdex: %w", err)
-	}
-	defer resp.Body.Close()
-
-	if resp.StatusCode == http.StatusNotFound {
-		return &models.CardSearchResult{
-			Cards:      []models.Card{},
-			TotalCount: 0,
-			HasMore:    false,
-		}, nil
-	}
-
-	if resp.StatusCode != http.StatusOK {
-		return nil, fmt.Errorf("tcgdex API returned status %d", resp.StatusCode)
-	}
-
-	var searchResults []tcgdexSearchResult
-	if err := json.NewDecoder(resp.Body).Decode(&searchResults); err != nil {
-		return nil, fmt.Errorf("failed to decode response: %w", err)
-	}
-
-	// Limit results and fetch full card data for each (to get prices)
-	maxResults := 20
-	if len(searchResults) > maxResults {
-		searchResults = searchResults[:maxResults]
-	}
-
-	cards := make([]models.Card, 0, len(searchResults))
-	for _, sr := range searchResults {
-		card, err := s.GetCard(sr.ID)
-		if err != nil || card == nil {
-			// Skip cards that fail to fetch
-			continue
-		}
-		cards = append(cards, *card)
-	}
-
-	return &models.CardSearchResult{
-		Cards:      cards,
-		TotalCount: len(searchResults),
-		HasMore:    len(searchResults) >= maxResults,
-	}, nil
 }
 
 // GetCardPrice fetches only the pricing data for a card

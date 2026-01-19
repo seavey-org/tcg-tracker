@@ -49,31 +49,6 @@ func (s *ImageStorageService) SaveImage(imageData []byte) (string, error) {
 	return filename, nil
 }
 
-// GetImagePath returns the full path to an image file
-func (s *ImageStorageService) GetImagePath(filename string) string {
-	return filepath.Join(s.storageDir, filename)
-}
-
-// DeleteImage removes an image file from disk
-func (s *ImageStorageService) DeleteImage(filename string) error {
-	if filename == "" {
-		return nil
-	}
-
-	filePath := filepath.Join(s.storageDir, filename)
-
-	// Check if file exists
-	if _, err := os.Stat(filePath); os.IsNotExist(err) {
-		return nil // Already deleted
-	}
-
-	if err := os.Remove(filePath); err != nil {
-		return fmt.Errorf("failed to delete image: %w", err)
-	}
-
-	return nil
-}
-
 // GetStorageDir returns the storage directory path
 func (s *ImageStorageService) GetStorageDir() string {
 	return s.storageDir

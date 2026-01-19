@@ -14,18 +14,16 @@ import (
 )
 
 type CardHandler struct {
-	scryfallService      *services.ScryfallService
-	pokemonService       *services.PokemonHybridService
-	serverOCRService     *services.ServerOCRService
-	setIdentifierService *services.SetIdentifierService
+	scryfallService  *services.ScryfallService
+	pokemonService   *services.PokemonHybridService
+	serverOCRService *services.ServerOCRService
 }
 
 func NewCardHandler(scryfall *services.ScryfallService, pokemon *services.PokemonHybridService) *CardHandler {
 	return &CardHandler{
-		scryfallService:      scryfall,
-		pokemonService:       pokemon,
-		serverOCRService:     services.NewServerOCRService(),
-		setIdentifierService: services.NewSetIdentifierService(),
+		scryfallService:  scryfall,
+		pokemonService:   pokemon,
+		serverOCRService: services.NewServerOCRService(),
 	}
 }
 
@@ -319,32 +317,12 @@ func (h *CardHandler) IdentifyCardFromImage(c *gin.Context) {
 	})
 }
 
-// IdentifySetFromImage is deprecated - the ML-based set identifier has been removed.
-// Set identification now relies on OCR text parsing and set total inference.
-func (h *CardHandler) IdentifySetFromImage(c *gin.Context) {
-	c.JSON(http.StatusServiceUnavailable, gin.H{
-		"error":   "Set identifier service has been removed",
-		"message": "Set identification now uses OCR text parsing. Use /cards/identify with OCR text instead.",
-	})
-}
-
 // GetOCRStatus returns the status of server-side OCR capability
 func (h *CardHandler) GetOCRStatus(c *gin.Context) {
 	ocrAvailable := h.serverOCRService.IsAvailable()
-	setIDConfigured := h.setIdentifierService != nil && h.setIdentifierService.IsConfigured()
-	setIDHealthy := setIDConfigured && h.setIdentifierService.IsHealthy()
-	var setIDGames []string
-	if setIDHealthy {
-		setIDGames = h.setIdentifierService.GamesLoaded()
-	}
 
 	c.JSON(http.StatusOK, gin.H{
 		"server_ocr_available": ocrAvailable,
-		"set_identifier": gin.H{
-			"configured":   setIDConfigured,
-			"healthy":      setIDHealthy,
-			"games_loaded": setIDGames,
-		},
 		"message": func() string {
 			if ocrAvailable {
 				return "Server-side OCR is available. You can upload images for processing."
