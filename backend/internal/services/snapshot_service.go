@@ -12,10 +12,10 @@ import (
 
 // SnapshotService handles collection value snapshots
 type SnapshotService struct {
-	mu             sync.RWMutex
-	lastSnapshot   time.Time
-	snapshotHour   int // Hour of day to take snapshot (0-23)
-	checkInterval  time.Duration
+	mu            sync.RWMutex
+	lastSnapshot  time.Time
+	snapshotHour  int // Hour of day to take snapshot (0-23)
+	checkInterval time.Duration
 }
 
 // NewSnapshotService creates a new snapshot service

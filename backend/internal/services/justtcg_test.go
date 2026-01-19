@@ -73,3 +73,56 @@ func TestMapJustTCGCondition(t *testing.T) {
 		})
 	}
 }
+
+func TestNormalizeSetName(t *testing.T) {
+	tests := []struct {
+		input    string
+		expected string
+	}{
+		{"Base", "base set"}, // Our name → JustTCG's name
+		{"base", "base set"},
+		{"Expedition Base Set", "expedition"}, // Our name → JustTCG's name
+		{"expedition base set", "expedition"},
+		{"Jungle", "jungle"}, // Already matches JustTCG
+		{"Fossil", "fossil"},
+		{"Neo Discovery", "neo discovery"},
+		{"Lost Origin", "lost origin"},
+		{"Team Rocket", "team rocket"},
+		{"  Base  ", "base set"}, // with whitespace
+		{"", ""},
+	}
+
+	for _, tt := range tests {
+		t.Run(tt.input, func(t *testing.T) {
+			result := normalizeSetName(tt.input)
+			if result != tt.expected {
+				t.Errorf("normalizeSetName(%q) = %q, want %q", tt.input, result, tt.expected)
+			}
+		})
+	}
+}
+
+func TestExtractBaseName(t *testing.T) {
+	tests := []struct {
+		input    string
+		expected string
+	}{
+		{"Beedrill", "Beedrill"},
+		{"Beedrill (H4)", "Beedrill"},
+		{"Beedrill (H04/H32)", "Beedrill"},
+		{"Charizard (1st Edition)", "Charizard"},
+		{"Dark Scizor (Neo4)", "Dark Scizor"},
+		{"Some Card Name (With Stuff)", "Some Card Name"},
+		{"Name(NoSpace)", "Name(NoSpace)"}, // No space before paren, shouldn't strip
+		{"", ""},
+	}
+
+	for _, tt := range tests {
+		t.Run(tt.input, func(t *testing.T) {
+			result := extractBaseName(tt.input)
+			if result != tt.expected {
+				t.Errorf("extractBaseName(%q) = %q, want %q", tt.input, result, tt.expected)
+			}
+		})
+	}
+}

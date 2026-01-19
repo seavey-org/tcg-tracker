@@ -246,10 +246,11 @@ func (w *PriceWorker) batchUpdatePrices(cards []models.Card) (int, error) {
 		}
 
 		lookups[i] = CardLookup{
-			CardID: card.ID,
-			Name:   card.Name,
-			Set:    card.SetCode,
-			Game:   gameStr,
+			CardID:  card.ID,
+			Name:    card.Name,
+			Set:     card.SetCode,
+			SetName: card.SetName, // Used for matching results from JustTCG
+			Game:    gameStr,
 		}
 		cardMap[card.ID] = &cards[i]
 	}
