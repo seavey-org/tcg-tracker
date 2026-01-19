@@ -3,6 +3,7 @@ import { ref, onMounted, computed } from 'vue'
 import { useCollectionStore } from '../stores/collection'
 import { priceService } from '../services/api'
 import StatsPanel from '../components/StatsPanel.vue'
+import ValueChart from '../components/ValueChart.vue'
 import CardGrid from '../components/CardGrid.vue'
 import CardDetail from '../components/CardDetail.vue'
 
@@ -89,6 +90,10 @@ const handlePriceUpdated = (updatedCard) => {
     <div>
       <h1 class="text-3xl font-bold text-gray-800 dark:text-white mb-6">Dashboard</h1>
       <StatsPanel v-if="store.stats" :stats="store.stats" />
+
+      <div class="mt-4">
+        <ValueChart />
+      </div>
 
       <div v-if="priceStatus" class="mt-4 bg-white dark:bg-gray-800 rounded-lg shadow p-4">
         <h3 class="text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Pokemon Price API Quota</h3>

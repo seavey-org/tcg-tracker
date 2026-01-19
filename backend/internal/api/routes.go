@@ -14,7 +14,7 @@ import (
 	"github.com/codyseavey/tcg-tracker/backend/internal/services"
 )
 
-func SetupRouter(scryfallService *services.ScryfallService, pokemonService *services.PokemonHybridService, priceWorker *services.PriceWorker, priceService *services.PriceService, imageStorageService *services.ImageStorageService) *gin.Engine {
+func SetupRouter(scryfallService *services.ScryfallService, pokemonService *services.PokemonHybridService, priceWorker *services.PriceWorker, priceService *services.PriceService, imageStorageService *services.ImageStorageService, snapshotService *services.SnapshotService) *gin.Engine {
 	router := gin.Default()
 
 	// Get frontend dist path from env
@@ -35,7 +35,7 @@ func SetupRouter(scryfallService *services.ScryfallService, pokemonService *serv
 
 	// Initialize handlers
 	cardHandler := handlers.NewCardHandler(scryfallService, pokemonService)
-	collectionHandler := handlers.NewCollectionHandler(scryfallService, pokemonService, imageStorageService)
+	collectionHandler := handlers.NewCollectionHandler(scryfallService, pokemonService, imageStorageService, snapshotService)
 	priceHandler := handlers.NewPriceHandler(priceWorker, priceService)
 
 	// Serve scanned images
@@ -75,6 +75,7 @@ func SetupRouter(scryfallService *services.ScryfallService, pokemonService *serv
 			collection.GET("", collectionHandler.GetCollection)
 			collection.GET("/grouped", collectionHandler.GetGroupedCollection)
 			collection.GET("/stats", collectionHandler.GetStats)
+			collection.GET("/stats/history", collectionHandler.GetValueHistory)
 
 			// Protected routes (require admin key)
 			collection.POST("", adminAuth, collectionHandler.AddToCollection)

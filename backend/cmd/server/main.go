@@ -66,6 +66,9 @@ func main() {
 	// Initialize image storage service
 	imageStorageService := services.NewImageStorageService()
 
+	// Initialize snapshot service for daily value tracking
+	snapshotService := services.NewSnapshotService()
+
 	// Create a cancellable context for graceful shutdown
 	ctx, cancel := context.WithCancel(context.Background())
 	defer cancel()
@@ -73,8 +76,11 @@ func main() {
 	// Start price worker in background
 	go priceWorker.Start(ctx)
 
+	// Start snapshot service in background
+	go snapshotService.Start(ctx)
+
 	// Setup router
-	router := api.SetupRouter(scryfallService, pokemonService, priceWorker, priceService, imageStorageService)
+	router := api.SetupRouter(scryfallService, pokemonService, priceWorker, priceService, imageStorageService, snapshotService)
 
 	// Get port from environment
 	port := os.Getenv("PORT")

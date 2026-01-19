@@ -169,6 +169,17 @@ export const collectionService = {
   async refreshPrices() {
     const response = await api.post('/collection/refresh-prices')
     return response.data
+  },
+
+  /**
+   * Get collection value history for charting
+   * @param {string} period - 'week', 'month', '3month', 'year', or 'all'
+   */
+  async getValueHistory(period = 'month') {
+    const response = await api.get('/collection/stats/history', {
+      params: { period }
+    })
+    return response.data
   }
 }
 

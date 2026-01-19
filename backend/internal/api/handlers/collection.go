@@ -18,13 +18,15 @@ type CollectionHandler struct {
 	scryfallService     *services.ScryfallService
 	pokemonService      *services.PokemonHybridService
 	imageStorageService *services.ImageStorageService
+	snapshotService     *services.SnapshotService
 }
 
-func NewCollectionHandler(scryfall *services.ScryfallService, pokemon *services.PokemonHybridService, imageStorage *services.ImageStorageService) *CollectionHandler {
+func NewCollectionHandler(scryfall *services.ScryfallService, pokemon *services.PokemonHybridService, imageStorage *services.ImageStorageService, snapshot *services.SnapshotService) *CollectionHandler {
 	return &CollectionHandler{
 		scryfallService:     scryfall,
 		pokemonService:      pokemon,
 		imageStorageService: imageStorage,
+		snapshotService:     snapshot,
 	}
 }
 
@@ -604,4 +606,25 @@ func (h *CollectionHandler) GetGroupedCollection(c *gin.Context) {
 	}
 
 	c.JSON(http.StatusOK, result)
+}
+
+// GetValueHistory returns collection value snapshots for charting
+func (h *CollectionHandler) GetValueHistory(c *gin.Context) {
+	if h.snapshotService == nil {
+		c.JSON(http.StatusServiceUnavailable, gin.H{"error": "snapshot service not available"})
+		return
+	}
+
+	period := c.DefaultQuery("period", "month")
+
+	snapshots, err := h.snapshotService.GetHistory(period)
+	if err != nil {
+		c.JSON(http.StatusInternalServerError, gin.H{"error": err.Error()})
+		return
+	}
+
+	c.JSON(http.StatusOK, models.ValueHistoryResponse{
+		Snapshots: snapshots,
+		Period:    period,
+	})
 }

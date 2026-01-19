@@ -47,7 +47,7 @@ func Initialize(dbPath string) error {
 	}
 
 	// Auto-migrate the schema
-	err = DB.AutoMigrate(&models.Card{}, &models.CollectionItem{}, &models.CardPrice{})
+	err = DB.AutoMigrate(&models.Card{}, &models.CollectionItem{}, &models.CardPrice{}, &models.CollectionValueSnapshot{})
 	if err != nil {
 		return err
 	}

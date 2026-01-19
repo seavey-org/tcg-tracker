@@ -6,6 +6,8 @@ export const useCollectionStore = defineStore('collection', {
     items: [],           // Raw collection items (for compatibility)
     groupedItems: [],    // Collection items grouped by card_id
     stats: null,
+    valueHistory: null,  // Historical value snapshots for charting
+    valueHistoryPeriod: 'month',
     loading: false,
     error: null,
     searchResults: [],
@@ -67,6 +69,16 @@ export const useCollectionStore = defineStore('collection', {
       } catch (err) {
         console.error('Failed to fetch stats:', err)
         this.error = 'Failed to load collection statistics'
+      }
+    },
+
+    async fetchValueHistory(period = 'month') {
+      try {
+        this.valueHistoryPeriod = period
+        this.valueHistory = await collectionService.getValueHistory(period)
+      } catch (err) {
+        console.error('Failed to fetch value history:', err)
+        // Don't set error - this is optional data
       }
     },
 
