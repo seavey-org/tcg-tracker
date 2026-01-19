@@ -29,7 +29,6 @@ func main() {
 
 	// Initialize services
 	scryfallService := services.NewScryfallService()
-	tcgdexService := services.NewTCGdexService()
 
 	// Initialize Pokemon hybrid service (local data + TCGdex for prices)
 	dataDir := os.Getenv("POKEMON_DATA_DIR")
@@ -58,8 +57,8 @@ func main() {
 	}
 	justTCGService := services.NewJustTCGService(justTCGAPIKey, justTCGDailyLimit)
 
-	// Initialize price service with fallback chain
-	priceService := services.NewPriceService(justTCGService, tcgdexService, scryfallService, database.GetDB())
+	// Initialize price service (JustTCG only, no fallbacks)
+	priceService := services.NewPriceService(justTCGService, database.GetDB())
 
 	// Initialize price worker with JustTCG batch support
 	priceWorker := services.NewPriceWorker(priceService, pokemonService, justTCGService)

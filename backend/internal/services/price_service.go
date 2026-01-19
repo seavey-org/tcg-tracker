@@ -5,6 +5,7 @@ import (
 	"time"
 
 	"gorm.io/gorm"
+	"gorm.io/gorm/clause"
 
 	"github.com/codyseavey/tcg-tracker/backend/internal/models"
 )
@@ -14,26 +15,22 @@ const (
 	PriceStalenessThreshold = 24 * time.Hour
 )
 
-// PriceService provides unified price fetching with fallback chain
+// PriceService provides unified price fetching from JustTCG
 type PriceService struct {
-	justTCG  *JustTCGService
-	tcgdex   *TCGdexService
-	scryfall *ScryfallService
-	db       *gorm.DB
+	justTCG *JustTCGService
+	db      *gorm.DB
 }
 
-// NewPriceService creates a new price service with fallback sources
-func NewPriceService(justTCG *JustTCGService, tcgdex *TCGdexService, scryfall *ScryfallService, db *gorm.DB) *PriceService {
+// NewPriceService creates a new price service
+func NewPriceService(justTCG *JustTCGService, db *gorm.DB) *PriceService {
 	return &PriceService{
-		justTCG:  justTCG,
-		tcgdex:   tcgdex,
-		scryfall: scryfall,
-		db:       db,
+		justTCG: justTCG,
+		db:      db,
 	}
 }
 
 // GetPrice returns the price for a specific card, condition, and printing type
-// Fallback order: DB cache -> JustTCG -> TCGdex/Scryfall -> stale cache
+// Fallback order: DB cache -> JustTCG -> stale cache
 func (s *PriceService) GetPrice(card *models.Card, condition models.PriceCondition, printing models.PrintingType) (float64, string, error) {
 	// 1. Check database cache for fresh condition-specific price
 	cachedPrice, err := s.getCachedPrice(card.ID, condition, printing)
@@ -68,64 +65,13 @@ func (s *PriceService) GetPrice(card *models.Card, condition models.PriceConditi
 		}
 	}
 
-	// 3. Fallback to game-specific APIs (only NM prices)
-	var fallbackPrice float64
-	var fallbackSource string
-	isFoilVariant := printing.IsFoilVariant()
-
-	switch card.Game {
-	case models.GamePokemon:
-		if s.tcgdex != nil {
-			priceUSD, priceFoilUSD, err := s.tcgdex.GetCardPrice(card.ID)
-			if err == nil {
-				if isFoilVariant && priceFoilUSD > 0 {
-					fallbackPrice = priceFoilUSD
-				} else if priceUSD > 0 {
-					fallbackPrice = priceUSD
-				}
-				if fallbackPrice > 0 {
-					fallbackSource = "tcgdex"
-				}
-			}
-		}
-	case models.GameMTG:
-		if s.scryfall != nil {
-			scryfallCard, err := s.scryfall.GetCard(card.ID)
-			if err == nil && scryfallCard != nil {
-				if isFoilVariant && scryfallCard.PriceFoilUSD > 0 {
-					fallbackPrice = scryfallCard.PriceFoilUSD
-				} else if scryfallCard.PriceUSD > 0 {
-					fallbackPrice = scryfallCard.PriceUSD
-				}
-				if fallbackPrice > 0 {
-					fallbackSource = "scryfall"
-				}
-			}
-		}
-	}
-
-	if fallbackPrice > 0 {
-		// Save as NM price (these APIs don't provide condition-specific pricing)
-		now := time.Now()
-		s.saveCardPrices(card.ID, []models.CardPrice{
-			{
-				CardID:         card.ID,
-				Condition:      models.PriceConditionNM,
-				Printing:       printing,
-				PriceUSD:       fallbackPrice,
-				Source:         fallbackSource,
-				PriceUpdatedAt: &now,
-			},
-		})
-		return fallbackPrice, fallbackSource, nil
-	}
-
-	// 4. Return stale cached price if available
+	// 3. Return stale cached price if available
 	if cachedPrice != nil {
 		return cachedPrice.PriceUSD, cachedPrice.Source + " (stale)", nil
 	}
 
-	// 5. Fallback to card's base price (NM assumption)
+	// 4. Fallback to card's base price (from previous JustTCG fetch)
+	isFoilVariant := printing.IsFoilVariant()
 	if isFoilVariant && card.PriceFoilUSD > 0 {
 		return card.PriceFoilUSD, "cached", nil
 	}
@@ -137,11 +83,15 @@ func (s *PriceService) GetPrice(card *models.Card, condition models.PriceConditi
 }
 
 // GetAllConditionPrices returns all available prices for a card
+// Priority: fresh cache -> JustTCG API -> stale cache -> base prices
 func (s *PriceService) GetAllConditionPrices(card *models.Card) ([]models.CardPrice, error) {
-	// First, check if we have cached prices
+	// 1. Check if we have cached prices
 	var cachedPrices []models.CardPrice
-	s.db.Where("card_id = ?", card.ID).Find(&cachedPrices)
+	if err := s.db.Where("card_id = ?", card.ID).Find(&cachedPrices).Error; err != nil {
+		log.Printf("Failed to fetch cached prices for card %s: %v", card.ID, err)
+	}
 
+	// Check if all cached prices are fresh
 	allFresh := len(cachedPrices) > 0
 	for _, p := range cachedPrices {
 		if !s.isFresh(p.PriceUpdatedAt) {
@@ -151,15 +101,14 @@ func (s *PriceService) GetAllConditionPrices(card *models.Card) ([]models.CardPr
 	}
 
 	// If all cached prices are fresh, return them
-	if allFresh && len(cachedPrices) >= 2 { // At least NM non-foil and foil
+	if allFresh {
 		return cachedPrices, nil
 	}
 
-	// Try to fetch fresh prices from JustTCG
+	// 2. Try to fetch fresh prices from JustTCG
 	if s.justTCG != nil {
 		prices, err := s.justTCG.GetCardPrices(card.Name, card.SetCode, card.Game)
 		if err == nil && len(prices) > 0 {
-			// Set card ID and save to cache
 			for i := range prices {
 				prices[i].CardID = card.ID
 			}
@@ -168,76 +117,12 @@ func (s *PriceService) GetAllConditionPrices(card *models.Card) ([]models.CardPr
 		}
 	}
 
-	// Fallback to game-specific APIs (NM prices only)
-	now := time.Now()
-	var fallbackPrices []models.CardPrice
-
-	switch card.Game {
-	case models.GamePokemon:
-		if s.tcgdex != nil {
-			priceUSD, priceFoilUSD, err := s.tcgdex.GetCardPrice(card.ID)
-			if err == nil {
-				if priceUSD > 0 {
-					fallbackPrices = append(fallbackPrices, models.CardPrice{
-						CardID:         card.ID,
-						Condition:      models.PriceConditionNM,
-						Printing:       models.PrintingNormal,
-						PriceUSD:       priceUSD,
-						Source:         "tcgdex",
-						PriceUpdatedAt: &now,
-					})
-				}
-				if priceFoilUSD > 0 {
-					fallbackPrices = append(fallbackPrices, models.CardPrice{
-						CardID:         card.ID,
-						Condition:      models.PriceConditionNM,
-						Printing:       models.PrintingFoil,
-						PriceUSD:       priceFoilUSD,
-						Source:         "tcgdex",
-						PriceUpdatedAt: &now,
-					})
-				}
-			}
-		}
-	case models.GameMTG:
-		if s.scryfall != nil {
-			scryfallCard, err := s.scryfall.GetCard(card.ID)
-			if err == nil && scryfallCard != nil {
-				if scryfallCard.PriceUSD > 0 {
-					fallbackPrices = append(fallbackPrices, models.CardPrice{
-						CardID:         card.ID,
-						Condition:      models.PriceConditionNM,
-						Printing:       models.PrintingNormal,
-						PriceUSD:       scryfallCard.PriceUSD,
-						Source:         "scryfall",
-						PriceUpdatedAt: &now,
-					})
-				}
-				if scryfallCard.PriceFoilUSD > 0 {
-					fallbackPrices = append(fallbackPrices, models.CardPrice{
-						CardID:         card.ID,
-						Condition:      models.PriceConditionNM,
-						Printing:       models.PrintingFoil,
-						PriceUSD:       scryfallCard.PriceFoilUSD,
-						Source:         "scryfall",
-						PriceUpdatedAt: &now,
-					})
-				}
-			}
-		}
-	}
-
-	if len(fallbackPrices) > 0 {
-		s.saveCardPrices(card.ID, fallbackPrices)
-		return fallbackPrices, nil
-	}
-
-	// Return cached prices even if stale
+	// 3. Return cached prices even if stale
 	if len(cachedPrices) > 0 {
 		return cachedPrices, nil
 	}
 
-	// Return base prices from card
+	// 4. Return base prices from card (from previous JustTCG fetch)
 	var basePrices []models.CardPrice
 	if card.PriceUSD > 0 {
 		basePrices = append(basePrices, models.CardPrice{
@@ -284,7 +169,10 @@ func (s *PriceService) UpdateCardPrices(card *models.Card) (int, error) {
 				card.PriceSource = p.Source
 			}
 		}
-		s.db.Save(card)
+		if err := s.db.Save(card).Error; err != nil {
+			log.Printf("Failed to update base prices for card %s: %v", card.ID, err)
+			// Don't fail the whole operation, prices were still fetched
+		}
 	}
 
 	return len(prices), nil
@@ -305,24 +193,25 @@ func (s *PriceService) SaveCardPrices(cardID string, prices []models.CardPrice) 
 	s.saveCardPrices(cardID, prices)
 }
 
-// saveCardPrices saves prices to the database (upsert)
+// saveCardPrices saves prices to the database using bulk upsert
 func (s *PriceService) saveCardPrices(cardID string, prices []models.CardPrice) {
-	for _, p := range prices {
-		p.CardID = cardID
+	if len(prices) == 0 {
+		return
+	}
 
-		// Upsert: update if exists, create if not
-		var existing models.CardPrice
-		err := s.db.Where("card_id = ? AND condition = ? AND printing = ?", cardID, p.Condition, p.Printing).First(&existing).Error
-		if err == nil {
-			// Update existing
-			existing.PriceUSD = p.PriceUSD
-			existing.Source = p.Source
-			existing.PriceUpdatedAt = p.PriceUpdatedAt
-			s.db.Save(&existing)
-		} else {
-			// Create new
-			s.db.Create(&p)
-		}
+	// Ensure all prices have the correct card ID
+	for i := range prices {
+		prices[i].CardID = cardID
+	}
+
+	// Bulk upsert: insert or update on conflict with unique index (card_id, condition, printing)
+	err := s.db.Clauses(clause.OnConflict{
+		Columns:   []clause.Column{{Name: "card_id"}, {Name: "condition"}, {Name: "printing"}},
+		DoUpdates: clause.AssignmentColumns([]string{"price_usd", "source", "price_updated_at", "updated_at"}),
+	}).Create(&prices).Error
+
+	if err != nil {
+		log.Printf("Failed to save prices for card %s: %v", cardID, err)
 	}
 }
 
@@ -340,4 +229,20 @@ func (s *PriceService) GetJustTCGRequestsRemaining() int {
 		return 0
 	}
 	return s.justTCG.GetRequestsRemaining()
+}
+
+// GetJustTCGDailyLimit returns the configured daily limit
+func (s *PriceService) GetJustTCGDailyLimit() int {
+	if s.justTCG == nil {
+		return 0
+	}
+	return s.justTCG.GetDailyLimit()
+}
+
+// GetJustTCGResetTime returns the next reset time
+func (s *PriceService) GetJustTCGResetTime() time.Time {
+	if s.justTCG == nil {
+		return time.Time{}
+	}
+	return s.justTCG.GetResetTime()
 }

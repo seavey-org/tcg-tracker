@@ -103,6 +103,8 @@ function startEditItem(item) {
   editQuantity.value = item.quantity
   editCondition.value = item.condition
   editPrinting.value = item.printing
+  // Switch to items tab so the edit form is visible
+  activeTab.value = 'items'
 }
 
 // Cancel editing
@@ -372,82 +374,108 @@ const handleRemove = () => {
               >
                 <!-- Editing this item -->
                 <div v-if="editingItem?.id === collectionItem.id" class="space-y-3">
-                  <div class="text-sm font-medium text-blue-600 dark:text-blue-400 mb-2">
-                    Editing {{ collectionItem.scanned_image_path ? 'scanned card' : `stack of ${collectionItem.quantity}` }}
-                    <span v-if="!collectionItem.scanned_image_path && collectionItem.quantity > 1" class="text-orange-500 block mt-1">
-                      Note: Changing condition/printing will split 1 card from this stack
-                    </span>
-                  </div>
-                  <div class="grid grid-cols-3 gap-2">
-                    <div>
-                      <label class="text-xs text-gray-500">Quantity</label>
-                      <input
-                        v-model.number="editQuantity"
-                        type="number"
-                        min="1"
-                        class="w-full border dark:border-gray-600 rounded px-2 py-1 text-sm bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
+                  <div class="flex gap-3">
+                    <!-- Show scanned image thumbnail when editing a scanned card -->
+                    <div v-if="collectionItem.scanned_image_path" class="flex-shrink-0">
+                      <img
+                        :src="`/images/scanned/${collectionItem.scanned_image_path}`"
+                        alt="Your scanned card"
+                        class="w-16 h-22 object-cover rounded shadow ring-2 ring-blue-500"
                       />
                     </div>
-                    <div>
-                      <label class="text-xs text-gray-500">Condition</label>
-                      <select
-                        v-model="editCondition"
-                        class="w-full border dark:border-gray-600 rounded px-2 py-1 text-sm bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
-                      >
-                        <option v-for="c in conditions" :key="c.value" :value="c.value">{{ c.label }}</option>
-                      </select>
+                    <div class="flex-1">
+                      <div class="text-sm font-medium text-blue-600 dark:text-blue-400 mb-2">
+                        Editing {{ collectionItem.scanned_image_path ? 'scanned card' : `stack of ${collectionItem.quantity}` }}
+                        <span v-if="!collectionItem.scanned_image_path && collectionItem.quantity > 1" class="text-orange-500 block mt-1">
+                          Note: Changing condition/printing will split 1 card from this stack
+                        </span>
+                      </div>
+                      <div class="grid grid-cols-3 gap-2">
+                        <div>
+                          <label class="text-xs text-gray-500">Quantity</label>
+                          <input
+                            v-model.number="editQuantity"
+                            type="number"
+                            min="1"
+                            class="w-full border dark:border-gray-600 rounded px-2 py-1 text-sm bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
+                          />
+                        </div>
+                        <div>
+                          <label class="text-xs text-gray-500">Condition</label>
+                          <select
+                            v-model="editCondition"
+                            class="w-full border dark:border-gray-600 rounded px-2 py-1 text-sm bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
+                          >
+                            <option v-for="c in conditions" :key="c.value" :value="c.value">{{ c.label }}</option>
+                          </select>
+                        </div>
+                        <div>
+                          <label class="text-xs text-gray-500">Printing</label>
+                          <select
+                            v-model="editPrinting"
+                            class="w-full border dark:border-gray-600 rounded px-2 py-1 text-sm bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
+                          >
+                            <option v-for="p in printingOptions" :key="p.value" :value="p.value">{{ p.label }}</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="flex gap-2 mt-3">
+                        <button
+                          @click="saveEditItem"
+                          class="flex-1 bg-blue-600 text-white py-1 px-3 rounded text-sm hover:bg-blue-700"
+                        >
+                          Save
+                        </button>
+                        <button
+                          @click="cancelEdit"
+                          class="px-3 py-1 rounded text-sm bg-gray-200 dark:bg-gray-600 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-500"
+                        >
+                          Cancel
+                        </button>
+                      </div>
                     </div>
-                    <div>
-                      <label class="text-xs text-gray-500">Printing</label>
-                      <select
-                        v-model="editPrinting"
-                        class="w-full border dark:border-gray-600 rounded px-2 py-1 text-sm bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
-                      >
-                        <option v-for="p in printingOptions" :key="p.value" :value="p.value">{{ p.label }}</option>
-                      </select>
-                    </div>
-                  </div>
-                  <div class="flex gap-2">
-                    <button
-                      @click="saveEditItem"
-                      class="flex-1 bg-blue-600 text-white py-1 px-3 rounded text-sm hover:bg-blue-700"
-                    >
-                      Save
-                    </button>
-                    <button
-                      @click="cancelEdit"
-                      class="px-3 py-1 rounded text-sm bg-gray-200 dark:bg-gray-600 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-500"
-                    >
-                      Cancel
-                    </button>
                   </div>
                 </div>
 
                 <!-- Display mode -->
-                <div v-else class="flex justify-between items-center">
-                  <div class="flex items-center gap-3">
-                    <span v-if="collectionItem.scanned_image_path" class="text-purple-500">
-                      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" />
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 13a3 3 0 11-6 0 3 3 0 016 0z" />
-                      </svg>
-                    </span>
-                    <span
-                      v-if="collectionItem.printing !== 'Normal'"
-                      class="text-xs font-bold px-2 py-0.5 rounded"
-                      :class="{
-                        'bg-yellow-400 text-yellow-900': collectionItem.printing === 'Foil',
-                        'bg-amber-600 text-white': collectionItem.printing === '1st Edition',
-                        'bg-purple-500 text-white': collectionItem.printing === 'Reverse Holofoil',
-                        'bg-gray-500 text-white': collectionItem.printing === 'Unlimited'
-                      }"
-                    >
-                      {{ getPrintingLabel(collectionItem.printing) }}
-                    </span>
-                    <span class="text-gray-800 dark:text-white">{{ getConditionLabel(collectionItem.condition) }}</span>
-                    <span class="text-gray-500 dark:text-gray-400">x{{ collectionItem.quantity }}</span>
+                <div v-else class="flex items-center gap-3">
+                  <!-- Scanned card: show thumbnail -->
+                  <div v-if="collectionItem.scanned_image_path" class="flex-shrink-0">
+                    <img
+                      :src="`/images/scanned/${collectionItem.scanned_image_path}`"
+                      alt="Your scanned card"
+                      class="w-12 h-16 object-cover rounded shadow cursor-pointer hover:ring-2 hover:ring-blue-500 transition"
+                      @click="startEditItem(collectionItem)"
+                    />
                   </div>
-                  <div class="flex gap-2">
+                  <!-- Non-scanned stack: show stack icon -->
+                  <div v-else class="flex-shrink-0 w-12 h-16 bg-gray-200 dark:bg-gray-600 rounded flex items-center justify-center">
+                    <svg class="w-6 h-6 text-gray-400 dark:text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                    </svg>
+                  </div>
+                  <div class="flex-1 min-w-0">
+                    <div class="flex items-center gap-2 flex-wrap">
+                      <span
+                        v-if="collectionItem.printing !== 'Normal'"
+                        class="text-xs font-bold px-2 py-0.5 rounded"
+                        :class="{
+                          'bg-yellow-400 text-yellow-900': collectionItem.printing === 'Foil',
+                          'bg-amber-600 text-white': collectionItem.printing === '1st Edition',
+                          'bg-purple-500 text-white': collectionItem.printing === 'Reverse Holofoil',
+                          'bg-gray-500 text-white': collectionItem.printing === 'Unlimited'
+                        }"
+                      >
+                        {{ getPrintingLabel(collectionItem.printing) }}
+                      </span>
+                      <span class="text-gray-800 dark:text-white">{{ getConditionLabel(collectionItem.condition) }}</span>
+                      <span class="text-gray-500 dark:text-gray-400">x{{ collectionItem.quantity }}</span>
+                    </div>
+                    <div v-if="collectionItem.scanned_image_path" class="text-xs text-purple-500 mt-1">
+                      Scanned card
+                    </div>
+                  </div>
+                  <div class="flex gap-2 flex-shrink-0">
                     <button
                       @click="startEditItem(collectionItem)"
                       class="text-blue-600 dark:text-blue-400 hover:text-blue-800 text-sm"

@@ -159,6 +159,20 @@ func (s *JustTCGService) GetRequestsRemaining() int {
 	return remaining
 }
 
+// GetDailyLimit returns the configured daily limit
+func (s *JustTCGService) GetDailyLimit() int {
+	s.mu.Lock()
+	defer s.mu.Unlock()
+
+	return s.dailyLimit
+}
+
+// GetResetTime returns the next local midnight reset time
+func (s *JustTCGService) GetResetTime() time.Time {
+	now := time.Now()
+	return time.Date(now.Year(), now.Month(), now.Day()+1, 0, 0, 0, 0, now.Location())
+}
+
 // GetCardPrices fetches condition-specific prices for a single card
 // This is a convenience wrapper around BatchGetPrices for backward compatibility
 func (s *JustTCGService) GetCardPrices(cardName, setCode string, game models.Game) ([]models.CardPrice, error) {
@@ -275,6 +289,8 @@ func (s *JustTCGService) getSingleCard(lookup CardLookup) (map[string][]models.C
 		}
 	}
 
+	s.updateRemaining(apiResp.Metadata.APIDailyRequestsRemaining)
+
 	log.Printf("JustTCG: fetched %d cards, %d with prices (remaining: %d daily)",
 		len(apiResp.Data), len(results), apiResp.Metadata.APIDailyRequestsRemaining)
 
@@ -372,6 +388,8 @@ func (s *JustTCGService) postBatchCards(lookups []CardLookup) (map[string][]mode
 		results[card.Name] = prices
 	}
 
+	s.updateRemaining(apiResp.Metadata.APIDailyRequestsRemaining)
+
 	log.Printf("JustTCG: batch fetched %d cards, %d with prices (remaining: %d daily)",
 		len(apiResp.Data), len(results), apiResp.Metadata.APIDailyRequestsRemaining)
 
@@ -384,6 +402,27 @@ func (s *JustTCGService) setHeaders(req *http.Request) {
 		req.Header.Set("X-API-Key", s.apiKey)
 	}
 	req.Header.Set("Accept", "application/json")
+}
+
+// updateRemaining syncs our counters with JustTCG metadata
+func (s *JustTCGService) updateRemaining(remaining int) {
+	s.mu.Lock()
+	defer s.mu.Unlock()
+
+	if remaining < 0 {
+		return
+	}
+
+	// Infer requestsToday from remaining, keep same daily limit
+	requestsToday := s.dailyLimit - remaining
+	if requestsToday < 0 {
+		requestsToday = 0
+	}
+
+	now := time.Now()
+	today := time.Date(now.Year(), now.Month(), now.Day(), 0, 0, 0, 0, now.Location())
+	s.requestsToday = requestsToday
+	s.lastRequestDay = today
 }
 
 // convertVariantsToPrices converts JustTCG variants to our CardPrice model

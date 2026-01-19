@@ -15,9 +15,20 @@ const recentCards = computed(() => {
   return store.items.slice(0, 12)
 })
 
+const quotaRemaining = computed(() => {
+  if (!priceStatus.value) return 0
+  return priceStatus.value.remaining ?? 0
+})
+
+const quotaDailyLimit = computed(() => {
+  if (!priceStatus.value) return 0
+  return priceStatus.value.daily_limit ?? 0
+})
+
 const quotaPercentage = computed(() => {
   if (!priceStatus.value) return 0
-  return Math.round((priceStatus.value.remaining / priceStatus.value.daily_limit) * 100)
+  if (!quotaDailyLimit.value) return 0
+  return Math.round((quotaRemaining.value / quotaDailyLimit.value) * 100)
 })
 
 const quotaColor = computed(() => {
@@ -92,7 +103,7 @@ const handlePriceUpdated = (updatedCard) => {
             </div>
           </div>
           <div class="text-sm text-gray-600 dark:text-gray-400">
-            {{ priceStatus.remaining }} / {{ priceStatus.daily_limit }} remaining
+            {{ quotaRemaining }} / {{ quotaDailyLimit }} remaining
           </div>
         </div>
         <p class="text-xs text-gray-500 dark:text-gray-500 mt-1">

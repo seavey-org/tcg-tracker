@@ -30,18 +30,23 @@ type PriceWorker struct {
 	urgentQueue []string
 	urgentMu    sync.Mutex
 
-	// Stats
+	// Stats (reset at midnight)
 	cardsUpdatedToday int
 	lastUpdateTime    time.Time
+	lastStatsDay      time.Time // Track which day the stats are for
 }
 
 type PriceStatus struct {
-	LastUpdateTime           time.Time `json:"last_update_time"`
-	NextUpdateTime           time.Time `json:"next_update_time"`
-	CardsUpdatedToday        int       `json:"cards_updated_today"`
-	BatchSize                int       `json:"batch_size"`
-	JustTCGRequestsRemaining int       `json:"justtcg_requests_remaining"`
-	QueueSize                int       `json:"queue_size"`
+	LastUpdateTime    time.Time `json:"last_update_time"`
+	NextUpdateTime    time.Time `json:"next_update_time"`
+	CardsUpdatedToday int       `json:"cards_updated_today"`
+	BatchSize         int       `json:"batch_size"`
+	QueueSize         int       `json:"queue_size"`
+
+	// JustTCG quota info
+	DailyLimit int       `json:"daily_limit"`
+	Remaining  int       `json:"remaining"`
+	ResetsAt   time.Time `json:"resets_at,omitempty"`
 }
 
 func NewPriceWorker(priceService *PriceService, pokemonService *PokemonHybridService, justTCG *JustTCGService) *PriceWorker {
@@ -50,7 +55,7 @@ func NewPriceWorker(priceService *PriceService, pokemonService *PokemonHybridSer
 		justTCG:        justTCG,
 		pokemonService: pokemonService,
 		batchSize:      defaultBatchSize,
-		updateInterval: 1 * time.Hour,
+		updateInterval: 15 * time.Minute,
 	}
 }
 
@@ -82,9 +87,35 @@ func (w *PriceWorker) GetQueueSize() int {
 	return len(w.urgentQueue)
 }
 
+// resetDailyStatsIfNeeded resets cardsUpdatedToday at midnight
+func (w *PriceWorker) resetDailyStatsIfNeeded() {
+	w.mu.Lock()
+	defer w.mu.Unlock()
+
+	now := time.Now()
+	today := time.Date(now.Year(), now.Month(), now.Day(), 0, 0, 0, 0, now.Location())
+
+	if w.lastStatsDay.Before(today) {
+		if !w.lastStatsDay.IsZero() {
+			log.Printf("Price worker: daily stats reset (previous day: %d cards updated)", w.cardsUpdatedToday)
+		}
+		w.cardsUpdatedToday = 0
+		w.lastStatsDay = today
+	}
+}
+
+// hasJustTCGQuota checks if we have JustTCG API quota remaining
+// Returns false only if JustTCG is configured and quota is exhausted
+func (w *PriceWorker) hasJustTCGQuota() bool {
+	if w.justTCG == nil {
+		return false // No JustTCG configured
+	}
+	return w.priceService.GetJustTCGRequestsRemaining() > 0
+}
+
 // Start begins the background price update worker
 func (w *PriceWorker) Start(ctx context.Context) {
-	log.Printf("Price worker started: will update %d cards per hour (Pokemon and MTG)", w.batchSize)
+	log.Printf("Price worker started: will update %d cards every %v (Pokemon and MTG)", w.batchSize, w.updateInterval)
 
 	// Run immediately on startup
 	if updated, err := w.UpdateBatch(); err != nil {
@@ -116,6 +147,16 @@ func (w *PriceWorker) Start(ctx context.Context) {
 // 2. Collection cards without prices
 // 3. Collection cards with oldest prices
 func (w *PriceWorker) UpdateBatch() (updated int, err error) {
+	// Reset daily stats at midnight
+	w.resetDailyStatsIfNeeded()
+
+	// Check JustTCG quota - skip batch if exhausted
+	if !w.hasJustTCGQuota() {
+		resetTime := w.priceService.GetJustTCGResetTime()
+		log.Printf("Price worker: JustTCG quota exhausted, skipping until %s", resetTime.Format("15:04"))
+		return 0, nil
+	}
+
 	db := database.GetDB()
 	var cardsToUpdate []models.Card
 	var cardIDs []string
@@ -189,13 +230,7 @@ func (w *PriceWorker) UpdateBatch() (updated int, err error) {
 
 	log.Printf("Price worker: updating prices for %d cards", len(cardsToUpdate))
 
-	// Use batch update if JustTCG is configured
-	if w.justTCG != nil {
-		return w.batchUpdatePrices(cardsToUpdate)
-	}
-
-	// Fallback to individual updates
-	return w.individualUpdatePrices(cardsToUpdate)
+	return w.batchUpdatePrices(cardsToUpdate)
 }
 
 // batchUpdatePrices uses the batch API to update all cards at once
@@ -223,8 +258,7 @@ func (w *PriceWorker) batchUpdatePrices(cards []models.Card) (int, error) {
 	results, err := w.justTCG.BatchGetPrices(lookups)
 	if err != nil {
 		log.Printf("Price worker: batch request failed: %v", err)
-		// Fallback to individual updates
-		return w.individualUpdatePrices(cards)
+		return 0, err
 	}
 
 	// Save results - keys should be CardIDs from JustTCG service
@@ -273,45 +307,19 @@ func (w *PriceWorker) batchUpdatePrices(cards []models.Card) (int, error) {
 	return updated, nil
 }
 
-// individualUpdatePrices updates cards one at a time (fallback when batch fails)
-func (w *PriceWorker) individualUpdatePrices(cards []models.Card) (int, error) {
-	updated := 0
-
-	for _, card := range cards {
-		pricesUpdated, err := w.priceService.UpdateCardPrices(&card)
-		if err != nil {
-			log.Printf("Price worker: failed to update %s: %v", card.Name, err)
-			continue
-		}
-
-		if pricesUpdated > 0 {
-			updated++
-			log.Printf("Price worker: updated %d prices for %s (%s)", pricesUpdated, card.Name, card.Game)
-		}
-
-		// Small delay between requests to be nice to the APIs
-		time.Sleep(100 * time.Millisecond)
-	}
-
-	w.mu.Lock()
-	w.cardsUpdatedToday += updated
-	w.lastUpdateTime = time.Now()
-	w.mu.Unlock()
-
-	return updated, nil
-}
-
 // GetStatus returns the current status
 func (w *PriceWorker) GetStatus() PriceStatus {
 	w.mu.RLock()
 	defer w.mu.RUnlock()
 
 	return PriceStatus{
-		LastUpdateTime:           w.lastUpdateTime,
-		NextUpdateTime:           w.lastUpdateTime.Add(w.updateInterval),
-		CardsUpdatedToday:        w.cardsUpdatedToday,
-		BatchSize:                w.batchSize,
-		JustTCGRequestsRemaining: w.priceService.GetJustTCGRequestsRemaining(),
-		QueueSize:                w.GetQueueSize(),
+		LastUpdateTime:    w.lastUpdateTime,
+		NextUpdateTime:    w.lastUpdateTime.Add(w.updateInterval),
+		CardsUpdatedToday: w.cardsUpdatedToday,
+		BatchSize:         w.batchSize,
+		QueueSize:         w.GetQueueSize(),
+		DailyLimit:        w.priceService.GetJustTCGDailyLimit(),
+		Remaining:         w.priceService.GetJustTCGRequestsRemaining(),
+		ResetsAt:          w.priceService.GetJustTCGResetTime(),
 	}
 }

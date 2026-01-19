@@ -108,8 +108,8 @@ Environment variables:
 | `PokemonHybridService` | `internal/services/pokemon_hybrid.go` | Pokemon card search with local data |
 | `ScryfallService` | `internal/services/scryfall.go` | MTG card search via Scryfall API |
 | `JustTCGService` | `internal/services/justtcg.go` | Condition-based pricing from JustTCG API |
-| `PriceService` | `internal/services/price_service.go` | Unified price fetching with fallback chain |
-| `TCGdexService` | `internal/services/tcgdex.go` | Pokemon card pricing fallback (TCGdex API) |
+| `PriceService` | `internal/services/price_service.go` | Unified price fetching from JustTCG |
+| `TCGdexService` | `internal/services/tcgdex.go` | Pokemon card metadata (used by PokemonHybridService) |
 | `PriceWorker` | `internal/services/price_worker.go` | Background price updates with priority queue (user requests, then collection) |
 | `OCRParser` | `internal/services/ocr_parser.go` | Parse OCR text to extract card details |
 | `ServerOCRService` | `internal/services/server_ocr.go` | Server-side OCR using identifier service (EasyOCR) |
@@ -171,7 +171,7 @@ Base URL: `http://localhost:8080/api`
 1. **Card Search**: User searches → Backend queries local Pokemon data or Scryfall API → Returns cards with cached prices
 2. **Card Scanning (Server OCR)**: Mobile captures image → Backend sends to identifier service → EasyOCR extracts text → Backend parses OCR text → Matches card by name/set/number
 3. **Card Scanning (Fallback)**: If server OCR unavailable → Mobile uses Google ML Kit locally → Sends text to backend for parsing
-4. **Price Updates**: Background worker runs hourly → Updates 20 cards per batch via JustTCG (with TCGdex/Scryfall fallback)
+4. **Price Updates**: Background worker runs every 15 minutes → Updates 20 cards per batch via JustTCG (skips when quota exhausted)
 
 ## Important Implementation Details
 
@@ -188,11 +188,11 @@ Optional admin key authentication protects collection modification endpoints:
 - Condition and printing-specific prices (NM, LP, MP, HP, DMG) stored in `card_prices` table
 - Prices keyed by card_id + condition + printing (Normal, Foil, 1st Edition, etc.)
 - Base prices (NM only) kept in `cards` table for backward compatibility
-- `PriceService` provides unified price fetching with fallback chain:
+- All prices come from JustTCG API (no fallback to other sources for uniform data)
+- `PriceService` provides unified price fetching:
   1. Check database cache (fresh within 24 hours)
   2. Try JustTCG API (condition-specific pricing for Pokemon and MTG)
-  3. Fallback to TCGdex (Pokemon) or Scryfall (MTG) for NM prices
-  4. Return stale cached price if all else fails
+  3. Return stale cached price if API unavailable
 
 ### Price Worker
 The background price worker (`PriceWorker`) updates prices with priority ordering:
@@ -200,7 +200,8 @@ The background price worker (`PriceWorker`) updates prices with priority orderin
 2. **Collection cards without prices** - New additions needing initial pricing
 3. **Collection cards with oldest prices** - Stale cache refresh
 
-JustTCG batch API used for efficient updates (up to 20 cards per request with rate limiting).
+JustTCG batch API used for efficient updates (up to 20 cards per request).
+Worker skips updates when daily quota is exhausted (resets at midnight).
 Collection stats use condition and printing-appropriate prices.
 
 ### OCR Card Matching
