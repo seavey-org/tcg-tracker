@@ -53,3 +53,30 @@ type UpdateCollectionRequest struct {
 	Printing  *PrintingType `json:"printing"`
 	Notes     *string       `json:"notes"`
 }
+
+// CollectionUpdateResponse includes the updated item plus operation info
+type CollectionUpdateResponse struct {
+	Item      CollectionItem `json:"item"`
+	Operation string         `json:"operation"` // "updated", "split", "merged"
+	Message   string         `json:"message,omitempty"`
+}
+
+// CollectionVariant summarizes items with same printing+condition
+type CollectionVariant struct {
+	Printing   PrintingType `json:"printing"`
+	Condition  Condition    `json:"condition"`
+	Quantity   int          `json:"quantity"`
+	Value      float64      `json:"value"`
+	HasScans   bool         `json:"has_scans"`
+	ScannedQty int          `json:"scanned_qty"`
+}
+
+// GroupedCollectionItem represents a card with all its collection entries grouped
+type GroupedCollectionItem struct {
+	Card          Card                `json:"card"`
+	TotalQuantity int                 `json:"total_quantity"`
+	TotalValue    float64             `json:"total_value"`
+	ScannedCount  int                 `json:"scanned_count"`
+	Variants      []CollectionVariant `json:"variants"`
+	Items         []CollectionItem    `json:"items"`
+}

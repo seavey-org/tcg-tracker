@@ -148,9 +148,10 @@ Base URL: `http://localhost:8080/api`
 - `POST /auth/verify` - Verify admin key (returns valid: true/false)
 
 ### Collection
-- `GET /collection` - Get user's collection
+- `GET /collection` - Get user's collection (flat list)
+- `GET /collection/grouped` - Get collection grouped by card_id with variants summary
 - `POST /collection` - Add card to collection (🔒 requires admin key)
-- `PUT /collection/:id` - Update collection item (🔒 requires admin key)
+- `PUT /collection/:id` - Update collection item with smart split/merge (🔒 requires admin key)
 - `DELETE /collection/:id` - Remove from collection (🔒 requires admin key)
 - `GET /collection/stats` - Get collection statistics
 - `POST /collection/refresh-prices` - Queue background price refresh (🔒 requires admin key)
@@ -247,6 +248,27 @@ Two OCR processing paths are available:
    - Uses GPU-accelerated EasyOCR for better accuracy and speed
    - Check availability via `/cards/ocr-status`
 2. **Client-side OCR** (fallback): If server OCR unavailable → Mobile uses Google ML Kit locally → Sends extracted text to `/cards/identify`
+
+### Collection Grouping and Smart Updates
+The collection supports two viewing modes:
+1. **Flat list** (`GET /collection`) - Returns individual collection items
+2. **Grouped view** (`GET /collection/grouped`) - Groups items by card_id with:
+   - Total quantity and value across all variants
+   - Breakdown by printing+condition variant
+   - Scanned card count
+   - Individual items for editing
+
+**Smart Split/Merge on Update (`PUT /collection/:id`):**
+When changing condition or printing on a collection item:
+- **Scanned items** (with `scanned_image_path`): Always stay individual, updated in place
+- **Stack with qty > 1**: Splits 1 card off with new attributes, merges into existing stack if one exists
+- **Single item (qty=1)**: Merges into existing stack with matching attributes, or updates in place
+
+Response includes `operation` field: `"updated"`, `"split"`, or `"merged"`
+
+**Add to Collection Logic:**
+- Cards with scanned images always create individual entries (qty=1)
+- Non-scanned cards merge into existing stacks with matching card_id+condition+printing
 
 ### Frontend Serving
 The Go backend can serve the Vue.js frontend from `FRONTEND_DIST_PATH`:

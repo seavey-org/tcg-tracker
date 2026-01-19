@@ -126,6 +126,17 @@ export const collectionService = {
     return response.data
   },
 
+  /**
+   * Get collection items grouped by card_id
+   * Returns array of grouped items with total quantities, variants, and scans info
+   */
+  async getGrouped(game = null) {
+    const response = await api.get('/collection/grouped', {
+      params: game ? { game } : {}
+    })
+    return response.data
+  },
+
   async add(cardId, options = {}) {
     const response = await api.post('/collection', {
       card_id: cardId,
@@ -137,6 +148,10 @@ export const collectionService = {
     return response.data
   },
 
+  /**
+   * Update a collection item
+   * Returns { item, operation, message } where operation is 'updated', 'split', or 'merged'
+   */
   async update(id, updates) {
     const response = await api.put(`/collection/${id}`, updates)
     return response.data

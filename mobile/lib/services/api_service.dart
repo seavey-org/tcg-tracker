@@ -8,6 +8,7 @@ import 'package:image/image.dart' as img;
 import '../models/card.dart';
 import '../models/collection_item.dart' show CollectionItem, PrintingType;
 import '../models/collection_stats.dart';
+import '../models/grouped_collection.dart';
 import '../models/price_status.dart';
 import 'image_analysis_service.dart';
 import 'auth_service.dart';
@@ -227,6 +228,37 @@ class ApiService {
     }
   }
 
+  /// Get collection items grouped by card
+  Future<List<GroupedCollectionItem>> getGroupedCollection({
+    String? game,
+  }) async {
+    final serverUrl = await getServerUrl();
+    var uri = Uri.parse('$serverUrl/api/collection/grouped');
+    if (game != null && game.isNotEmpty) {
+      uri = uri.replace(queryParameters: {'game': game});
+    }
+
+    final response = await _httpClient
+        .get(uri)
+        .timeout(
+          const Duration(seconds: 35),
+          onTimeout: () => throw Exception('Request timed out'),
+        );
+
+    if (response.statusCode == 200) {
+      final List<dynamic> data = json.decode(response.body);
+      return data
+          .map(
+            (item) =>
+                GroupedCollectionItem.fromJson(item as Map<String, dynamic>),
+          )
+          .toList();
+    } else {
+      final error = _safeJsonDecode(response.body);
+      throw Exception(error['error'] ?? 'Failed to get grouped collection');
+    }
+  }
+
   /// Get collection statistics
   Future<CollectionStats> getStats() async {
     final serverUrl = await getServerUrl();
@@ -248,7 +280,8 @@ class ApiService {
   }
 
   /// Update a collection item
-  Future<CollectionItem> updateCollectionItem(
+  /// Returns CollectionUpdateResponse with operation info (updated/split/merged)
+  Future<CollectionUpdateResponse> updateCollectionItem(
     int id, {
     int? quantity,
     String? condition,
@@ -284,7 +317,7 @@ class ApiService {
     }
 
     if (response.statusCode == 200) {
-      return CollectionItem.fromJson(json.decode(response.body));
+      return CollectionUpdateResponse.fromJson(json.decode(response.body));
     } else {
       final error = _safeJsonDecode(response.body);
       throw Exception(error['error'] ?? 'Failed to update item');

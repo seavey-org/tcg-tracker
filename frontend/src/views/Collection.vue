@@ -1,7 +1,6 @@
 <script setup>
 import { ref, onMounted, computed } from 'vue'
 import { useCollectionStore } from '../stores/collection'
-import { isFoilPrinting } from '../utils/formatters'
 import CardGrid from '../components/CardGrid.vue'
 import CardDetail from '../components/CardDetail.vue'
 
@@ -11,8 +10,9 @@ const selectedItem = ref(null)
 const filterGame = ref('all')
 const sortBy = ref('added_at')
 
+// Use grouped items for display
 const filteredItems = computed(() => {
-  let items = [...store.items]
+  let items = [...store.groupedItems]
 
   if (filterGame.value !== 'all') {
     items = items.filter(item => item.card.game === filterGame.value)
@@ -22,26 +22,32 @@ const filteredItems = computed(() => {
     switch (sortBy.value) {
       case 'name':
         return a.card.name.localeCompare(b.card.name)
-      case 'value': {
-        const valueA = isFoilPrinting(a.printing) ? a.card.price_foil_usd : a.card.price_usd
-        const valueB = isFoilPrinting(b.printing) ? b.card.price_foil_usd : b.card.price_usd
-        return (valueB || 0) - (valueA || 0)
-      }
+      case 'value':
+        return (b.total_value || 0) - (a.total_value || 0)
       case 'added_at':
-      default:
-        return new Date(b.added_at) - new Date(a.added_at)
+      default: {
+        // For grouped items, use the most recent item's added_at
+        const latestA = a.items?.[0]?.added_at || ''
+        const latestB = b.items?.[0]?.added_at || ''
+        return new Date(latestB) - new Date(latestA)
+      }
     }
   })
 
   return items
 })
 
-const handleSelect = (item) => {
-  selectedItem.value = item
+const handleSelect = (groupedItem) => {
+  selectedItem.value = groupedItem
 }
 
 const handleUpdate = async ({ id, quantity, condition, printing }) => {
-  await store.updateItem(id, { quantity, condition, printing })
+  const result = await store.updateItem(id, { quantity, condition, printing })
+  // Show feedback about the operation
+  if (result.message) {
+    // Could show a toast here
+    console.log('Update operation:', result.operation, result.message)
+  }
   selectedItem.value = null
 }
 
@@ -54,20 +60,17 @@ const handleRefreshPrices = async () => {
   await store.refreshPrices()
 }
 
-const handlePriceUpdated = (updatedCard) => {
-  // Update the card in the selected item
-  if (selectedItem.value && selectedItem.value.card) {
-    selectedItem.value.card.price_usd = updatedCard.price_usd
-    selectedItem.value.card.price_foil_usd = updatedCard.price_foil_usd
-    selectedItem.value.card.price_updated_at = updatedCard.price_updated_at
-    selectedItem.value.card.price_source = updatedCard.price_source
-  }
-  // Also refresh the collection to get updated data
-  store.fetchCollection()
+const handlePriceUpdated = () => {
+  // Refresh the collection to get updated data
+  store.fetchGroupedCollection()
+}
+
+const handleClose = () => {
+  selectedItem.value = null
 }
 
 onMounted(() => {
-  store.fetchCollection()
+  store.fetchGroupedCollection()
   store.fetchStats()
 })
 </script>
@@ -123,6 +126,7 @@ onMounted(() => {
       v-else
       :cards="filteredItems"
       :show-quantity="true"
+      :grouped="true"
       @select="handleSelect"
     />
 
@@ -130,7 +134,8 @@ onMounted(() => {
       v-if="selectedItem"
       :item="selectedItem"
       :is-collection-item="true"
-      @close="selectedItem = null"
+      :is-grouped="true"
+      @close="handleClose"
       @update="handleUpdate"
       @remove="handleRemove"
       @priceUpdated="handlePriceUpdated"

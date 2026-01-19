@@ -20,8 +20,11 @@ enum PrintingType {
   }
 
   /// Returns true if this printing type should use foil pricing
+  /// Matches backend logic in card_price.go PrintingType.IsFoilVariant()
   bool get usesFoilPricing =>
-      this == PrintingType.foil || this == PrintingType.reverseHolofoil;
+      this == PrintingType.foil ||
+      this == PrintingType.firstEdition ||
+      this == PrintingType.reverseHolofoil;
 }
 
 class CollectionItem {

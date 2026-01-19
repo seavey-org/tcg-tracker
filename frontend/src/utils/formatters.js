@@ -41,11 +41,12 @@ export function isPriceStale(cardOrItem) {
 
 /**
  * Check if a printing type uses foil pricing.
+ * Matches backend logic in card_price.go PrintingType.IsFoilVariant()
  * @param {string} printing - The printing type (Normal, Foil, 1st Edition, etc.)
  * @returns {boolean} True if this printing type should use foil pricing
  */
 export function isFoilPrinting(printing) {
-  return ['Foil', 'Reverse Holofoil'].includes(printing)
+  return ['Foil', '1st Edition', 'Reverse Holofoil'].includes(printing)
 }
 
 /**

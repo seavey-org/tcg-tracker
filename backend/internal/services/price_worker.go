@@ -202,7 +202,7 @@ func (w *PriceWorker) UpdateBatch() (updated int, err error) {
 func (w *PriceWorker) batchUpdatePrices(cards []models.Card) (int, error) {
 	// Build lookup requests
 	lookups := make([]CardLookup, len(cards))
-	cardMap := make(map[string]*models.Card)
+	cardMap := make(map[string]*models.Card) // Keyed by CardID only
 
 	for i, card := range cards {
 		gameStr := "pokemon"
@@ -217,8 +217,6 @@ func (w *PriceWorker) batchUpdatePrices(cards []models.Card) (int, error) {
 			Game:   gameStr,
 		}
 		cardMap[card.ID] = &cards[i]
-		// Also map by name for matching
-		cardMap[card.Name] = &cards[i]
 	}
 
 	// Single batch request
@@ -229,49 +227,41 @@ func (w *PriceWorker) batchUpdatePrices(cards []models.Card) (int, error) {
 		return w.individualUpdatePrices(cards)
 	}
 
-	// Save results
+	// Save results - keys should be CardIDs from JustTCG service
 	updated := 0
 	db := database.GetDB()
 
-	for key, prices := range results {
+	for cardID, prices := range results {
 		if len(prices) == 0 {
 			continue
 		}
 
-		// Find the card this matches
-		card, ok := cardMap[key]
+		card, ok := cardMap[cardID]
 		if !ok {
-			// Try to find by name match
-			for _, c := range cards {
-				if c.Name == key {
-					card = &c
-					break
-				}
-			}
+			log.Printf("Price worker: received prices for unknown card ID: %s", cardID)
+			continue
 		}
 
-		if card != nil {
-			// Set card ID on all prices
-			for i := range prices {
-				prices[i].CardID = card.ID
-			}
-			w.priceService.SaveCardPrices(card.ID, prices)
-
-			// Update base card prices for backward compatibility
-			for _, p := range prices {
-				if p.Condition == models.PriceConditionNM {
-					if p.Printing.IsFoilVariant() {
-						card.PriceFoilUSD = p.PriceUSD
-					} else {
-						card.PriceUSD = p.PriceUSD
-					}
-					card.PriceUpdatedAt = p.PriceUpdatedAt
-					card.PriceSource = p.Source
-				}
-			}
-			db.Save(card)
-			updated++
+		// Set card ID on all prices
+		for i := range prices {
+			prices[i].CardID = card.ID
 		}
+		w.priceService.SaveCardPrices(card.ID, prices)
+
+		// Update base card prices for backward compatibility
+		for _, p := range prices {
+			if p.Condition == models.PriceConditionNM {
+				if p.Printing.IsFoilVariant() {
+					card.PriceFoilUSD = p.PriceUSD
+				} else {
+					card.PriceUSD = p.PriceUSD
+				}
+				card.PriceUpdatedAt = p.PriceUpdatedAt
+				card.PriceSource = p.Source
+			}
+		}
+		db.Save(card)
+		updated++
 	}
 
 	w.mu.Lock()

@@ -2,6 +2,7 @@ import 'package:flutter/foundation.dart';
 import '../models/card.dart';
 import '../models/collection_item.dart';
 import '../models/collection_stats.dart';
+import '../models/grouped_collection.dart';
 import '../models/price_status.dart';
 import '../services/api_service.dart';
 
@@ -15,9 +16,13 @@ class CollectionProvider extends ChangeNotifier {
 
   // Collection state
   List<CollectionItem> _items = [];
+  List<GroupedCollectionItem> _groupedItems = [];
   CollectionStats _stats = CollectionStats.empty();
   bool _loading = false;
   String? _error;
+
+  // Last update result for showing split/merge feedback
+  CollectionUpdateResponse? _lastUpdateResult;
 
   // Search state
   List<CardModel> _searchResults = [];
@@ -35,9 +40,13 @@ class CollectionProvider extends ChangeNotifier {
   // Getters
   List<CollectionItem> get items => _sortedAndFilteredItems;
   List<CollectionItem> get allItems => _items;
+  List<GroupedCollectionItem> get groupedItems =>
+      _sortedAndFilteredGroupedItems;
+  List<GroupedCollectionItem> get allGroupedItems => _groupedItems;
   CollectionStats get stats => _stats;
   bool get loading => _loading;
   String? get error => _error;
+  CollectionUpdateResponse? get lastUpdateResult => _lastUpdateResult;
 
   List<CardModel> get searchResults => _searchResults;
   bool get searchLoading => _searchLoading;
@@ -91,6 +100,46 @@ class CollectionProvider extends ChangeNotifier {
     return filtered;
   }
 
+  List<GroupedCollectionItem> get _sortedAndFilteredGroupedItems {
+    var filtered = _groupedItems.toList();
+
+    // Apply game filter
+    if (_gameFilter != null && _gameFilter!.isNotEmpty) {
+      filtered = filtered.where((i) => i.card.game == _gameFilter).toList();
+    }
+
+    // Apply sort
+    switch (_sortOption) {
+      case SortOption.dateAdded:
+        // Sort by most recent item in the group
+        filtered.sort((a, b) {
+          final aLatest = a.items.isNotEmpty
+              ? a.items
+                    .map((i) => i.addedAt)
+                    .reduce((a, b) => a.isAfter(b) ? a : b)
+              : DateTime(1970);
+          final bLatest = b.items.isNotEmpty
+              ? b.items
+                    .map((i) => i.addedAt)
+                    .reduce((a, b) => a.isAfter(b) ? a : b)
+              : DateTime(1970);
+          return bLatest.compareTo(aLatest);
+        });
+        break;
+      case SortOption.name:
+        filtered.sort(
+          (a, b) =>
+              a.card.name.toLowerCase().compareTo(b.card.name.toLowerCase()),
+        );
+        break;
+      case SortOption.value:
+        filtered.sort((a, b) => b.totalValue.compareTo(a.totalValue));
+        break;
+    }
+
+    return filtered;
+  }
+
   // Filter and sort methods
   void setGameFilter(String? game) {
     _gameFilter = game;
@@ -110,6 +159,23 @@ class CollectionProvider extends ChangeNotifier {
 
     try {
       _items = await _apiService.getCollection(game: game);
+      _error = null;
+    } catch (e) {
+      _error = e.toString();
+    } finally {
+      _loading = false;
+      notifyListeners();
+    }
+  }
+
+  /// Fetch collection items grouped by card
+  Future<void> fetchGroupedCollection({String? game}) async {
+    _loading = true;
+    _error = null;
+    notifyListeners();
+
+    try {
+      _groupedItems = await _apiService.getGroupedCollection(game: game);
       _error = null;
     } catch (e) {
       _error = e.toString();
@@ -157,7 +223,9 @@ class CollectionProvider extends ChangeNotifier {
     }
   }
 
-  Future<void> updateItem(
+  /// Update a collection item
+  /// Returns the update response which may indicate a split or merge occurred
+  Future<CollectionUpdateResponse> updateItem(
     int id, {
     int? quantity,
     String? condition,
@@ -165,25 +233,46 @@ class CollectionProvider extends ChangeNotifier {
     String? notes,
   }) async {
     try {
-      final updated = await _apiService.updateCollectionItem(
+      final response = await _apiService.updateCollectionItem(
         id,
         quantity: quantity,
         condition: condition,
         printing: printing,
         notes: notes,
       );
-      final index = _items.indexWhere((i) => i.id == id);
-      if (index >= 0) {
-        _items[index] = updated;
-        notifyListeners();
+
+      // Store the last update result for UI feedback
+      _lastUpdateResult = response;
+
+      // If a split or merge occurred, we need to refresh the full collection
+      // because items may have been created or removed
+      if (response.isSplit || response.isMerged) {
+        await fetchCollection();
+        await fetchGroupedCollection();
+      } else {
+        // Simple update, just update in place
+        final index = _items.indexWhere((i) => i.id == id);
+        if (index >= 0) {
+          _items[index] = response.item;
+        }
       }
-      // Refresh stats if quantity changed
-      if (quantity != null) {
+
+      // Refresh stats if quantity or condition/printing changed
+      if (quantity != null || condition != null || printing != null) {
         await fetchStats();
       }
+
+      notifyListeners();
+      return response;
     } catch (e) {
       rethrow;
     }
+  }
+
+  /// Clear the last update result (call after showing feedback to user)
+  void clearLastUpdateResult() {
+    _lastUpdateResult = null;
+    notifyListeners();
   }
 
   Future<void> removeItem(int id) async {
@@ -267,6 +356,11 @@ class CollectionProvider extends ChangeNotifier {
 
   /// Initialize the provider by loading data
   Future<void> initialize() async {
-    await Future.wait([fetchCollection(), fetchStats(), fetchPriceStatus()]);
+    await Future.wait([
+      fetchCollection(),
+      fetchGroupedCollection(),
+      fetchStats(),
+      fetchPriceStatus(),
+    ]);
   }
 }

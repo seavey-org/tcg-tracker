@@ -336,18 +336,40 @@ func (s *JustTCGService) postBatchCards(lookups []CardLookup) (map[string][]mode
 	}
 
 	// Convert response to CardPrice map
-	// We need to match results back to our lookups
+	// Match results back to lookups by name+set (NOT by index - API may return in different order)
 	results := make(map[string][]models.CardPrice)
-	for i, card := range apiResp.Data {
+
+	// Build lookup index by name+set for proper matching
+	lookupByNameSet := make(map[string]CardLookup)
+	lookupByName := make(map[string]CardLookup)
+	for _, lookup := range lookups {
+		key := strings.ToLower(lookup.Name + "|" + lookup.Set)
+		lookupByNameSet[key] = lookup
+		// Also index by name alone as fallback
+		lookupByName[strings.ToLower(lookup.Name)] = lookup
+	}
+
+	for _, card := range apiResp.Data {
 		prices := s.convertVariantsToPrices(card.Variants)
-		if len(prices) > 0 {
-			// Use lookup's CardID if available, otherwise use response card name
-			key := card.Name
-			if i < len(lookups) && lookups[i].CardID != "" {
-				key = lookups[i].CardID
-			}
-			results[key] = prices
+		if len(prices) == 0 {
+			continue
 		}
+
+		// Try to match by name+set first (most reliable)
+		key := strings.ToLower(card.Name + "|" + card.Set)
+		if lookup, ok := lookupByNameSet[key]; ok && lookup.CardID != "" {
+			results[lookup.CardID] = prices
+			continue
+		}
+
+		// Fallback to name-only match
+		if lookup, ok := lookupByName[strings.ToLower(card.Name)]; ok && lookup.CardID != "" {
+			results[lookup.CardID] = prices
+			continue
+		}
+
+		// Last resort: use the card name as key
+		results[card.Name] = prices
 	}
 
 	log.Printf("JustTCG: batch fetched %d cards, %d with prices (remaining: %d daily)",

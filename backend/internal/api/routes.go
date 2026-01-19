@@ -73,6 +73,7 @@ func SetupRouter(scryfallService *services.ScryfallService, pokemonService *serv
 		{
 			// Public routes (read-only)
 			collection.GET("", collectionHandler.GetCollection)
+			collection.GET("/grouped", collectionHandler.GetGroupedCollection)
 			collection.GET("/stats", collectionHandler.GetStats)
 
 			// Protected routes (require admin key)

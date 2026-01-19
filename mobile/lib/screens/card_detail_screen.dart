@@ -3,6 +3,7 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:provider/provider.dart';
 import '../models/card.dart';
 import '../models/collection_item.dart';
+import '../models/grouped_collection.dart';
 import '../providers/collection_provider.dart';
 import '../services/api_service.dart';
 import '../services/auth_service.dart';
@@ -11,19 +12,25 @@ import '../widgets/admin_key_dialog.dart';
 
 class CardDetailScreen extends StatefulWidget {
   final CollectionItem? collectionItem;
+  final GroupedCollectionItem? groupedItem;
   final CardModel? card;
 
-  const CardDetailScreen({super.key, this.collectionItem, this.card})
-    : assert(
-        collectionItem != null || card != null,
-        'Either collectionItem or card must be provided',
-      );
+  const CardDetailScreen({
+    super.key,
+    this.collectionItem,
+    this.groupedItem,
+    this.card,
+  }) : assert(
+         collectionItem != null || groupedItem != null || card != null,
+         'Either collectionItem, groupedItem, or card must be provided',
+       );
 
   @override
   State<CardDetailScreen> createState() => _CardDetailScreenState();
 }
 
-class _CardDetailScreenState extends State<CardDetailScreen> {
+class _CardDetailScreenState extends State<CardDetailScreen>
+    with SingleTickerProviderStateMixin {
   late int _quantity;
   late String _condition;
   late PrintingType _printing;
@@ -31,8 +38,13 @@ class _CardDetailScreenState extends State<CardDetailScreen> {
   bool _priceRefreshing = false;
   bool _showScannedImage = false;
 
-  CardModel get _card => widget.collectionItem?.card ?? widget.card!;
+  // For grouped item editing
+  TabController? _tabController;
+
+  CardModel get _card =>
+      widget.collectionItem?.card ?? widget.groupedItem?.card ?? widget.card!;
   bool get _isCollectionItem => widget.collectionItem != null;
+  bool get _isGroupedItem => widget.groupedItem != null;
   bool get _hasScannedImage => widget.collectionItem?.scannedImagePath != null;
 
   // Use unified condition codes from constants
@@ -77,12 +89,28 @@ class _CardDetailScreenState extends State<CardDetailScreen> {
     _quantity = widget.collectionItem?.quantity ?? 1;
     _condition = widget.collectionItem?.condition ?? 'NM';
     _printing = widget.collectionItem?.printing ?? PrintingType.normal;
+
+    // Initialize tab controller for grouped items
+    if (_isGroupedItem) {
+      _tabController = TabController(length: 3, vsync: this);
+    }
+  }
+
+  @override
+  void dispose() {
+    _tabController?.dispose();
+    super.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
     final mediaQuery = MediaQuery.of(context);
     final isWide = mediaQuery.size.width > 600;
+
+    // For grouped items, use a different layout with tabs
+    if (_isGroupedItem) {
+      return _buildGroupedItemScreen(context, isWide);
+    }
 
     return Scaffold(
       appBar: AppBar(
@@ -100,6 +128,502 @@ class _CardDetailScreenState extends State<CardDetailScreen> {
         child: isWide ? _buildWideLayout(context) : _buildNarrowLayout(context),
       ),
     );
+  }
+
+  Widget _buildGroupedItemScreen(BuildContext context, bool isWide) {
+    final theme = Theme.of(context);
+    final colorScheme = theme.colorScheme;
+    final grouped = widget.groupedItem!;
+
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(_card.name),
+        bottom: TabBar(
+          controller: _tabController,
+          tabs: [
+            Tab(
+              icon: const Icon(Icons.layers),
+              text: 'Variants (${grouped.variants.length})',
+            ),
+            Tab(
+              icon: const Icon(Icons.camera_alt),
+              text: 'Scans (${grouped.scannedCount})',
+            ),
+            Tab(
+              icon: const Icon(Icons.list),
+              text: 'Items (${grouped.items.length})',
+            ),
+          ],
+        ),
+      ),
+      body: SafeArea(
+        child: Column(
+          children: [
+            // Card image and summary at top
+            Container(
+              padding: const EdgeInsets.all(16),
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  // Card thumbnail
+                  SizedBox(
+                    width: 100,
+                    child: AspectRatio(
+                      aspectRatio: 2.5 / 3.5,
+                      child: Card(
+                        clipBehavior: Clip.antiAlias,
+                        child: _card.imageUrl != null
+                            ? CachedNetworkImage(
+                                imageUrl: _card.imageUrl!,
+                                fit: BoxFit.cover,
+                              )
+                            : Container(
+                                color: colorScheme.surfaceContainerHighest,
+                                child: Icon(
+                                  Icons.image_not_supported,
+                                  color: colorScheme.onSurfaceVariant,
+                                ),
+                              ),
+                      ),
+                    ),
+                  ),
+                  const SizedBox(width: 16),
+                  // Summary info
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          _card.displaySet,
+                          style: theme.textTheme.bodyMedium?.copyWith(
+                            color: colorScheme.onSurfaceVariant,
+                          ),
+                        ),
+                        const SizedBox(height: 8),
+                        Row(
+                          children: [
+                            Text(
+                              'x${grouped.totalQuantity}',
+                              style: theme.textTheme.headlineSmall?.copyWith(
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                            const SizedBox(width: 16),
+                            Text(
+                              grouped.displayTotalValue,
+                              style: theme.textTheme.headlineSmall?.copyWith(
+                                fontWeight: FontWeight.bold,
+                                color: colorScheme.primary,
+                              ),
+                            ),
+                          ],
+                        ),
+                        const SizedBox(height: 4),
+                        Text(
+                          '${grouped.variants.length} variant${grouped.variants.length > 1 ? 's' : ''}, '
+                          '${grouped.scannedCount} scanned',
+                          style: theme.textTheme.bodySmall?.copyWith(
+                            color: colorScheme.onSurfaceVariant,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            const Divider(height: 1),
+            // Tab content
+            Expanded(
+              child: TabBarView(
+                controller: _tabController,
+                children: [
+                  _buildVariantsTab(context, grouped),
+                  _buildScansTab(context, grouped),
+                  _buildItemsTab(context, grouped),
+                ],
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget _buildVariantsTab(
+    BuildContext context,
+    GroupedCollectionItem grouped,
+  ) {
+    final theme = Theme.of(context);
+    final colorScheme = theme.colorScheme;
+
+    if (grouped.variants.isEmpty) {
+      return Center(
+        child: Text(
+          'No variants',
+          style: theme.textTheme.bodyMedium?.copyWith(
+            color: colorScheme.onSurfaceVariant,
+          ),
+        ),
+      );
+    }
+
+    return ListView.builder(
+      padding: const EdgeInsets.all(16),
+      itemCount: grouped.variants.length,
+      itemBuilder: (context, index) {
+        final variant = grouped.variants[index];
+        return Card(
+          margin: const EdgeInsets.only(bottom: 12),
+          child: Padding(
+            padding: const EdgeInsets.all(16),
+            child: Row(
+              children: [
+                // Printing badge
+                Container(
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 8,
+                    vertical: 4,
+                  ),
+                  decoration: BoxDecoration(
+                    gradient: variant.printing.usesFoilPricing
+                        ? LinearGradient(
+                            colors: [
+                              Colors.purple.shade300,
+                              Colors.blue.shade300,
+                            ],
+                          )
+                        : null,
+                    color: variant.printing.usesFoilPricing
+                        ? null
+                        : colorScheme.surfaceContainerHighest,
+                    borderRadius: BorderRadius.circular(8),
+                  ),
+                  child: Text(
+                    _printingDisplayName(variant.printing),
+                    style: theme.textTheme.labelMedium?.copyWith(
+                      color: variant.printing.usesFoilPricing
+                          ? Colors.white
+                          : colorScheme.onSurface,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+                const SizedBox(width: 12),
+                // Condition
+                Container(
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 8,
+                    vertical: 4,
+                  ),
+                  decoration: BoxDecoration(
+                    color: colorScheme.secondaryContainer,
+                    borderRadius: BorderRadius.circular(8),
+                  ),
+                  child: Text(
+                    variant.condition,
+                    style: theme.textTheme.labelMedium?.copyWith(
+                      color: colorScheme.onSecondaryContainer,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+                const Spacer(),
+                // Quantity and value
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.end,
+                  children: [
+                    Text(
+                      'x${variant.quantity}',
+                      style: theme.textTheme.titleMedium?.copyWith(
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    Text(
+                      '\$${variant.value.toStringAsFixed(2)}',
+                      style: theme.textTheme.bodyMedium?.copyWith(
+                        color: colorScheme.primary,
+                      ),
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          ),
+        );
+      },
+    );
+  }
+
+  Widget _buildScansTab(BuildContext context, GroupedCollectionItem grouped) {
+    final theme = Theme.of(context);
+    final colorScheme = theme.colorScheme;
+    final scannedItems = grouped.scannedItems;
+
+    if (scannedItems.isEmpty) {
+      return Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Icon(
+              Icons.camera_alt_outlined,
+              size: 64,
+              color: colorScheme.onSurfaceVariant.withValues(alpha: 0.5),
+            ),
+            const SizedBox(height: 16),
+            Text(
+              'No scanned cards',
+              style: theme.textTheme.titleMedium?.copyWith(
+                color: colorScheme.onSurfaceVariant,
+              ),
+            ),
+            const SizedBox(height: 8),
+            Text(
+              'Scanned cards will appear here for\ncondition verification',
+              style: theme.textTheme.bodySmall?.copyWith(
+                color: colorScheme.onSurfaceVariant,
+              ),
+              textAlign: TextAlign.center,
+            ),
+          ],
+        ),
+      );
+    }
+
+    return GridView.builder(
+      padding: const EdgeInsets.all(16),
+      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+        crossAxisCount: 2,
+        mainAxisSpacing: 12,
+        crossAxisSpacing: 12,
+        childAspectRatio: 2.5 / 3.5,
+      ),
+      itemCount: scannedItems.length,
+      itemBuilder: (context, index) {
+        final item = scannedItems[index];
+        return GestureDetector(
+          onTap: () => _editItem(item),
+          child: Card(
+            clipBehavior: Clip.antiAlias,
+            child: Stack(
+              fit: StackFit.expand,
+              children: [
+                FutureBuilder<String>(
+                  future: ApiService().getServerUrl(),
+                  builder: (context, snapshot) {
+                    if (!snapshot.hasData) {
+                      return Container(
+                        color: colorScheme.surfaceContainerHighest,
+                        child: const Center(child: CircularProgressIndicator()),
+                      );
+                    }
+                    final imageUrl =
+                        '${snapshot.data}/images/scanned/${item.scannedImagePath}';
+                    return CachedNetworkImage(
+                      imageUrl: imageUrl,
+                      fit: BoxFit.cover,
+                      placeholder: (context, url) => Container(
+                        color: colorScheme.surfaceContainerHighest,
+                        child: const Center(child: CircularProgressIndicator()),
+                      ),
+                      errorWidget: (context, url, error) => Container(
+                        color: colorScheme.surfaceContainerHighest,
+                        child: Icon(
+                          Icons.broken_image,
+                          color: colorScheme.onSurfaceVariant,
+                        ),
+                      ),
+                    );
+                  },
+                ),
+                // Overlay with condition/printing info
+                Positioned(
+                  bottom: 0,
+                  left: 0,
+                  right: 0,
+                  child: Container(
+                    padding: const EdgeInsets.all(8),
+                    decoration: BoxDecoration(
+                      gradient: LinearGradient(
+                        begin: Alignment.bottomCenter,
+                        end: Alignment.topCenter,
+                        colors: [
+                          Colors.black.withValues(alpha: 0.8),
+                          Colors.transparent,
+                        ],
+                      ),
+                    ),
+                    child: Row(
+                      children: [
+                        Text(
+                          item.condition,
+                          style: theme.textTheme.labelSmall?.copyWith(
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        const Spacer(),
+                        if (item.printing != PrintingType.normal)
+                          Text(
+                            _printingBadgeLabel(item.printing),
+                            style: theme.textTheme.labelSmall?.copyWith(
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                      ],
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        );
+      },
+    );
+  }
+
+  Widget _buildItemsTab(BuildContext context, GroupedCollectionItem grouped) {
+    final theme = Theme.of(context);
+    final colorScheme = theme.colorScheme;
+
+    if (grouped.items.isEmpty) {
+      return Center(
+        child: Text(
+          'No items',
+          style: theme.textTheme.bodyMedium?.copyWith(
+            color: colorScheme.onSurfaceVariant,
+          ),
+        ),
+      );
+    }
+
+    return ListView.builder(
+      padding: const EdgeInsets.all(16),
+      itemCount: grouped.items.length,
+      itemBuilder: (context, index) {
+        final item = grouped.items[index];
+        final isScanned = item.scannedImagePath != null;
+
+        return Card(
+          margin: const EdgeInsets.only(bottom: 12),
+          child: InkWell(
+            onTap: () => _editItem(item),
+            child: Padding(
+              padding: const EdgeInsets.all(16),
+              child: Row(
+                children: [
+                  // Scanned indicator
+                  if (isScanned)
+                    Container(
+                      padding: const EdgeInsets.all(4),
+                      decoration: BoxDecoration(
+                        color: Colors.green.shade100,
+                        borderRadius: BorderRadius.circular(4),
+                      ),
+                      child: Icon(
+                        Icons.camera_alt,
+                        size: 16,
+                        color: Colors.green.shade700,
+                      ),
+                    )
+                  else
+                    Container(
+                      padding: const EdgeInsets.all(4),
+                      decoration: BoxDecoration(
+                        color: colorScheme.surfaceContainerHighest,
+                        borderRadius: BorderRadius.circular(4),
+                      ),
+                      child: Icon(
+                        Icons.inventory_2,
+                        size: 16,
+                        color: colorScheme.onSurfaceVariant,
+                      ),
+                    ),
+                  const SizedBox(width: 12),
+                  // Item details
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Row(
+                          children: [
+                            Text(
+                              _printingDisplayName(item.printing),
+                              style: theme.textTheme.bodyMedium?.copyWith(
+                                fontWeight: FontWeight.w600,
+                              ),
+                            ),
+                            const SizedBox(width: 8),
+                            Container(
+                              padding: const EdgeInsets.symmetric(
+                                horizontal: 6,
+                                vertical: 2,
+                              ),
+                              decoration: BoxDecoration(
+                                color: colorScheme.secondaryContainer,
+                                borderRadius: BorderRadius.circular(4),
+                              ),
+                              child: Text(
+                                item.condition,
+                                style: theme.textTheme.labelSmall?.copyWith(
+                                  color: colorScheme.onSecondaryContainer,
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                        const SizedBox(height: 4),
+                        Text(
+                          'Qty: ${item.quantity}${isScanned ? ' (scanned)' : ''}',
+                          style: theme.textTheme.bodySmall?.copyWith(
+                            color: colorScheme.onSurfaceVariant,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  // Price and edit
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.end,
+                    children: [
+                      Text(
+                        item.displayTotalValue,
+                        style: theme.textTheme.titleSmall?.copyWith(
+                          fontWeight: FontWeight.bold,
+                          color: colorScheme.primary,
+                        ),
+                      ),
+                      const SizedBox(height: 4),
+                      Icon(
+                        Icons.edit,
+                        size: 16,
+                        color: colorScheme.onSurfaceVariant,
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            ),
+          ),
+        );
+      },
+    );
+  }
+
+  void _editItem(CollectionItem item) {
+    // Navigate to edit this specific item
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => CardDetailScreen(collectionItem: item),
+      ),
+    ).then((_) {
+      // Refresh the grouped collection when we return
+      if (mounted) {
+        context.read<CollectionProvider>().fetchGroupedCollection();
+      }
+    });
   }
 
   Widget _buildWideLayout(BuildContext context) {
@@ -542,7 +1066,7 @@ class _CardDetailScreenState extends State<CardDetailScreen> {
 
         // Printing type
         DropdownButtonFormField<PrintingType>(
-          value: _printing,
+          initialValue: _printing,
           decoration: InputDecoration(
             labelText: 'Printing',
             border: OutlineInputBorder(borderRadius: BorderRadius.circular(8)),
@@ -634,7 +1158,7 @@ class _CardDetailScreenState extends State<CardDetailScreen> {
 
         // Printing type
         DropdownButtonFormField<PrintingType>(
-          value: _printing,
+          initialValue: _printing,
           decoration: InputDecoration(
             labelText: 'Printing',
             border: OutlineInputBorder(borderRadius: BorderRadius.circular(8)),
@@ -674,18 +1198,26 @@ class _CardDetailScreenState extends State<CardDetailScreen> {
     setState(() => _loading = true);
 
     try {
-      await provider.updateItem(
+      final response = await provider.updateItem(
         widget.collectionItem!.id,
         quantity: _quantity,
         condition: _condition,
         printing: _printing,
       );
       if (!mounted) return;
+
+      // Show appropriate message based on operation type
+      String message;
+      if (response.isSplit) {
+        message = response.message ?? 'Card split into separate entries';
+      } else if (response.isMerged) {
+        message = response.message ?? 'Card merged with existing entry';
+      } else {
+        message = 'Card updated';
+      }
+
       messenger.showSnackBar(
-        const SnackBar(
-          content: Text('Card updated'),
-          behavior: SnackBarBehavior.floating,
-        ),
+        SnackBar(content: Text(message), behavior: SnackBarBehavior.floating),
       );
       navigator.pop();
     } on AuthRequiredException {

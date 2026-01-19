@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import '../models/grouped_collection.dart';
 import '../providers/collection_provider.dart';
 import '../utils/grid_utils.dart';
 import '../widgets/collection_card.dart';
@@ -19,12 +20,12 @@ class _CollectionScreenState extends State<CollectionScreen> {
   @override
   void initState() {
     super.initState();
-    // Fetch collection on first load
+    // Fetch grouped collection on first load
     WidgetsBinding.instance.addPostFrameCallback((_) {
       if (!mounted) return;
       final provider = context.read<CollectionProvider>();
-      if (provider.allItems.isEmpty && !provider.loading) {
-        provider.fetchCollection();
+      if (provider.allGroupedItems.isEmpty && !provider.loading) {
+        provider.fetchGroupedCollection();
       }
     });
   }
@@ -127,11 +128,11 @@ class _CollectionScreenState extends State<CollectionScreen> {
   }
 
   Widget _buildContent(BuildContext context, CollectionProvider provider) {
-    if (provider.loading && provider.allItems.isEmpty) {
+    if (provider.loading && provider.allGroupedItems.isEmpty) {
       return const Center(child: CircularProgressIndicator());
     }
 
-    if (provider.error != null && provider.allItems.isEmpty) {
+    if (provider.error != null && provider.allGroupedItems.isEmpty) {
       return Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -154,7 +155,7 @@ class _CollectionScreenState extends State<CollectionScreen> {
             ),
             const SizedBox(height: 16),
             FilledButton(
-              onPressed: () => provider.fetchCollection(),
+              onPressed: () => provider.fetchGroupedCollection(),
               child: const Text('Retry'),
             ),
           ],
@@ -162,13 +163,13 @@ class _CollectionScreenState extends State<CollectionScreen> {
       );
     }
 
-    if (provider.items.isEmpty) {
+    if (provider.groupedItems.isEmpty) {
       return _buildEmptyState(context);
     }
 
     return RefreshIndicator(
       onRefresh: () async {
-        await provider.fetchCollection();
+        await provider.fetchGroupedCollection();
         await provider.fetchStats();
       },
       child: LayoutBuilder(
@@ -187,12 +188,12 @@ class _CollectionScreenState extends State<CollectionScreen> {
               crossAxisSpacing: 12,
               childAspectRatio: childAspectRatio,
             ),
-            itemCount: provider.items.length,
+            itemCount: provider.groupedItems.length,
             itemBuilder: (context, index) {
-              final item = provider.items[index];
+              final item = provider.groupedItems[index];
               return CollectionCard(
-                key: ValueKey(item.id),
-                collectionItem: item,
+                key: ValueKey(item.card.id),
+                groupedItem: item,
                 onTap: () => _openCardDetail(context, item),
               );
             },
@@ -243,11 +244,11 @@ class _CollectionScreenState extends State<CollectionScreen> {
     );
   }
 
-  void _openCardDetail(BuildContext context, dynamic item) {
+  void _openCardDetail(BuildContext context, GroupedCollectionItem item) {
     Navigator.push(
       context,
       MaterialPageRoute(
-        builder: (context) => CardDetailScreen(collectionItem: item),
+        builder: (context) => CardDetailScreen(groupedItem: item),
       ),
     );
   }

@@ -11,19 +11,36 @@ const props = defineProps({
   isCollectionItem: {
     type: Boolean,
     default: false
+  },
+  // If true, item is a grouped collection item with variants, items array, etc.
+  isGrouped: {
+    type: Boolean,
+    default: false
   }
 })
 
 const emit = defineEmits(['close', 'add', 'update', 'remove', 'priceUpdated'])
 
+// The card data
 const card = computed(() => props.item.card || props.item)
+
+// For non-grouped items or adding new cards
 const quantity = ref(props.item.quantity || 1)
 const condition = ref(props.item.condition || 'NM')
 const printing = ref(props.item.printing || 'Normal')
+
+// For editing individual items from grouped view
+const editingItem = ref(null)
+const editQuantity = ref(1)
+const editCondition = ref('NM')
+const editPrinting = ref('Normal')
+
+// UI state
 const refreshingPrice = ref(false)
 const priceError = ref(null)
 const priceMessage = ref(null)
 const showScannedImage = ref(false)
+const activeTab = ref('variants') // 'variants' | 'scans' | 'items'
 
 const printingOptions = [
   { value: 'Normal', label: 'Normal' },
@@ -32,12 +49,6 @@ const printingOptions = [
   { value: 'Reverse Holofoil', label: 'Reverse Holo' },
   { value: 'Unlimited', label: 'Unlimited' }
 ]
-
-const hasScannedImage = computed(() => props.item.scanned_image_path)
-const scannedImageUrl = computed(() => {
-  if (!hasScannedImage.value) return null
-  return `/images/scanned/${props.item.scanned_image_path}`
-})
 
 const conditions = [
   { value: 'M', label: 'Mint' },
@@ -48,11 +59,79 @@ const conditions = [
   { value: 'D', label: 'Damaged' }
 ]
 
+// Computed for grouped items
+const totalQuantity = computed(() => props.isGrouped ? props.item.total_quantity : props.item.quantity)
+const totalValue = computed(() => props.isGrouped ? props.item.total_value : null)
+const scannedCount = computed(() => props.isGrouped ? props.item.scanned_count : (props.item.scanned_image_path ? 1 : 0))
+const variants = computed(() => props.isGrouped ? props.item.variants || [] : [])
+const items = computed(() => props.isGrouped ? props.item.items || [] : [])
+
+// Get all scanned items
+const scannedItems = computed(() => {
+  if (!props.isGrouped) {
+    return props.item.scanned_image_path ? [props.item] : []
+  }
+  return items.value.filter(i => i.scanned_image_path)
+})
+
+// For non-grouped single items
+const hasScannedImage = computed(() => !props.isGrouped && props.item.scanned_image_path)
+const scannedImageUrl = computed(() => {
+  if (!hasScannedImage.value) return null
+  return `/images/scanned/${props.item.scanned_image_path}`
+})
+
 const isPriceStale = computed(() => checkPriceStale(card.value))
-
 const priceAge = computed(() => formatTimeAgo(card.value.price_updated_at))
-
 const isPokemon = computed(() => card.value.game === 'pokemon')
+
+// Helper to get condition label
+function getConditionLabel(value) {
+  const c = conditions.find(c => c.value === value)
+  return c ? c.label : value
+}
+
+// Helper to get printing label
+function getPrintingLabel(value) {
+  const p = printingOptions.find(p => p.value === value)
+  return p ? p.label : value
+}
+
+// Start editing an individual item
+function startEditItem(item) {
+  editingItem.value = item
+  editQuantity.value = item.quantity
+  editCondition.value = item.condition
+  editPrinting.value = item.printing
+}
+
+// Cancel editing
+function cancelEdit() {
+  editingItem.value = null
+}
+
+// Save edited item
+function saveEditItem() {
+  if (!editingItem.value) return
+  
+  emit('update', {
+    id: editingItem.value.id,
+    quantity: editQuantity.value,
+    condition: editCondition.value,
+    printing: editPrinting.value
+  })
+  editingItem.value = null
+}
+
+// Remove an individual item
+function removeItem(item) {
+  const msg = item.quantity > 1
+    ? `Remove all ${item.quantity} cards from this stack?`
+    : 'Remove this card from your collection?'
+  if (confirm(msg)) {
+    emit('remove', item.id)
+  }
+}
 
 const refreshPrice = async () => {
   if (!isPokemon.value) return
@@ -63,15 +142,9 @@ const refreshPrice = async () => {
 
   try {
     const result = await priceService.refreshCardPrice(card.value.id)
-    // Price refresh is now queued, not immediate
     if (result.queue_position) {
       priceMessage.value = `Queued for refresh (position ${result.queue_position})`
     } else if (result.card) {
-      // Backward compat: if card is returned, update it
-      card.value.price_usd = result.card.price_usd
-      card.value.price_foil_usd = result.card.price_foil_usd
-      card.value.price_updated_at = result.card.price_updated_at
-      card.value.price_source = result.card.price_source
       emit('priceUpdated', result.card)
     }
   } catch (err) {
@@ -118,10 +191,11 @@ const handleRemove = () => {
     aria-modal="true"
     :aria-labelledby="'card-title-' + card.id"
   >
-    <div class="bg-white dark:bg-gray-800 rounded-lg max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+    <div class="bg-white dark:bg-gray-800 rounded-lg max-w-4xl w-full max-h-[90vh] overflow-y-auto">
       <div class="flex flex-col md:flex-row">
-        <div class="md:w-1/2 p-4">
-          <!-- Image toggle for scanned images -->
+        <!-- Left side: Card image -->
+        <div class="md:w-2/5 p-4">
+          <!-- Image toggle for single scanned images (non-grouped) -->
           <div v-if="hasScannedImage" class="flex gap-2 mb-3">
             <button
               @click="showScannedImage = false"
@@ -144,11 +218,20 @@ const handleRemove = () => {
             class="w-full rounded-lg shadow"
           />
         </div>
-        <div class="md:w-1/2 p-6">
+
+        <!-- Right side: Details -->
+        <div class="md:w-3/5 p-6">
+          <!-- Header -->
           <div class="flex justify-between items-start mb-4">
             <div>
               <h2 :id="'card-title-' + card.id" class="text-2xl font-bold text-gray-800 dark:text-white">{{ card.name }}</h2>
               <p class="text-gray-500 dark:text-gray-400">{{ card.set_name }}</p>
+              <!-- Summary for grouped items -->
+              <div v-if="isGrouped && isCollectionItem" class="flex gap-4 mt-2 text-sm">
+                <span class="text-blue-600 dark:text-blue-400 font-medium">{{ totalQuantity }} cards</span>
+                <span class="text-green-600 dark:text-green-400 font-medium">{{ formatPrice(totalValue) }}</span>
+                <span v-if="scannedCount > 0" class="text-purple-600 dark:text-purple-400">{{ scannedCount }} scans</span>
+              </div>
             </div>
             <button
               @click="emit('close')"
@@ -161,7 +244,8 @@ const handleRemove = () => {
             </button>
           </div>
 
-          <div class="space-y-3 mb-6">
+          <!-- Card info (always shown) -->
+          <div class="space-y-2 mb-4 text-sm">
             <div class="flex justify-between">
               <span class="text-gray-600 dark:text-gray-400">Set:</span>
               <span class="font-medium text-gray-800 dark:text-white">{{ card.set_name }} ({{ card.set_code }})</span>
@@ -170,22 +254,15 @@ const handleRemove = () => {
               <span class="text-gray-600 dark:text-gray-400">Number:</span>
               <span class="font-medium text-gray-800 dark:text-white">{{ card.card_number }}</span>
             </div>
-            <div class="flex justify-between">
-              <span class="text-gray-600 dark:text-gray-400">Rarity:</span>
-              <span class="font-medium capitalize text-gray-800 dark:text-white">{{ card.rarity }}</span>
-            </div>
             <div class="flex justify-between items-center">
-              <span class="text-gray-600 dark:text-gray-400">Price:</span>
+              <span class="text-gray-600 dark:text-gray-400">Price (NM):</span>
               <div class="flex items-center gap-2">
                 <span class="font-medium text-green-600 dark:text-green-400">{{ formatPrice(card.price_usd) }}</span>
+                <span v-if="card.price_foil_usd" class="text-yellow-600 dark:text-yellow-400">/ {{ formatPrice(card.price_foil_usd) }} foil</span>
                 <span v-if="priceAge" class="text-xs" :class="isPriceStale ? 'text-orange-500' : 'text-gray-400'">
                   ({{ priceAge }})
                 </span>
               </div>
-            </div>
-            <div v-if="card.price_foil_usd" class="flex justify-between">
-              <span class="text-gray-600 dark:text-gray-400">Foil Price:</span>
-              <span class="font-medium text-yellow-600 dark:text-yellow-400">{{ formatPrice(card.price_foil_usd) }}</span>
             </div>
             <div v-if="isPokemon" class="flex justify-between items-center">
               <span class="text-gray-600 dark:text-gray-400">Price Status:</span>
@@ -203,20 +280,194 @@ const handleRemove = () => {
                   :disabled="refreshingPrice"
                   class="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 text-sm disabled:opacity-50"
                 >
-                  <span v-if="refreshingPrice">Refreshing...</span>
-                  <span v-else>Refresh</span>
+                  {{ refreshingPrice ? 'Refreshing...' : 'Refresh' }}
                 </button>
               </div>
             </div>
-            <div v-if="priceMessage" class="text-blue-500 text-sm">
-              {{ priceMessage }}
+            <div v-if="priceMessage" class="text-blue-500 text-sm">{{ priceMessage }}</div>
+            <div v-if="priceError" class="text-red-500 text-sm">{{ priceError }}</div>
+          </div>
+
+          <!-- GROUPED VIEW: Tabs for variants/scans/items -->
+          <div v-if="isGrouped && isCollectionItem" class="border-t dark:border-gray-700 pt-4">
+            <!-- Tab buttons -->
+            <div class="flex gap-2 mb-4">
+              <button
+                @click="activeTab = 'variants'"
+                class="px-4 py-2 text-sm rounded-lg transition"
+                :class="activeTab === 'variants' ? 'bg-blue-600 text-white' : 'bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300'"
+              >
+                Variants ({{ variants.length }})
+              </button>
+              <button
+                v-if="scannedCount > 0"
+                @click="activeTab = 'scans'"
+                class="px-4 py-2 text-sm rounded-lg transition"
+                :class="activeTab === 'scans' ? 'bg-blue-600 text-white' : 'bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300'"
+              >
+                Scans ({{ scannedCount }})
+              </button>
+              <button
+                @click="activeTab = 'items'"
+                class="px-4 py-2 text-sm rounded-lg transition"
+                :class="activeTab === 'items' ? 'bg-blue-600 text-white' : 'bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300'"
+              >
+                Edit Items ({{ items.length }})
+              </button>
             </div>
-            <div v-if="priceError" class="text-red-500 text-sm">
-              {{ priceError }}
+
+            <!-- Variants tab -->
+            <div v-if="activeTab === 'variants'" class="space-y-2">
+              <div
+                v-for="variant in variants"
+                :key="`${variant.printing}-${variant.condition}`"
+                class="flex justify-between items-center p-3 bg-gray-50 dark:bg-gray-700 rounded-lg"
+              >
+                <div class="flex items-center gap-3">
+                  <span
+                    v-if="variant.printing !== 'Normal'"
+                    class="text-xs font-bold px-2 py-1 rounded"
+                    :class="{
+                      'bg-yellow-400 text-yellow-900': variant.printing === 'Foil',
+                      'bg-amber-600 text-white': variant.printing === '1st Edition',
+                      'bg-purple-500 text-white': variant.printing === 'Reverse Holofoil',
+                      'bg-gray-500 text-white': variant.printing === 'Unlimited'
+                    }"
+                  >
+                    {{ getPrintingLabel(variant.printing) }}
+                  </span>
+                  <span class="text-gray-800 dark:text-white">{{ getConditionLabel(variant.condition) }}</span>
+                  <span class="text-gray-500 dark:text-gray-400">x{{ variant.quantity }}</span>
+                  <span v-if="variant.has_scans" class="text-purple-500 text-xs">{{ variant.scanned_qty }} scans</span>
+                </div>
+                <span class="font-medium text-green-600 dark:text-green-400">{{ formatPrice(variant.value) }}</span>
+              </div>
+            </div>
+
+            <!-- Scans tab -->
+            <div v-if="activeTab === 'scans'" class="grid grid-cols-3 gap-3">
+              <div
+                v-for="(scanItem, idx) in scannedItems"
+                :key="scanItem.id"
+                class="relative cursor-pointer group"
+                @click="startEditItem(scanItem)"
+              >
+                <img
+                  :src="`/images/scanned/${scanItem.scanned_image_path}`"
+                  :alt="`Scan ${idx + 1}`"
+                  class="w-full aspect-[2.5/3.5] object-cover rounded-lg shadow group-hover:ring-2 group-hover:ring-blue-500"
+                />
+                <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-60 text-white text-xs p-1 rounded-b-lg">
+                  {{ scanItem.printing }} / {{ scanItem.condition }}
+                </div>
+              </div>
+            </div>
+
+            <!-- Items tab (edit individual items) -->
+            <div v-if="activeTab === 'items'" class="space-y-2">
+              <div
+                v-for="collectionItem in items"
+                :key="collectionItem.id"
+                class="p-3 bg-gray-50 dark:bg-gray-700 rounded-lg"
+              >
+                <!-- Editing this item -->
+                <div v-if="editingItem?.id === collectionItem.id" class="space-y-3">
+                  <div class="text-sm font-medium text-blue-600 dark:text-blue-400 mb-2">
+                    Editing {{ collectionItem.scanned_image_path ? 'scanned card' : `stack of ${collectionItem.quantity}` }}
+                    <span v-if="!collectionItem.scanned_image_path && collectionItem.quantity > 1" class="text-orange-500 block mt-1">
+                      Note: Changing condition/printing will split 1 card from this stack
+                    </span>
+                  </div>
+                  <div class="grid grid-cols-3 gap-2">
+                    <div>
+                      <label class="text-xs text-gray-500">Quantity</label>
+                      <input
+                        v-model.number="editQuantity"
+                        type="number"
+                        min="1"
+                        class="w-full border dark:border-gray-600 rounded px-2 py-1 text-sm bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
+                      />
+                    </div>
+                    <div>
+                      <label class="text-xs text-gray-500">Condition</label>
+                      <select
+                        v-model="editCondition"
+                        class="w-full border dark:border-gray-600 rounded px-2 py-1 text-sm bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
+                      >
+                        <option v-for="c in conditions" :key="c.value" :value="c.value">{{ c.label }}</option>
+                      </select>
+                    </div>
+                    <div>
+                      <label class="text-xs text-gray-500">Printing</label>
+                      <select
+                        v-model="editPrinting"
+                        class="w-full border dark:border-gray-600 rounded px-2 py-1 text-sm bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
+                      >
+                        <option v-for="p in printingOptions" :key="p.value" :value="p.value">{{ p.label }}</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="flex gap-2">
+                    <button
+                      @click="saveEditItem"
+                      class="flex-1 bg-blue-600 text-white py-1 px-3 rounded text-sm hover:bg-blue-700"
+                    >
+                      Save
+                    </button>
+                    <button
+                      @click="cancelEdit"
+                      class="px-3 py-1 rounded text-sm bg-gray-200 dark:bg-gray-600 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-500"
+                    >
+                      Cancel
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Display mode -->
+                <div v-else class="flex justify-between items-center">
+                  <div class="flex items-center gap-3">
+                    <span v-if="collectionItem.scanned_image_path" class="text-purple-500">
+                      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 13a3 3 0 11-6 0 3 3 0 016 0z" />
+                      </svg>
+                    </span>
+                    <span
+                      v-if="collectionItem.printing !== 'Normal'"
+                      class="text-xs font-bold px-2 py-0.5 rounded"
+                      :class="{
+                        'bg-yellow-400 text-yellow-900': collectionItem.printing === 'Foil',
+                        'bg-amber-600 text-white': collectionItem.printing === '1st Edition',
+                        'bg-purple-500 text-white': collectionItem.printing === 'Reverse Holofoil',
+                        'bg-gray-500 text-white': collectionItem.printing === 'Unlimited'
+                      }"
+                    >
+                      {{ getPrintingLabel(collectionItem.printing) }}
+                    </span>
+                    <span class="text-gray-800 dark:text-white">{{ getConditionLabel(collectionItem.condition) }}</span>
+                    <span class="text-gray-500 dark:text-gray-400">x{{ collectionItem.quantity }}</span>
+                  </div>
+                  <div class="flex gap-2">
+                    <button
+                      @click="startEditItem(collectionItem)"
+                      class="text-blue-600 dark:text-blue-400 hover:text-blue-800 text-sm"
+                    >
+                      Edit
+                    </button>
+                    <button
+                      @click="removeItem(collectionItem)"
+                      class="text-red-600 dark:text-red-400 hover:text-red-800 text-sm"
+                    >
+                      Remove
+                    </button>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
 
-          <div class="border-t dark:border-gray-700 pt-4 space-y-4">
+          <!-- NON-GROUPED VIEW: Simple edit form (for search results or single items) -->
+          <div v-else class="border-t dark:border-gray-700 pt-4 space-y-4">
             <div>
               <label :for="'quantity-' + card.id" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Quantity</label>
               <input
@@ -225,49 +476,44 @@ const handleRemove = () => {
                 type="number"
                 min="1"
                 class="w-full border dark:border-gray-600 rounded-lg px-3 py-2 bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
-                aria-describedby="quantity-help"
               />
             </div>
             <div>
               <label :for="'condition-' + card.id" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Condition</label>
               <select :id="'condition-' + card.id" v-model="condition" class="w-full border dark:border-gray-600 rounded-lg px-3 py-2 bg-white dark:bg-gray-700 text-gray-900 dark:text-white">
-                <option v-for="c in conditions" :key="c.value" :value="c.value">
-                  {{ c.label }}
-                </option>
+                <option v-for="c in conditions" :key="c.value" :value="c.value">{{ c.label }}</option>
               </select>
             </div>
             <div>
               <label :for="'printing-' + card.id" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Printing</label>
               <select :id="'printing-' + card.id" v-model="printing" class="w-full border dark:border-gray-600 rounded-lg px-3 py-2 bg-white dark:bg-gray-700 text-gray-900 dark:text-white">
-                <option v-for="p in printingOptions" :key="p.value" :value="p.value">
-                  {{ p.label }}
-                </option>
+                <option v-for="p in printingOptions" :key="p.value" :value="p.value">{{ p.label }}</option>
               </select>
             </div>
-          </div>
 
-          <div class="mt-6 flex gap-3">
-            <button
-              v-if="!isCollectionItem"
-              @click="handleAdd"
-              class="flex-1 bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition"
-            >
-              Add to Collection
-            </button>
-            <template v-else>
+            <div class="mt-6 flex gap-3">
               <button
-                @click="handleUpdate"
+                v-if="!isCollectionItem"
+                @click="handleAdd"
                 class="flex-1 bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition"
               >
-                Update
+                Add to Collection
               </button>
-              <button
-                @click="handleRemove"
-                class="bg-red-600 text-white py-2 px-4 rounded-lg hover:bg-red-700 transition"
-              >
-                Remove
-              </button>
-            </template>
+              <template v-else>
+                <button
+                  @click="handleUpdate"
+                  class="flex-1 bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition"
+                >
+                  Update
+                </button>
+                <button
+                  @click="handleRemove"
+                  class="bg-red-600 text-white py-2 px-4 rounded-lg hover:bg-red-700 transition"
+                >
+                  Remove
+                </button>
+              </template>
+            </div>
           </div>
         </div>
       </div>

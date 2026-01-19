@@ -3,25 +3,34 @@ import { collectionService, cardService } from '../services/api'
 
 export const useCollectionStore = defineStore('collection', {
   state: () => ({
-    items: [],
+    items: [],           // Raw collection items (for compatibility)
+    groupedItems: [],    // Collection items grouped by card_id
     stats: null,
     loading: false,
     error: null,
     searchResults: [],
     searchLoading: false,
-    actionLoading: false
+    actionLoading: false,
+    lastUpdateResult: null  // Stores last update operation info (split/merge/updated)
   }),
 
   getters: {
     totalCards: (state) => state.stats?.total_cards || 0,
     totalValue: (state) => state.stats?.total_value || 0,
     mtgCards: (state) => state.items.filter(i => i.card?.game === 'mtg'),
-    pokemonCards: (state) => state.items.filter(i => i.card?.game === 'pokemon')
+    pokemonCards: (state) => state.items.filter(i => i.card?.game === 'pokemon'),
+    // Grouped getters
+    mtgGrouped: (state) => state.groupedItems.filter(g => g.card?.game === 'mtg'),
+    pokemonGrouped: (state) => state.groupedItems.filter(g => g.card?.game === 'pokemon')
   },
 
   actions: {
     clearError() {
       this.error = null
+    },
+
+    clearLastUpdateResult() {
+      this.lastUpdateResult = null
     },
 
     async fetchCollection(game = null) {
@@ -36,12 +45,27 @@ export const useCollectionStore = defineStore('collection', {
       }
     },
 
+    /**
+     * Fetch collection grouped by card_id
+     * This is the primary method for displaying collection
+     */
+    async fetchGroupedCollection(game = null) {
+      this.loading = true
+      this.error = null
+      try {
+        this.groupedItems = await collectionService.getGrouped(game)
+      } catch (err) {
+        this.error = err.message
+      } finally {
+        this.loading = false
+      }
+    },
+
     async fetchStats() {
       try {
         this.stats = await collectionService.getStats()
       } catch (err) {
         console.error('Failed to fetch stats:', err)
-        // Set error state so UI can display the failure
         this.error = 'Failed to load collection statistics'
       }
     },
@@ -66,9 +90,8 @@ export const useCollectionStore = defineStore('collection', {
       this.error = null
       try {
         const item = await collectionService.add(cardId, options)
-        // Optimistic update: add to local state immediately
-        this.items.unshift(item)
-        // Fetch stats in background (don't await)
+        // Refresh grouped collection to reflect changes
+        await this.fetchGroupedCollection()
         this.fetchStats()
         return item
       } catch (err) {
@@ -79,19 +102,27 @@ export const useCollectionStore = defineStore('collection', {
       }
     },
 
+    /**
+     * Update a collection item
+     * The backend may split or merge items depending on the changes
+     * Returns { item, operation, message }
+     */
     async updateItem(id, updates) {
       this.actionLoading = true
       this.error = null
+      this.lastUpdateResult = null
       try {
-        const updatedItem = await collectionService.update(id, updates)
-        // Optimistic update: update in local state
-        const index = this.items.findIndex(i => i.id === id)
-        if (index !== -1) {
-          this.items[index] = updatedItem
+        const result = await collectionService.update(id, updates)
+        // Store the operation result for UI feedback
+        this.lastUpdateResult = {
+          operation: result.operation,
+          message: result.message,
+          item: result.item
         }
-        // Fetch stats in background (don't await)
+        // Refresh grouped collection to reflect changes (splits, merges, etc.)
+        await this.fetchGroupedCollection()
         this.fetchStats()
-        return updatedItem
+        return result
       } catch (err) {
         this.error = err.message
         throw err
@@ -103,21 +134,12 @@ export const useCollectionStore = defineStore('collection', {
     async removeItem(id) {
       this.actionLoading = true
       this.error = null
-      // Optimistic update: remove from local state immediately
-      const removedIndex = this.items.findIndex(i => i.id === id)
-      const removedItem = removedIndex !== -1 ? this.items[removedIndex] : null
-      if (removedIndex !== -1) {
-        this.items.splice(removedIndex, 1)
-      }
       try {
         await collectionService.remove(id)
-        // Fetch stats in background (don't await)
+        // Refresh grouped collection
+        await this.fetchGroupedCollection()
         this.fetchStats()
       } catch (err) {
-        // Rollback on error
-        if (removedItem && removedIndex !== -1) {
-          this.items.splice(removedIndex, 0, removedItem)
-        }
         this.error = err.message
         throw err
       } finally {
@@ -131,7 +153,7 @@ export const useCollectionStore = defineStore('collection', {
       try {
         const result = await collectionService.refreshPrices()
         // Refetch collection to get updated prices
-        await this.fetchCollection()
+        await this.fetchGroupedCollection()
         await this.fetchStats()
         return result
       } catch (err) {
