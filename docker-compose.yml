@@ -35,7 +35,7 @@ services:
     image: ghcr.io/codyseavey/tcg-tracker/frontend:${IMAGE_TAG:-latest}
     container_name: tcg-frontend
     ports:
-      - "3000:80"
+      - "3080:80"
     depends_on:
       - backend
     restart: always
