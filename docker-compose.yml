@@ -15,8 +15,9 @@ services:
   backend:
     image: ghcr.io/codyseavey/tcg-tracker/backend:${IMAGE_TAG:-latest}
     container_name: tcg-backend
-    ports:
-      - "8080:8080"
+    # Port 8080 exposed only within Docker network (frontend proxies to it)
+    expose:
+      - "8080"
     environment:
       - PORT=8080
       - DB_PATH=/app/data/tcg_tracker.db
@@ -43,8 +44,9 @@ services:
   identifier:
     image: ghcr.io/codyseavey/tcg-tracker/identifier:${IMAGE_TAG:-latest}
     container_name: tcg-identifier
-    ports:
-      - "8099:8099"
+    # Port 8099 exposed only within Docker network (backend calls it)
+    expose:
+      - "8099"
     environment:
       - HOST=0.0.0.0
       - PORT=8099
