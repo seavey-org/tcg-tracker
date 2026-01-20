@@ -168,6 +168,7 @@ Configure the server URL in settings to point to your backend IP.
 - `PUT /api/collection/:id` - Update collection item with smart split/merge (🔒)
 - `DELETE /api/collection/:id` - Remove from collection (🔒)
 - `GET /api/collection/stats` - Get collection statistics
+- `GET /api/collection/stats/history` - Get historical collection value snapshots (for charting)
 - `POST /api/collection/refresh-prices` - Immediately refresh prices for collection cards (🔒)
 
 ### Prices

@@ -115,6 +115,9 @@ Environment variables:
 | `OCRParser` | `internal/services/ocr_parser.go` | Parse OCR text to extract card details |
 | `ServerOCRService` | `internal/services/server_ocr.go` | Server-side OCR using identifier service (EasyOCR) |
 | `AdminKeyAuth` | `internal/middleware/auth.go` | Admin key authentication middleware |
+| `SnapshotService` | `internal/services/snapshot_service.go` | Daily collection value snapshots for historical tracking |
+| `ImageStorageService` | `internal/services/image_storage.go` | Store and retrieve scanned card images |
+| `TCGPlayerSyncService` | `internal/services/tcgplayer_sync.go` | Bulk sync TCGPlayerIDs from JustTCG for Pokemon cards |
 
 ### Identifier Service (Python)
 
@@ -155,6 +158,7 @@ Base URL: `http://localhost:8080/api`
 - `PUT /collection/:id` - Update collection item with smart split/merge (🔒 requires admin key)
 - `DELETE /collection/:id` - Remove from collection (🔒 requires admin key)
 - `GET /collection/stats` - Get collection statistics
+- `GET /collection/stats/history` - Get historical collection value snapshots (for charting)
 - `POST /collection/refresh-prices` - Immediately refresh prices for collection cards (up to 100 per batch) (🔒 requires admin key)
 
 ### Prices
