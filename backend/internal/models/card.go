@@ -36,8 +36,12 @@ type Card struct {
 // Fallback order:
 //  1. Exact match (condition + printing) in CardPrices
 //  2. NM price for the same printing (if condition is not NM)
-//  3. For foil variants (1st Ed, Reverse Holo, etc.): try standard Foil price first
-//  4. Cross-printing fallback: Foil->Normal or Normal->Foil (for holo-only cards)
+//  3. For foil variants (Reverse Holo): try standard Foil price first
+//  4. Cross-printing fallback:
+//     - Foil/ReverseHolo -> Normal (for holo-only cards)
+//     - Normal -> Unlimited (for WotC-era cards)
+//     - Unlimited -> Normal (for modern cards)
+//     - 1st Edition -> Unlimited -> Normal (WotC-era, different print run not foil)
 //  5. Base prices (PriceFoilUSD for foil variants, PriceUSD otherwise)
 //  6. Final cross-fallback: if foil has no price, try non-foil and vice versa
 func (c *Card) GetPrice(condition PriceCondition, printing PrintingType) float64 {
@@ -105,6 +109,34 @@ func (c *Card) GetPrice(condition PriceCondition, printing PrintingType) float64
 		}
 	} else if printing == PrintingUnlimited {
 		// Unlimited printing: try Normal as fallback (modern cards use Normal)
+		for _, p := range c.Prices {
+			if p.Condition == condition && p.Printing == PrintingNormal {
+				return p.PriceUSD
+			}
+		}
+		if condition != PriceConditionNM {
+			for _, p := range c.Prices {
+				if p.Condition == PriceConditionNM && p.Printing == PrintingNormal {
+					return p.PriceUSD
+				}
+			}
+		}
+	} else if printing == Printing1stEdition {
+		// 1st Edition printing: try Unlimited -> Normal as fallback
+		// 1st Edition is NOT a foil, it's a different WotC-era print run
+		for _, p := range c.Prices {
+			if p.Condition == condition && p.Printing == PrintingUnlimited {
+				return p.PriceUSD
+			}
+		}
+		if condition != PriceConditionNM {
+			for _, p := range c.Prices {
+				if p.Condition == PriceConditionNM && p.Printing == PrintingUnlimited {
+					return p.PriceUSD
+				}
+			}
+		}
+		// Then try Normal
 		for _, p := range c.Prices {
 			if p.Condition == condition && p.Printing == PrintingNormal {
 				return p.PriceUSD

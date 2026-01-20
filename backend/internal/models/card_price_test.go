@@ -88,7 +88,7 @@ func TestCardGetPrice(t *testing.T) {
 		{"MP normal", PriceConditionMP, PrintingNormal, 6.00},
 		{"HP normal fallback to base", PriceConditionHP, PrintingNormal, 10.00},            // Falls back to base price
 		{"DMG foil fallback to base", PriceConditionDMG, PrintingFoil, 20.00},              // Falls back to foil base price
-		{"NM 1st Edition fallback to foil", PriceConditionNM, Printing1stEdition, 20.00},   // No 1st ed price, IsFoilVariant=true
+		{"NM 1st Edition fallback to Normal", PriceConditionNM, Printing1stEdition, 10.00}, // No 1st ed price, falls back to Normal (not foil!)
 		{"NM Reverse Holo fallback to foil", PriceConditionNM, PrintingReverseHolo, 20.00}, // No reverse price, IsFoilVariant=true
 	}
 
@@ -111,7 +111,7 @@ func TestCardGetPriceWotCCard(t *testing.T) {
 	wotcCard := &Card{
 		ID:           "base5-57",
 		PriceUSD:     0.89,   // Base price from Unlimited
-		PriceFoilUSD: 100.00, // From 1st Edition (a foil variant)
+		PriceFoilUSD: 100.00, // Base foil price (1st Edition is NOT a foil variant)
 		Prices: []CardPrice{
 			{Condition: PriceConditionNM, Printing: PrintingUnlimited, PriceUSD: 0.89},
 			{Condition: PriceConditionLP, Printing: PrintingUnlimited, PriceUSD: 0.50},
@@ -141,6 +141,48 @@ func TestCardGetPriceWotCCard(t *testing.T) {
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
 			result := wotcCard.GetPrice(tt.condition, tt.printing)
+			if result != tt.expected {
+				t.Errorf("GetPrice(%s, %s) = %f, want %f", tt.condition, tt.printing, result, tt.expected)
+			}
+		})
+	}
+}
+
+// TestCardGetPrice1stEditionFallback tests the specific bug where 1st Edition
+// was incorrectly falling back to Foil prices instead of Unlimited/Normal.
+// This caused cards like Team Rocket Grimer to show $320 instead of $1.
+func TestCardGetPrice1stEditionFallback(t *testing.T) {
+	// Simulates Team Rocket Grimer: JustTCG has Normal ($0.68) and Foil ($160.25)
+	// but the user has marked their card as "1st Edition"
+	// 1st Edition should fall back to Normal/Unlimited, NOT Foil
+	card := &Card{
+		ID:           "base5-57",
+		PriceUSD:     0.68,   // Base NM Normal price
+		PriceFoilUSD: 160.25, // Base foil price (expensive holo version)
+		Prices: []CardPrice{
+			{Condition: PriceConditionNM, Printing: PrintingNormal, PriceUSD: 0.68},
+			{Condition: PriceConditionLP, Printing: PrintingNormal, PriceUSD: 0.50},
+			{Condition: PriceConditionNM, Printing: PrintingFoil, PriceUSD: 160.25},
+		},
+	}
+
+	tests := []struct {
+		name      string
+		condition PriceCondition
+		printing  PrintingType
+		expected  float64
+	}{
+		// 1st Edition should NOT use the Foil price!
+		{"NM 1st Edition should use Normal, not Foil", PriceConditionNM, Printing1stEdition, 0.68},
+		{"LP 1st Edition should use Normal, not Foil", PriceConditionLP, Printing1stEdition, 0.50},
+		{"HP 1st Edition should use NM Normal, not Foil", PriceConditionHP, Printing1stEdition, 0.68},
+		// Foil should still use Foil price
+		{"NM Foil uses Foil price", PriceConditionNM, PrintingFoil, 160.25},
+	}
+
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			result := card.GetPrice(tt.condition, tt.printing)
 			if result != tt.expected {
 				t.Errorf("GetPrice(%s, %s) = %f, want %f", tt.condition, tt.printing, result, tt.expected)
 			}

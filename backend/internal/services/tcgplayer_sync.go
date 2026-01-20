@@ -582,11 +582,13 @@ func convertToJustTCGSetID(ourSetName string) string {
 		"pop8":                       "pop-series-8-pokemon",
 		"pop9":                       "pop-series-9-pokemon",
 
-		// Trainer Kits (these may not have price data)
-		"tk1a":                  "ex-trainer-kit-latias-pokemon",
-		"ex-trainer-kit-latias": "ex-trainer-kit-latias-pokemon",
-		"tk1b":                  "ex-trainer-kit-latios-pokemon",
-		"ex-trainer-kit-latios": "ex-trainer-kit-latios-pokemon",
+		// EX Trainer Kits - JustTCG combines both halves into one set
+		"tk1a":                  "ex-trainer-kit-1-latias-latios-pokemon",
+		"tk1b":                  "ex-trainer-kit-1-latias-latios-pokemon",
+		"ex-trainer-kit-latias": "ex-trainer-kit-1-latias-latios-pokemon",
+		"ex-trainer-kit-latios": "ex-trainer-kit-1-latias-latios-pokemon",
+		"tk2a":                  "ex-trainer-kit-2-plusle-minun-pokemon",
+		"tk2b":                  "ex-trainer-kit-2-plusle-minun-pokemon",
 	}
 
 	// Check direct mapping first

@@ -38,9 +38,10 @@ func AllPrintingTypes() []PrintingType {
 	}
 }
 
-// IsFoilVariant returns true if this printing type is a foil/premium variant
+// IsFoilVariant returns true if this printing type is an actual foil/holographic variant.
+// 1st Edition is NOT a foil variant - it's a different print run of the same card.
 func (p PrintingType) IsFoilVariant() bool {
-	return p == PrintingFoil || p == Printing1stEdition || p == PrintingReverseHolo
+	return p == PrintingFoil || p == PrintingReverseHolo
 }
 
 // CardPrice stores condition and printing-specific prices for a card
