@@ -11,6 +11,7 @@ class CardModel {
   final String? imageUrl;
   final double? priceUsd;
   final double? priceFoilUsd;
+  final String? tcgplayerId;
 
   CardModel({
     required this.id,
@@ -23,6 +24,7 @@ class CardModel {
     this.imageUrl,
     this.priceUsd,
     this.priceFoilUsd,
+    this.tcgplayerId,
   });
 
   factory CardModel.fromJson(Map<String, dynamic> json) {
@@ -37,8 +39,14 @@ class CardModel {
       imageUrl: json['image_url'],
       priceUsd: (json['price_usd'] as num?)?.toDouble(),
       priceFoilUsd: (json['price_foil_usd'] as num?)?.toDouble(),
+      tcgplayerId: json['tcgplayer_id'],
     );
   }
+
+  /// Returns the TCGPlayer URL for this card, or null if no tcgplayerId
+  String? get tcgplayerUrl => tcgplayerId != null
+      ? 'https://www.tcgplayer.com/product/$tcgplayerId'
+      : null;
 
   String get displayPrice {
     if (priceUsd == null || priceUsd == 0) return 'N/A';

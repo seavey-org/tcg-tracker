@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:provider/provider.dart';
+import 'package:url_launcher/url_launcher.dart';
 import '../models/card.dart';
 import '../models/collection_item.dart';
 import '../models/grouped_collection.dart';
@@ -974,6 +975,23 @@ class _CardDetailScreenState extends State<CardDetailScreen>
             ),
           ],
         ),
+        // TCGPlayer link
+        if (_card.tcgplayerUrl != null) ...[
+          const SizedBox(height: 12),
+          OutlinedButton.icon(
+            onPressed: () async {
+              final url = Uri.parse(_card.tcgplayerUrl!);
+              if (await canLaunchUrl(url)) {
+                await launchUrl(url, mode: LaunchMode.externalApplication);
+              }
+            },
+            icon: const Icon(Icons.open_in_new, size: 18),
+            label: const Text('View on TCGPlayer'),
+            style: OutlinedButton.styleFrom(
+              minimumSize: const Size(double.infinity, 44),
+            ),
+          ),
+        ],
         // Total value for collection items with quantity > 1
         if (_isCollectionItem && _quantity > 1) ...[
           const SizedBox(height: 12),
