@@ -1,10 +1,14 @@
 <script setup>
-import { ref, onMounted, computed } from 'vue'
+import { ref, onMounted, computed, watch } from 'vue'
+import { useRoute, useRouter } from 'vue-router'
 import { useCollectionStore } from '../stores/collection'
 import CardGrid from '../components/CardGrid.vue'
 import CardDetail from '../components/CardDetail.vue'
+import CollectionFilters from '../components/CollectionFilters.vue'
 
 const store = useCollectionStore()
+const route = useRoute()
+const router = useRouter()
 
 const selectedItem = ref(null)
 const filterGame = ref('all')
@@ -12,6 +16,74 @@ const sortBy = ref('added_at')
 const searchQuery = ref('')
 const refreshMessage = ref(null)
 const refreshing = ref(false)
+
+// Advanced filter state
+const filters = ref({
+  printings: [],
+  sets: [],
+  conditions: [],
+  rarities: []
+})
+
+// Extract available filter options from collection data
+const availablePrintings = computed(() => {
+  const printings = new Set()
+  store.groupedItems.forEach(group => {
+    group.items?.forEach(item => {
+      if (item.printing) printings.add(item.printing)
+    })
+  })
+  // Sort with a sensible order
+  const order = ['Normal', 'Foil', '1st Edition', 'Unlimited', 'Reverse Holofoil']
+  return [...printings].sort((a, b) => {
+    const aIdx = order.indexOf(a)
+    const bIdx = order.indexOf(b)
+    if (aIdx === -1 && bIdx === -1) return a.localeCompare(b)
+    if (aIdx === -1) return 1
+    if (bIdx === -1) return -1
+    return aIdx - bIdx
+  })
+})
+
+const availableSets = computed(() => {
+  const sets = new Map()
+  store.groupedItems.forEach(group => {
+    const card = group.card
+    if (card?.set_code && card?.set_name) {
+      sets.set(card.set_code, { code: card.set_code, name: card.set_name })
+    }
+  })
+  return [...sets.values()].sort((a, b) => a.name.localeCompare(b.name))
+})
+
+const availableConditions = computed(() => {
+  const conditions = new Set()
+  store.groupedItems.forEach(group => {
+    group.items?.forEach(item => {
+      if (item.condition) conditions.add(item.condition)
+    })
+  })
+  // Sort by condition quality
+  const order = ['M', 'NM', 'EX', 'GD', 'LP', 'PL', 'PR']
+  return [...conditions].sort((a, b) => {
+    const aIdx = order.indexOf(a)
+    const bIdx = order.indexOf(b)
+    if (aIdx === -1 && bIdx === -1) return a.localeCompare(b)
+    if (aIdx === -1) return 1
+    if (bIdx === -1) return -1
+    return aIdx - bIdx
+  })
+})
+
+const availableRarities = computed(() => {
+  const rarities = new Set()
+  store.groupedItems.forEach(group => {
+    if (group.card?.rarity) {
+      rarities.add(group.card.rarity)
+    }
+  })
+  return [...rarities].sort()
+})
 
 // Use grouped items for display with search filtering
 const filteredItems = computed(() => {
@@ -33,6 +105,34 @@ const filteredItems = computed(() => {
         card.set_code?.toLowerCase().includes(query)
       )
     })
+  }
+
+  // Printing filter - match if ANY variant has a selected printing
+  if (filters.value.printings.length > 0) {
+    items = items.filter(group =>
+      group.items?.some(item => filters.value.printings.includes(item.printing))
+    )
+  }
+
+  // Set filter - match by card's set_code
+  if (filters.value.sets.length > 0) {
+    items = items.filter(group =>
+      filters.value.sets.includes(group.card?.set_code)
+    )
+  }
+
+  // Condition filter - match if ANY variant has a selected condition
+  if (filters.value.conditions.length > 0) {
+    items = items.filter(group =>
+      group.items?.some(item => filters.value.conditions.includes(item.condition))
+    )
+  }
+
+  // Rarity filter - match by card's rarity
+  if (filters.value.rarities.length > 0) {
+    items = items.filter(group =>
+      filters.value.rarities.includes(group.card?.rarity)
+    )
   }
 
   // Sorting
@@ -59,6 +159,14 @@ const filteredItems = computed(() => {
   })
 
   return items
+})
+
+// Count of active filters for display
+const activeFilterCount = computed(() => {
+  return filters.value.printings.length +
+         filters.value.sets.length +
+         filters.value.conditions.length +
+         filters.value.rarities.length
 })
 
 const handleSelect = (groupedItem) => {
@@ -117,7 +225,66 @@ const handleClose = () => {
   selectedItem.value = null
 }
 
+// Parse URL query params to filter arrays
+const parseQueryArray = (param) => {
+  if (!param) return []
+  if (Array.isArray(param)) return param
+  return param.split(',').filter(v => v.trim())
+}
+
+// Sync filters to URL query params (without polluting browser history)
+const syncFiltersToUrl = () => {
+  const query = {}
+
+  if (filters.value.printings.length > 0) {
+    query.printings = filters.value.printings.join(',')
+  }
+  if (filters.value.sets.length > 0) {
+    query.sets = filters.value.sets.join(',')
+  }
+  if (filters.value.conditions.length > 0) {
+    query.conditions = filters.value.conditions.join(',')
+  }
+  if (filters.value.rarities.length > 0) {
+    query.rarities = filters.value.rarities.join(',')
+  }
+  if (filterGame.value !== 'all') {
+    query.game = filterGame.value
+  }
+  if (searchQuery.value.trim()) {
+    query.q = searchQuery.value.trim()
+  }
+
+  router.replace({ query })
+}
+
+// Watch filters and sync to URL
+watch(filters, syncFiltersToUrl, { deep: true })
+watch(filterGame, syncFiltersToUrl)
+watch(searchQuery, syncFiltersToUrl)
+
+// Initialize filters from URL on mount
+const initFiltersFromUrl = () => {
+  const q = route.query
+
+  filters.value = {
+    printings: parseQueryArray(q.printings),
+    sets: parseQueryArray(q.sets),
+    conditions: parseQueryArray(q.conditions),
+    rarities: parseQueryArray(q.rarities)
+  }
+
+  if (q.game && ['mtg', 'pokemon'].includes(q.game)) {
+    filterGame.value = q.game
+  }
+
+  if (q.q) {
+    searchQuery.value = q.q
+  }
+}
+
 onMounted(() => {
+  initFiltersFromUrl()
   store.fetchGroupedCollection()
   store.fetchStats()
 })
@@ -160,21 +327,32 @@ onMounted(() => {
         </div>
       </div>
 
-      <!-- Search Bar -->
-      <div class="flex gap-3">
-        <input
-          v-model="searchQuery"
-          type="text"
-          placeholder="Search by card name or set..."
-          class="flex-1 border dark:border-gray-600 rounded-lg px-4 py-2 bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-400"
+      <!-- Search Bar and Filters -->
+      <div class="flex flex-col gap-3">
+        <div class="flex gap-3">
+          <input
+            v-model="searchQuery"
+            type="text"
+            placeholder="Search by card name or set..."
+            class="flex-1 border dark:border-gray-600 rounded-lg px-4 py-2 bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-400"
+          />
+          <button
+            v-if="searchQuery"
+            @click="searchQuery = ''"
+            class="px-3 py-2 text-gray-500 hover:text-gray-700 dark:hover:text-gray-300"
+          >
+            Clear
+          </button>
+        </div>
+
+        <!-- Advanced Filters -->
+        <CollectionFilters
+          v-model="filters"
+          :available-printings="availablePrintings"
+          :available-sets="availableSets"
+          :available-conditions="availableConditions"
+          :available-rarities="availableRarities"
         />
-        <button
-          v-if="searchQuery"
-          @click="searchQuery = ''"
-          class="px-3 py-2 text-gray-500 hover:text-gray-700 dark:hover:text-gray-300"
-        >
-          Clear
-        </button>
       </div>
 
       <!-- Refresh Message Toast -->
@@ -196,13 +374,24 @@ onMounted(() => {
     </div>
 
     <div v-else-if="filteredItems.length === 0" class="text-center py-12 bg-white dark:bg-gray-800 rounded-lg">
-      <p class="text-gray-500 dark:text-gray-400 mb-4">No cards found</p>
-      <router-link
-        to="/add"
-        class="inline-block bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700"
-      >
-        Add Cards
-      </router-link>
+      <template v-if="activeFilterCount > 0 || searchQuery.trim()">
+        <p class="text-gray-500 dark:text-gray-400 mb-4">No cards match your filters</p>
+        <button
+          @click="filters = { printings: [], sets: [], conditions: [], rarities: [] }; searchQuery = ''"
+          class="inline-block bg-gray-600 text-white px-6 py-2 rounded-lg hover:bg-gray-700"
+        >
+          Clear Filters
+        </button>
+      </template>
+      <template v-else>
+        <p class="text-gray-500 dark:text-gray-400 mb-4">No cards found</p>
+        <router-link
+          to="/add"
+          class="inline-block bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700"
+        >
+          Add Cards
+        </router-link>
+      </template>
     </div>
 
     <CardGrid

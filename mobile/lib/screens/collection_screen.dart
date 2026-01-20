@@ -4,6 +4,7 @@ import '../models/grouped_collection.dart';
 import '../providers/collection_provider.dart';
 import '../utils/grid_utils.dart';
 import '../widgets/collection_card.dart';
+import '../widgets/collection_filters.dart';
 import 'card_detail_screen.dart';
 
 class CollectionScreen extends StatefulWidget {
@@ -17,17 +18,29 @@ class CollectionScreen extends StatefulWidget {
 }
 
 class _CollectionScreenState extends State<CollectionScreen> {
+  final TextEditingController _searchController = TextEditingController();
+
   @override
   void initState() {
     super.initState();
-    // Fetch grouped collection on first load
+    // Fetch grouped collection and load persisted filters on first load
     WidgetsBinding.instance.addPostFrameCallback((_) {
       if (!mounted) return;
       final provider = context.read<CollectionProvider>();
+      // Load persisted filters
+      provider.loadPersistedFilters();
+      // Sync search controller with provider
+      _searchController.text = provider.searchQuery;
       if (provider.allGroupedItems.isEmpty && !provider.loading) {
         provider.fetchGroupedCollection();
       }
     });
+  }
+
+  @override
+  void dispose() {
+    _searchController.dispose();
+    super.dispose();
   }
 
   @override
@@ -68,59 +81,108 @@ class _CollectionScreenState extends State<CollectionScreen> {
   ) {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-      child: Row(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // Game filter
-          Expanded(
-            child: DropdownButtonFormField<String?>(
-              initialValue: provider.gameFilter,
-              decoration: InputDecoration(
-                labelText: 'Game',
-                contentPadding: const EdgeInsets.symmetric(
-                  horizontal: 12,
-                  vertical: 8,
+          // Game and Sort dropdowns row
+          Row(
+            children: [
+              // Game filter
+              Expanded(
+                child: DropdownButtonFormField<String?>(
+                  value: provider.gameFilter,
+                  decoration: InputDecoration(
+                    labelText: 'Game',
+                    contentPadding: const EdgeInsets.symmetric(
+                      horizontal: 12,
+                      vertical: 8,
+                    ),
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(8),
+                    ),
+                    isDense: true,
+                  ),
+                  items: const [
+                    DropdownMenuItem(value: null, child: Text('All Games')),
+                    DropdownMenuItem(value: 'mtg', child: Text('MTG')),
+                    DropdownMenuItem(value: 'pokemon', child: Text('Pokemon')),
+                  ],
+                  onChanged: (value) => provider.setGameFilter(value),
                 ),
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(8),
-                ),
-                isDense: true,
               ),
-              items: const [
-                DropdownMenuItem(value: null, child: Text('All Games')),
-                DropdownMenuItem(value: 'mtg', child: Text('MTG')),
-                DropdownMenuItem(value: 'pokemon', child: Text('Pokemon')),
-              ],
-              onChanged: (value) => provider.setGameFilter(value),
-            ),
+              const SizedBox(width: 12),
+              // Sort option
+              Expanded(
+                child: DropdownButtonFormField<SortOption>(
+                  value: provider.sortOption,
+                  decoration: InputDecoration(
+                    labelText: 'Sort By',
+                    contentPadding: const EdgeInsets.symmetric(
+                      horizontal: 12,
+                      vertical: 8,
+                    ),
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(8),
+                    ),
+                    isDense: true,
+                  ),
+                  items: const [
+                    DropdownMenuItem(
+                      value: SortOption.dateAdded,
+                      child: Text('Recently Added'),
+                    ),
+                    DropdownMenuItem(
+                      value: SortOption.name,
+                      child: Text('Name'),
+                    ),
+                    DropdownMenuItem(
+                      value: SortOption.value,
+                      child: Text('Value'),
+                    ),
+                  ],
+                  onChanged: (value) {
+                    if (value != null) provider.setSortOption(value);
+                  },
+                ),
+              ),
+            ],
           ),
-          const SizedBox(width: 12),
-          // Sort option
-          Expanded(
-            child: DropdownButtonFormField<SortOption>(
-              initialValue: provider.sortOption,
-              decoration: InputDecoration(
-                labelText: 'Sort By',
-                contentPadding: const EdgeInsets.symmetric(
-                  horizontal: 12,
-                  vertical: 8,
-                ),
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(8),
-                ),
-                isDense: true,
+          const SizedBox(height: 12),
+          // Search bar
+          TextField(
+            controller: _searchController,
+            decoration: InputDecoration(
+              hintText: 'Search by card name or set...',
+              prefixIcon: const Icon(Icons.search),
+              suffixIcon: _searchController.text.isNotEmpty
+                  ? IconButton(
+                      icon: const Icon(Icons.clear),
+                      onPressed: () {
+                        _searchController.clear();
+                        provider.setSearchQuery('');
+                      },
+                    )
+                  : null,
+              border: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(8),
               ),
-              items: const [
-                DropdownMenuItem(
-                  value: SortOption.dateAdded,
-                  child: Text('Recently Added'),
-                ),
-                DropdownMenuItem(value: SortOption.name, child: Text('Name')),
-                DropdownMenuItem(value: SortOption.value, child: Text('Value')),
-              ],
-              onChanged: (value) {
-                if (value != null) provider.setSortOption(value);
-              },
+              contentPadding: const EdgeInsets.symmetric(
+                horizontal: 16,
+                vertical: 12,
+              ),
+              isDense: true,
             ),
+            onChanged: (value) => provider.setSearchQuery(value),
+          ),
+          const SizedBox(height: 12),
+          // Advanced filters
+          CollectionFilters(
+            filters: provider.advancedFilters,
+            onFiltersChanged: provider.setAdvancedFilters,
+            availablePrintings: provider.availablePrintings,
+            availableSets: provider.availableSets,
+            availableConditions: provider.availableConditions,
+            availableRarities: provider.availableRarities,
           ),
         ],
       ),
@@ -163,6 +225,7 @@ class _CollectionScreenState extends State<CollectionScreen> {
       );
     }
 
+    // Show empty state if no items match filters, or if collection is truly empty
     if (provider.groupedItems.isEmpty) {
       return _buildEmptyState(context);
     }
@@ -205,6 +268,8 @@ class _CollectionScreenState extends State<CollectionScreen> {
 
   Widget _buildEmptyState(BuildContext context) {
     final theme = Theme.of(context);
+    final provider = context.read<CollectionProvider>();
+    final hasFilters = provider.hasActiveFilters;
 
     return Center(
       child: Padding(
@@ -213,31 +278,47 @@ class _CollectionScreenState extends State<CollectionScreen> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Icon(
-              Icons.collections_bookmark_outlined,
+              hasFilters
+                  ? Icons.filter_list_off
+                  : Icons.collections_bookmark_outlined,
               size: 80,
               color: theme.colorScheme.onSurfaceVariant.withValues(alpha: 0.5),
             ),
             const SizedBox(height: 24),
             Text(
-              'No cards in your collection',
+              hasFilters
+                  ? 'No cards match your filters'
+                  : 'No cards in your collection',
               style: theme.textTheme.titleLarge?.copyWith(
                 color: theme.colorScheme.onSurfaceVariant,
               ),
             ),
             const SizedBox(height: 8),
             Text(
-              'Start scanning cards to add them to your collection',
+              hasFilters
+                  ? 'Try adjusting your search or filter criteria'
+                  : 'Start scanning cards to add them to your collection',
               style: theme.textTheme.bodyMedium?.copyWith(
                 color: theme.colorScheme.onSurfaceVariant,
               ),
               textAlign: TextAlign.center,
             ),
             const SizedBox(height: 24),
-            FilledButton.icon(
-              onPressed: widget.onNavigateToScan,
-              icon: const Icon(Icons.camera_alt),
-              label: const Text('Scan Cards'),
-            ),
+            if (hasFilters)
+              FilledButton.icon(
+                onPressed: () {
+                  _searchController.clear();
+                  provider.clearAllFilters();
+                },
+                icon: const Icon(Icons.clear_all),
+                label: const Text('Clear Filters'),
+              )
+            else
+              FilledButton.icon(
+                onPressed: widget.onNavigateToScan,
+                icon: const Icon(Icons.camera_alt),
+                label: const Text('Scan Cards'),
+              ),
           ],
         ),
       ),

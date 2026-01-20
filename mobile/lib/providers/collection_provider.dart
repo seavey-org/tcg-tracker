@@ -1,10 +1,13 @@
+import 'dart:convert';
 import 'package:flutter/foundation.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import '../models/card.dart';
 import '../models/collection_item.dart';
 import '../models/collection_stats.dart';
 import '../models/grouped_collection.dart';
 import '../models/price_status.dart';
 import '../services/api_service.dart';
+import '../widgets/collection_filters.dart';
 
 enum SortOption { dateAdded, name, value }
 
@@ -36,6 +39,8 @@ class CollectionProvider extends ChangeNotifier {
   // Filter and sort state
   String? _gameFilter;
   SortOption _sortOption = SortOption.dateAdded;
+  CollectionFilterState _advancedFilters = const CollectionFilterState();
+  String _searchQuery = '';
 
   // Getters
   List<CollectionItem> get items => _sortedAndFilteredItems;
@@ -57,6 +62,78 @@ class CollectionProvider extends ChangeNotifier {
 
   String? get gameFilter => _gameFilter;
   SortOption get sortOption => _sortOption;
+  CollectionFilterState get advancedFilters => _advancedFilters;
+  String get searchQuery => _searchQuery;
+
+  // Computed available filter options from collection data
+  List<PrintingType> get availablePrintings {
+    final printings = <PrintingType>{};
+    for (final group in _groupedItems) {
+      for (final item in group.items) {
+        printings.add(item.printing);
+      }
+    }
+    // Sort in a sensible order
+    const order = [
+      PrintingType.normal,
+      PrintingType.foil,
+      PrintingType.firstEdition,
+      PrintingType.unlimited,
+      PrintingType.reverseHolofoil,
+    ];
+    final sorted = printings.toList()
+      ..sort((a, b) => order.indexOf(a).compareTo(order.indexOf(b)));
+    return sorted;
+  }
+
+  List<SetInfo> get availableSets {
+    final sets = <String, SetInfo>{};
+    for (final group in _groupedItems) {
+      final card = group.card;
+      if (card.setCode != null && card.setCode!.isNotEmpty) {
+        sets[card.setCode!] = SetInfo(
+          code: card.setCode!,
+          name: card.setName ?? card.setCode!,
+        );
+      }
+    }
+    final sorted = sets.values.toList()
+      ..sort((a, b) => a.name.compareTo(b.name));
+    return sorted;
+  }
+
+  List<String> get availableConditions {
+    final conditions = <String>{};
+    for (final group in _groupedItems) {
+      for (final item in group.items) {
+        conditions.add(item.condition);
+      }
+    }
+    // Sort by condition quality
+    const order = ['M', 'NM', 'EX', 'GD', 'LP', 'PL', 'PR'];
+    final sorted = conditions.toList()
+      ..sort((a, b) {
+        final aIdx = order.indexOf(a);
+        final bIdx = order.indexOf(b);
+        if (aIdx == -1 && bIdx == -1) return a.compareTo(b);
+        if (aIdx == -1) return 1;
+        if (bIdx == -1) return -1;
+        return aIdx.compareTo(bIdx);
+      });
+    return sorted;
+  }
+
+  List<String> get availableRarities {
+    final rarities = <String>{};
+    for (final group in _groupedItems) {
+      final rarity = group.card.rarity;
+      if (rarity != null && rarity.isNotEmpty) {
+        rarities.add(rarity);
+      }
+    }
+    final sorted = rarities.toList()..sort();
+    return sorted;
+  }
 
   int get totalCards => _stats.totalCards;
   double get totalValue => _stats.totalValue;
@@ -108,6 +185,49 @@ class CollectionProvider extends ChangeNotifier {
       filtered = filtered.where((i) => i.card.game == _gameFilter).toList();
     }
 
+    // Apply search query filter
+    if (_searchQuery.isNotEmpty) {
+      final query = _searchQuery.toLowerCase();
+      filtered = filtered.where((group) {
+        final card = group.card;
+        return card.name.toLowerCase().contains(query) ||
+            (card.setName?.toLowerCase().contains(query) ?? false) ||
+            (card.setCode?.toLowerCase().contains(query) ?? false);
+      }).toList();
+    }
+
+    // Apply printing filter - match if ANY variant has a selected printing
+    if (_advancedFilters.printings.isNotEmpty) {
+      filtered = filtered.where((group) {
+        return group.items.any(
+          (item) => _advancedFilters.printings.contains(item.printing.value),
+        );
+      }).toList();
+    }
+
+    // Apply set filter - match by card's set_code
+    if (_advancedFilters.sets.isNotEmpty) {
+      filtered = filtered.where((group) {
+        return _advancedFilters.sets.contains(group.card.setCode);
+      }).toList();
+    }
+
+    // Apply condition filter - match if ANY variant has a selected condition
+    if (_advancedFilters.conditions.isNotEmpty) {
+      filtered = filtered.where((group) {
+        return group.items.any(
+          (item) => _advancedFilters.conditions.contains(item.condition),
+        );
+      }).toList();
+    }
+
+    // Apply rarity filter - match by card's rarity
+    if (_advancedFilters.rarities.isNotEmpty) {
+      filtered = filtered.where((group) {
+        return _advancedFilters.rarities.contains(group.card.rarity);
+      }).toList();
+    }
+
     // Apply sort
     switch (_sortOption) {
       case SortOption.dateAdded:
@@ -149,6 +269,58 @@ class CollectionProvider extends ChangeNotifier {
   void setSortOption(SortOption option) {
     _sortOption = option;
     notifyListeners();
+  }
+
+  void setAdvancedFilters(CollectionFilterState filters) {
+    _advancedFilters = filters;
+    _persistFilters();
+    notifyListeners();
+  }
+
+  void setSearchQuery(String query) {
+    _searchQuery = query;
+    notifyListeners();
+  }
+
+  void clearAllFilters() {
+    _advancedFilters = const CollectionFilterState();
+    _searchQuery = '';
+    _gameFilter = null;
+    _persistFilters();
+    notifyListeners();
+  }
+
+  /// Check if any filters are active (for showing clear button)
+  bool get hasActiveFilters =>
+      _advancedFilters.hasActiveFilters ||
+      _searchQuery.isNotEmpty ||
+      (_gameFilter != null && _gameFilter!.isNotEmpty);
+
+  // Persistence methods
+  static const _filtersKey = 'collection_filters';
+
+  Future<void> _persistFilters() async {
+    try {
+      final prefs = await SharedPreferences.getInstance();
+      final json = jsonEncode(_advancedFilters.toJson());
+      await prefs.setString(_filtersKey, json);
+    } catch (e) {
+      debugPrint('Failed to persist filters: $e');
+    }
+  }
+
+  Future<void> loadPersistedFilters() async {
+    try {
+      final prefs = await SharedPreferences.getInstance();
+      final json = prefs.getString(_filtersKey);
+      if (json != null) {
+        final data = jsonDecode(json) as Map<String, dynamic>;
+        _advancedFilters = CollectionFilterState.fromJson(data);
+        notifyListeners();
+      }
+    } catch (e) {
+      debugPrint('Failed to load persisted filters: $e');
+    }
   }
 
   // Collection methods
