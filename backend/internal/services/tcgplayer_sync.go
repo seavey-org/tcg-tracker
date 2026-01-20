@@ -570,8 +570,8 @@ func convertToJustTCGSetID(ourSetName string) string {
 		// Promos
 		"basep":                      "wotc-promo-pokemon",
 		"wizards-black-star-promos":  "wotc-promo-pokemon",
-		"np":                         "nintendo-black-star-promos-pokemon",
-		"nintendo-black-star-promos": "nintendo-black-star-promos-pokemon",
+		"np":                         "nintendo-promos-pokemon",
+		"nintendo-black-star-promos": "nintendo-promos-pokemon",
 		"pop1":                       "pop-series-1-pokemon",
 		"pop2":                       "pop-series-2-pokemon",
 		"pop3":                       "pop-series-3-pokemon",
