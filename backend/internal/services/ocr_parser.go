@@ -30,6 +30,7 @@ type OCRResult struct {
 	SetTotal           string             `json:"set_total"`            // e.g., "185" from "025/185"
 	SetCode            string             `json:"set_code"`             // e.g., "SWSH4" if detected
 	SetName            string             `json:"set_name"`             // e.g., "Vivid Voltage" if detected
+	CopyrightYear      string             `json:"copyright_year"`       // e.g., "2022" from "© 2022 Wizards"
 	HP                 string             `json:"hp"`                   // e.g., "170" from "HP 170"
 	Rarity             string             `json:"rarity"`               // if detected
 	MatchReason        string             `json:"match_reason"`         // how set was determined: "set_code", "set_name", "set_total", "inferred"
@@ -1342,6 +1343,12 @@ func parseMTGOCR(result *OCRResult) {
 
 	// Detect condition hints
 	detectConditionHints(result, upperText)
+
+	// Extract copyright year: "© 2022", "©2022", "TM & © 2022", "2022 Wizards"
+	copyrightRegex := regexp.MustCompile(`©\s*(\d{4})`)
+	if matches := copyrightRegex.FindStringSubmatch(text); len(matches) >= 2 {
+		result.CopyrightYear = matches[1]
+	}
 
 	// Card name is typically the first line
 	result.CardName = extractMTGCardName(result.AllLines)

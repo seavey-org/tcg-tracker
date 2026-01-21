@@ -458,7 +458,7 @@ func (h *CardHandler) searchAndMatchCards(c *gin.Context, parsed *services.OCRRe
 
 		// Step 5: Group results by set for 2-phase UI
 		if result != nil && len(result.Cards) > 0 {
-			grouped = services.GroupCardsBySet(result.Cards, parsed.SetCode, parsed.CardNumber)
+			grouped = services.GroupCardsBySet(result.Cards, parsed.SetCode, parsed.CardNumber, parsed.SetTotal, parsed.CopyrightYear)
 		}
 	}
 

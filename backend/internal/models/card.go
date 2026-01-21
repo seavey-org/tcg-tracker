@@ -185,6 +185,7 @@ type MTGSetGroup struct {
 	SetName     string `json:"set_name"`
 	ReleasedAt  string `json:"released_at,omitempty"`
 	IsBestMatch bool   `json:"is_best_match"`
+	MatchScore  int    `json:"-"` // Internal scoring for sort order (not exposed to API)
 	Variants    []Card `json:"variants"`
 }
 

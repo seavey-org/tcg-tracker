@@ -306,17 +306,26 @@ MTG cards often have many printings across different sets. The 2-phase selection
 
 **How it works:**
 1. Scan returns a `grouped` field containing cards organized by set
-2. **Phase 1**: User sees list of sets containing the card, sorted by:
-   - Best match first (set code from OCR)
-   - Then by release date (newest first)
+2. **Phase 1**: User sees list of sets containing the card, sorted by confidence score
 3. **Phase 2**: User taps a set to see all variants (foil, showcase, borderless, etc.)
 4. User selects the exact variant to add to collection
+
+**Set Matching Confidence Scoring:**
+Sets are ranked using multiple OCR signals (sorted by total score, then by release date):
+
+| Signal | Points | Description |
+|--------|--------|-------------|
+| Set code match | +100 | OCR set code matches set exactly |
+| Collector number match | +50 | Card with matching number exists in set |
+| Set total match | +30 | OCR total (e.g., "302" from "123/302") matches max collector # in set |
+| Copyright year match | +20 | OCR copyright year (e.g., "© 2022") matches set's release year |
 
 **Backend changes:**
 - `ScryfallService.SearchCardPrintings()` - Fetches all printings of a card by exact name
 - `ScryfallService.GetCardBySetAndNumber()` - Exact lookup by set code and collector number
-- `GroupCardsBySet()` - Groups flat card list into `MTGGroupedResult` for 2-phase UI
-- Card model now includes variant info: `Finishes`, `FrameEffects`, `PromoTypes`, `ReleasedAt`
+- `GroupCardsBySet()` - Groups flat card list into `MTGGroupedResult` with confidence scoring
+- Card model includes variant info: `Finishes`, `FrameEffects`, `PromoTypes`, `ReleasedAt`
+- OCR parser extracts `CopyrightYear` from MTG cards (e.g., "© 2022" → "2022")
 
 **Mobile changes:**
 - `MTGGroupedResult` and `MTGSetGroup` models for parsing grouped response

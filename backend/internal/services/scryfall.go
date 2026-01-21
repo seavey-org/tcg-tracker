@@ -7,6 +7,7 @@ import (
 	"net/http"
 	"net/url"
 	"sort"
+	"strconv"
 	"strings"
 	"time"
 
@@ -274,9 +275,14 @@ func (s *ScryfallService) SearchCardPrintings(cardName string) (*models.CardSear
 }
 
 // GroupCardsBySet groups a flat list of cards by set for 2-phase selection
-// Sorting: best match first (by OCR set code), then by release date (newest first)
-// Also considers collector number match for determining best match
-func GroupCardsBySet(cards []models.Card, ocrSetCode, ocrCardNumber string) *models.MTGGroupedResult {
+// Uses confidence scoring based on multiple OCR signals:
+//   - Set code match: +100 points
+//   - Collector number match: +50 points
+//   - Set total match (exact): +30 points
+//   - Copyright year match: +20 points
+//
+// Results are sorted by score descending, then release date (newest first)
+func GroupCardsBySet(cards []models.Card, ocrSetCode, ocrCardNumber, ocrSetTotal, ocrYear string) *models.MTGGroupedResult {
 	if len(cards) == 0 {
 		return &models.MTGGroupedResult{
 			CardName:  "",
@@ -308,36 +314,69 @@ func GroupCardsBySet(cards []models.Card, ocrSetCode, ocrCardNumber string) *mod
 		groups = append(groups, *g)
 	}
 
-	// Determine best match based on OCR data
-	// Priority: exact set code match > collector number match within a set
+	// Calculate confidence score for each set group
+	// Scoring:
+	//   +100: Set code exact match
+	//   +50:  Collector number exists in set
+	//   +30:  Max collector number matches OCR set total exactly
+	//   +20:  Release year matches OCR copyright year
 	ocrSetCodeLower := strings.ToLower(ocrSetCode)
+	ocrTotalInt, _ := strconv.Atoi(ocrSetTotal)
+
 	for i := range groups {
-		if strings.EqualFold(groups[i].SetCode, ocrSetCodeLower) {
-			groups[i].IsBestMatch = true
-		} else if ocrCardNumber != "" {
-			// Check if any variant in this set has matching collector number
-			for _, v := range groups[i].Variants {
-				if v.CardNumber == ocrCardNumber {
-					// Collector number match is a secondary signal but not as strong as set code
-					// Only mark as best match if no set code was provided
-					if ocrSetCode == "" {
-						groups[i].IsBestMatch = true
-					}
-					break
-				}
+		score := 0
+
+		// Set code match (+100)
+		if ocrSetCode != "" && strings.EqualFold(groups[i].SetCode, ocrSetCodeLower) {
+			score += 100
+		}
+
+		// Check variants for collector number match and find max collector number
+		maxCollectorNum := 0
+		hasCollectorMatch := false
+		for _, v := range groups[i].Variants {
+			// Collector number match (+50)
+			if ocrCardNumber != "" && v.CardNumber == ocrCardNumber {
+				hasCollectorMatch = true
+			}
+			// Parse collector number to find max (for set total matching)
+			// Only consider numeric collector numbers (skip things like "A1", "P1")
+			if num, err := strconv.Atoi(v.CardNumber); err == nil && num > maxCollectorNum {
+				maxCollectorNum = num
 			}
 		}
+		if hasCollectorMatch {
+			score += 50
+		}
+
+		// Set total match (+30) - exact match only
+		if ocrTotalInt > 0 && maxCollectorNum > 0 && ocrTotalInt == maxCollectorNum {
+			score += 30
+		}
+
+		// Copyright year match (+20)
+		if ocrYear != "" && len(groups[i].ReleasedAt) >= 4 {
+			releaseYear := groups[i].ReleasedAt[:4] // "2022-02-18" -> "2022"
+			if ocrYear == releaseYear {
+				score += 20
+			}
+		}
+
+		groups[i].MatchScore = score
 	}
 
-	// Sort: best match first, then by release date (newest first)
+	// Sort by score descending, then release date descending (newest first)
 	sort.Slice(groups, func(i, j int) bool {
-		if groups[i].IsBestMatch != groups[j].IsBestMatch {
-			return groups[i].IsBestMatch // true sorts before false
+		if groups[i].MatchScore != groups[j].MatchScore {
+			return groups[i].MatchScore > groups[j].MatchScore
 		}
-		// Compare release dates (format: "2022-02-18")
-		// Newer dates sort first (descending order)
 		return groups[i].ReleasedAt > groups[j].ReleasedAt
 	})
+
+	// Mark highest score as best match (only if score > 0)
+	if len(groups) > 0 && groups[0].MatchScore > 0 {
+		groups[0].IsBestMatch = true
+	}
 
 	// Extract card name from first card
 	cardName := cards[0].Name
