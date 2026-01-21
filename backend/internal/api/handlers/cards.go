@@ -154,14 +154,14 @@ func (h *CardHandler) IdentifyCard(c *gin.Context) {
 	parsed := services.ParseOCRTextWithAnalysis(req.Text, req.Game, req.ImageAnalysis)
 
 	// Search and match cards using shared logic
-	result, textMatches, err := h.searchAndMatchCards(c, parsed, req.Game, req.Text)
+	result, textMatches, grouped, err := h.searchAndMatchCards(c, parsed, req.Game, req.Text)
 	if err != nil {
 		c.JSON(http.StatusInternalServerError, gin.H{"error": err.Error()})
 		return
 	}
 
 	// Include full parsing info in response for mobile app
-	c.JSON(http.StatusOK, gin.H{
+	response := gin.H{
 		"cards":       result.Cards,
 		"total_count": result.TotalCount,
 		"has_more":    result.HasMore,
@@ -187,7 +187,14 @@ func (h *CardHandler) IdentifyCard(c *gin.Context) {
 			"candidate_sets":       parsed.CandidateSets,
 			"text_matches":         textMatches,
 		},
-	})
+	}
+
+	// Add grouped results for MTG 2-phase selection
+	if grouped != nil {
+		response["grouped"] = grouped
+	}
+
+	c.JSON(http.StatusOK, response)
 }
 
 // IdentifyCardFromImage processes an uploaded image with server-side OCR
@@ -276,14 +283,14 @@ func (h *CardHandler) IdentifyCardFromImage(c *gin.Context) {
 	parsed := services.ParseOCRText(text, game)
 
 	// Search and match cards using shared logic
-	result, textMatches, err := h.searchAndMatchCards(c, parsed, game, text)
+	result, textMatches, grouped, err := h.searchAndMatchCards(c, parsed, game, text)
 	if err != nil {
 		c.JSON(http.StatusInternalServerError, gin.H{"error": err.Error()})
 		return
 	}
 
 	// Return results
-	c.JSON(http.StatusOK, gin.H{
+	response := gin.H{
 		"cards":       result.Cards,
 		"total_count": result.TotalCount,
 		"has_more":    result.HasMore,
@@ -314,7 +321,14 @@ func (h *CardHandler) IdentifyCardFromImage(c *gin.Context) {
 			"candidate_sets":       parsed.CandidateSets,
 			"text_matches":         textMatches,
 		},
-	})
+	}
+
+	// Add grouped results for MTG 2-phase selection
+	if grouped != nil {
+		response["grouped"] = grouped
+	}
+
+	c.JSON(http.StatusOK, response)
 }
 
 // GetOCRStatus returns the status of server-side OCR capability
@@ -334,8 +348,8 @@ func (h *CardHandler) GetOCRStatus(c *gin.Context) {
 
 // searchAndMatchCards performs card search and matching based on OCR results.
 // This is shared logic between IdentifyCard and IdentifyCardFromImage.
-// Returns: result, textMatches (fields that matched for top result), error
-func (h *CardHandler) searchAndMatchCards(c *gin.Context, parsed *services.OCRResult, game, fallbackText string) (*models.CardSearchResult, []string, error) {
+// Returns: result, textMatches (fields that matched for top result), grouped (for MTG 2-phase), error
+func (h *CardHandler) searchAndMatchCards(c *gin.Context, parsed *services.OCRResult, game, fallbackText string) (*models.CardSearchResult, []string, *models.MTGGroupedResult, error) {
 	// Determine search query (use card name or fall back to raw text)
 	searchQuery := parsed.CardName
 	if searchQuery == "" {
@@ -345,6 +359,7 @@ func (h *CardHandler) searchAndMatchCards(c *gin.Context, parsed *services.OCRRe
 	// Search using the extracted text
 	var result *models.CardSearchResult
 	var textMatches []string
+	var grouped *models.MTGGroupedResult
 	var err error
 
 	if game == "pokemon" {
@@ -391,16 +406,79 @@ func (h *CardHandler) searchAndMatchCards(c *gin.Context, parsed *services.OCRRe
 			}
 		}
 	} else {
-		// Default to MTG
-		result, err = h.scryfallService.SearchCards(searchQuery)
+		// MTG handling - 2-phase grouped selection
+		var exactCard *models.Card
+
+		// Step 1: Try exact lookup if we have set code AND collector number
+		if parsed.SetCode != "" && parsed.CardNumber != "" {
+			exactCard, _ = h.scryfallService.GetCardBySetAndNumber(
+				parsed.SetCode, parsed.CardNumber)
+		}
+
+		// Step 2: Search for all printings by name to get all variants
+		if searchQuery != "" {
+			result, err = h.scryfallService.SearchCardPrintings(searchQuery)
+		}
+
+		// Step 3: If no results from printings search, try regular search
+		// Preserve original error if both searches fail
+		if (result == nil || len(result.Cards) == 0) && searchQuery != "" {
+			originalErr := err
+			result, err = h.scryfallService.SearchCards(searchQuery)
+			// If fallback also failed, prefer the original error for debugging
+			if err != nil && originalErr != nil {
+				err = originalErr
+			}
+		}
+
+		// Step 4: If exact match found, ensure it's in results
+		if exactCard != nil {
+			if result == nil {
+				result = &models.CardSearchResult{
+					Cards:      []models.Card{},
+					TotalCount: 0,
+					HasMore:    false,
+				}
+			}
+
+			found := false
+			for _, c := range result.Cards {
+				if c.ID == exactCard.ID {
+					found = true
+					break
+				}
+			}
+			if !found {
+				result.Cards = append([]models.Card{*exactCard}, result.Cards...)
+				// Keep TotalCount semantics as returned by Scryfall. We are prepending
+				// an already-known card to improve the top match, not changing the
+				// underlying query's total.
+			}
+		}
+
+		// Step 5: Group results by set for 2-phase UI
+		if result != nil && len(result.Cards) > 0 {
+			grouped = services.GroupCardsBySet(result.Cards, parsed.SetCode, parsed.CardNumber)
+		}
 	}
 
 	if err != nil {
-		return nil, nil, err
+		return nil, nil, nil, err
+	}
+
+	// Ensure handlers never see a nil result (prevents panics in IdentifyCard).
+	// For MTG, this can happen when OCR yields no searchable text and exact lookup
+	// does not return a card.
+	if result == nil {
+		result = &models.CardSearchResult{
+			Cards:      []models.Card{},
+			TotalCount: 0,
+			HasMore:    false,
+		}
 	}
 
 	// Filter and rank results based on parsed OCR data
-	if result != nil && len(result.Cards) > 0 {
+	if len(result.Cards) > 0 {
 		result.Cards = rankCardMatches(result.Cards, parsed)
 	}
 
@@ -413,7 +491,7 @@ func (h *CardHandler) searchAndMatchCards(c *gin.Context, parsed *services.OCRRe
 		}
 	}
 
-	return result, textMatches, nil
+	return result, textMatches, grouped, nil
 }
 
 // rankCardMatches reorders cards based on how well they match the OCR data

@@ -30,6 +30,12 @@ type Card struct {
 	PriceUSD       float64     `json:"price_usd"`      // Backward compat: NM non-foil price
 	PriceFoilUSD   float64     `json:"price_foil_usd"` // Backward compat: NM foil price
 	Prices         []CardPrice `json:"prices,omitempty" gorm:"foreignKey:CardID;references:ID"`
+
+	// MTG variant info (from Scryfall, not persisted)
+	Finishes     []string `json:"finishes,omitempty" gorm:"-"`      // nonfoil, foil, etched
+	FrameEffects []string `json:"frame_effects,omitempty" gorm:"-"` // showcase, borderless, extendedart
+	PromoTypes   []string `json:"promo_types,omitempty" gorm:"-"`   // buyabox, prerelease
+	ReleasedAt   string   `json:"released_at,omitempty" gorm:"-"`   // Set release date
 }
 
 // GetPrice returns the price for a specific condition and printing type.
@@ -170,4 +176,23 @@ type CardSearchResult struct {
 	Cards      []Card `json:"cards"`
 	TotalCount int    `json:"total_count"`
 	HasMore    bool   `json:"has_more"`
+}
+
+// MTGSetGroup represents a set containing variants of a scanned card
+// Used for 2-phase MTG card selection (select set, then select variant)
+type MTGSetGroup struct {
+	SetCode     string `json:"set_code"`
+	SetName     string `json:"set_name"`
+	ReleasedAt  string `json:"released_at,omitempty"`
+	IsBestMatch bool   `json:"is_best_match"`
+	Variants    []Card `json:"variants"`
+}
+
+// MTGGroupedResult is returned for MTG card scans to enable 2-phase selection
+// Phase 1: User selects set from SetGroups
+// Phase 2: User selects variant within the chosen set
+type MTGGroupedResult struct {
+	CardName  string        `json:"card_name"`
+	SetGroups []MTGSetGroup `json:"set_groups"`
+	TotalSets int           `json:"total_sets"`
 }

@@ -1,4 +1,5 @@
 import 'collection_item.dart' show PrintingType;
+import 'mtg_grouped_result.dart';
 
 class CardModel {
   final String id;
@@ -13,6 +14,12 @@ class CardModel {
   final double? priceFoilUsd;
   final String? tcgplayerId;
 
+  // MTG variant info (from Scryfall)
+  final List<String>? finishes; // nonfoil, foil, etched
+  final List<String>? frameEffects; // showcase, borderless, extendedart
+  final List<String>? promoTypes; // buyabox, prerelease
+  final String? releasedAt;
+
   CardModel({
     required this.id,
     required this.game,
@@ -25,6 +32,10 @@ class CardModel {
     this.priceUsd,
     this.priceFoilUsd,
     this.tcgplayerId,
+    this.finishes,
+    this.frameEffects,
+    this.promoTypes,
+    this.releasedAt,
   });
 
   factory CardModel.fromJson(Map<String, dynamic> json) {
@@ -40,6 +51,10 @@ class CardModel {
       priceUsd: (json['price_usd'] as num?)?.toDouble(),
       priceFoilUsd: (json['price_foil_usd'] as num?)?.toDouble(),
       tcgplayerId: json['tcgplayer_id'],
+      finishes: (json['finishes'] as List<dynamic>?)?.cast<String>(),
+      frameEffects: (json['frame_effects'] as List<dynamic>?)?.cast<String>(),
+      promoTypes: (json['promo_types'] as List<dynamic>?)?.cast<String>(),
+      releasedAt: json['released_at'],
     );
   }
 
@@ -54,6 +69,54 @@ class CardModel {
   }
 
   String get displaySet => setName ?? setCode ?? 'Unknown Set';
+
+  /// Returns a human-readable variant label for MTG cards
+  /// e.g., "Foil", "Showcase", "Borderless Foil", "Etched Foil"
+  String get variantLabel {
+    final parts = <String>[];
+
+    // Add frame effects first (showcase, borderless, etc.)
+    if (frameEffects != null) {
+      for (final effect in frameEffects!) {
+        final label = _frameEffectLabel(effect);
+        if (label != null) parts.add(label);
+      }
+    }
+
+    // Add finish (foil, etched)
+    if (finishes != null) {
+      if (finishes!.contains('etched')) {
+        parts.add('Etched Foil');
+      } else if (finishes!.contains('foil') && !finishes!.contains('nonfoil')) {
+        parts.add('Foil');
+      } else if (finishes!.length == 1 && finishes!.contains('nonfoil')) {
+        // Only nonfoil available
+        if (parts.isEmpty) parts.add('Normal');
+      }
+    }
+
+    if (parts.isEmpty) parts.add('Normal');
+    return parts.join(' ');
+  }
+
+  String? _frameEffectLabel(String effect) {
+    switch (effect) {
+      case 'showcase':
+        return 'Showcase';
+      case 'extendedart':
+        return 'Extended Art';
+      case 'borderless':
+        return 'Borderless';
+      case 'retro_frame':
+        return 'Retro Frame';
+      case 'inverted':
+        return 'Inverted';
+      case 'fullart':
+        return 'Full Art';
+      default:
+        return null;
+    }
+  }
 }
 
 class CardSearchResult {
@@ -300,6 +363,7 @@ class ScanResult {
   final bool hasMore;
   final ScanMetadata metadata;
   final SetIconResult? setIcon;
+  final MTGGroupedResult? grouped; // For MTG 2-phase selection
 
   ScanResult({
     required this.cards,
@@ -307,11 +371,13 @@ class ScanResult {
     required this.hasMore,
     required this.metadata,
     this.setIcon,
+    this.grouped,
   });
 
   factory ScanResult.fromJson(Map<String, dynamic> json) {
     final parsedData = json['parsed'];
     final setIconData = json['set_icon'];
+    final groupedData = json['grouped'];
 
     return ScanResult(
       cards:
@@ -326,6 +392,9 @@ class ScanResult {
       ),
       setIcon: setIconData is Map<String, dynamic>
           ? SetIconResult.fromJson(setIconData)
+          : null,
+      grouped: groupedData is Map<String, dynamic>
+          ? MTGGroupedResult.fromJson(groupedData)
           : null,
     );
   }

@@ -34,6 +34,7 @@ A trading card collection tracker for Magic: The Gathering and Pokemon cards wit
 
 - **Card Search**: Search for MTG and Pokemon cards using external APIs
 - **OCR Card Identification**: Upload card images for automatic identification using GPU-accelerated OCR
+- **MTG 2-Phase Selection**: When scanning MTG cards, browse all printings grouped by set and select the exact variant (foil, showcase, borderless, etc.)
 - **Collection Management**: Add, update, and remove cards from your collection
 - **Price Tracking**: View current market prices with automatic refresh and batch updates
 - **TCGPlayerID Sync**: Admin tools to prepopulate Pokemon TCGPlayerIDs for faster pricing

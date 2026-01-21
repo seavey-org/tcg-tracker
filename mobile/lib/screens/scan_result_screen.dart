@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../models/card.dart';
 import '../models/collection_item.dart' show PrintingType;
+import '../models/mtg_grouped_result.dart';
 import '../services/api_service.dart';
 import '../utils/constants.dart';
 import 'confirm_card_screen.dart';
@@ -13,6 +14,7 @@ class ScanResultScreen extends StatefulWidget {
   final SetIconResult? setIcon;
   final ApiService? apiService;
   final List<int>? scannedImageBytes;
+  final MTGGroupedResult? grouped; // For MTG 2-phase selection
 
   const ScanResultScreen({
     super.key,
@@ -23,6 +25,7 @@ class ScanResultScreen extends StatefulWidget {
     this.setIcon,
     this.apiService,
     this.scannedImageBytes,
+    this.grouped,
   });
 
   @override
@@ -39,8 +42,17 @@ class _ScanResultScreenState extends State<ScanResultScreen> {
   bool _isBrowsing = false;
   List<CardModel>? _browseResults;
 
+  // MTG 2-phase selection state
+  MTGSetGroup? _selectedSetGroup;
+
   // Use unified condition codes from constants
   List<String> get _conditions => CardConditions.codes;
+
+  // Check if we should show MTG 2-phase UI
+  bool get _showMTGGroupedUI =>
+      widget.game == 'mtg' &&
+      widget.grouped != null &&
+      widget.grouped!.setGroups.isNotEmpty;
 
   @override
   void initState() {
@@ -823,6 +835,11 @@ class _ScanResultScreenState extends State<ScanResultScreen> {
   Widget build(BuildContext context) {
     final setIcon = widget.setIcon;
 
+    // MTG 2-phase selection UI
+    if (_showMTGGroupedUI) {
+      return _buildMTGGroupedUI(context);
+    }
+
     return Scaffold(
       appBar: AppBar(
         title: Text('Results for "${widget.searchQuery}"'),
@@ -1014,6 +1031,262 @@ class _ScanResultScreenState extends State<ScanResultScreen> {
                 ),
               ],
             ),
+    );
+  }
+
+  // ============================================================
+  // MTG 2-Phase Selection UI
+  // ============================================================
+
+  /// Build the MTG grouped selection UI (2-phase: set selection, then variant selection)
+  Widget _buildMTGGroupedUI(BuildContext context) {
+    final grouped = widget.grouped!;
+
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(
+          _selectedSetGroup != null
+              ? _selectedSetGroup!.setName
+              : grouped.cardName.isNotEmpty
+              ? grouped.cardName
+              : 'Select Set',
+        ),
+        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+        leading: _selectedSetGroup != null
+            ? IconButton(
+                icon: const Icon(Icons.arrow_back),
+                onPressed: () => setState(() => _selectedSetGroup = null),
+              )
+            : null,
+      ),
+      body: _selectedSetGroup != null
+          ? _buildMTGVariantSelection(context, _selectedSetGroup!)
+          : _buildMTGSetSelection(context, grouped),
+    );
+  }
+
+  /// Phase 1: Set selection list
+  Widget _buildMTGSetSelection(BuildContext context, MTGGroupedResult grouped) {
+    return Column(
+      children: [
+        // Info card showing what was detected
+        _buildScanInfoCard(),
+
+        // Header
+        Padding(
+          padding: const EdgeInsets.fromLTRB(16, 8, 16, 8),
+          child: Row(
+            children: [
+              Icon(
+                Icons.collections_bookmark,
+                color: Theme.of(context).colorScheme.primary,
+              ),
+              const SizedBox(width: 8),
+              Text(
+                '${grouped.totalSets} sets found',
+                style: Theme.of(context).textTheme.titleMedium,
+              ),
+            ],
+          ),
+        ),
+
+        // Set list
+        Expanded(
+          child: ListView.builder(
+            itemCount: grouped.setGroups.length,
+            itemBuilder: (context, index) {
+              final setGroup = grouped.setGroups[index];
+              return _buildSetGroupTile(context, setGroup);
+            },
+          ),
+        ),
+      ],
+    );
+  }
+
+  /// Build a single set group tile for Phase 1
+  Widget _buildSetGroupTile(BuildContext context, MTGSetGroup setGroup) {
+    final isBestMatch = setGroup.isBestMatch;
+
+    return Card(
+      margin: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
+      color: isBestMatch
+          ? Theme.of(
+              context,
+            ).colorScheme.primaryContainer.withValues(alpha: 0.5)
+          : null,
+      shape: isBestMatch
+          ? RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(12),
+              side: BorderSide(
+                color: Theme.of(context).colorScheme.primary,
+                width: 2,
+              ),
+            )
+          : null,
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          if (isBestMatch)
+            Container(
+              width: double.infinity,
+              padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+              decoration: BoxDecoration(
+                color: Theme.of(context).colorScheme.primary,
+                borderRadius: const BorderRadius.only(
+                  topLeft: Radius.circular(10),
+                  topRight: Radius.circular(10),
+                ),
+              ),
+              child: Row(
+                children: [
+                  Icon(
+                    Icons.star,
+                    size: 16,
+                    color: Theme.of(context).colorScheme.onPrimary,
+                  ),
+                  const SizedBox(width: 4),
+                  Text(
+                    'Best Match',
+                    style: TextStyle(
+                      color: Theme.of(context).colorScheme.onPrimary,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 12,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ListTile(
+            leading: _buildSetIcon(setGroup.setCode),
+            title: Text(
+              setGroup.setName,
+              style: isBestMatch
+                  ? const TextStyle(fontWeight: FontWeight.bold)
+                  : null,
+            ),
+            subtitle: Text(
+              <String?>[setGroup.variantCountLabel, setGroup.releaseYear]
+                  .whereType<String>()
+                  .where((v) => v.isNotEmpty)
+                  .join(' • '),
+            ),
+            trailing: const Icon(Icons.chevron_right),
+            onTap: () => setState(() => _selectedSetGroup = setGroup),
+          ),
+        ],
+      ),
+    );
+  }
+
+  /// Phase 2: Variant selection within a set
+  Widget _buildMTGVariantSelection(BuildContext context, MTGSetGroup setGroup) {
+    return Column(
+      children: [
+        // Header with set name and variant count
+        Container(
+          padding: const EdgeInsets.all(16),
+          color: Theme.of(context).colorScheme.surfaceContainerHighest,
+          child: Row(
+            children: [
+              _buildSetIcon(setGroup.setCode),
+              const SizedBox(width: 12),
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      setGroup.setName,
+                      style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    Text(
+                      'Select a variant',
+                      style: Theme.of(context).textTheme.bodySmall,
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
+        ),
+
+        // Variant list with images
+        Expanded(
+          child: ListView.builder(
+            itemCount: setGroup.variants.length,
+            itemBuilder: (context, index) {
+              final card = setGroup.variants[index];
+              return _buildVariantTile(context, card);
+            },
+          ),
+        ),
+      ],
+    );
+  }
+
+  /// Build a single variant tile for Phase 2
+  Widget _buildVariantTile(BuildContext context, CardModel card) {
+    return Card(
+      margin: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
+      child: ListTile(
+        leading: card.imageUrl != null
+            ? ClipRRect(
+                borderRadius: BorderRadius.circular(4),
+                child: SizedBox(
+                  width: 50,
+                  child: AspectRatio(
+                    aspectRatio: 2.5 / 3.5,
+                    child: Image.network(
+                      card.imageUrl!,
+                      fit: BoxFit.cover,
+                      errorBuilder: (context, error, stackTrace) =>
+                          const Icon(Icons.image),
+                    ),
+                  ),
+                ),
+              )
+            : const Icon(Icons.image),
+        title: Text(card.variantLabel),
+        subtitle: Text(
+          '${card.cardNumber != null ? "#${card.cardNumber} • " : ""}${card.displayPrice}',
+        ),
+        trailing: IconButton(
+          icon: const Icon(Icons.add_circle),
+          color: Theme.of(context).colorScheme.primary,
+          onPressed: () => _onVariantSelected(card),
+        ),
+        onTap: () => _onVariantSelected(card),
+      ),
+    );
+  }
+
+  /// Handle variant selection in Phase 2
+  Future<void> _onVariantSelected(CardModel card) async {
+    final chosen = await _confirmCard(card);
+    if (chosen != null && mounted) {
+      _showAddDialog(chosen);
+    }
+  }
+
+  /// Build a set icon (uses set code as placeholder)
+  Widget _buildSetIcon(String setCode) {
+    // Could use Scryfall set icon URL in the future:
+    // https://svgs.scryfall.io/sets/${setCode.toLowerCase()}.svg
+    return Container(
+      width: 40,
+      height: 40,
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(4),
+        color: Colors.grey.shade200,
+      ),
+      child: Center(
+        child: Text(
+          setCode.toUpperCase(),
+          style: const TextStyle(fontSize: 10, fontWeight: FontWeight.bold),
+        ),
+      ),
     );
   }
 }

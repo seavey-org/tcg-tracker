@@ -12,7 +12,7 @@ const router = useRouter()
 
 const selectedItem = ref(null)
 const filterGame = ref('all')
-const sortBy = ref('added_at')
+const sortBy = ref('value') // Default to value (price) sorting
 const searchQuery = ref('')
 const refreshMessage = ref(null)
 const refreshing = ref(false)
@@ -263,6 +263,10 @@ const syncFiltersToUrl = () => {
   if (searchQuery.value.trim()) {
     query.q = searchQuery.value.trim()
   }
+  // Only add sort to URL if it's not the default (value)
+  if (sortBy.value !== 'value') {
+    query.sort = sortBy.value
+  }
 
   router.replace({ query })
 }
@@ -271,6 +275,7 @@ const syncFiltersToUrl = () => {
 watch(filters, syncFiltersToUrl, { deep: true })
 watch(filterGame, syncFiltersToUrl)
 watch(searchQuery, syncFiltersToUrl)
+watch(sortBy, syncFiltersToUrl)
 
 // Initialize filters from URL on mount
 const initFiltersFromUrl = () => {
@@ -289,6 +294,11 @@ const initFiltersFromUrl = () => {
 
   if (q.q) {
     searchQuery.value = q.q
+  }
+
+  // Read sort from URL, default to 'value' if not specified
+  if (q.sort && ['added_at', 'name', 'value', 'price_updated'].includes(q.sort)) {
+    sortBy.value = q.sort
   }
 }
 

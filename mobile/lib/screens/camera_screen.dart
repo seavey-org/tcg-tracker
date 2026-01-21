@@ -282,6 +282,7 @@ class _CameraScreenState extends State<CameraScreen> {
             scanMetadata: result.metadata,
             setIcon: result.setIcon,
             scannedImageBytes: imageBytesAsList,
+            grouped: result.grouped, // For MTG 2-phase selection
           ),
         ),
       );

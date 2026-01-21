@@ -300,6 +300,28 @@ Two OCR processing paths are available:
    - Check availability via `/cards/ocr-status`
 2. **Client-side OCR** (fallback): If server OCR unavailable → Mobile uses Google ML Kit locally → Sends extracted text to `/cards/identify`
 
+### MTG 2-Phase Card Selection
+MTG cards often have many printings across different sets. The 2-phase selection UI helps users pick the exact printing:
+
+**How it works:**
+1. Scan returns a `grouped` field containing cards organized by set
+2. **Phase 1**: User sees list of sets containing the card, sorted by:
+   - Best match first (set code from OCR)
+   - Then by release date (newest first)
+3. **Phase 2**: User taps a set to see all variants (foil, showcase, borderless, etc.)
+4. User selects the exact variant to add to collection
+
+**Backend changes:**
+- `ScryfallService.SearchCardPrintings()` - Fetches all printings of a card by exact name
+- `ScryfallService.GetCardBySetAndNumber()` - Exact lookup by set code and collector number
+- `GroupCardsBySet()` - Groups flat card list into `MTGGroupedResult` for 2-phase UI
+- Card model now includes variant info: `Finishes`, `FrameEffects`, `PromoTypes`, `ReleasedAt`
+
+**Mobile changes:**
+- `MTGGroupedResult` and `MTGSetGroup` models for parsing grouped response
+- `ScanResultScreen` shows 2-phase UI when `grouped` data is present
+- `CardModel.variantLabel` computes human-readable variant labels (e.g., "Borderless Foil")
+
 ### Collection Grouping and Smart Updates
 The collection supports two viewing modes:
 1. **Flat list** (`GET /collection`) - Returns individual collection items

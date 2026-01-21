@@ -12,8 +12,23 @@ const priceStatus = ref(null)
 const priceStatusError = ref(null)
 const selectedItem = ref(null)
 
-const recentCards = computed(() => {
-  return store.items.slice(0, 12)
+// Get the appropriate price for a collection item based on its printing
+const getItemPrice = (item) => {
+  if (!item.card) return 0
+  const printing = item.printing || 'Normal'
+  // Use foil price for foil variants (Foil, 1st Edition, Reverse Holofoil)
+  const useFoilPrice = ['Foil', '1st Edition', 'Reverse Holofoil'].includes(printing)
+  if (useFoilPrice) {
+    return item.card.price_foil_usd || item.card.price_usd || 0
+  }
+  return item.card.price_usd || 0
+}
+
+// Show most valuable cards, sorted by price (high to low)
+const topValueCards = computed(() => {
+  return [...store.items]
+    .sort((a, b) => getItemPrice(b) - getItemPrice(a))
+    .slice(0, 12)
 })
 
 const quotaRemaining = computed(() => {
@@ -206,7 +221,7 @@ const handlePriceUpdated = (updatedCard) => {
 
     <div>
       <div class="flex justify-between items-center mb-4">
-        <h2 class="text-xl font-semibold text-gray-800 dark:text-white">Recent Additions</h2>
+        <h2 class="text-xl font-semibold text-gray-800 dark:text-white">Most Valuable Cards</h2>
         <router-link to="/collection" class="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300">
           View All &rarr;
         </router-link>
@@ -216,7 +231,7 @@ const handlePriceUpdated = (updatedCard) => {
         <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto"></div>
       </div>
 
-      <div v-else-if="recentCards.length === 0" class="text-center py-12 bg-white dark:bg-gray-800 rounded-lg">
+      <div v-else-if="topValueCards.length === 0" class="text-center py-12 bg-white dark:bg-gray-800 rounded-lg">
         <p class="text-gray-500 dark:text-gray-400 mb-4">Your collection is empty</p>
         <router-link
           to="/add"
@@ -228,7 +243,7 @@ const handlePriceUpdated = (updatedCard) => {
 
       <CardGrid
         v-else
-        :cards="recentCards"
+        :cards="topValueCards"
         :show-quantity="true"
         @select="handleSelect"
       />
