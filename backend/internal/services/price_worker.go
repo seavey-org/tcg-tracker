@@ -455,6 +455,7 @@ func (w *PriceWorker) batchUpdatePrices(cards []models.Card) (int, error) {
 
 	// Save results
 	updated := 0
+	now := time.Now()
 	for cardID, prices := range result.Prices {
 		if len(prices) == 0 {
 			continue
@@ -480,10 +481,12 @@ func (w *PriceWorker) batchUpdatePrices(cards []models.Card) (int, error) {
 				} else {
 					card.PriceUSD = p.PriceUSD
 				}
-				card.PriceUpdatedAt = p.PriceUpdatedAt
 				card.PriceSource = p.Source
 			}
 		}
+
+		// Always update timestamp when we fetch prices (even if no NM prices returned)
+		card.PriceUpdatedAt = &now
 
 		db.Save(card)
 		updated++
