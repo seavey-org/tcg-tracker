@@ -23,6 +23,7 @@ type CollectionItem struct {
 	Quantity         int          `json:"quantity" gorm:"default:1"`
 	Condition        Condition    `json:"condition" gorm:"default:'NM'"`
 	Printing         PrintingType `json:"printing" gorm:"default:'Normal'"`
+	Language         CardLanguage `json:"language" gorm:"default:'English'"`
 	Notes            string       `json:"notes"`
 	AddedAt          time.Time    `json:"added_at"`
 	ScannedImagePath string       `json:"scanned_image_path" gorm:"default:null"`
@@ -43,6 +44,7 @@ type AddToCollectionRequest struct {
 	Quantity         int          `json:"quantity"`
 	Condition        Condition    `json:"condition"`
 	Printing         PrintingType `json:"printing"`
+	Language         CardLanguage `json:"language"`
 	Notes            string       `json:"notes"`
 	ScannedImageData string       `json:"scanned_image_data,omitempty"` // base64 encoded
 }
@@ -51,6 +53,7 @@ type UpdateCollectionRequest struct {
 	Quantity  *int          `json:"quantity"`
 	Condition *Condition    `json:"condition"`
 	Printing  *PrintingType `json:"printing"`
+	Language  *CardLanguage `json:"language"`
 	Notes     *string       `json:"notes"`
 }
 
@@ -61,10 +64,11 @@ type CollectionUpdateResponse struct {
 	Message   string         `json:"message,omitempty"`
 }
 
-// CollectionVariant summarizes items with same printing+condition
+// CollectionVariant summarizes items with same printing+condition+language
 type CollectionVariant struct {
 	Printing   PrintingType `json:"printing"`
 	Condition  Condition    `json:"condition"`
+	Language   CardLanguage `json:"language"`
 	Quantity   int          `json:"quantity"`
 	Value      float64      `json:"value"`
 	HasScans   bool         `json:"has_scans"`

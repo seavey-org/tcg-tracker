@@ -168,6 +168,25 @@ func (s *SnapshotService) calculateStats() models.CollectionStats {
 						END
 					 )
 					 AND cp.printing = collection_items.printing
+					 AND cp.language = COALESCE(NULLIF(collection_items.language, ''), 'English')
+					 LIMIT 1),
+					(SELECT cp.price_usd FROM card_prices cp
+					 WHERE cp.card_id = cards.id
+					 AND cp.condition = (
+						CASE collection_items.condition
+							WHEN 'M' THEN 'NM'
+							WHEN 'NM' THEN 'NM'
+							WHEN 'EX' THEN 'LP'
+							WHEN 'LP' THEN 'LP'
+							WHEN 'GD' THEN 'MP'
+							WHEN 'PL' THEN 'HP'
+							WHEN 'PR' THEN 'DMG'
+							ELSE 'NM'
+						END
+					 )
+					 AND cp.printing = collection_items.printing
+					 AND cp.language = 'English'
+					 AND COALESCE(NULLIF(collection_items.language, ''), 'English') != 'English'
 					 LIMIT 1),
 					CASE
 						WHEN collection_items.printing IN ('Foil', '1st Edition', 'Reverse Holofoil')

@@ -185,9 +185,9 @@ func (s *PriceService) saveCardPrices(cardID string, prices []models.CardPrice) 
 		prices[i].CardID = cardID
 	}
 
-	// Bulk upsert: insert or update on conflict with unique index (card_id, condition, printing)
+	// Bulk upsert: insert or update on conflict with unique index (card_id, condition, printing, language)
 	err := s.db.Clauses(clause.OnConflict{
-		Columns:   []clause.Column{{Name: "card_id"}, {Name: "condition"}, {Name: "printing"}},
+		Columns:   []clause.Column{{Name: "card_id"}, {Name: "condition"}, {Name: "printing"}, {Name: "language"}},
 		DoUpdates: clause.AssignmentColumns([]string{"price_usd", "source", "price_updated_at", "updated_at"}),
 	}).Create(&prices).Error
 

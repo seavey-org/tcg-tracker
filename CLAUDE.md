@@ -102,6 +102,7 @@ Environment variables:
 - `HOST` - Bind address (default: 127.0.0.1)
 - `PORT` - Server port (default: 8099)
 - `USE_GPU` - Enable GPU acceleration (default: 1)
+- `OCR_LANGUAGES` - Comma-separated language codes (default: "ja,en"). Note: Japanese can only be combined with English due to EasyOCR constraints; for European languages use "en,de,fr,it"
 
 ## Key Backend Services
 
@@ -197,22 +198,23 @@ Optional admin key authentication protects collection modification endpoints:
 - Frontend/mobile prompt for key on 401 response, store in localStorage/SecureStorage
 
 ### Price Caching
-- Condition and printing-specific prices (NM, LP, MP, HP, DMG) stored in `card_prices` table
-- Prices keyed by card_id + condition + printing (Normal, Foil, 1st Edition, etc.)
+- Condition, printing, and language-specific prices (NM, LP, MP, HP, DMG) stored in `card_prices` table
+- Prices keyed by card_id + condition + printing + language (English, Japanese, German, French, Italian)
 - Base prices (NM only) kept in `cards` table for backward compatibility
 - All prices come from JustTCG API (no fallback to other sources for uniform data)
 - `PriceService` returns cached data only (no live API calls)
-- `Card.GetPrice()` fallback chain (handles holo-only cards and WotC-era cards):
-  1. Exact condition+printing match from `card_prices`
-  2. NM price for same printing (if condition is not NM)
-  3. Printing-specific fallback:
+- `Card.GetPrice()` fallback chain (handles holo-only cards, WotC-era cards, and foreign cards):
+  1. Exact condition+printing+language match from `card_prices`
+  2. NM price for same printing and language (if condition is not NM)
+  3. Printing-specific fallback within same language:
      - Foil -> Normal (for holo-only cards where JustTCG stores price as "Normal")
      - Reverse Holo -> Normal (parallel version of Normal card, NOT related to Holo Rare)
      - Normal -> Unlimited (for WotC-era cards)
      - Unlimited -> Normal (for modern cards)
      - 1st Edition -> Unlimited -> Normal (WotC-era, different print run, NOT a foil)
-  4. Base prices (`PriceFoilUSD` for foil variants, `PriceUSD` otherwise)
-  5. Final cross-fallback if primary base price is zero
+  4. If non-English language has no price, fall back to English prices
+  5. Base prices (`PriceFoilUSD` for foil variants, `PriceUSD` otherwise)
+  6. Final cross-fallback if primary base price is zero
 - Viewing card prices (`GET /cards/:id/prices`) auto-queues refresh if stale
 
 ### Price Worker
@@ -263,6 +265,7 @@ The `OCRParser` extracts from scanned card images:
 - HP value (Pokemon)
 - Foil indicators (V, VMAX, VSTAR, GX, EX, holo, full art, etc.)
 - Rarity (Illustration Rare, Secret Rare, etc.)
+- Detected language (Japanese, German, French, Italian, or English default)
 
 Matching priority:
 1. Exact match by set code + card number
@@ -351,7 +354,7 @@ Response includes `operation` field: `"updated"`, `"split"`, or `"merged"`
 
 **Add to Collection Logic:**
 - Cards with scanned images always create individual entries (qty=1)
-- Non-scanned cards merge into existing stacks with matching card_id+condition+printing
+- Non-scanned cards merge into existing stacks with matching card_id+condition+printing+language
 
 ### Frontend Serving
 The Go backend can serve the Vue.js frontend from `FRONTEND_DIST_PATH`:
@@ -362,8 +365,8 @@ The Go backend can serve the Vue.js frontend from `FRONTEND_DIST_PATH`:
 
 SQLite database with GORM models in `internal/models/`:
 - `Card` - Card data with prices, images, metadata
-- `CardPrice` - Condition and printing-specific prices (NM, LP, MP, HP, DMG) for each card/printing combo
-- `CollectionItem` - User's collection entries with quantity, condition, printing type
+- `CardPrice` - Condition, printing, and language-specific prices (NM, LP, MP, HP, DMG) for each card/printing/language combo
+- `CollectionItem` - User's collection entries with quantity, condition, printing type, and language
 
 ### Printing Types
 Cards support multiple printing variants via the `PrintingType` enum:

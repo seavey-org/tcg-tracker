@@ -6,6 +6,13 @@ import (
 	"sort"
 	"strconv"
 	"strings"
+	"unicode"
+)
+
+var (
+	germanKpPattern  = regexp.MustCompile(`\b(\d{2,3})\s*KP\b|\bKP\s*(\d{2,3})\b`)
+	frenchPvPattern  = regexp.MustCompile(`\b(\d{2,3})\s*PV\b|\bPV\s*(\d{2,3})\b`)
+	italianPsPattern = regexp.MustCompile(`\b(\d{2,3})\s*PS\b|\bPS\s*(\d{2,3})\b`)
 )
 
 // parseInt safely parses an integer, returning 0 on failure
@@ -34,6 +41,7 @@ type OCRResult struct {
 	HP                 string             `json:"hp"`                   // e.g., "170" from "HP 170"
 	Rarity             string             `json:"rarity"`               // if detected
 	MatchReason        string             `json:"match_reason"`         // how set was determined: "set_code", "set_name", "set_total", "inferred"
+	DetectedLanguage   string             `json:"detected_language"`    // e.g., "English", "Japanese", "German", etc.
 	Confidence         float64            `json:"confidence"`           // 0-1 based on how much we extracted
 	IsFoil             bool               `json:"is_foil"`              // detected foil indicators (conservative)
 	IsFirstEdition     bool               `json:"is_first_edition"`     // detected first edition
@@ -876,6 +884,9 @@ func parsePokemonOCR(result *OCRResult) {
 
 	// Extract card name - usually first substantial line or after HP
 	result.CardName = extractPokemonCardName(result.AllLines, result.Rarity)
+
+	// Detect language from OCR text (Japanese, German, French, Italian, or English)
+	result.DetectedLanguage = detectLanguage(text)
 }
 
 // detectFoilIndicators checks for foil/holographic card indicators
@@ -1352,6 +1363,9 @@ func parseMTGOCR(result *OCRResult) {
 
 	// Card name is typically the first line
 	result.CardName = extractMTGCardName(result.AllLines)
+
+	// Detect language from OCR text (Japanese, German, French, Italian, or English)
+	result.DetectedLanguage = detectLanguage(text)
 }
 
 func extractMTGCardName(lines []string) string {
@@ -1732,4 +1746,155 @@ func detectSetFromPTCGO(result *OCRResult, upperText string) {
 			return
 		}
 	}
+}
+
+// detectLanguage detects the card's language from OCR text.
+// Uses multiple signals: Japanese characters, HP text variations, and common words.
+//
+// Detection priority:
+// 1. Japanese (CJK characters) - most reliable, distinct character set
+// 2. German (KP for HP) - unique HP abbreviation
+// 3. French (PV for HP) - unique HP abbreviation
+// 4. Italian (PS for HP) - unique HP abbreviation
+// 5. English - default if no other language detected
+func detectLanguage(text string) string {
+	upperText := strings.ToUpper(text)
+
+	// Check for Japanese (hiragana, katakana, or kanji)
+	// This is the most reliable signal since Japanese uses distinct character sets
+	if containsJapaneseCharacters(text) {
+		return "Japanese"
+	}
+
+	// Check for German: "KP" is used for HP (Kraftpunkte)
+	// Must be careful not to match "KP" in other contexts
+	if containsGermanIndicators(upperText) {
+		return "German"
+	}
+
+	// Check for French: "PV" is used for HP (Points de Vie)
+	if containsFrenchIndicators(upperText) {
+		return "French"
+	}
+
+	// Check for Italian: "PS" is used for HP (Punti Salute)
+	if containsItalianIndicators(upperText) {
+		return "Italian"
+	}
+
+	// Default to English
+	return "English"
+}
+
+// containsJapaneseCharacters checks if text contains Japanese characters
+// (hiragana, katakana, or CJK unified ideographs/kanji)
+func containsJapaneseCharacters(text string) bool {
+	for _, r := range text {
+		// Hiragana range: U+3040 - U+309F
+		// Katakana range: U+30A0 - U+30FF
+		// CJK Unified Ideographs: U+4E00 - U+9FFF (includes kanji)
+		if unicode.Is(unicode.Hiragana, r) ||
+			unicode.Is(unicode.Katakana, r) ||
+			unicode.Is(unicode.Han, r) {
+			return true
+		}
+	}
+	return false
+}
+
+// containsGermanIndicators checks for German card indicators
+// German cards use "KP" for HP (Kraftpunkte) and German Pokemon names
+func containsGermanIndicators(upperText string) bool {
+	// German HP pattern: "KP" followed by or preceded by a number
+	// e.g., "120 KP", "KP 120"
+	if germanKpPattern.MatchString(upperText) {
+		return true
+	}
+
+	// German energy types
+	germanIndicators := []string{
+		"FEUER-ENERGIE",    // Fire Energy
+		"WASSER-ENERGIE",   // Water Energy
+		"PFLANZEN-ENERGIE", // Grass Energy
+		"ELEKTRO-ENERGIE",  // Electric Energy
+		"PSYCHO-ENERGIE",   // Psychic Energy
+		"KAMPF-ENERGIE",    // Fighting Energy
+		"FINSTERNIS",       // Darkness
+		"METALL-ENERGIE",   // Metal Energy
+		"RÜCKZUG",          // Retreat (Rückzugskosten = retreat cost)
+	}
+
+	for _, indicator := range germanIndicators {
+		if strings.Contains(upperText, indicator) {
+			return true
+		}
+	}
+
+	return false
+}
+
+// containsFrenchIndicators checks for French card indicators
+// French cards use "PV" for HP (Points de Vie)
+func containsFrenchIndicators(upperText string) bool {
+	// French HP pattern: "PV" followed by or preceded by a number
+	// e.g., "120 PV", "PV 120"
+	if frenchPvPattern.MatchString(upperText) {
+		return true
+	}
+
+	// French energy types and common words
+	frenchIndicators := []string{
+		"ÉNERGIE",    // Energy (with accent)
+		"ENERGIE",    // Energy (without accent, OCR may miss it)
+		"FEU",        // Fire
+		"EAU",        // Water
+		"PLANTE",     // Grass
+		"ÉLECTRIQUE", // Electric
+		"PSY",        // Psychic
+		"COMBAT",     // Fighting
+		"OBSCURITÉ",  // Darkness
+		"MÉTAL",      // Metal
+		"RETRAITE",   // Retreat
+	}
+
+	for _, indicator := range frenchIndicators {
+		if strings.Contains(upperText, indicator) {
+			return true
+		}
+	}
+
+	return false
+}
+
+// containsItalianIndicators checks for Italian card indicators
+// Italian cards use "PS" for HP (Punti Salute)
+func containsItalianIndicators(upperText string) bool {
+	// Italian HP pattern: "PS" followed by or preceded by a number
+	// e.g., "120 PS", "PS 120"
+	// Note: Need to be careful as "PS" could appear in other contexts
+	if italianPsPattern.MatchString(upperText) {
+		return true
+	}
+
+	// Italian energy types and common words
+	italianIndicators := []string{
+		"ENERGIA",  // Energy
+		"FUOCO",    // Fire
+		"ACQUA",    // Water
+		"ERBA",     // Grass
+		"ELETTRO",  // Electric
+		"PSICO",    // Psychic
+		"LOTTA",    // Fighting
+		"OSCURITÀ", // Darkness
+		"METALLO",  // Metal
+		"RITIRATA", // Retreat
+	}
+
+	for _, indicator := range italianIndicators {
+		if strings.Contains(upperText, indicator) {
+			return true
+		}
+	}
+
+	return false
 }

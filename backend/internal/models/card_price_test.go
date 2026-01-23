@@ -67,11 +67,11 @@ func TestCardGetPrice(t *testing.T) {
 		PriceUSD:     10.00,
 		PriceFoilUSD: 20.00,
 		Prices: []CardPrice{
-			{Condition: PriceConditionNM, Printing: PrintingNormal, PriceUSD: 10.00},
-			{Condition: PriceConditionNM, Printing: PrintingFoil, PriceUSD: 20.00},
-			{Condition: PriceConditionLP, Printing: PrintingNormal, PriceUSD: 8.00},
-			{Condition: PriceConditionLP, Printing: PrintingFoil, PriceUSD: 16.00},
-			{Condition: PriceConditionMP, Printing: PrintingNormal, PriceUSD: 6.00},
+			{Condition: PriceConditionNM, Printing: PrintingNormal, Language: LanguageEnglish, PriceUSD: 10.00},
+			{Condition: PriceConditionNM, Printing: PrintingFoil, Language: LanguageEnglish, PriceUSD: 20.00},
+			{Condition: PriceConditionLP, Printing: PrintingNormal, Language: LanguageEnglish, PriceUSD: 8.00},
+			{Condition: PriceConditionLP, Printing: PrintingFoil, Language: LanguageEnglish, PriceUSD: 16.00},
+			{Condition: PriceConditionMP, Printing: PrintingNormal, Language: LanguageEnglish, PriceUSD: 6.00},
 		},
 	}
 
@@ -94,11 +94,58 @@ func TestCardGetPrice(t *testing.T) {
 
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			result := card.GetPrice(tt.condition, tt.printing)
+			result := card.GetPrice(tt.condition, tt.printing, LanguageEnglish)
 			if result != tt.expected {
-				t.Errorf("GetPrice(%s, %s) = %f, want %f", tt.condition, tt.printing, result, tt.expected)
+				t.Errorf("GetPrice(%s, %s, English) = %f, want %f", tt.condition, tt.printing, result, tt.expected)
 			}
 		})
+	}
+}
+
+func TestCardGetPriceLanguageFallbackToEnglish(t *testing.T) {
+	card := Card{
+		PriceUSD:     0,
+		PriceFoilUSD: 0,
+		Prices: []CardPrice{
+			{Condition: PriceConditionNM, Printing: PrintingNormal, Language: LanguageEnglish, PriceUSD: 10.00},
+			{Condition: PriceConditionLP, Printing: PrintingNormal, Language: LanguageEnglish, PriceUSD: 8.00},
+		},
+	}
+
+	// No Japanese prices exist, should fall back to English card_prices.
+	if got := card.GetPrice(PriceConditionNM, PrintingNormal, LanguageJapanese); got != 10.00 {
+		t.Errorf("GetPrice(NM, Normal, Japanese) = %f, want %f", got, 10.00)
+	}
+	if got := card.GetPrice(PriceConditionLP, PrintingNormal, LanguageJapanese); got != 8.00 {
+		t.Errorf("GetPrice(LP, Normal, Japanese) = %f, want %f", got, 8.00)
+	}
+}
+
+func TestNormalizeLanguage(t *testing.T) {
+	tests := []struct {
+		in   string
+		want CardLanguage
+	}{
+		{"English", LanguageEnglish},
+		{"en", LanguageEnglish},
+		{"", LanguageEnglish},
+		{"Japanese", LanguageJapanese},
+		{"ja", LanguageJapanese},
+		{"JP", LanguageJapanese},
+		{"German", LanguageGerman},
+		{"de", LanguageGerman},
+		{"ger", LanguageGerman},
+		{"French", LanguageFrench},
+		{"fr", LanguageFrench},
+		{"Italian", LanguageItalian},
+		{"it", LanguageItalian},
+		{"unknown", LanguageEnglish},
+	}
+
+	for _, tt := range tests {
+		if got := NormalizeLanguage(tt.in); got != tt.want {
+			t.Errorf("NormalizeLanguage(%q) = %q, want %q", tt.in, got, tt.want)
+		}
 	}
 }
 
@@ -113,10 +160,10 @@ func TestCardGetPriceWotCCard(t *testing.T) {
 		PriceUSD:     0.89,   // Base price from Unlimited
 		PriceFoilUSD: 100.00, // Base foil price (1st Edition is NOT a foil variant)
 		Prices: []CardPrice{
-			{Condition: PriceConditionNM, Printing: PrintingUnlimited, PriceUSD: 0.89},
-			{Condition: PriceConditionLP, Printing: PrintingUnlimited, PriceUSD: 0.50},
-			{Condition: PriceConditionNM, Printing: Printing1stEdition, PriceUSD: 100.00},
-			{Condition: PriceConditionLP, Printing: Printing1stEdition, PriceUSD: 80.00},
+			{Condition: PriceConditionNM, Printing: PrintingUnlimited, Language: LanguageEnglish, PriceUSD: 0.89},
+			{Condition: PriceConditionLP, Printing: PrintingUnlimited, Language: LanguageEnglish, PriceUSD: 0.50},
+			{Condition: PriceConditionNM, Printing: Printing1stEdition, Language: LanguageEnglish, PriceUSD: 100.00},
+			{Condition: PriceConditionLP, Printing: Printing1stEdition, Language: LanguageEnglish, PriceUSD: 80.00},
 		},
 	}
 
@@ -140,9 +187,9 @@ func TestCardGetPriceWotCCard(t *testing.T) {
 
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			result := wotcCard.GetPrice(tt.condition, tt.printing)
+			result := wotcCard.GetPrice(tt.condition, tt.printing, LanguageEnglish)
 			if result != tt.expected {
-				t.Errorf("GetPrice(%s, %s) = %f, want %f", tt.condition, tt.printing, result, tt.expected)
+				t.Errorf("GetPrice(%s, %s, English) = %f, want %f", tt.condition, tt.printing, result, tt.expected)
 			}
 		})
 	}
@@ -160,9 +207,9 @@ func TestCardGetPrice1stEditionFallback(t *testing.T) {
 		PriceUSD:     0.68,   // Base NM Normal price
 		PriceFoilUSD: 160.25, // Base foil price (expensive holo version)
 		Prices: []CardPrice{
-			{Condition: PriceConditionNM, Printing: PrintingNormal, PriceUSD: 0.68},
-			{Condition: PriceConditionLP, Printing: PrintingNormal, PriceUSD: 0.50},
-			{Condition: PriceConditionNM, Printing: PrintingFoil, PriceUSD: 160.25},
+			{Condition: PriceConditionNM, Printing: PrintingNormal, Language: LanguageEnglish, PriceUSD: 0.68},
+			{Condition: PriceConditionLP, Printing: PrintingNormal, Language: LanguageEnglish, PriceUSD: 0.50},
+			{Condition: PriceConditionNM, Printing: PrintingFoil, Language: LanguageEnglish, PriceUSD: 160.25},
 		},
 	}
 
@@ -182,9 +229,9 @@ func TestCardGetPrice1stEditionFallback(t *testing.T) {
 
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			result := card.GetPrice(tt.condition, tt.printing)
+			result := card.GetPrice(tt.condition, tt.printing, LanguageEnglish)
 			if result != tt.expected {
-				t.Errorf("GetPrice(%s, %s) = %f, want %f", tt.condition, tt.printing, result, tt.expected)
+				t.Errorf("GetPrice(%s, %s, English) = %f, want %f", tt.condition, tt.printing, result, tt.expected)
 			}
 		})
 	}
@@ -202,9 +249,9 @@ func TestCardGetPriceReverseHoloFallback(t *testing.T) {
 		PriceUSD:     1.46,   // Base NM Normal price
 		PriceFoilUSD: 177.00, // Holo Rare price (completely different variant)
 		Prices: []CardPrice{
-			{Condition: PriceConditionNM, Printing: PrintingNormal, PriceUSD: 1.46},
-			{Condition: PriceConditionLP, Printing: PrintingNormal, PriceUSD: 1.00},
-			{Condition: PriceConditionNM, Printing: PrintingFoil, PriceUSD: 177.00},
+			{Condition: PriceConditionNM, Printing: PrintingNormal, Language: LanguageEnglish, PriceUSD: 1.46},
+			{Condition: PriceConditionLP, Printing: PrintingNormal, Language: LanguageEnglish, PriceUSD: 1.00},
+			{Condition: PriceConditionNM, Printing: PrintingFoil, Language: LanguageEnglish, PriceUSD: 177.00},
 		},
 	}
 
@@ -226,9 +273,9 @@ func TestCardGetPriceReverseHoloFallback(t *testing.T) {
 
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			result := card.GetPrice(tt.condition, tt.printing)
+			result := card.GetPrice(tt.condition, tt.printing, LanguageEnglish)
 			if result != tt.expected {
-				t.Errorf("GetPrice(%s, %s) = %f, want %f", tt.condition, tt.printing, result, tt.expected)
+				t.Errorf("GetPrice(%s, %s, English) = %f, want %f", tt.condition, tt.printing, result, tt.expected)
 			}
 		})
 	}
@@ -246,8 +293,8 @@ func TestCardGetPriceHoloOnlyCard(t *testing.T) {
 		PriceFoilUSD: 0,     // No separate foil price (it's the only variant)
 		Prices: []CardPrice{
 			// JustTCG only returns "Normal" printing for holo-only cards
-			{Condition: PriceConditionNM, Printing: PrintingNormal, PriceUSD: 18.84},
-			{Condition: PriceConditionLP, Printing: PrintingNormal, PriceUSD: 15.00},
+			{Condition: PriceConditionNM, Printing: PrintingNormal, Language: LanguageEnglish, PriceUSD: 18.84},
+			{Condition: PriceConditionLP, Printing: PrintingNormal, Language: LanguageEnglish, PriceUSD: 15.00},
 		},
 	}
 
@@ -268,9 +315,9 @@ func TestCardGetPriceHoloOnlyCard(t *testing.T) {
 
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			result := holoOnlyCard.GetPrice(tt.condition, tt.printing)
+			result := holoOnlyCard.GetPrice(tt.condition, tt.printing, LanguageEnglish)
 			if result != tt.expected {
-				t.Errorf("GetPrice(%s, %s) = %f, want %f", tt.condition, tt.printing, result, tt.expected)
+				t.Errorf("GetPrice(%s, %s, English) = %f, want %f", tt.condition, tt.printing, result, tt.expected)
 			}
 		})
 	}

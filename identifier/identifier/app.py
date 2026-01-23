@@ -4,6 +4,16 @@ Minimal identifier service providing OCR text extraction via EasyOCR.
 This service is called by the Go backend for server-side OCR when the mobile app
 uploads card images. It uses EasyOCR with GPU acceleration for fast text extraction.
 
+Supports multi-language OCR via OCR_LANGUAGES env var. Default: Japanese + English.
+Note: EasyOCR has language compatibility constraints:
+  - Japanese (ja) can ONLY be combined with English
+  - Latin scripts (en, de, fr, it) can be combined freely but NOT with Japanese
+
+Examples:
+  OCR_LANGUAGES="ja,en"        # Japanese + English (default, for scanning both)
+  OCR_LANGUAGES="en,de,fr,it"  # European languages only (no Japanese)
+  OCR_LANGUAGES="en"           # English only
+
 Endpoints:
 - GET /health - Service health check with GPU status
 - POST /ocr - Extract text from base64-encoded image
@@ -24,6 +34,7 @@ from .ocr_engine import (
     init_ocr_engine,
     downscale_image,
     get_gpu_info,
+    DEFAULT_LANGUAGES,
 )
 
 
@@ -31,13 +42,22 @@ APP_HOST = os.getenv("HOST", "127.0.0.1")
 APP_PORT = int(os.getenv("PORT", "8099"))
 USE_GPU = os.getenv("USE_GPU", "1") == "1"
 
+# Parse OCR_LANGUAGES from env var (comma-separated) or use defaults
+# See module docstring for language compatibility constraints
+_ocr_languages_env = os.getenv("OCR_LANGUAGES", "")
+OCR_LANGUAGES = (
+    [lang.strip() for lang in _ocr_languages_env.split(",") if lang.strip()]
+    if _ocr_languages_env
+    else DEFAULT_LANGUAGES
+)
+
 app = FastAPI(title="tcg-identifier")
 
 # Initialize OCR engine eagerly at startup to avoid first-request latency
 # This will fail fast if EasyOCR cannot be initialized (e.g., missing dependencies)
-print("[app] Initializing OCR engine...")
-ocr_engine = init_ocr_engine(use_gpu=USE_GPU)
-print(f"[app] OCR engine ready (GPU={ocr_engine.use_gpu})")
+print(f"[app] Initializing OCR engine (languages={OCR_LANGUAGES})...")
+ocr_engine = init_ocr_engine(use_gpu=USE_GPU, languages=OCR_LANGUAGES)
+print(f"[app] OCR engine ready (GPU={ocr_engine.use_gpu}, languages={OCR_LANGUAGES})")
 
 
 class OCRRequest(BaseModel):
@@ -52,7 +72,7 @@ def health() -> dict[str, Any]:
     """
     Health check endpoint.
     
-    Returns service status and GPU information for monitoring.
+    Returns service status, GPU information, and language configuration for monitoring.
     """
     gpu_info = get_gpu_info()
     return {
@@ -60,6 +80,7 @@ def health() -> dict[str, Any]:
         "ocr_engine": "easyocr",
         "ocr_engine_ready": ocr_engine is not None,
         "ocr_using_gpu": ocr_engine.use_gpu if ocr_engine else False,
+        "ocr_languages": OCR_LANGUAGES,
         "gpu_available": gpu_info.get("available", False),
         "gpu_name": gpu_info.get("device_name"),
     }

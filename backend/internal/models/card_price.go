@@ -1,6 +1,7 @@
 package models
 
 import (
+	"strings"
 	"time"
 )
 
@@ -27,6 +28,28 @@ const (
 	PrintingReverseHolo PrintingType = "Reverse Holofoil"
 )
 
+// CardLanguage represents the language/region of a card
+type CardLanguage string
+
+const (
+	LanguageEnglish  CardLanguage = "English"
+	LanguageJapanese CardLanguage = "Japanese"
+	LanguageGerman   CardLanguage = "German"
+	LanguageFrench   CardLanguage = "French"
+	LanguageItalian  CardLanguage = "Italian"
+)
+
+// AllCardLanguages returns all supported card languages
+func AllCardLanguages() []CardLanguage {
+	return []CardLanguage{
+		LanguageEnglish,
+		LanguageJapanese,
+		LanguageGerman,
+		LanguageFrench,
+		LanguageItalian,
+	}
+}
+
 // AllPrintingTypes returns all valid printing types
 func AllPrintingTypes() []PrintingType {
 	return []PrintingType{
@@ -44,12 +67,13 @@ func (p PrintingType) IsFoilVariant() bool {
 	return p == PrintingFoil || p == PrintingReverseHolo
 }
 
-// CardPrice stores condition and printing-specific prices for a card
+// CardPrice stores condition, printing, and language-specific prices for a card
 type CardPrice struct {
 	ID             uint           `json:"id" gorm:"primaryKey"`
-	CardID         string         `json:"card_id" gorm:"not null;uniqueIndex:idx_card_cond_print"`
-	Condition      PriceCondition `json:"condition" gorm:"not null;uniqueIndex:idx_card_cond_print"`
-	Printing       PrintingType   `json:"printing" gorm:"not null;uniqueIndex:idx_card_cond_print;default:'Normal'"`
+	CardID         string         `json:"card_id" gorm:"not null;uniqueIndex:idx_card_cond_print_lang"`
+	Condition      PriceCondition `json:"condition" gorm:"not null;uniqueIndex:idx_card_cond_print_lang"`
+	Printing       PrintingType   `json:"printing" gorm:"not null;uniqueIndex:idx_card_cond_print_lang;default:'Normal'"`
+	Language       CardLanguage   `json:"language" gorm:"not null;uniqueIndex:idx_card_cond_print_lang;default:'English'"`
 	PriceUSD       float64        `json:"price_usd"`
 	Source         string         `json:"source"` // "justtcg" (sole price source)
 	PriceUpdatedAt *time.Time     `json:"price_updated_at"`
@@ -97,4 +121,24 @@ func DerivePrintingFromLegacy(foil, firstEdition bool) PrintingType {
 		return PrintingFoil
 	}
 	return PrintingNormal
+}
+
+// NormalizeLanguage maps various language string formats to our CardLanguage type.
+// Handles JustTCG API responses, ISO codes, and common variations.
+// Returns LanguageEnglish as default for unknown/empty values.
+func NormalizeLanguage(lang string) CardLanguage {
+	switch strings.ToLower(strings.TrimSpace(lang)) {
+	case "japanese", "jp", "ja", "jpn":
+		return LanguageJapanese
+	case "german", "de", "deu", "ger":
+		return LanguageGerman
+	case "french", "fr", "fra", "fre":
+		return LanguageFrench
+	case "italian", "it", "ita":
+		return LanguageItalian
+	case "english", "en", "eng", "":
+		return LanguageEnglish
+	default:
+		return LanguageEnglish
+	}
 }

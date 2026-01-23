@@ -14,10 +14,23 @@ func cleanupDuplicateCardPrices(db *gorm.DB) error {
 		return nil // No table, no duplicates to clean
 	}
 
+	groupBy := "card_id, condition, printing"
+	if db.Migrator().HasColumn("card_prices", "language") {
+		groupBy = "card_id, condition, printing, language"
+	}
+
 	// First, normalize NULL/empty printing values to 'Normal'
 	result := db.Exec(`UPDATE card_prices SET printing = 'Normal' WHERE printing IS NULL OR printing = ''`)
 	if result.Error != nil {
 		log.Printf("Warning: failed to normalize printing values: %v", result.Error)
+	}
+
+	// Normalize NULL/empty language values to 'English' if language exists
+	if db.Migrator().HasColumn("card_prices", "language") {
+		result = db.Exec(`UPDATE card_prices SET language = 'English' WHERE language IS NULL OR language = ''`)
+		if result.Error != nil {
+			log.Printf("Warning: failed to normalize language values: %v", result.Error)
+		}
 	}
 
 	// Find and remove duplicates, keeping the most recently updated row
@@ -27,7 +40,7 @@ func cleanupDuplicateCardPrices(db *gorm.DB) error {
 		WHERE id NOT IN (
 			SELECT MAX(id) 
 			FROM card_prices 
-			GROUP BY card_id, condition, printing
+			GROUP BY ` + groupBy + `
 		)
 	`)
 	if result.Error != nil {
@@ -46,6 +59,31 @@ func RunMigrations(db *gorm.DB) error {
 	if err := migratePrintingField(db); err != nil {
 		return err
 	}
+	if err := migrateLanguageField(db); err != nil {
+		return err
+	}
+	return nil
+}
+
+func migrateLanguageField(db *gorm.DB) error {
+	// Ensure all collection_items have a default language value
+	if db.Migrator().HasColumn("collection_items", "language") {
+		db.Exec(`UPDATE collection_items SET language = 'English' WHERE language IS NULL OR language = ''`)
+	}
+
+	// Ensure all card_prices have a default language value
+	if db.Migrator().HasColumn("card_prices", "language") {
+		db.Exec(`UPDATE card_prices SET language = 'English' WHERE language IS NULL OR language = ''`)
+	}
+
+	// Drop legacy unique index that did not include language (prevents multi-language prices)
+	// Note: AutoMigrate will not reliably drop old indexes.
+	if db.Migrator().HasIndex("card_prices", "idx_card_cond_print") {
+		if err := db.Migrator().DropIndex("card_prices", "idx_card_cond_print"); err != nil {
+			log.Printf("Warning: failed to drop legacy card_prices index idx_card_cond_print: %v", err)
+		}
+	}
+
 	return nil
 }
 

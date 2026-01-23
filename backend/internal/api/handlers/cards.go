@@ -185,6 +185,7 @@ func (h *CardHandler) IdentifyCard(c *gin.Context) {
 			"corner_scores":        parsed.CornerScores,
 			"match_reason":         parsed.MatchReason,
 			"candidate_sets":       parsed.CandidateSets,
+			"detected_language":    parsed.DetectedLanguage,
 			"text_matches":         textMatches,
 		},
 	}
@@ -319,6 +320,7 @@ func (h *CardHandler) IdentifyCardFromImage(c *gin.Context) {
 			"corner_scores":        parsed.CornerScores,
 			"match_reason":         parsed.MatchReason,
 			"candidate_sets":       parsed.CandidateSets,
+			"detected_language":    parsed.DetectedLanguage,
 			"text_matches":         textMatches,
 		},
 	}

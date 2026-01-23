@@ -38,62 +38,98 @@ type Card struct {
 	ReleasedAt   string   `json:"released_at,omitempty" gorm:"-"`   // Set release date
 }
 
-// GetPrice returns the price for a specific condition and printing type.
+// GetPrice returns the price for a specific condition, printing type, and language.
 // Fallback order:
-//  1. Exact match (condition + printing) in CardPrices
-//  2. NM price for the same printing (if condition is not NM)
-//  3. Printing-specific fallback:
+//  1. Exact match (condition + printing + language) in CardPrices
+//  2. NM price for same printing and language (if condition is not NM)
+//  3. Printing-specific fallback within same language:
 //     - Foil -> Normal (for holo-only cards where JustTCG stores price as "Normal")
 //     - Reverse Holo -> Normal (parallel version of Normal card, NOT related to Foil/Holo Rare)
 //     - Normal -> Unlimited (for WotC-era cards)
 //     - Unlimited -> Normal (for modern cards)
 //     - 1st Edition -> Unlimited -> Normal (WotC-era, different print run not foil)
-//  4. Base prices (PriceFoilUSD for foil variants, PriceUSD otherwise)
-//  5. Final cross-fallback: if foil has no price, try non-foil and vice versa
-func (c *Card) GetPrice(condition PriceCondition, printing PrintingType) float64 {
-	// 1. Look for exact condition+printing match
+//  4. If non-English language has no price, fall back to English prices
+//  5. Base prices (PriceFoilUSD for foil variants, PriceUSD otherwise)
+//  6. Final cross-fallback: if foil has no price, try non-foil and vice versa
+func (c *Card) GetPrice(condition PriceCondition, printing PrintingType, language CardLanguage) float64 {
+	// Default to English if empty
+	if language == "" {
+		language = LanguageEnglish
+	}
+
+	// Try to find price for specified language
+	price := c.getPriceForLanguage(condition, printing, language)
+	if price > 0 {
+		return price
+	}
+
+	// If non-English language has no price, fall back to English
+	if language != LanguageEnglish {
+		price = c.getPriceForLanguage(condition, printing, LanguageEnglish)
+		if price > 0 {
+			return price
+		}
+	}
+
+	// Fall back to base prices
+	if printing.IsFoilVariant() {
+		if c.PriceFoilUSD > 0 {
+			return c.PriceFoilUSD
+		}
+		// Cross-fallback: foil variant with no foil price, use non-foil
+		return c.PriceUSD
+	}
+
+	if c.PriceUSD > 0 {
+		return c.PriceUSD
+	}
+	// Cross-fallback: non-foil with no price, try foil
+	return c.PriceFoilUSD
+}
+
+// getPriceForLanguage looks up price for a specific language with printing fallbacks
+func (c *Card) getPriceForLanguage(condition PriceCondition, printing PrintingType, language CardLanguage) float64 {
+	// 1. Look for exact condition+printing+language match
 	for _, p := range c.Prices {
-		if p.Condition == condition && p.Printing == printing {
+		if p.Condition == condition && p.Printing == printing && p.Language == language {
 			return p.PriceUSD
 		}
 	}
 
-	// 2. Try NM price for the same printing (if we're looking for non-NM)
+	// 2. Try NM price for the same printing and language (if we're looking for non-NM)
 	if condition != PriceConditionNM {
 		for _, p := range c.Prices {
-			if p.Condition == PriceConditionNM && p.Printing == printing {
+			if p.Condition == PriceConditionNM && p.Printing == printing && p.Language == language {
 				return p.PriceUSD
 			}
 		}
 	}
 
-	// 3. Printing-specific fallback
+	// 3. Printing-specific fallback within same language
 	if printing == PrintingFoil {
 		// Foil: try Normal (for holo-only cards where JustTCG stores price as "Normal")
 		for _, p := range c.Prices {
-			if p.Condition == condition && p.Printing == PrintingNormal {
+			if p.Condition == condition && p.Printing == PrintingNormal && p.Language == language {
 				return p.PriceUSD
 			}
 		}
 		if condition != PriceConditionNM {
 			for _, p := range c.Prices {
-				if p.Condition == PriceConditionNM && p.Printing == PrintingNormal {
+				if p.Condition == PriceConditionNM && p.Printing == PrintingNormal && p.Language == language {
 					return p.PriceUSD
 				}
 			}
 		}
 	} else if printing == PrintingReverseHolo {
 		// Reverse Holo: fall back to Normal directly
-		// Reverse Holo is a parallel foil pattern of the Normal card, NOT related to Holo Rare/Foil
-		// A Reverse Holo common ($2) should NOT fall back to Holo Rare ($177)
 		for _, p := range c.Prices {
-			if p.Condition == condition && p.Printing == PrintingNormal {
+			if p.Condition == condition && p.Printing == PrintingNormal && p.Language == language {
 				return p.PriceUSD
 			}
 		}
 		if condition != PriceConditionNM {
 			for _, p := range c.Prices {
-				if p.Condition == PriceConditionNM && p.Printing == PrintingNormal {
+				if p.Condition == PriceConditionNM && p.Printing == PrintingNormal && p.Language == language {
 					return p.PriceUSD
 				}
 			}
@@ -101,13 +137,13 @@ func (c *Card) GetPrice(condition PriceCondition, printing PrintingType) float64
 	} else if printing == PrintingNormal {
 		// Normal printing: try Unlimited as fallback (for WotC-era cards)
 		for _, p := range c.Prices {
-			if p.Condition == condition && p.Printing == PrintingUnlimited {
+			if p.Condition == condition && p.Printing == PrintingUnlimited && p.Language == language {
 				return p.PriceUSD
 			}
 		}
 		if condition != PriceConditionNM {
 			for _, p := range c.Prices {
-				if p.Condition == PriceConditionNM && p.Printing == PrintingUnlimited {
+				if p.Condition == PriceConditionNM && p.Printing == PrintingUnlimited && p.Language == language {
 					return p.PriceUSD
 				}
 			}
@@ -115,61 +151,47 @@ func (c *Card) GetPrice(condition PriceCondition, printing PrintingType) float64
 	} else if printing == PrintingUnlimited {
 		// Unlimited printing: try Normal as fallback (modern cards use Normal)
 		for _, p := range c.Prices {
-			if p.Condition == condition && p.Printing == PrintingNormal {
+			if p.Condition == condition && p.Printing == PrintingNormal && p.Language == language {
 				return p.PriceUSD
 			}
 		}
 		if condition != PriceConditionNM {
 			for _, p := range c.Prices {
-				if p.Condition == PriceConditionNM && p.Printing == PrintingNormal {
+				if p.Condition == PriceConditionNM && p.Printing == PrintingNormal && p.Language == language {
 					return p.PriceUSD
 				}
 			}
 		}
 	} else if printing == Printing1stEdition {
 		// 1st Edition printing: try Unlimited -> Normal as fallback
-		// 1st Edition is NOT a foil, it's a different WotC-era print run
 		for _, p := range c.Prices {
-			if p.Condition == condition && p.Printing == PrintingUnlimited {
+			if p.Condition == condition && p.Printing == PrintingUnlimited && p.Language == language {
 				return p.PriceUSD
 			}
 		}
 		if condition != PriceConditionNM {
 			for _, p := range c.Prices {
-				if p.Condition == PriceConditionNM && p.Printing == PrintingUnlimited {
+				if p.Condition == PriceConditionNM && p.Printing == PrintingUnlimited && p.Language == language {
 					return p.PriceUSD
 				}
 			}
 		}
 		// Then try Normal
 		for _, p := range c.Prices {
-			if p.Condition == condition && p.Printing == PrintingNormal {
+			if p.Condition == condition && p.Printing == PrintingNormal && p.Language == language {
 				return p.PriceUSD
 			}
 		}
 		if condition != PriceConditionNM {
 			for _, p := range c.Prices {
-				if p.Condition == PriceConditionNM && p.Printing == PrintingNormal {
+				if p.Condition == PriceConditionNM && p.Printing == PrintingNormal && p.Language == language {
 					return p.PriceUSD
 				}
 			}
 		}
 	}
 
-	// 5. Fall back to base prices
-	if printing.IsFoilVariant() {
-		if c.PriceFoilUSD > 0 {
-			return c.PriceFoilUSD
-		}
-		// 6. Cross-fallback: foil variant with no foil price, use non-foil
-		return c.PriceUSD
-	}
-
-	if c.PriceUSD > 0 {
-		return c.PriceUSD
-	}
-	// 6. Cross-fallback: non-foil with no price, try foil
-	return c.PriceFoilUSD
+	return 0
 }
 
 type CardSearchResult struct {

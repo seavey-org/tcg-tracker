@@ -93,6 +93,7 @@ func (h *CollectionHandler) AddToCollection(c *gin.Context) {
 	if printing == "" {
 		printing = models.PrintingNormal
 	}
+	language := models.NormalizeLanguage(string(req.Language))
 
 	// Handle scanned image FIRST - if provided, we NEVER merge (each scan is a unique physical card)
 	var scannedImagePath string
@@ -121,6 +122,7 @@ func (h *CollectionHandler) AddToCollection(c *gin.Context) {
 			Quantity:         1, // Always 1 for scanned cards
 			Condition:        condition,
 			Printing:         printing,
+			Language:         language,
 			Notes:            req.Notes,
 			AddedAt:          time.Now(),
 			ScannedImagePath: scannedImagePath,
@@ -136,10 +138,10 @@ func (h *CollectionHandler) AddToCollection(c *gin.Context) {
 		return
 	}
 
-	// No scanned image - try to merge into existing NON-SCANNED stack
+	// No scanned image - try to merge into existing NON-SCANNED stack with same language
 	var existingItem models.CollectionItem
-	err := db.Where("card_id = ? AND condition = ? AND printing = ? AND (scanned_image_path IS NULL OR scanned_image_path = '')",
-		req.CardID, condition, printing).
+	err := db.Where("card_id = ? AND condition = ? AND printing = ? AND language = ? AND (scanned_image_path IS NULL OR scanned_image_path = '')",
+		req.CardID, condition, printing, language).
 		First(&existingItem).Error
 
 	if err == nil {
@@ -160,6 +162,7 @@ func (h *CollectionHandler) AddToCollection(c *gin.Context) {
 		Quantity:         quantity,
 		Condition:        condition,
 		Printing:         printing,
+		Language:         language,
 		Notes:            req.Notes,
 		AddedAt:          time.Now(),
 		ScannedImagePath: "", // No scan
@@ -208,10 +211,12 @@ func (h *CollectionHandler) UpdateCollectionItem(c *gin.Context) {
 		}
 	}
 
-	// Check if condition or printing is changing
+	// Check if condition, printing, or language is changing
+	// Note: normalize language before comparing since item.Language is already normalized
 	conditionChanging := req.Condition != nil && *req.Condition != item.Condition
 	printingChanging := req.Printing != nil && *req.Printing != item.Printing
-	attributeChanging := conditionChanging || printingChanging
+	languageChanging := req.Language != nil && models.NormalizeLanguage(string(*req.Language)) != item.Language
+	attributeChanging := conditionChanging || printingChanging || languageChanging
 
 	// Determine the new values
 	newCondition := item.Condition
@@ -221,6 +226,10 @@ func (h *CollectionHandler) UpdateCollectionItem(c *gin.Context) {
 	newPrinting := item.Printing
 	if req.Printing != nil {
 		newPrinting = *req.Printing
+	}
+	newLanguage := item.Language
+	if req.Language != nil {
+		newLanguage = models.NormalizeLanguage(string(*req.Language))
 	}
 
 	// Scanned items always stay individual - just update in place
@@ -232,6 +241,9 @@ func (h *CollectionHandler) UpdateCollectionItem(c *gin.Context) {
 		}
 		if req.Printing != nil {
 			item.Printing = *req.Printing
+		}
+		if req.Language != nil {
+			item.Language = models.NormalizeLanguage(string(*req.Language))
 		}
 		// Quantity is intentionally not updated for scanned items
 		// Each scan represents exactly one physical card
@@ -254,7 +266,7 @@ func (h *CollectionHandler) UpdateCollectionItem(c *gin.Context) {
 
 	// Non-scanned item below this point
 
-	// If condition or printing is changing, we need smart split/merge logic
+	// If condition, printing, or language is changing, we need smart split/merge logic
 	if attributeChanging {
 		if item.Quantity > 1 {
 			// Stack with qty > 1: split off 1 copy with new attributes
@@ -262,8 +274,8 @@ func (h *CollectionHandler) UpdateCollectionItem(c *gin.Context) {
 
 			// Look for existing non-scanned stack to merge the split copy into
 			var target models.CollectionItem
-			err := db.Where("card_id = ? AND condition = ? AND printing = ? AND (scanned_image_path IS NULL OR scanned_image_path = '') AND id != ?",
-				item.CardID, newCondition, newPrinting, item.ID).
+			err := db.Where("card_id = ? AND condition = ? AND printing = ? AND language = ? AND (scanned_image_path IS NULL OR scanned_image_path = '') AND id != ?",
+				item.CardID, newCondition, newPrinting, newLanguage, item.ID).
 				First(&target).Error
 
 			var resultItem models.CollectionItem
@@ -282,6 +294,7 @@ func (h *CollectionHandler) UpdateCollectionItem(c *gin.Context) {
 					Quantity:         1,
 					Condition:        newCondition,
 					Printing:         newPrinting,
+					Language:         newLanguage,
 					Notes:            "", // Fresh item, no notes
 					AddedAt:          time.Now(),
 					ScannedImagePath: "",
@@ -311,8 +324,8 @@ func (h *CollectionHandler) UpdateCollectionItem(c *gin.Context) {
 
 		// Single non-scanned item (qty=1): try to merge into existing stack
 		var target models.CollectionItem
-		err := db.Where("card_id = ? AND condition = ? AND printing = ? AND (scanned_image_path IS NULL OR scanned_image_path = '') AND id != ?",
-			item.CardID, newCondition, newPrinting, item.ID).
+		err := db.Where("card_id = ? AND condition = ? AND printing = ? AND language = ? AND (scanned_image_path IS NULL OR scanned_image_path = '') AND id != ?",
+			item.CardID, newCondition, newPrinting, newLanguage, item.ID).
 			First(&target).Error
 
 		if err == nil {
@@ -338,6 +351,7 @@ func (h *CollectionHandler) UpdateCollectionItem(c *gin.Context) {
 		// No existing stack to merge into - update in place
 		item.Condition = newCondition
 		item.Printing = newPrinting
+		item.Language = newLanguage
 		if req.Notes != nil {
 			item.Notes = *req.Notes
 		}
@@ -441,6 +455,25 @@ func (h *CollectionHandler) GetStats(c *gin.Context) {
 						END
 					 )
 					 AND cp.printing = collection_items.printing
+					 AND cp.language = COALESCE(NULLIF(collection_items.language, ''), 'English')
+					 LIMIT 1),
+					(SELECT cp.price_usd FROM card_prices cp
+					 WHERE cp.card_id = cards.id
+					 AND cp.condition = (
+						CASE collection_items.condition
+							WHEN 'M' THEN 'NM'
+							WHEN 'NM' THEN 'NM'
+							WHEN 'EX' THEN 'LP'
+							WHEN 'LP' THEN 'LP'
+							WHEN 'GD' THEN 'MP'
+							WHEN 'PL' THEN 'HP'
+							WHEN 'PR' THEN 'DMG'
+							ELSE 'NM'
+						END
+					 )
+					 AND cp.printing = collection_items.printing
+					 AND cp.language = 'English'
+					 AND COALESCE(NULLIF(collection_items.language, ''), 'English') != 'English'
 					 LIMIT 1),
 					CASE 
 						WHEN collection_items.printing IN ('Foil', '1st Edition', 'Reverse Holofoil') 
@@ -585,9 +618,9 @@ func (h *CollectionHandler) GetGroupedCollection(c *gin.Context) {
 		for _, item := range groupItems {
 			totalQty += item.Quantity
 
-			// Calculate item value using condition-specific pricing (same as stats)
+			// Calculate item value using condition-specific pricing with language
 			priceCondition := models.MapCollectionConditionToPriceCondition(item.Condition)
-			itemPrice := card.GetPrice(priceCondition, item.Printing)
+			itemPrice := card.GetPrice(priceCondition, item.Printing, item.Language)
 			itemValue := itemPrice * float64(item.Quantity)
 			totalValue += itemValue
 
@@ -596,8 +629,8 @@ func (h *CollectionHandler) GetGroupedCollection(c *gin.Context) {
 				scannedCount++
 			}
 
-			// Aggregate variants
-			variantKey := fmt.Sprintf("%s|%s", item.Printing, item.Condition)
+			// Aggregate variants by printing+condition+language
+			variantKey := fmt.Sprintf("%s|%s|%s", item.Printing, item.Condition, item.Language)
 			if v, exists := variantMap[variantKey]; exists {
 				v.Quantity += item.Quantity
 				v.Value += itemValue
@@ -614,6 +647,7 @@ func (h *CollectionHandler) GetGroupedCollection(c *gin.Context) {
 				variantMap[variantKey] = &models.CollectionVariant{
 					Printing:   item.Printing,
 					Condition:  item.Condition,
+					Language:   item.Language,
 					Quantity:   item.Quantity,
 					Value:      itemValue,
 					HasScans:   hasScans,

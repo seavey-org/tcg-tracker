@@ -34,6 +34,7 @@ A trading card collection tracker for Magic: The Gathering and Pokemon cards wit
 
 - **Card Search**: Search for MTG and Pokemon cards using external APIs
 - **OCR Card Identification**: Upload card images for automatic identification using GPU-accelerated OCR
+- **Multi-Language Support**: Track foreign language cards (Japanese, German, French, Italian) with language-specific pricing
 - **MTG 2-Phase Selection**: When scanning MTG cards, browse all printings grouped by set and select the exact variant (foil, showcase, borderless, etc.)
 - **Collection Management**: Add, update, and remove cards from your collection
 - **Price Tracking**: View current market prices with automatic refresh and batch updates
@@ -137,6 +138,7 @@ Environment variables:
 - `HOST` - Bind address (default: 127.0.0.1)
 - `PORT` - Server port (default: 8099)
 - `USE_GPU` - Enable GPU acceleration (default: 1)
+- `OCR_LANGUAGES` - Comma-separated language codes (default: "ja,en" for Japanese + English)
 
 #### 4. Mobile App (Flutter)
 

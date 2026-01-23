@@ -508,6 +508,7 @@ func (s *JustTCGService) updateRemaining(remaining int) {
 }
 
 // convertVariantsToPrices converts JustTCG variants to our CardPrice model
+// Includes language information for accurate pricing of foreign cards
 func (s *JustTCGService) convertVariantsToPrices(variants []JustTCGVariant) []models.CardPrice {
 	var prices []models.CardPrice
 	now := time.Now()
@@ -515,6 +516,7 @@ func (s *JustTCGService) convertVariantsToPrices(variants []JustTCGVariant) []mo
 	for _, v := range variants {
 		condition := mapJustTCGCondition(v.Condition)
 		printing := mapJustTCGPrinting(v.Printing)
+		language := models.NormalizeLanguage(v.Language)
 
 		if condition == "" {
 			continue
@@ -531,6 +533,7 @@ func (s *JustTCGService) convertVariantsToPrices(variants []JustTCGVariant) []mo
 		prices = append(prices, models.CardPrice{
 			Condition:      condition,
 			Printing:       printing,
+			Language:       language,
 			PriceUSD:       v.Price,
 			Source:         "justtcg",
 			PriceUpdatedAt: &now,

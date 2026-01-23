@@ -4,6 +4,13 @@ GPU-accelerated OCR engine using EasyOCR.
 The engine is initialized once and cached for reuse across all requests.
 This avoids the 2-5 second model loading time on each request.
 
+Supports multi-language OCR for international card scanning:
+- English (en) - default
+- German (de) - "KP" for HP, German Pokemon names
+- French (fr) - "PV" for HP, French Pokemon names  
+- Italian (it) - "PS" for HP, Italian Pokemon names
+- Japanese (ja) - kanji/hiragana/katakana
+
 Usage:
     from identifier.ocr_engine import get_ocr_engine, downscale_image
 
@@ -25,9 +32,16 @@ import numpy as np
 
 logger = logging.getLogger(__name__)
 
+# Default languages for multi-language card scanning
+# Japanese (ja) can only be combined with English due to EasyOCR constraints.
+# This default supports scanning both English and Japanese cards.
+# For European languages only, set OCR_LANGUAGES="en,de,fr,it" (no Japanese)
+DEFAULT_LANGUAGES = ["ja", "en"]
+
 # Module-level cached engine singleton
 _engine: "EasyOCREngine | None" = None
 _engine_use_gpu: bool | None = None
+_engine_languages: list[str] | None = None
 
 
 class EasyOCREngine:
@@ -38,7 +52,8 @@ class EasyOCREngine:
 
         Args:
             use_gpu: Whether to use GPU acceleration (highly recommended)
-            languages: List of language codes (default: ["en"])
+            languages: List of language codes (default: DEFAULT_LANGUAGES)
+                      Supports: en, de, fr, it, ja for card scanning
 
         Raises:
             RuntimeError: If EasyOCR cannot be initialized
@@ -46,7 +61,7 @@ class EasyOCREngine:
         try:
             import easyocr
 
-            self._languages = languages or ["en"]
+            self._languages = languages or DEFAULT_LANGUAGES
             self._use_gpu = use_gpu
             self._reader = easyocr.Reader(
                 self._languages,
@@ -121,7 +136,10 @@ class EasyOCREngine:
         return results
 
 
-def get_ocr_engine(use_gpu: bool = True) -> EasyOCREngine:
+def get_ocr_engine(
+    use_gpu: bool = True, 
+    languages: list[str] | None = None
+) -> EasyOCREngine:
     """Get the cached OCR engine instance.
 
     The engine is initialized on first call and reused for subsequent calls.
@@ -130,6 +148,9 @@ def get_ocr_engine(use_gpu: bool = True) -> EasyOCREngine:
     Args:
         use_gpu: Whether to use GPU acceleration. If this differs from the
                 cached engine's setting, a new engine will be created.
+        languages: List of language codes. If this differs from the cached
+                  engine's languages, a new engine will be created.
+                  Default: DEFAULT_LANGUAGES (en, de, fr, it, ja)
 
     Returns:
         Cached EasyOCREngine instance.
@@ -138,17 +159,23 @@ def get_ocr_engine(use_gpu: bool = True) -> EasyOCREngine:
         RuntimeError: If EasyOCR cannot be initialized (e.g., GPU not available
                      when use_gpu=True, or missing dependencies).
     """
-    global _engine, _engine_use_gpu
+    global _engine, _engine_use_gpu, _engine_languages
 
-    if _engine is None or _engine_use_gpu != use_gpu:
-        logger.info(f"Creating new EasyOCR engine (GPU={use_gpu})")
-        _engine = EasyOCREngine(use_gpu=use_gpu)
+    langs = languages or DEFAULT_LANGUAGES
+    
+    if _engine is None or _engine_use_gpu != use_gpu or _engine_languages != langs:
+        logger.info(f"Creating new EasyOCR engine (GPU={use_gpu}, languages={langs})")
+        _engine = EasyOCREngine(use_gpu=use_gpu, languages=langs)
         _engine_use_gpu = use_gpu
+        _engine_languages = langs
 
     return _engine
 
 
-def init_ocr_engine(use_gpu: bool = True) -> EasyOCREngine:
+def init_ocr_engine(
+    use_gpu: bool = True, 
+    languages: list[str] | None = None
+) -> EasyOCREngine:
     """Eagerly initialize the OCR engine at application startup.
 
     Call this during application initialization to ensure the engine is ready
@@ -157,6 +184,7 @@ def init_ocr_engine(use_gpu: bool = True) -> EasyOCREngine:
 
     Args:
         use_gpu: Whether to use GPU acceleration.
+        languages: List of language codes. Default: DEFAULT_LANGUAGES
 
     Returns:
         The initialized EasyOCREngine instance.
@@ -165,8 +193,9 @@ def init_ocr_engine(use_gpu: bool = True) -> EasyOCREngine:
         RuntimeError: If initialization fails. The application should fail
                      to start in this case.
     """
-    logger.info("Eagerly initializing OCR engine at startup...")
-    engine = get_ocr_engine(use_gpu=use_gpu)
+    langs = languages or DEFAULT_LANGUAGES
+    logger.info(f"Eagerly initializing OCR engine at startup (languages={langs})...")
+    engine = get_ocr_engine(use_gpu=use_gpu, languages=langs)
     logger.info("OCR engine ready")
     return engine
 
