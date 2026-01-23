@@ -595,6 +595,57 @@ func levenshteinDistance(s1, s2 string) int {
 	return matrix[len(s1)][len(s2)]
 }
 
+// looksLikeOCRGarbage detects short strings that are likely OCR noise
+// rather than real card names. Examples: "TQG", "Zollvp", "HPAO"
+// Real card names usually have spaces, punctuation, or are longer.
+func looksLikeOCRGarbage(name string) bool {
+	// Names with spaces or apostrophes are likely real (e.g., "Professor's Research")
+	if strings.Contains(name, " ") || strings.Contains(name, "'") {
+		return false
+	}
+
+	// Longer names (10+ chars) are less likely to be garbage
+	if len(name) >= 10 {
+		return false
+	}
+
+	lower := strings.ToLower(name)
+
+	// Short all-uppercase strings (like "TQG", "HPAO") are likely garbage
+	// unless they're known Pokemon names (which would have matched fuzzy)
+	upper := strings.ToUpper(name)
+	if name == upper && len(name) <= 8 {
+		return true
+	}
+
+	// Short strings without vowels are suspicious (most real words have vowels)
+	hasVowel := strings.ContainsAny(lower, "aeiou")
+	if !hasVowel && len(name) <= 6 {
+		return true
+	}
+
+	// Check for unusual consonant clusters that indicate OCR garbage
+	// Real English/Pokemon names rarely have 3+ consonants in a row (except common patterns)
+	consonantRun := 0
+	maxConsonantRun := 0
+	for _, r := range lower {
+		if strings.ContainsRune("bcdfghjklmnpqrstvwxyz", r) {
+			consonantRun++
+			if consonantRun > maxConsonantRun {
+				maxConsonantRun = consonantRun
+			}
+		} else {
+			consonantRun = 0
+		}
+	}
+	// "Zollvp" has "llvp" = 4 consonants in a row, which is unusual
+	if maxConsonantRun >= 4 && len(name) <= 8 {
+		return true
+	}
+
+	return false
+}
+
 // fuzzyMatchPokemonName attempts to find a Pokemon name that closely matches the input
 // Returns the matched name and whether a match was found
 func fuzzyMatchPokemonName(input string) (string, bool) {
@@ -1057,6 +1108,19 @@ func extractPokemonCardName(lines []string, detectedRarity string) string {
 		lower := strings.ToLower(trimmed)
 		upper := strings.ToUpper(trimmed)
 
+		// Skip empty or very short strings
+		if len(trimmed) < 2 {
+			return true
+		}
+
+		// Skip strings starting with special characters (OCR noise like "@N町")
+		if len(trimmed) > 0 {
+			firstRune := []rune(trimmed)[0]
+			if !unicode.IsLetter(firstRune) && !unicode.IsDigit(firstRune) {
+				return true
+			}
+		}
+
 		// Skip lines that look like Pokemon set codes (common on Japanese cards).
 		// Avoid treating "SV2A" / "SWSH4" etc. as a card name when OCR fails.
 		if regexp.MustCompile(`^[A-Z0-9]{3,6}$`).MatchString(upper) {
@@ -1244,6 +1308,14 @@ func extractPokemonCardName(lines []string, detectedRarity string) string {
 				result := strings.ToUpper(string(matchedName[0])) + matchedName[1:]
 				return result
 			}
+
+			// For short all-caps strings without spaces (likely OCR garbage like "TQG"),
+			// skip if fuzzy match fails. Real card names usually have spaces, punctuation,
+			// or are longer.
+			if looksLikeOCRGarbage(name) {
+				continue
+			}
+
 			return name
 		}
 	}
@@ -1266,6 +1338,13 @@ func extractPokemonCardName(lines []string, detectedRarity string) string {
 				result := strings.ToUpper(string(matchedName[0])) + matchedName[1:]
 				return result
 			}
+
+			// For short all-caps strings without spaces (likely OCR garbage),
+			// skip if fuzzy match fails.
+			if looksLikeOCRGarbage(name) {
+				continue
+			}
+
 			return name
 		}
 	}

@@ -1903,6 +1903,38 @@ SV4`,
 			wantLanguage:   "Japanese",
 			wantNameEmpty:  true,
 		},
+		{
+			// Test that OCR garbage like "TQG" is not used as card name
+			// This is from a real scan of a Japanese Professor Elm card
+			name: "Japanese trainer with TQG OCR garbage",
+			input: `TQG
+ウツギはかせ
+あなたの手札をすべて山札にもどし`,
+			wantLanguage:  "Japanese",
+			wantNameEmpty: true, // TQG should NOT be used as card name
+		},
+		{
+			// Test that strings starting with @ are skipped
+			name: "Japanese trainer with @N OCR garbage",
+			input: `1
+@N町
+すごいつりざお`,
+			wantLanguage:  "Japanese",
+			wantNameEmpty: true, // @N町 should NOT be used as card name
+		},
+		{
+			// Test that random OCR garbage is not used as card name
+			name: "Japanese Pokemon with Zollvp OCR garbage",
+			input: `{
+1
+Zollvp
+|
+こドラン』
+HPAO
+Na 092`,
+			wantLanguage:  "Japanese",
+			wantNameEmpty: true, // Zollvp should NOT match any Pokemon
+		},
 	}
 
 	for _, tt := range tests {
