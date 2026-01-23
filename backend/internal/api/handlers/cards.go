@@ -365,9 +365,30 @@ func (h *CardHandler) searchAndMatchCards(c *gin.Context, parsed *services.OCRRe
 	var err error
 
 	if game == "pokemon" {
-		// Use full-text matching when we have substantial OCR text
+		// Priority 1: If we have a set code and card number, try exact lookup first
+		// This is especially important for Japanese cards where we can't extract the card name
+		// but can reliably extract the set code and card number
+		var exactCard *models.Card
+		if parsed.SetCode != "" && parsed.CardNumber != "" {
+			exactCard = h.pokemonService.GetCardBySetAndNumber(
+				strings.ToLower(parsed.SetCode),
+				parsed.CardNumber,
+			)
+		}
+
+		// Priority 2: If no card name was extracted (common with Japanese cards),
+		// and we found an exact match, use it as the primary result
+		if parsed.CardName == "" && exactCard != nil {
+			result = &models.CardSearchResult{
+				Cards:      []models.Card{*exactCard},
+				TotalCount: 1,
+				HasMore:    false,
+			}
+		}
+
+		// Priority 3: Use full-text matching when we have substantial OCR text
 		// This matches against card name, attacks, abilities, and flavor text
-		if len(fallbackText) >= 20 {
+		if result == nil && len(fallbackText) >= 20 {
 			result, textMatches = h.pokemonService.MatchByFullText(
 				fallbackText,
 				parsed.CandidateSets,
@@ -380,7 +401,7 @@ func (h *CardHandler) searchAndMatchCards(c *gin.Context, parsed *services.OCRRe
 			}
 		}
 
-		// Fallback: If we have candidate sets from set total inference, use targeted search
+		// Priority 4: If we have candidate sets from set total inference, use targeted search
 		if result == nil && len(parsed.CandidateSets) > 0 && parsed.CardName != "" {
 			result = h.pokemonService.SearchByNameAndNumber(
 				parsed.CardName,
@@ -389,20 +410,34 @@ func (h *CardHandler) searchAndMatchCards(c *gin.Context, parsed *services.OCRRe
 			)
 		}
 
-		// Fallback: Standard name-based search
-		if result == nil {
+		// Priority 5: Standard name-based search (only if we have a valid card name)
+		if result == nil && parsed.CardName != "" {
 			result, err = h.pokemonService.SearchCards(searchQuery)
 		}
 
-		// If we have a set code and card number, try to find the exact card
-		if result != nil && parsed.SetCode != "" && parsed.CardNumber != "" {
-			exactCard := h.pokemonService.GetCardBySetAndNumber(
-				strings.ToLower(parsed.SetCode),
-				parsed.CardNumber,
-			)
-			if exactCard != nil {
-				// Put exact match at the front (if not already there)
-				if len(result.Cards) == 0 || result.Cards[0].ID != exactCard.ID {
+		// Priority 6: Last resort - if we still have no results and have an exact card, use it
+		if (result == nil || len(result.Cards) == 0) && exactCard != nil {
+			result = &models.CardSearchResult{
+				Cards:      []models.Card{*exactCard},
+				TotalCount: 1,
+				HasMore:    false,
+			}
+		}
+
+		// Ensure exact match is at the front of results (if we have other results too)
+		if result != nil && len(result.Cards) > 0 && exactCard != nil {
+			if result.Cards[0].ID != exactCard.ID {
+				// Check if exact card is already in results
+				alreadyInResults := false
+				for i, card := range result.Cards {
+					if card.ID == exactCard.ID {
+						// Move it to the front
+						result.Cards = append([]models.Card{card}, append(result.Cards[:i], result.Cards[i+1:]...)...)
+						alreadyInResults = true
+						break
+					}
+				}
+				if !alreadyInResults {
 					result.Cards = append([]models.Card{*exactCard}, result.Cards...)
 				}
 			}
@@ -482,6 +517,24 @@ func (h *CardHandler) searchAndMatchCards(c *gin.Context, parsed *services.OCRRe
 	// Filter and rank results based on parsed OCR data
 	if len(result.Cards) > 0 {
 		result.Cards = rankCardMatches(result.Cards, parsed)
+	}
+
+	// For Pokemon: preserve exact set+number match at the top even after ranking.
+	if game == "pokemon" {
+		if parsed.SetCode != "" && parsed.CardNumber != "" && len(result.Cards) > 0 {
+			exactCard := h.pokemonService.GetCardBySetAndNumber(
+				strings.ToLower(parsed.SetCode),
+				parsed.CardNumber,
+			)
+			if exactCard != nil && result.Cards[0].ID != exactCard.ID {
+				for i, card := range result.Cards {
+					if card.ID == exactCard.ID {
+						result.Cards = append([]models.Card{card}, append(result.Cards[:i], result.Cards[i+1:]...)...)
+						break
+					}
+				}
+			}
+		}
 	}
 
 	// Cache cards in database (log errors but don't fail the request)

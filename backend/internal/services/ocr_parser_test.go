@@ -1840,6 +1840,62 @@ SV2A`,
 			wantNameEmpty:  true,
 		},
 		{
+			// This is the critical test case: TRAINER is a card type, NOT a card name.
+			// Before the fix, "TRAINER" was being returned as the card name which caused
+			// Japanese trainer cards to match the wrong English cards.
+			name: "Japanese trainer with TRAINER as only English text",
+			input: `博士の研究
+TRAINER
+サポート
+自分の手札をすべてトラッシュし
+147/198
+SV1`,
+			wantCardNumber: "147",
+			wantSetCode:    "sv1",
+			wantLanguage:   "Japanese",
+			wantNameEmpty:  true, // TRAINER should be skipped, not used as card name
+		},
+		{
+			// Focus: SUPPORTER should not be used as card name
+			name: "Japanese supporter with SUPPORTER as only English text",
+			input: `ナンジャモ
+SUPPORTER
+相手のデッキから1枚引く
+091/165
+SV2A`,
+			wantCardNumber: "91",
+			// Set code inference may vary - the focus is that SUPPORTER is skipped
+			wantLanguage:  "Japanese",
+			wantNameEmpty: true, // SUPPORTER should be skipped
+		},
+		{
+			// Focus: ITEM should not be used as card name
+			name: "Japanese item with ITEM as only English text",
+			input: `ハイパーボール
+ITEM
+手札を2枚トラッシュ
+ポケモンを1枚サーチ
+123/165
+SV2A`,
+			wantCardNumber: "123",
+			// Set code inference may vary - the focus is that ITEM is skipped
+			wantLanguage:  "Japanese",
+			wantNameEmpty: true, // ITEM should be skipped
+		},
+		{
+			// Focus: STADIUM should not be used as card name
+			name: "Japanese stadium with STADIUM as only English text",
+			input: `頂への雪道
+STADIUM
+おたがいのポケモンの特性を無効
+089/098
+SV4`,
+			wantCardNumber: "89",
+			// Set code inference may vary - the focus is that STADIUM is skipped
+			wantLanguage:  "Japanese",
+			wantNameEmpty: true, // STADIUM should be skipped
+		},
+		{
 			name: "Japanese card minimal text - just name and number",
 			input: `ゲッコウガ
 015/078`,
@@ -1879,13 +1935,10 @@ SV2A`,
 
 			// Card name handling
 			if tt.wantNameEmpty {
-				// For Japanese-only cards, we should NOT extract garbage as the name
-				// An empty name is acceptable - we rely on card number matching
+				// For Japanese-only cards, we should NOT extract garbage as the name.
+				// We rely on set+number matching instead.
 				if result.CardName != "" {
-					// Check if the extracted name is valid (not Japanese garbage)
-					if containsJapaneseCharacters(result.CardName) {
-						t.Errorf("CardName = %q, should not contain Japanese characters (should be empty or English)", result.CardName)
-					}
+					t.Errorf("CardName = %q, want empty", result.CardName)
 				}
 			} else if tt.wantCardName != "" {
 				if !strings.EqualFold(result.CardName, tt.wantCardName) {

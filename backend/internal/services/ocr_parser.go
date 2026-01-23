@@ -998,13 +998,18 @@ func detectPokemonRarity(result *OCRResult, upperText string) {
 }
 
 func extractPokemonCardName(lines []string, detectedRarity string) string {
-	// Common patterns to skip (English and Japanese)
-	skipPatterns := []string{
+	// Patterns that should only skip if they are an EXACT match (word boundaries)
+	// These are single words that can appear as part of valid card names
+	// e.g., "Energy Switch" should NOT be skipped even though it contains "energy"
+	exactSkipPatterns := []string{
 		"basic", "stage", "pokemon", "trainer", "energy",
-		"once during", "when you", "attack", "weakness",
-		"resistance", "retreat", "illus", "©", "nintendo",
-		"evolves from", "rule", "prize", "knocked out",
-		"discard", "damage", "opponent", "your turn",
+		"attack", "weakness", "resistance", "retreat", "rule",
+		"prize", "discard", "damage", "opponent",
+		// English card type words (appear on Japanese cards as the only English text)
+		"supporter", // Trainer subtype
+		"item",      // Trainer subtype
+		"stadium",   // Trainer subtype
+		"tool",      // Pokemon Tool
 		// Japanese trainer card type indicators
 		"サポート",     // Supporter
 		"グッズ",      // Item
@@ -1023,11 +1028,70 @@ func extractPokemonCardName(lines []string, detectedRarity string) string {
 		"トラッシュ", // Trash/Discard
 	}
 
-	// Also skip rarity-related words that might appear as separate lines
+	// Patterns that should skip if the line CONTAINS them (multi-word phrases)
+	// These are phrases that indicate the line is descriptive text, not a card name
+	containsSkipPatterns := []string{
+		"once during", "when you", "your turn",
+		"evolves from", "knocked out",
+		// Header / type lines that often appear when OCR misses the name line
+		"trainer -", // e.g. "TRAINER - SUPPORTER"
+		"basic pokemon",
+		"stage 1",
+		"stage 2",
+		"illus", "©", "nintendo",
+	}
+
+	// Rarity-related words that might appear as separate lines
+	// Use exact match since "Gold" alone should be skipped but we might have
+	// a card with "Gold" in its name (though unlikely)
 	raritySkipPatterns := []string{
 		"holo", "rare", "uncommon", "common", "promo",
 		"gold", "rainbow", "secret", "full art", "reverse",
 		"illustration", "special art", "ultra", "hyper", "double",
+	}
+
+	// Helper to check if a line/name should be skipped
+	shouldSkipName := func(name string) bool {
+		trimmed := strings.TrimSpace(name)
+		trimmed = strings.Trim(trimmed, ".,:;|!¡?¿()[]{}<>\"'`~")
+		lower := strings.ToLower(trimmed)
+		upper := strings.ToUpper(trimmed)
+
+		// Skip lines that look like Pokemon set codes (common on Japanese cards).
+		// Avoid treating "SV2A" / "SWSH4" etc. as a card name when OCR fails.
+		if regexp.MustCompile(`^[A-Z0-9]{3,6}$`).MatchString(upper) {
+			hasDigit := strings.IndexFunc(upper, func(r rune) bool { return r >= '0' && r <= '9' }) >= 0
+			if hasDigit {
+				return true
+			}
+			switch upper {
+			case "SV", "SWSH", "SM", "XY", "BW", "DP", "HS", "HGSS", "EX", "POP", "PL":
+				return true
+			}
+		}
+
+		// Check exact match patterns first (single words that shouldn't be card names)
+		for _, pattern := range exactSkipPatterns {
+			if lower == pattern {
+				return true
+			}
+		}
+
+		// Check contains patterns (multi-word phrases that indicate non-name text)
+		for _, pattern := range containsSkipPatterns {
+			if strings.Contains(lower, pattern) {
+				return true
+			}
+		}
+
+		// Check rarity patterns (exact match for short single words)
+		for _, pattern := range raritySkipPatterns {
+			if lower == pattern {
+				return true
+			}
+		}
+
+		return false
 	}
 
 	// Gym Leader and Team Rocket prefixes for WotC era cards
@@ -1047,20 +1111,10 @@ func extractPokemonCardName(lines []string, detectedRarity string) string {
 		normalizedLine := normalizeLineForNameMatch(line)
 		lower := strings.ToLower(normalizedLine)
 
-		// Skip lines that describe evolution (these contain pre-evolution names)
-		if strings.Contains(lower, "evolves from") {
-			continue
-		}
-
-		// Skip lines that are clearly not the card name
-		shouldSkip := false
-		for _, pattern := range skipPatterns {
-			if strings.Contains(lower, pattern) {
-				shouldSkip = true
-				break
-			}
-		}
-		if shouldSkip {
+		// Skip lines that should not be card names
+		// Use original line (not normalized) for skip check because normalization
+		// removes spaces which breaks multi-word phrase detection like "evolves from"
+		if shouldSkipName(line) {
 			continue
 		}
 
@@ -1122,19 +1176,8 @@ func extractPokemonCardName(lines []string, detectedRarity string) string {
 		}
 
 		// Skip lines that describe evolution
-		if strings.Contains(strings.ToLower(line), "evolves from") {
-			continue
-		}
-
-		// Skip lines that are clearly not names
-		shouldSkip := false
-		for _, pattern := range skipPatterns {
-			if strings.Contains(strings.ToLower(line), pattern) {
-				shouldSkip = true
-				break
-			}
-		}
-		if shouldSkip {
+		// Skip lines that should not be card names
+		if shouldSkipName(line) {
 			continue
 		}
 
@@ -1158,8 +1201,6 @@ func extractPokemonCardName(lines []string, detectedRarity string) string {
 
 	// Fallback 3: Try to find a reasonable first line that could be a name
 	for _, line := range lines {
-		lower := strings.ToLower(line)
-
 		// Skip short lines
 		if len(line) < 3 {
 			continue
@@ -1170,29 +1211,8 @@ func extractPokemonCardName(lines []string, detectedRarity string) string {
 			continue
 		}
 
-		// Skip common non-name patterns
-		skip := false
-		for _, pattern := range skipPatterns {
-			if strings.Contains(lower, pattern) {
-				skip = true
-				break
-			}
-		}
-		if skip {
-			continue
-		}
-
-		// Skip rarity-related lines (but not if line contains additional text like a card name)
-		// Only skip if the line is primarily a rarity indicator
-		isRarityLine := false
-		for _, pattern := range raritySkipPatterns {
-			// If the line is very short and matches a rarity pattern, skip it
-			if strings.Contains(lower, pattern) && len(line) < 20 {
-				isRarityLine = true
-				break
-			}
-		}
-		if isRarityLine {
+		// Skip lines that should not be card names
+		if shouldSkipName(line) {
 			continue
 		}
 
@@ -1214,6 +1234,11 @@ func extractPokemonCardName(lines []string, detectedRarity string) string {
 		// Clean it up - remove HP values, etc.
 		name := cleanPokemonName(line, "")
 		if len(name) >= 3 {
+			// Check if the cleaned name should be skipped
+			if shouldSkipName(name) {
+				continue
+			}
+
 			// Try fuzzy match on cleaned name
 			if matchedName, found := fuzzyMatchPokemonName(name); found {
 				result := strings.ToUpper(string(matchedName[0])) + matchedName[1:]
@@ -1223,10 +1248,19 @@ func extractPokemonCardName(lines []string, detectedRarity string) string {
 		}
 	}
 
-	// Fallback 4: return first line with letters
+	// Fallback 4: return first line with letters (but not skip words)
 	for _, line := range lines {
 		if regexp.MustCompile(`[a-zA-Z]{3,}`).MatchString(line) {
 			name := cleanPokemonName(line, "")
+			if name == "" {
+				continue
+			}
+
+			// Check if the cleaned name should be skipped
+			if shouldSkipName(name) {
+				continue
+			}
+
 			// Try fuzzy match as last resort
 			if matchedName, found := fuzzyMatchPokemonName(name); found {
 				result := strings.ToUpper(string(matchedName[0])) + matchedName[1:]
