@@ -375,6 +375,8 @@ jobs:
         run: |
           ssh $SERVER "cd $APP_DIR && IMAGE_TAG=${{ github.sha }} docker compose pull"
           ssh $SERVER "cd $APP_DIR && IMAGE_TAG=${{ github.sha }} docker compose down --remove-orphans || true"
+          # Force remove any orphaned containers with conflicting names (e.g., from manual runs)
+          ssh $SERVER "docker rm -f tcg-backend tcg-identifier 2>/dev/null || true"
           ssh $SERVER "cd $APP_DIR && IMAGE_TAG=${{ github.sha }} JUSTTCG_API_KEY='${{ secrets.JUSTTCG_API_KEY }}' ADMIN_KEY='${{ secrets.ADMIN_KEY }}' docker compose up -d"
 
       - name: Wait for services to be healthy
