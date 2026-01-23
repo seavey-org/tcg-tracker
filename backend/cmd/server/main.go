@@ -76,8 +76,26 @@ func main() {
 	ctx, cancel := context.WithCancel(context.Background())
 	defer cancel()
 
-	// Start price worker in background
-	go priceWorker.Start(ctx)
+	// Start price worker in background with panic recovery
+	go func() {
+		for {
+			func() {
+				defer func() {
+					if r := recover(); r != nil {
+						log.Printf("PANIC in price worker: %v - restarting in 30 seconds", r)
+					}
+				}()
+				priceWorker.Start(ctx)
+			}()
+
+			select {
+			case <-ctx.Done():
+				return // Graceful shutdown
+			case <-time.After(30 * time.Second):
+				log.Println("Price worker restarting after panic recovery...")
+			}
+		}
+	}()
 
 	// Start snapshot service in background
 	go snapshotService.Start(ctx)

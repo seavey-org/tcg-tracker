@@ -228,7 +228,7 @@ func (w *PriceWorker) UpdateBatch() (updated int, err error) {
 	if remaining > 0 {
 		var oldestCards []models.Card
 		query := `
-			SELECT c.* FROM cards c
+			SELECT DISTINCT c.* FROM cards c
 			INNER JOIN collection_items ci ON ci.card_id = c.id
 		`
 		if len(cardIDs) > 0 {
