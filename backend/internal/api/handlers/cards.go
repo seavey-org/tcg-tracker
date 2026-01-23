@@ -367,12 +367,12 @@ func (h *CardHandler) searchAndMatchCards(c *gin.Context, parsed *services.OCRRe
 	var textMatches []string
 	var grouped *models.MTGGroupedResult
 	var err error
+	var exactCard *models.Card // Reused for exact match preservation after ranking
 
 	if game == "pokemon" {
 		// Priority 1: If we have a set code and card number, try exact lookup first
 		// This is especially important for Japanese cards where we can't extract the card name
 		// but can reliably extract the set code and card number
-		var exactCard *models.Card
 		if parsed.SetCode != "" && parsed.CardNumber != "" {
 			exactCard = h.pokemonService.GetCardBySetAndNumber(
 				strings.ToLower(parsed.SetCode),
@@ -579,28 +579,20 @@ func (h *CardHandler) searchAndMatchCards(c *gin.Context, parsed *services.OCRRe
 	}
 
 	// For Pokemon: preserve exact set+number match at the top even after ranking.
-	if game == "pokemon" {
-		if parsed.SetCode != "" && parsed.CardNumber != "" && len(result.Cards) > 0 {
-			exactCard := h.pokemonService.GetCardBySetAndNumber(
-				strings.ToLower(parsed.SetCode),
-				parsed.CardNumber,
-			)
-			if exactCard != nil && result.Cards[0].ID != exactCard.ID {
-				for i, card := range result.Cards {
-					if card.ID == exactCard.ID {
-						result.Cards = append([]models.Card{card}, append(result.Cards[:i], result.Cards[i+1:]...)...)
-						break
-					}
-				}
+	// Reuse exactCard from Priority 1 lookup to avoid duplicate database/search call.
+	if game == "pokemon" && exactCard != nil && len(result.Cards) > 0 && result.Cards[0].ID != exactCard.ID {
+		for i, card := range result.Cards {
+			if card.ID == exactCard.ID {
+				result.Cards = append([]models.Card{card}, append(result.Cards[:i], result.Cards[i+1:]...)...)
+				break
 			}
 		}
 	}
 
-	// Cache cards in database (log errors but don't fail the request)
-	db := database.GetDB()
-	for i := range result.Cards {
-		if err := db.Save(&result.Cards[i]).Error; err != nil {
-			// Log the error but continue - caching failure shouldn't fail identification
+	// Batch cache cards in database (log errors but don't fail the request)
+	if len(result.Cards) > 0 {
+		db := database.GetDB()
+		if err := db.Save(&result.Cards).Error; err != nil {
 			c.Writer.Header().Set("X-Cache-Warning", "Some cards failed to cache")
 		}
 	}

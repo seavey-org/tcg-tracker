@@ -124,18 +124,12 @@ def ocr_image(request: OCRRequest) -> JSONResponse:
     # This is more efficient than running OCR 4 times
     rotation_info = [90, 180, 270] if request.auto_rotate else None
 
-    # Run OCR using the cached engine
-    text = ocr_engine.read_text(bgr, rotation_info=rotation_info)
-    lines = [line.strip() for line in text.split('\n') if line.strip()]
-
-    # Get confidence from detailed results
-    confidence = 0.0
-    try:
-        boxes = ocr_engine.read_text_with_boxes(bgr, rotation_info=rotation_info)
-        if boxes:
-            confidence = sum(b.get("confidence", 0.0) for b in boxes) / len(boxes)
-    except Exception:
-        pass
+    # Run OCR once with boxes to get both text and confidence in a single pass
+    # This avoids the expensive duplicate OCR call that was doubling latency
+    boxes = ocr_engine.read_text_with_boxes(bgr, rotation_info=rotation_info)
+    lines = [b["text"].strip() for b in boxes if b.get("text", "").strip()]
+    text = "\n".join(lines)
+    confidence = sum(b.get("confidence", 0.0) for b in boxes) / len(boxes) if boxes else 0.0
 
     elapsed_ms = int((time.time() - start) * 1000)
 

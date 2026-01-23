@@ -4,6 +4,7 @@ import (
 	"context"
 	"log"
 	"os"
+	"sort"
 	"strconv"
 	"strings"
 
@@ -119,6 +120,7 @@ func (s *HybridTranslationService) TranslateForMatching(
 // This ensures longer matches are replaced before shorter ones
 // (e.g., リザードン before リザード)
 var sortedJapaneseKeys []string
+var staticReplacer *strings.Replacer
 
 func init() {
 	// Build sorted list of Japanese keys by length (longest first)
@@ -126,34 +128,27 @@ func init() {
 	for japanese := range JapaneseToEnglishNames {
 		sortedJapaneseKeys = append(sortedJapaneseKeys, japanese)
 	}
-	// Sort by length descending
-	for i := 0; i < len(sortedJapaneseKeys)-1; i++ {
-		for j := i + 1; j < len(sortedJapaneseKeys); j++ {
-			if len(sortedJapaneseKeys[j]) > len(sortedJapaneseKeys[i]) {
-				sortedJapaneseKeys[i], sortedJapaneseKeys[j] = sortedJapaneseKeys[j], sortedJapaneseKeys[i]
-			}
-		}
+	// Sort by length descending (use sort.Slice instead of O(n²) bubble sort)
+	sort.Slice(sortedJapaneseKeys, func(i, j int) bool {
+		return len(sortedJapaneseKeys[i]) > len(sortedJapaneseKeys[j])
+	})
+
+	// Build strings.Replacer for efficient multi-pattern replacement
+	// Note: Replacer uses Aho-Corasick-like algorithm for O(n) replacement
+	pairs := make([]string, 0, len(JapaneseToEnglishNames)*2)
+	for _, jp := range sortedJapaneseKeys {
+		pairs = append(pairs, jp, JapaneseToEnglishNames[jp])
 	}
+	staticReplacer = strings.NewReplacer(pairs...)
 }
 
 // TranslateTextWithStaticMap applies the static Japanese-to-English name map
 // to translate known words in the text. This is useful for translating
 // full OCR text where Japanese words may appear anywhere.
-// Longer matches are replaced first to avoid partial replacements.
+// Uses strings.Replacer for efficient O(n) multi-pattern replacement.
 func TranslateTextWithStaticMap(text string) string {
 	if text == "" {
 		return text
 	}
-
-	result := text
-
-	// Replace longest matches first to avoid partial replacements
-	// (e.g., replace リザードン→Charizard before リザード→Charmeleon)
-	for _, japanese := range sortedJapaneseKeys {
-		if strings.Contains(result, japanese) {
-			result = strings.ReplaceAll(result, japanese, JapaneseToEnglishNames[japanese])
-		}
-	}
-
-	return result
+	return staticReplacer.Replace(text)
 }

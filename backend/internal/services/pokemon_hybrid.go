@@ -383,6 +383,7 @@ func (s *PokemonHybridService) SearchCards(query string) (*models.CardSearchResu
 }
 
 // loadCachedPrices loads prices from database cache only (fast, no API calls)
+// Uses batch query to avoid N+1 database calls.
 func (s *PokemonHybridService) loadCachedPrices(cards []models.Card) {
 	db := database.GetDB()
 	if db == nil {
@@ -392,15 +393,34 @@ func (s *PokemonHybridService) loadCachedPrices(cards []models.Card) {
 		}
 		return
 	}
+	if len(cards) == 0 {
+		return
+	}
+
 	cacheThreshold := 24 * time.Hour
 
+	// Batch query: fetch all cached cards in one query instead of N queries
+	ids := make([]string, len(cards))
+	for i, card := range cards {
+		ids[i] = card.ID
+	}
+
+	var cachedCards []models.Card
+	db.Where("id IN ?", ids).Find(&cachedCards)
+
+	// Build lookup map for O(1) access
+	cacheMap := make(map[string]*models.Card, len(cachedCards))
+	for i := range cachedCards {
+		cacheMap[cachedCards[i].ID] = &cachedCards[i]
+	}
+
+	// Apply cached prices
 	for i := range cards {
-		var cachedCard models.Card
-		if err := db.First(&cachedCard, "id = ?", cards[i].ID).Error; err == nil {
-			if cachedCard.PriceUpdatedAt != nil && time.Since(*cachedCard.PriceUpdatedAt) < cacheThreshold {
-				cards[i].PriceUSD = cachedCard.PriceUSD
-				cards[i].PriceFoilUSD = cachedCard.PriceFoilUSD
-				cards[i].PriceUpdatedAt = cachedCard.PriceUpdatedAt
+		if cached, ok := cacheMap[cards[i].ID]; ok {
+			if cached.PriceUpdatedAt != nil && time.Since(*cached.PriceUpdatedAt) < cacheThreshold {
+				cards[i].PriceUSD = cached.PriceUSD
+				cards[i].PriceFoilUSD = cached.PriceFoilUSD
+				cards[i].PriceUpdatedAt = cached.PriceUpdatedAt
 				cards[i].PriceSource = "cached"
 			} else {
 				cards[i].PriceSource = "stale"
