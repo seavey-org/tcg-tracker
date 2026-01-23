@@ -1712,6 +1712,264 @@ your graveyard to your hand.
 	}
 }
 
+// TestJapaneseCardParsing tests OCR parsing for Japanese Pokemon cards
+// Japanese cards are challenging because:
+// 1. They have Japanese text that shouldn't be matched to English names
+// 2. Some have English names printed alongside Japanese
+// 3. Trainer cards often have only Japanese names
+// 4. Card numbers and set codes are universal and should still be extracted
+func TestJapaneseCardParsing(t *testing.T) {
+	tests := []struct {
+		name           string
+		input          string
+		wantCardNumber string
+		wantSetCode    string
+		wantCardName   string
+		wantHP         string
+		wantLanguage   string
+		wantNameEmpty  bool // true if we expect no name match (rely on number)
+	}{
+		{
+			name: "Japanese Pikachu with English name present",
+			input: `ピカチュウ
+Pikachu
+HP 60
+かみなりタイプ
+たねポケモン
+でんこうせっか 10
+025/185
+SV1`,
+			wantCardNumber: "25",
+			wantSetCode:    "sv1",
+			wantCardName:   "Pikachu",
+			wantHP:         "60",
+			wantLanguage:   "Japanese",
+		},
+		{
+			name: "Japanese trainer card (pure Japanese, no English name)",
+			input: `博士の研究
+サポート
+自分の手札をすべてトラッシュし
+山札を7枚引く
+147/198
+SV1`,
+			wantCardNumber: "147",
+			wantSetCode:    "sv1",
+			wantLanguage:   "Japanese",
+			wantNameEmpty:  true, // No English name to match
+		},
+
+		{
+			name: "Japanese Charizard with no English name",
+			input: `リザードン
+HP 180
+ほのおタイプ
+2進化ポケモン
+025/185
+SWSH4`,
+			wantCardNumber: "25",
+			wantSetCode:    "swsh4",
+			wantHP:         "180",
+			wantLanguage:   "Japanese",
+			wantNameEmpty:  true, // No English name, must rely on number
+		},
+		{
+			name: "Japanese Pokemon V with English suffix",
+			input: `ピカチュウV
+Pikachu V
+HP 190
+かみなりタイプ
+043/185
+SWSH4`,
+			wantCardNumber: "43",
+			wantSetCode:    "swsh4",
+			wantCardName:   "Pikachu V",
+			wantHP:         "190",
+			wantLanguage:   "Japanese",
+		},
+		{
+			name: "Japanese Boss's Orders trainer",
+			input: `ボスの指令
+サポート
+相手のベンチポケモンを1匹選び
+バトルポケモンと入れ替える
+132/172
+SWSH3`,
+			wantCardNumber: "132",
+			wantSetCode:    "swsh3",
+			wantLanguage:   "Japanese",
+			wantNameEmpty:  true, // Japanese-only trainer
+		},
+		{
+			name: "Mixed Japanese/English with OCR errors",
+			input: `ピカ チュウ
+P1kachu
+HP 6O
+025/l85
+SV1`,
+			wantCardNumber: "25",
+			wantSetCode:    "sv1",
+			wantCardName:   "Pikachu", // Should fuzzy match despite OCR errors
+			wantLanguage:   "Japanese",
+		},
+		{
+			name: "Japanese card with English attack names",
+			input: `ミュウツー
+Mewtwo
+HP 130
+Psychic
+Psystrike 100
+150/165
+SV3PT5`,
+			wantCardNumber: "150",
+			wantSetCode:    "sv3pt5",
+			wantCardName:   "Mewtwo",
+			wantHP:         "130",
+			wantLanguage:   "Japanese",
+		},
+		{
+			name: "Japanese item card",
+			input: `ふしぎなアメ
+グッズ
+自分の手札から進化ポケモンを1枚選び
+そのポケモンに進化する
+089/165
+SV2A`,
+			wantCardNumber: "89",
+			wantLanguage:   "Japanese",
+			wantNameEmpty:  true,
+		},
+		{
+			name: "Japanese card minimal text - just name and number",
+			input: `ゲッコウガ
+015/078`,
+			wantCardNumber: "15",
+			wantLanguage:   "Japanese",
+			wantNameEmpty:  true,
+		},
+	}
+
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			result := ParseOCRText(tt.input, "pokemon")
+
+			if result == nil {
+				t.Fatal("Result should not be nil")
+			}
+
+			// Card number should always be extractable (universal format)
+			if tt.wantCardNumber != "" && result.CardNumber != tt.wantCardNumber {
+				t.Errorf("CardNumber = %q, want %q", result.CardNumber, tt.wantCardNumber)
+			}
+
+			// Set code should be extractable when present
+			if tt.wantSetCode != "" && !strings.EqualFold(result.SetCode, tt.wantSetCode) {
+				t.Errorf("SetCode = %q, want %q", result.SetCode, tt.wantSetCode)
+			}
+
+			// HP should be extractable (uses same format)
+			if tt.wantHP != "" && result.HP != tt.wantHP {
+				t.Errorf("HP = %q, want %q", result.HP, tt.wantHP)
+			}
+
+			// Language detection
+			if tt.wantLanguage != "" && result.DetectedLanguage != tt.wantLanguage {
+				t.Errorf("DetectedLanguage = %q, want %q", result.DetectedLanguage, tt.wantLanguage)
+			}
+
+			// Card name handling
+			if tt.wantNameEmpty {
+				// For Japanese-only cards, we should NOT extract garbage as the name
+				// An empty name is acceptable - we rely on card number matching
+				if result.CardName != "" {
+					// Check if the extracted name is valid (not Japanese garbage)
+					if containsJapaneseCharacters(result.CardName) {
+						t.Errorf("CardName = %q, should not contain Japanese characters (should be empty or English)", result.CardName)
+					}
+				}
+			} else if tt.wantCardName != "" {
+				if !strings.EqualFold(result.CardName, tt.wantCardName) {
+					t.Errorf("CardName = %q, want %q", result.CardName, tt.wantCardName)
+				}
+			}
+		})
+	}
+}
+
+// TestJapaneseHelperFunctions tests the Japanese text handling helper functions
+func TestJapaneseHelperFunctions(t *testing.T) {
+	t.Run("containsJapaneseCharacters", func(t *testing.T) {
+		tests := []struct {
+			input string
+			want  bool
+		}{
+			{"Hello", false},
+			{"ピカチュウ", true},
+			{"Pikachu ピカチュウ", true},
+			{"リザードン", true},
+			{"123/456", false},
+			{"HP 60", false},
+			{"博士の研究", true},
+			{"Ｎ", false}, // Full-width N is not Japanese script
+			{"サポート", true},
+		}
+		for _, tt := range tests {
+			got := containsJapaneseCharacters(tt.input)
+			if got != tt.want {
+				t.Errorf("containsJapaneseCharacters(%q) = %v, want %v", tt.input, got, tt.want)
+			}
+		}
+	})
+
+	t.Run("normalizeFullWidthASCII", func(t *testing.T) {
+		tests := []struct {
+			input string
+			want  string
+		}{
+			{"Ｎ", "N"},
+			{"ＥＸ", "EX"},
+			{"ＶＭＡ Ｘ", "VMA X"},
+			{"Pikachu", "Pikachu"}, // Already normal
+			{"ピカチュウ", "ピカチュウ"},     // Japanese unchanged
+			{"Ｖ Ｓ Ｔ Ａ Ｒ", "V S T A R"},
+		}
+		for _, tt := range tests {
+			got := normalizeFullWidthASCII(tt.input)
+			if got != tt.want {
+				t.Errorf("normalizeFullWidthASCII(%q) = %q, want %q", tt.input, got, tt.want)
+			}
+		}
+	})
+
+	t.Run("extractEnglishWordsFromLine", func(t *testing.T) {
+		tests := []struct {
+			input string
+			want  []string
+		}{
+			{"Pikachu", []string{"Pikachu"}},
+			{"ピカチュウ Pikachu", []string{"Pikachu"}},
+			{"HP 60", []string{"HP"}},
+			{"ピカチュウV", []string{"V"}},
+			{"Pikachu V VMAX", []string{"Pikachu", "V", "VMAX"}},
+			{"かみなりタイプ", nil}, // No English
+			{"", nil},
+			{"Mr. Mime", []string{"Mr.", "Mime"}},
+		}
+		for _, tt := range tests {
+			got := extractEnglishWordsFromLine(tt.input)
+			if len(got) != len(tt.want) {
+				t.Errorf("extractEnglishWordsFromLine(%q) = %v, want %v", tt.input, got, tt.want)
+				continue
+			}
+			for i := range got {
+				if got[i] != tt.want[i] {
+					t.Errorf("extractEnglishWordsFromLine(%q)[%d] = %q, want %q", tt.input, i, got[i], tt.want[i])
+				}
+			}
+		}
+	})
+}
+
 // TestOCREdgeCasesAndErrors tests error handling and edge cases
 func TestOCREdgeCasesAndErrors(t *testing.T) {
 	tests := []struct {

@@ -40,11 +40,22 @@ lib/
 
 ## Key Data Flow
 
-1. **CameraScreen** captures image → ML Kit extracts text lines → sends to backend `/api/cards/identify`
+1. **CameraScreen** captures image → **Server OCR** (preferred) or ML Kit fallback → sends to backend
 2. Backend's OCRParser extracts metadata (name, set code, card number, foil indicators, confidence)
 3. Backend searches and returns matching cards with parsed metadata
 4. **ScanResultScreen** displays results with confidence badge, allows adding to collection
 5. Collection additions POST to `/api/collection` with quantity, condition, printing type
+
+## OCR Processing
+
+Two OCR paths available:
+
+| Method | When Used | Languages | Notes |
+|--------|-----------|-----------|-------|
+| **Server-side (EasyOCR)** | Primary, when server available | Japanese + English | GPU-accelerated, best for Japanese cards |
+| **Client-side (ML Kit)** | Fallback when server unavailable | Currently configured for Latin only | Can be expanded to other scripts if configured |
+
+**Japanese card scanning requires server-side OCR (as currently configured).** If server OCR is unavailable, the app shows a warning that Japanese cards may not scan correctly. The server identifier service must be configured with `OCR_LANGUAGES=ja,en` for Japanese support.
 
 ## Testing
 

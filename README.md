@@ -235,6 +235,12 @@ The system uses a two-tier OCR approach for card identification:
 3. **Card Matching**: Inverted index enables fast matching (~1.5ms for good OCR)
 4. **Reliability Fallback**: Falls back to full card scan if index match score is low
 
+**Japanese Card Support:**
+- Server-side OCR with `OCR_LANGUAGES=ja,en` is required for accurate Japanese card scanning
+- Client-side OCR is configured for Latin script only
+- Japanese cards with English names (e.g., "ピカチュウ Pikachu") can match by English text
+- Japanese-only cards rely on set code + card number matching
+
 ## External APIs
 
 ### Scryfall (MTG)

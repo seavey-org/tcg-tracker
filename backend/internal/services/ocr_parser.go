@@ -998,13 +998,29 @@ func detectPokemonRarity(result *OCRResult, upperText string) {
 }
 
 func extractPokemonCardName(lines []string, detectedRarity string) string {
-	// Common patterns to skip
+	// Common patterns to skip (English and Japanese)
 	skipPatterns := []string{
 		"basic", "stage", "pokemon", "trainer", "energy",
 		"once during", "when you", "attack", "weakness",
 		"resistance", "retreat", "illus", "©", "nintendo",
 		"evolves from", "rule", "prize", "knocked out",
 		"discard", "damage", "opponent", "your turn",
+		// Japanese trainer card type indicators
+		"サポート",     // Supporter
+		"グッズ",      // Item
+		"スタジアム",    // Stadium
+		"ポケモンのどうぐ", // Pokemon Tool
+		"たねポケモン",   // Basic Pokemon
+		"進化ポケモン",   // Evolution Pokemon
+		"特性",       // Ability
+		"ワザ",       // Attack
+		// Common Japanese card text
+		"このカード", // This card
+		"自分の",   // Your
+		"相手の",   // Opponent's
+		"山札",    // Deck
+		"手札",    // Hand
+		"トラッシュ", // Trash/Discard
 	}
 
 	// Also skip rarity-related words that might appear as separate lines
@@ -1122,8 +1138,15 @@ func extractPokemonCardName(lines []string, detectedRarity string) string {
 			continue
 		}
 
-		// Extract potential words from the line and try fuzzy matching
-		words := regexp.MustCompile(`[A-Za-z]{3,}`).FindAllString(line, -1)
+		// For Japanese cards, extract English words from mixed text
+		// For English cards, extract all words
+		var words []string
+		if containsJapaneseCharacters(line) {
+			words = extractEnglishWordsFromLine(line)
+		} else {
+			words = regexp.MustCompile(`[A-Za-z]{3,}`).FindAllString(line, -1)
+		}
+
 		for _, word := range words {
 			if matchedName, found := fuzzyMatchPokemonName(word); found {
 				// Capitalize first letter
@@ -1173,9 +1196,17 @@ func extractPokemonCardName(lines []string, detectedRarity string) string {
 			continue
 		}
 
-		// Skip lines with too many special characters
-		specialCount := len(regexp.MustCompile(`[^a-zA-Z0-9\s'-]`).FindAllString(line, -1))
-		if specialCount > 3 {
+		// Skip lines with too many special symbols (not including Japanese/CJK characters)
+		// Only count actual symbols like copyright, trademark, card symbols, etc.
+		symbolCount := 0
+		for _, r := range line {
+			// Count only actual symbols, not letters (including Japanese)
+			if !unicode.IsLetter(r) && !unicode.IsDigit(r) && !unicode.IsSpace(r) &&
+				r != '\'' && r != '-' && r != '/' {
+				symbolCount++
+			}
+		}
+		if symbolCount > 5 {
 			continue
 		}
 
@@ -1210,11 +1241,29 @@ func extractPokemonCardName(lines []string, detectedRarity string) string {
 
 // cleanPokemonName cleans up OCR noise from a Pokemon name
 func cleanPokemonName(line, knownName string) string {
+	// Normalize full-width ASCII characters (common in Japanese cards)
+	// e.g., Ｎ -> N, Ｖ -> V
+	name := normalizeFullWidthASCII(line)
+
 	// Remove HP values
-	name := regexp.MustCompile(`\s*HP\s*\d+`).ReplaceAllString(line, "")
+	name = regexp.MustCompile(`\s*HP\s*\d+`).ReplaceAllString(name, "")
 	name = regexp.MustCompile(`\s*\d{2,3}\s*HP`).ReplaceAllString(name, "")
 
-	// Remove common OCR artifacts at the start (numbers, symbols)
+	// If the line contains Japanese characters, try to extract English text
+	// since our Pokemon database is English-only
+	if containsJapaneseCharacters(name) {
+		englishWords := extractEnglishWordsFromLine(name)
+		if len(englishWords) > 0 {
+			// Join the English words and use that as the candidate name
+			name = strings.Join(englishWords, " ")
+		} else {
+			// No English text found in Japanese line - can't match to English database
+			// Return empty to signal we need to rely on card number matching
+			return ""
+		}
+	}
+
+	// Remove common OCR artifacts at the start (numbers, symbols) but keep letters
 	name = regexp.MustCompile(`^[^a-zA-Z]*`).ReplaceAllString(name, "")
 
 	// If we know the Pokemon name, try to extract it with its suffixes (V, VMAX, ex, etc.)
@@ -1243,8 +1292,9 @@ func cleanPokemonName(line, knownName string) string {
 		}
 	}
 
-	// Clean up remaining artifacts
-	name = regexp.MustCompile(`[^a-zA-Z0-9\s'-]`).ReplaceAllString(name, "")
+	// Clean up remaining artifacts - for English text only
+	// Allow '.' for names like "Mr. Mime".
+	name = regexp.MustCompile(`[^a-zA-Z0-9\s'.-]`).ReplaceAllString(name, "")
 	name = regexp.MustCompile(`\s+`).ReplaceAllString(name, " ")
 	name = strings.TrimSpace(name)
 
@@ -1800,6 +1850,50 @@ func containsJapaneseCharacters(text string) bool {
 		}
 	}
 	return false
+}
+
+// extractEnglishWordsFromLine extracts English words from a line that may contain
+// mixed Japanese and English text. Returns words that are 2+ ASCII letters.
+func extractEnglishWordsFromLine(line string) []string {
+	// First normalize full-width ASCII to regular ASCII
+	normalized := normalizeFullWidthASCII(line)
+
+	// Match sequences of ASCII letters that may include punctuation commonly
+	// found in Pokemon names, e.g. "Farfetch'd" or "Mr. Mime".
+	// Keep an optional trailing '.' for abbreviations like "Mr.".
+	wordPattern := regexp.MustCompile(`[A-Za-z]+(?:[.'-][A-Za-z]+)*\.?|[A-Za-z]`)
+	matches := wordPattern.FindAllString(normalized, -1)
+
+	var words []string
+	for _, w := range matches {
+		upper := strings.ToUpper(w)
+		// Keep words that are at least 2 chars or single meaningful letters
+		// Single letters N, V, G, X are valid Pokemon card names/suffixes
+		if len(w) >= 2 {
+			words = append(words, w)
+			continue
+		}
+		if len(w) == 1 && strings.ContainsAny(upper, "NVGX") {
+			// Normalize single-letter suffixes to uppercase.
+			words = append(words, upper)
+		}
+	}
+	return words
+}
+
+// normalizeFullWidthASCII converts full-width ASCII characters to half-width
+// Japanese cards often use full-width letters like Ｎ, Ａ, etc.
+func normalizeFullWidthASCII(text string) string {
+	var result strings.Builder
+	for _, r := range text {
+		// Full-width ASCII range: U+FF01-U+FF5E maps to U+0021-U+007E
+		if r >= 0xFF01 && r <= 0xFF5E {
+			result.WriteRune(r - 0xFF01 + 0x0021)
+		} else {
+			result.WriteRune(r)
+		}
+	}
+	return result.String()
 }
 
 // containsGermanIndicators checks for German card indicators

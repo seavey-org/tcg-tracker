@@ -271,6 +271,15 @@ Matching priority:
 1. Exact match by set code + card number
 2. Fuzzy match by name with ranking
 
+**Japanese Card Handling:**
+Japanese cards require special processing since the Pokemon database is English-only:
+- **Full-width ASCII normalization**: Converts characters like `Ｎ` → `N`, `ＥＸ` → `EX`
+- **English word extraction**: Extracts English text from mixed Japanese/English lines (e.g., "ピカチュウV" → "V")
+- **Skip patterns**: Filters Japanese trainer card types (サポート, グッズ, スタジアム) and common text
+- **Fallback to card number**: Japanese-only cards (no English name) rely on set code + card number matching
+
+**Important**: Japanese card scanning requires server-side OCR with `OCR_LANGUAGES=ja,en`. Client-side ML Kit is configured for Latin script only; the mobile app shows a warning when using fallback OCR for Pokemon cards.
+
 ### Inverted Index for Card Matching
 The `PokemonHybridService` uses an inverted index for fast full-text card matching:
 

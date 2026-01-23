@@ -54,6 +54,9 @@ class _CameraScreenState extends State<CameraScreen> {
   // The camera package throws errors if you capture while another capture is in progress
   bool _isTakingPicture = false;
 
+  // Avoid spamming the user with repeated warnings.
+  bool _shownJapaneseFallbackWarning = false;
+
   @override
   void initState() {
     super.initState();
@@ -228,6 +231,8 @@ class _CameraScreenState extends State<CameraScreen> {
       }
 
       // Fall back to client-side OCR if server OCR unavailable or failed
+      // NOTE: Client-side ML Kit OCR is currently configured for Latin script.
+      // Japanese cards scan best with server-side OCR (EasyOCR with ja+en).
       if (scanResult == null || scanResult.cards.isEmpty) {
         try {
           // Use client-side ML Kit OCR as fallback
@@ -243,6 +248,22 @@ class _CameraScreenState extends State<CameraScreen> {
               imageAnalysis: ocrResult.imageAnalysis,
             );
             usedServerOCR = false;
+
+            // Show warning if using client OCR and scanning Pokemon.
+            if (mounted &&
+                !_shownJapaneseFallbackWarning &&
+                _selectedGame == 'pokemon' &&
+                _serverOCRAvailable != true) {
+              _shownJapaneseFallbackWarning = true;
+              ScaffoldMessenger.of(context).showSnackBar(
+                const SnackBar(
+                  content: Text(
+                    'Using fallback OCR - Japanese cards may not scan correctly',
+                  ),
+                  duration: Duration(seconds: 3),
+                ),
+              );
+            }
           }
         } on OcrException {
           // Client OCR also failed
