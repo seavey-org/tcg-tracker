@@ -373,17 +373,17 @@ jobs:
 
       - name: Pull and deploy images
         run: |
-          ssh $SERVER "cd $APP_DIR && IMAGE_TAG=${{ github.sha }} docker compose pull"
-          ssh $SERVER "cd $APP_DIR && IMAGE_TAG=${{ github.sha }} docker compose down --remove-orphans || true"
+          ssh $SERVER "cd $APP_DIR && IMAGE_TAG=${{ github.sha }} docker compose -f docker-compose.yml -f docker-compose.gpu.yml pull"
+          ssh $SERVER "cd $APP_DIR && IMAGE_TAG=${{ github.sha }} docker compose -f docker-compose.yml -f docker-compose.gpu.yml down --remove-orphans || true"
           # Force remove any orphaned containers with conflicting names (e.g., from manual runs)
           ssh $SERVER "docker rm -f tcg-backend tcg-identifier 2>/dev/null || true"
-          ssh $SERVER "cd $APP_DIR && IMAGE_TAG=${{ github.sha }} JUSTTCG_API_KEY='${{ secrets.JUSTTCG_API_KEY }}' ADMIN_KEY='${{ secrets.ADMIN_KEY }}' docker compose up -d"
+          ssh $SERVER "cd $APP_DIR && IMAGE_TAG=${{ github.sha }} JUSTTCG_API_KEY='${{ secrets.JUSTTCG_API_KEY }}' ADMIN_KEY='${{ secrets.ADMIN_KEY }}' docker compose -f docker-compose.yml -f docker-compose.gpu.yml up -d"
 
       - name: Wait for services to be healthy
         run: |
           echo "Waiting for services to start..."
           sleep 10
-          ssh $SERVER "cd $APP_DIR && docker compose ps"
+          ssh $SERVER "cd $APP_DIR && docker compose -f docker-compose.yml -f docker-compose.gpu.yml ps"
 
       - name: Verify service health
         run: |
@@ -430,6 +430,6 @@ jobs:
           echo "Image tag: ${{ github.sha }}"
           echo ""
           echo "=== Service Status ==="
-          ssh $SERVER "cd $APP_DIR && docker compose ps"
+          ssh $SERVER "cd $APP_DIR && docker compose -f docker-compose.yml -f docker-compose.gpu.yml ps"
           echo ""
-          echo "To rollback: IMAGE_TAG=<previous-sha> docker compose up -d"
+          echo "To rollback: IMAGE_TAG=<previous-sha> docker compose -f docker-compose.yml -f docker-compose.gpu.yml up -d"
