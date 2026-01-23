@@ -45,4 +45,6 @@ services:
       - HOST=0.0.0.0
       - PORT=8099
       - USE_GPU=0
+      # Japanese+English (ja,en) requires GPU; use English-only for CPU mode
+      - OCR_LANGUAGES=${OCR_LANGUAGES:-en}
     restart: always
