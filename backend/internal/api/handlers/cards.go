@@ -487,15 +487,41 @@ func (h *CardHandler) searchAndMatchCards(c *gin.Context, parsed *services.OCRRe
 			}
 		}
 
-		// Priority 7: Translation fallback for Japanese cards with low confidence full-text matches.
-		// IMPORTANT: Only trigger translation when full-text matching ran and produced a low score.
-		// Other matching paths (exact set+number, name-based search) do not provide a comparable score.
-		if h.translationService != nil && parsed.DetectedLanguage == "Japanese" && result != nil && result.TopScore > 0 && result.TopScore < h.translationService.GetConfidenceThreshold() {
+		// Priority 7: Translation fallback for Japanese cards with low confidence matches.
+		// Trigger translation when:
+		// 1. No results found (result is nil or empty)
+		// 2. TopScore == 0 (matched via name search, not full-text - suspicious for Japanese)
+		// 3. TopScore > 0 but < threshold (low confidence full-text match)
+		// 4. Matched card name is very short (1-3 chars) - likely OCR garbage like "N", "Eri"
+		shouldTranslate := false
+		if h.translationService != nil && parsed.DetectedLanguage == "Japanese" {
+			if result == nil || len(result.Cards) == 0 {
+				// No match at all
+				shouldTranslate = true
+			} else if result.TopScore == 0 {
+				// Matched via name search (no score) - suspicious for Japanese cards
+				// especially if the matched name is very short (likely OCR garbage)
+				matchedName := result.Cards[0].Name
+				if len(matchedName) <= 3 {
+					shouldTranslate = true
+					log.Printf("CardMatch: suspicious short name match %q for Japanese card, triggering translation", matchedName)
+				}
+			} else if result.TopScore > 0 && result.TopScore < h.translationService.GetConfidenceThreshold() {
+				// Low confidence full-text match
+				shouldTranslate = true
+			}
+		}
+		if shouldTranslate {
+			// Get current score (0 if no result)
+			currentScore := 0
+			if result != nil {
+				currentScore = result.TopScore
+			}
 			translationResult, _ := h.translationService.TranslateForMatching(
 				c.Request.Context(),
 				fallbackText,
 				parsed.DetectedLanguage,
-				result.TopScore,
+				currentScore,
 			)
 
 			// If translation was performed (API or static map changed the text), retry matching
@@ -522,8 +548,8 @@ func (h *CardHandler) searchAndMatchCards(c *gin.Context, parsed *services.OCRRe
 						parsed.CandidateSets, // Use original + Gemini hints
 					)
 
-					// Use translated result if it's better than current
-					if translatedResult != nil && len(translatedResult.Cards) > 0 && translatedResult.TopScore > result.TopScore {
+					// Use translated result if it's better than current (or if we had no result)
+					if translatedResult != nil && len(translatedResult.Cards) > 0 && translatedResult.TopScore > currentScore {
 						result = translatedResult
 						textMatches = translatedMatches
 						parsed.TranslationSource = translationResult.Source
