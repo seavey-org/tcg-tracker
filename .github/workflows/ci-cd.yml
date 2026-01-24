@@ -256,6 +256,10 @@ jobs:
           ssh $PROD_USER@$PROD_HOST "ln -sf /home/cody/google-cloud-adminSvc.json $APP_DIR/secrets/gcloud.json 2>/dev/null || true"
           ssh $PROD_USER@$PROD_HOST "echo 'IMAGE_TAG=${{ github.sha }}' > $APP_DIR/.env.deploy"
 
+      - name: Login to GHCR on production server
+        run: |
+          ssh $PROD_USER@$PROD_HOST "echo '${{ secrets.GH_ACTIONS_READ_TOKEN }}' | docker login ghcr.io -u codyseavey --password-stdin"
+
       - name: Pre-pull images on production (while old containers still running)
         run: |
           # Always pull app image (small, fast)
