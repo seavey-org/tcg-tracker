@@ -31,15 +31,10 @@ env:
   REGISTRY: ghcr.io
   IMAGE_PREFIX: ghcr.io/${{ github.repository }}
 
-# Default permissions for GITHUB_TOKEN
-permissions:
-  contents: read
-  packages: write
-
 jobs:
   # Detect which components changed
   check-changes:
-    runs-on: [self-hosted, fedora]
+    runs-on: ubuntu-latest
     outputs:
       backend: ${{ steps.filter.outputs.backend }}
       frontend: ${{ steps.filter.outputs.frontend }}
@@ -140,9 +135,9 @@ jobs:
       - name: Run tests
         run: pytest tests/ -v
 
-  # ============== DOCKER BUILDS (main branch + manual only) ==============
+  # ============== DOCKER BUILDS (ubuntu for fast GHCR push) ==============
   build-push-app:
-    runs-on: [self-hosted, fedora]
+    runs-on: ubuntu-latest
     needs: [check-changes, lint-backend, lint-build-frontend, test-backend]
     if: |
       always() &&
@@ -151,26 +146,43 @@ jobs:
       (needs.lint-backend.result == 'success' || needs.lint-backend.result == 'skipped') &&
       (needs.lint-build-frontend.result == 'success' || needs.lint-build-frontend.result == 'skipped') &&
       (needs.test-backend.result == 'success' || needs.test-backend.result == 'skipped')
+    permissions:
+      contents: read
+      packages: write
     steps:
       - uses: actions/checkout@v4
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
       - name: Log in to GHCR
         uses: docker/login-action@v3
         with:
-          registry: ghcr.io
+          registry: ${{ env.REGISTRY }}
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Extract metadata
+        id: meta
+        uses: docker/metadata-action@v5
+        with:
+          images: ${{ env.IMAGE_PREFIX }}/app
+          tags: |
+            type=sha,prefix=,format=long
+            type=raw,value=latest
+
       - name: Build and push app image
-        run: |
-          docker buildx build \
-            --push \
-            --tag ${{ env.IMAGE_PREFIX }}/app:${{ github.sha }} \
-            --tag ${{ env.IMAGE_PREFIX }}/app:latest \
-            --cache-from type=registry,ref=${{ env.IMAGE_PREFIX }}/app:latest \
-            --cache-to type=inline \
-            .
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          push: true
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
 
   build-push-identifier:
-    runs-on: [self-hosted, fedora]
+    runs-on: ubuntu-latest
     needs: [check-changes, lint-identifier, test-identifier]
     if: |
       always() &&
@@ -178,26 +190,42 @@ jobs:
       github.ref == 'refs/heads/main' &&
       (needs.lint-identifier.result == 'success' || needs.lint-identifier.result == 'skipped') &&
       (needs.test-identifier.result == 'success' || needs.test-identifier.result == 'skipped')
+    permissions:
+      contents: read
+      packages: write
     steps:
       - uses: actions/checkout@v4
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
       - name: Log in to GHCR
         uses: docker/login-action@v3
         with:
-          registry: ghcr.io
+          registry: ${{ env.REGISTRY }}
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
-      - name: Build and push identifier image
-        run: |
-          # Use buildx with --push for better auth handling on large images
-          docker buildx build \
-            --push \
-            --tag ${{ env.IMAGE_PREFIX }}/identifier:${{ github.sha }} \
-            --tag ${{ env.IMAGE_PREFIX }}/identifier:latest \
-            --cache-from type=registry,ref=${{ env.IMAGE_PREFIX }}/identifier:latest \
-            --cache-to type=inline \
-            ./identifier
 
-  # ============== DEPLOY (main branch + manual only) ==============
+      - name: Extract metadata
+        id: meta
+        uses: docker/metadata-action@v5
+        with:
+          images: ${{ env.IMAGE_PREFIX }}/identifier
+          tags: |
+            type=sha,prefix=,format=long
+            type=raw,value=latest
+
+      - name: Build and push identifier image
+        uses: docker/build-push-action@v6
+        with:
+          context: ./identifier
+          push: true
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+
+  # ============== DEPLOY (self-hosted for local docker access) ==============
   deploy:
     runs-on: [self-hosted, fedora]
     needs: [check-changes, build-push-app, build-push-identifier]
