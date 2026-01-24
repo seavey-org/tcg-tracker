@@ -21,17 +21,15 @@ type CollectionHandler struct {
 	imageStorageService *services.ImageStorageService
 	snapshotService     *services.SnapshotService
 	priceWorker         *services.PriceWorker
-	translationService  *services.HybridTranslationService
 }
 
-func NewCollectionHandler(scryfall *services.ScryfallService, pokemon *services.PokemonHybridService, imageStorage *services.ImageStorageService, snapshot *services.SnapshotService, priceWorker *services.PriceWorker, translation *services.HybridTranslationService) *CollectionHandler {
+func NewCollectionHandler(scryfall *services.ScryfallService, pokemon *services.PokemonHybridService, imageStorage *services.ImageStorageService, snapshot *services.SnapshotService, priceWorker *services.PriceWorker) *CollectionHandler {
 	return &CollectionHandler{
 		scryfallService:     scryfall,
 		pokemonService:      pokemon,
 		imageStorageService: imageStorage,
 		snapshotService:     snapshot,
 		priceWorker:         priceWorker,
-		translationService:  translation,
 	}
 }
 
@@ -133,14 +131,6 @@ func (h *CollectionHandler) AddToCollection(c *gin.Context) {
 		if err := db.Create(&item).Error; err != nil {
 			c.JSON(http.StatusInternalServerError, gin.H{"error": err.Error()})
 			return
-		}
-
-		// Cache OCR text → card ID mapping for Japanese cards
-		// This allows instant lookups on future scans of the same card
-		if req.OCRText != "" && h.translationService != nil {
-			if err := h.translationService.CacheConfirmedTranslation(req.OCRText, card.Name, req.CardID); err != nil {
-				log.Printf("Failed to cache translation for card %s: %v", req.CardID, err)
-			}
 		}
 
 		db.Preload("Card").First(&item, item.ID)

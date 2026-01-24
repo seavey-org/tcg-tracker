@@ -8,9 +8,9 @@ import 'package:image/image.dart' as img;
 import '../models/card.dart';
 import '../models/collection_item.dart' show CollectionItem, PrintingType;
 import '../models/collection_stats.dart';
+import '../models/gemini_scan_result.dart';
 import '../models/grouped_collection.dart';
 import '../models/price_status.dart';
-import 'image_analysis_service.dart';
 import 'auth_service.dart';
 
 class ApiService {
@@ -115,41 +115,6 @@ class ApiService {
     } else {
       final error = _safeJsonDecode(response.body);
       throw Exception(error['error'] ?? 'Failed to search cards');
-    }
-  }
-
-  Future<ScanResult> identifyCard(
-    String text,
-    String game, {
-    ImageAnalysisResult? imageAnalysis,
-  }) async {
-    final serverUrl = await getServerUrl();
-    final uri = Uri.parse('$serverUrl/api/cards/identify');
-
-    final body = <String, dynamic>{'text': text, 'game': game};
-
-    // Include image analysis if provided
-    if (imageAnalysis != null) {
-      body['image_analysis'] = imageAnalysis.toJson();
-    }
-
-    final response = await _httpClient
-        .post(
-          uri,
-          headers: {'Content-Type': 'application/json'},
-          body: json.encode(body),
-        )
-        .timeout(
-          const Duration(seconds: 35),
-          onTimeout: () => throw Exception('Request timed out'),
-        );
-
-    if (response.statusCode == 200) {
-      final data = json.decode(response.body);
-      return ScanResult.fromJson(data);
-    } else {
-      final error = _safeJsonDecode(response.body);
-      throw Exception(error['error'] ?? 'Failed to identify card');
     }
   }
 
@@ -452,28 +417,6 @@ class ApiService {
     }
   }
 
-  /// Check if server-side OCR is available
-  Future<bool> isServerOCRAvailable() async {
-    try {
-      final serverUrl = await getServerUrl();
-      final uri = Uri.parse('$serverUrl/api/cards/ocr-status');
-      final response = await _httpClient
-          .get(uri)
-          .timeout(
-            const Duration(seconds: 10),
-            onTimeout: () => throw Exception('Request timed out'),
-          );
-
-      if (response.statusCode == 200) {
-        final data = json.decode(response.body);
-        return data['server_ocr_available'] ?? false;
-      }
-      return false;
-    } catch (e) {
-      return false;
-    }
-  }
-
   /// Downscale image to max dimension while preserving aspect ratio.
   /// Returns the original bytes if already small enough to avoid lossy re-compression.
   /// When resizing is needed, uses high quality (95) to preserve text clarity for OCR.
@@ -503,12 +446,9 @@ class ApiService {
     return Uint8List.fromList(img.encodeJpg(resized, quality: 95));
   }
 
-  /// Identify card from an image using server-side OCR
-  /// This is an alternative to client-side ML Kit OCR
-  Future<ScanResult> identifyCardFromImage(
-    List<int> imageBytes,
-    String game,
-  ) async {
+  /// Identify card from an image using Gemini Vision
+  /// Gemini automatically detects the game type (Pokemon/MTG) and language
+  Future<GeminiScanResult> identifyCardFromImage(List<int> imageBytes) async {
     final serverUrl = await getServerUrl();
     final uri = Uri.parse('$serverUrl/api/cards/identify-image');
 
@@ -517,7 +457,6 @@ class ApiService {
 
     // Create multipart request
     final request = http.MultipartRequest('POST', uri);
-    request.fields['game'] = game;
     request.files.add(
       http.MultipartFile.fromBytes(
         'image',
@@ -527,7 +466,7 @@ class ApiService {
     );
 
     final streamedResponse = await request.send().timeout(
-      const Duration(seconds: 60), // Longer timeout for image processing
+      const Duration(seconds: 90), // Longer timeout for Gemini multi-turn
       onTimeout: () => throw Exception('Request timed out'),
     );
 
@@ -535,9 +474,9 @@ class ApiService {
 
     if (response.statusCode == 200) {
       final data = json.decode(response.body);
-      return ScanResult.fromJson(data);
+      return GeminiScanResult.fromJson(data);
     } else if (response.statusCode == 503) {
-      throw Exception('Server-side OCR is not available');
+      throw Exception('Card identification service is not available');
     } else {
       final error = _safeJsonDecode(response.body);
       throw Exception(error['error'] ?? 'Failed to identify card from image');

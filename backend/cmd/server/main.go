@@ -42,10 +42,8 @@ func main() {
 	}
 	log.Printf("Loaded %d Pokemon cards from %d sets", pokemonService.GetCardCount(), pokemonService.GetSetCount())
 
-	// Initialize OCR parser with Pokemon names from the database
-	// This enables comprehensive name matching for all cards in the database
-	pokemonNames := pokemonService.GetAllPokemonNames()
-	services.InitPokemonNamesFromData(pokemonNames)
+	// Initialize Gemini service for card identification
+	geminiService := services.NewGeminiService()
 
 	// Initialize JustTCG service for condition-based pricing
 	justTCGAPIKey := os.Getenv("JUSTTCG_API_KEY")
@@ -71,9 +69,6 @@ func main() {
 
 	// Initialize TCGPlayer sync service for bulk prepopulating TCGPlayerIDs
 	tcgPlayerSync := services.NewTCGPlayerSyncService(justTCGService)
-
-	// Initialize hybrid translation service for Japanese card support
-	translationService := services.NewHybridTranslationService(database.GetDB())
 
 	// Create a cancellable context for graceful shutdown
 	ctx, cancel := context.WithCancel(context.Background())
@@ -119,7 +114,7 @@ func main() {
 	}
 
 	// Setup router
-	router := api.SetupRouter(scryfallService, pokemonService, priceWorker, priceService, imageStorageService, snapshotService, tcgPlayerSync, justTCGService, translationService)
+	router := api.SetupRouter(scryfallService, pokemonService, geminiService, priceWorker, priceService, imageStorageService, snapshotService, tcgPlayerSync, justTCGService)
 
 	// Get port from environment
 	port := os.Getenv("PORT")

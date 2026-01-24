@@ -5,25 +5,20 @@ import 'package:camera/camera.dart';
 import 'package:mobile/screens/camera_screen.dart';
 import 'package:mobile/services/api_service.dart';
 import 'package:mobile/services/camera_service.dart';
-import 'package:mobile/services/ocr_service.dart';
 
 class MockCameraService extends Mock implements CameraService {}
-class MockOcrService extends Mock implements OcrService {}
+
 class MockApiService extends Mock implements ApiService {}
+
 class MockCameraController extends Mock implements CameraController {}
 
 void main() {
   late MockCameraService mockCameraService;
-  late MockOcrService mockOcrService;
   late MockApiService mockApiService;
 
   setUp(() {
     mockCameraService = MockCameraService();
-    mockOcrService = MockOcrService();
     mockApiService = MockApiService();
-
-    // Default stub for dispose
-    when(() => mockOcrService.dispose()).thenReturn(null);
   });
 
   Widget createWidget() {
@@ -33,17 +28,18 @@ void main() {
       },
       home: CameraScreen(
         cameraService: mockCameraService,
-        ocrService: mockOcrService,
         apiService: mockApiService,
       ),
     );
   }
 
   group('CameraScreen', () {
-    testWidgets('shows loading spinner before camera initialization', (tester) async {
-      when(() => mockCameraService.getAvailableCameras()).thenAnswer(
-        (_) async => <CameraDescription>[],
-      );
+    testWidgets('shows loading spinner before camera initialization', (
+      tester,
+    ) async {
+      when(
+        () => mockCameraService.getAvailableCameras(),
+      ).thenAnswer((_) async => <CameraDescription>[]);
 
       await tester.pumpWidget(createWidget());
       // Just pump once to see the initial state before async completes
@@ -60,9 +56,9 @@ void main() {
     // The permission check happens before camera availability check, causing early return.
     // The functionality is verified through integration tests on real devices.
     testWidgets('shows snackbar when no cameras available', (tester) async {
-      when(() => mockCameraService.getAvailableCameras()).thenAnswer(
-        (_) async => [],
-      );
+      when(
+        () => mockCameraService.getAvailableCameras(),
+      ).thenAnswer((_) async => []);
 
       await tester.pumpWidget(createWidget());
       // Use pump with duration instead of pumpAndSettle to avoid animation timeout
@@ -73,10 +69,12 @@ void main() {
       expect(find.byType(CircularProgressIndicator), findsOneWidget);
     });
 
-    testWidgets('displays game selector with MTG and Pokemon options', (tester) async {
-      when(() => mockCameraService.getAvailableCameras()).thenAnswer(
-        (_) async => [],
-      );
+    testWidgets('displays game selector with MTG and Pokemon options', (
+      tester,
+    ) async {
+      when(
+        () => mockCameraService.getAvailableCameras(),
+      ).thenAnswer((_) async => []);
 
       await tester.pumpWidget(createWidget());
       await tester.pump(const Duration(milliseconds: 100));
@@ -87,9 +85,9 @@ void main() {
     });
 
     testWidgets('MTG is selected by default', (tester) async {
-      when(() => mockCameraService.getAvailableCameras()).thenAnswer(
-        (_) async => [],
-      );
+      when(
+        () => mockCameraService.getAvailableCameras(),
+      ).thenAnswer((_) async => []);
 
       await tester.pumpWidget(createWidget());
       await tester.pump(const Duration(milliseconds: 100));
@@ -101,9 +99,9 @@ void main() {
     });
 
     testWidgets('can switch to Pokemon game', (tester) async {
-      when(() => mockCameraService.getAvailableCameras()).thenAnswer(
-        (_) async => [],
-      );
+      when(
+        () => mockCameraService.getAvailableCameras(),
+      ).thenAnswer((_) async => []);
 
       await tester.pumpWidget(createWidget());
       await tester.pump(const Duration(milliseconds: 100));
@@ -118,9 +116,9 @@ void main() {
     });
 
     testWidgets('displays app bar with title', (tester) async {
-      when(() => mockCameraService.getAvailableCameras()).thenAnswer(
-        (_) async => [],
-      );
+      when(
+        () => mockCameraService.getAvailableCameras(),
+      ).thenAnswer((_) async => []);
 
       await tester.pumpWidget(createWidget());
       await tester.pump(const Duration(milliseconds: 100));
@@ -129,9 +127,9 @@ void main() {
     });
 
     testWidgets('displays settings icon in app bar', (tester) async {
-      when(() => mockCameraService.getAvailableCameras()).thenAnswer(
-        (_) async => [],
-      );
+      when(
+        () => mockCameraService.getAvailableCameras(),
+      ).thenAnswer((_) async => []);
 
       await tester.pumpWidget(createWidget());
       await tester.pump(const Duration(milliseconds: 100));
@@ -139,10 +137,12 @@ void main() {
       expect(find.byIcon(Icons.settings), findsOneWidget);
     });
 
-    testWidgets('navigates to settings when settings icon tapped', (tester) async {
-      when(() => mockCameraService.getAvailableCameras()).thenAnswer(
-        (_) async => [],
-      );
+    testWidgets('navigates to settings when settings icon tapped', (
+      tester,
+    ) async {
+      when(
+        () => mockCameraService.getAvailableCameras(),
+      ).thenAnswer((_) async => []);
 
       await tester.pumpWidget(createWidget());
       await tester.pump(const Duration(milliseconds: 100));
@@ -154,9 +154,9 @@ void main() {
     });
 
     testWidgets('displays capture button with camera icon', (tester) async {
-      when(() => mockCameraService.getAvailableCameras()).thenAnswer(
-        (_) async => [],
-      );
+      when(
+        () => mockCameraService.getAvailableCameras(),
+      ).thenAnswer((_) async => []);
 
       await tester.pumpWidget(createWidget());
       await tester.pump(const Duration(milliseconds: 100));
@@ -165,10 +165,12 @@ void main() {
       expect(find.byIcon(Icons.camera_alt), findsOneWidget);
     });
 
-    testWidgets('capture button is disabled when camera not initialized', (tester) async {
-      when(() => mockCameraService.getAvailableCameras()).thenAnswer(
-        (_) async => [],
-      );
+    testWidgets('capture button is disabled when camera not initialized', (
+      tester,
+    ) async {
+      when(
+        () => mockCameraService.getAvailableCameras(),
+      ).thenAnswer((_) async => []);
 
       await tester.pumpWidget(createWidget());
       await tester.pump(const Duration(milliseconds: 100));
@@ -184,9 +186,9 @@ void main() {
     testWidgets('shows loading indicator when processing', (tester) async {
       // We can't easily test the processing state without a real camera,
       // but we verify the UI structure is correct
-      when(() => mockCameraService.getAvailableCameras()).thenAnswer(
-        (_) async => [],
-      );
+      when(
+        () => mockCameraService.getAvailableCameras(),
+      ).thenAnswer((_) async => []);
 
       await tester.pumpWidget(createWidget());
       await tester.pump(const Duration(milliseconds: 100));
@@ -196,10 +198,12 @@ void main() {
     });
 
     group('widget structure', () {
-      testWidgets('has Column layout with game selector, preview, and button', (tester) async {
-        when(() => mockCameraService.getAvailableCameras()).thenAnswer(
-          (_) async => [],
-        );
+      testWidgets('has Column layout with game selector, preview, and button', (
+        tester,
+      ) async {
+        when(
+          () => mockCameraService.getAvailableCameras(),
+        ).thenAnswer((_) async => []);
 
         await tester.pumpWidget(createWidget());
         await tester.pump(const Duration(milliseconds: 100));
@@ -211,9 +215,9 @@ void main() {
       });
 
       testWidgets('uses Scaffold with AppBar', (tester) async {
-        when(() => mockCameraService.getAvailableCameras()).thenAnswer(
-          (_) async => [],
-        );
+        when(
+          () => mockCameraService.getAvailableCameras(),
+        ).thenAnswer((_) async => []);
 
         await tester.pumpWidget(createWidget());
         await tester.pump(const Duration(milliseconds: 100));

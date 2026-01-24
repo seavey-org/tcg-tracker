@@ -1,6 +1,6 @@
 # TCG Tracker
 
-A trading card collection tracker for Magic: The Gathering and Pokemon cards with camera-based card scanning, ML-powered identification, and price tracking.
+A trading card collection tracker for Magic: The Gathering and Pokemon cards with camera-based card scanning, Gemini AI-powered identification, and price tracking.
 
 ## Architecture
 
@@ -13,34 +13,33 @@ A trading card collection tracker for Magic: The Gathering and Pokemon cards wit
          └───────────┬───────────┘
                      │ REST API
               ┌──────▼──────┐
-              │   Go API    │────────┐
-              │   Server    │        │
-              └──────┬──────┘        │
-                     │               │
-    ┌────────────────┼───────────────┼────────────────┐
-    │                │               │                │
-┌───▼───┐      ┌─────▼─────┐   ┌─────▼─────┐   ┌──────▼──────┐
-│SQLite │      │ Scryfall  │   │ JustTCG   │   │ Identifier  │
-│  DB   │      │   API     │   │   API     │   │   Service   │
-└───────┘      └───────────┘   └───────────┘   └─────────────┘
-                                      │
-                               ┌──────▼──────┐
-                               │ Prometheus  │───► Grafana
-                               │  /metrics   │
-                               └─────────────┘
+              │   Go API    │
+              │   Server    │
+              └──────┬──────┘
+                     │
+    ┌────────────────┼────────────────┬────────────────┐
+    │                │                │                │
+┌───▼───┐      ┌─────▼─────┐   ┌──────▼──────┐   ┌─────▼─────┐
+│SQLite │      │ Scryfall  │   │ Gemini API  │   │ JustTCG   │
+│  DB   │      │   API     │   │  (Vision)   │   │   API     │
+└───────┘      └───────────┘   └─────────────┘   └───────────┘
+                                                        │
+                                                 ┌──────▼──────┐
+                                                 │ Prometheus  │───► Grafana
+                                                 │  /metrics   │
+                                                 └─────────────┘
 ```
 
 ## Features
 
+- **Gemini AI Card Identification**: Upload card images for automatic identification using Gemini Vision with function calling
+- **Multi-Language Support**: Automatically detects card language (Japanese, German, French, Italian) with language-specific pricing
 - **Card Search**: Search for MTG and Pokemon cards using external APIs
-- **OCR Card Identification**: Upload card images for automatic identification using GPU-accelerated OCR
-- **Multi-Language Support**: Track foreign language cards (Japanese, German, French, Italian) with language-specific pricing
 - **MTG 2-Phase Selection**: When scanning MTG cards, browse all printings grouped by set and select the exact variant (foil, showcase, borderless, etc.)
 - **Collection Management**: Add, update, and remove cards from your collection
 - **Price Tracking**: View current market prices with automatic refresh and batch updates
 - **TCGPlayerID Sync**: Admin tools to prepopulate Pokemon TCGPlayerIDs for faster pricing
 - **Mobile Scanning**: Use your phone camera to scan and identify cards
-- **Fast Card Matching**: Inverted index enables sub-2ms card matching for good OCR
 - **Prometheus Metrics**: Export metrics for monitoring with Grafana dashboards
 
 ## Prerequisites
@@ -48,8 +47,8 @@ A trading card collection tracker for Magic: The Gathering and Pokemon cards wit
 - **Go** 1.24+ (for backend)
 - **Node.js** 20+ (for frontend)
 - **Flutter** 3.38+ (for mobile app)
-- **Python** 3.11+ (for identifier service)
 - **Docker** (recommended for deployment)
+- **Gemini API Key** (required for card scanning)
 
 ## Quick Start
 
@@ -57,18 +56,14 @@ A trading card collection tracker for Magic: The Gathering and Pokemon cards wit
 
 ```bash
 # Production: Pull pre-built images from GHCR
-docker compose up -d
+GOOGLE_API_KEY=your-gemini-key docker compose up -d
 
 # Local development: Build images locally
 docker compose -f docker-compose.yml -f docker-compose.local.yml up --build
-
-# With GPU support for identifier service
-docker compose -f docker-compose.yml -f docker-compose.gpu.yml up -d
 ```
 
 Services will be available at:
 - App (Frontend + API): http://localhost:3080
-- Identifier: http://localhost:8099
 - Prometheus Metrics: http://localhost:3080/metrics
 
 ### Docker Images
@@ -78,7 +73,6 @@ Images are automatically built and pushed to GitHub Container Registry on each c
 | Image | Description |
 |-------|-------------|
 | `ghcr.io/codyseavey/tcg-tracker/app` | Combined Go API + Vue.js frontend |
-| `ghcr.io/codyseavey/tcg-tracker/identifier` | Python OCR service |
 
 The `app` image is a multi-stage build that compiles the Vue.js frontend and Go backend into a single image, with the Go server serving the static frontend files.
 
@@ -98,7 +92,7 @@ IMAGE_TAG=abc123def docker compose up -d
 ```bash
 cd backend
 go mod tidy
-go run cmd/server/main.go
+GOOGLE_API_KEY=your-gemini-key go run cmd/server/main.go
 ```
 
 The API will start on `http://localhost:8080`.
@@ -107,14 +101,11 @@ Environment variables:
 - `PORT` - Server port (default: 8080)
 - `DB_PATH` - SQLite database path (default: ./tcg_tracker.db)
 - `POKEMON_DATA_DIR` - Pokemon TCG data directory
-- `IDENTIFIER_SERVICE_URL` - Identifier service URL (default: http://127.0.0.1:8099)
+- `GOOGLE_API_KEY` - Gemini API key for card identification (**required** for scanning)
 - `ADMIN_KEY` - Admin key for collection modification (optional, auth disabled if not set)
 - `JUSTTCG_API_KEY` - JustTCG API key for condition-based pricing
 - `JUSTTCG_DAILY_LIMIT` - Daily API request limit (default: 1000)
 - `SYNC_TCGPLAYER_IDS_ON_STARTUP` - Set to "true" to sync missing Pokemon TCGPlayerIDs on startup
-- `GOOGLE_APPLICATION_CREDENTIALS` - Path to Google Cloud service account JSON (enables translation API)
-- `GOOGLE_API_KEY` - Gemini API key for Japanese card identification (preferred over Google Translate)
-- `TRANSLATION_CONFIDENCE_THRESHOLD` - Score below which triggers translation API (default: 800)
 
 #### 2. Frontend (Vue.js Web App)
 
@@ -126,24 +117,7 @@ npm run dev
 
 The web app will start on `http://localhost:5173`.
 
-#### 3. Identifier Service (Python OCR)
-
-```bash
-cd identifier
-python -m venv venv && source venv/bin/activate
-pip install -r requirements.txt
-
-# Start server
-uvicorn identifier.app:app --host 127.0.0.1 --port 8099
-```
-
-Environment variables:
-- `HOST` - Bind address (default: 127.0.0.1)
-- `PORT` - Server port (default: 8099)
-- `USE_GPU` - Enable GPU acceleration (default: 1)
-- `OCR_LANGUAGES` - Comma-separated language codes (default: "ja,en" for Japanese + English)
-
-#### 4. Mobile App (Flutter)
+#### 3. Mobile App (Flutter)
 
 ```bash
 cd mobile

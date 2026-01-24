@@ -3,6 +3,7 @@ package services
 import (
 	"archive/zip"
 	"context"
+	"encoding/base64"
 	"encoding/json"
 	"fmt"
 	"io"
@@ -1052,6 +1053,156 @@ func extractBasePokemonName(name string) string {
 	}
 
 	return strings.TrimSpace(result)
+}
+
+// SearchByName implements CardSearcher interface for Gemini function calling.
+// Searches for Pokemon cards by name and returns up to limit results.
+func (s *PokemonHybridService) SearchByName(ctx context.Context, name string, limit int) ([]CandidateCard, error) {
+	s.mu.RLock()
+	defer s.mu.RUnlock()
+
+	if limit <= 0 {
+		limit = 10
+	}
+	if limit > 20 {
+		limit = 20
+	}
+
+	nameLower := strings.ToLower(strings.TrimSpace(name))
+	if nameLower == "" {
+		return nil, nil
+	}
+
+	// Score cards based on match quality
+	type scoredMatch struct {
+		card  LocalPokemonCard
+		score int
+	}
+	var matches []scoredMatch
+
+	for _, localCard := range s.cards {
+		score := 0
+
+		// Exact name match (highest priority)
+		if localCard.nameLower == nameLower {
+			score = 1000
+		} else if strings.HasPrefix(localCard.nameLower, nameLower+" ") {
+			// Name with suffix (e.g., "Charizard" matches "Charizard V")
+			score = 800
+		} else if strings.HasSuffix(localCard.nameLower, " "+nameLower) {
+			// Name with prefix
+			score = 700
+		} else if strings.Contains(localCard.nameLower, nameLower) {
+			// Partial name match
+			score = 500
+		}
+
+		if score > 0 {
+			matches = append(matches, scoredMatch{card: localCard, score: score})
+		}
+	}
+
+	// Sort by score descending, then by name
+	sort.Slice(matches, func(i, j int) bool {
+		if matches[i].score != matches[j].score {
+			return matches[i].score > matches[j].score
+		}
+		return matches[i].card.Name < matches[j].card.Name
+	})
+
+	// Convert to CandidateCard
+	var candidates []CandidateCard
+	for i := 0; i < len(matches) && len(candidates) < limit; i++ {
+		lc := matches[i].card
+		imageURL := lc.Images.Large
+		if imageURL == "" {
+			imageURL = lc.Images.Small
+		}
+		if imageURL == "" {
+			continue // Skip cards without images
+		}
+
+		set := s.sets[lc.SetID]
+		candidates = append(candidates, CandidateCard{
+			ID:       lc.ID,
+			Name:     lc.Name,
+			SetCode:  lc.SetID,
+			SetName:  set.Name,
+			Number:   lc.Number,
+			ImageURL: imageURL,
+		})
+	}
+
+	return candidates, nil
+}
+
+// GetBySetAndNumber implements CardSearcher interface for Gemini function calling.
+// Gets a specific Pokemon card by set code and collector number.
+func (s *PokemonHybridService) GetBySetAndNumber(ctx context.Context, setCode, number string) (*CandidateCard, error) {
+	card := s.GetCardBySetAndNumber(setCode, number)
+	if card == nil {
+		return nil, nil
+	}
+
+	imageURL := card.ImageURLLarge
+	if imageURL == "" {
+		imageURL = card.ImageURL
+	}
+
+	return &CandidateCard{
+		ID:       card.ID,
+		Name:     card.Name,
+		SetCode:  card.SetCode,
+		SetName:  card.SetName,
+		Number:   card.CardNumber,
+		ImageURL: imageURL,
+	}, nil
+}
+
+// GetCardImage implements CardSearcher interface for Gemini function calling.
+// Downloads a card image by ID and returns base64-encoded image data.
+func (s *PokemonHybridService) GetCardImage(ctx context.Context, cardID string) (string, error) {
+	s.mu.RLock()
+	idx, ok := s.idIndex[cardID]
+	if !ok {
+		s.mu.RUnlock()
+		return "", fmt.Errorf("card not found: %s", cardID)
+	}
+	card := s.cards[idx]
+	s.mu.RUnlock()
+
+	imageURL := card.Images.Large
+	if imageURL == "" {
+		imageURL = card.Images.Small
+	}
+	if imageURL == "" {
+		return "", fmt.Errorf("no image URL for card: %s", cardID)
+	}
+
+	// Download the image
+	req, err := http.NewRequestWithContext(ctx, "GET", imageURL, nil)
+	if err != nil {
+		return "", err
+	}
+
+	client := &http.Client{Timeout: 10 * time.Second}
+	resp, err := client.Do(req)
+	if err != nil {
+		return "", err
+	}
+	defer resp.Body.Close()
+
+	if resp.StatusCode != http.StatusOK {
+		return "", fmt.Errorf("HTTP %d fetching image", resp.StatusCode)
+	}
+
+	// Read and encode
+	data, err := io.ReadAll(io.LimitReader(resp.Body, 5*1024*1024))
+	if err != nil {
+		return "", err
+	}
+
+	return base64.StdEncoding.EncodeToString(data), nil
 }
 
 func downloadPokemonData(dataDir string) error {

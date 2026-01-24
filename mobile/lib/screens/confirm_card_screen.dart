@@ -22,8 +22,6 @@ class ConfirmCardScreen extends StatefulWidget {
   final String game;
   final String initialQuery;
   final ApiService? apiService;
-  final ScanMetadata? scanMetadata;
-  final SetIconResult? setIcon;
   final List<int>? scannedImageBytes;
 
   const ConfirmCardScreen({
@@ -32,8 +30,6 @@ class ConfirmCardScreen extends StatefulWidget {
     required this.game,
     required this.initialQuery,
     this.apiService,
-    this.scanMetadata,
-    this.setIcon,
     this.scannedImageBytes,
   });
 
@@ -49,10 +45,6 @@ class _ConfirmCardScreenState extends State<ConfirmCardScreen> {
   String? _searchError;
   List<CardModel>? _searchResults;
 
-  bool _isBrowsing = false;
-  String? _browseError;
-  List<CardModel>? _browseResults;
-
   @override
   void initState() {
     super.initState();
@@ -66,56 +58,6 @@ class _ConfirmCardScreenState extends State<ConfirmCardScreen> {
     super.dispose();
   }
 
-  Future<void> _browseLikelyPrints() async {
-    if (_isBrowsing) return;
-
-    final setIcon = widget.setIcon;
-    if (setIcon == null) return;
-
-    final q = widget.scanMetadata?.cardName?.trim();
-    if (q == null || q.isEmpty) {
-      if (!mounted) return;
-      setState(() {
-        _browseError =
-            'No detected card name available to browse. Retake the photo.';
-        _browseResults = null;
-      });
-      return;
-    }
-
-    final setIDs = setIcon.candidates.isNotEmpty
-        ? setIcon.candidates.map((c) => c.setId).toList()
-        : (setIcon.bestSetId.isNotEmpty ? [setIcon.bestSetId] : <String>[]);
-
-    if (setIDs.isEmpty) return;
-
-    setState(() {
-      _isBrowsing = true;
-      _browseError = null;
-      _browseResults = null;
-    });
-
-    try {
-      final result = await _apiService.searchCards(
-        q,
-        widget.game,
-        setIDs: setIDs,
-      );
-
-      if (!mounted) return;
-      setState(() {
-        _browseResults = result.cards;
-      });
-    } catch (e) {
-      if (!mounted) return;
-      setState(() {
-        _browseError = e.toString();
-      });
-    } finally {
-      if (mounted) setState(() => _isBrowsing = false);
-    }
-  }
-
   Future<void> _search() async {
     final q = _searchController.text.trim();
     if (q.isEmpty || _isSearching) return;
@@ -127,20 +69,7 @@ class _ConfirmCardScreenState extends State<ConfirmCardScreen> {
     });
 
     try {
-      final setIcon = widget.setIcon;
-      final setIDs = (setIcon != null)
-          ? (setIcon.candidates.isNotEmpty
-                ? setIcon.candidates.map((c) => c.setId).toList()
-                : (setIcon.bestSetId.isNotEmpty
-                      ? [setIcon.bestSetId]
-                      : <String>[]))
-          : <String>[];
-
-      final result = await _apiService.searchCards(
-        q,
-        widget.game,
-        setIDs: setIDs.isNotEmpty ? setIDs : null,
-      );
+      final result = await _apiService.searchCards(q, widget.game);
 
       if (!mounted) return;
       setState(() {
@@ -167,8 +96,6 @@ class _ConfirmCardScreenState extends State<ConfirmCardScreen> {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
-    final setIcon = widget.setIcon;
-    final confPct = setIcon == null ? null : (setIcon.confidence * 100).toInt();
 
     return Scaffold(
       appBar: AppBar(
@@ -221,19 +148,6 @@ class _ConfirmCardScreenState extends State<ConfirmCardScreen> {
                           'Price: ${widget.card.displayPrice}',
                           style: theme.textTheme.bodyMedium,
                         ),
-                        if (setIcon != null) ...[
-                          const SizedBox(height: 8),
-                          Text(
-                            setIcon.lowConfidence
-                                ? 'Set icon unsure ($confPct%)'
-                                : 'Set icon match ($confPct%)',
-                            style: theme.textTheme.bodySmall?.copyWith(
-                              color: setIcon.lowConfidence
-                                  ? Colors.amber.shade900
-                                  : theme.colorScheme.onSurfaceVariant,
-                            ),
-                          ),
-                        ],
                       ],
                     ),
                   ),
@@ -241,128 +155,6 @@ class _ConfirmCardScreenState extends State<ConfirmCardScreen> {
               ),
 
               const SizedBox(height: 16),
-              if (setIcon != null && setIcon.lowConfidence)
-                Padding(
-                  padding: const EdgeInsets.only(bottom: 12),
-                  child: Card(
-                    color: Colors.amber.shade50,
-                    child: Padding(
-                      padding: const EdgeInsets.all(12),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.stretch,
-                        children: [
-                          Row(
-                            children: [
-                              Icon(
-                                Icons.warning_amber_rounded,
-                                color: Colors.amber.shade900,
-                              ),
-                              const SizedBox(width: 8),
-                              Expanded(
-                                child: Text(
-                                  'Set icon match is unsure. Consider retaking the photo, browsing likely prints, or using manual search to choose the correct printing.',
-                                  style: theme.textTheme.bodyMedium,
-                                ),
-                              ),
-                            ],
-                          ),
-                          const SizedBox(height: 12),
-                          Row(
-                            children: [
-                              Expanded(
-                                child: FilledButton.icon(
-                                  onPressed: _isBrowsing
-                                      ? null
-                                      : _browseLikelyPrints,
-                                  icon: const Icon(Icons.view_list),
-                                  label: const Text('Browse likely prints'),
-                                ),
-                              ),
-                              const SizedBox(width: 12),
-                              Expanded(
-                                child: OutlinedButton.icon(
-                                  onPressed: _retake,
-                                  icon: const Icon(Icons.camera_alt),
-                                  label: const Text('Retake photo'),
-                                ),
-                              ),
-                            ],
-                          ),
-                          if (_browseError != null) ...[
-                            const SizedBox(height: 8),
-                            Text(
-                              _browseError!,
-                              style: theme.textTheme.bodySmall?.copyWith(
-                                color: theme.colorScheme.error,
-                              ),
-                            ),
-                          ],
-                          if (_browseResults != null) ...[
-                            const SizedBox(height: 12),
-                            Text(
-                              'Likely prints',
-                              style: theme.textTheme.titleSmall?.copyWith(
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                            const SizedBox(height: 8),
-                            SizedBox(
-                              height: MediaQuery.of(context).size.height * 0.35,
-                              child: _browseResults!.isEmpty
-                                  ? const Center(
-                                      child: Text(
-                                        'No results for candidate sets',
-                                      ),
-                                    )
-                                  : ListView.separated(
-                                      itemCount: _browseResults!.length,
-                                      separatorBuilder: (_, index) =>
-                                          const Divider(height: 1),
-                                      itemBuilder: (context, idx) {
-                                        final card = _browseResults![idx];
-                                        return ListTile(
-                                          leading: card.imageUrl != null
-                                              ? ClipRRect(
-                                                  borderRadius:
-                                                      BorderRadius.circular(4),
-                                                  child: SizedBox(
-                                                    width: 44,
-                                                    child: AspectRatio(
-                                                      aspectRatio: 2.5 / 3.5,
-                                                      child: Image.network(
-                                                        card.imageUrl!,
-                                                        fit: BoxFit.cover,
-                                                        errorBuilder:
-                                                            (
-                                                              context,
-                                                              error,
-                                                              stackTrace,
-                                                            ) => const Icon(
-                                                              Icons.image,
-                                                            ),
-                                                      ),
-                                                    ),
-                                                  ),
-                                                )
-                                              : const Icon(Icons.image),
-                                          title: Text(card.name),
-                                          subtitle: Text(
-                                            '${card.displaySet} • ${card.displayPrice}',
-                                          ),
-                                          trailing: const Icon(
-                                            Icons.chevron_right,
-                                          ),
-                                          onTap: () => _pickCard(card),
-                                        );
-                                      },
-                                    ),
-                            ),
-                          ],
-                        ],
-                      ),
-                    ),
-                  ),
-                ),
               Card(
                 color: theme.colorScheme.surfaceContainerHighest,
                 child: Padding(
@@ -443,7 +235,8 @@ class _ConfirmCardScreenState extends State<ConfirmCardScreen> {
                       ? const Center(child: Text('No results'))
                       : ListView.separated(
                           itemCount: _searchResults!.length,
-                          separatorBuilder: (_, index) => const Divider(height: 1),
+                          separatorBuilder: (_, index) =>
+                              const Divider(height: 1),
                           itemBuilder: (context, idx) {
                             final card = _searchResults![idx];
                             return ListTile(

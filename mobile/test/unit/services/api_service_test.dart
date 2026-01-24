@@ -7,7 +7,6 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:mobile/models/collection_item.dart' show PrintingType;
 import 'package:mobile/services/api_service.dart';
 import '../../fixtures/card_fixtures.dart';
-import '../../fixtures/scan_fixtures.dart';
 
 class MockHttpClient extends Mock implements http.Client {}
 
@@ -171,115 +170,6 @@ void main() {
         expect(capturedUri?.path, '/api/cards/search');
         expect(capturedUri?.queryParameters['q'], 'pikachu');
         expect(capturedUri?.queryParameters['game'], 'pokemon');
-      });
-    });
-
-    group('identifyCard', () {
-      test('returns ScanResult on success', () async {
-        _secureStorageValues['server_url'] = 'http://test:8080';
-        final service = ApiService(httpClient: mockHttpClient);
-
-        when(
-          () => mockHttpClient.post(
-            any(),
-            headers: any(named: 'headers'),
-            body: any(named: 'body'),
-          ),
-        ).thenAnswer(
-          (_) async => http.Response(
-            json.encode(ScanFixtures.completeScanResultJson),
-            200,
-          ),
-        );
-
-        final result = await service.identifyCard(
-          'Charizard VMAX\n025/185',
-          'pokemon',
-        );
-
-        expect(result.cards.length, 2);
-        expect(result.metadata.cardName, 'Charizard VMAX');
-        expect(result.metadata.confidence, 0.85);
-      });
-
-      test('throws exception with error message on failure', () async {
-        _secureStorageValues['server_url'] = 'http://test:8080';
-        final service = ApiService(httpClient: mockHttpClient);
-
-        when(
-          () => mockHttpClient.post(
-            any(),
-            headers: any(named: 'headers'),
-            body: any(named: 'body'),
-          ),
-        ).thenAnswer(
-          (_) async =>
-              http.Response(json.encode({'error': 'OCR parsing failed'}), 400),
-        );
-
-        expect(
-          () => service.identifyCard('garbled text', 'pokemon'),
-          throwsA(
-            isA<Exception>().having(
-              (e) => e.toString(),
-              'message',
-              contains('OCR parsing failed'),
-            ),
-          ),
-        );
-      });
-
-      test('sends correct request body', () async {
-        _secureStorageValues['server_url'] = 'http://test:8080';
-        final service = ApiService(httpClient: mockHttpClient);
-
-        String? capturedBody;
-        when(
-          () => mockHttpClient.post(
-            any(),
-            headers: any(named: 'headers'),
-            body: any(named: 'body'),
-          ),
-        ).thenAnswer((invocation) async {
-          capturedBody =
-              invocation.namedArguments[const Symbol('body')] as String;
-          return http.Response(
-            json.encode(ScanFixtures.emptyScanResultJson),
-            200,
-          );
-        });
-
-        await service.identifyCard('Test OCR Text', 'mtg');
-
-        final decodedBody = json.decode(capturedBody!);
-        expect(decodedBody['text'], 'Test OCR Text');
-        expect(decodedBody['game'], 'mtg');
-      });
-
-      test('sends Content-Type header', () async {
-        _secureStorageValues['server_url'] = 'http://test:8080';
-        final service = ApiService(httpClient: mockHttpClient);
-
-        Map<String, String>? capturedHeaders;
-        when(
-          () => mockHttpClient.post(
-            any(),
-            headers: any(named: 'headers'),
-            body: any(named: 'body'),
-          ),
-        ).thenAnswer((invocation) async {
-          capturedHeaders =
-              invocation.namedArguments[const Symbol('headers')]
-                  as Map<String, String>;
-          return http.Response(
-            json.encode(ScanFixtures.emptyScanResultJson),
-            200,
-          );
-        });
-
-        await service.identifyCard('Test', 'pokemon');
-
-        expect(capturedHeaders?['Content-Type'], 'application/json');
       });
     });
 

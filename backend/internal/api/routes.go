@@ -16,7 +16,7 @@ import (
 	"github.com/codyseavey/tcg-tracker/backend/internal/services"
 )
 
-func SetupRouter(scryfallService *services.ScryfallService, pokemonService *services.PokemonHybridService, priceWorker *services.PriceWorker, priceService *services.PriceService, imageStorageService *services.ImageStorageService, snapshotService *services.SnapshotService, tcgPlayerSync *services.TCGPlayerSyncService, justTCG *services.JustTCGService, translationService *services.HybridTranslationService) *gin.Engine {
+func SetupRouter(scryfallService *services.ScryfallService, pokemonService *services.PokemonHybridService, geminiService *services.GeminiService, priceWorker *services.PriceWorker, priceService *services.PriceService, imageStorageService *services.ImageStorageService, snapshotService *services.SnapshotService, tcgPlayerSync *services.TCGPlayerSyncService, justTCG *services.JustTCGService) *gin.Engine {
 	router := gin.Default()
 
 	// Get frontend dist path from env
@@ -39,8 +39,8 @@ func SetupRouter(scryfallService *services.ScryfallService, pokemonService *serv
 	router.Use(metrics.HTTPMetrics())
 
 	// Initialize handlers
-	cardHandler := handlers.NewCardHandler(scryfallService, pokemonService, translationService)
-	collectionHandler := handlers.NewCollectionHandler(scryfallService, pokemonService, imageStorageService, snapshotService, priceWorker, translationService)
+	cardHandler := handlers.NewCardHandler(scryfallService, pokemonService, geminiService)
+	collectionHandler := handlers.NewCollectionHandler(scryfallService, pokemonService, imageStorageService, snapshotService, priceWorker)
 	priceHandler := handlers.NewPriceHandler(priceWorker, priceService)
 	adminHandler := handlers.NewAdminHandler(tcgPlayerSync, justTCG)
 
@@ -68,9 +68,7 @@ func SetupRouter(scryfallService *services.ScryfallService, pokemonService *serv
 			cards.GET("/search", cardHandler.SearchCards)
 			cards.GET("/:id", cardHandler.GetCard)
 			cards.GET("/:id/prices", priceHandler.GetCardPrices)
-			cards.POST("/identify", cardHandler.IdentifyCard)
 			cards.POST("/identify-image", cardHandler.IdentifyCardFromImage)
-			cards.GET("/ocr-status", cardHandler.GetOCRStatus)
 			cards.POST("/:id/refresh-price", priceHandler.RefreshCardPrice)
 		}
 

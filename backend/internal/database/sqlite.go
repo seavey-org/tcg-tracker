@@ -52,7 +52,6 @@ func Initialize(dbPath string) error {
 		&models.CollectionItem{},
 		&models.CardPrice{},
 		&models.CollectionValueSnapshot{},
-		&models.TranslationCache{},
 	)
 	if err != nil {
 		return err

@@ -4,24 +4,22 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-TCG Tracker is a trading card game collection management application supporting Pokemon and Magic: The Gathering cards. It features card scanning via mobile camera with OCR, price tracking with caching, and collection management.
+TCG Tracker is a trading card game collection management application supporting Pokemon and Magic: The Gathering cards. It features card scanning via mobile camera with Gemini AI-powered identification, price tracking with caching, and collection management.
 
 ## Architecture
 
 ```
 tcg-tracker/
-├── backend/          # Go REST API server
+├── backend/          # Go REST API server with Gemini integration
 ├── frontend/         # Vue.js 3 web application
-├── mobile/           # Flutter mobile app with OCR (see mobile/CLAUDE.md for details)
-└── identifier/       # Python service for server-side OCR (EasyOCR)
+└── mobile/           # Flutter mobile app (camera + image upload)
 ```
 
 ## Tech Stack
 
-- **Backend**: Go 1.24+, Gin framework, GORM, SQLite
+- **Backend**: Go 1.24+, Gin framework, GORM, SQLite, Gemini API (function calling)
 - **Frontend**: Vue.js 3, Vite, Pinia, Vue Router, Tailwind CSS
-- **Mobile**: Flutter, Google ML Kit (OCR fallback), camera integration
-- **Identifier**: Python 3.11+, FastAPI, EasyOCR (GPU-accelerated), OpenCV
+- **Mobile**: Flutter, camera integration (no client-side OCR)
 
 ## Build & Run Commands
 
@@ -33,16 +31,13 @@ docker compose up -d
 # Local development: Build images locally
 docker compose -f docker-compose.yml -f docker-compose.local.yml up --build
 
-# Production with GPU support for identifier
-docker compose -f docker-compose.yml -f docker-compose.gpu.yml up -d
-
 # Deploy specific version (for rollback)
 IMAGE_TAG=abc123def docker compose up -d
 ```
 
 ### CI/CD & Docker Images
 - Images are built and pushed to GHCR on each commit to main
-- Images: `ghcr.io/codyseavey/tcg-tracker/{app,identifier}`
+- Images: `ghcr.io/codyseavey/tcg-tracker/app`
 - Tags: `latest` (most recent) and `<commit-sha>` (for rollback)
 - Deploy pulls images instead of building on server
 - The `app` image is a combined frontend+backend build (Go serves the Vue.js static files)
@@ -67,9 +62,7 @@ Environment variables (see `backend/.env.example`):
 - `JUSTTCG_DAILY_LIMIT` - Daily API request limit (default: 1000)
 - `ADMIN_KEY` - Admin key for collection modification (optional, disables auth if not set)
 - `SYNC_TCGPLAYER_IDS_ON_STARTUP` - Set to "true" to auto-sync TCGPlayerIDs on startup
-- `GOOGLE_APPLICATION_CREDENTIALS` - Path to Google Cloud service account JSON (enables translation API)
-- `GOOGLE_API_KEY` - Gemini API key for Japanese card identification (preferred over Google Translate)
-- `TRANSLATION_CONFIDENCE_THRESHOLD` - Score below which triggers translation API (default: 800)
+- `GOOGLE_API_KEY` - Gemini API key for card identification (**required** for scanning)
 
 ### Frontend
 ```bash
@@ -91,59 +84,20 @@ flutter analyze             # Run linter
 flutter build apk           # Build Android APK
 ```
 
-### Identifier Service (Optional)
-```bash
-cd identifier
-python -m venv venv && source venv/bin/activate
-pip install -r requirements.txt
-
-uvicorn identifier.app:app --host 127.0.0.1 --port 8099  # Start server
-pytest tests/                                             # Run tests
-```
-
-Environment variables:
-- `HOST` - Bind address (default: 127.0.0.1)
-- `PORT` - Server port (default: 8099)
-- `USE_GPU` - Enable GPU acceleration (default: 1)
-- `OCR_LANGUAGES` - Comma-separated language codes (default: "ja,en"). Note: Japanese can only be combined with English due to EasyOCR constraints; for European languages use "en,de,fr,it"
-
 ## Key Backend Services
 
 | Service | File | Purpose |
 |---------|------|---------|
+| `GeminiService` | `internal/services/gemini_service.go` | Card identification via Gemini with function calling |
 | `PokemonHybridService` | `internal/services/pokemon_hybrid.go` | Pokemon card search with local data |
 | `ScryfallService` | `internal/services/scryfall.go` | MTG card search via Scryfall API |
 | `JustTCGService` | `internal/services/justtcg.go` | Condition-based pricing from JustTCG API (sole price source) |
 | `PriceService` | `internal/services/price_service.go` | Unified price fetching from JustTCG |
 | `PriceWorker` | `internal/services/price_worker.go` | Background price updates with priority queue (user requests, then collection) |
-| `OCRParser` | `internal/services/ocr_parser.go` | Parse OCR text to extract card details |
-| `ServerOCRService` | `internal/services/server_ocr.go` | Server-side OCR using identifier service (EasyOCR) |
 | `AdminKeyAuth` | `internal/middleware/auth.go` | Admin key authentication middleware |
 | `SnapshotService` | `internal/services/snapshot_service.go` | Daily collection value snapshots for historical tracking |
 | `ImageStorageService` | `internal/services/image_storage.go` | Store and retrieve scanned card images |
 | `TCGPlayerSyncService` | `internal/services/tcgplayer_sync.go` | Bulk sync TCGPlayerIDs from JustTCG for Pokemon cards |
-| `HybridTranslationService` | `internal/services/hybrid_translation.go` | Japanese card name translation (static map + Gemini vision/text + cache + Google API) |
-| `GeminiTranslationService` | `internal/services/gemini_translation.go` | Gemini 3 Flash for Japanese card identification (vision and text modes) |
-| `TranslationCacheService` | `internal/services/translation_cache.go` | SQLite cache for translation API results (with TTL for Gemini) |
-| `TranslationService` | `internal/services/translation_service.go` | Google Cloud Translation API v3 client (fallback) |
-
-### Identifier Service (Python)
-
-The identifier service provides server-side OCR text extraction using EasyOCR.
-
-| Module | File | Purpose |
-|--------|------|---------|
-| `app` | `identifier/app.py` | FastAPI app with /health and /ocr endpoints |
-| `OCREngine` | `identifier/ocr_engine.py` | EasyOCR singleton with GPU acceleration |
-
-Features:
-- **GPU acceleration**: Automatically uses CUDA if available (10-50x faster than CPU)
-- **Singleton pattern**: OCR engine initialized once at startup for fast inference
-- **Auto-rotation**: Uses EasyOCR's `rotation_info` for efficient orientation detection
-- **Image downscaling**: Images downscaled to 1280px max dimension for performance
-- **Grayscale processing**: Images decoded as grayscale (saves ~3x memory vs BGR)
-- **Greedy decoder**: Uses `decoder='greedy'` (~30% faster than default beamsearch)
-- **Tuned thresholds**: Lower `text_threshold` and `low_text` to catch small text at card bottom (set codes, copyright)
 
 ## API Endpoints
 
@@ -153,9 +107,7 @@ Base URL: `http://localhost:8080/api`
 - `GET /cards/search?q=<query>&game=<pokemon|mtg>` - Search cards
 - `GET /cards/:id` - Get card by ID
 - `GET /cards/:id/prices` - Get condition-specific prices for a card
-- `POST /cards/identify` - Identify card from OCR text (client-side OCR)
-- `POST /cards/identify-image` - Identify card from uploaded image (server-side OCR)
-- `GET /cards/ocr-status` - Check if server-side OCR is available
+- `POST /cards/identify-image` - Identify card from uploaded image (Gemini-powered)
 - `POST /cards/:id/refresh-price` - Refresh single card price
 
 ### Auth
@@ -165,17 +117,17 @@ Base URL: `http://localhost:8080/api`
 ### Collection
 - `GET /collection` - Get user's collection (flat list)
 - `GET /collection/grouped?q=<search>&game=<pokemon|mtg>&sort=<added_at|name|price_updated>` - Get collection grouped by card_id with variants summary (supports search and sorting)
-- `POST /collection` - Add card to collection (🔒 requires admin key)
-- `PUT /collection/:id` - Update collection item with smart split/merge (🔒 requires admin key)
-- `DELETE /collection/:id` - Remove from collection (🔒 requires admin key)
+- `POST /collection` - Add card to collection (requires admin key)
+- `PUT /collection/:id` - Update collection item with smart split/merge (requires admin key)
+- `DELETE /collection/:id` - Remove from collection (requires admin key)
 - `GET /collection/stats` - Get collection statistics
 - `GET /collection/stats/history` - Get historical collection value snapshots (for charting)
-- `POST /collection/refresh-prices` - Trigger immediate price update batch (up to 100 cards) (🔒 requires admin key)
+- `POST /collection/refresh-prices` - Trigger immediate price update batch (up to 100 cards) (requires admin key)
 
 ### Prices
 - `GET /prices/status` - Get API quota status and next update time
 
-### Admin (🔒 requires admin key)
+### Admin (requires admin key)
 - `POST /admin/sync-tcgplayer-ids` - Start async TCGPlayerID sync for collection cards
 - `POST /admin/sync-tcgplayer-ids/blocking` - Sync TCGPlayerIDs and wait for completion
 - `POST /admin/sync-tcgplayer-ids/set/:setName` - Sync TCGPlayerIDs for a specific set
@@ -185,17 +137,77 @@ Base URL: `http://localhost:8080/api`
 - `GET /health` - Health check
 - `GET /metrics` - Prometheus metrics endpoint (for Grafana)
 
-### Identifier Service (port 8099)
-- `GET /health` - Service health and GPU status
-- `POST /ocr` - OCR text extraction with auto-rotation
-
 ## Data Flow
 
+```
+Mobile App: Capture image → POST /api/cards/identify-image
+                                    │
+                                    ▼
+                          GeminiService.IdentifyCard()
+                                    │
+                                    ▼
+                     Gemini analyzes image, calls tools:
+                     ├─ search_pokemon_cards("Charizard")
+                     ├─ view_card_image("swsh4-25", "pokemon")
+                     └─ Returns best match with confidence
+                                    │
+                                    ▼
+                          Return card to client
+```
+
 1. **Card Search**: User searches → Backend queries local Pokemon data or Scryfall API → Returns cards with cached prices
-2. **Card Scanning (Server OCR)**: Mobile captures image → Backend sends to identifier service → EasyOCR extracts text → Backend parses OCR text → Matches card by name/set/number
-3. **Card Scanning (Japanese)**: Mobile captures image → Backend detects Japanese language → Sends image to Gemini 3 Flash vision → Returns official English card name → Matches card in database
-4. **Card Scanning (Fallback)**: If server OCR unavailable → Mobile uses Google ML Kit locally → Sends text to backend for parsing
-5. **Price Updates**: Background worker runs every 15 minutes → Updates up to 100 cards per batch via JustTCG (skips when quota exhausted)
+2. **Card Scanning**: Mobile captures image → Backend sends to Gemini → Gemini uses function calling to search cards and view images → Returns identified card
+3. **Price Updates**: Background worker runs every 15 minutes → Updates up to 100 cards per batch via JustTCG (skips when quota exhausted)
+
+## Gemini Card Identification
+
+The `GeminiService` uses Gemini's function calling capability to identify cards from images:
+
+### How It Works
+
+1. **Image Analysis**: Gemini receives the card image and analyzes visual features (artwork, text, layout, symbols)
+2. **Function Calling**: Gemini can call these tools during identification:
+   - `search_pokemon_cards(name)` / `search_mtg_cards(name)` - Search by card name
+   - `get_pokemon_card(set_code, number)` / `get_mtg_card(set_code, number)` - Get exact card by set+number
+   - `view_card_image(card_id, game)` - Download and view a card image for visual comparison
+3. **Multi-turn Conversation**: Gemini iterates, calling tools as needed until confident
+4. **Result**: Returns the matched card ID with confidence score
+
+### Key Benefits
+- **No OCR Required**: Gemini identifies cards visually, bypassing OCR errors
+- **Language Detection**: Gemini detects the card's printed language (Japanese, German, French, etc.)
+- **English Canonical Names**: Always returns the English name for lookup, even for non-English cards
+- **Self-correcting**: Gemini can compare card images to verify matches
+- **Holistic Analysis**: Uses artwork, layout, set symbols, not just text
+
+### Response Contract
+The `/api/cards/identify-image` endpoint returns:
+```json
+{
+  "card_id": "swsh4-025",
+  "card_name": "リザードンVMAX",
+  "canonical_name_en": "Charizard VMAX",
+  "set_code": "swsh4",
+  "set_name": "Vivid Voltage",
+  "card_number": "025",
+  "game": "pokemon",
+  "observed_language": "Japanese",
+  "confidence": 0.95,
+  "reasoning": "Matched by artwork comparison...",
+  "turns_used": 4,
+  "cards": [{ ... full Card objects for selection ... }]
+}
+```
+
+Key fields:
+- `observed_language`: Language detected on the physical card (used as default for collection)
+- `canonical_name_en`: English name (used for display and search)
+- `cards`: Always populated with resolved Card objects for user selection
+
+### Configuration
+- Requires `GOOGLE_API_KEY` environment variable
+- Model: `gemini-2.0-flash` (configurable in `gemini_service.go`)
+- Max 10 tool call iterations per identification
 
 ## Important Implementation Details
 
@@ -272,71 +284,25 @@ The background price worker (`PriceWorker`) updates prices with priority orderin
 Worker skips updates when daily quota is exhausted (resets at midnight).
 Collection stats use condition and printing-appropriate prices.
 
-### OCR Card Matching
-The `OCRParser` extracts from scanned card images:
-- Card name (first non-empty line, cleaned)
-- Card number (e.g., "025/185" → "25", "TG17/TG30" → "TG17")
-- Set code (e.g., "swsh4") - via direct detection, set name mapping, or total inference
-- HP value (Pokemon)
-- Foil indicators (V, VMAX, VSTAR, GX, EX, holo, full art, etc.)
-- Rarity (Illustration Rare, Secret Rare, etc.)
-- Detected language (Japanese, German, French, Italian, or English default)
+### CardSearcher Interface
+Both `PokemonHybridService` and `ScryfallService` implement the `CardSearcher` interface used by `GeminiService`:
 
-Matching priority:
-1. Exact match by set code + card number
-2. Fuzzy match by name with ranking
+```go
+type CardSearcher interface {
+    SearchByName(name string) ([]*models.Card, error)
+    GetBySetAndNumber(setCode, number string) (*models.Card, error)
+    GetCardImage(cardID string) ([]byte, error)
+}
+```
 
-**Japanese Card Handling:**
-Japanese cards require special processing since the Pokemon database is English-only:
-- **Full-width ASCII normalization**: Converts characters like `Ｎ` → `N`, `ＥＸ` → `EX`
-- **English word extraction**: Extracts English text from mixed Japanese/English lines (e.g., "ピカチュウV" → "V")
-- **Skip patterns**: Filters Japanese trainer card types (サポート, グッズ, スタジアム) and common text
-- **Fallback to card number**: Japanese-only cards (no English name) rely on set code + card number matching
-
-**Gemini Vision Identification (Preferred for Japanese):**
-For Japanese Pokemon cards processed via `/cards/identify-image`, the system uses Gemini 3 Flash vision:
-1. **Image-based identification**: Card image sent directly to Gemini with vision prompt
-2. **Returns structured data**: Official English card name, card type, set code, card number, confidence score
-3. **Much more accurate**: Gemini can see the entire card (artwork, layout, symbols) vs just OCR text
-4. **Fallback to OCR flow**: If Gemini vision fails, falls back to standard OCR + text matching
-
-This approach bypasses OCR errors and translation issues entirely since Gemini identifies the card visually.
-
-**Hybrid Translation (Fallback for text-based identification):**
-When card matching confidence is below `TRANSLATION_CONFIDENCE_THRESHOLD` (default: 800):
-1. **Static translation**: 1025 Pokemon + common trainer cards translated instantly via `JapaneseToEnglishNames` map
-2. **Cache check**: Translations cached in SQLite (`translation_caches` table) to avoid repeat API calls
-3. **Gemini 3 Flash text**: If cache miss, uses Gemini for text-based card identification
-4. **Google Cloud Translation API**: Fallback if Gemini confidence < 60% or unavailable
-5. **Re-match**: Translated text is matched against English database
-
-Gemini translations are cached with 30-day TTL (model may improve), Google API translations never expire.
-
-**User-Confirmed Translation Caching:**
-When a user adds a Japanese card to their collection, the system caches the OCR text → card ID mapping:
-1. **Instant lookups**: Future scans of the same card match instantly from cache (no Gemini/translation needed)
-2. **Never expires**: User-confirmed mappings don't expire (unlike Gemini's 30-day TTL)
-3. **OCR text normalization**: Cache keys are normalized to improve hit rates across scan variations:
-   - Full-width → half-width ASCII conversion (e.g., `Ｎ` → `N`)
-   - Line sorting (OCR can return lines in different order)
-   - Whitespace collapse (multiple spaces → single space)
-   - Empty line and noise removal
-4. **Priority over translation**: Cache lookup happens before Gemini vision for instant returns
-
-Scoring reference: name_exact=1000, name_partial=500, attack=200, number=300
-
-**Performance Optimizations:**
-- All regex patterns pre-compiled at package init (avoids recompilation per request)
-- Pre-computed lowercase `nameLower` and `setIDLower` fields on `LocalPokemonCard` (avoids 20k+ `strings.ToLower()` calls during full scan)
-
-**Important**: Japanese card scanning requires server-side OCR with `OCR_LANGUAGES=ja,en`. Client-side ML Kit is configured for Latin script only; the mobile app shows a warning when using fallback OCR for Pokemon cards.
+This allows Gemini to search for cards and fetch images for visual comparison during identification.
 
 ### Inverted Index for Card Matching
 The `PokemonHybridService` uses an inverted index for fast full-text card matching:
 
 **Index Structure:**
 - `wordIndex map[string][]int` - maps words to card indices for full-text search
-- `idIndex map[string]int` - maps card ID to card index for O(1) lookups (used by translation cache)
+- `idIndex map[string]int` - maps card ID to card index for O(1) lookups
 - Built at startup from ~20,000 cards
 - ~13,000 unique indexed words
 - ~20MB additional memory
@@ -344,57 +310,29 @@ The `PokemonHybridService` uses an inverted index for fast full-text card matchi
 **Performance:**
 | Scenario | Time | Notes |
 |----------|------|-------|
-| Good OCR (index hit) | ~1.5ms | 18x faster than full scan |
+| Good match (index hit) | ~1.5ms | 18x faster than full scan |
 | With set filter | ~37μs | 720x faster than full scan |
-| Poor OCR (fallback) | ~27ms | Falls back to full scan |
-
-**Reliability Fallback:**
-- If best match score < 500, falls back to full scan of all cards
-- Ensures no false negatives from OCR errors
-- Poor OCR still works, just slower
-
-**Key Functions:**
-- `findCandidatesByIndex()` - finds cards matching any OCR word via index
-- `scoreCards()` - scores specific card indices against OCR text
-- `scoreAllCards()` - full scan fallback for reliability
-
-### OCR Processing Options
-Two OCR processing paths are available:
-1. **Server-side OCR** (preferred): Mobile uploads image to `/cards/identify-image` → Go backend calls identifier service `/ocr` endpoint → EasyOCR extracts text → Backend parses and matches card
-   - Uses GPU-accelerated EasyOCR for better accuracy and speed
-   - Check availability via `/cards/ocr-status`
-2. **Client-side OCR** (fallback): If server OCR unavailable → Mobile uses Google ML Kit locally → Sends extracted text to `/cards/identify`
+| Poor match (fallback) | ~27ms | Falls back to full scan |
 
 ### MTG 2-Phase Card Selection
 MTG cards often have many printings across different sets. The 2-phase selection UI helps users pick the exact printing:
 
 **How it works:**
-1. Scan returns a `grouped` field containing cards organized by set
-2. **Phase 1**: User sees list of sets containing the card, sorted by confidence score
+1. Scan returns a `cards` array containing all candidate printings
+2. **Phase 1**: Mobile groups cards by set client-side, user sees list of sets
 3. **Phase 2**: User taps a set to see all variants (foil, showcase, borderless, etc.)
 4. User selects the exact variant to add to collection
 
-**Set Matching Confidence Scoring:**
-Sets are ranked using multiple OCR signals (sorted by total score, then by release date):
-
-| Signal | Points | Description |
-|--------|--------|-------------|
-| Set code match | +100 | OCR set code matches set exactly |
-| Collector number match | +50 | Card with matching number exists in set |
-| Set total match | +30 | OCR total (e.g., "302" from "123/302") matches max collector # in set |
-| Copyright year match | +20 | OCR copyright year (e.g., "© 2022") matches set's release year |
-
-**Backend changes:**
-- `ScryfallService.SearchCardPrintings()` - Fetches all printings of a card by exact name
-- `ScryfallService.GetCardBySetAndNumber()` - Exact lookup by set code and collector number
-- `GroupCardsBySet()` - Groups flat card list into `MTGGroupedResult` with confidence scoring
-- Card model includes variant info: `Finishes`, `FrameEffects`, `PromoTypes`, `ReleasedAt`
-- OCR parser extracts `CopyrightYear` from MTG cards (e.g., "© 2022" → "2022")
-
-**Mobile changes:**
-- `MTGGroupedResult` and `MTGSetGroup` models for parsing grouped response
-- `ScanResultScreen` shows 2-phase UI when `grouped` data is present
+**Client-side grouping (mobile):**
+- `GeminiScanResult.groupCardsBySet()` - Groups flat card list by set code
+- `GeminiScanResult.getMTGSets()` - Returns `MTGSetInfo` objects sorted by:
+  - Best match first (set containing the identified card_id)
+  - Then by variant count (descending)
 - `CardModel.variantLabel` computes human-readable variant labels (e.g., "Borderless Foil")
+
+**Backend provides:**
+- Card model includes variant info: `Finishes`, `FrameEffects`, `PromoTypes`, `ReleasedAt`
+- Flat list of all candidate cards in `cards` array
 
 ### Collection Grouping and Smart Updates
 The collection supports two viewing modes:

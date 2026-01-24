@@ -1,8 +1,124 @@
 import 'package:mobile/models/card.dart';
+import 'package:mobile/models/gemini_scan_result.dart';
 import 'card_fixtures.dart';
 
 /// Sample scan metadata and scan result JSON for testing
 class ScanFixtures {
+  // ============================================
+  // GeminiScanResult fixtures (new Gemini-first flow)
+  // ============================================
+
+  /// Complete Gemini scan result JSON
+  static Map<String, dynamic> get completeGeminiResultJson => {
+    'card_id': 'swsh4-025',
+    'card_name': 'Charizard VMAX',
+    'canonical_name_en': 'Charizard VMAX',
+    'set_code': 'swsh4',
+    'set_name': 'Vivid Voltage',
+    'card_number': '025',
+    'game': 'pokemon',
+    'observed_language': 'English',
+    'confidence': 0.85,
+    'reasoning': 'Matched by set code and collector number, artwork verified.',
+    'turns_used': 3,
+    'cards': [CardFixtures.completeCardJson],
+  };
+
+  /// Gemini result with multiple candidates (low confidence)
+  static Map<String, dynamic> get multiCandidateGeminiResultJson => {
+    'card_id': 'swsh4-025',
+    'card_name': 'Charizard VMAX',
+    'canonical_name_en': 'Charizard VMAX',
+    'set_code': 'swsh4',
+    'set_name': 'Vivid Voltage',
+    'card_number': '025',
+    'game': 'pokemon',
+    'observed_language': 'English',
+    'confidence': 0.6,
+    'reasoning':
+        'Multiple printings found, artwork similar but not exact match.',
+    'turns_used': 5,
+    'cards': [CardFixtures.completeCardJson, CardFixtures.mtgCardJson],
+  };
+
+  /// Gemini result for Japanese card
+  static Map<String, dynamic> get japaneseGeminiResultJson => {
+    'card_id': 'swsh4-025',
+    'card_name': 'リザードンVMAX', // Japanese name
+    'canonical_name_en': 'Charizard VMAX',
+    'set_code': 'swsh4',
+    'set_name': 'Vivid Voltage',
+    'card_number': '025',
+    'game': 'pokemon',
+    'observed_language': 'Japanese',
+    'confidence': 0.9,
+    'reasoning':
+        'Japanese card identified by artwork match with English database.',
+    'turns_used': 4,
+    'cards': [CardFixtures.completeCardJson],
+  };
+
+  /// Gemini result with no match
+  static Map<String, dynamic> get noMatchGeminiResultJson => {
+    'card_id': '',
+    'card_name': 'Unknown Card',
+    'canonical_name_en': 'Unknown Card',
+    'set_code': '',
+    'set_name': '',
+    'card_number': '',
+    'game': 'unknown',
+    'observed_language': 'English',
+    'confidence': 0.1,
+    'reasoning': 'Could not identify card from image.',
+    'turns_used': 10,
+    'cards': [],
+  };
+
+  /// MTG Gemini result with multiple sets (for 2-phase selection)
+  static Map<String, dynamic> get mtgMultiSetGeminiResultJson => {
+    'card_id': '12345-abc',
+    'card_name': 'Lightning Bolt',
+    'canonical_name_en': 'Lightning Bolt',
+    'set_code': 'm21',
+    'set_name': 'Core Set 2021',
+    'card_number': '152',
+    'game': 'mtg',
+    'observed_language': 'English',
+    'confidence': 0.75,
+    'reasoning': 'Card has many printings across sets.',
+    'turns_used': 4,
+    'cards': [
+      CardFixtures.mtgCardJson,
+      {
+        ...CardFixtures.mtgCardJson,
+        'id': 'mtg-2xm-123',
+        'set_code': '2xm',
+        'set_name': 'Double Masters',
+      },
+      {
+        ...CardFixtures.mtgCardJson,
+        'id': 'mtg-m20-456',
+        'set_code': 'm20',
+        'set_name': 'Core Set 2020',
+      },
+    ],
+  };
+
+  /// GeminiScanResult instances
+  static GeminiScanResult get completeGeminiResult =>
+      GeminiScanResult.fromJson(completeGeminiResultJson);
+  static GeminiScanResult get multiCandidateGeminiResult =>
+      GeminiScanResult.fromJson(multiCandidateGeminiResultJson);
+  static GeminiScanResult get japaneseGeminiResult =>
+      GeminiScanResult.fromJson(japaneseGeminiResultJson);
+  static GeminiScanResult get noMatchGeminiResult =>
+      GeminiScanResult.fromJson(noMatchGeminiResultJson);
+  static GeminiScanResult get mtgMultiSetGeminiResult =>
+      GeminiScanResult.fromJson(mtgMultiSetGeminiResultJson);
+
+  // ============================================
+  // Legacy ScanMetadata fixtures (kept for backward compatibility)
+  // ============================================
   /// Complete scan metadata JSON with all fields
   static const Map<String, dynamic> completeScanMetadataJson = {
     'card_name': 'Charizard VMAX',

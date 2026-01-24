@@ -1,6 +1,7 @@
 import 'package:mocktail/mocktail.dart';
 import 'package:mobile/models/card.dart';
 import 'package:mobile/models/collection_item.dart';
+import 'package:mobile/models/gemini_scan_result.dart';
 import 'package:mobile/services/api_service.dart';
 
 /// Mock ApiService for testing
@@ -30,23 +31,6 @@ extension MockApiServiceExtension on MockApiService {
     when(
       () => searchCards(any(), any(), setIDs: any(named: 'setIDs')),
     ).thenThrow(Exception(message));
-  }
-
-  /// Stubs identifyCard to return the given result
-  void stubIdentifyCard(ScanResult result) {
-    when(() => identifyCard(any(), any())).thenAnswer((_) async => result);
-  }
-
-  /// Stubs identifyCard to throw an exception
-  void stubIdentifyCardError(String message) {
-    when(() => identifyCard(any(), any())).thenThrow(Exception(message));
-  }
-
-  /// Stubs identifyCard to throw a timeout exception
-  void stubIdentifyCardTimeout() {
-    when(
-      () => identifyCard(any(), any()),
-    ).thenThrow(Exception('Request timed out'));
   }
 
   /// Stubs addToCollection to complete successfully
@@ -95,21 +79,12 @@ extension MockApiServiceExtension on MockApiService {
   }
 
   /// Stubs identifyCardFromImage to return the given result
-  void stubIdentifyCardFromImage(ScanResult result) {
-    when(
-      () => identifyCardFromImage(any(), any()),
-    ).thenAnswer((_) async => result);
+  void stubIdentifyCardFromImage(GeminiScanResult result) {
+    when(() => identifyCardFromImage(any())).thenAnswer((_) async => result);
   }
 
   /// Stubs identifyCardFromImage to throw an exception
   void stubIdentifyCardFromImageError(String message) {
-    when(
-      () => identifyCardFromImage(any(), any()),
-    ).thenThrow(Exception(message));
-  }
-
-  /// Stubs isServerOCRAvailable to return the given value
-  void stubIsServerOCRAvailable(bool available) {
-    when(() => isServerOCRAvailable()).thenAnswer((_) async => available);
+    when(() => identifyCardFromImage(any())).thenThrow(Exception(message));
   }
 }

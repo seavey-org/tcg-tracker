@@ -7,9 +7,3 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-
-  identifier:
-    image: tcg-tracker/identifier:local
-    build:
-      context: ./identifier
-      dockerfile: Dockerfile

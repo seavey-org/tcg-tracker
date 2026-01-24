@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
 import 'package:network_image_mock/network_image_mock.dart';
-import 'package:mobile/models/card.dart';
 import 'package:mobile/models/collection_item.dart' show PrintingType;
+import 'package:mobile/models/gemini_scan_result.dart';
 import 'package:mobile/screens/scan_result_screen.dart';
 import '../../fixtures/card_fixtures.dart';
 import '../../fixtures/scan_fixtures.dart';
@@ -21,19 +21,14 @@ void main() {
   });
 
   Widget createWidget({
-    List<CardModel>? cards,
-    String searchQuery = 'Test Query',
-    ScanMetadata? scanMetadata,
-    SetIconResult? setIcon,
+    required GeminiScanResult geminiResult,
+    List<int>? scannedImageBytes,
   }) {
     return MaterialApp(
       home: ScanResultScreen(
-        cards: cards ?? [],
-        searchQuery: searchQuery,
-        game: 'pokemon',
-        scanMetadata: scanMetadata,
-        setIcon: setIcon,
+        geminiResult: geminiResult,
         apiService: mockApiService,
+        scannedImageBytes: scannedImageBytes,
       ),
     );
   }
@@ -44,7 +39,9 @@ void main() {
         tester,
       ) async {
         await mockNetworkImagesFor(() async {
-          await tester.pumpWidget(createWidget(cards: []));
+          await tester.pumpWidget(
+            createWidget(geminiResult: ScanFixtures.noMatchGeminiResult),
+          );
           await tester.pumpAndSettle();
 
           expect(find.text('No cards found'), findsOneWidget);
@@ -56,57 +53,41 @@ void main() {
       testWidgets('displays card names', (tester) async {
         await mockNetworkImagesFor(() async {
           await tester.pumpWidget(
-            createWidget(
-              cards: [CardFixtures.completeCard],
-              scanMetadata: ScanMetadata(cardName: 'Pikachu'),
-              setIcon: SetIconResult(
-                bestSetId: 'base1',
-                confidence: 0.2,
-                lowConfidence: true,
-                candidates: [SetIconCandidate(setId: 'base1', score: 0.2)],
-              ),
-            ),
+            createWidget(geminiResult: ScanFixtures.completeGeminiResult),
           );
           await tester.pumpAndSettle();
 
-          expect(find.text('Charizard VMAX'), findsOneWidget);
-          expect(find.text('Lightning Bolt'), findsNothing);
-          expect(find.text('Test Card'), findsNothing);
+          expect(find.text('Charizard VMAX'), findsWidgets);
         });
       });
 
       testWidgets('displays card sets and prices', (tester) async {
         await mockNetworkImagesFor(() async {
           await tester.pumpWidget(
-            createWidget(cards: [CardFixtures.completeCard]),
+            createWidget(geminiResult: ScanFixtures.completeGeminiResult),
           );
           await tester.pumpAndSettle();
 
-          expect(find.textContaining('Vivid Voltage'), findsOneWidget);
-          expect(find.textContaining('\$125.50'), findsOneWidget);
+          expect(find.textContaining('Vivid Voltage'), findsWidgets);
+          expect(find.textContaining('\$125.50'), findsWidgets);
         });
       });
 
-      testWidgets('displays app bar with search query', (tester) async {
+      testWidgets('displays app bar with card name', (tester) async {
         await mockNetworkImagesFor(() async {
           await tester.pumpWidget(
-            createWidget(
-              cards: [CardFixtures.completeCard],
-              searchQuery: 'Charizard',
-            ),
+            createWidget(geminiResult: ScanFixtures.completeGeminiResult),
           );
           await tester.pumpAndSettle();
 
-          expect(find.text('Results for "Charizard"'), findsOneWidget);
+          expect(find.text('Results for "Charizard VMAX"'), findsOneWidget);
         });
       });
 
       testWidgets('shows add button for each card', (tester) async {
         await mockNetworkImagesFor(() async {
           await tester.pumpWidget(
-            createWidget(
-              cards: [CardFixtures.completeCard, CardFixtures.mtgCard],
-            ),
+            createWidget(geminiResult: ScanFixtures.multiCandidateGeminiResult),
           );
           await tester.pumpAndSettle();
 
@@ -115,112 +96,54 @@ void main() {
       });
     });
 
-    group('metadata card', () {
-      testWidgets('shows metadata card when confidence > 0', (tester) async {
+    group('Gemini info card', () {
+      testWidgets('shows Gemini info card with confidence', (tester) async {
         await mockNetworkImagesFor(() async {
           await tester.pumpWidget(
-            createWidget(
-              cards: [CardFixtures.completeCard],
-              scanMetadata: ScanFixtures.completeScanMetadata,
-            ),
+            createWidget(geminiResult: ScanFixtures.completeGeminiResult),
           );
           await tester.pumpAndSettle();
 
-          expect(find.text('Scan Detection'), findsOneWidget);
-          expect(find.textContaining('85% confidence'), findsOneWidget);
+          expect(find.text('Gemini Identification'), findsOneWidget);
+          expect(find.textContaining('85%'), findsOneWidget);
         });
       });
 
-      testWidgets('hides metadata card when confidence is 0', (tester) async {
+      testWidgets('shows reasoning in expansion tile', (tester) async {
         await mockNetworkImagesFor(() async {
           await tester.pumpWidget(
-            createWidget(
-              cards: [CardFixtures.completeCard],
-              scanMetadata: ScanFixtures.minimalScanMetadata,
-            ),
+            createWidget(geminiResult: ScanFixtures.completeGeminiResult),
           );
           await tester.pumpAndSettle();
 
-          expect(find.text('Scan Detection'), findsNothing);
+          expect(find.text('How it was identified'), findsOneWidget);
         });
       });
 
-      testWidgets('hides metadata card when scanMetadata is null', (
-        tester,
-      ) async {
+      testWidgets('shows language badge for non-English cards', (tester) async {
         await mockNetworkImagesFor(() async {
           await tester.pumpWidget(
-            createWidget(
-              cards: [CardFixtures.completeCard],
-              scanMetadata: null,
-            ),
+            createWidget(geminiResult: ScanFixtures.japaneseGeminiResult),
           );
           await tester.pumpAndSettle();
 
-          expect(find.text('Scan Detection'), findsNothing);
-        });
-      });
-
-      testWidgets('shows foil indicator chips when foil indicators present', (
-        tester,
-      ) async {
-        await mockNetworkImagesFor(() async {
-          await tester.pumpWidget(
-            createWidget(
-              cards: [CardFixtures.completeCard],
-              scanMetadata: ScanFixtures.foilMetadata,
-            ),
-          );
-          await tester.pumpAndSettle();
-
-          expect(find.text('HOLO'), findsOneWidget);
-          expect(find.text('REVERSE'), findsOneWidget);
-        });
-      });
-
-      testWidgets('shows green confidence badge for high confidence', (
-        tester,
-      ) async {
-        await mockNetworkImagesFor(() async {
-          await tester.pumpWidget(
-            createWidget(
-              cards: [CardFixtures.completeCard],
-              scanMetadata: ScanFixtures.highConfidenceMetadata,
-            ),
-          );
-          await tester.pumpAndSettle();
-
-          expect(find.textContaining('75% confidence'), findsOneWidget);
-        });
-      });
-
-      testWidgets('shows detection summary', (tester) async {
-        await mockNetworkImagesFor(() async {
-          await tester.pumpWidget(
-            createWidget(
-              cards: [CardFixtures.completeCard],
-              scanMetadata: ScanFixtures.completeScanMetadata,
-            ),
-          );
-          await tester.pumpAndSettle();
-
-          expect(find.textContaining('Charizard VMAX'), findsWidgets);
+          expect(find.text('Japanese'), findsOneWidget);
         });
       });
     });
 
     group('add dialog', () {
-      testWidgets('tap on card opens add dialog', (tester) async {
+      testWidgets('tap on card opens confirm then add dialog', (tester) async {
         await mockNetworkImagesFor(() async {
           await tester.pumpWidget(
-            createWidget(cards: [CardFixtures.completeCard]),
+            createWidget(geminiResult: ScanFixtures.completeGeminiResult),
           );
           await tester.pumpAndSettle();
 
-          await tester.tap(find.text('Charizard VMAX'));
+          await tester.tap(find.text('Charizard VMAX').first);
           await tester.pumpAndSettle();
 
-          // Now goes through confirmation screen first
+          // Confirm screen first
           expect(find.text('Confirm Card'), findsOneWidget);
           await tester.tap(find.text('Yes, this is correct'));
           await tester.pumpAndSettle();
@@ -230,78 +153,14 @@ void main() {
         });
       });
 
-      testWidgets('tap on add button opens dialog', (tester) async {
-        await mockNetworkImagesFor(() async {
-          await tester.pumpWidget(
-            createWidget(cards: [CardFixtures.completeCard]),
-          );
-          await tester.pumpAndSettle();
-
-          await tester.tap(find.byIcon(Icons.add_circle));
-          await tester.pumpAndSettle();
-
-          expect(find.text('Confirm Card'), findsOneWidget);
-          await tester.tap(find.text('Yes, this is correct'));
-          await tester.pumpAndSettle();
-
-          expect(find.text('Add Charizard VMAX'), findsOneWidget);
-        });
-      });
-
-      testWidgets('add dialog pre-fills printing from scanMetadata', (
-        tester,
-      ) async {
-        await mockNetworkImagesFor(() async {
-          await tester.pumpWidget(
-            createWidget(
-              cards: [CardFixtures.completeCard],
-              scanMetadata: ScanFixtures.foilMetadata,
-            ),
-          );
-          await tester.pumpAndSettle();
-
-          await tester.tap(find.text('Charizard VMAX'));
-          await tester.pumpAndSettle();
-
-          await tester.tap(find.text('Yes, this is correct'));
-          await tester.pumpAndSettle();
-
-          // Verify the printing dropdown shows "Foil / Holo" when foil detected
-          expect(find.text('Foil / Holo'), findsOneWidget);
-        });
-      });
-
-      testWidgets('add dialog shows "Auto" label when printing auto-detected', (
-        tester,
-      ) async {
-        await mockNetworkImagesFor(() async {
-          await tester.pumpWidget(
-            createWidget(
-              cards: [CardFixtures.completeCard],
-              scanMetadata: ScanFixtures.foilMetadata,
-            ),
-          );
-          await tester.pumpAndSettle();
-
-          await tester.tap(find.text('Charizard VMAX'));
-          await tester.pumpAndSettle();
-
-          await tester.tap(find.text('Yes, this is correct'));
-          await tester.pumpAndSettle();
-
-          // The "Auto" label is shown next to printing when auto-detected
-          expect(find.text('Auto'), findsWidgets);
-        });
-      });
-
       testWidgets('add dialog has quantity controls', (tester) async {
         await mockNetworkImagesFor(() async {
           await tester.pumpWidget(
-            createWidget(cards: [CardFixtures.completeCard]),
+            createWidget(geminiResult: ScanFixtures.completeGeminiResult),
           );
           await tester.pumpAndSettle();
 
-          await tester.tap(find.text('Charizard VMAX'));
+          await tester.tap(find.text('Charizard VMAX').first);
           await tester.pumpAndSettle();
 
           await tester.tap(find.text('Yes, this is correct'));
@@ -317,19 +176,58 @@ void main() {
       testWidgets('add dialog has condition dropdown', (tester) async {
         await mockNetworkImagesFor(() async {
           await tester.pumpWidget(
-            createWidget(cards: [CardFixtures.completeCard]),
+            createWidget(geminiResult: ScanFixtures.completeGeminiResult),
           );
           await tester.pumpAndSettle();
 
-          await tester.tap(find.text('Charizard VMAX'));
+          await tester.tap(find.text('Charizard VMAX').first);
           await tester.pumpAndSettle();
 
           await tester.tap(find.text('Yes, this is correct'));
           await tester.pumpAndSettle();
 
           expect(find.text('Condition:'), findsOneWidget);
-          // Dropdown now shows condition code with description
           expect(find.text('NM - Near Mint'), findsOneWidget);
+        });
+      });
+
+      testWidgets('add dialog has language dropdown', (tester) async {
+        await mockNetworkImagesFor(() async {
+          await tester.pumpWidget(
+            createWidget(geminiResult: ScanFixtures.completeGeminiResult),
+          );
+          await tester.pumpAndSettle();
+
+          await tester.tap(find.text('Charizard VMAX').first);
+          await tester.pumpAndSettle();
+
+          await tester.tap(find.text('Yes, this is correct'));
+          await tester.pumpAndSettle();
+
+          expect(find.text('Language:'), findsOneWidget);
+          expect(find.text('English'), findsOneWidget);
+        });
+      });
+
+      testWidgets('add dialog pre-fills language from Gemini detection', (
+        tester,
+      ) async {
+        await mockNetworkImagesFor(() async {
+          await tester.pumpWidget(
+            createWidget(geminiResult: ScanFixtures.japaneseGeminiResult),
+          );
+          await tester.pumpAndSettle();
+
+          await tester.tap(find.text('Charizard VMAX').first);
+          await tester.pumpAndSettle();
+
+          await tester.tap(find.text('Yes, this is correct'));
+          await tester.pumpAndSettle();
+
+          // Should show Japanese pre-selected in dropdown
+          expect(find.text('Japanese'), findsWidgets);
+          // Should show "Detected" label
+          expect(find.text('Detected'), findsOneWidget);
         });
       });
     });
@@ -339,7 +237,6 @@ void main() {
         tester,
       ) async {
         await mockNetworkImagesFor(() async {
-          // Wrap results so we can verify popping back out of it.
           await tester.pumpWidget(
             MaterialApp(
               home: Builder(
@@ -349,9 +246,7 @@ void main() {
                       context,
                       MaterialPageRoute(
                         builder: (_) => ScanResultScreen(
-                          cards: [CardFixtures.completeCard],
-                          searchQuery: 'Test Query',
-                          game: 'pokemon',
+                          geminiResult: ScanFixtures.completeGeminiResult,
                           apiService: mockApiService,
                         ),
                       ),
@@ -369,11 +264,11 @@ void main() {
           expect(find.byType(ScanResultScreen), findsOneWidget);
 
           // Open confirm screen
-          await tester.tap(find.text('Charizard VMAX'));
+          await tester.tap(find.text('Charizard VMAX').first);
           await tester.pumpAndSettle();
           expect(find.text('Confirm Card'), findsOneWidget);
 
-          // Retake should pop confirm and results, returning to opener.
+          // Retake should pop confirm and results
           await tester.tap(find.text('Retake'));
           await tester.pumpAndSettle();
 
@@ -381,128 +276,6 @@ void main() {
           expect(find.byType(ScanResultScreen), findsNothing);
         });
       });
-
-      testWidgets('can browse likely prints and pick a different card', (
-        tester,
-      ) async {
-        // Browse uses scanMetadata.cardName, not the content entered in the search box.
-        mockApiService.stubSearchCards(
-          CardSearchResult(
-            cards: [CardFixtures.mtgCard],
-            totalCount: 1,
-            hasMore: false,
-          ),
-        );
-
-        await mockNetworkImagesFor(() async {
-          await tester.pumpWidget(
-            createWidget(
-              cards: [CardFixtures.completeCard],
-              scanMetadata: ScanMetadata(cardName: 'Pikachu'),
-              setIcon: SetIconResult(
-                bestSetId: 'base1',
-                confidence: 0.2,
-                lowConfidence: true,
-                candidates: [SetIconCandidate(setId: 'base1', score: 0.2)],
-              ),
-            ),
-          );
-          await tester.pumpAndSettle();
-
-          // Open confirm screen
-          await tester.tap(find.text('Charizard VMAX'));
-          await tester.pumpAndSettle();
-          expect(find.text('Confirm Card'), findsOneWidget);
-
-          // Browse likely prints (inline list) and pick a different card
-          await tester.tap(find.text('Browse likely prints'));
-          await tester.pumpAndSettle();
-
-          final scrollable = find.byType(Scrollable).last;
-          await tester.scrollUntilVisible(
-            find.widgetWithText(ListTile, 'Lightning Bolt').first,
-            200,
-            scrollable: scrollable,
-          );
-          await tester.tap(
-            find.widgetWithText(ListTile, 'Lightning Bolt').first,
-          );
-          await tester.pumpAndSettle();
-
-          // Now add sheet should be for selected card
-          expect(find.text('Add Lightning Bolt'), findsOneWidget);
-        });
-      });
-
-      testWidgets(
-        'browse likely prints shows error when scanMetadata is null',
-        (tester) async {
-          await mockNetworkImagesFor(() async {
-            await tester.pumpWidget(
-              createWidget(
-                cards: [CardFixtures.completeCard],
-                scanMetadata: null,
-                setIcon: SetIconResult(
-                  bestSetId: 'base1',
-                  confidence: 0.2,
-                  lowConfidence: true,
-                  candidates: [SetIconCandidate(setId: 'base1', score: 0.2)],
-                ),
-              ),
-            );
-            await tester.pumpAndSettle();
-
-            await tester.tap(find.text('Charizard VMAX'));
-            await tester.pumpAndSettle();
-            expect(find.text('Confirm Card'), findsOneWidget);
-
-            await tester.tap(find.text('Browse likely prints'));
-            await tester.pumpAndSettle();
-
-            expect(
-              find.text(
-                'No detected card name available to browse. Retake the photo.',
-              ),
-              findsOneWidget,
-            );
-          });
-        },
-      );
-
-      testWidgets(
-        'browse likely prints shows error when detected name is empty',
-        (tester) async {
-          await mockNetworkImagesFor(() async {
-            await tester.pumpWidget(
-              createWidget(
-                cards: [CardFixtures.completeCard],
-                scanMetadata: ScanMetadata(cardName: ''),
-                setIcon: SetIconResult(
-                  bestSetId: 'base1',
-                  confidence: 0.2,
-                  lowConfidence: true,
-                  candidates: [SetIconCandidate(setId: 'base1', score: 0.2)],
-                ),
-              ),
-            );
-            await tester.pumpAndSettle();
-
-            await tester.tap(find.text('Charizard VMAX'));
-            await tester.pumpAndSettle();
-            expect(find.text('Confirm Card'), findsOneWidget);
-
-            await tester.tap(find.text('Browse likely prints'));
-            await tester.pumpAndSettle();
-
-            expect(
-              find.text(
-                'No detected card name available to browse. Retake the photo.',
-              ),
-              findsOneWidget,
-            );
-          });
-        },
-      );
     });
 
     group('add to collection', () {
@@ -510,7 +283,6 @@ void main() {
         mockApiService.stubAddToCollection();
 
         await mockNetworkImagesFor(() async {
-          // Wrap in a parent screen so Navigator.pop has somewhere to go
           await tester.pumpWidget(
             MaterialApp(
               home: Builder(
@@ -520,9 +292,7 @@ void main() {
                       context,
                       MaterialPageRoute(
                         builder: (_) => ScanResultScreen(
-                          cards: [CardFixtures.completeCard],
-                          searchQuery: 'Test Query',
-                          game: 'pokemon',
+                          geminiResult: ScanFixtures.completeGeminiResult,
                           apiService: mockApiService,
                         ),
                       ),
@@ -535,19 +305,15 @@ void main() {
           );
           await tester.pumpAndSettle();
 
-          // Navigate to the scan result screen
           await tester.tap(find.text('Open'));
           await tester.pumpAndSettle();
 
-          // Open confirmation first
-          await tester.tap(find.text('Charizard VMAX'));
+          await tester.tap(find.text('Charizard VMAX').first);
           await tester.pumpAndSettle();
           await tester.tap(find.text('Yes, this is correct'));
           await tester.pumpAndSettle();
 
-          // Tap add to collection
           await tester.tap(find.text('Add to Collection'));
-          // Use pump to catch the snackbar before navigation completes
           await tester.pump();
           await tester.pump(const Duration(milliseconds: 100));
 
@@ -570,11 +336,11 @@ void main() {
 
         await mockNetworkImagesFor(() async {
           await tester.pumpWidget(
-            createWidget(cards: [CardFixtures.completeCard]),
+            createWidget(geminiResult: ScanFixtures.completeGeminiResult),
           );
           await tester.pumpAndSettle();
 
-          await tester.tap(find.text('Charizard VMAX'));
+          await tester.tap(find.text('Charizard VMAX').first);
           await tester.pumpAndSettle();
           await tester.tap(find.text('Yes, this is correct'));
           await tester.pumpAndSettle();
@@ -593,14 +359,11 @@ void main() {
 
         await mockNetworkImagesFor(() async {
           await tester.pumpWidget(
-            createWidget(
-              cards: [CardFixtures.completeCard],
-              scanMetadata: ScanFixtures.foilMetadata,
-            ),
+            createWidget(geminiResult: ScanFixtures.completeGeminiResult),
           );
           await tester.pumpAndSettle();
 
-          await tester.tap(find.text('Charizard VMAX'));
+          await tester.tap(find.text('Charizard VMAX').first);
           await tester.pumpAndSettle();
           await tester.tap(find.text('Yes, this is correct'));
           await tester.pumpAndSettle();
@@ -613,30 +376,27 @@ void main() {
               'swsh4-025',
               quantity: 1,
               condition: 'NM',
-              printing: PrintingType.foil,
+              printing: PrintingType.normal,
               scannedImageBytes: any(named: 'scannedImageBytes'),
-              language: any(named: 'language'),
+              language: 'English',
               ocrText: any(named: 'ocrText'),
             ),
           ).called(1);
         });
       });
 
-      testWidgets('passes detected language when adding Japanese card', (
+      testWidgets('passes detected Japanese language when adding', (
         tester,
       ) async {
         mockApiService.stubAddToCollection();
 
         await mockNetworkImagesFor(() async {
           await tester.pumpWidget(
-            createWidget(
-              cards: [CardFixtures.completeCard],
-              scanMetadata: ScanFixtures.japaneseScanMetadata,
-            ),
+            createWidget(geminiResult: ScanFixtures.japaneseGeminiResult),
           );
           await tester.pumpAndSettle();
 
-          await tester.tap(find.text('Charizard VMAX'));
+          await tester.tap(find.text('Charizard VMAX').first);
           await tester.pumpAndSettle();
           await tester.tap(find.text('Yes, this is correct'));
           await tester.pumpAndSettle();
@@ -644,7 +404,6 @@ void main() {
           await tester.tap(find.text('Add to Collection'));
           await tester.pumpAndSettle();
 
-          // Verify that 'Japanese' is passed as the language parameter
           verify(
             () => mockApiService.addToCollection(
               'swsh4-025',
@@ -663,12 +422,42 @@ void main() {
     group('image handling', () {
       testWidgets('shows image icon when imageUrl is null', (tester) async {
         await mockNetworkImagesFor(() async {
-          await tester.pumpWidget(
-            createWidget(cards: [CardFixtures.nullOptionalsCard]),
+          // Create a result with a card that has no image
+          final result = GeminiScanResult(
+            cardId: 'test-id',
+            cardName: 'Test Card',
+            canonicalNameEN: 'Test Card',
+            setCode: 'test',
+            setName: 'Test Set',
+            cardNumber: '001',
+            game: 'pokemon',
+            observedLanguage: 'English',
+            confidence: 0.8,
+            reasoning: 'Test',
+            turnsUsed: 1,
+            cards: [CardFixtures.nullOptionalsCard],
           );
+
+          await tester.pumpWidget(createWidget(geminiResult: result));
           await tester.pumpAndSettle();
 
           expect(find.byIcon(Icons.image), findsOneWidget);
+        });
+      });
+    });
+
+    group('MTG 2-phase selection', () {
+      testWidgets('shows set selection for MTG with multiple sets', (
+        tester,
+      ) async {
+        await mockNetworkImagesFor(() async {
+          await tester.pumpWidget(
+            createWidget(geminiResult: ScanFixtures.mtgMultiSetGeminiResult),
+          );
+          await tester.pumpAndSettle();
+
+          // Should show set selection UI
+          expect(find.text('3 sets found'), findsOneWidget);
         });
       });
     });

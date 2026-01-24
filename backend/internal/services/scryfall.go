@@ -2,8 +2,10 @@ package services
 
 import (
 	"context"
+	"encoding/base64"
 	"encoding/json"
 	"fmt"
+	"io"
 	"net/http"
 	"net/url"
 	"sort"
@@ -272,6 +274,127 @@ func (s *ScryfallService) SearchCardPrintings(cardName string) (*models.CardSear
 		TotalCount: searchResp.TotalCards,
 		HasMore:    searchResp.HasMore,
 	}, nil
+}
+
+// SearchByName implements CardSearcher interface for Gemini function calling.
+// Searches for MTG cards by name and returns up to limit results.
+func (s *ScryfallService) SearchByName(ctx context.Context, name string, limit int) ([]CandidateCard, error) {
+	if limit <= 0 {
+		limit = 10
+	}
+	if limit > 20 {
+		limit = 20
+	}
+
+	// First try exact name match with all printings
+	result, err := s.SearchCardPrintings(name)
+	if err != nil || len(result.Cards) == 0 {
+		// Fall back to fuzzy search
+		result, err = s.SearchCards(name)
+		if err != nil {
+			return nil, fmt.Errorf("failed to search cards: %w", err)
+		}
+	}
+
+	// Sort by release date (newest first)
+	sort.Slice(result.Cards, func(i, j int) bool {
+		return result.Cards[i].ReleasedAt > result.Cards[j].ReleasedAt
+	})
+
+	// Convert to CandidateCard
+	var candidates []CandidateCard
+	for i := 0; i < len(result.Cards) && len(candidates) < limit; i++ {
+		card := result.Cards[i]
+		imageURL := card.ImageURLLarge
+		if imageURL == "" {
+			imageURL = card.ImageURL
+		}
+		if imageURL == "" {
+			continue // Skip cards without images
+		}
+
+		candidates = append(candidates, CandidateCard{
+			ID:       card.ID,
+			Name:     card.Name,
+			SetCode:  card.SetCode,
+			SetName:  card.SetName,
+			Number:   card.CardNumber,
+			ImageURL: imageURL,
+		})
+	}
+
+	return candidates, nil
+}
+
+// GetBySetAndNumber implements CardSearcher interface for Gemini function calling.
+// Gets a specific MTG card by set code and collector number.
+func (s *ScryfallService) GetBySetAndNumber(ctx context.Context, setCode, number string) (*CandidateCard, error) {
+	card, err := s.GetCardBySetAndNumber(setCode, number)
+	if err != nil {
+		return nil, err
+	}
+	if card == nil {
+		return nil, nil
+	}
+
+	imageURL := card.ImageURLLarge
+	if imageURL == "" {
+		imageURL = card.ImageURL
+	}
+
+	return &CandidateCard{
+		ID:       card.ID,
+		Name:     card.Name,
+		SetCode:  card.SetCode,
+		SetName:  card.SetName,
+		Number:   card.CardNumber,
+		ImageURL: imageURL,
+	}, nil
+}
+
+// GetCardImage implements CardSearcher interface for Gemini function calling.
+// Downloads a card image by ID and returns base64-encoded image data.
+func (s *ScryfallService) GetCardImage(ctx context.Context, cardID string) (string, error) {
+	// Get the card to find its image URL
+	card, err := s.GetCard(cardID)
+	if err != nil {
+		return "", err
+	}
+	if card == nil {
+		return "", fmt.Errorf("card not found: %s", cardID)
+	}
+
+	imageURL := card.ImageURLLarge
+	if imageURL == "" {
+		imageURL = card.ImageURL
+	}
+	if imageURL == "" {
+		return "", fmt.Errorf("no image URL for card: %s", cardID)
+	}
+
+	// Download the image
+	req, err := http.NewRequestWithContext(ctx, "GET", imageURL, nil)
+	if err != nil {
+		return "", err
+	}
+
+	resp, err := s.client.Do(req)
+	if err != nil {
+		return "", err
+	}
+	defer resp.Body.Close()
+
+	if resp.StatusCode != http.StatusOK {
+		return "", fmt.Errorf("HTTP %d fetching image", resp.StatusCode)
+	}
+
+	// Read and encode
+	data, err := io.ReadAll(io.LimitReader(resp.Body, 5*1024*1024))
+	if err != nil {
+		return "", err
+	}
+
+	return base64.StdEncoding.EncodeToString(data), nil
 }
 
 // GroupCardsBySet groups a flat list of cards by set for 2-phase selection
