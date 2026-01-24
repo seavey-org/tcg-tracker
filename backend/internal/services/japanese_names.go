@@ -1447,6 +1447,20 @@ func TranslateJapaneseName(japaneseName string) (string, bool) {
 
 // applyJapaneseOCRCorrections fixes common OCR misreads in Japanese text
 func applyJapaneseOCRCorrections(text string) string {
+	// First normalize dashes/hyphens to katakana long vowel mark (ー)
+	// OCR often misreads ー as various dash characters
+	dashVariants := []string{
+		"-", // Hyphen-minus U+002D
+		"–", // En dash U+2013
+		"—", // Em dash U+2014
+		"－", // Fullwidth hyphen-minus U+FF0D
+		"一", // CJK unified ideograph "one" (sometimes OCR mistake)
+	}
+	result := text
+	for _, dash := range dashVariants {
+		result = strings.ReplaceAll(result, dash, "ー")
+	}
+
 	// Common OCR substitutions for Japanese hiragana/katakana
 	corrections := map[string]string{
 		// Hiragana corrections
@@ -1458,7 +1472,6 @@ func applyJapaneseOCRCorrections(text string) string {
 		"つりさ": "つりざ", // sa -> za
 	}
 
-	result := text
 	for wrong, correct := range corrections {
 		result = strings.ReplaceAll(result, wrong, correct)
 	}

@@ -296,53 +296,61 @@ func (h *CardHandler) IdentifyCardFromImage(c *gin.Context) {
 	text := strings.Join(ocrResult.Lines, "\n")
 	parsed := services.ParseOCRText(text, game)
 
-	// For Japanese Pokemon cards with Gemini available, use image-based identification
-	// This is much more accurate than OCR + text matching for Japanese cards
+	// For Japanese Pokemon cards, use a "static translation first" approach:
+	// 1. If OCR parser found a card name via static translation, use standard flow (fast)
+	// 2. Only use Gemini vision if static translation didn't find a match (slower but handles unknown cards)
 	if game == "pokemon" && parsed.DetectedLanguage == "Japanese" &&
 		h.translationService != nil && h.translationService.IsGeminiEnabled() && len(imageBytes) > 0 {
 
-		result, textMatches, err := h.identifyJapaneseCardFromImage(c, imageBytes, parsed, text)
-		if err == nil && result != nil && len(result.Cards) > 0 {
-			// Success with Gemini vision - return results
-			response := gin.H{
-				"cards":       result.Cards,
-				"total_count": result.TotalCount,
-				"has_more":    result.HasMore,
-				"ocr": gin.H{
-					"text":       text,
-					"lines":      ocrResult.Lines,
-					"confidence": ocrResult.Confidence,
-				},
-				"parsed": gin.H{
-					"card_name":            parsed.CardName,
-					"card_number":          parsed.CardNumber,
-					"set_total":            parsed.SetTotal,
-					"set_code":             parsed.SetCode,
-					"set_name":             parsed.SetName,
-					"hp":                   parsed.HP,
-					"rarity":               parsed.Rarity,
-					"is_foil":              parsed.IsFoil,
-					"foil_indicators":      parsed.FoilIndicators,
-					"foil_confidence":      parsed.FoilConfidence,
-					"is_first_edition":     parsed.IsFirstEdition,
-					"first_ed_indicators":  parsed.FirstEdIndicators,
-					"confidence":           parsed.Confidence,
-					"condition_hints":      parsed.ConditionHints,
-					"suggested_condition":  parsed.SuggestedCondition,
-					"edge_whitening_score": parsed.EdgeWhiteningScore,
-					"corner_scores":        parsed.CornerScores,
-					"match_reason":         parsed.MatchReason,
-					"candidate_sets":       parsed.CandidateSets,
-					"detected_language":    parsed.DetectedLanguage,
-					"translation_source":   parsed.TranslationSource,
-					"text_matches":         textMatches,
-				},
+		// Check if static translation already found a card name
+		if parsed.CardName != "" {
+			log.Printf("Japanese card: static translation found %q, skipping Gemini", parsed.CardName)
+			// Continue to standard flow below
+		} else {
+			// No static translation match - try Gemini vision
+			result, textMatches, err := h.identifyJapaneseCardFromImage(c, imageBytes, parsed, text)
+			if err == nil && result != nil && len(result.Cards) > 0 {
+				// Success with Gemini vision - return results
+				response := gin.H{
+					"cards":       result.Cards,
+					"total_count": result.TotalCount,
+					"has_more":    result.HasMore,
+					"ocr": gin.H{
+						"text":       text,
+						"lines":      ocrResult.Lines,
+						"confidence": ocrResult.Confidence,
+					},
+					"parsed": gin.H{
+						"card_name":            parsed.CardName,
+						"card_number":          parsed.CardNumber,
+						"set_total":            parsed.SetTotal,
+						"set_code":             parsed.SetCode,
+						"set_name":             parsed.SetName,
+						"hp":                   parsed.HP,
+						"rarity":               parsed.Rarity,
+						"is_foil":              parsed.IsFoil,
+						"foil_indicators":      parsed.FoilIndicators,
+						"foil_confidence":      parsed.FoilConfidence,
+						"is_first_edition":     parsed.IsFirstEdition,
+						"first_ed_indicators":  parsed.FirstEdIndicators,
+						"confidence":           parsed.Confidence,
+						"condition_hints":      parsed.ConditionHints,
+						"suggested_condition":  parsed.SuggestedCondition,
+						"edge_whitening_score": parsed.EdgeWhiteningScore,
+						"corner_scores":        parsed.CornerScores,
+						"match_reason":         parsed.MatchReason,
+						"candidate_sets":       parsed.CandidateSets,
+						"detected_language":    parsed.DetectedLanguage,
+						"translation_source":   parsed.TranslationSource,
+						"text_matches":         textMatches,
+					},
+				}
+				c.JSON(http.StatusOK, response)
+				return
 			}
-			c.JSON(http.StatusOK, response)
-			return
+			// Fall through to standard OCR flow if Gemini vision fails
+			log.Printf("Gemini vision failed for Japanese card, falling back to OCR: %v", err)
 		}
-		// Fall through to standard OCR flow if Gemini vision fails
-		log.Printf("Gemini vision failed for Japanese card, falling back to OCR: %v", err)
 	}
 
 	// Standard OCR flow for non-Japanese cards or when Gemini vision fails

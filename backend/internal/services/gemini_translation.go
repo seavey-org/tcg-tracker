@@ -21,10 +21,10 @@ func base64Encode(data []byte) string {
 }
 
 const (
-	// Gemini 3 Flash Preview - fast and cheap
-	geminiModel   = "gemini-3-flash-preview"
+	// Gemini 2.0 Flash - fast, no thinking overhead (1-2s vs 5-30s for Gemini 3)
+	geminiModel   = "gemini-2.0-flash"
 	geminiAPIURL  = "https://generativelanguage.googleapis.com/v1beta/models/%s:generateContent"
-	geminiTimeout = 30 * time.Second // Gemini 3 thinking can take longer
+	geminiTimeout = 15 * time.Second
 
 	// Minimum confidence to accept a Gemini result without fallback
 	MinGeminiConfidence = 0.6
@@ -200,8 +200,8 @@ func (s *GeminiTranslationService) IdentifyCard(ctx context.Context, japaneseTex
 		GenerationConfig: geminiGenConfig{
 			ResponseMimeType:   "application/json",
 			ResponseJSONSchema: cardResponseSchema,
-			Temperature:        0.1,  // Low temperature for deterministic output
-			MaxOutputTokens:    8192, // Gemini 3 uses thinking tokens, need headroom
+			Temperature:        0.1, // Low temperature for deterministic output
+			MaxOutputTokens:    500, // Gemini 2.0 doesn't use thinking tokens
 		},
 	}
 
@@ -369,7 +369,7 @@ func (s *GeminiTranslationService) IdentifyCardFromImage(ctx context.Context, im
 			ResponseMimeType:   "application/json",
 			ResponseJSONSchema: cardResponseSchema,
 			Temperature:        0.1,
-			MaxOutputTokens:    8192, // Gemini 3 uses thinking tokens, need headroom
+			MaxOutputTokens:    500, // Gemini 2.0 doesn't use thinking tokens
 		},
 	}
 
