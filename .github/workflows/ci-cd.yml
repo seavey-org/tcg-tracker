@@ -153,8 +153,10 @@ jobs:
       - uses: actions/checkout@v4
       - name: Log in to GHCR
         run: echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
-      - name: Build app image
+      - name: Build and tag app image
         run: |
+          # Remove existing tags to avoid "already exists" error from buildx
+          docker rmi ${{ env.IMAGE_PREFIX }}/app:latest 2>/dev/null || true
           docker build \
             --tag ${{ env.IMAGE_PREFIX }}/app:${{ github.sha }} \
             --tag ${{ env.IMAGE_PREFIX }}/app:latest \
@@ -182,8 +184,10 @@ jobs:
       - uses: actions/checkout@v4
       - name: Log in to GHCR
         run: echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
-      - name: Build identifier image
+      - name: Build and tag identifier image
         run: |
+          # Remove existing tags to avoid "already exists" error from buildx
+          docker rmi ${{ env.IMAGE_PREFIX }}/identifier:latest 2>/dev/null || true
           docker build \
             --tag ${{ env.IMAGE_PREFIX }}/identifier:${{ github.sha }} \
             --tag ${{ env.IMAGE_PREFIX }}/identifier:latest \
