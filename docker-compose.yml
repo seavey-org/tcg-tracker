@@ -31,6 +31,8 @@ services:
       # Google Cloud Translation API (for Japanese card support)
       # Set GOOGLE_APPLICATION_CREDENTIALS=/app/secrets/gcloud.json if credentials file is mounted
       - GOOGLE_APPLICATION_CREDENTIALS=${GOOGLE_APPLICATION_CREDENTIALS:-}
+      # Gemini API for Japanese card identification (preferred over Google Translate)
+      - GOOGLE_API_KEY=${GOOGLE_API_KEY:-}
       - TRANSLATION_CONFIDENCE_THRESHOLD=${TRANSLATION_CONFIDENCE_THRESHOLD:-800}
     depends_on:
       - identifier

@@ -290,10 +290,14 @@ jobs:
             IMAGE_TAG=${{ github.sha }} docker compose \$COMPOSE_FILES down --remove-orphans || true
             docker rm -f tcg-backend tcg-identifier 2>/dev/null || true
             
+            # Read API key from file on production server
+            GOOGLE_API_KEY=\$(cat /home/seavey/google-api-key 2>/dev/null || echo '')
+            
             # Start new containers
             IMAGE_TAG=${{ github.sha }} \
               JUSTTCG_API_KEY='${{ secrets.JUSTTCG_API_KEY }}' \
               ADMIN_KEY='${{ secrets.ADMIN_KEY }}' \
+              GOOGLE_API_KEY=\"\$GOOGLE_API_KEY\" \
               docker compose \$COMPOSE_FILES up -d
           "
 
