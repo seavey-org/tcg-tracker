@@ -9,10 +9,79 @@ import (
 	"unicode"
 )
 
+// Pre-compiled regex patterns for OCR parsing performance.
+// Regex compilation is expensive, so we compile once at package init.
 var (
+	// Language detection patterns (HP variations)
 	germanKpPattern  = regexp.MustCompile(`\b(\d{2,3})\s*KP\b|\bKP\s*(\d{2,3})\b`)
 	frenchPvPattern  = regexp.MustCompile(`\b(\d{2,3})\s*PV\b|\bPV\s*(\d{2,3})\b`)
 	italianPsPattern = regexp.MustCompile(`\b(\d{2,3})\s*PS\b|\bPS\s*(\d{2,3})\b`)
+
+	// Card number patterns
+	cardNumRegex   = regexp.MustCompile(`(?:^|\s)(\d{1,3})\s*/\s*(\d{1,3})(?:\s|$|[^0-9])`)
+	tgRegex        = regexp.MustCompile(`TG(\d+)\s*/\s*TG(\d+)`)
+	ggRegex        = regexp.MustCompile(`GG(\d+)\s*/\s*GG(\d+)`)
+	svCardNumRegex = regexp.MustCompile(`SV(\d+)\s*/\s*(?:SV)?(\d+)`)
+	pokedexRegex   = regexp.MustCompile(`(?i)N[aoce0]\.?\s*(\d{1,3})`)
+
+	// Set code patterns - one with SV, one without (for Shiny Vault cards)
+	setCodeWithSVRegex    = regexp.MustCompile(`\b(SWSH\d{1,2}|SV\d[A-Z0-9]*(?:PT5)?|XY\d{1,2}|SM\d{1,2}(?:PT5)?|BW\d{1,2}|DP\d{1,2}|EX\d{1,2}|PGO|CEL25|PR-SW|PR-SV)\b`)
+	setCodeWithoutSVRegex = regexp.MustCompile(`\b(SWSH\d{1,2}|XY\d{1,2}|SM\d{1,2}(?:PT5)?|BW\d{1,2}|DP\d{1,2}|EX\d{1,2}|PGO|CEL25|PR-SW|PR-SV)\b`)
+
+	// HP extraction patterns - explicit HP text (high confidence)
+	hpExplicitPatterns = []*regexp.Regexp{
+		regexp.MustCompile(`(?i)HP[ ]*(\d{2,3})`), // "HP 170", "HP170"
+		regexp.MustCompile(`(?i)(\d{2,3})[ ]*HP`), // "170 HP", "170HP"
+		regexp.MustCompile(`(?i)4P[ ]*(\d{2,3})`), // "4P 60" (OCR error for HP)
+	}
+
+	// HP extraction patterns - fallback for modern cards without HP text
+	hpFallbackPatterns = []*regexp.Regexp{
+		regexp.MustCompile(`[A-Z](\d{2,3})\s*[&@©]`),        // "D170 @" pattern
+		regexp.MustCompile(`[~.,]?(\d{3})\s*[&@©®)>]`),      // Modern card: "~310@", "220©", ".330)"
+		regexp.MustCompile(`(?i)VMAX[^0-9]*(\d{3})`),        // VMAX cards: number near VMAX text
+		regexp.MustCompile(`(?i)ex[^0-9]*(\d{2,3})\s*[©®]`), // ex cards: "ex...220©"
+	}
+
+	// Foil detection
+	foilRegex = regexp.MustCompile(`\bFOIL\b`)
+
+	// Name cleanup patterns
+	trailingNonLetterRegex = regexp.MustCompile(`[^a-zA-Z']+$`)
+	spaceInWordRegex       = regexp.MustCompile(`(\w)\s(\w)`)
+	leadingNonLetterRegex  = regexp.MustCompile(`^[^a-zA-Z]*`)
+	hpInNameRegex1         = regexp.MustCompile(`\s*HP\s*\d+`)
+	hpInNameRegex2         = regexp.MustCompile(`\s*\d{2,3}\s*HP`)
+	nonAlphanumSpaceRegex  = regexp.MustCompile(`[^a-zA-Z0-9\s'.-]`)
+	multiSpaceRegex        = regexp.MustCompile(`\s+`)
+
+	// Set code detection in name extraction
+	shortSetCodeRegex = regexp.MustCompile(`^[A-Z0-9]{3,6}$`)
+
+	// MTG patterns
+	mtgCollectorRegex         = regexp.MustCompile(`(?:^|\n)\s*(\d{1,4})\s*/\s*(\d{2,4})\s*(?:\n|$)`)
+	mtgCollectorFallbackRegex = regexp.MustCompile(`(\d{1,4})\s*/\s*(\d{2,4})`)
+	mtgSetCodeRegex           = regexp.MustCompile(`\b([A-Z0-9][A-Z0-9]{2,3})\b`)
+	mtgPureNumberRegex        = regexp.MustCompile(`^\d+$`)
+	mtgManaRegex              = regexp.MustCompile(`\{[WUBRG]\}|^[\d\s]+$`)
+	mtgCopyrightRegex         = regexp.MustCompile(`©\s*(\d{4})`)
+
+	// Condition detection
+	gradeRegex = regexp.MustCompile(`(PSA|BGS|CGC|SGC)\s*(\d+\.?\d?)`)
+
+	// WotC era detection
+	wotcYearRegex = regexp.MustCompile(`[©C@O0(\[][\ ]?(199[5-9]|200[0-3])`)
+
+	// PTCGO code detection
+	ptcgoRegex = regexp.MustCompile(`\b([A-Z][A-Z0-9])\b`)
+
+	// English word extraction from Japanese text
+	englishWordPattern = regexp.MustCompile(`[A-Za-z]+(?:[.'-][A-Za-z]+)*\.?|[A-Za-z]`)
+
+	// Name extraction patterns
+	numbersOnlyRegex = regexp.MustCompile(`^[\d\s/]+$`)
+	lettersMinRegex  = regexp.MustCompile(`[a-zA-Z]{3,}`)
+	alphaWordsRegex  = regexp.MustCompile(`[A-Za-z]{3,}`)
 )
 
 // parseInt safely parses an integer, returning 0 on failure
@@ -557,7 +626,7 @@ func normalizeLineForNameMatch(line string) string {
 	result = strings.ReplaceAll(result, "ii", "u")
 	result = strings.ReplaceAll(result, "ll", "u")
 	// Replace spaces in the middle of names
-	result = regexp.MustCompile(`(\w)\s(\w)`).ReplaceAllString(result, "$1$2")
+	result = spaceInWordRegex.ReplaceAllString(result, "$1$2")
 	return result
 }
 
@@ -790,7 +859,7 @@ func normalizeCardName(name string) string {
 	result = strings.TrimSpace(result)
 
 	// Remove stray characters at the end of names
-	result = regexp.MustCompile(`[^a-zA-Z']+$`).ReplaceAllString(result, "")
+	result = trailingNonLetterRegex.ReplaceAllString(result, "")
 
 	return result
 }
@@ -804,7 +873,6 @@ func parsePokemonOCR(result *OCRResult) {
 
 	// Extract card number pattern: XXX/YYY (e.g., "025/185", "TG17/TG30")
 	// Use normalized text to handle O/0 and l/1 confusion
-	cardNumRegex := regexp.MustCompile(`(?:^|\s)(\d{1,3})\s*/\s*(\d{1,3})(?:\s|$|[^0-9])`)
 	if matches := cardNumRegex.FindStringSubmatch(normalizedText); len(matches) >= 3 {
 		// Remove leading zeros
 		result.CardNumber = strings.TrimLeft(matches[1], "0")
@@ -815,21 +883,18 @@ func parsePokemonOCR(result *OCRResult) {
 	}
 
 	// Try TG (Trainer Gallery) format: TG17/TG30
-	tgRegex := regexp.MustCompile(`TG(\d+)\s*/\s*TG(\d+)`)
 	if matches := tgRegex.FindStringSubmatch(text); len(matches) >= 2 {
 		result.CardNumber = "TG" + matches[1]
 	}
 
 	// Try GG (Galarian Gallery) format: GG01/GG70
-	ggRegex := regexp.MustCompile(`GG(\d+)\s*/\s*GG(\d+)`)
 	if matches := ggRegex.FindStringSubmatch(text); len(matches) >= 2 {
 		result.CardNumber = "GG" + matches[1]
 	}
 
 	// Try SV (Shiny Vault) format: SV49/SV94, SV49/68
 	// This format is used in Hidden Fates, Shining Fates, etc.
-	svRegex := regexp.MustCompile(`SV(\d+)\s*/\s*(?:SV)?(\d+)`)
-	if matches := svRegex.FindStringSubmatch(text); len(matches) >= 3 {
+	if matches := svCardNumRegex.FindStringSubmatch(text); len(matches) >= 3 {
 		result.CardNumber = "SV" + matches[1]
 		// Don't set SetTotal for SV format as it's a subset total, not the main set
 	}
@@ -837,7 +902,6 @@ func parsePokemonOCR(result *OCRResult) {
 	// Extract National Pokedex number from vintage Japanese cards
 	// Format: "No. XXX" or "No.XXX" (e.g., "No. 032" for Nidoran)
 	// OCR often misreads "No" as "Na", "Nc", "N0", etc. so we allow N[aoce0]
-	pokedexRegex := regexp.MustCompile(`(?i)N[aoce0]\.?\s*(\d{1,3})`)
 	if matches := pokedexRegex.FindStringSubmatch(text); len(matches) >= 2 {
 		if num := parseInt(matches[1]); num > 0 && num <= 1025 { // Valid Pokedex range
 			result.PokedexNumber = num
@@ -847,24 +911,11 @@ func parsePokemonOCR(result *OCRResult) {
 	// Extract HP using two tiers of patterns:
 	// Tier 1: Explicit HP patterns (with "HP" text) - most reliable
 	// Tier 2: Fallback patterns (modern cards without HP text)
-	explicitHPPatterns := []*regexp.Regexp{
-		regexp.MustCompile(`(?i)HP[ ]*(\d{2,3})`), // "HP 170", "HP170"
-		regexp.MustCompile(`(?i)(\d{2,3})[ ]*HP`), // "170 HP", "170HP"
-		// Note: Removed [HhWw][ ]+(\d{2,3}) as it caused false positives with attack names like "Gnaw 10"
-		regexp.MustCompile(`(?i)4P[ ]*(\d{2,3})`), // "4P 60" (OCR error for HP)
-	}
-
-	fallbackHPPatterns := []*regexp.Regexp{
-		regexp.MustCompile(`[A-Z](\d{2,3})\s*[&@©]`),        // "D170 @" pattern
-		regexp.MustCompile(`[~.,]?(\d{3})\s*[&@©®)>]`),      // Modern card: "~310@", "220©", ".330)"
-		regexp.MustCompile(`(?i)VMAX[^0-9]*(\d{3})`),        // VMAX cards: number near VMAX text
-		regexp.MustCompile(`(?i)ex[^0-9]*(\d{2,3})\s*[©®]`), // ex cards: "ex...220©"
-	}
 
 	// First try explicit HP patterns - collect all and pick most common/highest
 	hpCounts := make(map[string]int)
-	for _, hpRegex := range explicitHPPatterns {
-		allMatches := hpRegex.FindAllStringSubmatch(text, -1)
+	for _, hpPattern := range hpExplicitPatterns {
+		allMatches := hpPattern.FindAllStringSubmatch(text, -1)
 		for _, matches := range allMatches {
 			if len(matches) >= 2 {
 				hp := matches[1]
@@ -893,8 +944,8 @@ func parsePokemonOCR(result *OCRResult) {
 
 	// If no explicit HP found, try fallback patterns (for modern cards)
 	if result.HP == "" {
-		for _, hpRegex := range fallbackHPPatterns {
-			if matches := hpRegex.FindStringSubmatch(text); len(matches) >= 2 {
+		for _, hpPattern := range hpFallbackPatterns {
+			if matches := hpPattern.FindStringSubmatch(text); len(matches) >= 2 {
 				hp := matches[1]
 				if hpVal := parseInt(hp); hpVal >= 10 && hpVal <= 400 {
 					result.HP = hp
@@ -907,15 +958,15 @@ func parsePokemonOCR(result *OCRResult) {
 	// Extract set code patterns with full set code (e.g., SWSH4, SV1, XY12)
 	// Only match codes that have numbers to avoid false positives with PTCGO codes
 	// Skip SV pattern if we already have an SV card number (Shiny Vault cards use SV## format)
-	var setCodeRegex *regexp.Regexp
+	var activeSetCodeRegex *regexp.Regexp
 	if strings.HasPrefix(result.CardNumber, "SV") {
 		// Card has Shiny Vault number - don't match SV as set code
-		setCodeRegex = regexp.MustCompile(`\b(SWSH\d{1,2}|XY\d{1,2}|SM\d{1,2}(?:PT5)?|BW\d{1,2}|DP\d{1,2}|EX\d{1,2}|PGO|CEL25|PR-SW|PR-SV)\b`)
+		activeSetCodeRegex = setCodeWithoutSVRegex
 	} else {
 		// SV sets: SV1, SV2, SV2A (Pokemon 151 JP), SV3PT5 etc.
-		setCodeRegex = regexp.MustCompile(`\b(SWSH\d{1,2}|SV\d[A-Z0-9]*(?:PT5)?|XY\d{1,2}|SM\d{1,2}(?:PT5)?|BW\d{1,2}|DP\d{1,2}|EX\d{1,2}|PGO|CEL25|PR-SW|PR-SV)\b`)
+		activeSetCodeRegex = setCodeWithSVRegex
 	}
-	if matches := setCodeRegex.FindStringSubmatch(upperText); len(matches) >= 1 {
+	if matches := activeSetCodeRegex.FindStringSubmatch(upperText); len(matches) >= 1 {
 		result.SetCode = strings.ToLower(matches[0])
 		result.MatchReason = "set_code"
 	}
@@ -1003,7 +1054,6 @@ func detectFoilIndicators(result *OCRResult, upperText string) {
 	}
 
 	// Also check for standalone "FOIL" text
-	foilRegex := regexp.MustCompile(`\bFOIL\b`)
 	if foilRegex.MatchString(upperText) {
 		result.IsFoil = true
 		result.FoilConfidence = 0.9
@@ -1156,7 +1206,7 @@ func extractPokemonCardName(lines []string, detectedRarity string) string {
 
 		// Skip lines that look like Pokemon set codes (common on Japanese cards).
 		// Avoid treating "SV2A" / "SWSH4" etc. as a card name when OCR fails.
-		if regexp.MustCompile(`^[A-Z0-9]{3,6}$`).MatchString(upper) {
+		if shortSetCodeRegex.MatchString(upper) {
 			hasDigit := strings.IndexFunc(upper, func(r rune) bool { return r >= '0' && r <= '9' }) >= 0
 			if hasDigit {
 				return true
@@ -1284,7 +1334,7 @@ func extractPokemonCardName(lines []string, detectedRarity string) string {
 		if containsJapaneseCharacters(line) {
 			words = extractEnglishWordsFromLine(line)
 		} else {
-			words = regexp.MustCompile(`[A-Za-z]{3,}`).FindAllString(line, -1)
+			words = alphaWordsRegex.FindAllString(line, -1)
 		}
 
 		for _, word := range words {
@@ -1304,7 +1354,7 @@ func extractPokemonCardName(lines []string, detectedRarity string) string {
 		}
 
 		// Skip lines that are just numbers
-		if regexp.MustCompile(`^[\d\s/]+$`).MatchString(line) {
+		if numbersOnlyRegex.MatchString(line) {
 			continue
 		}
 
@@ -1355,7 +1405,7 @@ func extractPokemonCardName(lines []string, detectedRarity string) string {
 
 	// Fallback 4: return first line with letters (but not skip words)
 	for _, line := range lines {
-		if regexp.MustCompile(`[a-zA-Z]{3,}`).MatchString(line) {
+		if lettersMinRegex.MatchString(line) {
 			name := cleanPokemonName(line, "")
 			if name == "" {
 				continue
@@ -1392,8 +1442,8 @@ func cleanPokemonName(line, knownName string) string {
 	name := normalizeFullWidthASCII(line)
 
 	// Remove HP values
-	name = regexp.MustCompile(`\s*HP\s*\d+`).ReplaceAllString(name, "")
-	name = regexp.MustCompile(`\s*\d{2,3}\s*HP`).ReplaceAllString(name, "")
+	name = hpInNameRegex1.ReplaceAllString(name, "")
+	name = hpInNameRegex2.ReplaceAllString(name, "")
 
 	// If the line contains Japanese characters, try to extract English text
 	// since our Pokemon database is English-only
@@ -1410,7 +1460,7 @@ func cleanPokemonName(line, knownName string) string {
 	}
 
 	// Remove common OCR artifacts at the start (numbers, symbols) but keep letters
-	name = regexp.MustCompile(`^[^a-zA-Z]*`).ReplaceAllString(name, "")
+	name = leadingNonLetterRegex.ReplaceAllString(name, "")
 
 	// If we know the Pokemon name, try to extract it with its suffixes (V, VMAX, ex, etc.)
 	if knownName != "" {
@@ -1440,8 +1490,8 @@ func cleanPokemonName(line, knownName string) string {
 
 	// Clean up remaining artifacts - for English text only
 	// Allow '.' for names like "Mr. Mime".
-	name = regexp.MustCompile(`[^a-zA-Z0-9\s'.-]`).ReplaceAllString(name, "")
-	name = regexp.MustCompile(`\s+`).ReplaceAllString(name, " ")
+	name = nonAlphanumSpaceRegex.ReplaceAllString(name, "")
+	name = multiSpaceRegex.ReplaceAllString(name, " ")
 	name = strings.TrimSpace(name)
 
 	// Apply OCR corrections for common Pokemon name misspellings
@@ -1458,14 +1508,12 @@ func parseMTGOCR(result *OCRResult) {
 	// Must be on its own line or have clear context - avoid matching power/toughness like "4/5"
 	// Look for larger numbers (collector numbers are typically 3+ digits in at least one part)
 	// or look for the pattern on its own line
-	collectorRegex := regexp.MustCompile(`(?:^|\n)\s*(\d{1,4})\s*/\s*(\d{2,4})\s*(?:\n|$)`)
-	if matches := collectorRegex.FindStringSubmatch(text); len(matches) >= 3 {
+	if matches := mtgCollectorRegex.FindStringSubmatch(text); len(matches) >= 3 {
 		result.CardNumber = matches[1]
 		result.SetTotal = matches[2]
 	} else {
 		// Fallback: look for collector number patterns where total is > 50 (unlikely to be P/T)
-		fallbackRegex := regexp.MustCompile(`(\d{1,4})\s*/\s*(\d{2,4})`)
-		for _, match := range fallbackRegex.FindAllStringSubmatch(text, -1) {
+		for _, match := range mtgCollectorFallbackRegex.FindAllStringSubmatch(text, -1) {
 			if len(match) >= 3 {
 				// If the total is > 50, it's likely a collector number
 				// Power/toughness rarely exceeds 20
@@ -1511,12 +1559,11 @@ func parseMTGOCR(result *OCRResult) {
 
 	// Look for set code - prefer codes that appear on their own line
 	// MTG set codes can start with numbers (like 2XM, 2LU) or letters
-	setCodeRegex := regexp.MustCompile(`\b([A-Z0-9][A-Z0-9]{2,3})\b`)
 	var candidates []string
-	for _, match := range setCodeRegex.FindAllStringSubmatch(upperText, -1) {
+	for _, match := range mtgSetCodeRegex.FindAllStringSubmatch(upperText, -1) {
 		code := match[1]
 		// Skip pure numbers
-		if regexp.MustCompile(`^\d+$`).MatchString(code) {
+		if mtgPureNumberRegex.MatchString(code) {
 			continue
 		}
 		if !falsePositives[code] {
@@ -1552,8 +1599,7 @@ func parseMTGOCR(result *OCRResult) {
 	detectConditionHints(result, upperText)
 
 	// Extract copyright year: "© 2022", "©2022", "TM & © 2022", "2022 Wizards"
-	copyrightRegex := regexp.MustCompile(`©\s*(\d{4})`)
-	if matches := copyrightRegex.FindStringSubmatch(text); len(matches) >= 2 {
+	if matches := mtgCopyrightRegex.FindStringSubmatch(text); len(matches) >= 2 {
 		result.CopyrightYear = matches[1]
 	}
 
@@ -1590,7 +1636,7 @@ func extractMTGCardName(lines []string) string {
 		}
 
 		// Skip mana cost lines (contain {W}, {U}, etc. or just numbers)
-		if regexp.MustCompile(`\{[WUBRG]\}|^[\d\s]+$`).MatchString(line) {
+		if mtgManaRegex.MatchString(line) {
 			continue
 		}
 
@@ -1628,7 +1674,6 @@ func detectConditionHints(result *OCRResult, upperText string) {
 	}
 
 	// Look for grade numbers (e.g., "PSA 10", "BGS 9.5")
-	gradeRegex := regexp.MustCompile(`(PSA|BGS|CGC|SGC)\s*(\d+\.?\d?)`)
 	if matches := gradeRegex.FindStringSubmatch(upperText); len(matches) >= 3 {
 		result.ConditionHints = append(result.ConditionHints,
 			matches[1]+" grade: "+matches[2])
@@ -1712,8 +1757,7 @@ func detectWotCEra(result *OCRResult, upperText string) {
 
 	// Use regex to catch more year patterns with OCR errors
 	// Matches patterns like: c1999, C 1999, @1999, etc.
-	yearRegex := regexp.MustCompile(`[©C@O0(\[][\ ]?(199[5-9]|200[0-3])`)
-	if yearRegex.MatchString(upperText) {
+	if wotcYearRegex.MatchString(upperText) {
 		result.IsWotCEra = true
 		return
 	}
@@ -1932,8 +1976,6 @@ func selectBestSetFromTotal(possibleSets []string, isWotCEra bool) string {
 func detectSetFromPTCGO(result *OCRResult, upperText string) {
 	// Look for PTCGO codes: 2 letters (BS, JU, FO, TR, LC) or letter+number (G1, G2, N1-N4, B2)
 	// Use word boundaries to avoid matching within words
-	ptcgoRegex := regexp.MustCompile(`\b([A-Z][A-Z0-9])\b`)
-
 	for _, match := range ptcgoRegex.FindAllStringSubmatch(upperText, -1) {
 		code := match[1]
 		if setCode, ok := pokemonPTCGOToCode[code]; ok {
@@ -2007,8 +2049,7 @@ func extractEnglishWordsFromLine(line string) []string {
 	// Match sequences of ASCII letters that may include punctuation commonly
 	// found in Pokemon names, e.g. "Farfetch'd" or "Mr. Mime".
 	// Keep an optional trailing '.' for abbreviations like "Mr.".
-	wordPattern := regexp.MustCompile(`[A-Za-z]+(?:[.'-][A-Za-z]+)*\.?|[A-Za-z]`)
-	matches := wordPattern.FindAllString(normalized, -1)
+	matches := englishWordPattern.FindAllString(normalized, -1)
 
 	var words []string
 	for _, w := range matches {

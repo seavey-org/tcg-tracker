@@ -61,8 +61,10 @@ type LocalPokemonCard struct {
 	EvolvesFrom            string          `json:"evolvesFrom"`
 	SetID                  string          // Populated from filename
 
-	// Pre-computed searchable text (built at load time)
-	searchableText string
+	// Pre-computed fields for performance (built at load time)
+	searchableText string // Full-text searchable content
+	nameLower      string // Lowercase name for fast matching
+	setIDLower     string // Lowercase set ID for fast filtering
 }
 
 type LocalCardImages struct {
@@ -78,9 +80,15 @@ type LocalSet struct {
 	Total       int    `json:"total"`
 }
 
-// buildSearchableText creates a lowercase concatenation of all text on the card
-// for efficient full-text matching during OCR identification
-func (c *LocalPokemonCard) buildSearchableText() {
+// precomputeFields pre-computes lowercase and searchable text fields at load time
+// for efficient matching during OCR identification. This avoids repeated string
+// operations during the hot path.
+func (c *LocalPokemonCard) precomputeFields() {
+	// Pre-compute lowercase versions for fast matching
+	c.nameLower = strings.ToLower(c.Name)
+	c.setIDLower = strings.ToLower(c.SetID)
+
+	// Build searchable text from all card content
 	var parts []string
 	parts = append(parts, c.Name)
 
@@ -257,18 +265,17 @@ func (s *PokemonHybridService) loadData(dataDir string) error {
 
 		for i := range cards {
 			cards[i].SetID = setID
-			// Build searchable text for full-text matching
-			cards[i].buildSearchableText()
+			// Pre-compute lowercase fields and searchable text
+			cards[i].precomputeFields()
 
 			idx := len(s.cards)
 			s.cards = append(s.cards, cards[i])
 
-			// Index by lowercase name for search
-			nameLower := strings.ToLower(cards[i].Name)
-			s.cardIndex[nameLower] = append(s.cardIndex[nameLower], idx)
+			// Index by lowercase name for search (using pre-computed field)
+			s.cardIndex[cards[i].nameLower] = append(s.cardIndex[cards[i].nameLower], idx)
 
 			// Also index by name parts for partial matching
-			parts := strings.Fields(nameLower)
+			parts := strings.Fields(cards[i].nameLower)
 			for _, part := range parts {
 				if len(part) > 2 {
 					s.cardIndex[part] = append(s.cardIndex[part], idx)
@@ -608,22 +615,21 @@ func (s *PokemonHybridService) SearchByNameAndNumber(name, cardNumber string, ca
 	scored := []scoredCard{}
 
 	for _, localCard := range s.cards {
-		// Filter by candidate sets if specified
+		// Filter by candidate sets if specified (using pre-computed lowercase)
 		if filterBySet {
-			if !setFilter[strings.ToLower(localCard.SetID)] {
+			if !setFilter[localCard.setIDLower] {
 				continue
 			}
 		}
 
-		cardNameLower := strings.ToLower(localCard.Name)
 		score := 0
 
-		// Name matching (required for inclusion)
-		if cardNameLower == nameLower {
+		// Name matching (required for inclusion) - using pre-computed lowercase
+		if localCard.nameLower == nameLower {
 			score = 1000 // Exact name match
-		} else if strings.HasPrefix(cardNameLower, nameLower+" ") {
+		} else if strings.HasPrefix(localCard.nameLower, nameLower+" ") {
 			score = 800 // Name with suffix (e.g., "Charizard" matches "Charizard V")
-		} else if strings.Contains(cardNameLower, nameLower) {
+		} else if strings.Contains(localCard.nameLower, nameLower) {
 			score = 500 // Partial name match
 		} else {
 			continue // Skip cards that don't match the name
@@ -731,7 +737,7 @@ func (s *PokemonHybridService) scoreCards(indices []int, ocrLower string, ocrWor
 		localCard := s.cards[idx]
 
 		// Apply set filter (redundant if already filtered in findCandidatesByIndex, but safe)
-		if filterBySet && !setFilter[strings.ToLower(localCard.SetID)] {
+		if filterBySet && !setFilter[localCard.setIDLower] {
 			continue
 		}
 
@@ -760,8 +766,8 @@ func (s *PokemonHybridService) scoreAllCards(ocrLower string, ocrWords []string,
 	for i := range s.cards {
 		localCard := &s.cards[i]
 
-		// Apply set filter
-		if filterBySet && !setFilter[strings.ToLower(localCard.SetID)] {
+		// Apply set filter (using pre-computed lowercase)
+		if filterBySet && !setFilter[localCard.setIDLower] {
 			continue
 		}
 
@@ -789,14 +795,13 @@ func (s *PokemonHybridService) scoreCard(localCard *LocalPokemonCard, ocrLower s
 	score := 0
 	matched := []string{}
 
-	// Name match (highest priority)
-	nameLower := strings.ToLower(localCard.Name)
-	if strings.Contains(ocrLower, nameLower) {
+	// Name match (highest priority) - using pre-computed lowercase
+	if strings.Contains(ocrLower, localCard.nameLower) {
 		score += 1000
 		matched = append(matched, "name")
 	} else {
 		// Check if name words appear in OCR (partial name match)
-		nameWords := strings.Fields(nameLower)
+		nameWords := strings.Fields(localCard.nameLower)
 		nameWordsFound := 0
 		for _, word := range nameWords {
 			if len(word) >= 3 && strings.Contains(ocrLower, word) {

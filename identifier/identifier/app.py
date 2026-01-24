@@ -110,15 +110,17 @@ def ocr_image(request: OCRRequest) -> JSONResponse:
         raise HTTPException(status_code=400, detail=f"Invalid base64 data: {e}")
     
     np_img = np.frombuffer(raw, dtype=np.uint8)
-    bgr = cv2.imdecode(np_img, cv2.IMREAD_COLOR)
-    if bgr is None:
+    # Decode as grayscale directly - EasyOCR works on grayscale internally anyway.
+    # This saves ~3x memory vs BGR and avoids the internal color conversion.
+    img = cv2.imdecode(np_img, cv2.IMREAD_GRAYSCALE)
+    if img is None:
         raise HTTPException(status_code=400, detail="Failed to decode image")
 
-    original_shape = bgr.shape[:2]
+    original_shape = img.shape[:2]
 
     # Downscale for performance
-    bgr = downscale_image(bgr, max_dim=request.max_dimension)
-    downscaled_shape = bgr.shape[:2]
+    img = downscale_image(img, max_dim=request.max_dimension)
+    downscaled_shape = img.shape[:2]
 
     # Use EasyOCR's rotation_info for automatic rotation handling
     # This is more efficient than running OCR 4 times
@@ -126,7 +128,7 @@ def ocr_image(request: OCRRequest) -> JSONResponse:
 
     # Run OCR once with boxes to get both text and confidence in a single pass
     # This avoids the expensive duplicate OCR call that was doubling latency
-    boxes = ocr_engine.read_text_with_boxes(bgr, rotation_info=rotation_info)
+    boxes = ocr_engine.read_text_with_boxes(img, rotation_info=rotation_info)
     lines = [b["text"].strip() for b in boxes if b.get("text", "").strip()]
     text = "\n".join(lines)
     confidence = sum(b.get("confidence", 0.0) for b in boxes) / len(boxes) if boxes else 0.0

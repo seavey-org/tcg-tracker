@@ -139,6 +139,9 @@ Features:
 - **Singleton pattern**: OCR engine initialized once at startup for fast inference
 - **Auto-rotation**: Uses EasyOCR's `rotation_info` for efficient orientation detection
 - **Image downscaling**: Images downscaled to 1280px max dimension for performance
+- **Grayscale processing**: Images decoded as grayscale (saves ~3x memory vs BGR)
+- **Greedy decoder**: Uses `decoder='greedy'` (~30% faster than default beamsearch)
+- **Tuned thresholds**: Lower `text_threshold` and `low_text` to catch small text at card bottom (set codes, copyright)
 
 ## API Endpoints
 
@@ -291,6 +294,10 @@ When card matching confidence is below `TRANSLATION_CONFIDENCE_THRESHOLD` (defau
 4. **Re-match**: Translated text is matched against English database
 
 Scoring reference: name_exact=1000, name_partial=500, attack=200, number=300
+
+**Performance Optimizations:**
+- All regex patterns pre-compiled at package init (avoids recompilation per request)
+- Pre-computed lowercase `nameLower` and `setIDLower` fields on `LocalPokemonCard` (avoids 20k+ `strings.ToLower()` calls during full scan)
 
 **Important**: Japanese card scanning requires server-side OCR with `OCR_LANGUAGES=ja,en`. Client-side ML Kit is configured for Latin script only; the mobile app shows a warning when using fallback OCR for Pokemon cards.
 
