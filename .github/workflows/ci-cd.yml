@@ -159,19 +159,17 @@ jobs:
           registry: ghcr.io
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
-      - name: Build and tag app image
+      - name: Build app image
         run: |
-          # Remove existing tags to avoid "already exists" error from buildx
-          docker rmi ${{ env.IMAGE_PREFIX }}/app:latest 2>/dev/null || true
           docker build \
             --tag ${{ env.IMAGE_PREFIX }}/app:${{ github.sha }} \
-            --tag ${{ env.IMAGE_PREFIX }}/app:latest \
             --cache-from ${{ env.IMAGE_PREFIX }}/app:latest \
             --build-arg BUILDKIT_INLINE_CACHE=1 \
             .
       - name: Push to GHCR
         run: |
           docker push ${{ env.IMAGE_PREFIX }}/app:${{ github.sha }}
+          docker tag ${{ env.IMAGE_PREFIX }}/app:${{ github.sha }} ${{ env.IMAGE_PREFIX }}/app:latest
           docker push ${{ env.IMAGE_PREFIX }}/app:latest
 
   build-push-identifier:
@@ -191,19 +189,27 @@ jobs:
           registry: ghcr.io
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
-      - name: Build and tag identifier image
+      - name: Build identifier image
         run: |
-          # Remove existing tags to avoid "already exists" error from buildx
-          docker rmi ${{ env.IMAGE_PREFIX }}/identifier:latest 2>/dev/null || true
           docker build \
             --tag ${{ env.IMAGE_PREFIX }}/identifier:${{ github.sha }} \
-            --tag ${{ env.IMAGE_PREFIX }}/identifier:latest \
             --cache-from ${{ env.IMAGE_PREFIX }}/identifier:latest \
             --build-arg BUILDKIT_INLINE_CACHE=1 \
             ./identifier
-      - name: Push to GHCR
+      - name: Push to GHCR with retries
         run: |
-          docker push ${{ env.IMAGE_PREFIX }}/identifier:${{ github.sha }}
+          # Push SHA tag with retries (large image may timeout)
+          for i in 1 2 3; do
+            echo "Push attempt $i..."
+            if docker push ${{ env.IMAGE_PREFIX }}/identifier:${{ github.sha }}; then
+              echo "SHA push succeeded"
+              break
+            fi
+            echo "Push failed, retrying in 10s..."
+            sleep 10
+          done
+          # Tag and push latest
+          docker tag ${{ env.IMAGE_PREFIX }}/identifier:${{ github.sha }} ${{ env.IMAGE_PREFIX }}/identifier:latest
           docker push ${{ env.IMAGE_PREFIX }}/identifier:latest
 
   # ============== DEPLOY (main branch + manual only) ==============
