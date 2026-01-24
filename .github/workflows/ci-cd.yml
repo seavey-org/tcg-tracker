@@ -14,11 +14,15 @@ env:
   IMAGE_PREFIX: ghcr.io/${{ github.repository }}
 
 jobs:
+  # Detect which components changed to skip unnecessary work
   check-changes:
     runs-on: ubuntu-latest
     outputs:
+      backend: ${{ steps.filter.outputs.backend }}
       frontend: ${{ steps.filter.outputs.frontend }}
+      identifier: ${{ steps.filter.outputs.identifier }}
       mobile: ${{ steps.filter.outputs.mobile }}
+      deployment: ${{ steps.filter.outputs.deployment }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -27,26 +31,36 @@ jobs:
         id: filter
         with:
           filters: |
+            backend:
+              - 'backend/**'
+              - 'Dockerfile'
             frontend:
               - 'frontend/**'
+              - 'Dockerfile'
+            identifier:
+              - 'identifier/**'
             mobile:
               - 'mobile/**'
+            deployment:
+              - 'deployment/**'
+              - 'docker-compose*.yml'
 
+  # Backend: lint and test run in parallel, build starts after lint
   lint-backend:
     runs-on: ubuntu-latest
+    needs: check-changes
+    if: needs.check-changes.outputs.backend == 'true' || github.event_name == 'pull_request'
     defaults:
       run:
         working-directory: backend
     steps:
       - uses: actions/checkout@v4
-
       - name: Set up Go
         uses: actions/setup-go@v5
         with:
           go-version: ${{ env.GO_VERSION }}
           cache: true
           cache-dependency-path: backend/go.sum
-
       - name: Run golangci-lint
         uses: golangci/golangci-lint-action@v6
         with:
@@ -56,26 +70,21 @@ jobs:
 
   test-backend:
     runs-on: ubuntu-latest
-    needs: lint-backend
+    needs: check-changes
+    if: needs.check-changes.outputs.backend == 'true' || github.event_name == 'pull_request'
     defaults:
       run:
         working-directory: backend
     steps:
       - uses: actions/checkout@v4
-
       - name: Set up Go
         uses: actions/setup-go@v5
         with:
           go-version: ${{ env.GO_VERSION }}
           cache: true
           cache-dependency-path: backend/go.sum
-
-      - name: Download dependencies
-        run: go mod download
-
       - name: Run tests
         run: go test -race -coverprofile=coverage.out ./...
-
       - name: Upload coverage
         uses: actions/upload-artifact@v4
         with:
@@ -83,26 +92,95 @@ jobs:
           path: backend/coverage.out
           retention-days: 7
 
+  # Frontend: lint and build combined (build includes lint check)
+  build-frontend:
+    runs-on: ubuntu-latest
+    needs: check-changes
+    if: needs.check-changes.outputs.frontend == 'true' || needs.check-changes.outputs.backend == 'true' || github.event_name == 'pull_request'
+    defaults:
+      run:
+        working-directory: frontend
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'npm'
+          cache-dependency-path: frontend/package-lock.json
+      - name: Install dependencies
+        run: npm ci
+      - name: Run ESLint
+        run: npm run lint
+      - name: Build
+        run: npm run build
+
+  # Identifier: lint and test in parallel
+  lint-identifier:
+    runs-on: ubuntu-latest
+    needs: check-changes
+    if: needs.check-changes.outputs.identifier == 'true' || github.event_name == 'pull_request'
+    defaults:
+      run:
+        working-directory: identifier
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+          cache-dependency-path: identifier/requirements.txt
+      - name: Install ruff
+        run: pip install ruff
+      - name: Run ruff linter
+        run: ruff check .
+
+  test-identifier:
+    runs-on: ubuntu-latest
+    needs: check-changes
+    if: needs.check-changes.outputs.identifier == 'true' || github.event_name == 'pull_request'
+    defaults:
+      run:
+        working-directory: identifier
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+          cache-dependency-path: identifier/requirements.txt
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+          pip install -e .
+      - name: Run tests
+        run: pytest tests/ -v
+
+  # Build app image: starts after lint passes (parallel with tests)
   build-push-app:
     runs-on: ubuntu-latest
-    needs: [test-backend, build-frontend]
-    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    needs: [check-changes, lint-backend, build-frontend]
+    if: |
+      always() &&
+      github.event_name == 'push' && 
+      github.ref == 'refs/heads/main' &&
+      (needs.lint-backend.result == 'success' || needs.lint-backend.result == 'skipped') &&
+      (needs.build-frontend.result == 'success' || needs.build-frontend.result == 'skipped')
     permissions:
       contents: read
       packages: write
     steps:
       - uses: actions/checkout@v4
-
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
-
       - name: Log in to GHCR
         uses: docker/login-action@v3
         with:
           registry: ${{ env.REGISTRY }}
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
-
       - name: Extract metadata
         id: meta
         uses: docker/metadata-action@v5
@@ -111,7 +189,6 @@ jobs:
           tags: |
             type=sha,prefix=,format=long
             type=raw,value=latest
-
       - name: Build and push combined app image
         uses: docker/build-push-action@v6
         with:
@@ -122,69 +199,28 @@ jobs:
           cache-from: type=gha
           cache-to: type=gha,mode=max
 
-  lint-frontend:
-    runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: frontend
-    steps:
-      - uses: actions/checkout@v4
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: ${{ env.NODE_VERSION }}
-          cache: 'npm'
-          cache-dependency-path: frontend/package-lock.json
-
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Run ESLint
-        run: npm run lint
-
-  build-frontend:
-    runs-on: ubuntu-latest
-    needs: lint-frontend
-    defaults:
-      run:
-        working-directory: frontend
-    steps:
-      - uses: actions/checkout@v4
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: ${{ env.NODE_VERSION }}
-          cache: 'npm'
-          cache-dependency-path: frontend/package-lock.json
-
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Build
-        run: npm run build
-
+  # Build identifier image: starts after lint passes (parallel with tests)
   build-push-identifier:
     runs-on: ubuntu-latest
-    needs: test-identifier
-    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    needs: [check-changes, lint-identifier]
+    if: |
+      always() &&
+      github.event_name == 'push' && 
+      github.ref == 'refs/heads/main' &&
+      (needs.lint-identifier.result == 'success' || needs.lint-identifier.result == 'skipped')
     permissions:
       contents: read
       packages: write
     steps:
       - uses: actions/checkout@v4
-
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
-
       - name: Log in to GHCR
         uses: docker/login-action@v3
         with:
           registry: ${{ env.REGISTRY }}
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
-
       - name: Extract metadata
         id: meta
         uses: docker/metadata-action@v5
@@ -193,7 +229,6 @@ jobs:
           tags: |
             type=sha,prefix=,format=long
             type=raw,value=latest
-
       - name: Build and push identifier image
         uses: docker/build-push-action@v6
         with:
@@ -204,49 +239,28 @@ jobs:
           cache-from: type=gha
           cache-to: type=gha,mode=max
 
-  lint-mobile:
+  # Mobile: runs independently, doesn't block deploy
+  lint-test-mobile:
     runs-on: ubuntu-latest
+    needs: check-changes
+    if: needs.check-changes.outputs.mobile == 'true' || github.event_name == 'pull_request'
     defaults:
       run:
         working-directory: mobile
     steps:
       - uses: actions/checkout@v4
-
       - name: Set up Flutter
         uses: subosito/flutter-action@v2
         with:
           flutter-version: ${{ env.FLUTTER_VERSION }}
           channel: 'stable'
           cache: true
-
       - name: Install dependencies
         run: flutter pub get
-
       - name: Analyze code
         run: flutter analyze --no-fatal-infos
-
-  test-mobile:
-    runs-on: ubuntu-latest
-    needs: lint-mobile
-    defaults:
-      run:
-        working-directory: mobile
-    steps:
-      - uses: actions/checkout@v4
-
-      - name: Set up Flutter
-        uses: subosito/flutter-action@v2
-        with:
-          flutter-version: ${{ env.FLUTTER_VERSION }}
-          channel: 'stable'
-          cache: true
-
-      - name: Install dependencies
-        run: flutter pub get
-
       - name: Run tests
         run: flutter test --coverage
-
       - name: Upload coverage
         uses: actions/upload-artifact@v4
         with:
@@ -256,95 +270,46 @@ jobs:
 
   build-mobile:
     runs-on: ubuntu-latest
-    needs: test-mobile
+    needs: lint-test-mobile
+    if: needs.lint-test-mobile.result == 'success'
     defaults:
       run:
         working-directory: mobile
     steps:
       - uses: actions/checkout@v4
-
       - name: Set up Java
         uses: actions/setup-java@v4
         with:
           distribution: 'temurin'
           java-version: '17'
-
       - name: Set up Flutter
         uses: subosito/flutter-action@v2
         with:
           flutter-version: ${{ env.FLUTTER_VERSION }}
           channel: 'stable'
           cache: true
-
       - name: Install dependencies
         run: flutter pub get
-
       - name: Build Android APK
         run: flutter build apk --release
-
       - name: Upload Android APK
         uses: actions/upload-artifact@v4
         with:
           name: android-apk
           path: mobile/build/app/outputs/flutter-apk/app-release.apk
 
-  lint-identifier:
-    runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: identifier
-    steps:
-      - uses: actions/checkout@v4
-
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.11'
-          cache: 'pip'
-          cache-dependency-path: identifier/requirements.txt
-
-      - name: Install dependencies
-        run: |
-          pip install -r requirements.txt
-          pip install ruff
-
-      - name: Run ruff linter
-        run: ruff check .
-
-  test-identifier:
-    runs-on: ubuntu-latest
-    needs: lint-identifier
-    defaults:
-      run:
-        working-directory: identifier
-    steps:
-      - uses: actions/checkout@v4
-
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.11'
-          cache: 'pip'
-          cache-dependency-path: identifier/requirements.txt
-
-      - name: Install dependencies
-        run: |
-          pip install -r requirements.txt
-          pip install -e .
-
-      - name: Run tests
-        run: pytest tests/ -v
-
+  # Deploy: runs as soon as images are built, tests must pass
   deploy:
     runs-on: [self-hosted, fedora]
-    needs: [build-push-app, build-push-identifier, build-mobile, check-changes]
+    needs: [check-changes, build-push-app, build-push-identifier, test-backend, test-identifier]
     if: |
       always() &&
       github.ref == 'refs/heads/main' &&
       github.event_name == 'push' &&
-      needs.build-push-app.result == 'success' &&
-      needs.build-push-identifier.result == 'success' &&
-      needs.build-mobile.result == 'success'
+      (needs.build-push-app.result == 'success' || needs.build-push-app.result == 'skipped') &&
+      (needs.build-push-identifier.result == 'success' || needs.build-push-identifier.result == 'skipped') &&
+      (needs.test-backend.result == 'success' || needs.test-backend.result == 'skipped') &&
+      (needs.test-identifier.result == 'success' || needs.test-identifier.result == 'skipped')
     environment: production
     env:
       SERVER: "192.168.86.227"
@@ -361,10 +326,8 @@ jobs:
 
       - name: Ensure data directories exist
         run: |
-          ssh $SERVER "mkdir -p $APP_DIR/data/pokemon-tcg-data"
-          # Create secrets directory and link Google Cloud credentials for translation API
-          ssh $SERVER "mkdir -p $APP_DIR/secrets"
-          ssh $SERVER "ln -sf /home/cody/google-cloud-adminSvc.json $APP_DIR/secrets/gcloud.json"
+          ssh $SERVER "mkdir -p $APP_DIR/data/pokemon-tcg-data $APP_DIR/secrets"
+          ssh $SERVER "ln -sf /home/cody/google-cloud-adminSvc.json $APP_DIR/secrets/gcloud.json 2>/dev/null || true"
 
       - name: Save IMAGE_TAG for systemd service
         run: |
@@ -378,30 +341,30 @@ jobs:
         run: |
           ssh $SERVER "cd $APP_DIR && IMAGE_TAG=${{ github.sha }} docker compose -f docker-compose.yml -f docker-compose.gpu.yml pull"
           ssh $SERVER "cd $APP_DIR && IMAGE_TAG=${{ github.sha }} docker compose -f docker-compose.yml -f docker-compose.gpu.yml down --remove-orphans || true"
-          # Force remove any orphaned containers with conflicting names (e.g., from manual runs)
           ssh $SERVER "docker rm -f tcg-backend tcg-identifier 2>/dev/null || true"
           ssh $SERVER "cd $APP_DIR && IMAGE_TAG=${{ github.sha }} JUSTTCG_API_KEY='${{ secrets.JUSTTCG_API_KEY }}' ADMIN_KEY='${{ secrets.ADMIN_KEY }}' docker compose -f docker-compose.yml -f docker-compose.gpu.yml up -d"
 
-      - name: Wait for services to be healthy
+      - name: Wait for services and verify health
         run: |
           echo "Waiting for services to start..."
-          sleep 10
+          sleep 5
           ssh $SERVER "cd $APP_DIR && docker compose -f docker-compose.yml -f docker-compose.gpu.yml ps"
-
-      - name: Verify service health
-        run: |
           echo "Checking backend health..."
-          ssh $SERVER "curl -sf http://localhost:3080/health || echo 'Backend health check pending...'"
+          for i in 1 2 3; do
+            if ssh $SERVER "curl -sf http://localhost:3080/health"; then
+              echo "Health check passed!"
+              break
+            fi
+            echo "Attempt $i failed, retrying..."
+            sleep 3
+          done
 
-      - name: Setup Docker Compose systemd service
+      - name: Setup systemd and nginx (only if deployment files changed)
+        if: needs.check-changes.outputs.deployment == 'true'
         run: |
           scp deployment/tcg-docker.service $SERVER:/tmp/
           ssh $SERVER "sudo mv /tmp/tcg-docker.service /etc/systemd/system/"
-          ssh $SERVER "sudo systemctl daemon-reload"
-          ssh $SERVER "sudo systemctl enable tcg-docker"
-
-      - name: Configure nginx
-        run: |
+          ssh $SERVER "sudo systemctl daemon-reload && sudo systemctl enable tcg-docker"
           scp deployment/tcg.seavey.dev.conf $SERVER:/tmp/
           ssh $SERVER "sudo mv /tmp/tcg.seavey.dev.conf /etc/nginx/sites-available/tcg.seavey.dev.conf"
           ssh $SERVER "sudo ln -sf /etc/nginx/sites-available/tcg.seavey.dev.conf /etc/nginx/sites-enabled/"
@@ -417,22 +380,11 @@ jobs:
 
       - name: Clean up old Docker images
         run: |
-          echo "=== Docker disk usage before cleanup ==="
-          ssh $SERVER "docker system df"
-          echo ""
-          echo "Pruning unused Docker images..."
-          ssh $SERVER "docker image prune -af --filter 'until=168h'"
-          echo ""
-          echo "=== Docker disk usage after cleanup ==="
-          ssh $SERVER "docker system df"
+          ssh $SERVER "docker image prune -af --filter 'until=168h'" || true
 
       - name: Deployment summary
         run: |
           echo "=== Deployment Complete ==="
           echo "App URL: https://tcg.seavey.dev"
           echo "Image tag: ${{ github.sha }}"
-          echo ""
-          echo "=== Service Status ==="
           ssh $SERVER "cd $APP_DIR && docker compose -f docker-compose.yml -f docker-compose.gpu.yml ps"
-          echo ""
-          echo "To rollback: IMAGE_TAG=<previous-sha> docker compose -f docker-compose.yml -f docker-compose.gpu.yml up -d"
