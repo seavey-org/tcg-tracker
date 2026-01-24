@@ -1,5 +1,7 @@
 package services
 
+import "strings"
+
 // JapaneseToEnglishNames maps Japanese Pokemon and card names to their English equivalents.
 // This enables matching scanned Japanese cards against the English database.
 // Data sourced from PokeAPI (pokemon_species_names.csv) - verified official names.
@@ -1106,5 +1108,49 @@ func TranslateJapaneseName(japaneseName string) (string, bool) {
 		}
 	}
 
+	// Apply OCR corrections and try again
+	corrected := applyJapaneseOCRCorrections(japaneseName)
+	if corrected != japaneseName {
+		if englishName, ok := JapaneseToEnglishNames[corrected]; ok {
+			return englishName, true
+		}
+	}
+
+	// Special handling for Nidoran - OCR often corrupts the gender symbol
+	// ニドラン followed by any character (or nothing) should match
+	if strings.HasPrefix(japaneseName, "ニドラン") {
+		// Check what follows ニドラン
+		suffix := strings.TrimPrefix(japaneseName, "ニドラン")
+		// Map common OCR corruptions of gender symbols
+		switch suffix {
+		case "♂", "d", "♪", "』", "」", ")", "J", "]":
+			return "Nidoran ♂", true
+		case "♀", "e", "Q", "『", "「", "(", "[":
+			return "Nidoran ♀", true
+		case "": // No gender - default to male (more common)
+			return "Nidoran ♂", true
+		}
+	}
+
 	return "", false
+}
+
+// applyJapaneseOCRCorrections fixes common OCR misreads in Japanese text
+func applyJapaneseOCRCorrections(text string) string {
+	// Common OCR substitutions for Japanese hiragana/katakana
+	corrections := map[string]string{
+		// Hiragana corrections
+		"すこい": "すごい", // ko -> go (e.g., すごいつりざお = Super Rod)
+		"こつ":  "ごつ",  // ko -> go
+		"つこ":  "つご",  // ko -> go
+		// Common misreads
+		"りさお": "りざお", // sa -> za
+		"つりさ": "つりざ", // sa -> za
+	}
+
+	result := text
+	for wrong, correct := range corrections {
+		result = strings.ReplaceAll(result, wrong, correct)
+	}
+	return result
 }

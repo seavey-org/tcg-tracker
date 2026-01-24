@@ -200,3 +200,40 @@ func TestTranslateJapaneseName(t *testing.T) {
 		})
 	}
 }
+
+func TestTranslateJapaneseName_OCRCorrections(t *testing.T) {
+	tests := []struct {
+		name     string
+		japanese string
+		english  string
+		found    bool
+	}{
+		// Nidoran with corrupted gender symbols
+		{"Nidoran male with 』", "ニドラン』", "Nidoran ♂", true},
+		{"Nidoran male with 」", "ニドラン」", "Nidoran ♂", true},
+		{"Nidoran male with )", "ニドラン)", "Nidoran ♂", true},
+		{"Nidoran female with 『", "ニドラン『", "Nidoran ♀", true},
+		{"Nidoran female with 「", "ニドラン「", "Nidoran ♀", true},
+		{"Nidoran female with (", "ニドラン(", "Nidoran ♀", true},
+		{"Nidoran no gender", "ニドラン", "Nidoran ♂", true},
+
+		// Super Rod with OCR misreads (こ vs ご)
+		{"Super Rod with ko instead of go", "すこいつりざお", "Super Rod", true},
+
+		// These should still not match
+		{"Random Japanese", "ランダム", "", false},
+		{"Partial Nidoran", "ニド", "", false},
+	}
+
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			english, found := TranslateJapaneseName(tt.japanese)
+			if found != tt.found {
+				t.Errorf("TranslateJapaneseName(%q) found = %v, want %v", tt.japanese, found, tt.found)
+			}
+			if english != tt.english {
+				t.Errorf("TranslateJapaneseName(%q) = %q, want %q", tt.japanese, english, tt.english)
+			}
+		})
+	}
+}
