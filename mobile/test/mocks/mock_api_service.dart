@@ -72,6 +72,9 @@ extension MockApiServiceExtension on MockApiService {
         quantity: any(named: 'quantity'),
         condition: any(named: 'condition'),
         printing: any(named: 'printing'),
+        scannedImageBytes: any(named: 'scannedImageBytes'),
+        language: any(named: 'language'),
+        ocrText: any(named: 'ocrText'),
       ),
     ).thenAnswer((_) async => defaultItem);
   }
@@ -84,6 +87,9 @@ extension MockApiServiceExtension on MockApiService {
         quantity: any(named: 'quantity'),
         condition: any(named: 'condition'),
         printing: any(named: 'printing'),
+        scannedImageBytes: any(named: 'scannedImageBytes'),
+        language: any(named: 'language'),
+        ocrText: any(named: 'ocrText'),
       ),
     ).thenThrow(Exception(message));
   }

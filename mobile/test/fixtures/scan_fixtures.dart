@@ -53,7 +53,17 @@ class ScanFixtures {
     'is_foil': true,
     'foil_indicators': ['HOLO', 'REVERSE'],
     'confidence': 0.8,
-    'foil_confidence': 0.9, // High confidence triggers "Detected" label and auto-fills foil
+    'foil_confidence':
+        0.9, // High confidence triggers "Detected" label and auto-fills foil
+  };
+
+  /// Japanese card scan metadata (detected language should be passed to collection)
+  static const Map<String, dynamic> japaneseScanMetadataJson = {
+    'card_name': 'Pikachu V',
+    'card_number': '025',
+    'set_code': 'swsh4',
+    'confidence': 0.85,
+    'detected_language': 'Japanese',
   };
 
   /// Complete scan result JSON
@@ -95,6 +105,8 @@ class ScanFixtures {
       ScanMetadata.fromJson(nonFoilMetadataJson);
   static ScanMetadata get foilMetadata =>
       ScanMetadata.fromJson(foilMetadataJson);
+  static ScanMetadata get japaneseScanMetadata =>
+      ScanMetadata.fromJson(japaneseScanMetadataJson);
 
   /// ScanResult instances
   static ScanResult get completeScanResult =>

@@ -21,6 +21,24 @@ type CardHandler struct {
 	translationService *services.HybridTranslationService
 }
 
+// cacheCardsAsync saves cards to the database asynchronously so they can be
+// referenced when adding to collection. This is needed because Pokemon cards
+// come from local JSON files and must be cached in SQLite for collection lookups.
+func cacheCardsAsync(cards []models.Card) {
+	if len(cards) == 0 {
+		return
+	}
+	// Copy cards slice to avoid data race with response serialization
+	cardsToCache := make([]models.Card, len(cards))
+	copy(cardsToCache, cards)
+	go func(cards []models.Card) {
+		db := database.GetDB()
+		if err := db.Save(&cards).Error; err != nil {
+			log.Printf("Warning: failed to cache %d cards: %v", len(cards), err)
+		}
+	}(cardsToCache)
+}
+
 func NewCardHandler(scryfall *services.ScryfallService, pokemon *services.PokemonHybridService, translation *services.HybridTranslationService) *CardHandler {
 	return &CardHandler{
 		scryfallService:    scryfall,
@@ -81,18 +99,8 @@ func (h *CardHandler) SearchCards(c *gin.Context) {
 		}
 	}
 
-	// Cache cards in database asynchronously (don't block the response)
-	if len(result.Cards) > 0 {
-		// Copy cards slice for async goroutine (avoid data race with response)
-		cardsToCache := make([]models.Card, len(result.Cards))
-		copy(cardsToCache, result.Cards)
-		go func(cards []models.Card) {
-			db := database.GetDB()
-			if err := db.Save(&cards).Error; err != nil {
-				log.Printf("Warning: failed to cache %d cards: %v", len(cards), err)
-			}
-		}(cardsToCache)
-	}
+	// Cache cards so they can be added to collection
+	cacheCardsAsync(result.Cards)
 
 	c.JSON(http.StatusOK, result)
 }
@@ -204,6 +212,9 @@ func (h *CardHandler) IdentifyCard(c *gin.Context) {
 	if grouped != nil {
 		response["grouped"] = grouped
 	}
+
+	// Cache cards so they can be added to collection
+	cacheCardsAsync(result.Cards)
 
 	c.JSON(http.StatusOK, response)
 }
@@ -347,6 +358,10 @@ func (h *CardHandler) IdentifyCardFromImage(c *gin.Context) {
 						"text_matches":         textMatches,
 					},
 				}
+
+				// Cache cards so they can be added to collection
+				cacheCardsAsync(result.Cards)
+
 				c.JSON(http.StatusOK, response)
 				return
 			}
@@ -408,6 +423,9 @@ func (h *CardHandler) IdentifyCardFromImage(c *gin.Context) {
 	if grouped != nil {
 		response["grouped"] = grouped
 	}
+
+	// Cache cards so they can be added to collection
+	cacheCardsAsync(result.Cards)
 
 	c.JSON(http.StatusOK, response)
 }

@@ -614,6 +614,46 @@ void main() {
               quantity: 1,
               condition: 'NM',
               printing: PrintingType.foil,
+              scannedImageBytes: any(named: 'scannedImageBytes'),
+              language: any(named: 'language'),
+              ocrText: any(named: 'ocrText'),
+            ),
+          ).called(1);
+        });
+      });
+
+      testWidgets('passes detected language when adding Japanese card', (
+        tester,
+      ) async {
+        mockApiService.stubAddToCollection();
+
+        await mockNetworkImagesFor(() async {
+          await tester.pumpWidget(
+            createWidget(
+              cards: [CardFixtures.completeCard],
+              scanMetadata: ScanFixtures.japaneseScanMetadata,
+            ),
+          );
+          await tester.pumpAndSettle();
+
+          await tester.tap(find.text('Charizard VMAX'));
+          await tester.pumpAndSettle();
+          await tester.tap(find.text('Yes, this is correct'));
+          await tester.pumpAndSettle();
+
+          await tester.tap(find.text('Add to Collection'));
+          await tester.pumpAndSettle();
+
+          // Verify that 'Japanese' is passed as the language parameter
+          verify(
+            () => mockApiService.addToCollection(
+              'swsh4-025',
+              quantity: 1,
+              condition: 'NM',
+              printing: PrintingType.normal,
+              scannedImageBytes: any(named: 'scannedImageBytes'),
+              language: 'Japanese',
+              ocrText: any(named: 'ocrText'),
             ),
           ).called(1);
         });

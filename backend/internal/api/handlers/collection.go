@@ -629,9 +629,10 @@ func (h *CollectionHandler) GetGroupedCollection(c *gin.Context) {
 			totalQty += item.Quantity
 
 			// Calculate item value using condition-specific pricing with language
+			// GetPriceWithSource returns metadata about whether a language fallback occurred
 			priceCondition := models.MapCollectionConditionToPriceCondition(item.Condition)
-			itemPrice := card.GetPrice(priceCondition, item.Printing, item.Language)
-			itemValue := itemPrice * float64(item.Quantity)
+			priceResult := card.GetPriceWithSource(priceCondition, item.Printing, item.Language)
+			itemValue := priceResult.Price * float64(item.Quantity)
 			totalValue += itemValue
 
 			// Count scanned cards
@@ -655,13 +656,15 @@ func (h *CollectionHandler) GetGroupedCollection(c *gin.Context) {
 					scannedQty = 1
 				}
 				variantMap[variantKey] = &models.CollectionVariant{
-					Printing:   item.Printing,
-					Condition:  item.Condition,
-					Language:   item.Language,
-					Quantity:   item.Quantity,
-					Value:      itemValue,
-					HasScans:   hasScans,
-					ScannedQty: scannedQty,
+					Printing:      item.Printing,
+					Condition:     item.Condition,
+					Language:      item.Language,
+					Quantity:      item.Quantity,
+					Value:         itemValue,
+					HasScans:      hasScans,
+					ScannedQty:    scannedQty,
+					PriceLanguage: priceResult.PriceLanguage,
+					PriceFallback: priceResult.IsFallback,
 				}
 			}
 		}

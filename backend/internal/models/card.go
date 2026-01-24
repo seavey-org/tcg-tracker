@@ -194,6 +194,76 @@ func (c *Card) getPriceForLanguage(condition PriceCondition, printing PrintingTy
 	return 0
 }
 
+// PriceResult contains price lookup result with metadata about which language was used
+type PriceResult struct {
+	Price         float64      // The price found
+	PriceLanguage CardLanguage // Which language's price was actually used
+	IsFallback    bool         // True if fell back to a different language than requested
+}
+
+// GetPriceWithSource returns the price along with metadata about which language's
+// price was actually used. This is useful for displaying to users when Japanese
+// cards are priced using English market data.
+func (c *Card) GetPriceWithSource(condition PriceCondition, printing PrintingType, language CardLanguage) PriceResult {
+	// Default to English if empty
+	if language == "" {
+		language = LanguageEnglish
+	}
+
+	// Try to find price for specified language
+	price := c.getPriceForLanguage(condition, printing, language)
+	if price > 0 {
+		return PriceResult{
+			Price:         price,
+			PriceLanguage: language,
+			IsFallback:    false,
+		}
+	}
+
+	// If non-English language has no price, fall back to English
+	if language != LanguageEnglish {
+		price = c.getPriceForLanguage(condition, printing, LanguageEnglish)
+		if price > 0 {
+			return PriceResult{
+				Price:         price,
+				PriceLanguage: LanguageEnglish,
+				IsFallback:    true,
+			}
+		}
+	}
+
+	// Fall back to base prices (no language info available)
+	if printing.IsFoilVariant() {
+		if c.PriceFoilUSD > 0 {
+			return PriceResult{
+				Price:         c.PriceFoilUSD,
+				PriceLanguage: LanguageEnglish, // Base prices are English
+				IsFallback:    language != LanguageEnglish,
+			}
+		}
+		// Cross-fallback: foil variant with no foil price, use non-foil
+		return PriceResult{
+			Price:         c.PriceUSD,
+			PriceLanguage: LanguageEnglish,
+			IsFallback:    language != LanguageEnglish,
+		}
+	}
+
+	if c.PriceUSD > 0 {
+		return PriceResult{
+			Price:         c.PriceUSD,
+			PriceLanguage: LanguageEnglish,
+			IsFallback:    language != LanguageEnglish,
+		}
+	}
+	// Cross-fallback: non-foil with no price, try foil
+	return PriceResult{
+		Price:         c.PriceFoilUSD,
+		PriceLanguage: LanguageEnglish,
+		IsFallback:    language != LanguageEnglish,
+	}
+}
+
 type CardSearchResult struct {
 	Cards      []Card `json:"cards"`
 	TotalCount int    `json:"total_count"`

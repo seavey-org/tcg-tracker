@@ -121,6 +121,87 @@ func TestCardGetPriceLanguageFallbackToEnglish(t *testing.T) {
 	}
 }
 
+func TestGetPriceWithSource(t *testing.T) {
+	// Test card with both Japanese and English prices
+	cardWithBothLanguages := Card{
+		PriceUSD:     5.00,
+		PriceFoilUSD: 15.00,
+		Prices: []CardPrice{
+			{Condition: PriceConditionNM, Printing: PrintingNormal, Language: LanguageEnglish, PriceUSD: 10.00},
+			{Condition: PriceConditionNM, Printing: PrintingNormal, Language: LanguageJapanese, PriceUSD: 25.00},
+		},
+	}
+
+	// Japanese price should be returned with no fallback
+	result := cardWithBothLanguages.GetPriceWithSource(PriceConditionNM, PrintingNormal, LanguageJapanese)
+	if result.Price != 25.00 {
+		t.Errorf("Expected Japanese price 25.00, got %f", result.Price)
+	}
+	if result.PriceLanguage != LanguageJapanese {
+		t.Errorf("Expected PriceLanguage Japanese, got %s", result.PriceLanguage)
+	}
+	if result.IsFallback {
+		t.Error("Expected IsFallback=false when Japanese price exists")
+	}
+
+	// English price should be returned with no fallback
+	result = cardWithBothLanguages.GetPriceWithSource(PriceConditionNM, PrintingNormal, LanguageEnglish)
+	if result.Price != 10.00 {
+		t.Errorf("Expected English price 10.00, got %f", result.Price)
+	}
+	if result.PriceLanguage != LanguageEnglish {
+		t.Errorf("Expected PriceLanguage English, got %s", result.PriceLanguage)
+	}
+	if result.IsFallback {
+		t.Error("Expected IsFallback=false when English price exists")
+	}
+
+	// Test card with only English prices (common case for scanned Japanese cards)
+	cardWithEnglishOnly := Card{
+		PriceUSD:     5.00,
+		PriceFoilUSD: 15.00,
+		Prices: []CardPrice{
+			{Condition: PriceConditionNM, Printing: PrintingNormal, Language: LanguageEnglish, PriceUSD: 10.00},
+		},
+	}
+
+	// Japanese request should fall back to English with IsFallback=true
+	result = cardWithEnglishOnly.GetPriceWithSource(PriceConditionNM, PrintingNormal, LanguageJapanese)
+	if result.Price != 10.00 {
+		t.Errorf("Expected fallback English price 10.00, got %f", result.Price)
+	}
+	if result.PriceLanguage != LanguageEnglish {
+		t.Errorf("Expected PriceLanguage English (fallback), got %s", result.PriceLanguage)
+	}
+	if !result.IsFallback {
+		t.Error("Expected IsFallback=true when falling back to English for Japanese card")
+	}
+
+	// Test card with no detailed prices (should use base prices)
+	cardWithBaseOnly := Card{
+		PriceUSD:     5.00,
+		PriceFoilUSD: 15.00,
+		Prices:       []CardPrice{},
+	}
+
+	result = cardWithBaseOnly.GetPriceWithSource(PriceConditionNM, PrintingNormal, LanguageJapanese)
+	if result.Price != 5.00 {
+		t.Errorf("Expected base price 5.00, got %f", result.Price)
+	}
+	if result.PriceLanguage != LanguageEnglish {
+		t.Errorf("Expected PriceLanguage English (base), got %s", result.PriceLanguage)
+	}
+	if !result.IsFallback {
+		t.Error("Expected IsFallback=true when using base price for Japanese card")
+	}
+
+	// Foil variant should use foil base price
+	result = cardWithBaseOnly.GetPriceWithSource(PriceConditionNM, PrintingFoil, LanguageJapanese)
+	if result.Price != 15.00 {
+		t.Errorf("Expected foil base price 15.00, got %f", result.Price)
+	}
+}
+
 func TestNormalizeLanguage(t *testing.T) {
 	tests := []struct {
 		in   string

@@ -67,13 +67,15 @@ type CollectionUpdateResponse struct {
 
 // CollectionVariant summarizes items with same printing+condition+language
 type CollectionVariant struct {
-	Printing   PrintingType `json:"printing"`
-	Condition  Condition    `json:"condition"`
-	Language   CardLanguage `json:"language"`
-	Quantity   int          `json:"quantity"`
-	Value      float64      `json:"value"`
-	HasScans   bool         `json:"has_scans"`
-	ScannedQty int          `json:"scanned_qty"`
+	Printing      PrintingType `json:"printing"`
+	Condition     Condition    `json:"condition"`
+	Language      CardLanguage `json:"language"`
+	Quantity      int          `json:"quantity"`
+	Value         float64      `json:"value"`
+	HasScans      bool         `json:"has_scans"`
+	ScannedQty    int          `json:"scanned_qty"`
+	PriceLanguage CardLanguage `json:"price_language,omitempty"` // Language of price used (may differ if fallback)
+	PriceFallback bool         `json:"price_fallback,omitempty"` // True if price is from different language than card
 }
 
 // GroupedCollectionItem represents a card with all its collection entries grouped

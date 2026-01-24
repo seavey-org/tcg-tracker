@@ -226,6 +226,10 @@ Optional admin key authentication protects collection modification endpoints:
   4. If non-English language has no price, fall back to English prices
   5. Base prices (`PriceFoilUSD` for foil variants, `PriceUSD` otherwise)
   6. Final cross-fallback if primary base price is zero
+- `Card.GetPriceWithSource()` returns price with metadata:
+  - `PriceLanguage`: Which language's price was actually used
+  - `IsFallback`: True if price is from a different language than requested
+  - Collection variants include `price_language` and `price_fallback` fields to indicate when Japanese cards are priced using English market data
 - Viewing card prices (`GET /cards/:id/prices`) auto-queues refresh if stale
 
 ### Price Worker
