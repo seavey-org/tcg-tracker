@@ -1,0 +1,86 @@
+[
+  {
+    "id": "jp-leaders-stadium",
+    "name": "Leaders' Stadium",
+    "series": "Pokemon Japan",
+    "releaseDate": "1998-10-23",
+    "total": 97
+  },
+  {
+    "id": "jp-gym-challenge",
+    "name": "Gym Challenge",
+    "series": "Pokemon Japan",
+    "releaseDate": "1998-11-20",
+    "total": 2
+  },
+  {
+    "id": "jp-city-gym-decks",
+    "name": "City Gym Decks",
+    "series": "Pokemon Japan",
+    "releaseDate": "1998-10-23",
+    "total": 123
+  },
+  {
+    "id": "jp-rocket-gang",
+    "name": "Rocket Gang",
+    "series": "Pokemon Japan",
+    "releaseDate": "1997-11-21",
+    "total": 65
+  },
+  {
+    "id": "jp-rocket-gang-strikes-back",
+    "name": "Rocket Gang Strikes Back",
+    "series": "Pokemon Japan",
+    "releaseDate": "2000-11-10",
+    "total": 41
+  },
+  {
+    "id": "jp-vending-machine-cards-series-1-blue",
+    "name": "Vending Machine Cards Series 1 (Blue)",
+    "series": "Pokemon Japan",
+    "releaseDate": "1998-04-01",
+    "total": 36
+  },
+  {
+    "id": "jp-vending-machine-cards-series-2-red",
+    "name": "Vending Machine Cards Series 2 (Red)",
+    "series": "Pokemon Japan",
+    "releaseDate": "1998-06-01",
+    "total": 36
+  },
+  {
+    "id": "jp-vending-machine-cards-series-3-green",
+    "name": "Vending Machine Cards Series 3 (Green)",
+    "series": "Pokemon Japan",
+    "releaseDate": "1998-09-01",
+    "total": 52
+  },
+  {
+    "id": "jp-base-expansion-pack",
+    "name": "Base Expansion Pack",
+    "series": "Pokemon Japan",
+    "releaseDate": "1996-10-20",
+    "total": 109
+  },
+  {
+    "id": "jp-pokemon-jungle",
+    "name": "Pokemon Jungle",
+    "series": "Pokemon Japan",
+    "releaseDate": "1997-03-05",
+    "total": 48
+  },
+  {
+    "id": "jp-mystery-of-the-fossils",
+    "name": "Mystery of the Fossils",
+    "series": "Pokemon Japan",
+    "releaseDate": "1997-06-21",
+    "total": 48
+  },
+  {
+    "id": "jp-corocoro-promotional-cards",
+    "name": "CoroCoro Promotional Cards",
+    "series": "Pokemon Japan",
+    "releaseDate": "1996-10-20",
+    "total": 40
+  }
+]

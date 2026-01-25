@@ -1,0 +1,26 @@
+[
+  {
+    "id": "jp-gym-challenge-victory-medal-(2006)",
+    "name": "Victory Medal (2006)",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/617331_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/617331_400w.jpg"
+    },
+    "tcgplayerId": "617331"
+  },
+  {
+    "id": "jp-gym-challenge-basic-psychic-energy-(2006)",
+    "name": "Basic Psychic Energy (2006)",
+    "supertype": "Energy",
+    "number": "N/A",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/617325_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/617325_400w.jpg"
+    },
+    "tcgplayerId": "617325"
+  }
+]

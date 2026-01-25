@@ -1,0 +1,578 @@
+[
+  {
+    "id": "jp-pokemon-jungle-snorlax",
+    "name": "Snorlax",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/576647_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/576647_400w.jpg"
+    },
+    "tcgplayerId": "576647"
+  },
+  {
+    "id": "jp-pokemon-jungle-jolteon",
+    "name": "Jolteon",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/576623_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/576623_400w.jpg"
+    },
+    "tcgplayerId": "576623"
+  },
+  {
+    "id": "jp-pokemon-jungle-flareon",
+    "name": "Flareon",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/576619_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/576619_400w.jpg"
+    },
+    "tcgplayerId": "576619"
+  },
+  {
+    "id": "jp-pokemon-jungle-vaporeon",
+    "name": "Vaporeon",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/576650_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/576650_400w.jpg"
+    },
+    "tcgplayerId": "576650"
+  },
+  {
+    "id": "jp-pokemon-jungle-scyther",
+    "name": "Scyther",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/576645_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/576645_400w.jpg"
+    },
+    "tcgplayerId": "576645"
+  },
+  {
+    "id": "jp-pokemon-jungle-pidgeot",
+    "name": "Pidgeot",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/576637_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/576637_400w.jpg"
+    },
+    "tcgplayerId": "576637"
+  },
+  {
+    "id": "jp-pokemon-jungle-wigglytuff",
+    "name": "Wigglytuff",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/576656_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/576656_400w.jpg"
+    },
+    "tcgplayerId": "576656"
+  },
+  {
+    "id": "jp-pokemon-jungle-mr.-mime",
+    "name": "Mr. Mime",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/576629_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/576629_400w.jpg"
+    },
+    "tcgplayerId": "576629"
+  },
+  {
+    "id": "jp-pokemon-jungle-nidoqueen",
+    "name": "Nidoqueen",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/576630_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/576630_400w.jpg"
+    },
+    "tcgplayerId": "576630"
+  },
+  {
+    "id": "jp-pokemon-jungle-clefable",
+    "name": "Clefable",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/576612_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/576612_400w.jpg"
+    },
+    "tcgplayerId": "576612"
+  },
+  {
+    "id": "jp-pokemon-jungle-pinsir",
+    "name": "Pinsir",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/576639_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/576639_400w.jpg"
+    },
+    "tcgplayerId": "576639"
+  },
+  {
+    "id": "jp-pokemon-jungle-kangaskhan",
+    "name": "Kangaskhan",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/576624_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/576624_400w.jpg"
+    },
+    "tcgplayerId": "576624"
+  },
+  {
+    "id": "jp-pokemon-jungle-vileplume",
+    "name": "Vileplume",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/576654_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/576654_400w.jpg"
+    },
+    "tcgplayerId": "576654"
+  },
+  {
+    "id": "jp-pokemon-jungle-electrode",
+    "name": "Electrode",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/576616_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/576616_400w.jpg"
+    },
+    "tcgplayerId": "576616"
+  },
+  {
+    "id": "jp-pokemon-jungle-venomoth",
+    "name": "Venomoth",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/576651_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/576651_400w.jpg"
+    },
+    "tcgplayerId": "576651"
+  },
+  {
+    "id": "jp-pokemon-jungle-victreebel",
+    "name": "Victreebel",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/576653_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/576653_400w.jpg"
+    },
+    "tcgplayerId": "576653"
+  },
+  {
+    "id": "jp-pokemon-jungle-pikachu",
+    "name": "Pikachu",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/576638_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/576638_400w.jpg"
+    },
+    "tcgplayerId": "576638"
+  },
+  {
+    "id": "jp-pokemon-jungle-eevee",
+    "name": "Eevee",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/576615_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/576615_400w.jpg"
+    },
+    "tcgplayerId": "576615"
+  },
+  {
+    "id": "jp-pokemon-jungle-butterfree",
+    "name": "Butterfree",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/576611_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/576611_400w.jpg"
+    },
+    "tcgplayerId": "576611"
+  },
+  {
+    "id": "jp-pokemon-jungle-nidorina",
+    "name": "Nidorina",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/576632_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/576632_400w.jpg"
+    },
+    "tcgplayerId": "576632"
+  },
+  {
+    "id": "jp-pokemon-jungle-fearow",
+    "name": "Fearow",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/576618_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/576618_400w.jpg"
+    },
+    "tcgplayerId": "576618"
+  },
+  {
+    "id": "jp-pokemon-jungle-tauros",
+    "name": "Tauros",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/576649_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/576649_400w.jpg"
+    },
+    "tcgplayerId": "576649"
+  },
+  {
+    "id": "jp-pokemon-jungle-exeggutor",
+    "name": "Exeggutor",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/616306_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/616306_400w.jpg"
+    },
+    "tcgplayerId": "616306"
+  },
+  {
+    "id": "jp-pokemon-jungle-rapidash",
+    "name": "Rapidash",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/576642_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/576642_400w.jpg"
+    },
+    "tcgplayerId": "576642"
+  },
+  {
+    "id": "jp-pokemon-jungle-persian",
+    "name": "Persian",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/576636_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/576636_400w.jpg"
+    },
+    "tcgplayerId": "576636"
+  },
+  {
+    "id": "jp-pokemon-jungle-primeape",
+    "name": "Primeape",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/576641_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/576641_400w.jpg"
+    },
+    "tcgplayerId": "576641"
+  },
+  {
+    "id": "jp-pokemon-jungle-cubone",
+    "name": "Cubone",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/576613_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/576613_400w.jpg"
+    },
+    "tcgplayerId": "576613"
+  },
+  {
+    "id": "jp-pokemon-jungle-weepinbell",
+    "name": "Weepinbell",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/576655_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/576655_400w.jpg"
+    },
+    "tcgplayerId": "576655"
+  },
+  {
+    "id": "jp-pokemon-jungle-seaking",
+    "name": "Seaking",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/576646_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/576646_400w.jpg"
+    },
+    "tcgplayerId": "576646"
+  },
+  {
+    "id": "jp-pokemon-jungle-meowth",
+    "name": "Meowth",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/576628_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/576628_400w.jpg"
+    },
+    "tcgplayerId": "576628"
+  },
+  {
+    "id": "jp-pokemon-jungle-lickitung",
+    "name": "Lickitung",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/576625_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/576625_400w.jpg"
+    },
+    "tcgplayerId": "576625"
+  },
+  {
+    "id": "jp-pokemon-jungle-marowak",
+    "name": "Marowak",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/576627_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/576627_400w.jpg"
+    },
+    "tcgplayerId": "576627"
+  },
+  {
+    "id": "jp-pokemon-jungle-parasect",
+    "name": "Parasect",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/576635_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/576635_400w.jpg"
+    },
+    "tcgplayerId": "576635"
+  },
+  {
+    "id": "jp-pokemon-jungle-rhydon",
+    "name": "Rhydon",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/576643_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/576643_400w.jpg"
+    },
+    "tcgplayerId": "576643"
+  },
+  {
+    "id": "jp-pokemon-jungle-dodrio",
+    "name": "Dodrio",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/576614_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/576614_400w.jpg"
+    },
+    "tcgplayerId": "576614"
+  },
+  {
+    "id": "jp-pokemon-jungle-gloom",
+    "name": "Gloom",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/576620_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/576620_400w.jpg"
+    },
+    "tcgplayerId": "576620"
+  },
+  {
+    "id": "jp-pokemon-jungle-rhyhorn",
+    "name": "Rhyhorn",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/576644_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/576644_400w.jpg"
+    },
+    "tcgplayerId": "576644"
+  },
+  {
+    "id": "jp-pokemon-jungle-jigglypuff",
+    "name": "Jigglypuff",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/576622_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/576622_400w.jpg"
+    },
+    "tcgplayerId": "576622"
+  },
+  {
+    "id": "jp-pokemon-jungle-venonat",
+    "name": "Venonat",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/576652_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/576652_400w.jpg"
+    },
+    "tcgplayerId": "576652"
+  },
+  {
+    "id": "jp-pokemon-jungle-oddish",
+    "name": "Oddish",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/576633_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/576633_400w.jpg"
+    },
+    "tcgplayerId": "576633"
+  },
+  {
+    "id": "jp-pokemon-jungle-bellsprout",
+    "name": "Bellsprout",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/576610_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/576610_400w.jpg"
+    },
+    "tcgplayerId": "576610"
+  },
+  {
+    "id": "jp-pokemon-jungle-exeggcute",
+    "name": "Exeggcute",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/576617_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/576617_400w.jpg"
+    },
+    "tcgplayerId": "576617"
+  },
+  {
+    "id": "jp-pokemon-jungle-goldeen",
+    "name": "Goldeen",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/576621_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/576621_400w.jpg"
+    },
+    "tcgplayerId": "576621"
+  },
+  {
+    "id": "jp-pokemon-jungle-mankey",
+    "name": "Mankey",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/576626_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/576626_400w.jpg"
+    },
+    "tcgplayerId": "576626"
+  },
+  {
+    "id": "jp-pokemon-jungle-poke-ball",
+    "name": "Poke Ball",
+    "supertype": "Trainer",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/576640_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/576640_400w.jpg"
+    },
+    "tcgplayerId": "576640"
+  },
+  {
+    "id": "jp-pokemon-jungle-spearow",
+    "name": "Spearow",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/576648_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/576648_400w.jpg"
+    },
+    "tcgplayerId": "576648"
+  },
+  {
+    "id": "jp-pokemon-jungle-nidoran-f",
+    "name": "Nidoran F",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/576631_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/576631_400w.jpg"
+    },
+    "tcgplayerId": "576631"
+  },
+  {
+    "id": "jp-pokemon-jungle-paras",
+    "name": "Paras",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/576634_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/576634_400w.jpg"
+    },
+    "tcgplayerId": "576634"
+  }
+]

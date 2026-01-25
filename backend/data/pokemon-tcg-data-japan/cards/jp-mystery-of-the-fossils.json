@@ -1,0 +1,578 @@
+[
+  {
+    "id": "jp-mystery-of-the-fossils-gengar",
+    "name": "Gengar",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575683_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575683_400w.jpg"
+    },
+    "tcgplayerId": "575683"
+  },
+  {
+    "id": "jp-mystery-of-the-fossils-dragonite",
+    "name": "Dragonite",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575682_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575682_400w.jpg"
+    },
+    "tcgplayerId": "575682"
+  },
+  {
+    "id": "jp-mystery-of-the-fossils-mew",
+    "name": "Mew",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575690_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575690_400w.jpg"
+    },
+    "tcgplayerId": "575690"
+  },
+  {
+    "id": "jp-mystery-of-the-fossils-moltres",
+    "name": "Moltres",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575691_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575691_400w.jpg"
+    },
+    "tcgplayerId": "575691"
+  },
+  {
+    "id": "jp-mystery-of-the-fossils-articuno",
+    "name": "Articuno",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575680_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575680_400w.jpg"
+    },
+    "tcgplayerId": "575680"
+  },
+  {
+    "id": "jp-mystery-of-the-fossils-zapdos",
+    "name": "Zapdos",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575694_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575694_400w.jpg"
+    },
+    "tcgplayerId": "575694"
+  },
+  {
+    "id": "jp-mystery-of-the-fossils-haunter",
+    "name": "Haunter",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575684_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575684_400w.jpg"
+    },
+    "tcgplayerId": "575684"
+  },
+  {
+    "id": "jp-mystery-of-the-fossils-aerodactyl",
+    "name": "Aerodactyl",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575679_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575679_400w.jpg"
+    },
+    "tcgplayerId": "575679"
+  },
+  {
+    "id": "jp-mystery-of-the-fossils-raichu",
+    "name": "Raichu",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575693_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575693_400w.jpg"
+    },
+    "tcgplayerId": "575693"
+  },
+  {
+    "id": "jp-mystery-of-the-fossils-lapras",
+    "name": "Lapras",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575688_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575688_400w.jpg"
+    },
+    "tcgplayerId": "575688"
+  },
+  {
+    "id": "jp-mystery-of-the-fossils-ditto",
+    "name": "Ditto",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575681_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575681_400w.jpg"
+    },
+    "tcgplayerId": "575681"
+  },
+  {
+    "id": "jp-mystery-of-the-fossils-kabutops",
+    "name": "Kabutops",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575687_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575687_400w.jpg"
+    },
+    "tcgplayerId": "575687"
+  },
+  {
+    "id": "jp-mystery-of-the-fossils-hitmonlee",
+    "name": "Hitmonlee",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575685_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575685_400w.jpg"
+    },
+    "tcgplayerId": "575685"
+  },
+  {
+    "id": "jp-mystery-of-the-fossils-hypno",
+    "name": "Hypno",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575686_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575686_400w.jpg"
+    },
+    "tcgplayerId": "575686"
+  },
+  {
+    "id": "jp-mystery-of-the-fossils-magneton",
+    "name": "Magneton",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575689_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575689_400w.jpg"
+    },
+    "tcgplayerId": "575689"
+  },
+  {
+    "id": "jp-mystery-of-the-fossils-muk",
+    "name": "Muk",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575692_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575692_400w.jpg"
+    },
+    "tcgplayerId": "575692"
+  },
+  {
+    "id": "jp-mystery-of-the-fossils-slowbro",
+    "name": "Slowbro",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575709_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575709_400w.jpg"
+    },
+    "tcgplayerId": "575709"
+  },
+  {
+    "id": "jp-mystery-of-the-fossils-golduck",
+    "name": "Golduck",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575699_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575699_400w.jpg"
+    },
+    "tcgplayerId": "575699"
+  },
+  {
+    "id": "jp-mystery-of-the-fossils-cloyster",
+    "name": "Cloyster",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575696_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575696_400w.jpg"
+    },
+    "tcgplayerId": "575696"
+  },
+  {
+    "id": "jp-mystery-of-the-fossils-sandslash",
+    "name": "Sandslash",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575707_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575707_400w.jpg"
+    },
+    "tcgplayerId": "575707"
+  },
+  {
+    "id": "jp-mystery-of-the-fossils-magmar",
+    "name": "Magmar",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575703_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575703_400w.jpg"
+    },
+    "tcgplayerId": "575703"
+  },
+  {
+    "id": "jp-mystery-of-the-fossils-mr.-fuji",
+    "name": "Mr. Fuji",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575704_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575704_400w.jpg"
+    },
+    "tcgplayerId": "575704"
+  },
+  {
+    "id": "jp-mystery-of-the-fossils-seadra",
+    "name": "Seadra",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575708_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575708_400w.jpg"
+    },
+    "tcgplayerId": "575708"
+  },
+  {
+    "id": "jp-mystery-of-the-fossils-gastly",
+    "name": "Gastly",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575697_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575697_400w.jpg"
+    },
+    "tcgplayerId": "575697"
+  },
+  {
+    "id": "jp-mystery-of-the-fossils-arbok",
+    "name": "Arbok",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575695_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575695_400w.jpg"
+    },
+    "tcgplayerId": "575695"
+  },
+  {
+    "id": "jp-mystery-of-the-fossils-omastar",
+    "name": "Omastar",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575705_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575705_400w.jpg"
+    },
+    "tcgplayerId": "575705"
+  },
+  {
+    "id": "jp-mystery-of-the-fossils-golem",
+    "name": "Golem",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575700_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575700_400w.jpg"
+    },
+    "tcgplayerId": "575700"
+  },
+  {
+    "id": "jp-mystery-of-the-fossils-kingler",
+    "name": "Kingler",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575702_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575702_400w.jpg"
+    },
+    "tcgplayerId": "575702"
+  },
+  {
+    "id": "jp-mystery-of-the-fossils-weezing",
+    "name": "Weezing",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575711_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575711_400w.jpg"
+    },
+    "tcgplayerId": "575711"
+  },
+  {
+    "id": "jp-mystery-of-the-fossils-omanyte",
+    "name": "Omanyte",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575672_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575672_400w.jpg"
+    },
+    "tcgplayerId": "575672"
+  },
+  {
+    "id": "jp-mystery-of-the-fossils-geodude",
+    "name": "Geodude",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575666_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575666_400w.jpg"
+    },
+    "tcgplayerId": "575666"
+  },
+  {
+    "id": "jp-mystery-of-the-fossils-graveler",
+    "name": "Graveler",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575701_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575701_400w.jpg"
+    },
+    "tcgplayerId": "575701"
+  },
+  {
+    "id": "jp-mystery-of-the-fossils-kabuto",
+    "name": "Kabuto",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575669_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575669_400w.jpg"
+    },
+    "tcgplayerId": "575669"
+  },
+  {
+    "id": "jp-mystery-of-the-fossils-grimer",
+    "name": "Grimer",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575667_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575667_400w.jpg"
+    },
+    "tcgplayerId": "575667"
+  },
+  {
+    "id": "jp-mystery-of-the-fossils-horsea",
+    "name": "Horsea",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575668_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575668_400w.jpg"
+    },
+    "tcgplayerId": "575668"
+  },
+  {
+    "id": "jp-mystery-of-the-fossils-psyduck",
+    "name": "Psyduck",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575673_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575673_400w.jpg"
+    },
+    "tcgplayerId": "575673"
+  },
+  {
+    "id": "jp-mystery-of-the-fossils-golbat",
+    "name": "Golbat",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575698_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575698_400w.jpg"
+    },
+    "tcgplayerId": "575698"
+  },
+  {
+    "id": "jp-mystery-of-the-fossils-tentacruel",
+    "name": "Tentacruel",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575710_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575710_400w.jpg"
+    },
+    "tcgplayerId": "575710"
+  },
+  {
+    "id": "jp-mystery-of-the-fossils-slowpoke",
+    "name": "Slowpoke",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575676_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575676_400w.jpg"
+    },
+    "tcgplayerId": "575676"
+  },
+  {
+    "id": "jp-mystery-of-the-fossils-ekans",
+    "name": "Ekans",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575663_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575663_400w.jpg"
+    },
+    "tcgplayerId": "575663"
+  },
+  {
+    "id": "jp-mystery-of-the-fossils-energy-search",
+    "name": "Energy Search",
+    "supertype": "Energy",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575664_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575664_400w.jpg"
+    },
+    "tcgplayerId": "575664"
+  },
+  {
+    "id": "jp-mystery-of-the-fossils-shellder",
+    "name": "Shellder",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575675_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575675_400w.jpg"
+    },
+    "tcgplayerId": "575675"
+  },
+  {
+    "id": "jp-mystery-of-the-fossils-mysterious-fossil",
+    "name": "Mysterious Fossil",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575671_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575671_400w.jpg"
+    },
+    "tcgplayerId": "575671"
+  },
+  {
+    "id": "jp-mystery-of-the-fossils-gambler",
+    "name": "Gambler",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575665_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575665_400w.jpg"
+    },
+    "tcgplayerId": "575665"
+  },
+  {
+    "id": "jp-mystery-of-the-fossils-tentacool",
+    "name": "Tentacool",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575677_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575677_400w.jpg"
+    },
+    "tcgplayerId": "575677"
+  },
+  {
+    "id": "jp-mystery-of-the-fossils-krabby",
+    "name": "Krabby",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575670_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575670_400w.jpg"
+    },
+    "tcgplayerId": "575670"
+  },
+  {
+    "id": "jp-mystery-of-the-fossils-zubat",
+    "name": "Zubat",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575678_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575678_400w.jpg"
+    },
+    "tcgplayerId": "575678"
+  },
+  {
+    "id": "jp-mystery-of-the-fossils-recycle",
+    "name": "Recycle",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575674_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575674_400w.jpg"
+    },
+    "tcgplayerId": "575674"
+  }
+]

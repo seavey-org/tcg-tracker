@@ -1,0 +1,434 @@
+[
+  {
+    "id": "jp-vending-machine-cards-series-2-red-ditto",
+    "name": "Ditto",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/617507_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/617507_400w.jpg"
+    },
+    "tcgplayerId": "617507"
+  },
+  {
+    "id": "jp-vending-machine-cards-series-2-red-moltres",
+    "name": "Moltres",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/617495_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/617495_400w.jpg"
+    },
+    "tcgplayerId": "617495"
+  },
+  {
+    "id": "jp-vending-machine-cards-series-2-red-articuno",
+    "name": "Articuno",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/617494_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/617494_400w.jpg"
+    },
+    "tcgplayerId": "617494"
+  },
+  {
+    "id": "jp-vending-machine-cards-series-2-red-kabuto",
+    "name": "Kabuto",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/617505_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/617505_400w.jpg"
+    },
+    "tcgplayerId": "617505"
+  },
+  {
+    "id": "jp-vending-machine-cards-series-2-red-zapdos",
+    "name": "Zapdos",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/617498_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/617498_400w.jpg"
+    },
+    "tcgplayerId": "617498"
+  },
+  {
+    "id": "jp-vending-machine-cards-series-2-red-aerodactyl",
+    "name": "Aerodactyl",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/617506_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/617506_400w.jpg"
+    },
+    "tcgplayerId": "617506"
+  },
+  {
+    "id": "jp-vending-machine-cards-series-2-red-raichu",
+    "name": "Raichu",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/617496_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/617496_400w.jpg"
+    },
+    "tcgplayerId": "617496"
+  },
+  {
+    "id": "jp-vending-machine-cards-series-2-red-hitmonchan",
+    "name": "Hitmonchan",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/617504_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/617504_400w.jpg"
+    },
+    "tcgplayerId": "617504"
+  },
+  {
+    "id": "jp-vending-machine-cards-series-2-red-voltorb",
+    "name": "Voltorb",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/617482_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/617482_400w.jpg"
+    },
+    "tcgplayerId": "617482"
+  },
+  {
+    "id": "jp-vending-machine-cards-series-2-red-koffing",
+    "name": "Koffing",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/617479_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/617479_400w.jpg"
+    },
+    "tcgplayerId": "617479"
+  },
+  {
+    "id": "jp-vending-machine-cards-series-2-red-onix",
+    "name": "Onix",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/617501_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/617501_400w.jpg"
+    },
+    "tcgplayerId": "617501"
+  },
+  {
+    "id": "jp-vending-machine-cards-series-2-red-flash",
+    "name": "Flash",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/617510_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/617510_400w.jpg"
+    },
+    "tcgplayerId": "617510"
+  },
+  {
+    "id": "jp-vending-machine-cards-series-2-red-magneton",
+    "name": "Magneton",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/617497_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/617497_400w.jpg"
+    },
+    "tcgplayerId": "617497"
+  },
+  {
+    "id": "jp-vending-machine-cards-series-2-red-marowak",
+    "name": "Marowak",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/617502_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/617502_400w.jpg"
+    },
+    "tcgplayerId": "617502"
+  },
+  {
+    "id": "jp-vending-machine-cards-series-2-red-hitmonlee",
+    "name": "Hitmonlee",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/617503_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/617503_400w.jpg"
+    },
+    "tcgplayerId": "617503"
+  },
+  {
+    "id": "jp-vending-machine-cards-series-2-red-omanyte",
+    "name": "Omanyte",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/617509_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/617509_400w.jpg"
+    },
+    "tcgplayerId": "617509"
+  },
+  {
+    "id": "jp-vending-machine-cards-series-2-red-jynx",
+    "name": "Jynx",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/617499_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/617499_400w.jpg"
+    },
+    "tcgplayerId": "617499"
+  },
+  {
+    "id": "jp-vending-machine-cards-series-2-red-machop",
+    "name": "Machop",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/617484_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/617484_400w.jpg"
+    },
+    "tcgplayerId": "617484"
+  },
+  {
+    "id": "jp-vending-machine-cards-series-2-red-dewgong",
+    "name": "Dewgong",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/617508_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/617508_400w.jpg"
+    },
+    "tcgplayerId": "617508"
+  },
+  {
+    "id": "jp-vending-machine-cards-series-2-red-lapras",
+    "name": "Lapras",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/617491_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/617491_400w.jpg"
+    },
+    "tcgplayerId": "617491"
+  },
+  {
+    "id": "jp-vending-machine-cards-series-2-red-machoke",
+    "name": "Machoke",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/617485_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/617485_400w.jpg"
+    },
+    "tcgplayerId": "617485"
+  },
+  {
+    "id": "jp-vending-machine-cards-series-2-red-guard-spec.",
+    "name": "Guard Spec.",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/617492_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/617492_400w.jpg"
+    },
+    "tcgplayerId": "617492"
+  },
+  {
+    "id": "jp-vending-machine-cards-series-2-red-max-revive",
+    "name": "Max Revive",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/617475_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/617475_400w.jpg"
+    },
+    "tcgplayerId": "617475"
+  },
+  {
+    "id": "jp-vending-machine-cards-series-2-red-graveler",
+    "name": "Graveler",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/617500_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/617500_400w.jpg"
+    },
+    "tcgplayerId": "617500"
+  },
+  {
+    "id": "jp-vending-machine-cards-series-2-red-fearow",
+    "name": "Fearow",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/617487_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/617487_400w.jpg"
+    },
+    "tcgplayerId": "617487"
+  },
+  {
+    "id": "jp-vending-machine-cards-series-2-red-shellder",
+    "name": "Shellder",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/617489_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/617489_400w.jpg"
+    },
+    "tcgplayerId": "617489"
+  },
+  {
+    "id": "jp-vending-machine-cards-series-2-red-krabby",
+    "name": "Krabby",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/617490_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/617490_400w.jpg"
+    },
+    "tcgplayerId": "617490"
+  },
+  {
+    "id": "jp-vending-machine-cards-series-2-red-sandshrew",
+    "name": "Sandshrew",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/617483_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/617483_400w.jpg"
+    },
+    "tcgplayerId": "617483"
+  },
+  {
+    "id": "jp-vending-machine-cards-series-2-red-master-ball",
+    "name": "Master Ball",
+    "supertype": "Trainer",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/617493_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/617493_400w.jpg"
+    },
+    "tcgplayerId": "617493"
+  },
+  {
+    "id": "jp-vending-machine-cards-series-2-red-magnemite",
+    "name": "Magnemite",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/617481_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/617481_400w.jpg"
+    },
+    "tcgplayerId": "617481"
+  },
+  {
+    "id": "jp-vending-machine-cards-series-2-red-electabuzz",
+    "name": "Electabuzz",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/617476_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/617476_400w.jpg"
+    },
+    "tcgplayerId": "617476"
+  },
+  {
+    "id": "jp-vending-machine-cards-series-2-red-tangela",
+    "name": "Tangela",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/617480_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/617480_400w.jpg"
+    },
+    "tcgplayerId": "617480"
+  },
+  {
+    "id": "jp-vending-machine-cards-series-2-red-venomoth",
+    "name": "Venomoth",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/617477_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/617477_400w.jpg"
+    },
+    "tcgplayerId": "617477"
+  },
+  {
+    "id": "jp-vending-machine-cards-series-2-red-spearow",
+    "name": "Spearow",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/617486_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/617486_400w.jpg"
+    },
+    "tcgplayerId": "617486"
+  },
+  {
+    "id": "jp-vending-machine-cards-series-2-red-seel",
+    "name": "Seel",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/617488_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/617488_400w.jpg"
+    },
+    "tcgplayerId": "617488"
+  },
+  {
+    "id": "jp-vending-machine-cards-series-2-red-grimer",
+    "name": "Grimer",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/617478_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/617478_400w.jpg"
+    },
+    "tcgplayerId": "617478"
+  }
+]

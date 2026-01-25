@@ -54,9 +54,10 @@ coverage/
 tmp/
 temp/
 
-# Pokemon TCG data (downloaded automatically)
+# Pokemon TCG data (English - downloaded automatically on first run)
 backend/data/pokemon-tcg-data-master/
 backend/data/pokemon-tcg-data.zip
+# Note: backend/data/pokemon-tcg-data-japan/ is checked in (fetched via JustTCG API)
 
 # Test images (downloaded during testing)
 backend/internal/services/testdata/images/
@@ -96,8 +97,13 @@ identifier/validate_*.py
 identifier/identifier/setid/
 identifier/setid/
 
-# Data directories (generated/downloaded data)
-data/
+# Data directories at root level (development artifacts)
+/data/
+
+# Scanned card images (user-generated)
+backend/data/scanned_images/
+
+# Data files (generated/downloaded)
 *.faiss
 *.pkl
 

@@ -1,0 +1,482 @@
+[
+  {
+    "id": "jp-corocoro-promotional-cards-shining-mew",
+    "name": "Shining Mew",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/617261_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/617261_400w.jpg"
+    },
+    "tcgplayerId": "617261"
+  },
+  {
+    "id": "jp-corocoro-promotional-cards-mew",
+    "name": "Mew",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/617241_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/617241_400w.jpg"
+    },
+    "tcgplayerId": "617241"
+  },
+  {
+    "id": "jp-corocoro-promotional-cards-pikachu,-jigglypuff,-and-clefairy-(jumbo)",
+    "name": "Pikachu, Jigglypuff, and Clefairy (Jumbo)",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Promo",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/617249_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/617249_400w.jpg"
+    },
+    "tcgplayerId": "617249"
+  },
+  {
+    "id": "jp-corocoro-promotional-cards-pokemon-valley-(jumbo)",
+    "name": "Pokemon Valley (Jumbo)",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Promo",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/617252_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/617252_400w.jpg"
+    },
+    "tcgplayerId": "617252"
+  },
+  {
+    "id": "jp-corocoro-promotional-cards-hama-chans-slowking",
+    "name": "Hama-chan's Slowking",
+    "supertype": "Trainer",
+    "number": "N/A",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/617229_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/617229_400w.jpg"
+    },
+    "tcgplayerId": "617229"
+  },
+  {
+    "id": "jp-corocoro-promotional-cards-unown",
+    "name": "Unown",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/617259_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/617259_400w.jpg"
+    },
+    "tcgplayerId": "617259"
+  },
+  {
+    "id": "jp-corocoro-promotional-cards-wooper",
+    "name": "Wooper",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/617260_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/617260_400w.jpg"
+    },
+    "tcgplayerId": "617260"
+  },
+  {
+    "id": "jp-corocoro-promotional-cards-giovannis-nidoking",
+    "name": "Giovanni's Nidoking",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/617227_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/617227_400w.jpg"
+    },
+    "tcgplayerId": "617227"
+  },
+  {
+    "id": "jp-corocoro-promotional-cards-mewtwo-strikes-back-(jumbo)",
+    "name": "Mewtwo Strikes Back (Jumbo)",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Promo",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/617243_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/617243_400w.jpg"
+    },
+    "tcgplayerId": "617243"
+  },
+  {
+    "id": "jp-corocoro-promotional-cards-cubone",
+    "name": "Cubone",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/617222_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/617222_400w.jpg"
+    },
+    "tcgplayerId": "617222"
+  },
+  {
+    "id": "jp-corocoro-promotional-cards-erikas-bulbasaur",
+    "name": "Erika's Bulbasaur",
+    "supertype": "Trainer",
+    "number": "N/A",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/617223_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/617223_400w.jpg"
+    },
+    "tcgplayerId": "617223"
+  },
+  {
+    "id": "jp-corocoro-promotional-cards-corrected-illustrator-pikachu",
+    "name": "Corrected Illustrator Pikachu",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/617220_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/617220_400w.jpg"
+    },
+    "tcgplayerId": "617220"
+  },
+  {
+    "id": "jp-corocoro-promotional-cards-imakuni?",
+    "name": "Imakuni?",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/617230_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/617230_400w.jpg"
+    },
+    "tcgplayerId": "617230"
+  },
+  {
+    "id": "jp-corocoro-promotional-cards-scizor",
+    "name": "Scizor",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/617255_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/617255_400w.jpg"
+    },
+    "tcgplayerId": "617255"
+  },
+  {
+    "id": "jp-corocoro-promotional-cards-pikachu-(1996)",
+    "name": "Pikachu (1996)",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/617246_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/617246_400w.jpg"
+    },
+    "tcgplayerId": "617246"
+  },
+  {
+    "id": "jp-corocoro-promotional-cards-lt.-surges-jolteon",
+    "name": "Lt. Surge's Jolteon",
+    "supertype": "Trainer",
+    "number": "N/A",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/617236_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/617236_400w.jpg"
+    },
+    "tcgplayerId": "617236"
+  },
+  {
+    "id": "jp-corocoro-promotional-cards-jigglypuff",
+    "name": "Jigglypuff",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/617231_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/617231_400w.jpg"
+    },
+    "tcgplayerId": "617231"
+  },
+  {
+    "id": "jp-corocoro-promotional-cards-lawrence-iii-(jumbo)",
+    "name": "Lawrence III (Jumbo)",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Promo",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/617234_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/617234_400w.jpg"
+    },
+    "tcgplayerId": "617234"
+  },
+  {
+    "id": "jp-corocoro-promotional-cards-cleffa",
+    "name": "Cleffa",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/617218_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/617218_400w.jpg"
+    },
+    "tcgplayerId": "617218"
+  },
+  {
+    "id": "jp-corocoro-promotional-cards-surfing-pikachu",
+    "name": "Surfing Pikachu",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/617257_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/617257_400w.jpg"
+    },
+    "tcgplayerId": "617257"
+  },
+  {
+    "id": "jp-corocoro-promotional-cards-meowth-(1997)",
+    "name": "Meowth (1997)",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/617239_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/617239_400w.jpg"
+    },
+    "tcgplayerId": "617239"
+  },
+  {
+    "id": "jp-corocoro-promotional-cards-smoochum",
+    "name": "Smoochum",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/617256_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/617256_400w.jpg"
+    },
+    "tcgplayerId": "617256"
+  },
+  {
+    "id": "jp-corocoro-promotional-cards-articuno,-moltres,-and-zapdos-(jumbo)",
+    "name": "Articuno, Moltres, and Zapdos (Jumbo)",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Promo",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/617213_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/617213_400w.jpg"
+    },
+    "tcgplayerId": "617213"
+  },
+  {
+    "id": "jp-corocoro-promotional-cards-jynx",
+    "name": "Jynx",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/617232_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/617232_400w.jpg"
+    },
+    "tcgplayerId": "617232"
+  },
+  {
+    "id": "jp-corocoro-promotional-cards-blaines-growlithe",
+    "name": "Blaine's Growlithe",
+    "supertype": "Trainer",
+    "number": "N/A",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/617214_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/617214_400w.jpg"
+    },
+    "tcgplayerId": "617214"
+  },
+  {
+    "id": "jp-corocoro-promotional-cards-farfetchd",
+    "name": "Farfetch'd",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/617225_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/617225_400w.jpg"
+    },
+    "tcgplayerId": "617225"
+  },
+  {
+    "id": "jp-corocoro-promotional-cards-mistys-tentacool",
+    "name": "Misty's Tentacool",
+    "supertype": "Trainer",
+    "number": "N/A",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/617245_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/617245_400w.jpg"
+    },
+    "tcgplayerId": "617245"
+  },
+  {
+    "id": "jp-corocoro-promotional-cards-sabrinas-abra",
+    "name": "Sabrina's Abra",
+    "supertype": "Trainer",
+    "number": "N/A",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/617254_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/617254_400w.jpg"
+    },
+    "tcgplayerId": "617254"
+  },
+  {
+    "id": "jp-corocoro-promotional-cards-flying-pikachu",
+    "name": "Flying Pikachu",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/617226_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/617226_400w.jpg"
+    },
+    "tcgplayerId": "617226"
+  },
+  {
+    "id": "jp-corocoro-promotional-cards-mewtwo",
+    "name": "Mewtwo",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/617242_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/617242_400w.jpg"
+    },
+    "tcgplayerId": "617242"
+  },
+  {
+    "id": "jp-corocoro-promotional-cards-erikas-dratini",
+    "name": "Erika's Dratini",
+    "supertype": "Trainer",
+    "number": "N/A",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/617224_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/617224_400w.jpg"
+    },
+    "tcgplayerId": "617224"
+  },
+  {
+    "id": "jp-corocoro-promotional-cards-kogas-ninja-gym",
+    "name": "Koga's Ninja Gym",
+    "supertype": "Trainer",
+    "number": "N/A",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/617233_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/617233_400w.jpg"
+    },
+    "tcgplayerId": "617233"
+  },
+  {
+    "id": "jp-corocoro-promotional-cards-lt.-surges-electabuzz",
+    "name": "Lt. Surge's Electabuzz",
+    "supertype": "Trainer",
+    "number": "N/A",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/617235_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/617235_400w.jpg"
+    },
+    "tcgplayerId": "617235"
+  },
+  {
+    "id": "jp-corocoro-promotional-cards-brocks-onix",
+    "name": "Brock's Onix",
+    "supertype": "Trainer",
+    "number": "N/A",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/617216_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/617216_400w.jpg"
+    },
+    "tcgplayerId": "617216"
+  },
+  {
+    "id": "jp-corocoro-promotional-cards-meowth-(1999)",
+    "name": "Meowth (1999)",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/617240_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/617240_400w.jpg"
+    },
+    "tcgplayerId": "617240"
+  },
+  {
+    "id": "jp-corocoro-promotional-cards-marill",
+    "name": "Marill",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/617238_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/617238_400w.jpg"
+    },
+    "tcgplayerId": "617238"
+  },
+  {
+    "id": "jp-corocoro-promotional-cards-togepi",
+    "name": "Togepi",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/617258_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/617258_400w.jpg"
+    },
+    "tcgplayerId": "617258"
+  },
+  {
+    "id": "jp-corocoro-promotional-cards-mistys-staryu",
+    "name": "Misty's Staryu",
+    "supertype": "Trainer",
+    "number": "N/A",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/617244_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/617244_400w.jpg"
+    },
+    "tcgplayerId": "617244"
+  },
+  {
+    "id": "jp-corocoro-promotional-cards-computer-error",
+    "name": "Computer Error",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/617219_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/617219_400w.jpg"
+    },
+    "tcgplayerId": "617219"
+  },
+  {
+    "id": "jp-corocoro-promotional-cards-brocks-mankey",
+    "name": "Brock's Mankey",
+    "supertype": "Trainer",
+    "number": "N/A",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/617215_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/617215_400w.jpg"
+    },
+    "tcgplayerId": "617215"
+  }
+]

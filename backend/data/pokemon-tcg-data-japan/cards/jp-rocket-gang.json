@@ -1,0 +1,782 @@
+[
+  {
+    "id": "jp-rocket-gang-dark-charizard",
+    "name": "Dark Charizard",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575744_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575744_400w.jpg"
+    },
+    "tcgplayerId": "575744"
+  },
+  {
+    "id": "jp-rocket-gang-dark-dragonite",
+    "name": "Dark Dragonite",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575745_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575745_400w.jpg"
+    },
+    "tcgplayerId": "575745"
+  },
+  {
+    "id": "jp-rocket-gang-dark-blastoise",
+    "name": "Dark Blastoise",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575743_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575743_400w.jpg"
+    },
+    "tcgplayerId": "575743"
+  },
+  {
+    "id": "jp-rocket-gang-here-comes-team-rocket!",
+    "name": "Here Comes Team Rocket!",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Super Rare Holo",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575757_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575757_400w.jpg"
+    },
+    "tcgplayerId": "575757"
+  },
+  {
+    "id": "jp-rocket-gang-dark-gyarados",
+    "name": "Dark Gyarados",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575748_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575748_400w.jpg"
+    },
+    "tcgplayerId": "575748"
+  },
+  {
+    "id": "jp-rocket-gang-grimer",
+    "name": "Grimer",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575724_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575724_400w.jpg"
+    },
+    "tcgplayerId": "575724"
+  },
+  {
+    "id": "jp-rocket-gang-dark-alakazam",
+    "name": "Dark Alakazam",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575741_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575741_400w.jpg"
+    },
+    "tcgplayerId": "575741"
+  },
+  {
+    "id": "jp-rocket-gang-dark-machamp",
+    "name": "Dark Machamp",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575750_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575750_400w.jpg"
+    },
+    "tcgplayerId": "575750"
+  },
+  {
+    "id": "jp-rocket-gang-dark-slowbro",
+    "name": "Dark Slowbro",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575752_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575752_400w.jpg"
+    },
+    "tcgplayerId": "575752"
+  },
+  {
+    "id": "jp-rocket-gang-dark-hypno",
+    "name": "Dark Hypno",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575749_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575749_400w.jpg"
+    },
+    "tcgplayerId": "575749"
+  },
+  {
+    "id": "jp-rocket-gang-dark-golbat",
+    "name": "Dark Golbat",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575747_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575747_400w.jpg"
+    },
+    "tcgplayerId": "575747"
+  },
+  {
+    "id": "jp-rocket-gang-dark-dugtrio",
+    "name": "Dark Dugtrio",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575746_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575746_400w.jpg"
+    },
+    "tcgplayerId": "575746"
+  },
+  {
+    "id": "jp-rocket-gang-dark-magneton",
+    "name": "Dark Magneton",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575751_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575751_400w.jpg"
+    },
+    "tcgplayerId": "575751"
+  },
+  {
+    "id": "jp-rocket-gang-rockets-sneak-attack",
+    "name": "Rocket's Sneak Attack",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575756_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575756_400w.jpg"
+    },
+    "tcgplayerId": "575756"
+  },
+  {
+    "id": "jp-rocket-gang-dark-vileplume",
+    "name": "Dark Vileplume",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575753_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575753_400w.jpg"
+    },
+    "tcgplayerId": "575753"
+  },
+  {
+    "id": "jp-rocket-gang-dark-arbok",
+    "name": "Dark Arbok",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575742_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575742_400w.jpg"
+    },
+    "tcgplayerId": "575742"
+  },
+  {
+    "id": "jp-rocket-gang-rainbow-energy",
+    "name": "Rainbow Energy",
+    "supertype": "Energy",
+    "number": "N/A",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575755_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575755_400w.jpg"
+    },
+    "tcgplayerId": "575755"
+  },
+  {
+    "id": "jp-rocket-gang-dark-weezing",
+    "name": "Dark Weezing",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575754_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575754_400w.jpg"
+    },
+    "tcgplayerId": "575754"
+  },
+  {
+    "id": "jp-rocket-gang-dark-vaporeon",
+    "name": "Dark Vaporeon",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575770_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575770_400w.jpg"
+    },
+    "tcgplayerId": "575770"
+  },
+  {
+    "id": "jp-rocket-gang-dark-jolteon",
+    "name": "Dark Jolteon",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575765_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575765_400w.jpg"
+    },
+    "tcgplayerId": "575765"
+  },
+  {
+    "id": "jp-rocket-gang-dark-charmeleon",
+    "name": "Dark Charmeleon",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575759_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575759_400w.jpg"
+    },
+    "tcgplayerId": "575759"
+  },
+  {
+    "id": "jp-rocket-gang-dark-flareon",
+    "name": "Dark Flareon",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575762_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575762_400w.jpg"
+    },
+    "tcgplayerId": "575762"
+  },
+  {
+    "id": "jp-rocket-gang-charmander",
+    "name": "Charmander",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575713_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575713_400w.jpg"
+    },
+    "tcgplayerId": "575713"
+  },
+  {
+    "id": "jp-rocket-gang-eevee",
+    "name": "Eevee",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575720_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575720_400w.jpg"
+    },
+    "tcgplayerId": "575720"
+  },
+  {
+    "id": "jp-rocket-gang-dark-wartortle",
+    "name": "Dark Wartortle",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575771_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575771_400w.jpg"
+    },
+    "tcgplayerId": "575771"
+  },
+  {
+    "id": "jp-rocket-gang-dark-dragonair",
+    "name": "Dark Dragonair",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575760_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575760_400w.jpg"
+    },
+    "tcgplayerId": "575760"
+  },
+  {
+    "id": "jp-rocket-gang-potion-energy",
+    "name": "Potion Energy",
+    "supertype": "Energy",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575733_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575733_400w.jpg"
+    },
+    "tcgplayerId": "575733"
+  },
+  {
+    "id": "jp-rocket-gang-challenge!",
+    "name": "Challenge!",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575758_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575758_400w.jpg"
+    },
+    "tcgplayerId": "575758"
+  },
+  {
+    "id": "jp-rocket-gang-squirtle",
+    "name": "Squirtle",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575738_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575738_400w.jpg"
+    },
+    "tcgplayerId": "575738"
+  },
+  {
+    "id": "jp-rocket-gang-the-bosss-way",
+    "name": "The Boss's Way",
+    "supertype": "Trainer",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575776_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575776_400w.jpg"
+    },
+    "tcgplayerId": "575776"
+  },
+  {
+    "id": "jp-rocket-gang-dark-raticate",
+    "name": "Dark Raticate",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575716_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575716_400w.jpg"
+    },
+    "tcgplayerId": "575716"
+  },
+  {
+    "id": "jp-rocket-gang-abra",
+    "name": "Abra",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575712_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575712_400w.jpg"
+    },
+    "tcgplayerId": "575712"
+  },
+  {
+    "id": "jp-rocket-gang-dark-kadabra",
+    "name": "Dark Kadabra",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575766_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575766_400w.jpg"
+    },
+    "tcgplayerId": "575766"
+  },
+  {
+    "id": "jp-rocket-gang-imposter-oaks-revenge",
+    "name": "Imposter Oak's Revenge",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575773_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575773_400w.jpg"
+    },
+    "tcgplayerId": "575773"
+  },
+  {
+    "id": "jp-rocket-gang-dark-golduck",
+    "name": "Dark Golduck",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575764_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575764_400w.jpg"
+    },
+    "tcgplayerId": "575764"
+  },
+  {
+    "id": "jp-rocket-gang-koffing",
+    "name": "Koffing",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575725_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575725_400w.jpg"
+    },
+    "tcgplayerId": "575725"
+  },
+  {
+    "id": "jp-rocket-gang-psyduck",
+    "name": "Psyduck",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575734_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575734_400w.jpg"
+    },
+    "tcgplayerId": "575734"
+  },
+  {
+    "id": "jp-rocket-gang-dark-muk",
+    "name": "Dark Muk",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575768_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575768_400w.jpg"
+    },
+    "tcgplayerId": "575768"
+  },
+  {
+    "id": "jp-rocket-gang-dratini",
+    "name": "Dratini",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575718_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575718_400w.jpg"
+    },
+    "tcgplayerId": "575718"
+  },
+  {
+    "id": "jp-rocket-gang-magikarp",
+    "name": "Magikarp",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575727_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575727_400w.jpg"
+    },
+    "tcgplayerId": "575727"
+  },
+  {
+    "id": "jp-rocket-gang-dark-primeape",
+    "name": "Dark Primeape",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575769_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575769_400w.jpg"
+    },
+    "tcgplayerId": "575769"
+  },
+  {
+    "id": "jp-rocket-gang-diglett",
+    "name": "Diglett",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575717_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575717_400w.jpg"
+    },
+    "tcgplayerId": "575717"
+  },
+  {
+    "id": "jp-rocket-gang-dark-machoke",
+    "name": "Dark Machoke",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575767_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575767_400w.jpg"
+    },
+    "tcgplayerId": "575767"
+  },
+  {
+    "id": "jp-rocket-gang-dark-electrode",
+    "name": "Dark Electrode",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575761_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575761_400w.jpg"
+    },
+    "tcgplayerId": "575761"
+  },
+  {
+    "id": "jp-rocket-gang-dark-rapidash",
+    "name": "Dark Rapidash",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575715_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575715_400w.jpg"
+    },
+    "tcgplayerId": "575715"
+  },
+  {
+    "id": "jp-rocket-gang-meowth",
+    "name": "Meowth",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575730_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575730_400w.jpg"
+    },
+    "tcgplayerId": "575730"
+  },
+  {
+    "id": "jp-rocket-gang-dark-persian",
+    "name": "Dark Persian",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575714_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575714_400w.jpg"
+    },
+    "tcgplayerId": "575714"
+  },
+  {
+    "id": "jp-rocket-gang-dark-gloom",
+    "name": "Dark Gloom",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575763_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575763_400w.jpg"
+    },
+    "tcgplayerId": "575763"
+  },
+  {
+    "id": "jp-rocket-gang-slowpoke",
+    "name": "Slowpoke",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575737_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575737_400w.jpg"
+    },
+    "tcgplayerId": "575737"
+  },
+  {
+    "id": "jp-rocket-gang-sleep!",
+    "name": "Sleep!",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575736_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575736_400w.jpg"
+    },
+    "tcgplayerId": "575736"
+  },
+  {
+    "id": "jp-rocket-gang-ponyta",
+    "name": "Ponyta",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575732_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575732_400w.jpg"
+    },
+    "tcgplayerId": "575732"
+  },
+  {
+    "id": "jp-rocket-gang-machop",
+    "name": "Machop",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575726_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575726_400w.jpg"
+    },
+    "tcgplayerId": "575726"
+  },
+  {
+    "id": "jp-rocket-gang-porygon",
+    "name": "Porygon",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575775_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575775_400w.jpg"
+    },
+    "tcgplayerId": "575775"
+  },
+  {
+    "id": "jp-rocket-gang-voltorb",
+    "name": "Voltorb",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575739_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575739_400w.jpg"
+    },
+    "tcgplayerId": "575739"
+  },
+  {
+    "id": "jp-rocket-gang-goop-gas-attack",
+    "name": "Goop Gas Attack",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575723_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575723_400w.jpg"
+    },
+    "tcgplayerId": "575723"
+  },
+  {
+    "id": "jp-rocket-gang-oddish",
+    "name": "Oddish",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575731_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575731_400w.jpg"
+    },
+    "tcgplayerId": "575731"
+  },
+  {
+    "id": "jp-rocket-gang-magnemite",
+    "name": "Magnemite",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575728_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575728_400w.jpg"
+    },
+    "tcgplayerId": "575728"
+  },
+  {
+    "id": "jp-rocket-gang-digger",
+    "name": "Digger",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575772_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575772_400w.jpg"
+    },
+    "tcgplayerId": "575772"
+  },
+  {
+    "id": "jp-rocket-gang-mankey",
+    "name": "Mankey",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575729_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575729_400w.jpg"
+    },
+    "tcgplayerId": "575729"
+  },
+  {
+    "id": "jp-rocket-gang-drowzee",
+    "name": "Drowzee",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575719_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575719_400w.jpg"
+    },
+    "tcgplayerId": "575719"
+  },
+  {
+    "id": "jp-rocket-gang-zubat",
+    "name": "Zubat",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575740_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575740_400w.jpg"
+    },
+    "tcgplayerId": "575740"
+  },
+  {
+    "id": "jp-rocket-gang-full-heal-energy",
+    "name": "Full Heal Energy",
+    "supertype": "Energy",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575722_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575722_400w.jpg"
+    },
+    "tcgplayerId": "575722"
+  },
+  {
+    "id": "jp-rocket-gang-nightly-garbage-run",
+    "name": "Nightly Garbage Run",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575774_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575774_400w.jpg"
+    },
+    "tcgplayerId": "575774"
+  },
+  {
+    "id": "jp-rocket-gang-ekans",
+    "name": "Ekans",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575721_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575721_400w.jpg"
+    },
+    "tcgplayerId": "575721"
+  },
+  {
+    "id": "jp-rocket-gang-rattata",
+    "name": "Rattata",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575735_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575735_400w.jpg"
+    },
+    "tcgplayerId": "575735"
+  }
+]
