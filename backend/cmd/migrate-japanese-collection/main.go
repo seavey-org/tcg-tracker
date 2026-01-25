@@ -49,8 +49,9 @@ type JapaneseSet struct {
 // englishToJapaneseSet maps English set codes to their Japanese equivalents.
 // This helps resolve ambiguous matches when a card exists in multiple Japanese sets.
 var englishToJapaneseSet = map[string]string{
-	// Base era
-	"base1": "jp-base-expansion-pack",    // Base Set → Base Expansion Pack
+	// Base era (1996 originals)
+	"base1": "jp-expansion-pack",         // Base Set → Expansion Pack (1996 original)
+	"base2": "jp-pokemon-jungle",         // Jungle → Pokemon Jungle
 	"base3": "jp-mystery-of-the-fossils", // Fossil → Mystery of the Fossils
 	"base5": "jp-rocket-gang",            // Team Rocket → Rocket Gang
 
@@ -60,8 +61,8 @@ var englishToJapaneseSet = map[string]string{
 	"neo3": "jp-awakening-legends",          // Neo Revelation → Awakening Legends
 
 	// Gym era - these were split in Japan
-	"gym1": "jp-leaders-stadium", // Gym Heroes → Leaders' Stadium
-	"gym2": "jp-leaders-stadium", // Gym Challenge → Leaders' Stadium (partial)
+	"gym1": "jp-leaders-stadium",             // Gym Heroes → Leaders' Stadium
+	"gym2": "jp-challenge-from-the-darkness", // Gym Challenge → Challenge from the Darkness
 }
 
 // MigrationResult tracks the outcome of each migration attempt
@@ -314,6 +315,9 @@ func normalizeName(name string) string {
 	name = strings.ReplaceAll(name, "è", "e")
 	name = strings.ReplaceAll(name, "ê", "e")
 	name = strings.ReplaceAll(name, "ë", "e")
+
+	// Remove hyphens (e.g., "Moo-Moo Milk" -> "moomoo milk")
+	name = strings.ReplaceAll(name, "-", "")
 
 	// Clean up any double spaces
 	for strings.Contains(name, "  ") {
