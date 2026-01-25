@@ -46,6 +46,24 @@ type JapaneseSet struct {
 	Series string `json:"series"`
 }
 
+// englishToJapaneseSet maps English set codes to their Japanese equivalents.
+// This helps resolve ambiguous matches when a card exists in multiple Japanese sets.
+var englishToJapaneseSet = map[string]string{
+	// Base era
+	"base1": "jp-base-expansion-pack",    // Base Set → Base Expansion Pack
+	"base3": "jp-mystery-of-the-fossils", // Fossil → Mystery of the Fossils
+	"base5": "jp-rocket-gang",            // Team Rocket → Rocket Gang
+
+	// Neo era
+	"neo1": "jp-gold-silver-to-a-new-world", // Neo Genesis → Gold, Silver, to a New World
+	"neo2": "jp-awakening-legends",          // Neo Discovery → Awakening Legends (partial)
+	"neo3": "jp-awakening-legends",          // Neo Revelation → Awakening Legends
+
+	// Gym era - these were split in Japan
+	"gym1": "jp-leaders-stadium", // Gym Heroes → Leaders' Stadium
+	"gym2": "jp-leaders-stadium", // Gym Challenge → Leaders' Stadium (partial)
+}
+
 // MigrationResult tracks the outcome of each migration attempt
 type MigrationResult struct {
 	CollectionItemID uint
@@ -134,8 +152,8 @@ func main() {
 		fmt.Printf("\n[%d/%d] Processing: %s (ID: %s, Set: %s)\n",
 			i+1, len(items), cardName, item.CardID, item.Card.SetCode)
 
-		// Find matching Japanese cards
-		matches := findMatches(cardName, nameIndex, japaneseCards, sets)
+		// Find matching Japanese cards, using set mapping to resolve ambiguity
+		matches := findMatches(cardName, item.Card.SetCode, nameIndex, japaneseCards, sets)
 
 		var result MigrationResult
 		result.CollectionItemID = item.ID
@@ -280,46 +298,84 @@ func loadJapaneseCards(dataDir string) ([]JapaneseCard, map[string]JapaneseSet, 
 	return allCards, sets, nil
 }
 
+// normalizeName converts special characters to their ASCII equivalents for matching.
+// JustTCG uses ASCII names (e.g., "Pokemon March", "Nidoran m") while English card data
+// uses Unicode (e.g., "Pokémon March", "Nidoran ♂").
+func normalizeName(name string) string {
+	// Convert to lowercase first
+	name = strings.ToLower(name)
+
+	// Gender symbols
+	name = strings.ReplaceAll(name, "♂", " m")
+	name = strings.ReplaceAll(name, "♀", " f")
+
+	// Accented characters (common in Pokemon names)
+	name = strings.ReplaceAll(name, "é", "e")
+	name = strings.ReplaceAll(name, "è", "e")
+	name = strings.ReplaceAll(name, "ê", "e")
+	name = strings.ReplaceAll(name, "ë", "e")
+
+	// Clean up any double spaces
+	for strings.Contains(name, "  ") {
+		name = strings.ReplaceAll(name, "  ", " ")
+	}
+
+	return strings.TrimSpace(name)
+}
+
 func buildNameIndex(cards []JapaneseCard) map[string][]int {
 	index := make(map[string][]int)
 	for i, card := range cards {
-		nameLower := strings.ToLower(card.Name)
-		index[nameLower] = append(index[nameLower], i)
+		normalized := normalizeName(card.Name)
+		index[normalized] = append(index[normalized], i)
 	}
 	return index
 }
 
-func findMatches(englishName string, nameIndex map[string][]int, cards []JapaneseCard, sets map[string]JapaneseSet) []JapaneseCard {
-	nameLower := strings.ToLower(englishName)
+func findMatches(englishName, englishSetCode string, nameIndex map[string][]int, cards []JapaneseCard, sets map[string]JapaneseSet) []JapaneseCard {
+	normalized := normalizeName(englishName)
+
+	var matches []JapaneseCard
 
 	// Try exact match first
-	if indices, ok := nameIndex[nameLower]; ok {
-		var matches []JapaneseCard
+	if indices, ok := nameIndex[normalized]; ok {
 		for _, idx := range indices {
 			matches = append(matches, cards[idx])
 		}
-		// Sort by set name for consistent display
-		sort.Slice(matches, func(i, j int) bool {
-			return matches[i].SetName < matches[j].SetName
-		})
-		return matches
 	}
 
-	// Try partial matches (cards containing the name)
-	var partialMatches []JapaneseCard
-	for _, card := range cards {
-		cardNameLower := strings.ToLower(card.Name)
-		if strings.Contains(cardNameLower, nameLower) || strings.Contains(nameLower, cardNameLower) {
-			partialMatches = append(partialMatches, card)
+	// If no exact matches, try partial matches
+	if len(matches) == 0 {
+		for _, card := range cards {
+			cardNormalized := normalizeName(card.Name)
+			if strings.Contains(cardNormalized, normalized) || strings.Contains(normalized, cardNormalized) {
+				matches = append(matches, card)
+			}
 		}
 	}
 
-	// Sort by set name
-	sort.Slice(partialMatches, func(i, j int) bool {
-		return partialMatches[i].SetName < partialMatches[j].SetName
+	// If we have multiple matches and a set mapping, filter by mapped set
+	if len(matches) > 1 {
+		if mappedSet, ok := englishToJapaneseSet[englishSetCode]; ok {
+			var filtered []JapaneseCard
+			for _, m := range matches {
+				if m.SetID == mappedSet {
+					filtered = append(filtered, m)
+				}
+			}
+			// Only use filtered results if we found matches in the mapped set
+			if len(filtered) > 0 {
+				matches = filtered
+			}
+		}
+	}
+
+	// Sort by set name for consistent display
+	sort.Slice(matches, func(i, j int) bool {
+		return matches[i].SetName < matches[j].SetName
 	})
 
-	return partialMatches
+	return matches
 }
 
 func migrateItem(db *gorm.DB, itemID uint, newCardID string) error {
