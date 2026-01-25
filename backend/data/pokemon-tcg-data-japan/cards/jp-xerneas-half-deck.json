@@ -1,0 +1,110 @@
+[
+  {
+    "id": "jp-xerneas-half-deck-007/014",
+    "name": "Xerneas",
+    "supertype": "Pokémon",
+    "number": "007/014",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/606012_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/606012_400w.jpg"
+    },
+    "tcgplayerId": "606012"
+  },
+  {
+    "id": "jp-xerneas-half-deck-001/014",
+    "name": "Jigglypuff",
+    "supertype": "Pokémon",
+    "number": "001/014",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/606016_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/606016_400w.jpg"
+    },
+    "tcgplayerId": "606016"
+  },
+  {
+    "id": "jp-xerneas-half-deck-005/014",
+    "name": "Floette",
+    "supertype": "Pokémon",
+    "number": "005/014",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/606019_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/606019_400w.jpg"
+    },
+    "tcgplayerId": "606019"
+  },
+  {
+    "id": "jp-xerneas-half-deck-002/014",
+    "name": "Wigglytuff",
+    "supertype": "Pokémon",
+    "number": "002/014",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/606013_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/606013_400w.jpg"
+    },
+    "tcgplayerId": "606013"
+  },
+  {
+    "id": "jp-xerneas-half-deck-004/014",
+    "name": "Flabebe",
+    "supertype": "Pokémon",
+    "number": "004/014",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/606018_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/606018_400w.jpg"
+    },
+    "tcgplayerId": "606018"
+  },
+  {
+    "id": "jp-xerneas-half-deck-006/014",
+    "name": "Spritzee",
+    "supertype": "Pokémon",
+    "number": "006/014",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/606020_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/606020_400w.jpg"
+    },
+    "tcgplayerId": "606020"
+  },
+  {
+    "id": "jp-xerneas-half-deck-013/014",
+    "name": "Tierno",
+    "supertype": "Pokémon",
+    "number": "013/014",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/606011_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/606011_400w.jpg"
+    },
+    "tcgplayerId": "606011"
+  },
+  {
+    "id": "jp-xerneas-half-deck-012/014",
+    "name": "Shauna",
+    "supertype": "Pokémon",
+    "number": "012/014",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/606015_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/606015_400w.jpg"
+    },
+    "tcgplayerId": "606015"
+  },
+  {
+    "id": "jp-xerneas-half-deck-003/014",
+    "name": "Mr. Mime",
+    "supertype": "Pokémon",
+    "number": "003/014",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/606017_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/606017_400w.jpg"
+    },
+    "tcgplayerId": "606017"
+  }
+]

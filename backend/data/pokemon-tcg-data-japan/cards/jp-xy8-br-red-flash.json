@@ -1,0 +1,434 @@
+[
+  {
+    "id": "jp-xy8-br-red-flash-065/059",
+    "name": "Mewtwo EX - 065/059",
+    "supertype": "Pokémon",
+    "number": "065/059",
+    "rarity": "Ultra Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/604098_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/604098_400w.jpg"
+    },
+    "tcgplayerId": "604098"
+  },
+  {
+    "id": "jp-xy8-br-red-flash-010/059",
+    "name": "Houndoom - 010/059",
+    "supertype": "Pokémon",
+    "number": "010/059",
+    "rarity": "Double Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/604081_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/604081_400w.jpg"
+    },
+    "tcgplayerId": "604081"
+  },
+  {
+    "id": "jp-xy8-br-red-flash-028/059",
+    "name": "M Mewtwo ex - 028/059",
+    "supertype": "Pokémon",
+    "number": "028/059",
+    "rarity": "Double Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/604094_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/604094_400w.jpg"
+    },
+    "tcgplayerId": "604094"
+  },
+  {
+    "id": "jp-xy8-br-red-flash-061/059",
+    "name": "Houndoom - 061/059",
+    "supertype": "Pokémon",
+    "number": "061/059",
+    "rarity": "Super Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/604082_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/604082_400w.jpg"
+    },
+    "tcgplayerId": "604082"
+  },
+  {
+    "id": "jp-xy8-br-red-flash-028/059",
+    "name": "Mewtwo - 028/059",
+    "supertype": "Pokémon",
+    "number": "028/059",
+    "rarity": "Double Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/604094_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/604094_400w.jpg"
+    },
+    "tcgplayerId": "604094"
+  },
+  {
+    "id": "jp-xy8-br-red-flash-027/059",
+    "name": "Mewtwo EX - 027/059",
+    "supertype": "Pokémon",
+    "number": "027/059",
+    "rarity": "Double Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/604096_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/604096_400w.jpg"
+    },
+    "tcgplayerId": "604096"
+  },
+  {
+    "id": "jp-xy8-br-red-flash-020/059",
+    "name": "Empoleon",
+    "supertype": "Pokémon",
+    "number": "020/059",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/604074_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/604074_400w.jpg"
+    },
+    "tcgplayerId": "604074"
+  },
+  {
+    "id": "jp-xy8-br-red-flash-042/059",
+    "name": "Yveltal",
+    "supertype": "Pokémon",
+    "number": "042/059",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/604124_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/604124_400w.jpg"
+    },
+    "tcgplayerId": "604124"
+  },
+  {
+    "id": "jp-xy8-br-red-flash-009/059",
+    "name": "Houndoom EX - 009/059",
+    "supertype": "Pokémon",
+    "number": "009/059",
+    "rarity": "Double Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/604083_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/604083_400w.jpg"
+    },
+    "tcgplayerId": "604083"
+  },
+  {
+    "id": "jp-xy8-br-red-flash-041/059",
+    "name": "Zorua",
+    "supertype": "Pokémon",
+    "number": "041/059",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/604125_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/604125_400w.jpg"
+    },
+    "tcgplayerId": "604125"
+  },
+  {
+    "id": "jp-xy8-br-red-flash-058/059",
+    "name": "Giovanni's Scheme - 058/059",
+    "supertype": "Pokémon",
+    "number": "058/059",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/604076_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/604076_400w.jpg"
+    },
+    "tcgplayerId": "604076"
+  },
+  {
+    "id": "jp-xy8-br-red-flash-034/059",
+    "name": "Cubone",
+    "supertype": "Pokémon",
+    "number": "034/059",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/604071_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/604071_400w.jpg"
+    },
+    "tcgplayerId": "604071"
+  },
+  {
+    "id": "jp-xy8-br-red-flash-048/059",
+    "name": "Axew",
+    "supertype": "Pokémon",
+    "number": "048/059",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/604063_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/604063_400w.jpg"
+    },
+    "tcgplayerId": "604063"
+  },
+  {
+    "id": "jp-xy8-br-red-flash-036/059",
+    "name": "Marowak BREAK",
+    "supertype": "Pokémon",
+    "number": "036/059",
+    "rarity": "Double Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/604093_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/604093_400w.jpg"
+    },
+    "tcgplayerId": "604093"
+  },
+  {
+    "id": "jp-xy8-br-red-flash-018/059",
+    "name": "Piplup",
+    "supertype": "Pokémon",
+    "number": "018/059",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/604107_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/604107_400w.jpg"
+    },
+    "tcgplayerId": "604107"
+  },
+  {
+    "id": "jp-xy8-br-red-flash-004/059",
+    "name": "Quilladin",
+    "supertype": "Pokémon",
+    "number": "004/059",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/604109_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/604109_400w.jpg"
+    },
+    "tcgplayerId": "604109"
+  },
+  {
+    "id": "jp-xy8-br-red-flash-015/059",
+    "name": "Staryu",
+    "supertype": "Pokémon",
+    "number": "015/059",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/604122_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/604122_400w.jpg"
+    },
+    "tcgplayerId": "604122"
+  },
+  {
+    "id": "jp-xy8-br-red-flash-013/059",
+    "name": "Goldeen",
+    "supertype": "Pokémon",
+    "number": "013/059",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/604079_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/604079_400w.jpg"
+    },
+    "tcgplayerId": "604079"
+  },
+  {
+    "id": "jp-xy8-br-red-flash-056/059",
+    "name": "Houndoom Spirit Link",
+    "supertype": "Pokémon",
+    "number": "056/059",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/604085_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/604085_400w.jpg"
+    },
+    "tcgplayerId": "604085"
+  },
+  {
+    "id": "jp-xy8-br-red-flash-050/059",
+    "name": "Dodrio",
+    "supertype": "Pokémon",
+    "number": "050/059",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/604072_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/604072_400w.jpg"
+    },
+    "tcgplayerId": "604072"
+  },
+  {
+    "id": "jp-xy8-br-red-flash-006/059",
+    "name": "Chesnaught BREAK",
+    "supertype": "Pokémon",
+    "number": "006/059",
+    "rarity": "Double Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/604068_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/604068_400w.jpg"
+    },
+    "tcgplayerId": "604068"
+  },
+  {
+    "id": "jp-xy8-br-red-flash-038/059",
+    "name": "Piloswine",
+    "supertype": "Pokémon",
+    "number": "038/059",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/604106_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/604106_400w.jpg"
+    },
+    "tcgplayerId": "604106"
+  },
+  {
+    "id": "jp-xy8-br-red-flash-053/059",
+    "name": "Staraptor",
+    "supertype": "Pokémon",
+    "number": "053/059",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/604118_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/604118_400w.jpg"
+    },
+    "tcgplayerId": "604118"
+  },
+  {
+    "id": "jp-xy8-br-red-flash-051/059",
+    "name": "Starly",
+    "supertype": "Pokémon",
+    "number": "051/059",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/604120_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/604120_400w.jpg"
+    },
+    "tcgplayerId": "604120"
+  },
+  {
+    "id": "jp-xy8-br-red-flash-016/059",
+    "name": "Starmie",
+    "supertype": "Pokémon",
+    "number": "016/059",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/604121_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/604121_400w.jpg"
+    },
+    "tcgplayerId": "604121"
+  },
+  {
+    "id": "jp-xy8-br-red-flash-024/059",
+    "name": "Magneton",
+    "supertype": "Pokémon",
+    "number": "024/059",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/604089_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/604089_400w.jpg"
+    },
+    "tcgplayerId": "604089"
+  },
+  {
+    "id": "jp-xy8-br-red-flash-035/059",
+    "name": "Marowak",
+    "supertype": "Pokémon",
+    "number": "035/059",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/604092_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/604092_400w.jpg"
+    },
+    "tcgplayerId": "604092"
+  },
+  {
+    "id": "jp-xy8-br-red-flash-031/059",
+    "name": "Ralts",
+    "supertype": "Pokémon",
+    "number": "031/059",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/604111_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/604111_400w.jpg"
+    },
+    "tcgplayerId": "604111"
+  },
+  {
+    "id": "jp-xy8-br-red-flash-029/059",
+    "name": "Misdreavus",
+    "supertype": "Pokémon",
+    "number": "029/059",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/604100_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/604100_400w.jpg"
+    },
+    "tcgplayerId": "604100"
+  },
+  {
+    "id": "jp-xy8-br-red-flash-037/059",
+    "name": "Swinub",
+    "supertype": "Pokémon",
+    "number": "037/059",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/604123_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/604123_400w.jpg"
+    },
+    "tcgplayerId": "604123"
+  },
+  {
+    "id": "jp-xy8-br-red-flash-003/059",
+    "name": "Chespin",
+    "supertype": "Pokémon",
+    "number": "003/059",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/604069_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/604069_400w.jpg"
+    },
+    "tcgplayerId": "604069"
+  },
+  {
+    "id": "jp-xy8-br-red-flash-017/059",
+    "name": "Remoraid",
+    "supertype": "Pokémon",
+    "number": "017/059",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/604112_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/604112_400w.jpg"
+    },
+    "tcgplayerId": "604112"
+  },
+  {
+    "id": "jp-xy8-br-red-flash-046/059",
+    "name": "Spritzee",
+    "supertype": "Pokémon",
+    "number": "046/059",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/604117_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/604117_400w.jpg"
+    },
+    "tcgplayerId": "604117"
+  },
+  {
+    "id": "jp-xy8-br-red-flash-047/059",
+    "name": "Aromatisse",
+    "supertype": "Pokémon",
+    "number": "047/059",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/604061_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/604061_400w.jpg"
+    },
+    "tcgplayerId": "604061"
+  },
+  {
+    "id": "jp-xy8-br-red-flash-032/059",
+    "name": "Kirlia",
+    "supertype": "Pokémon",
+    "number": "032/059",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/604087_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/604087_400w.jpg"
+    },
+    "tcgplayerId": "604087"
+  },
+  {
+    "id": "jp-xy8-br-red-flash-049/059",
+    "name": "Doduo",
+    "supertype": "Pokémon",
+    "number": "049/059",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/604073_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/604073_400w.jpg"
+    },
+    "tcgplayerId": "604073"
+  }
+]

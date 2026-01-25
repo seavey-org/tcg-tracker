@@ -1,0 +1,74 @@
+[
+  {
+    "id": "jp-world-hobby-fair-pikachu",
+    "name": "Pikachu",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/617301_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/617301_400w.jpg"
+    },
+    "tcgplayerId": "617301"
+  },
+  {
+    "id": "jp-world-hobby-fair-mew",
+    "name": "Mew",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/617299_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/617299_400w.jpg"
+    },
+    "tcgplayerId": "617299"
+  },
+  {
+    "id": "jp-world-hobby-fair-mewtwo",
+    "name": "Mewtwo",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/617300_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/617300_400w.jpg"
+    },
+    "tcgplayerId": "617300"
+  },
+  {
+    "id": "jp-world-hobby-fair-metal-energy",
+    "name": "Metal Energy",
+    "supertype": "Energy",
+    "number": "N/A",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/617303_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/617303_400w.jpg"
+    },
+    "tcgplayerId": "617303"
+  },
+  {
+    "id": "jp-world-hobby-fair-totodile",
+    "name": "Totodile",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/617304_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/617304_400w.jpg"
+    },
+    "tcgplayerId": "617304"
+  },
+  {
+    "id": "jp-world-hobby-fair-cyndaquil",
+    "name": "Cyndaquil",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/617298_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/617298_400w.jpg"
+    },
+    "tcgplayerId": "617298"
+  }
+]

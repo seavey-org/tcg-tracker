@@ -1,0 +1,98 @@
+[
+  {
+    "id": "jp-sv-terastal-charizard-ex-battle-master-deck-terastal-charizard-ex-battle-master-deck",
+    "name": "Terastal Charizard ex Battle Master Deck",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/593968_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/593968_400w.jpg"
+    },
+    "tcgplayerId": "593968"
+  },
+  {
+    "id": "jp-sv-terastal-charizard-ex-battle-master-deck-003/021",
+    "name": "Radiant Charizard",
+    "supertype": "Pokémon",
+    "number": "003/021",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/588627_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/588627_400w.jpg"
+    },
+    "tcgplayerId": "588627"
+  },
+  {
+    "id": "jp-sv-terastal-charizard-ex-battle-master-deck-006/021",
+    "name": "Charizard ex",
+    "supertype": "Pokémon",
+    "number": "006/021",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/588625_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/588625_400w.jpg"
+    },
+    "tcgplayerId": "588625"
+  },
+  {
+    "id": "jp-sv-terastal-charizard-ex-battle-master-deck-009/021",
+    "name": "Arceus V",
+    "supertype": "Pokémon",
+    "number": "009/021",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/588630_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/588630_400w.jpg"
+    },
+    "tcgplayerId": "588630"
+  },
+  {
+    "id": "jp-sv-terastal-charizard-ex-battle-master-deck-010/021",
+    "name": "Arceus VSTAR",
+    "supertype": "Pokémon",
+    "number": "010/021",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/588631_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/588631_400w.jpg"
+    },
+    "tcgplayerId": "588631"
+  },
+  {
+    "id": "jp-sv-terastal-charizard-ex-battle-master-deck-019/021",
+    "name": "Boss's Orders",
+    "supertype": "Trainer",
+    "number": "019/021",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/588640_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/588640_400w.jpg"
+    },
+    "tcgplayerId": "588640"
+  },
+  {
+    "id": "jp-sv-terastal-charizard-ex-battle-master-deck-017/021",
+    "name": "Iono",
+    "supertype": "Pokémon",
+    "number": "017/021",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/588638_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/588638_400w.jpg"
+    },
+    "tcgplayerId": "588638"
+  },
+  {
+    "id": "jp-sv-terastal-charizard-ex-battle-master-deck-020/021",
+    "name": "Artazon",
+    "supertype": "Pokémon",
+    "number": "020/021",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/588641_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/588641_400w.jpg"
+    },
+    "tcgplayerId": "588641"
+  }
+]

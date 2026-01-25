@@ -1,0 +1,398 @@
+[
+  {
+    "id": "jp-xy5-bt-tidal-storm-032/070",
+    "name": "Primal Kyogre EX",
+    "supertype": "Pokémon",
+    "number": "032/070",
+    "rarity": "Double Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603776_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603776_400w.jpg"
+    },
+    "tcgplayerId": "603776"
+  },
+  {
+    "id": "jp-xy5-bt-tidal-storm-075/070",
+    "name": "Gardevoir EX - 075/070",
+    "supertype": "Pokémon",
+    "number": "075/070",
+    "rarity": "Super Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603752_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603752_400w.jpg"
+    },
+    "tcgplayerId": "603752"
+  },
+  {
+    "id": "jp-xy5-bt-tidal-storm-051/070",
+    "name": "M Gardevoir EX - 051/070",
+    "supertype": "Pokémon",
+    "number": "051/070",
+    "rarity": "Double Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603749_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603749_400w.jpg"
+    },
+    "tcgplayerId": "603749"
+  },
+  {
+    "id": "jp-xy5-bt-tidal-storm-074/070",
+    "name": "Sharpedo EX - 074/070",
+    "supertype": "Pokémon",
+    "number": "074/070",
+    "rarity": "Super Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603783_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603783_400w.jpg"
+    },
+    "tcgplayerId": "603783"
+  },
+  {
+    "id": "jp-xy5-bt-tidal-storm-031/070",
+    "name": "Kyogre EX - 031/070",
+    "supertype": "Pokémon",
+    "number": "031/070",
+    "rarity": "Double Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603761_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603761_400w.jpg"
+    },
+    "tcgplayerId": "603761"
+  },
+  {
+    "id": "jp-xy5-bt-tidal-storm-049/070",
+    "name": "Azumarill - 049/070",
+    "supertype": "Pokémon",
+    "number": "049/070",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603728_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603728_400w.jpg"
+    },
+    "tcgplayerId": "603728"
+  },
+  {
+    "id": "jp-xy5-bt-tidal-storm-056/070",
+    "name": "Spinda",
+    "supertype": "Pokémon",
+    "number": "056/070",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603787_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603787_400w.jpg"
+    },
+    "tcgplayerId": "603787"
+  },
+  {
+    "id": "jp-xy5-bt-tidal-storm-015/070",
+    "name": "Swampert - 015/070",
+    "supertype": "Pokémon",
+    "number": "015/070",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603792_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603792_400w.jpg"
+    },
+    "tcgplayerId": "603792"
+  },
+  {
+    "id": "jp-xy5-bt-tidal-storm-016/070",
+    "name": "Ludicolo - 016/070",
+    "supertype": "Pokémon",
+    "number": "016/070",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603767_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603767_400w.jpg"
+    },
+    "tcgplayerId": "603767"
+  },
+  {
+    "id": "jp-xy5-bt-tidal-storm-058/070",
+    "name": "Bidoof - 058/070",
+    "supertype": "Pokémon",
+    "number": "058/070",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603733_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603733_400w.jpg"
+    },
+    "tcgplayerId": "603733"
+  },
+  {
+    "id": "jp-xy5-bt-tidal-storm-044/070",
+    "name": "Sharpedo EX - 044/070",
+    "supertype": "Pokémon",
+    "number": "044/070",
+    "rarity": "Double Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603782_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603782_400w.jpg"
+    },
+    "tcgplayerId": "603782"
+  },
+  {
+    "id": "jp-xy5-bt-tidal-storm-054/070",
+    "name": "Skitty",
+    "supertype": "Pokémon",
+    "number": "054/070",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603785_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603785_400w.jpg"
+    },
+    "tcgplayerId": "603785"
+  },
+  {
+    "id": "jp-xy5-bt-tidal-storm-030/070",
+    "name": "Gorebyss - 030/070",
+    "supertype": "Pokémon",
+    "number": "030/070",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603755_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603755_400w.jpg"
+    },
+    "tcgplayerId": "603755"
+  },
+  {
+    "id": "jp-xy5-bt-tidal-storm-048/070",
+    "name": "Azumarill - 048/070",
+    "supertype": "Pokémon",
+    "number": "048/070",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603727_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603727_400w.jpg"
+    },
+    "tcgplayerId": "603727"
+  },
+  {
+    "id": "jp-xy5-bt-tidal-storm-069/070",
+    "name": "Silent Lab",
+    "supertype": "Pokémon",
+    "number": "069/070",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603784_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603784_400w.jpg"
+    },
+    "tcgplayerId": "603784"
+  },
+  {
+    "id": "jp-xy5-bt-tidal-storm-017/070",
+    "name": "Wailord EX - 017/070",
+    "supertype": "Pokémon",
+    "number": "017/070",
+    "rarity": "Double Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603797_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603797_400w.jpg"
+    },
+    "tcgplayerId": "603797"
+  },
+  {
+    "id": "jp-xy5-bt-tidal-storm-014/070",
+    "name": "Swampert - 014/070",
+    "supertype": "Pokémon",
+    "number": "014/070",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603791_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603791_400w.jpg"
+    },
+    "tcgplayerId": "603791"
+  },
+  {
+    "id": "jp-xy5-bt-tidal-storm-020/070",
+    "name": "Whiscash - 020/070",
+    "supertype": "Pokémon",
+    "number": "020/070",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603802_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603802_400w.jpg"
+    },
+    "tcgplayerId": "603802"
+  },
+  {
+    "id": "jp-xy5-bt-tidal-storm-012/070",
+    "name": "Mudkip",
+    "supertype": "Pokémon",
+    "number": "012/070",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603775_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603775_400w.jpg"
+    },
+    "tcgplayerId": "603775"
+  },
+  {
+    "id": "jp-xy5-bt-tidal-storm-023/070",
+    "name": "Milotic",
+    "supertype": "Pokémon",
+    "number": "023/070",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603773_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603773_400w.jpg"
+    },
+    "tcgplayerId": "603773"
+  },
+  {
+    "id": "jp-xy5-bt-tidal-storm-047/070",
+    "name": "Marill",
+    "supertype": "Pokémon",
+    "number": "047/070",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603770_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603770_400w.jpg"
+    },
+    "tcgplayerId": "603770"
+  },
+  {
+    "id": "jp-xy5-bt-tidal-storm-041/070",
+    "name": "Tentacool - 041/070",
+    "supertype": "Pokémon",
+    "number": "041/070",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603794_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603794_400w.jpg"
+    },
+    "tcgplayerId": "603794"
+  },
+  {
+    "id": "jp-xy5-bt-tidal-storm-055/070",
+    "name": "Delcatty",
+    "supertype": "Pokémon",
+    "number": "055/070",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603738_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603738_400w.jpg"
+    },
+    "tcgplayerId": "603738"
+  },
+  {
+    "id": "jp-xy5-bt-tidal-storm-040/070",
+    "name": "Tentacool - 040/070",
+    "supertype": "Pokémon",
+    "number": "040/070",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603793_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603793_400w.jpg"
+    },
+    "tcgplayerId": "603793"
+  },
+  {
+    "id": "jp-xy5-bt-tidal-storm-024/070",
+    "name": "Spheal",
+    "supertype": "Pokémon",
+    "number": "024/070",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603786_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603786_400w.jpg"
+    },
+    "tcgplayerId": "603786"
+  },
+  {
+    "id": "jp-xy5-bt-tidal-storm-011/070",
+    "name": "Staryu",
+    "supertype": "Pokémon",
+    "number": "011/070",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603789_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603789_400w.jpg"
+    },
+    "tcgplayerId": "603789"
+  },
+  {
+    "id": "jp-xy5-bt-tidal-storm-034/070",
+    "name": "Chinchou",
+    "supertype": "Pokémon",
+    "number": "034/070",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603734_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603734_400w.jpg"
+    },
+    "tcgplayerId": "603734"
+  },
+  {
+    "id": "jp-xy5-bt-tidal-storm-001/070",
+    "name": "Weedle",
+    "supertype": "Pokémon",
+    "number": "001/070",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603800_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603800_400w.jpg"
+    },
+    "tcgplayerId": "603800"
+  },
+  {
+    "id": "jp-xy5-bt-tidal-storm-068/070",
+    "name": "Rough Seas",
+    "supertype": "Pokémon",
+    "number": "068/070",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603779_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603779_400w.jpg"
+    },
+    "tcgplayerId": "603779"
+  },
+  {
+    "id": "jp-xy5-bt-tidal-storm-009/070",
+    "name": "Horsea",
+    "supertype": "Pokémon",
+    "number": "009/070",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603756_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603756_400w.jpg"
+    },
+    "tcgplayerId": "603756"
+  },
+  {
+    "id": "jp-xy5-bt-tidal-storm-027/070",
+    "name": "Clamperl",
+    "supertype": "Pokémon",
+    "number": "027/070",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603735_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603735_400w.jpg"
+    },
+    "tcgplayerId": "603735"
+  },
+  {
+    "id": "jp-xy5-bt-tidal-storm-003/070",
+    "name": "Beedrill",
+    "supertype": "Pokémon",
+    "number": "003/070",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603730_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603730_400w.jpg"
+    },
+    "tcgplayerId": "603730"
+  },
+  {
+    "id": "jp-xy5-bt-tidal-storm-022/070",
+    "name": "Feebas",
+    "supertype": "Pokémon",
+    "number": "022/070",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603747_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603747_400w.jpg"
+    },
+    "tcgplayerId": "603747"
+  }
+]

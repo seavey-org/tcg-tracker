@@ -1,0 +1,86 @@
+[
+  {
+    "id": "jp-xyg-zygarde-ex-perfect-battle-deck-006/019",
+    "name": "Hawlucha",
+    "supertype": "Pokémon",
+    "number": "006/019",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/605404_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/605404_400w.jpg"
+    },
+    "tcgplayerId": "605404"
+  },
+  {
+    "id": "jp-xyg-zygarde-ex-perfect-battle-deck-009/019",
+    "name": "Zygarde EX",
+    "supertype": "Pokémon",
+    "number": "009/019",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/605396_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/605396_400w.jpg"
+    },
+    "tcgplayerId": "605396"
+  },
+  {
+    "id": "jp-xyg-zygarde-ex-perfect-battle-deck-008/019",
+    "name": "Carbink BREAK",
+    "supertype": "Pokémon",
+    "number": "008/019",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/605397_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/605397_400w.jpg"
+    },
+    "tcgplayerId": "605397"
+  },
+  {
+    "id": "jp-xyg-zygarde-ex-perfect-battle-deck-003/019",
+    "name": "Regirock EX",
+    "supertype": "Pokémon",
+    "number": "003/019",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/605401_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/605401_400w.jpg"
+    },
+    "tcgplayerId": "605401"
+  },
+  {
+    "id": "jp-xyg-zygarde-ex-perfect-battle-deck-004/019",
+    "name": "Riolu",
+    "supertype": "Pokémon",
+    "number": "004/019",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/605402_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/605402_400w.jpg"
+    },
+    "tcgplayerId": "605402"
+  },
+  {
+    "id": "jp-xyg-zygarde-ex-perfect-battle-deck-016/019",
+    "name": "Tierno",
+    "supertype": "Pokémon",
+    "number": "016/019",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/605392_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/605392_400w.jpg"
+    },
+    "tcgplayerId": "605392"
+  },
+  {
+    "id": "jp-xyg-zygarde-ex-perfect-battle-deck-002/019",
+    "name": "Larvitar",
+    "supertype": "Pokémon",
+    "number": "002/019",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/605400_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/605400_400w.jpg"
+    },
+    "tcgplayerId": "605400"
+  }
+]

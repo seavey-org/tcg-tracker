@@ -1,0 +1,338 @@
+[
+  {
+    "id": "jp-xy4-phantom-gate-089/088",
+    "name": "Manectric EX - 089/088",
+    "supertype": "Pokémon",
+    "number": "089/088",
+    "rarity": "Super Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603607_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603607_400w.jpg"
+    },
+    "tcgplayerId": "603607"
+  },
+  {
+    "id": "jp-xy4-phantom-gate-033/088",
+    "name": "Gengar EX - 033/088",
+    "supertype": "Pokémon",
+    "number": "033/088",
+    "rarity": "Double Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603572_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603572_400w.jpg"
+    },
+    "tcgplayerId": "603572"
+  },
+  {
+    "id": "jp-xy4-phantom-gate-092/088",
+    "name": "Florges EX - 092/088",
+    "supertype": "Pokémon",
+    "number": "092/088",
+    "rarity": "Super Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603567_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603567_400w.jpg"
+    },
+    "tcgplayerId": "603567"
+  },
+  {
+    "id": "jp-xy4-phantom-gate-006/088",
+    "name": "Swadloon",
+    "supertype": "Pokémon",
+    "number": "006/088",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603626_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603626_400w.jpg"
+    },
+    "tcgplayerId": "603626"
+  },
+  {
+    "id": "jp-xy4-phantom-gate-026/088",
+    "name": "Joltik",
+    "supertype": "Pokémon",
+    "number": "026/088",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603589_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603589_400w.jpg"
+    },
+    "tcgplayerId": "603589"
+  },
+  {
+    "id": "jp-xy4-phantom-gate-086/088",
+    "name": "Lysandre's Trump Card - 086/088",
+    "supertype": "Trainer",
+    "number": "086/088",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603600_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603600_400w.jpg"
+    },
+    "tcgplayerId": "603600"
+  },
+  {
+    "id": "jp-xy4-phantom-gate-095/088",
+    "name": "Lysandre's Trump Card - 095/088",
+    "supertype": "Trainer",
+    "number": "095/088",
+    "rarity": "Super Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603601_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603601_400w.jpg"
+    },
+    "tcgplayerId": "603601"
+  },
+  {
+    "id": "jp-xy4-phantom-gate-069/088",
+    "name": "Blissey",
+    "supertype": "Pokémon",
+    "number": "069/088",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603549_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603549_400w.jpg"
+    },
+    "tcgplayerId": "603549"
+  },
+  {
+    "id": "jp-xy4-phantom-gate-024/088",
+    "name": "Manectric - 024/088",
+    "supertype": "Pokémon",
+    "number": "024/088",
+    "rarity": "Double Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603604_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603604_400w.jpg"
+    },
+    "tcgplayerId": "603604"
+  },
+  {
+    "id": "jp-xy4-phantom-gate-065/088",
+    "name": "Hydreigon",
+    "supertype": "Pokémon",
+    "number": "065/088",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603586_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603586_400w.jpg"
+    },
+    "tcgplayerId": "603586"
+  },
+  {
+    "id": "jp-xy4-phantom-gate-054/088",
+    "name": "Spiritomb",
+    "supertype": "Pokémon",
+    "number": "054/088",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603625_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603625_400w.jpg"
+    },
+    "tcgplayerId": "603625"
+  },
+  {
+    "id": "jp-xy4-phantom-gate-063/088",
+    "name": "Deino",
+    "supertype": "Pokémon",
+    "number": "063/088",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603556_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603556_400w.jpg"
+    },
+    "tcgplayerId": "603556"
+  },
+  {
+    "id": "jp-xy4-phantom-gate-060/088",
+    "name": "Florges EX - 060/088",
+    "supertype": "Pokémon",
+    "number": "060/088",
+    "rarity": "Double Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603566_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603566_400w.jpg"
+    },
+    "tcgplayerId": "603566"
+  },
+  {
+    "id": "jp-xy4-phantom-gate-023/088",
+    "name": "Manectric EX - 023/088",
+    "supertype": "Pokémon",
+    "number": "023/088",
+    "rarity": "Double Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603606_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603606_400w.jpg"
+    },
+    "tcgplayerId": "603606"
+  },
+  {
+    "id": "jp-xy4-phantom-gate-057/088",
+    "name": "Malamar EX - 057/088",
+    "supertype": "Pokémon",
+    "number": "057/088",
+    "rarity": "Double Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603602_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603602_400w.jpg"
+    },
+    "tcgplayerId": "603602"
+  },
+  {
+    "id": "jp-xy4-phantom-gate-048/088",
+    "name": "Boldore",
+    "supertype": "Pokémon",
+    "number": "048/088",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603550_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603550_400w.jpg"
+    },
+    "tcgplayerId": "603550"
+  },
+  {
+    "id": "jp-xy4-phantom-gate-013/088",
+    "name": "Krabby",
+    "supertype": "Pokémon",
+    "number": "013/088",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603592_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603592_400w.jpg"
+    },
+    "tcgplayerId": "603592"
+  },
+  {
+    "id": "jp-xy4-phantom-gate-070/088",
+    "name": "Girafarig",
+    "supertype": "Pokémon",
+    "number": "070/088",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603575_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603575_400w.jpg"
+    },
+    "tcgplayerId": "603575"
+  },
+  {
+    "id": "jp-xy4-phantom-gate-020/088",
+    "name": "Frillish",
+    "supertype": "Pokémon",
+    "number": "020/088",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603568_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603568_400w.jpg"
+    },
+    "tcgplayerId": "603568"
+  },
+  {
+    "id": "jp-xy4-phantom-gate-084/088",
+    "name": "AZ - 084/088",
+    "supertype": "Pokémon",
+    "number": "084/088",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603546_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603546_400w.jpg"
+    },
+    "tcgplayerId": "603546"
+  },
+  {
+    "id": "jp-xy4-phantom-gate-007/088",
+    "name": "Leavanny",
+    "supertype": "Pokémon",
+    "number": "007/088",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603594_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603594_400w.jpg"
+    },
+    "tcgplayerId": "603594"
+  },
+  {
+    "id": "jp-xy4-phantom-gate-037/088",
+    "name": "Swalot",
+    "supertype": "Pokémon",
+    "number": "037/088",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603627_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603627_400w.jpg"
+    },
+    "tcgplayerId": "603627"
+  },
+  {
+    "id": "jp-xy4-phantom-gate-039/088",
+    "name": "Musharna",
+    "supertype": "Pokémon",
+    "number": "039/088",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603612_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603612_400w.jpg"
+    },
+    "tcgplayerId": "603612"
+  },
+  {
+    "id": "jp-xy4-phantom-gate-047/088",
+    "name": "Roggenrola",
+    "supertype": "Pokémon",
+    "number": "047/088",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603621_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603621_400w.jpg"
+    },
+    "tcgplayerId": "603621"
+  },
+  {
+    "id": "jp-xy4-phantom-gate-077/088",
+    "name": "Fletchling",
+    "supertype": "Pokémon",
+    "number": "077/088",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603565_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603565_400w.jpg"
+    },
+    "tcgplayerId": "603565"
+  },
+  {
+    "id": "jp-xy4-phantom-gate-028/088",
+    "name": "Helioptile",
+    "supertype": "Pokémon",
+    "number": "028/088",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603584_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603584_400w.jpg"
+    },
+    "tcgplayerId": "603584"
+  },
+  {
+    "id": "jp-xy4-phantom-gate-064/088",
+    "name": "Zweilous",
+    "supertype": "Pokémon",
+    "number": "064/088",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603641_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603641_400w.jpg"
+    },
+    "tcgplayerId": "603641"
+  },
+  {
+    "id": "jp-xy4-phantom-gate-075/088",
+    "name": "Bunnelby",
+    "supertype": "Pokémon",
+    "number": "075/088",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603551_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603551_400w.jpg"
+    },
+    "tcgplayerId": "603551"
+  }
+]

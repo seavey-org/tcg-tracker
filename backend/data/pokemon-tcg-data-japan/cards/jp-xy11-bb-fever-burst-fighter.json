@@ -1,0 +1,362 @@
+[
+  {
+    "id": "jp-xy11-bb-fever-burst-fighter-059/054",
+    "name": "Volcanion EX - 059/054",
+    "supertype": "Pokémon",
+    "number": "059/054",
+    "rarity": "Ultra Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603261_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603261_400w.jpg"
+    },
+    "tcgplayerId": "603261"
+  },
+  {
+    "id": "jp-xy11-bb-fever-burst-fighter-057/054",
+    "name": "Steelix - 057/054",
+    "supertype": "Pokémon",
+    "number": "057/054",
+    "rarity": "Super Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603252_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603252_400w.jpg"
+    },
+    "tcgplayerId": "603252"
+  },
+  {
+    "id": "jp-xy11-bb-fever-burst-fighter-055/054",
+    "name": "Volcanion EX - 055/054",
+    "supertype": "Pokémon",
+    "number": "055/054",
+    "rarity": "Super Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603260_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603260_400w.jpg"
+    },
+    "tcgplayerId": "603260"
+  },
+  {
+    "id": "jp-xy11-bb-fever-burst-fighter-056/054",
+    "name": "Steelix EX - 056/054",
+    "supertype": "Pokémon",
+    "number": "056/054",
+    "rarity": "Super Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603254_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603254_400w.jpg"
+    },
+    "tcgplayerId": "603254"
+  },
+  {
+    "id": "jp-xy11-bb-fever-burst-fighter-033/054",
+    "name": "Steelix - 033/054",
+    "supertype": "Pokémon",
+    "number": "033/054",
+    "rarity": "Double Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603251_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603251_400w.jpg"
+    },
+    "tcgplayerId": "603251"
+  },
+  {
+    "id": "jp-xy11-bb-fever-burst-fighter-042/054",
+    "name": "Xerneas BREAK",
+    "supertype": "Pokémon",
+    "number": "042/054",
+    "rarity": "Double Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603263_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603263_400w.jpg"
+    },
+    "tcgplayerId": "603263"
+  },
+  {
+    "id": "jp-xy11-bb-fever-burst-fighter-010/054",
+    "name": "Pyroar BREAK",
+    "supertype": "Pokémon",
+    "number": "010/054",
+    "rarity": "Double Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603243_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603243_400w.jpg"
+    },
+    "tcgplayerId": "603243"
+  },
+  {
+    "id": "jp-xy11-bb-fever-burst-fighter-027/054",
+    "name": "Chandelure",
+    "supertype": "Pokémon",
+    "number": "027/054",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603210_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603210_400w.jpg"
+    },
+    "tcgplayerId": "603210"
+  },
+  {
+    "id": "jp-xy11-bb-fever-burst-fighter-014/054",
+    "name": "Gastrodon",
+    "supertype": "Pokémon",
+    "number": "014/054",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603224_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603224_400w.jpg"
+    },
+    "tcgplayerId": "603224"
+  },
+  {
+    "id": "jp-xy11-bb-fever-burst-fighter-041/054",
+    "name": "Xerneas",
+    "supertype": "Pokémon",
+    "number": "041/054",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603262_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603262_400w.jpg"
+    },
+    "tcgplayerId": "603262"
+  },
+  {
+    "id": "jp-xy11-bb-fever-burst-fighter-032/054",
+    "name": "Steelix EX - 032/054",
+    "supertype": "Pokémon",
+    "number": "032/054",
+    "rarity": "Double Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603253_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603253_400w.jpg"
+    },
+    "tcgplayerId": "603253"
+  },
+  {
+    "id": "jp-xy11-bb-fever-burst-fighter-017/054",
+    "name": "Samurott",
+    "supertype": "Pokémon",
+    "number": "017/054",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603245_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603245_400w.jpg"
+    },
+    "tcgplayerId": "603245"
+  },
+  {
+    "id": "jp-xy11-bb-fever-burst-fighter-021/054",
+    "name": "Joltik",
+    "supertype": "Pokémon",
+    "number": "021/054",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603226_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603226_400w.jpg"
+    },
+    "tcgplayerId": "603226"
+  },
+  {
+    "id": "jp-xy11-bb-fever-burst-fighter-015/054",
+    "name": "Oshawott",
+    "supertype": "Pokémon",
+    "number": "015/054",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603237_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603237_400w.jpg"
+    },
+    "tcgplayerId": "603237"
+  },
+  {
+    "id": "jp-xy11-bb-fever-burst-fighter-006/054",
+    "name": "Ponyta",
+    "supertype": "Pokémon",
+    "number": "006/054",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603240_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603240_400w.jpg"
+    },
+    "tcgplayerId": "603240"
+  },
+  {
+    "id": "jp-xy11-bb-fever-burst-fighter-022/054",
+    "name": "Galvantula",
+    "supertype": "Pokémon",
+    "number": "022/054",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603223_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603223_400w.jpg"
+    },
+    "tcgplayerId": "603223"
+  },
+  {
+    "id": "jp-xy11-bb-fever-burst-fighter-034/054",
+    "name": "Shieldon",
+    "supertype": "Pokémon",
+    "number": "034/054",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603248_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603248_400w.jpg"
+    },
+    "tcgplayerId": "603248"
+  },
+  {
+    "id": "jp-xy11-bb-fever-burst-fighter-052/054",
+    "name": "Steelix Spirit Link",
+    "supertype": "Pokémon",
+    "number": "052/054",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603255_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603255_400w.jpg"
+    },
+    "tcgplayerId": "603255"
+  },
+  {
+    "id": "jp-xy11-bb-fever-burst-fighter-044/054",
+    "name": "Aipom",
+    "supertype": "Pokémon",
+    "number": "044/054",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603205_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603205_400w.jpg"
+    },
+    "tcgplayerId": "603205"
+  },
+  {
+    "id": "jp-xy11-bb-fever-burst-fighter-007/054",
+    "name": "Rapidash",
+    "supertype": "Pokémon",
+    "number": "007/054",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603244_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603244_400w.jpg"
+    },
+    "tcgplayerId": "603244"
+  },
+  {
+    "id": "jp-xy11-bb-fever-burst-fighter-009/054",
+    "name": "Pyroar",
+    "supertype": "Pokémon",
+    "number": "009/054",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603242_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603242_400w.jpg"
+    },
+    "tcgplayerId": "603242"
+  },
+  {
+    "id": "jp-xy11-bb-fever-burst-fighter-013/054",
+    "name": "Shellos",
+    "supertype": "Pokémon",
+    "number": "013/054",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603247_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603247_400w.jpg"
+    },
+    "tcgplayerId": "603247"
+  },
+  {
+    "id": "jp-xy11-bb-fever-burst-fighter-011/054",
+    "name": "Volcanion",
+    "supertype": "Pokémon",
+    "number": "011/054",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603258_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603258_400w.jpg"
+    },
+    "tcgplayerId": "603258"
+  },
+  {
+    "id": "jp-xy11-bb-fever-burst-fighter-004/054",
+    "name": "Foongus",
+    "supertype": "Pokémon",
+    "number": "004/054",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603222_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603222_400w.jpg"
+    },
+    "tcgplayerId": "603222"
+  },
+  {
+    "id": "jp-xy11-bb-fever-burst-fighter-029/054",
+    "name": "Probopass",
+    "supertype": "Pokémon",
+    "number": "029/054",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603241_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603241_400w.jpg"
+    },
+    "tcgplayerId": "603241"
+  },
+  {
+    "id": "jp-xy11-bb-fever-burst-fighter-008/054",
+    "name": "Litleo",
+    "supertype": "Pokémon",
+    "number": "008/054",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603232_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603232_400w.jpg"
+    },
+    "tcgplayerId": "603232"
+  },
+  {
+    "id": "jp-xy11-bb-fever-burst-fighter-050/054",
+    "name": "Special Charge",
+    "supertype": "Pokémon",
+    "number": "050/054",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603250_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603250_400w.jpg"
+    },
+    "tcgplayerId": "603250"
+  },
+  {
+    "id": "jp-xy11-bb-fever-burst-fighter-046/054",
+    "name": "Fletchling",
+    "supertype": "Pokémon",
+    "number": "046/054",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603221_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603221_400w.jpg"
+    },
+    "tcgplayerId": "603221"
+  },
+  {
+    "id": "jp-xy11-bb-fever-burst-fighter-023/054",
+    "name": "Drifloon",
+    "supertype": "Pokémon",
+    "number": "023/054",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603218_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603218_400w.jpg"
+    },
+    "tcgplayerId": "603218"
+  },
+  {
+    "id": "jp-xy11-bb-fever-burst-fighter-037/054",
+    "name": "Klang",
+    "supertype": "Pokémon",
+    "number": "037/054",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603227_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603227_400w.jpg"
+    },
+    "tcgplayerId": "603227"
+  }
+]

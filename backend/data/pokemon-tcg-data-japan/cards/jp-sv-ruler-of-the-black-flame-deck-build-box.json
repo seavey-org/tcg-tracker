@@ -1,0 +1,122 @@
+[
+  {
+    "id": "jp-sv-ruler-of-the-black-flame-deck-build-box-ruler-of-the-black-flame-deck-build-box",
+    "name": "Ruler of the Black Flame Deck Build Box",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/594102_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/594102_400w.jpg"
+    },
+    "tcgplayerId": "594102"
+  },
+  {
+    "id": "jp-sv-ruler-of-the-black-flame-deck-build-box-005/038",
+    "name": "Mew",
+    "supertype": "Pokémon",
+    "number": "005/038",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/588956_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/588956_400w.jpg"
+    },
+    "tcgplayerId": "588956"
+  },
+  {
+    "id": "jp-sv-ruler-of-the-black-flame-deck-build-box-001/038",
+    "name": "Radiant Charizard",
+    "supertype": "Pokémon",
+    "number": "001/038",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/588968_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/588968_400w.jpg"
+    },
+    "tcgplayerId": "588968"
+  },
+  {
+    "id": "jp-sv-ruler-of-the-black-flame-deck-build-box-007/038",
+    "name": "Kirlia",
+    "supertype": "Pokémon",
+    "number": "007/038",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/588971_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/588971_400w.jpg"
+    },
+    "tcgplayerId": "588971"
+  },
+  {
+    "id": "jp-sv-ruler-of-the-black-flame-deck-build-box-004/038",
+    "name": "Radiant Greninja",
+    "supertype": "Pokémon",
+    "number": "004/038",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/588963_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/588963_400w.jpg"
+    },
+    "tcgplayerId": "588963"
+  },
+  {
+    "id": "jp-sv-ruler-of-the-black-flame-deck-build-box-008/038",
+    "name": "Bidoof",
+    "supertype": "Pokémon",
+    "number": "008/038",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/588974_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/588974_400w.jpg"
+    },
+    "tcgplayerId": "588974"
+  },
+  {
+    "id": "jp-sv-ruler-of-the-black-flame-deck-build-box-002/038",
+    "name": "Lumineon V",
+    "supertype": "Pokémon",
+    "number": "002/038",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/588960_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/588960_400w.jpg"
+    },
+    "tcgplayerId": "588960"
+  },
+  {
+    "id": "jp-sv-ruler-of-the-black-flame-deck-build-box-028/038",
+    "name": "Serena",
+    "supertype": "Pokémon",
+    "number": "028/038",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/588972_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/588972_400w.jpg"
+    },
+    "tcgplayerId": "588972"
+  },
+  {
+    "id": "jp-sv-ruler-of-the-black-flame-deck-build-box-006/038",
+    "name": "Ralts",
+    "supertype": "Pokémon",
+    "number": "006/038",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/588970_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/588970_400w.jpg"
+    },
+    "tcgplayerId": "588970"
+  },
+  {
+    "id": "jp-sv-ruler-of-the-black-flame-deck-build-box-027/038",
+    "name": "Avery",
+    "supertype": "Pokémon",
+    "number": "027/038",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/588952_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/588952_400w.jpg"
+    },
+    "tcgplayerId": "588952"
+  }
+]

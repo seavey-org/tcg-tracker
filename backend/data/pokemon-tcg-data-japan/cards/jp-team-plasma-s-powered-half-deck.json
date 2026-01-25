@@ -1,0 +1,26 @@
+[
+  {
+    "id": "jp-team-plasma-s-powered-half-deck-004/017",
+    "name": "Garbodor (Team Plasma)",
+    "supertype": "Pokémon",
+    "number": "004/017",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/604927_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/604927_400w.jpg"
+    },
+    "tcgplayerId": "604927"
+  },
+  {
+    "id": "jp-team-plasma-s-powered-half-deck-006/017",
+    "name": "Klink",
+    "supertype": "Pokémon",
+    "number": "006/017",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/604929_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/604929_400w.jpg"
+    },
+    "tcgplayerId": "604929"
+  }
+]

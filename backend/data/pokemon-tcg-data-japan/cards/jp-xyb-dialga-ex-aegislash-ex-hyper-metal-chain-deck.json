@@ -1,0 +1,62 @@
+[
+  {
+    "id": "jp-xyb-dialga-ex-aegislash-ex-hyper-metal-chain-deck-005/018",
+    "name": "Aegislash EX",
+    "supertype": "Pokémon",
+    "number": "005/018",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/605117_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/605117_400w.jpg"
+    },
+    "tcgplayerId": "605117"
+  },
+  {
+    "id": "jp-xyb-dialga-ex-aegislash-ex-hyper-metal-chain-deck-004/018",
+    "name": "Dialga EX - 004/018",
+    "supertype": "Pokémon",
+    "number": "004/018",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/605118_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/605118_400w.jpg"
+    },
+    "tcgplayerId": "605118"
+  },
+  {
+    "id": "jp-xyb-dialga-ex-aegislash-ex-hyper-metal-chain-deck-001/018",
+    "name": "Skarmory",
+    "supertype": "Pokémon",
+    "number": "001/018",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/605120_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/605120_400w.jpg"
+    },
+    "tcgplayerId": "605120"
+  },
+  {
+    "id": "jp-xyb-dialga-ex-aegislash-ex-hyper-metal-chain-deck-007/018",
+    "name": "Furfrou",
+    "supertype": "Pokémon",
+    "number": "007/018",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/605112_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/605112_400w.jpg"
+    },
+    "tcgplayerId": "605112"
+  },
+  {
+    "id": "jp-xyb-dialga-ex-aegislash-ex-hyper-metal-chain-deck-006/018",
+    "name": "Klefki",
+    "supertype": "Pokémon",
+    "number": "006/018",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/605123_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/605123_400w.jpg"
+    },
+    "tcgplayerId": "605123"
+  }
+]

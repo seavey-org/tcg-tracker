@@ -1,0 +1,38 @@
+[
+  {
+    "id": "jp-torchic-constructed-starter-deck-002/019",
+    "name": "Torchic - 002/019",
+    "supertype": "Pokémon",
+    "number": "002/019",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/614016_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/614016_400w.jpg"
+    },
+    "tcgplayerId": "614016"
+  },
+  {
+    "id": "jp-torchic-constructed-starter-deck-001/019",
+    "name": "Magmar ex",
+    "supertype": "Pokémon",
+    "number": "001/019",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/614006_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/614006_400w.jpg"
+    },
+    "tcgplayerId": "614006"
+  },
+  {
+    "id": "jp-torchic-constructed-starter-deck-004/019",
+    "name": "Combusken - 004/019",
+    "supertype": "Pokémon",
+    "number": "004/019",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/614000_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/614000_400w.jpg"
+    },
+    "tcgplayerId": "614000"
+  }
+]

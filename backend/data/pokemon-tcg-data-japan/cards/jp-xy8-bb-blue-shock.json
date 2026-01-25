@@ -1,0 +1,362 @@
+[
+  {
+    "id": "jp-xy8-bb-blue-shock-065/059",
+    "name": "Mewtwo EX - 065/059",
+    "supertype": "Pokémon",
+    "number": "065/059",
+    "rarity": "Ultra Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/604028_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/604028_400w.jpg"
+    },
+    "tcgplayerId": "604028"
+  },
+  {
+    "id": "jp-xy8-bb-blue-shock-064/059",
+    "name": "Brigette - 064/059",
+    "supertype": "Pokémon",
+    "number": "064/059",
+    "rarity": "Super Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603998_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603998_400w.jpg"
+    },
+    "tcgplayerId": "603998"
+  },
+  {
+    "id": "jp-xy8-bb-blue-shock-026/059",
+    "name": "Mewtwo - 026/059",
+    "supertype": "Pokémon",
+    "number": "026/059",
+    "rarity": "Double Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/604024_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/604024_400w.jpg"
+    },
+    "tcgplayerId": "604024"
+  },
+  {
+    "id": "jp-xy8-bb-blue-shock-015/059",
+    "name": "Glalie - 015/059",
+    "supertype": "Pokémon",
+    "number": "015/059",
+    "rarity": "Double Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/604013_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/604013_400w.jpg"
+    },
+    "tcgplayerId": "604013"
+  },
+  {
+    "id": "jp-xy8-bb-blue-shock-060/059",
+    "name": "Glalie EX - 060/059",
+    "supertype": "Pokémon",
+    "number": "060/059",
+    "rarity": "Super Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/604016_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/604016_400w.jpg"
+    },
+    "tcgplayerId": "604016"
+  },
+  {
+    "id": "jp-xy8-bb-blue-shock-047/059",
+    "name": "Haxorus",
+    "supertype": "Pokémon",
+    "number": "047/059",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/604020_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/604020_400w.jpg"
+    },
+    "tcgplayerId": "604020"
+  },
+  {
+    "id": "jp-xy8-bb-blue-shock-033/059",
+    "name": "Meloetta",
+    "supertype": "Pokémon",
+    "number": "033/059",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/604023_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/604023_400w.jpg"
+    },
+    "tcgplayerId": "604023"
+  },
+  {
+    "id": "jp-xy8-bb-blue-shock-037/059",
+    "name": "Zoroark BREAK",
+    "supertype": "Pokémon",
+    "number": "037/059",
+    "rarity": "Double Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/604058_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/604058_400w.jpg"
+    },
+    "tcgplayerId": "604058"
+  },
+  {
+    "id": "jp-xy8-bb-blue-shock-022/059",
+    "name": "Gastly",
+    "supertype": "Pokémon",
+    "number": "022/059",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/604011_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/604011_400w.jpg"
+    },
+    "tcgplayerId": "604011"
+  },
+  {
+    "id": "jp-xy8-bb-blue-shock-052/059",
+    "name": "Ursaring",
+    "supertype": "Pokémon",
+    "number": "052/059",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/604050_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/604050_400w.jpg"
+    },
+    "tcgplayerId": "604050"
+  },
+  {
+    "id": "jp-xy8-bb-blue-shock-036/059",
+    "name": "Zoroark",
+    "supertype": "Pokémon",
+    "number": "036/059",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/604057_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/604057_400w.jpg"
+    },
+    "tcgplayerId": "604057"
+  },
+  {
+    "id": "jp-xy8-bb-blue-shock-044/059",
+    "name": "Xerneas",
+    "supertype": "Pokémon",
+    "number": "044/059",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/604056_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/604056_400w.jpg"
+    },
+    "tcgplayerId": "604056"
+  },
+  {
+    "id": "jp-xy8-bb-blue-shock-053/059",
+    "name": "Smeargle",
+    "supertype": "Pokémon",
+    "number": "053/059",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/604044_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/604044_400w.jpg"
+    },
+    "tcgplayerId": "604044"
+  },
+  {
+    "id": "jp-xy8-bb-blue-shock-008/059",
+    "name": "Vivillon",
+    "supertype": "Pokémon",
+    "number": "008/059",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/604054_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/604054_400w.jpg"
+    },
+    "tcgplayerId": "604054"
+  },
+  {
+    "id": "jp-xy8-bb-blue-shock-011/059",
+    "name": "Typhlosion",
+    "supertype": "Pokémon",
+    "number": "011/059",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/604049_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/604049_400w.jpg"
+    },
+    "tcgplayerId": "604049"
+  },
+  {
+    "id": "jp-xy8-bb-blue-shock-023/059",
+    "name": "Haunter",
+    "supertype": "Pokémon",
+    "number": "023/059",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/604019_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/604019_400w.jpg"
+    },
+    "tcgplayerId": "604019"
+  },
+  {
+    "id": "jp-xy8-bb-blue-shock-009/059",
+    "name": "Cyndaquil",
+    "supertype": "Pokémon",
+    "number": "009/059",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/604002_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/604002_400w.jpg"
+    },
+    "tcgplayerId": "604002"
+  },
+  {
+    "id": "jp-xy8-bb-blue-shock-031/059",
+    "name": "Sandshrew",
+    "supertype": "Pokémon",
+    "number": "031/059",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/604039_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/604039_400w.jpg"
+    },
+    "tcgplayerId": "604039"
+  },
+  {
+    "id": "jp-xy8-bb-blue-shock-035/059",
+    "name": "Zorua",
+    "supertype": "Pokémon",
+    "number": "035/059",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/604059_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/604059_400w.jpg"
+    },
+    "tcgplayerId": "604059"
+  },
+  {
+    "id": "jp-xy8-bb-blue-shock-049/059",
+    "name": "Hoothoot",
+    "supertype": "Pokémon",
+    "number": "049/059",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/604021_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/604021_400w.jpg"
+    },
+    "tcgplayerId": "604021"
+  },
+  {
+    "id": "jp-xy8-bb-blue-shock-002/059",
+    "name": "Cacnea",
+    "supertype": "Pokémon",
+    "number": "002/059",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603999_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603999_400w.jpg"
+    },
+    "tcgplayerId": "603999"
+  },
+  {
+    "id": "jp-xy8-bb-blue-shock-030/059",
+    "name": "Beheeyem",
+    "supertype": "Pokémon",
+    "number": "030/059",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603996_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603996_400w.jpg"
+    },
+    "tcgplayerId": "603996"
+  },
+  {
+    "id": "jp-xy8-bb-blue-shock-045/059",
+    "name": "Axew",
+    "supertype": "Pokémon",
+    "number": "045/059",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603995_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603995_400w.jpg"
+    },
+    "tcgplayerId": "603995"
+  },
+  {
+    "id": "jp-xy8-bb-blue-shock-042/059",
+    "name": "Florges",
+    "supertype": "Pokémon",
+    "number": "042/059",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/604008_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/604008_400w.jpg"
+    },
+    "tcgplayerId": "604008"
+  },
+  {
+    "id": "jp-xy8-bb-blue-shock-038/059",
+    "name": "Snubbull",
+    "supertype": "Pokémon",
+    "number": "038/059",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/604045_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/604045_400w.jpg"
+    },
+    "tcgplayerId": "604045"
+  },
+  {
+    "id": "jp-xy8-bb-blue-shock-010/059",
+    "name": "Quilava",
+    "supertype": "Pokémon",
+    "number": "010/059",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/604036_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/604036_400w.jpg"
+    },
+    "tcgplayerId": "604036"
+  },
+  {
+    "id": "jp-xy8-bb-blue-shock-051/059",
+    "name": "Teddiursa",
+    "supertype": "Pokémon",
+    "number": "051/059",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/604048_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/604048_400w.jpg"
+    },
+    "tcgplayerId": "604048"
+  },
+  {
+    "id": "jp-xy8-bb-blue-shock-005/059",
+    "name": "Chespin",
+    "supertype": "Pokémon",
+    "number": "005/059",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/604001_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/604001_400w.jpg"
+    },
+    "tcgplayerId": "604001"
+  },
+  {
+    "id": "jp-xy8-bb-blue-shock-040/059",
+    "name": "Flabebe",
+    "supertype": "Pokémon",
+    "number": "040/059",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/604005_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/604005_400w.jpg"
+    },
+    "tcgplayerId": "604005"
+  },
+  {
+    "id": "jp-xy8-bb-blue-shock-001/059",
+    "name": "Pinsir",
+    "supertype": "Pokémon",
+    "number": "001/059",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/604035_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/604035_400w.jpg"
+    },
+    "tcgplayerId": "604035"
+  }
+]

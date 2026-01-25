@@ -1,0 +1,614 @@
+[
+  {
+    "id": "jp-xy3-rising-fist-100/096",
+    "name": "Dragonite EX - 100/096",
+    "supertype": "Pokémon",
+    "number": "100/096",
+    "rarity": "Super Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603456_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603456_400w.jpg"
+    },
+    "tcgplayerId": "603456"
+  },
+  {
+    "id": "jp-xy3-rising-fist-005/096",
+    "name": "Heracross - 005/096",
+    "supertype": "Pokémon",
+    "number": "005/096",
+    "rarity": "Double Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603475_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603475_400w.jpg"
+    },
+    "tcgplayerId": "603475"
+  },
+  {
+    "id": "jp-xy3-rising-fist-017/096",
+    "name": "Poliwrath",
+    "supertype": "Pokémon",
+    "number": "017/096",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603517_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603517_400w.jpg"
+    },
+    "tcgplayerId": "603517"
+  },
+  {
+    "id": "jp-xy3-rising-fist-067/096",
+    "name": "Sylveon",
+    "supertype": "Pokémon",
+    "number": "067/096",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603530_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603530_400w.jpg"
+    },
+    "tcgplayerId": "603530"
+  },
+  {
+    "id": "jp-xy3-rising-fist-069/096",
+    "name": "Dragonite EX - 069/096",
+    "supertype": "Pokémon",
+    "number": "069/096",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603455_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603455_400w.jpg"
+    },
+    "tcgplayerId": "603455"
+  },
+  {
+    "id": "jp-xy3-rising-fist-026/096",
+    "name": "Aurorus",
+    "supertype": "Pokémon",
+    "number": "026/096",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603441_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603441_400w.jpg"
+    },
+    "tcgplayerId": "603441"
+  },
+  {
+    "id": "jp-xy3-rising-fist-019/096",
+    "name": "Glaceon",
+    "supertype": "Pokémon",
+    "number": "019/096",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603467_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603467_400w.jpg"
+    },
+    "tcgplayerId": "603467"
+  },
+  {
+    "id": "jp-xy3-rising-fist-007/096",
+    "name": "Leafeon",
+    "supertype": "Pokémon",
+    "number": "007/096",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603490_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603490_400w.jpg"
+    },
+    "tcgplayerId": "603490"
+  },
+  {
+    "id": "jp-xy3-rising-fist-014/096",
+    "name": "Blaziken",
+    "supertype": "Pokémon",
+    "number": "014/096",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603446_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603446_400w.jpg"
+    },
+    "tcgplayerId": "603446"
+  },
+  {
+    "id": "jp-xy3-rising-fist-058/096",
+    "name": "Tyrunt",
+    "supertype": "Pokémon",
+    "number": "058/096",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603538_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603538_400w.jpg"
+    },
+    "tcgplayerId": "603538"
+  },
+  {
+    "id": "jp-xy3-rising-fist-052/096",
+    "name": "Lucario EX - 052/096",
+    "supertype": "Pokémon",
+    "number": "052/096",
+    "rarity": "Double Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603495_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603495_400w.jpg"
+    },
+    "tcgplayerId": "603495"
+  },
+  {
+    "id": "jp-xy3-rising-fist-004/096",
+    "name": "Heracross EX - 004/096",
+    "supertype": "Pokémon",
+    "number": "004/096",
+    "rarity": "Double Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603477_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603477_400w.jpg"
+    },
+    "tcgplayerId": "603477"
+  },
+  {
+    "id": "jp-xy3-rising-fist-059/096",
+    "name": "Tyrantrum",
+    "supertype": "Pokémon",
+    "number": "059/096",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603537_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603537_400w.jpg"
+    },
+    "tcgplayerId": "603537"
+  },
+  {
+    "id": "jp-xy3-rising-fist-064/096",
+    "name": "Pangoro",
+    "supertype": "Pokémon",
+    "number": "064/096",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603511_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603511_400w.jpg"
+    },
+    "tcgplayerId": "603511"
+  },
+  {
+    "id": "jp-xy3-rising-fist-060/096",
+    "name": "Hawlucha",
+    "supertype": "Pokémon",
+    "number": "060/096",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603474_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603474_400w.jpg"
+    },
+    "tcgplayerId": "603474"
+  },
+  {
+    "id": "jp-xy3-rising-fist-025/096",
+    "name": "Amaura",
+    "supertype": "Pokémon",
+    "number": "025/096",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603440_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603440_400w.jpg"
+    },
+    "tcgplayerId": "603440"
+  },
+  {
+    "id": "jp-xy3-rising-fist-020/096",
+    "name": "Seismitoad EX - 020/096",
+    "supertype": "Pokémon",
+    "number": "020/096",
+    "rarity": "Double Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603521_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603521_400w.jpg"
+    },
+    "tcgplayerId": "603521"
+  },
+  {
+    "id": "jp-xy3-rising-fist-029/096",
+    "name": "Plusle",
+    "supertype": "Pokémon",
+    "number": "029/096",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603513_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603513_400w.jpg"
+    },
+    "tcgplayerId": "603513"
+  },
+  {
+    "id": "jp-xy3-rising-fist-028/096",
+    "name": "Electivire",
+    "supertype": "Pokémon",
+    "number": "028/096",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603461_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603461_400w.jpg"
+    },
+    "tcgplayerId": "603461"
+  },
+  {
+    "id": "jp-xy3-rising-fist-096/096",
+    "name": "Strong Energy",
+    "supertype": "Energy",
+    "number": "096/096",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603529_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603529_400w.jpg"
+    },
+    "tcgplayerId": "603529"
+  },
+  {
+    "id": "jp-xy3-rising-fist-072/096",
+    "name": "Noivern",
+    "supertype": "Pokémon",
+    "number": "072/096",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603509_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603509_400w.jpg"
+    },
+    "tcgplayerId": "603509"
+  },
+  {
+    "id": "jp-xy3-rising-fist-011/096",
+    "name": "Magmortar",
+    "supertype": "Pokémon",
+    "number": "011/096",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603501_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603501_400w.jpg"
+    },
+    "tcgplayerId": "603501"
+  },
+  {
+    "id": "jp-xy3-rising-fist-027/096",
+    "name": "Electabuzz",
+    "supertype": "Pokémon",
+    "number": "027/096",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603460_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603460_400w.jpg"
+    },
+    "tcgplayerId": "603460"
+  },
+  {
+    "id": "jp-xy3-rising-fist-047/096",
+    "name": "Hitmontop",
+    "supertype": "Pokémon",
+    "number": "047/096",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603482_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603482_400w.jpg"
+    },
+    "tcgplayerId": "603482"
+  },
+  {
+    "id": "jp-xy3-rising-fist-009/096",
+    "name": "Accelgor",
+    "supertype": "Pokémon",
+    "number": "009/096",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603439_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603439_400w.jpg"
+    },
+    "tcgplayerId": "603439"
+  },
+  {
+    "id": "jp-xy3-rising-fist-054/096",
+    "name": "Mienfoo",
+    "supertype": "Pokémon",
+    "number": "054/096",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603504_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603504_400w.jpg"
+    },
+    "tcgplayerId": "603504"
+  },
+  {
+    "id": "jp-xy3-rising-fist-021/096",
+    "name": "Cubchoo",
+    "supertype": "Pokémon",
+    "number": "021/096",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603453_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603453_400w.jpg"
+    },
+    "tcgplayerId": "603453"
+  },
+  {
+    "id": "jp-xy3-rising-fist-035/096",
+    "name": "Jynx",
+    "supertype": "Pokémon",
+    "number": "035/096",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603485_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603485_400w.jpg"
+    },
+    "tcgplayerId": "603485"
+  },
+  {
+    "id": "jp-xy3-rising-fist-085/096",
+    "name": "Jaw Fossil",
+    "supertype": "Pokémon",
+    "number": "085/096",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603484_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603484_400w.jpg"
+    },
+    "tcgplayerId": "603484"
+  },
+  {
+    "id": "jp-xy3-rising-fist-022/096",
+    "name": "Beartic",
+    "supertype": "Pokémon",
+    "number": "022/096",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603444_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603444_400w.jpg"
+    },
+    "tcgplayerId": "603444"
+  },
+  {
+    "id": "jp-xy3-rising-fist-071/096",
+    "name": "Flygon",
+    "supertype": "Pokémon",
+    "number": "071/096",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603463_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603463_400w.jpg"
+    },
+    "tcgplayerId": "603463"
+  },
+  {
+    "id": "jp-xy3-rising-fist-073/096",
+    "name": "Lickitung",
+    "supertype": "Pokémon",
+    "number": "073/096",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603492_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603492_400w.jpg"
+    },
+    "tcgplayerId": "603492"
+  },
+  {
+    "id": "jp-xy3-rising-fist-062/096",
+    "name": "Scraggy",
+    "supertype": "Pokémon",
+    "number": "062/096",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603520_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603520_400w.jpg"
+    },
+    "tcgplayerId": "603520"
+  },
+  {
+    "id": "jp-xy3-rising-fist-046/096",
+    "name": "Hitmonchan",
+    "supertype": "Pokémon",
+    "number": "046/096",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603480_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603480_400w.jpg"
+    },
+    "tcgplayerId": "603480"
+  },
+  {
+    "id": "jp-xy3-rising-fist-030/096",
+    "name": "Minun",
+    "supertype": "Pokémon",
+    "number": "030/096",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603506_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603506_400w.jpg"
+    },
+    "tcgplayerId": "603506"
+  },
+  {
+    "id": "jp-xy3-rising-fist-086/096",
+    "name": "Sail Fossil",
+    "supertype": "Pokémon",
+    "number": "086/096",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603518_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603518_400w.jpg"
+    },
+    "tcgplayerId": "603518"
+  },
+  {
+    "id": "jp-xy3-rising-fist-057/096",
+    "name": "Pancham",
+    "supertype": "Pokémon",
+    "number": "057/096",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603510_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603510_400w.jpg"
+    },
+    "tcgplayerId": "603510"
+  },
+  {
+    "id": "jp-xy3-rising-fist-042/096",
+    "name": "Machop",
+    "supertype": "Pokémon",
+    "number": "042/096",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603499_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603499_400w.jpg"
+    },
+    "tcgplayerId": "603499"
+  },
+  {
+    "id": "jp-xy3-rising-fist-041/096",
+    "name": "Golurk",
+    "supertype": "Pokémon",
+    "number": "041/096",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603469_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603469_400w.jpg"
+    },
+    "tcgplayerId": "603469"
+  },
+  {
+    "id": "jp-xy3-rising-fist-082/096",
+    "name": "Noibat",
+    "supertype": "Pokémon",
+    "number": "082/096",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603508_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603508_400w.jpg"
+    },
+    "tcgplayerId": "603508"
+  },
+  {
+    "id": "jp-xy3-rising-fist-055/096",
+    "name": "Mienshao",
+    "supertype": "Pokémon",
+    "number": "055/096",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603505_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603505_400w.jpg"
+    },
+    "tcgplayerId": "603505"
+  },
+  {
+    "id": "jp-xy3-rising-fist-015/096",
+    "name": "Poliwag",
+    "supertype": "Pokémon",
+    "number": "015/096",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603515_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603515_400w.jpg"
+    },
+    "tcgplayerId": "603515"
+  },
+  {
+    "id": "jp-xy3-rising-fist-040/096",
+    "name": "Golett",
+    "supertype": "Pokémon",
+    "number": "040/096",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603468_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603468_400w.jpg"
+    },
+    "tcgplayerId": "603468"
+  },
+  {
+    "id": "jp-xy3-rising-fist-068/096",
+    "name": "Klefki",
+    "supertype": "Pokémon",
+    "number": "068/096",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603486_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603486_400w.jpg"
+    },
+    "tcgplayerId": "603486"
+  },
+  {
+    "id": "jp-xy3-rising-fist-038/096",
+    "name": "Gothorita",
+    "supertype": "Pokémon",
+    "number": "038/096",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603472_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603472_400w.jpg"
+    },
+    "tcgplayerId": "603472"
+  },
+  {
+    "id": "jp-xy3-rising-fist-010/096",
+    "name": "Magmar",
+    "supertype": "Pokémon",
+    "number": "010/096",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603500_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603500_400w.jpg"
+    },
+    "tcgplayerId": "603500"
+  },
+  {
+    "id": "jp-xy3-rising-fist-031/096",
+    "name": "Thundurus",
+    "supertype": "Pokémon",
+    "number": "031/096",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603531_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603531_400w.jpg"
+    },
+    "tcgplayerId": "603531"
+  },
+  {
+    "id": "jp-xy3-rising-fist-023/096",
+    "name": "Clauncher",
+    "supertype": "Pokémon",
+    "number": "023/096",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603448_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603448_400w.jpg"
+    },
+    "tcgplayerId": "603448"
+  },
+  {
+    "id": "jp-xy3-rising-fist-037/096",
+    "name": "Gothita",
+    "supertype": "Pokémon",
+    "number": "037/096",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603470_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603470_400w.jpg"
+    },
+    "tcgplayerId": "603470"
+  },
+  {
+    "id": "jp-xy3-rising-fist-076/096",
+    "name": "Slakoth",
+    "supertype": "Pokémon",
+    "number": "076/096",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603527_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603527_400w.jpg"
+    },
+    "tcgplayerId": "603527"
+  },
+  {
+    "id": "jp-xy3-rising-fist-065/096",
+    "name": "Clefairy",
+    "supertype": "Pokémon",
+    "number": "065/096",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603451_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603451_400w.jpg"
+    },
+    "tcgplayerId": "603451"
+  }
+]

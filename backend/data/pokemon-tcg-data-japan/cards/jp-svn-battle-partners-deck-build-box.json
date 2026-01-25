@@ -1,0 +1,98 @@
+[
+  {
+    "id": "jp-svn-battle-partners-deck-build-box-battle-partners-deck-build-box",
+    "name": "Battle Partners Deck Build Box",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/614704_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/614704_400w.jpg"
+    },
+    "tcgplayerId": "614704"
+  },
+  {
+    "id": "jp-svn-battle-partners-deck-build-box-001/045",
+    "name": "Mew ex",
+    "supertype": "Pokémon",
+    "number": "001/045",
+    "rarity": "Promo",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/632755_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/632755_400w.jpg"
+    },
+    "tcgplayerId": "632755"
+  },
+  {
+    "id": "jp-svn-battle-partners-deck-build-box-009/045",
+    "name": "Squawkabilly ex",
+    "supertype": "Pokémon",
+    "number": "009/045",
+    "rarity": "Promo",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/632786_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/632786_400w.jpg"
+    },
+    "tcgplayerId": "632786"
+  },
+  {
+    "id": "jp-svn-battle-partners-deck-build-box-006/045",
+    "name": "Pidgeot ex",
+    "supertype": "Pokémon",
+    "number": "006/045",
+    "rarity": "Promo",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/632767_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/632767_400w.jpg"
+    },
+    "tcgplayerId": "632767"
+  },
+  {
+    "id": "jp-svn-battle-partners-deck-build-box-020/045",
+    "name": "Prime Catcher",
+    "supertype": "Pokémon",
+    "number": "020/045",
+    "rarity": "Promo",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/632802_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/632802_400w.jpg"
+    },
+    "tcgplayerId": "632802"
+  },
+  {
+    "id": "jp-svn-battle-partners-deck-build-box-002/045",
+    "name": "Fezandipiti ex",
+    "supertype": "Pokémon",
+    "number": "002/045",
+    "rarity": "Promo",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/632756_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/632756_400w.jpg"
+    },
+    "tcgplayerId": "632756"
+  },
+  {
+    "id": "jp-svn-battle-partners-deck-build-box-023/045",
+    "name": "Night Stretcher",
+    "supertype": "Pokémon",
+    "number": "023/045",
+    "rarity": "Promo",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/632807_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/632807_400w.jpg"
+    },
+    "tcgplayerId": "632807"
+  },
+  {
+    "id": "jp-svn-battle-partners-deck-build-box-003/045",
+    "name": "Tatsugiri",
+    "supertype": "Pokémon",
+    "number": "003/045",
+    "rarity": "Promo",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/632757_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/632757_400w.jpg"
+    },
+    "tcgplayerId": "632757"
+  }
+]

@@ -1,0 +1,86 @@
+[
+  {
+    "id": "jp-xy-beginning-set-026/039",
+    "name": "Snorlax",
+    "supertype": "Pokémon",
+    "number": "026/039",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/606215_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/606215_400w.jpg"
+    },
+    "tcgplayerId": "606215"
+  },
+  {
+    "id": "jp-xy-beginning-set-022/039",
+    "name": "Snubbull",
+    "supertype": "Pokémon",
+    "number": "022/039",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/606216_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/606216_400w.jpg"
+    },
+    "tcgplayerId": "606216"
+  },
+  {
+    "id": "jp-xy-beginning-set-014/039",
+    "name": "Greninja",
+    "supertype": "Pokémon",
+    "number": "014/039",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/606199_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/606199_400w.jpg"
+    },
+    "tcgplayerId": "606199"
+  },
+  {
+    "id": "jp-xy-beginning-set-004/039",
+    "name": "Quilladin",
+    "supertype": "Pokémon",
+    "number": "004/039",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/606212_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/606212_400w.jpg"
+    },
+    "tcgplayerId": "606212"
+  },
+  {
+    "id": "jp-xy-beginning-set-010/039",
+    "name": "Delphox",
+    "supertype": "Pokémon",
+    "number": "010/039",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/606190_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/606190_400w.jpg"
+    },
+    "tcgplayerId": "606190"
+  },
+  {
+    "id": "jp-xy-beginning-set-016/039",
+    "name": "Poochyena",
+    "supertype": "Pokémon",
+    "number": "016/039",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/606210_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/606210_400w.jpg"
+    },
+    "tcgplayerId": "606210"
+  },
+  {
+    "id": "jp-xy-beginning-set-013/039",
+    "name": "Frogadier",
+    "supertype": "Pokémon",
+    "number": "013/039",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/606195_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/606195_400w.jpg"
+    },
+    "tcgplayerId": "606195"
+  }
+]

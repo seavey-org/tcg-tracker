@@ -1,0 +1,770 @@
+[
+  {
+    "id": "jp-xy7-bandit-ring-094/081",
+    "name": "Primal Groudon EX",
+    "supertype": "Pokémon",
+    "number": "094/081",
+    "rarity": "Ultra Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603961_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603961_400w.jpg"
+    },
+    "tcgplayerId": "603961"
+  },
+  {
+    "id": "jp-xy7-bandit-ring-095/081",
+    "name": "Rayquaza",
+    "supertype": "Pokémon",
+    "number": "095/081",
+    "rarity": "Ultra Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603965_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603965_400w.jpg"
+    },
+    "tcgplayerId": "603965"
+  },
+  {
+    "id": "jp-xy7-bandit-ring-093/081",
+    "name": "Primal Kyogre EX",
+    "supertype": "Pokémon",
+    "number": "093/081",
+    "rarity": "Ultra Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603962_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603962_400w.jpg"
+    },
+    "tcgplayerId": "603962"
+  },
+  {
+    "id": "jp-xy7-bandit-ring-021/081",
+    "name": "Gyarados - 021/081",
+    "supertype": "Pokémon",
+    "number": "021/081",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603932_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603932_400w.jpg"
+    },
+    "tcgplayerId": "603932"
+  },
+  {
+    "id": "jp-xy7-bandit-ring-092/081",
+    "name": "Lugia EX - 092/081",
+    "supertype": "Pokémon",
+    "number": "092/081",
+    "rarity": "Super Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603945_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603945_400w.jpg"
+    },
+    "tcgplayerId": "603945"
+  },
+  {
+    "id": "jp-xy7-bandit-ring-087/081",
+    "name": "Hoopa EX - 087/081",
+    "supertype": "Pokémon",
+    "number": "087/081",
+    "rarity": "Super Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603935_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603935_400w.jpg"
+    },
+    "tcgplayerId": "603935"
+  },
+  {
+    "id": "jp-xy7-bandit-ring-083/081",
+    "name": "Sceptile - 083/081",
+    "supertype": "Pokémon",
+    "number": "083/081",
+    "rarity": "Super Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603973_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603973_400w.jpg"
+    },
+    "tcgplayerId": "603973"
+  },
+  {
+    "id": "jp-xy7-bandit-ring-086/081",
+    "name": "Ampharos - 086/081",
+    "supertype": "Pokémon",
+    "number": "086/081",
+    "rarity": "Super Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603900_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603900_400w.jpg"
+    },
+    "tcgplayerId": "603900"
+  },
+  {
+    "id": "jp-xy7-bandit-ring-085/081",
+    "name": "Ampharos EX - 085/081",
+    "supertype": "Pokémon",
+    "number": "085/081",
+    "rarity": "Super Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603902_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603902_400w.jpg"
+    },
+    "tcgplayerId": "603902"
+  },
+  {
+    "id": "jp-xy7-bandit-ring-082/081",
+    "name": "Sceptile EX - 082/081",
+    "supertype": "Pokémon",
+    "number": "082/081",
+    "rarity": "Super Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603975_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603975_400w.jpg"
+    },
+    "tcgplayerId": "603975"
+  },
+  {
+    "id": "jp-xy7-bandit-ring-043/081",
+    "name": "Tyranitar - 043/081",
+    "supertype": "Pokémon",
+    "number": "043/081",
+    "rarity": "Double Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603980_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603980_400w.jpg"
+    },
+    "tcgplayerId": "603980"
+  },
+  {
+    "id": "jp-xy7-bandit-ring-068/081",
+    "name": "Lugia EX - 068/081",
+    "supertype": "Pokémon",
+    "number": "068/081",
+    "rarity": "Double Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603944_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603944_400w.jpg"
+    },
+    "tcgplayerId": "603944"
+  },
+  {
+    "id": "jp-xy7-bandit-ring-028/081",
+    "name": "Ampharos - 028/081",
+    "supertype": "Pokémon",
+    "number": "028/081",
+    "rarity": "Double Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603899_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603899_400w.jpg"
+    },
+    "tcgplayerId": "603899"
+  },
+  {
+    "id": "jp-xy7-bandit-ring-088/081",
+    "name": "Machamp EX - 088/081",
+    "supertype": "Pokémon",
+    "number": "088/081",
+    "rarity": "Super Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603947_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603947_400w.jpg"
+    },
+    "tcgplayerId": "603947"
+  },
+  {
+    "id": "jp-xy7-bandit-ring-067/081",
+    "name": "Porygon-Z - 067/081",
+    "supertype": "Pokémon",
+    "number": "067/081",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603959_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603959_400w.jpg"
+    },
+    "tcgplayerId": "603959"
+  },
+  {
+    "id": "jp-xy7-bandit-ring-014/081",
+    "name": "Entei - 014/081",
+    "supertype": "Pokémon",
+    "number": "014/081",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603916_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603916_400w.jpg"
+    },
+    "tcgplayerId": "603916"
+  },
+  {
+    "id": "jp-xy7-bandit-ring-050/081",
+    "name": "Metagross - 050/081",
+    "supertype": "Pokémon",
+    "number": "050/081",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603951_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603951_400w.jpg"
+    },
+    "tcgplayerId": "603951"
+  },
+  {
+    "id": "jp-xy7-bandit-ring-057/081",
+    "name": "Giratina EX - 057/081",
+    "supertype": "Pokémon",
+    "number": "057/081",
+    "rarity": "Double Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603923_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603923_400w.jpg"
+    },
+    "tcgplayerId": "603923"
+  },
+  {
+    "id": "jp-xy7-bandit-ring-022/081",
+    "name": "Vaporeon",
+    "supertype": "Pokémon",
+    "number": "022/081",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603986_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603986_400w.jpg"
+    },
+    "tcgplayerId": "603986"
+  },
+  {
+    "id": "jp-xy7-bandit-ring-026/081",
+    "name": "Jolteon",
+    "supertype": "Pokémon",
+    "number": "026/081",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603937_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603937_400w.jpg"
+    },
+    "tcgplayerId": "603937"
+  },
+  {
+    "id": "jp-xy7-bandit-ring-042/081",
+    "name": "Tyranitar EX - 042/081",
+    "supertype": "Pokémon",
+    "number": "042/081",
+    "rarity": "Double Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603982_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603982_400w.jpg"
+    },
+    "tcgplayerId": "603982"
+  },
+  {
+    "id": "jp-xy7-bandit-ring-019/081",
+    "name": "Magikarp",
+    "supertype": "Pokémon",
+    "number": "019/081",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603948_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603948_400w.jpg"
+    },
+    "tcgplayerId": "603948"
+  },
+  {
+    "id": "jp-xy7-bandit-ring-015/081",
+    "name": "Entei - 015/081",
+    "supertype": "Pokémon",
+    "number": "015/081",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603917_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603917_400w.jpg"
+    },
+    "tcgplayerId": "603917"
+  },
+  {
+    "id": "jp-xy7-bandit-ring-018/081",
+    "name": "Volcarona - 018/081",
+    "supertype": "Pokémon",
+    "number": "018/081",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603991_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603991_400w.jpg"
+    },
+    "tcgplayerId": "603991"
+  },
+  {
+    "id": "jp-xy7-bandit-ring-054/081",
+    "name": "Gardevoir",
+    "supertype": "Pokémon",
+    "number": "054/081",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603922_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603922_400w.jpg"
+    },
+    "tcgplayerId": "603922"
+  },
+  {
+    "id": "jp-xy7-bandit-ring-052/081",
+    "name": "Ralts",
+    "supertype": "Pokémon",
+    "number": "052/081",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603964_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603964_400w.jpg"
+    },
+    "tcgplayerId": "603964"
+  },
+  {
+    "id": "jp-xy7-bandit-ring-041/081",
+    "name": "Golurk - 041/081",
+    "supertype": "Pokémon",
+    "number": "041/081",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603927_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603927_400w.jpg"
+    },
+    "tcgplayerId": "603927"
+  },
+  {
+    "id": "jp-xy7-bandit-ring-035/081",
+    "name": "Golurk - 035/081",
+    "supertype": "Pokémon",
+    "number": "035/081",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603928_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603928_400w.jpg"
+    },
+    "tcgplayerId": "603928"
+  },
+  {
+    "id": "jp-xy7-bandit-ring-047/081",
+    "name": "Beldum",
+    "supertype": "Pokémon",
+    "number": "047/081",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603907_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603907_400w.jpg"
+    },
+    "tcgplayerId": "603907"
+  },
+  {
+    "id": "jp-xy7-bandit-ring-037/081",
+    "name": "Machamp EX - 037/081",
+    "supertype": "Pokémon",
+    "number": "037/081",
+    "rarity": "Double Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603946_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603946_400w.jpg"
+    },
+    "tcgplayerId": "603946"
+  },
+  {
+    "id": "jp-xy7-bandit-ring-020/081",
+    "name": "Gyarados - 020/081",
+    "supertype": "Pokémon",
+    "number": "020/081",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603931_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603931_400w.jpg"
+    },
+    "tcgplayerId": "603931"
+  },
+  {
+    "id": "jp-xy7-bandit-ring-060/081",
+    "name": "Goodra",
+    "supertype": "Pokémon",
+    "number": "060/081",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603929_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603929_400w.jpg"
+    },
+    "tcgplayerId": "603929"
+  },
+  {
+    "id": "jp-xy7-bandit-ring-027/081",
+    "name": "Ampharos EX - 027/081",
+    "supertype": "Pokémon",
+    "number": "027/081",
+    "rarity": "Double Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603901_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603901_400w.jpg"
+    },
+    "tcgplayerId": "603901"
+  },
+  {
+    "id": "jp-xy7-bandit-ring-032/081",
+    "name": "Baltoy - 032/081",
+    "supertype": "Pokémon",
+    "number": "032/081",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603906_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603906_400w.jpg"
+    },
+    "tcgplayerId": "603906"
+  },
+  {
+    "id": "jp-xy7-bandit-ring-025/081",
+    "name": "Kyurem EX - 025/081",
+    "supertype": "Pokémon",
+    "number": "025/081",
+    "rarity": "Double Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603939_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603939_400w.jpg"
+    },
+    "tcgplayerId": "603939"
+  },
+  {
+    "id": "jp-xy7-bandit-ring-029/081",
+    "name": "Rotom",
+    "supertype": "Pokémon",
+    "number": "029/081",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603970_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603970_400w.jpg"
+    },
+    "tcgplayerId": "603970"
+  },
+  {
+    "id": "jp-xy7-bandit-ring-044/081",
+    "name": "Sableye",
+    "supertype": "Pokémon",
+    "number": "044/081",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603971_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603971_400w.jpg"
+    },
+    "tcgplayerId": "603971"
+  },
+  {
+    "id": "jp-xy7-bandit-ring-075/081",
+    "name": "Tyranitar Spirit Link",
+    "supertype": "Pokémon",
+    "number": "075/081",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603984_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603984_400w.jpg"
+    },
+    "tcgplayerId": "603984"
+  },
+  {
+    "id": "jp-xy7-bandit-ring-066/081",
+    "name": "Porygon-Z - 066/081",
+    "supertype": "Pokémon",
+    "number": "066/081",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603958_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603958_400w.jpg"
+    },
+    "tcgplayerId": "603958"
+  },
+  {
+    "id": "jp-xy7-bandit-ring-017/081",
+    "name": "Volcarona - 017/081",
+    "supertype": "Pokémon",
+    "number": "017/081",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603992_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603992_400w.jpg"
+    },
+    "tcgplayerId": "603992"
+  },
+  {
+    "id": "jp-xy7-bandit-ring-039/081",
+    "name": "Quagsire",
+    "supertype": "Pokémon",
+    "number": "039/081",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603963_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603963_400w.jpg"
+    },
+    "tcgplayerId": "603963"
+  },
+  {
+    "id": "jp-xy7-bandit-ring-030/081",
+    "name": "Unown",
+    "supertype": "Pokémon",
+    "number": "030/081",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603985_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603985_400w.jpg"
+    },
+    "tcgplayerId": "603985"
+  },
+  {
+    "id": "jp-xy7-bandit-ring-004/081",
+    "name": "Bellossom",
+    "supertype": "Pokémon",
+    "number": "004/081",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603908_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603908_400w.jpg"
+    },
+    "tcgplayerId": "603908"
+  },
+  {
+    "id": "jp-xy7-bandit-ring-064/081",
+    "name": "Porygon",
+    "supertype": "Pokémon",
+    "number": "064/081",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603957_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603957_400w.jpg"
+    },
+    "tcgplayerId": "603957"
+  },
+  {
+    "id": "jp-xy7-bandit-ring-065/081",
+    "name": "Porygon2",
+    "supertype": "Pokémon",
+    "number": "065/081",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603960_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603960_400w.jpg"
+    },
+    "tcgplayerId": "603960"
+  },
+  {
+    "id": "jp-xy7-bandit-ring-045/081",
+    "name": "Inkay",
+    "supertype": "Pokémon",
+    "number": "045/081",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603936_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603936_400w.jpg"
+    },
+    "tcgplayerId": "603936"
+  },
+  {
+    "id": "jp-xy7-bandit-ring-036/081",
+    "name": "Hoopa EX - 036/081",
+    "supertype": "Pokémon",
+    "number": "036/081",
+    "rarity": "Double Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603934_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603934_400w.jpg"
+    },
+    "tcgplayerId": "603934"
+  },
+  {
+    "id": "jp-xy7-bandit-ring-034/081",
+    "name": "Golett",
+    "supertype": "Pokémon",
+    "number": "034/081",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603926_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603926_400w.jpg"
+    },
+    "tcgplayerId": "603926"
+  },
+  {
+    "id": "jp-xy7-bandit-ring-059/081",
+    "name": "Sliggoo",
+    "supertype": "Pokémon",
+    "number": "059/081",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603977_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603977_400w.jpg"
+    },
+    "tcgplayerId": "603977"
+  },
+  {
+    "id": "jp-xy7-bandit-ring-005/081",
+    "name": "Spinarak",
+    "supertype": "Pokémon",
+    "number": "005/081",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603978_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603978_400w.jpg"
+    },
+    "tcgplayerId": "603978"
+  },
+  {
+    "id": "jp-xy7-bandit-ring-038/081",
+    "name": "Wooper",
+    "supertype": "Pokémon",
+    "number": "038/081",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603994_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603994_400w.jpg"
+    },
+    "tcgplayerId": "603994"
+  },
+  {
+    "id": "jp-xy7-bandit-ring-058/081",
+    "name": "Goomy",
+    "supertype": "Pokémon",
+    "number": "058/081",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603930_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603930_400w.jpg"
+    },
+    "tcgplayerId": "603930"
+  },
+  {
+    "id": "jp-xy7-bandit-ring-048/081",
+    "name": "Metang",
+    "supertype": "Pokémon",
+    "number": "048/081",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603953_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603953_400w.jpg"
+    },
+    "tcgplayerId": "603953"
+  },
+  {
+    "id": "jp-xy7-bandit-ring-001/081",
+    "name": "Oddish",
+    "supertype": "Pokémon",
+    "number": "001/081",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603954_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603954_400w.jpg"
+    },
+    "tcgplayerId": "603954"
+  },
+  {
+    "id": "jp-xy7-bandit-ring-013/081",
+    "name": "Flareon",
+    "supertype": "Pokémon",
+    "number": "013/081",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603919_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603919_400w.jpg"
+    },
+    "tcgplayerId": "603919"
+  },
+  {
+    "id": "jp-xy7-bandit-ring-062/081",
+    "name": "Persian",
+    "supertype": "Pokémon",
+    "number": "062/081",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603956_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603956_400w.jpg"
+    },
+    "tcgplayerId": "603956"
+  },
+  {
+    "id": "jp-xy7-bandit-ring-016/081",
+    "name": "Larvesta",
+    "supertype": "Pokémon",
+    "number": "016/081",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603941_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603941_400w.jpg"
+    },
+    "tcgplayerId": "603941"
+  },
+  {
+    "id": "jp-xy7-bandit-ring-080/081",
+    "name": "Flash Energy",
+    "supertype": "Energy",
+    "number": "080/081",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603920_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603920_400w.jpg"
+    },
+    "tcgplayerId": "603920"
+  },
+  {
+    "id": "jp-xy7-bandit-ring-024/081",
+    "name": "Regice",
+    "supertype": "Pokémon",
+    "number": "024/081",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603966_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603966_400w.jpg"
+    },
+    "tcgplayerId": "603966"
+  },
+  {
+    "id": "jp-xy7-bandit-ring-061/081",
+    "name": "Meowth",
+    "supertype": "Pokémon",
+    "number": "061/081",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603950_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603950_400w.jpg"
+    },
+    "tcgplayerId": "603950"
+  },
+  {
+    "id": "jp-xy7-bandit-ring-056/081",
+    "name": "Whimsicott",
+    "supertype": "Pokémon",
+    "number": "056/081",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603993_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603993_400w.jpg"
+    },
+    "tcgplayerId": "603993"
+  },
+  {
+    "id": "jp-xy7-bandit-ring-002/081",
+    "name": "Gloom",
+    "supertype": "Pokémon",
+    "number": "002/081",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603925_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603925_400w.jpg"
+    },
+    "tcgplayerId": "603925"
+  },
+  {
+    "id": "jp-xy7-bandit-ring-051/081",
+    "name": "Registeel",
+    "supertype": "Pokémon",
+    "number": "051/081",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603968_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603968_400w.jpg"
+    },
+    "tcgplayerId": "603968"
+  },
+  {
+    "id": "jp-xy7-bandit-ring-031/081",
+    "name": "Baltoy - 031/081",
+    "supertype": "Pokémon",
+    "number": "031/081",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603905_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603905_400w.jpg"
+    },
+    "tcgplayerId": "603905"
+  }
+]

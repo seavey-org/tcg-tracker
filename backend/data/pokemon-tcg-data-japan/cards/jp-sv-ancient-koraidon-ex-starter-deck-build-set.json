@@ -1,0 +1,74 @@
+[
+  {
+    "id": "jp-sv-ancient-koraidon-ex-starter-deck-build-set-040/053",
+    "name": "Cynthia's Ambition",
+    "supertype": "Trainer",
+    "number": "040/053",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/588735_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/588735_400w.jpg"
+    },
+    "tcgplayerId": "588735"
+  },
+  {
+    "id": "jp-sv-ancient-koraidon-ex-starter-deck-build-set-007/053",
+    "name": "Scream Tail",
+    "supertype": "Pokémon",
+    "number": "007/053",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/588702_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/588702_400w.jpg"
+    },
+    "tcgplayerId": "588702"
+  },
+  {
+    "id": "jp-sv-ancient-koraidon-ex-starter-deck-build-set-006/053",
+    "name": "Radiant Greninja",
+    "supertype": "Pokémon",
+    "number": "006/053",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/588701_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/588701_400w.jpg"
+    },
+    "tcgplayerId": "588701"
+  },
+  {
+    "id": "jp-sv-ancient-koraidon-ex-starter-deck-build-set-014/053",
+    "name": "Pidgeotto",
+    "supertype": "Pokémon",
+    "number": "014/053",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/588709_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/588709_400w.jpg"
+    },
+    "tcgplayerId": "588709"
+  },
+  {
+    "id": "jp-sv-ancient-koraidon-ex-starter-deck-build-set-032/053",
+    "name": "Master Ball",
+    "supertype": "Trainer",
+    "number": "032/053",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/588727_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/588727_400w.jpg"
+    },
+    "tcgplayerId": "588727"
+  },
+  {
+    "id": "jp-sv-ancient-koraidon-ex-starter-deck-build-set-012/053",
+    "name": "Koraidon ex",
+    "supertype": "Pokémon",
+    "number": "012/053",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/588707_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/588707_400w.jpg"
+    },
+    "tcgplayerId": "588707"
+  }
+]

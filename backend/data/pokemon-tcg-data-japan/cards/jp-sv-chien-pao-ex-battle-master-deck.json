@@ -1,0 +1,50 @@
+[
+  {
+    "id": "jp-sv-chien-pao-ex-battle-master-deck-chien-pao-ex-battle-master-deck",
+    "name": "Chien-Pao ex Battle Master Deck",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/593967_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/593967_400w.jpg"
+    },
+    "tcgplayerId": "593967"
+  },
+  {
+    "id": "jp-sv-chien-pao-ex-battle-master-deck-001/019",
+    "name": "Origin Forme Palkia V",
+    "supertype": "Pokémon",
+    "number": "001/019",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/588605_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/588605_400w.jpg"
+    },
+    "tcgplayerId": "588605"
+  },
+  {
+    "id": "jp-sv-chien-pao-ex-battle-master-deck-003/019",
+    "name": "Radiant Greninja",
+    "supertype": "Pokémon",
+    "number": "003/019",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/588614_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/588614_400w.jpg"
+    },
+    "tcgplayerId": "588614"
+  },
+  {
+    "id": "jp-sv-chien-pao-ex-battle-master-deck-007/019",
+    "name": "Chien-Pao ex",
+    "supertype": "Pokémon",
+    "number": "007/019",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/588612_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/588612_400w.jpg"
+    },
+    "tcgplayerId": "588612"
+  }
+]

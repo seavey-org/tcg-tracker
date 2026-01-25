@@ -1,0 +1,398 @@
+[
+  {
+    "id": "jp-xy5-bg-gaia-volcano-073/070",
+    "name": "Groudon EX - 073/070",
+    "supertype": "Pokémon",
+    "number": "073/070",
+    "rarity": "Super Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603667_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603667_400w.jpg"
+    },
+    "tcgplayerId": "603667"
+  },
+  {
+    "id": "jp-xy5-bg-gaia-volcano-077/070",
+    "name": "Teammates - 077/070",
+    "supertype": "Pokémon",
+    "number": "077/070",
+    "rarity": "Super Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603710_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603710_400w.jpg"
+    },
+    "tcgplayerId": "603710"
+  },
+  {
+    "id": "jp-xy5-bg-gaia-volcano-074/070",
+    "name": "Primal Groudon EX - 074/070",
+    "supertype": "Pokémon",
+    "number": "074/070",
+    "rarity": "Super Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603690_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603690_400w.jpg"
+    },
+    "tcgplayerId": "603690"
+  },
+  {
+    "id": "jp-xy5-bg-gaia-volcano-076/070",
+    "name": "Aggron - 076/070",
+    "supertype": "Pokémon",
+    "number": "076/070",
+    "rarity": "Super Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603646_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603646_400w.jpg"
+    },
+    "tcgplayerId": "603646"
+  },
+  {
+    "id": "jp-xy5-bg-gaia-volcano-075/070",
+    "name": "Aggron EX - 075/070",
+    "supertype": "Pokémon",
+    "number": "075/070",
+    "rarity": "Super Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603648_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603648_400w.jpg"
+    },
+    "tcgplayerId": "603648"
+  },
+  {
+    "id": "jp-xy5-bg-gaia-volcano-040/070",
+    "name": "Primal Groudon EX - 040/070",
+    "supertype": "Pokémon",
+    "number": "040/070",
+    "rarity": "Double Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603689_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603689_400w.jpg"
+    },
+    "tcgplayerId": "603689"
+  },
+  {
+    "id": "jp-xy5-bg-gaia-volcano-071/070",
+    "name": "Trevenant EX - 071/070",
+    "supertype": "Pokémon",
+    "number": "071/070",
+    "rarity": "Super Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603716_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603716_400w.jpg"
+    },
+    "tcgplayerId": "603716"
+  },
+  {
+    "id": "jp-xy5-bg-gaia-volcano-046/070",
+    "name": "Aggron - 046/070",
+    "supertype": "Pokémon",
+    "number": "046/070",
+    "rarity": "Double Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603645_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603645_400w.jpg"
+    },
+    "tcgplayerId": "603645"
+  },
+  {
+    "id": "jp-xy5-bg-gaia-volcano-016/070",
+    "name": "Magcargo - 016/070",
+    "supertype": "Pokémon",
+    "number": "016/070",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603676_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603676_400w.jpg"
+    },
+    "tcgplayerId": "603676"
+  },
+  {
+    "id": "jp-xy5-bg-gaia-volcano-018/070",
+    "name": "Torchic - 018/070",
+    "supertype": "Pokémon",
+    "number": "018/070",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603712_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603712_400w.jpg"
+    },
+    "tcgplayerId": "603712"
+  },
+  {
+    "id": "jp-xy5-bg-gaia-volcano-006/070",
+    "name": "Sceptile - 006/070",
+    "supertype": "Pokémon",
+    "number": "006/070",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603699_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603699_400w.jpg"
+    },
+    "tcgplayerId": "603699"
+  },
+  {
+    "id": "jp-xy5-bg-gaia-volcano-033/070",
+    "name": "Nosepass",
+    "supertype": "Pokémon",
+    "number": "033/070",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603688_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603688_400w.jpg"
+    },
+    "tcgplayerId": "603688"
+  },
+  {
+    "id": "jp-xy5-bg-gaia-volcano-020/070",
+    "name": "Blaziken",
+    "supertype": "Pokémon",
+    "number": "020/070",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603650_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603650_400w.jpg"
+    },
+    "tcgplayerId": "603650"
+  },
+  {
+    "id": "jp-xy5-bg-gaia-volcano-072/070",
+    "name": "Camerupt EX - 072/070",
+    "supertype": "Pokémon",
+    "number": "072/070",
+    "rarity": "Super Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603656_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603656_400w.jpg"
+    },
+    "tcgplayerId": "603656"
+  },
+  {
+    "id": "jp-xy5-bg-gaia-volcano-046/070",
+    "name": "Probopass",
+    "supertype": "Pokémon",
+    "number": "046/070",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603691_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603691_400w.jpg"
+    },
+    "tcgplayerId": "603691"
+  },
+  {
+    "id": "jp-xy5-bg-gaia-volcano-028/070",
+    "name": "Nidoqueen - 028/070",
+    "supertype": "Pokémon",
+    "number": "028/070",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603684_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603684_400w.jpg"
+    },
+    "tcgplayerId": "603684"
+  },
+  {
+    "id": "jp-xy5-bg-gaia-volcano-013/070",
+    "name": "Ninetales",
+    "supertype": "Pokémon",
+    "number": "013/070",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603687_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603687_400w.jpg"
+    },
+    "tcgplayerId": "603687"
+  },
+  {
+    "id": "jp-xy5-bg-gaia-volcano-032/070",
+    "name": "Rhyperior - 032/070",
+    "supertype": "Pokémon",
+    "number": "032/070",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603697_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603697_400w.jpg"
+    },
+    "tcgplayerId": "603697"
+  },
+  {
+    "id": "jp-xy5-bg-gaia-volcano-003/070",
+    "name": "Treecko",
+    "supertype": "Pokémon",
+    "number": "003/070",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603714_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603714_400w.jpg"
+    },
+    "tcgplayerId": "603714"
+  },
+  {
+    "id": "jp-xy5-bg-gaia-volcano-023/070",
+    "name": "Electrike - 023/070",
+    "supertype": "Pokémon",
+    "number": "023/070",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603662_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603662_400w.jpg"
+    },
+    "tcgplayerId": "603662"
+  },
+  {
+    "id": "jp-xy5-bg-gaia-volcano-002/070",
+    "name": "Tangrowth",
+    "supertype": "Pokémon",
+    "number": "002/070",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603708_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603708_400w.jpg"
+    },
+    "tcgplayerId": "603708"
+  },
+  {
+    "id": "jp-xy5-bg-gaia-volcano-041/070",
+    "name": "Hippopotas",
+    "supertype": "Pokémon",
+    "number": "041/070",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603670_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603670_400w.jpg"
+    },
+    "tcgplayerId": "603670"
+  },
+  {
+    "id": "jp-xy5-bg-gaia-volcano-011/070",
+    "name": "Trevenant EX - 011/070",
+    "supertype": "Pokémon",
+    "number": "011/070",
+    "rarity": "Double Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603715_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603715_400w.jpg"
+    },
+    "tcgplayerId": "603715"
+  },
+  {
+    "id": "jp-xy5-bg-gaia-volcano-045/070",
+    "name": "Aggron EX - 045/070",
+    "supertype": "Pokémon",
+    "number": "045/070",
+    "rarity": "Double Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603647_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603647_400w.jpg"
+    },
+    "tcgplayerId": "603647"
+  },
+  {
+    "id": "jp-xy5-bg-gaia-volcano-021/070",
+    "name": "Camerupt EX - 021/070",
+    "supertype": "Pokémon",
+    "number": "021/070",
+    "rarity": "Double Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603655_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603655_400w.jpg"
+    },
+    "tcgplayerId": "603655"
+  },
+  {
+    "id": "jp-xy5-bg-gaia-volcano-049/070",
+    "name": "Excadrill - 049/070",
+    "supertype": "Pokémon",
+    "number": "049/070",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603664_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603664_400w.jpg"
+    },
+    "tcgplayerId": "603664"
+  },
+  {
+    "id": "jp-xy5-bg-gaia-volcano-051/070",
+    "name": "Doublade",
+    "supertype": "Pokémon",
+    "number": "051/070",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603659_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603659_400w.jpg"
+    },
+    "tcgplayerId": "603659"
+  },
+  {
+    "id": "jp-xy5-bg-gaia-volcano-052/070",
+    "name": "Aegislash",
+    "supertype": "Pokémon",
+    "number": "052/070",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603644_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603644_400w.jpg"
+    },
+    "tcgplayerId": "603644"
+  },
+  {
+    "id": "jp-xy5-bg-gaia-volcano-008/070",
+    "name": "Breloom",
+    "supertype": "Pokémon",
+    "number": "008/070",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603652_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603652_400w.jpg"
+    },
+    "tcgplayerId": "603652"
+  },
+  {
+    "id": "jp-xy5-bg-gaia-volcano-012/070",
+    "name": "Vulpix",
+    "supertype": "Pokémon",
+    "number": "012/070",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603719_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603719_400w.jpg"
+    },
+    "tcgplayerId": "603719"
+  },
+  {
+    "id": "jp-xy5-bg-gaia-volcano-025/070",
+    "name": "Nidoran",
+    "supertype": "Pokémon",
+    "number": "025/070",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603685_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603685_400w.jpg"
+    },
+    "tcgplayerId": "603685"
+  },
+  {
+    "id": "jp-xy5-bg-gaia-volcano-005/070",
+    "name": "Sceptile - 005/070",
+    "supertype": "Pokémon",
+    "number": "005/070",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603698_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603698_400w.jpg"
+    },
+    "tcgplayerId": "603698"
+  },
+  {
+    "id": "jp-xy5-bg-gaia-volcano-043/070",
+    "name": "Drilbur",
+    "supertype": "Pokémon",
+    "number": "043/070",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603660_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603660_400w.jpg"
+    },
+    "tcgplayerId": "603660"
+  }
+]

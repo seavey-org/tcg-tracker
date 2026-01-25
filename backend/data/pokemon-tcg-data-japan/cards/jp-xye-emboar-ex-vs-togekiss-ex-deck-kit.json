@@ -1,0 +1,50 @@
+[
+  {
+    "id": "jp-xye-emboar-ex-vs-togekiss-ex-deck-kit-001/022",
+    "name": "Growlithe",
+    "supertype": "Pokémon",
+    "number": "001/022",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/605278_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/605278_400w.jpg"
+    },
+    "tcgplayerId": "605278"
+  },
+  {
+    "id": "jp-xye-emboar-ex-vs-togekiss-ex-deck-kit-010/022",
+    "name": "Togekiss EX",
+    "supertype": "Pokémon",
+    "number": "010/022",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/605287_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/605287_400w.jpg"
+    },
+    "tcgplayerId": "605287"
+  },
+  {
+    "id": "jp-xye-emboar-ex-vs-togekiss-ex-deck-kit-003/022",
+    "name": "Emboar EX",
+    "supertype": "Pokémon",
+    "number": "003/022",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/605280_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/605280_400w.jpg"
+    },
+    "tcgplayerId": "605280"
+  },
+  {
+    "id": "jp-xye-emboar-ex-vs-togekiss-ex-deck-kit-005/022",
+    "name": "Electabuzz",
+    "supertype": "Pokémon",
+    "number": "005/022",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/605282_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/605282_400w.jpg"
+    },
+    "tcgplayerId": "605282"
+  }
+]

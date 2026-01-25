@@ -1,0 +1,86 @@
+[
+  {
+    "id": "jp-sv-ex-starter-set-quaxly-mimikyu-ex-ex-starter-set-quaxly-\u0026-mimikyu-ex",
+    "name": "ex Starter Set Quaxly \u0026 Mimikyu ex",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/594377_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/594377_400w.jpg"
+    },
+    "tcgplayerId": "594377"
+  },
+  {
+    "id": "jp-sv-ex-starter-set-quaxly-mimikyu-ex-009/023",
+    "name": "Lechonk",
+    "supertype": "Pokémon",
+    "number": "009/023",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/591229_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/591229_400w.jpg"
+    },
+    "tcgplayerId": "591229"
+  },
+  {
+    "id": "jp-sv-ex-starter-set-quaxly-mimikyu-ex-006/023",
+    "name": "Mimikyu ex",
+    "supertype": "Pokémon",
+    "number": "006/023",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/591226_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/591226_400w.jpg"
+    },
+    "tcgplayerId": "591226"
+  },
+  {
+    "id": "jp-sv-ex-starter-set-quaxly-mimikyu-ex-002/023",
+    "name": "Quaxly",
+    "supertype": "Pokémon",
+    "number": "002/023",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/591222_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/591222_400w.jpg"
+    },
+    "tcgplayerId": "591222"
+  },
+  {
+    "id": "jp-sv-ex-starter-set-quaxly-mimikyu-ex-001/023",
+    "name": "Alomomola",
+    "supertype": "Pokémon",
+    "number": "001/023",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/591221_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/591221_400w.jpg"
+    },
+    "tcgplayerId": "591221"
+  },
+  {
+    "id": "jp-sv-ex-starter-set-quaxly-mimikyu-ex-005/023",
+    "name": "Dedenne",
+    "supertype": "Pokémon",
+    "number": "005/023",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/591225_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/591225_400w.jpg"
+    },
+    "tcgplayerId": "591225"
+  },
+  {
+    "id": "jp-sv-ex-starter-set-quaxly-mimikyu-ex-019/023",
+    "name": "Vitality Band",
+    "supertype": "Pokémon",
+    "number": "019/023",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/591239_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/591239_400w.jpg"
+    },
+    "tcgplayerId": "591239"
+  }
+]

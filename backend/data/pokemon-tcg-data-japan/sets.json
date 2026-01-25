@@ -1,10 +1,724 @@
 [
   {
-    "id": "jp-leaders-stadium",
-    "name": "Leaders' Stadium",
+    "id": "jp-10th-movie-commemoration-set",
+    "name": "10th Movie Commemoration Set",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-11th-movie-commemoration-set",
+    "name": "11th Movie Commemoration Set",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-adv-expansion-pack",
+    "name": "ADV Expansion Pack",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-adv-p-promotional-cards",
+    "name": "ADV-P Promotional cards",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-aqua-deck-kit",
+    "name": "Aqua Deck Kit",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-arceus-lv-x-deck-grass-fire",
+    "name": "Arceus LV.X Deck: Grass \u0026 Fire",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-arceus-lv-x-deck-lightning-psychic",
+    "name": "Arceus LV.X Deck: Lightning \u0026 Psychic",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-awakening-legends",
+    "name": "Awakening Legends",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-base-expansion-pack",
+    "name": "Base Expansion Pack",
+    "series": "Pokemon Japan",
+    "releaseDate": "1996-10-20",
+    "total": 109
+  },
+  {
+    "id": "jp-bastiodon-the-defender-half-deck",
+    "name": "Bastiodon the Defender Half Deck",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-battle-academy",
+    "name": "Battle Academy",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-battle-gift-set-thundurus-vs-tornadus",
+    "name": "Battle Gift Set: Thundurus vs Tornadus",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-battle-road",
+    "name": "Battle Road",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-battle-starter-deck-blastoise",
+    "name": "Battle Starter Deck (Blastoise)",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-battle-starter-deck-magmortar",
+    "name": "Battle Starter Deck (Magmortar)",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-battle-starter-deck-raichu",
+    "name": "Battle Starter Deck (Raichu)",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-battle-starter-deck-torterra",
+    "name": "Battle Starter Deck (Torterra)",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-battle-theme-deck-victini",
+    "name": "Battle Theme Deck: Victini",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-bkb-black-kyurem-ex-battle-strength-deck",
+    "name": "BKB: Black Kyurem-EX Battle Strength Deck",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-bk-cobalion-battle-strength-deck",
+    "name": "BK: Cobalion Battle Strength Deck",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-bkr-reshiram-ex-battle-strength-deck",
+    "name": "BKR: Reshiram-EX Battle Strength Deck",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-bk-terrakion-battle-strength-deck",
+    "name": "BK: Terrakion Battle Strength Deck",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-bk-virizion-battle-strength-deck",
+    "name": "BK: Virizion Battle Strength Deck",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-bkw-white-kyurem-ex-battle-strength-deck",
+    "name": "BKW: White Kyurem-EX Battle Strength Deck",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-bkz-zekrom-ex-battle-strength-deck",
+    "name": "BKZ: Zekrom-EX Battle Strength Deck",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-black-deck-kit",
+    "name": "Black Deck Kit",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-blastoise-kyurem-ex-combo-deck",
+    "name": "Blastoise + Kyurem-EX Combo Deck",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-break-starter-pack",
+    "name": "BREAK Starter Pack",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-bw1-black-collection",
+    "name": "BW1: Black Collection",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-bw1-white-collection",
+    "name": "BW1: White Collection",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-bw2-red-collection",
+    "name": "BW2: Red Collection",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-bw3-hail-blizzard",
+    "name": "BW3: Hail Blizzard",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-bw3-psycho-drive",
+    "name": "BW3: Psycho Drive",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-bw4-dark-rush",
+    "name": "BW4: Dark Rush",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-bw5-dragon-blade",
+    "name": "BW5: Dragon Blade",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-bw5-dragon-blast",
+    "name": "BW5: Dragon Blast",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-bw6-cold-flare",
+    "name": "BW6: Cold Flare",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-bw6-freeze-bolt",
+    "name": "BW6: Freeze Bolt",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-bw7-plasma-gale",
+    "name": "BW7: Plasma Gale",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-bw8-spiral-force",
+    "name": "BW8: Spiral Force",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-bw8-thunder-knuckle",
+    "name": "BW8: Thunder Knuckle",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-bw9-megalo-cannon",
+    "name": "BW9: Megalo Cannon",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-bw-p-promotional-cards",
+    "name": "BW-P Promotional cards",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-challenge-from-the-darkness",
+    "name": "Challenge from the Darkness",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-champion-road",
+    "name": "Champion Road",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-city-gym-decks",
+    "name": "City Gym Decks",
     "series": "Pokemon Japan",
     "releaseDate": "1998-10-23",
-    "total": 97
+    "total": 123
+  },
+  {
+    "id": "jp-clash-of-the-blue-sky",
+    "name": "Clash of the Blue Sky",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-corocoro-promotional-cards",
+    "name": "CoroCoro Promotional Cards",
+    "series": "Pokemon Japan",
+    "releaseDate": "1996-10-20",
+    "total": 40
+  },
+  {
+    "id": "jp-cp1-magma-gang-vs-aqua-gang-double-crisis",
+    "name": "CP1: Magma Gang vs Aqua Gang: Double Crisis",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-cp2-legendary-shine-collection",
+    "name": "CP2: Legendary Shine Collection",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-cp3-pokekyun-collection",
+    "name": "CP3: PokeKyun Collection",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-cp4-premium-champion-pack",
+    "name": "CP4: Premium Champion Pack",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-cp5-mythical-legendary-dream-shine-collection",
+    "name": "CP5: Mythical \u0026 Legendary Dream Shine Collection",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-cp6-expansion-pack-20th-anniversary",
+    "name": "CP6: Expansion Pack 20th Anniversary",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-crossing-the-ruins",
+    "name": "Crossing the Ruins...",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-cs1-journey-partners-collection-sheet",
+    "name": "CS1: Journey Partners Collection Sheet",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-darkness-and-to-light",
+    "name": "Darkness, and to Light...",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-deoxys-constructed-starter-deck",
+    "name": "Deoxys Constructed Starter Deck",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-dialga-lv-x-constructed-standard-deck",
+    "name": "Dialga LV.X Constructed Standard Deck",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-dp1-space-time-creation",
+    "name": "DP1: Space-Time Creation",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-dp2-secret-of-the-lakes",
+    "name": "DP2: Secret of the Lakes",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-dp3-shining-darkness",
+    "name": "DP3: Shining Darkness",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-dp4-dawn-dash",
+    "name": "DP4: Dawn Dash",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-dp4-moonlit-pursuit",
+    "name": "DP4: Moonlit Pursuit",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-dp5-cry-from-the-mysterious",
+    "name": "DP5: Cry from the Mysterious",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-dp5-temple-of-anger",
+    "name": "DP5: Temple of Anger",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-dp-p-promotional-cards",
+    "name": "DP-P Promotional cards",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-dpt-gift-box-pikachu",
+    "name": "DPt Gift Box (Pikachu)",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-dpt-gift-box-piplup",
+    "name": "DPt Gift Box (Piplup)",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-dpt-gift-box-turtwig",
+    "name": "DPt Gift Box (Turtwig)",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-dpt-p-promotional-cards",
+    "name": "DPt-P Promotional cards",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-dragon-selection",
+    "name": "Dragon Selection",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-earth-s-groudon-ex-constructed-starter-deck",
+    "name": "Earth's Groudon ex Constructed Starter Deck",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-emerald-gift-box-deoxys",
+    "name": "Emerald Gift Box (Deoxys)",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-emerald-gift-box-rayquaza",
+    "name": "Emerald Gift Box (Rayquaza)",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-entry-pack",
+    "name": "Entry Pack",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-entry-pack-08",
+    "name": "Entry Pack '08",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-entry-pack-dpt-dialga",
+    "name": "Entry Pack DPt (Dialga)",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-entry-pack-dpt-giratina",
+    "name": "Entry Pack DPt (Giratina)",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-entry-pack-dpt-palkia",
+    "name": "Entry Pack DPt (Palkia)",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-everyone-s-exciting-battle",
+    "name": "Everyone's Exciting Battle",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-ex-battle-boost",
+    "name": "EX Battle Boost",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-expansion-pack",
+    "name": "Expansion Pack",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-expansion-pack-no-rarity",
+    "name": "Expansion Pack (No Rarity)",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-feraligatr-constructed-starter-deck",
+    "name": "Feraligatr Constructed Starter Deck",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-fighting-quick-construction-pack",
+    "name": "Fighting Quick Construction Pack",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-fire-quick-construction-pack",
+    "name": "Fire Quick Construction Pack",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-flight-of-legends",
+    "name": "Flight of Legends",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-flygon-constructed-starter-deck",
+    "name": "Flygon Constructed Starter Deck",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-garchomp-half-deck",
+    "name": "Garchomp Half Deck",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-garchomp-vs-charizard-sp-deck-kit-charizard",
+    "name": "Garchomp vs Charizard SP Deck Kit (Charizard)",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-garchomp-vs-charizard-sp-deck-kit-garchomp",
+    "name": "Garchomp vs Charizard SP Deck Kit (Garchomp)",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-gift-box-latias",
+    "name": "Gift Box (Latias)",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-gift-box-latios",
+    "name": "Gift Box (Latios)",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-gift-box-mew-lucario-crawdaunt-quarter-deck",
+    "name": "Gift Box Mew - Lucario (Crawdaunt Quarter Deck)",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-gift-box-mew-lucario-lucario-quarter-deck",
+    "name": "Gift Box Mew - Lucario (Lucario Quarter Deck)",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-gift-box-mew-lucario-mew-quarter-deck",
+    "name": "Gift Box Mew - Lucario (Mew Quarter Deck)",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-gift-box-mew-lucario-mightyena-quarter-deck",
+    "name": "Gift Box Mew - Lucario (Mightyena Quarter Deck)",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-gift-box-mew-lucario-pokemon-star",
+    "name": "Gift Box Mew - Lucario (Pokemon Star)",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-giratina-vs-dialga-deck-kit-giratina",
+    "name": "Giratina vs Dialga Deck Kit (Giratina)",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-golden-sky-silvery-ocean",
+    "name": "Golden Sky, Silvery Ocean",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-gold-silver-to-a-new-world",
+    "name": "Gold, Silver, to a New World...",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-grass-quick-construction-pack",
+    "name": "Grass Quick Construction Pack",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
   },
   {
     "id": "jp-gym-challenge",
@@ -14,11 +728,655 @@
     "total": 2
   },
   {
-    "id": "jp-city-gym-decks",
-    "name": "City Gym Decks",
+    "id": "jp-heatran-vs-regigigas-deck-kit",
+    "name": "Heatran vs Regigigas Deck Kit",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-holon-phantom",
+    "name": "Holon Phantom",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-holon-research-tower",
+    "name": "Holon Research Tower",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-holon-research-tower-fire-quarter-deck",
+    "name": "Holon Research Tower Fire Quarter Deck",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-holon-research-tower-lightning-quarter-deck",
+    "name": "Holon Research Tower Lightning Quarter Deck",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-holon-research-tower-water-quarter-deck",
+    "name": "Holon Research Tower Water Quarter Deck",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-hydreigon-half-deck",
+    "name": "Hydreigon Half Deck",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-imprison-gardevoir-ex-constructed-standard-deck",
+    "name": "Imprison! Gardevoir ex Constructed Standard Deck",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-infernape-vs-gallade-sp-deck-kit-gallade",
+    "name": "Infernape vs Gallade SP Deck Kit (Gallade)",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-infernape-vs-gallade-sp-deck-kit-infernape",
+    "name": "Infernape vs Gallade SP Deck Kit (Infernape)",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-intense-fight-in-the-destroyed-sky",
+    "name": "Intense Fight in the Destroyed Sky",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-intro-pack-bulbasaur",
+    "name": "Intro Pack (Bulbasaur)",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-intro-pack-neo-chikorita",
+    "name": "Intro Pack Neo (Chikorita)",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-intro-pack-neo-totodile",
+    "name": "Intro Pack Neo (Totodile)",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-intro-pack-squirtle",
+    "name": "Intro Pack (Squirtle)",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-japanese-cd-promo",
+    "name": "Japanese CD Promo",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-keldeo-battle-strength-deck",
+    "name": "Keldeo Battle Strength Deck",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-l1-heartgold-collection",
+    "name": "L1: HeartGold Collection",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-l1-soulsilver-collection",
+    "name": "L1: SoulSilver Collection",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-l2-revival-legends",
+    "name": "L2: Revival Legends",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-l2-steelix-constructed-standard-deck",
+    "name": "L2: Steelix Constructed Standard Deck",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-l2-tyranitar-constructed-standard-deck",
+    "name": "L2: Tyranitar Constructed Standard Deck",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-l3-clash-at-the-summit",
+    "name": "L3: Clash at the Summit",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-leaders-stadium",
+    "name": "Leaders' Stadium",
     "series": "Pokemon Japan",
     "releaseDate": "1998-10-23",
-    "total": 123
+    "total": 97
+  },
+  {
+    "id": "jp-leafeon-vs-metagross-expert-deck-leafeon",
+    "name": "Leafeon vs Metagross Expert Deck (Leafeon)",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-leafeon-vs-metagross-expert-deck-metagross",
+    "name": "Leafeon vs Metagross Expert Deck (Metagross)",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-lightning-quick-construction-pack",
+    "name": "Lightning Quick Construction Pack",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-ll-lost-link",
+    "name": "LL: Lost Link",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-l-p-legends-promos",
+    "name": "L-P: Legends Promos",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-m1l-mega-brave",
+    "name": "m1L: Mega Brave",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-m1s-mega-symphonia",
+    "name": "m1S: Mega Symphonia",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-m2a-high-class-pack-mega-dream-ex",
+    "name": "M2a: High Class Pack: MEGA Dream ex",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-m2-inferno-x",
+    "name": "M2: Inferno X",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-m3-nihil-zero",
+    "name": "M3: Nihil Zero",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-magma-deck-kit",
+    "name": "Magma Deck Kit",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-magma-vs-aqua-two-ambitions",
+    "name": "Magma VS Aqua: Two Ambitions",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-magmortar-vs-electivire-deck-kit",
+    "name": "Magmortar vs Electivire Deck Kit",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-master-deck-build-box-ex",
+    "name": "Master Deck Build Box EX",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-master-kit-bulbasaur",
+    "name": "Master Kit (Bulbasaur)",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-master-kit-side-deck",
+    "name": "Master Kit (Side Deck)",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-mbd-mega-starter-set-mega-diancie-ex",
+    "name": "MBD: MEGA Starter Set Mega Diancie ex",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-mbg-mega-starter-set-mega-gengar-ex",
+    "name": "MBG: MEGA Starter Set Mega Gengar ex",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-mcdonald-s-pokemon-e-minimum-pack",
+    "name": "McDonald's Pokémon-e Minimum Pack",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-meganium-constructed-starter-deck",
+    "name": "Meganium Constructed Starter Deck",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-melee-pokemon-scramble",
+    "name": "Melee! Pokemon Scramble",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-metagross-constructed-starter-deck",
+    "name": "Metagross Constructed Starter Deck",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-mewtwo-vs-genesect-deck-kit-genesect",
+    "name": "Mewtwo vs Genesect Deck Kit (Genesect)",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-mewtwo-vs-genesect-deck-kit-mewtwo",
+    "name": "Mewtwo vs Genesect Deck Kit (Mewtwo)",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-miracle-crystal",
+    "name": "Miracle Crystal",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-miracle-of-the-desert",
+    "name": "Miracle of the Desert",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-mirage-forest",
+    "name": "Mirage Forest",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-mirage-s-mew-constructed-starter-deck",
+    "name": "Mirage's Mew Constructed Starter Deck",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-m-master-deck-build-box-power-style",
+    "name": "M Master Deck Build Box Power Style",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-m-master-deck-build-box-speed-style",
+    "name": "M Master Deck Build Box Speed Style",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-movie-commemoration-random-pack",
+    "name": "Movie Commemoration Random Pack",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-movie-commemoration-vs-pack",
+    "name": "Movie Commemoration VS Pack",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-movie-commemoration-vs-pack-aura-s-lucario",
+    "name": "Movie Commemoration VS Pack: Aura's Lucario",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-movie-commemoration-vs-pack-sea-s-manaphy",
+    "name": "Movie Commemoration VS Pack: Sea's Manaphy",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-movie-commemoration-vs-pack-sky-splitting-deoxys",
+    "name": "Movie Commemoration VS Pack: Sky-Splitting Deoxys",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-m-p-promotional-cards",
+    "name": "M-P Promotional Cards",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-mudkip-constructed-starter-deck",
+    "name": "Mudkip Constructed Starter Deck",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-mysterious-mountains",
+    "name": "Mysterious Mountains",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-mystery-of-the-fossils",
+    "name": "Mystery of the Fossils",
+    "series": "Pokemon Japan",
+    "releaseDate": "1997-06-21",
+    "total": 48
+  },
+  {
+    "id": "jp-neo-premium-file-1",
+    "name": "Neo Premium File 1",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-neo-premium-file-2",
+    "name": "Neo Premium File 2",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-neo-premium-file-3",
+    "name": "Neo Premium File 3",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-ocean-s-kyogre-ex-constructed-starter-deck",
+    "name": "Ocean's Kyogre ex Constructed Starter Deck",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-offense-and-defense-of-the-furthest-ends",
+    "name": "Offense and Defense of the Furthest Ends",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-palkia-lv-x-constructed-standard-deck",
+    "name": "Palkia LV.X Constructed Standard Deck",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-pcg-p-promotional-cards",
+    "name": "PCG-P Promotional cards",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-play-promotional-cards",
+    "name": "PLAY Promotional cards",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-pokemon-card-fan-club",
+    "name": "Pokemon Card Fan Club",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-pokemon-card-information-promotional-cards",
+    "name": "Pokemon Card Information Promotional cards",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-pokemon-e-starter-deck",
+    "name": "Pokemon-e Starter Deck",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-pokemon-jungle",
+    "name": "Pokemon Jungle",
+    "series": "Pokemon Japan",
+    "releaseDate": "1997-03-05",
+    "total": 48
+  },
+  {
+    "id": "jp-pokemon-tcg-classic-blastoise",
+    "name": "Pokemon TCG Classic: Blastoise",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-pokemon-tcg-classic-charizard",
+    "name": "Pokemon TCG Classic: Charizard",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-pokemon-tcg-classic-venusaur",
+    "name": "Pokemon TCG Classic: Venusaur",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-pokemon-vs",
+    "name": "Pokemon VS",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-pokemon-web",
+    "name": "Pokemon Web",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-pokepark-forest",
+    "name": "PokePark Forest",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-ppp-promotional-cards",
+    "name": "PPP Promotional cards",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-p-promotional-cards",
+    "name": "P Promotional cards",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-psychic-quick-construction-pack",
+    "name": "Psychic Quick Construction Pack",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-pt1-galactic-s-conquest",
+    "name": "Pt1: Galactic's Conquest",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-pt2-bonds-to-the-end-of-time",
+    "name": "Pt2: Bonds to the End of Time",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-pt3-beat-of-the-frontier",
+    "name": "Pt3: Beat of the Frontier",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-pt4-advent-of-arceus",
+    "name": "Pt4: Advent of Arceus",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-ptm-mewtwo-lv-x-collection-pack",
+    "name": "PtM: Mewtwo LV.X Collection Pack",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-ptr-regigigas-lv-x-collection-pack",
+    "name": "PtR: Regigigas LV.X Collection Pack",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-pts-shaymin-lv-x-collection-pack",
+    "name": "PtS: Shaymin LV.X Collection Pack",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-rampardos-the-attacker-constructed-half-deck",
+    "name": "Rampardos the Attacker Constructed Half Deck",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-rayquaza-constructed-starter-deck",
+    "name": "Rayquaza Constructed Starter Deck",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
   },
   {
     "id": "jp-rocket-gang",
@@ -33,6 +1391,1308 @@
     "series": "Pokemon Japan",
     "releaseDate": "2000-11-10",
     "total": 41
+  },
+  {
+    "id": "jp-rulers-of-the-heavens",
+    "name": "Rulers of the Heavens",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-s0-charizard-vstar-vs-rayquaza-vmax-special-deck-set",
+    "name": "s0: Charizard VSTAR vs Rayquaza VMAX Special Deck Set",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-s10a-dark-phantasma",
+    "name": "S10a: Dark Phantasma",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-s10b-pokemon-go",
+    "name": "S10b: Pokemon GO",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-s10d-time-gazer",
+    "name": "S10D: Time Gazer",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-s10p-space-juggler",
+    "name": "S10P: Space Juggler",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-s11a-incandescent-arcana",
+    "name": "S11a: Incandescent Arcana",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-s11-lost-abyss",
+    "name": "S11: Lost Abyss",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-s12a-vstar-universe",
+    "name": "S12a: VSTAR Universe",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-s12-paradigm-trigger",
+    "name": "S12: Paradigm Trigger",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-s1a-vmax-rising",
+    "name": "S1a: VMAX Rising",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-s1h-shield",
+    "name": "S1H: Shield",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-s1w-sword",
+    "name": "S1W: Sword",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-s2a-explosive-walker",
+    "name": "S2a: Explosive Walker",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-s2-rebellion-crash",
+    "name": "S2: Rebellion Crash",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-s3a-legendary-heartbeat",
+    "name": "S3a: Legendary Heartbeat",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-s3-infinity-zone",
+    "name": "S3: Infinity Zone",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-s4-amazing-volt-tackle",
+    "name": "S4: Amazing Volt Tackle",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-s4a-shiny-star-v",
+    "name": "S4a: Shiny Star V",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-s5a-peerless-fighters",
+    "name": "S5a: Peerless Fighters",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-s5i-single-strike-master",
+    "name": "S5I: Single Strike Master",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-s5r-rapid-strike-master",
+    "name": "S5R: Rapid Strike Master",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-s6a-eevee-heroes",
+    "name": "S6a: Eevee Heroes",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-s6h-silver-lance",
+    "name": "S6H: Silver Lance",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-s6k-jet-black-spirit",
+    "name": "S6K: Jet-Black Spirit",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-s7d-skyscraping-perfection",
+    "name": "S7D: Skyscraping Perfection",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-s7r-blue-sky-stream",
+    "name": "S7R: Blue Sky Stream",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-s8a-25th-anniversary-collection",
+    "name": "S8a: 25th Anniversary Collection",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-s8a-g-25th-anniversary-golden-box",
+    "name": "s8a-G: 25th Anniversary Golden Box",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-s8a-p-promo-card-pack-25th-anniversary-edition",
+    "name": "s8a-P: Promo Card Pack 25th Anniversary Edition",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-s8b-vmax-climax",
+    "name": "S8b: VMAX Climax",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-s8-fusion-arts",
+    "name": "S8: Fusion Arts",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-s9a-battle-region",
+    "name": "S9a: Battle Region",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-s9-star-birth",
+    "name": "S9: Star Birth",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-sa-fighting-starter-set-v",
+    "name": "sA: Fighting Starter Set V",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-sa-fire-starter-set-v",
+    "name": "sA: Fire Starter Set V",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-sa-grass-starter-set-v",
+    "name": "sA: Grass Starter Set V",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-salamence-constructed-starter-deck",
+    "name": "Salamence Constructed Starter Deck",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-sa-lightning-starter-set-v",
+    "name": "sA: Lightning Starter Set V",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-sa-water-starter-set-v",
+    "name": "sA: Water Starter Set V",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-sb-sword-shield-premium-trainer-box",
+    "name": "sB: Sword \u0026 Shield Premium Trainer Box",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-sc2-charizard-starter-set-vmax-2",
+    "name": "sC2: Charizard Starter Set VMAX 2",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-scarlet-violet-energies",
+    "name": "Scarlet \u0026 Violet Energies",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-sc-charizard-starter-set-vmax",
+    "name": "sC: Charizard Starter Set VMAX",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-sc-grimmsnarl-starter-set-vmax",
+    "name": "sC: Grimmsnarl Starter Set VMAX",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-sd-v-starter-decks",
+    "name": "sD: V Starter Decks",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-sef-venusaur-starter-set-vmax",
+    "name": "sEF: Venusaur Starter Set VMAX",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-sek-blastoise-starter-set-vmax",
+    "name": "sEK: Blastoise Starter Set VMAX",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-sf-single-strike-rapid-strike-premium-trainer-boxes",
+    "name": "sF: Single Strike \u0026 Rapid Strike Premium Trainer Boxes",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-shiny-collection",
+    "name": "Shiny Collection",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-shockwave-tyranitar-ex-constructed-standard-deck",
+    "name": "Shockwave! Tyranitar ex Constructed Standard Deck",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-sh-sword-shield-family-pokemon-card-game",
+    "name": "sH: Sword \u0026 Shield Family Pokemon Card Game",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-silver-deck-kit",
+    "name": "Silver Deck Kit",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-si-start-deck-100",
+    "name": "SI: Start Deck 100",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-sj-zacian-zamazenta-vs-eternatus-special-deck-set",
+    "name": "sJ: Zacian \u0026 Zamazenta vs Eternatus Special Deck Set",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-sk-vstar-premium-trainer-box",
+    "name": "sK: VSTAR Premium Trainer Box",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-sld-darkrai-starter-set-vstar",
+    "name": "sLD: Darkrai Starter Set VSTAR",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-sll-lucario-starter-set-vstar",
+    "name": "sLL: Lucario Starter Set VSTAR",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-sm0-pikachu-s-new-friends",
+    "name": "SM0: Pikachu's New Friends",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-sm10a-gg-end",
+    "name": "SM10a: GG End",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-sm10b-sky-legend",
+    "name": "SM10b: Sky Legend",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-sm10-double-blaze",
+    "name": "SM10: Double Blaze",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-sm11a-remix-bout",
+    "name": "SM11a: Remix Bout",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-sm11b-dream-league",
+    "name": "SM11b: Dream League",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-sm11-miracle-twin",
+    "name": "SM11: Miracle Twin",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-sm12-alter-genesis",
+    "name": "SM12: Alter Genesis",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-sm12a-tag-team-gx-tag-all-stars",
+    "name": "SM12a: TAG TEAM GX: Tag All Stars",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-sm1-enhanced-expansion-pack-sun-moon",
+    "name": "sm1+: Enhanced Expansion Pack Sun \u0026 Moon",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-sm1m-collection-moon",
+    "name": "SM1M: Collection Moon",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-sm1s-collection-sun",
+    "name": "SM1S: Collection Sun",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-sm2-facing-a-new-trial",
+    "name": "SM2+: Facing a New Trial",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-sm2k-islands-await-you",
+    "name": "SM2K: Islands Await You",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-sm2l-alolan-moonlight",
+    "name": "SM2L: Alolan Moonlight",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-sm3h-to-have-seen-the-battle-rainbow",
+    "name": "SM3H: To Have Seen the Battle Rainbow",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-sm3n-darkness-that-consumes-light",
+    "name": "SM3N: Darkness that Consumes Light",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-sm3-shining-legends",
+    "name": "SM3+: Shining Legends",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-sm4a-ultradimensional-beasts",
+    "name": "SM4A: Ultradimensional Beasts",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-sm4-gx-battle-boost",
+    "name": "SM4+: GX Battle Boost",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-sm4s-awakened-heroes",
+    "name": "SM4S: Awakened Heroes",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-sm5m-ultra-moon",
+    "name": "SM5M: Ultra Moon",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-sm5s-ultra-sun",
+    "name": "SM5S: Ultra Sun",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-sm5-ultra-force",
+    "name": "SM5+: Ultra Force",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-sm6a-dragon-storm",
+    "name": "SM6a: Dragon Storm",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-sm6b-champion-road",
+    "name": "SM6b: Champion Road",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-sm6-forbidden-light",
+    "name": "SM6: Forbidden Light",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-sm7a-thunderclap-spark",
+    "name": "SM7a: Thunderclap Spark",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-sm7b-fairy-rise",
+    "name": "SM7b: Fairy Rise",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-sm7-sky-splitting-charisma",
+    "name": "SM7: Sky-Splitting Charisma",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-sm8a-dark-order",
+    "name": "SM8a: Dark Order",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-sm8b-gx-ultra-shiny",
+    "name": "SM8b: GX Ultra Shiny",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-sm8-super-burst-impact",
+    "name": "SM8: Super-Burst Impact",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-sm9a-night-unison",
+    "name": "SM9a: Night Unison",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-sm9b-full-metal-wall",
+    "name": "SM9b: Full Metal Wall",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-sm9-tag-bolt",
+    "name": "SM9: Tag Bolt",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-sma-sun-moon-starter-set",
+    "name": "smA: Sun \u0026 Moon Starter Set",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-smb-premium-trainer-box",
+    "name": "smB: Premium Trainer Box",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-smc-tapu-bulu-gx-enhanced-starter-set",
+    "name": "smC: Tapu Bulu-GX Enhanced Starter Set",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-smd-ash-vs-team-rocket-deck-kit",
+    "name": "smD: Ash vs Team Rocket Deck Kit",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-sme-solgaleo-gx-lunala-gx-legendary-starter-set",
+    "name": "smE: Solgaleo-GX \u0026 Lunala-GX Legendary Starter Set",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-smf-ultra-sun-ultra-moon-premium-trainer-box",
+    "name": "smF: Ultra Sun \u0026 Ultra Moon Premium Trainer Box",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-smh-gx-starter-decks",
+    "name": "smH: GX Starter Decks",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-smi-flareon-gx-vaporeon-gx-jolteon-gx-starter-sets",
+    "name": "smI: Flareon-GX, Vaporeon-GX \u0026 Jolteon-GX Starter Sets",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-smj-tag-team-gx-premium-trainer-box",
+    "name": "smJ: Tag Team GX Premium Trainer Box",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-smk-trainer-battle-decks",
+    "name": "smK: Trainer Battle Decks",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-sml-sun-moon-family-pokemon-card-game",
+    "name": "smL: Sun \u0026 Moon Family Pokemon Card Game",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-smm-tag-team-gx-starter-sets",
+    "name": "smM: Tag Team GX Starter Sets",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-smp1-rockruff-full-power-deck",
+    "name": "smP1: Rockruff Full Power Deck",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-smp2-great-detective-pikachu",
+    "name": "smP2: Great Detective Pikachu",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-sm-p-sun-moon-promos",
+    "name": "SM-P: Sun \u0026 Moon Promos",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-sm-the-best-of-xy",
+    "name": "SM: The Best of XY",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-snp-noivern-break-evolution-pack",
+    "name": "SNP: Noivern BREAK Evolution Pack",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-snp-raichu-break-evolution-pack",
+    "name": "SNP: Raichu BREAK Evolution Pack",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-sn-start-deck-100-corocoro-comic-version",
+    "name": "sN: Start Deck 100 CoroCoro Comic Version",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-southern-island",
+    "name": "Southern Island",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-sp1-zacian-zamazenta-box",
+    "name": "sp1: Zacian + Zamazenta Box",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-sp2-vmax-special-set",
+    "name": "sp2: VMAX Special Set",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-sp4-eevee-heroes-vmax-special-set",
+    "name": "sp4: Eevee Heroes VMAX Special Set",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-sp5-v-union-special-card-sets",
+    "name": "sp5: V-UNION Special Card Sets",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-sp6-vstar-special-set",
+    "name": "sp6: VSTAR Special Set",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-spd-deoxys-vstar-vmax-high-class-deck",
+    "name": "sPD: Deoxys VSTAR \u0026 VMAX High-Class Deck",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-special-box-collections",
+    "name": "Special Box Collections",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-split-earth",
+    "name": "Split Earth",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-s-p-sword-shield-promos",
+    "name": "S-P: Sword \u0026 Shield Promos",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-spz-zeraora-vstar-vmax-high-class-deck",
+    "name": "sPZ: Zeraora VSTAR \u0026 VMAX High-Class Deck",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-ss-gengar-vmax-high-class-deck",
+    "name": "SS: Gengar VMAX High-Class Deck",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-ss-inteleon-vmax-high-class-deck",
+    "name": "SS: Inteleon VMAX High-Class Deck",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-ss-silver-lance-jet-black-spirit-jumbo-pack-set",
+    "name": "SS: Silver Lance \u0026 Jet-Black Spirit Jumbo Pack Set",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-start-deck-100-battle-collection",
+    "name": "Start Deck 100 Battle Collection",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-sv10-the-glory-of-team-rocket",
+    "name": "SV10: The Glory of Team Rocket",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-sv11b-black-bolt",
+    "name": "SV11B: Black Bolt",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-sv11w-white-flare",
+    "name": "SV11W: White Flare",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-sv1a-triplet-beat",
+    "name": "SV1a: Triplet Beat",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-sv1s-scarlet-ex",
+    "name": "SV1S: Scarlet ex",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-sv1v-violet-ex",
+    "name": "SV1V: Violet ex",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-sv2a-pokemon-card-151",
+    "name": "SV2a: Pokemon Card 151",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-sv2d-clay-burst",
+    "name": "SV2D: Clay Burst",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-sv2p-snow-hazard",
+    "name": "SV2P: Snow Hazard",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-sv3a-raging-surf",
+    "name": "SV3a: Raging Surf",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-sv3-ruler-of-the-black-flame",
+    "name": "SV3: Ruler of the Black Flame",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-sv4a-shiny-treasure-ex",
+    "name": "SV4a: Shiny Treasure ex",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-sv4k-ancient-roar",
+    "name": "SV4K: Ancient Roar",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-sv4m-future-flash",
+    "name": "SV4M: Future Flash",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-sv5a-crimson-haze",
+    "name": "SV5a: Crimson Haze",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-sv5k-wild-force",
+    "name": "SV5K: Wild Force",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-sv5m-cyber-judge",
+    "name": "SV5M: Cyber Judge",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-sv6a-night-wanderer",
+    "name": "SV6a: Night Wanderer",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 0
+  },
+  {
+    "id": "jp-sv6-transformation-mask",
+    "name": "SV6: Transformation Mask",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 135
+  },
+  {
+    "id": "jp-sv7a-paradise-dragona",
+    "name": "SV7a: Paradise Dragona",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 96
+  },
+  {
+    "id": "jp-sv7-stellar-miracle",
+    "name": "SV7: Stellar Miracle",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 138
+  },
+  {
+    "id": "jp-sv8a-terastal-fest-ex",
+    "name": "SV8a: Terastal Fest ex",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 486
+  },
+  {
+    "id": "jp-sv8-super-electric-breaker",
+    "name": "SV8: Super Electric Breaker",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 140
+  },
+  {
+    "id": "jp-sv9a-heat-wave-arena",
+    "name": "SV9a: Heat Wave Arena",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 94
+  },
+  {
+    "id": "jp-sv9-battle-partners",
+    "name": "SV9: Battle Partners",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 136
+  },
+  {
+    "id": "jp-sv-ancient-koraidon-ex-starter-deck-build-set",
+    "name": "SV: Ancient Koraidon ex Starter Deck \u0026 Build Set",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 6
+  },
+  {
+    "id": "jp-sv-ceruledge-ex-stellar-tera-type-starter-set",
+    "name": "SV: Ceruledge ex Stellar Tera Type Starter Set",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 14
+  },
+  {
+    "id": "jp-sv-chien-pao-ex-battle-master-deck",
+    "name": "SV: Chien-Pao ex Battle Master Deck",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 4
+  },
+  {
+    "id": "jp-sv-ex-special-set",
+    "name": "SV: ex Special Set",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 6
+  },
+  {
+    "id": "jp-sv-ex-start-decks",
+    "name": "SV: ex Start Decks",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 54
+  },
+  {
+    "id": "jp-sv-ex-starter-set-fuecoco-ampharos-ex",
+    "name": "SV: ex Starter Set Fuecoco \u0026 Ampharos ex",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 9
+  },
+  {
+    "id": "jp-sv-ex-starter-set-marnie-s-morpeko-grimmsnarl-ex",
+    "name": "SV: ex Starter Set Marnie's Morpeko \u0026 Grimmsnarl ex",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 21
+  },
+  {
+    "id": "jp-sv-ex-starter-set-pikachu-ex-pawmot",
+    "name": "SV: ex Starter Set Pikachu ex \u0026 Pawmot",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 6
+  },
+  {
+    "id": "jp-sv-ex-starter-set-quaxly-mimikyu-ex",
+    "name": "SV: ex Starter Set Quaxly \u0026 Mimikyu ex",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 7
+  },
+  {
+    "id": "jp-sv-ex-starter-set-sprigatito-lucario-ex",
+    "name": "SV: ex Starter Set Sprigatito \u0026 Lucario ex",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 8
+  },
+  {
+    "id": "jp-sv-ex-starter-set-steven-s-beldum-metagross-ex",
+    "name": "SV: ex Starter Set Steven's Beldum \u0026 Metagross ex",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 20
+  },
+  {
+    "id": "jp-sv-future-miraidon-ex-starter-deck-build-set",
+    "name": "SV: Future Miraidon ex Starter Deck \u0026 Build Set",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 10
+  },
+  {
+    "id": "jp-sv-mewtwo-ex-terastal-starter-set",
+    "name": "SV: Mewtwo ex Terastal Starter Set",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 7
+  },
+  {
+    "id": "jp-svm-generations-start-decks",
+    "name": "SVM: Generations Start Decks",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 35
+  },
+  {
+    "id": "jp-svn-battle-partners-deck-build-box",
+    "name": "SVN: Battle Partners Deck Build Box",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 8
+  },
+  {
+    "id": "jp-sv-p-promotional-cards",
+    "name": "SV-P Promotional Cards",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 125
+  },
+  {
+    "id": "jp-sv-premium-trainer-box-ex",
+    "name": "SV: Premium Trainer Box ex",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 13
+  },
+  {
+    "id": "jp-sv-ruler-of-the-black-flame-deck-build-box",
+    "name": "SV: Ruler of the Black Flame Deck Build Box",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 10
+  },
+  {
+    "id": "jp-sv-skeledirge-ex-terastal-starter-set",
+    "name": "SV: Skeledirge ex Terastal Starter Set",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 8
+  },
+  {
+    "id": "jp-sv-stellar-miracle-deck-build-box",
+    "name": "SV: Stellar Miracle Deck Build Box",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 26
+  },
+  {
+    "id": "jp-sv-sylveon-ex-stellar-tera-type-starter-set",
+    "name": "SV: Sylveon ex Stellar Tera Type Starter Set",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 12
+  },
+  {
+    "id": "jp-sv-terastal-charizard-ex-battle-master-deck",
+    "name": "SV: Terastal Charizard ex Battle Master Deck",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 8
+  },
+  {
+    "id": "jp-sv-venusaur-charizard-blastoise-special-deck-set",
+    "name": "SV: Venusaur, Charizard \u0026 Blastoise Special Deck Set",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 49
+  },
+  {
+    "id": "jp-team-plasma-battle-gift-set",
+    "name": "Team Plasma Battle Gift Set",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 2
+  },
+  {
+    "id": "jp-team-plasma-s-powered-half-deck",
+    "name": "Team Plasma's Powered Half Deck",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 2
+  },
+  {
+    "id": "jp-theater-limited-vs-pack",
+    "name": "Theater Limited VS Pack",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 13
+  },
+  {
+    "id": "jp-the-town-on-no-map",
+    "name": "The Town on No Map",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 84
+  },
+  {
+    "id": "jp-torchic-constructed-starter-deck",
+    "name": "Torchic Constructed Starter Deck",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 3
+  },
+  {
+    "id": "jp-t-promotional-cards",
+    "name": "T Promotional cards",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 20
+  },
+  {
+    "id": "jp-treecko-constructed-starter-deck",
+    "name": "Treecko Constructed Starter Deck",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 8
+  },
+  {
+    "id": "jp-typhlosion-constructed-starter-deck",
+    "name": "Typhlosion Constructed Starter Deck",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 7
+  },
+  {
+    "id": "jp-undone-seal",
+    "name": "Undone Seal",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 51
+  },
+  {
+    "id": "jp-unnumbered-promotional-cards",
+    "name": "Unnumbered Promotional cards",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 21
   },
   {
     "id": "jp-vending-machine-cards-series-1-blue",
@@ -56,31 +2716,227 @@
     "total": 52
   },
   {
-    "id": "jp-base-expansion-pack",
-    "name": "Base Expansion Pack",
+    "id": "jp-water-quick-construction-pack",
+    "name": "Water Quick Construction Pack",
     "series": "Pokemon Japan",
-    "releaseDate": "1996-10-20",
-    "total": 109
+    "releaseDate": "",
+    "total": 1
   },
   {
-    "id": "jp-pokemon-jungle",
-    "name": "Pokemon Jungle",
+    "id": "jp-wcs23-2023-world-championships-yokohama-deck-pikachu",
+    "name": "WCS23: 2023 World Championships Yokohama Deck: Pikachu",
     "series": "Pokemon Japan",
-    "releaseDate": "1997-03-05",
+    "releaseDate": "",
+    "total": 31
+  },
+  {
+    "id": "jp-wind-from-the-sea",
+    "name": "Wind from the Sea",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 74
+  },
+  {
+    "id": "jp-world-champions-pack",
+    "name": "World Champions Pack",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 5
+  },
+  {
+    "id": "jp-world-hobby-fair",
+    "name": "World Hobby Fair",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 6
+  },
+  {
+    "id": "jp-xerneas-half-deck",
+    "name": "Xerneas Half Deck",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 9
+  },
+  {
+    "id": "jp-xy10-awakening-psychic-king",
+    "name": "XY10: Awakening Psychic King",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
     "total": 48
   },
   {
-    "id": "jp-mystery-of-the-fossils",
-    "name": "Mystery of the Fossils",
+    "id": "jp-xy11-bb-fever-burst-fighter",
+    "name": "XY11-Bb: Fever-Burst Fighter",
     "series": "Pokemon Japan",
-    "releaseDate": "1997-06-21",
-    "total": 48
+    "releaseDate": "",
+    "total": 30
   },
   {
-    "id": "jp-corocoro-promotional-cards",
-    "name": "CoroCoro Promotional Cards",
+    "id": "jp-xy11-br-cruel-traitor",
+    "name": "XY11-Br: Cruel Traitor",
     "series": "Pokemon Japan",
-    "releaseDate": "1996-10-20",
+    "releaseDate": "",
+    "total": 31
+  },
+  {
+    "id": "jp-xy2-wild-blaze",
+    "name": "XY2: Wild Blaze",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 43
+  },
+  {
+    "id": "jp-xy3-rising-fist",
+    "name": "XY3: Rising Fist",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 51
+  },
+  {
+    "id": "jp-xy4-phantom-gate",
+    "name": "XY4: Phantom Gate",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 28
+  },
+  {
+    "id": "jp-xy5-bg-gaia-volcano",
+    "name": "XY5-Bg: Gaia Volcano",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 33
+  },
+  {
+    "id": "jp-xy5-bt-tidal-storm",
+    "name": "XY5-Bt: Tidal Storm",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 33
+  },
+  {
+    "id": "jp-xy6-emerald-break",
+    "name": "XY6: Emerald Break",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 55
+  },
+  {
+    "id": "jp-xy7-bandit-ring",
+    "name": "XY7: Bandit Ring",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 64
+  },
+  {
+    "id": "jp-xy8-bb-blue-shock",
+    "name": "XY8-Bb: Blue Shock",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 30
+  },
+  {
+    "id": "jp-xy8-br-red-flash",
+    "name": "XY8-Br: Red Flash",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 36
+  },
+  {
+    "id": "jp-xy9-rage-of-the-broken-heavens",
+    "name": "XY9: Rage of the Broken Heavens",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
     "total": 40
+  },
+  {
+    "id": "jp-xya-m-charizard-ex-mega-battle-deck",
+    "name": "XYA: M Charizard-EX Mega Battle Deck",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 10
+  },
+  {
+    "id": "jp-xyb-dialga-ex-aegislash-ex-hyper-metal-chain-deck",
+    "name": "XYB: Dialga-EX + Aegislash-EX Hyper Metal Chain Deck",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 5
+  },
+  {
+    "id": "jp-xy-beginning-set",
+    "name": "XY Beginning Set",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 7
+  },
+  {
+    "id": "jp-xy-bx-collection-x",
+    "name": "XY-Bx: Collection X",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 38
+  },
+  {
+    "id": "jp-xy-by-collection-y",
+    "name": "XY-By: Collection Y",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 36
+  },
+  {
+    "id": "jp-xyc-super-legend-set-xerneas-ex-yveltal-ex",
+    "name": "XYC: Super Legend Set: Xerneas-EX \u0026 Yveltal-EX",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 5
+  },
+  {
+    "id": "jp-xyd-m-rayquaza-ex-mega-battle-deck",
+    "name": "XYD: M Rayquaza-EX Mega Battle Deck",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 10
+  },
+  {
+    "id": "jp-xye-emboar-ex-vs-togekiss-ex-deck-kit",
+    "name": "XYE: Emboar-EX vs Togekiss-EX Deck Kit",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 4
+  },
+  {
+    "id": "jp-xyf-golduck-break-palkia-ex-combo-deck",
+    "name": "XYF: Golduck BREAK + Palkia-EX Combo Deck",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 7
+  },
+  {
+    "id": "jp-xyg-zygarde-ex-perfect-battle-deck",
+    "name": "XYG: Zygarde-EX Perfect Battle Deck",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 7
+  },
+  {
+    "id": "jp-xyh-m-audino-ex-mega-battle-deck",
+    "name": "XYH: M Audino-EX Mega Battle Deck",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 3
+  },
+  {
+    "id": "jp-xy-p-xy-promos",
+    "name": "XY-P: XY Promos",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 119
+  },
+  {
+    "id": "jp-yveltal-half-deck",
+    "name": "Yveltal Half Deck",
+    "series": "Pokemon Japan",
+    "releaseDate": "",
+    "total": 3
   }
 ]

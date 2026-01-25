@@ -1,0 +1,518 @@
+[
+  {
+    "id": "jp-xy2-wild-blaze-086/080",
+    "name": "Pokemon Center Lady - 086/080",
+    "supertype": "Pokémon",
+    "number": "086/080",
+    "rarity": "Super Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603387_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603387_400w.jpg"
+    },
+    "tcgplayerId": "603387"
+  },
+  {
+    "id": "jp-xy2-wild-blaze-081/080",
+    "name": "Charizard EX - 081/080",
+    "supertype": "Pokémon",
+    "number": "081/080",
+    "rarity": "Super Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603339_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603339_400w.jpg"
+    },
+    "tcgplayerId": "603339"
+  },
+  {
+    "id": "jp-xy2-wild-blaze-055/080",
+    "name": "M Charizard EX - 055/080",
+    "supertype": "Pokémon",
+    "number": "055/080",
+    "rarity": "Double Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603335_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603335_400w.jpg"
+    },
+    "tcgplayerId": "603335"
+  },
+  {
+    "id": "jp-xy2-wild-blaze-055/080",
+    "name": "Charizard - 055/080",
+    "supertype": "Pokémon",
+    "number": "055/080",
+    "rarity": "Double Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603335_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603335_400w.jpg"
+    },
+    "tcgplayerId": "603335"
+  },
+  {
+    "id": "jp-xy2-wild-blaze-089/080",
+    "name": "M Charizard EX - 089/080",
+    "supertype": "Pokémon",
+    "number": "089/080",
+    "rarity": "Ultra Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603336_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603336_400w.jpg"
+    },
+    "tcgplayerId": "603336"
+  },
+  {
+    "id": "jp-xy2-wild-blaze-089/080",
+    "name": "Charizard - 089/080",
+    "supertype": "Pokémon",
+    "number": "089/080",
+    "rarity": "Ultra Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603336_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603336_400w.jpg"
+    },
+    "tcgplayerId": "603336"
+  },
+  {
+    "id": "jp-xy2-wild-blaze-090/080",
+    "name": "M Kangaskhan EX - 090/080",
+    "supertype": "Pokémon",
+    "number": "090/080",
+    "rarity": "Ultra Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603363_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603363_400w.jpg"
+    },
+    "tcgplayerId": "603363"
+  },
+  {
+    "id": "jp-xy2-wild-blaze-084/080",
+    "name": "Kangaskhan EX - 084/080",
+    "supertype": "Pokémon",
+    "number": "084/080",
+    "rarity": "Super Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603365_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603365_400w.jpg"
+    },
+    "tcgplayerId": "603365"
+  },
+  {
+    "id": "jp-xy2-wild-blaze-065/080",
+    "name": "M Kangaskhan EX - 065/080",
+    "supertype": "Pokémon",
+    "number": "065/080",
+    "rarity": "Double Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603362_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603362_400w.jpg"
+    },
+    "tcgplayerId": "603362"
+  },
+  {
+    "id": "jp-xy2-wild-blaze-066/080",
+    "name": "Snorlax",
+    "supertype": "Pokémon",
+    "number": "066/080",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603407_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603407_400w.jpg"
+    },
+    "tcgplayerId": "603407"
+  },
+  {
+    "id": "jp-xy2-wild-blaze-011/080",
+    "name": "Charizard EX - 011/080",
+    "supertype": "Pokémon",
+    "number": "011/080",
+    "rarity": "Double Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603338_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603338_400w.jpg"
+    },
+    "tcgplayerId": "603338"
+  },
+  {
+    "id": "jp-xy2-wild-blaze-083/080",
+    "name": "Toxicroak EX - 083/080",
+    "supertype": "Pokémon",
+    "number": "083/080",
+    "rarity": "Super Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603412_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603412_400w.jpg"
+    },
+    "tcgplayerId": "603412"
+  },
+  {
+    "id": "jp-xy2-wild-blaze-013/080",
+    "name": "Rapidash",
+    "supertype": "Pokémon",
+    "number": "013/080",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603394_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603394_400w.jpg"
+    },
+    "tcgplayerId": "603394"
+  },
+  {
+    "id": "jp-xy2-wild-blaze-082/080",
+    "name": "Magnezone EX - 082/080",
+    "supertype": "Pokémon",
+    "number": "082/080",
+    "rarity": "Super Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603375_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603375_400w.jpg"
+    },
+    "tcgplayerId": "603375"
+  },
+  {
+    "id": "jp-xy2-wild-blaze-018/080",
+    "name": "Milotic",
+    "supertype": "Pokémon",
+    "number": "018/080",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603379_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603379_400w.jpg"
+    },
+    "tcgplayerId": "603379"
+  },
+  {
+    "id": "jp-xy2-wild-blaze-003/080",
+    "name": "Butterfree",
+    "supertype": "Pokémon",
+    "number": "003/080",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603332_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603332_400w.jpg"
+    },
+    "tcgplayerId": "603332"
+  },
+  {
+    "id": "jp-xy2-wild-blaze-012/080",
+    "name": "Ponyta",
+    "supertype": "Pokémon",
+    "number": "012/080",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603390_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603390_400w.jpg"
+    },
+    "tcgplayerId": "603390"
+  },
+  {
+    "id": "jp-xy2-wild-blaze-033/080",
+    "name": "Duskull",
+    "supertype": "Pokémon",
+    "number": "033/080",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603345_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603345_400w.jpg"
+    },
+    "tcgplayerId": "603345"
+  },
+  {
+    "id": "jp-xy2-wild-blaze-036/080",
+    "name": "Toxicroak EX - 036/080",
+    "supertype": "Pokémon",
+    "number": "036/080",
+    "rarity": "Double Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603411_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603411_400w.jpg"
+    },
+    "tcgplayerId": "603411"
+  },
+  {
+    "id": "jp-xy2-wild-blaze-030/080",
+    "name": "Magnezone EX - 030/080",
+    "supertype": "Pokémon",
+    "number": "030/080",
+    "rarity": "Double Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603374_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603374_400w.jpg"
+    },
+    "tcgplayerId": "603374"
+  },
+  {
+    "id": "jp-xy2-wild-blaze-046/080",
+    "name": "Weavile",
+    "supertype": "Pokémon",
+    "number": "046/080",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603415_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603415_400w.jpg"
+    },
+    "tcgplayerId": "603415"
+  },
+  {
+    "id": "jp-xy2-wild-blaze-064/080",
+    "name": "Kangaskhan EX - 064/080",
+    "supertype": "Pokémon",
+    "number": "064/080",
+    "rarity": "Double Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603364_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603364_400w.jpg"
+    },
+    "tcgplayerId": "603364"
+  },
+  {
+    "id": "jp-xy2-wild-blaze-028/080",
+    "name": "Luxio",
+    "supertype": "Pokémon",
+    "number": "028/080",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603369_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603369_400w.jpg"
+    },
+    "tcgplayerId": "603369"
+  },
+  {
+    "id": "jp-xy2-wild-blaze-019/080",
+    "name": "Spheal",
+    "supertype": "Pokémon",
+    "number": "019/080",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603408_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603408_400w.jpg"
+    },
+    "tcgplayerId": "603408"
+  },
+  {
+    "id": "jp-xy2-wild-blaze-058/080",
+    "name": "Goomy",
+    "supertype": "Pokémon",
+    "number": "058/080",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603358_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603358_400w.jpg"
+    },
+    "tcgplayerId": "603358"
+  },
+  {
+    "id": "jp-xy2-wild-blaze-031/080",
+    "name": "Helioptile",
+    "supertype": "Pokémon",
+    "number": "031/080",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603361_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603361_400w.jpg"
+    },
+    "tcgplayerId": "603361"
+  },
+  {
+    "id": "jp-xy2-wild-blaze-054/080",
+    "name": "Carbink",
+    "supertype": "Pokémon",
+    "number": "054/080",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603333_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603333_400w.jpg"
+    },
+    "tcgplayerId": "603333"
+  },
+  {
+    "id": "jp-xy2-wild-blaze-023/080",
+    "name": "Buizel",
+    "supertype": "Pokémon",
+    "number": "023/080",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603330_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603330_400w.jpg"
+    },
+    "tcgplayerId": "603330"
+  },
+  {
+    "id": "jp-xy2-wild-blaze-026/080",
+    "name": "Avalugg",
+    "supertype": "Pokémon",
+    "number": "026/080",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603326_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603326_400w.jpg"
+    },
+    "tcgplayerId": "603326"
+  },
+  {
+    "id": "jp-xy2-wild-blaze-001/080",
+    "name": "Caterpie",
+    "supertype": "Pokémon",
+    "number": "001/080",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603334_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603334_400w.jpg"
+    },
+    "tcgplayerId": "603334"
+  },
+  {
+    "id": "jp-xy2-wild-blaze-034/080",
+    "name": "Dusclops",
+    "supertype": "Pokémon",
+    "number": "034/080",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603343_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603343_400w.jpg"
+    },
+    "tcgplayerId": "603343"
+  },
+  {
+    "id": "jp-xy2-wild-blaze-060/080",
+    "name": "Goodra",
+    "supertype": "Pokémon",
+    "number": "060/080",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603357_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603357_400w.jpg"
+    },
+    "tcgplayerId": "603357"
+  },
+  {
+    "id": "jp-xy2-wild-blaze-061/080",
+    "name": "Pidgey",
+    "supertype": "Pokémon",
+    "number": "061/080",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603384_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603384_400w.jpg"
+    },
+    "tcgplayerId": "603384"
+  },
+  {
+    "id": "jp-xy2-wild-blaze-053/080",
+    "name": "Florges",
+    "supertype": "Pokémon",
+    "number": "053/080",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603352_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603352_400w.jpg"
+    },
+    "tcgplayerId": "603352"
+  },
+  {
+    "id": "jp-xy2-wild-blaze-029/080",
+    "name": "Luxray",
+    "supertype": "Pokémon",
+    "number": "029/080",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603370_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603370_400w.jpg"
+    },
+    "tcgplayerId": "603370"
+  },
+  {
+    "id": "jp-xy2-wild-blaze-010/080",
+    "name": "Maractus",
+    "supertype": "Pokémon",
+    "number": "010/080",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603376_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603376_400w.jpg"
+    },
+    "tcgplayerId": "603376"
+  },
+  {
+    "id": "jp-xy2-wild-blaze-045/080",
+    "name": "Sneasel",
+    "supertype": "Pokémon",
+    "number": "045/080",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603406_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603406_400w.jpg"
+    },
+    "tcgplayerId": "603406"
+  },
+  {
+    "id": "jp-xy2-wild-blaze-057/080",
+    "name": "Dragalge",
+    "supertype": "Pokémon",
+    "number": "057/080",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603340_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603340_400w.jpg"
+    },
+    "tcgplayerId": "603340"
+  },
+  {
+    "id": "jp-xy2-wild-blaze-067/080",
+    "name": "Sentret",
+    "supertype": "Pokémon",
+    "number": "067/080",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603400_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603400_400w.jpg"
+    },
+    "tcgplayerId": "603400"
+  },
+  {
+    "id": "jp-xy2-wild-blaze-069/080",
+    "name": "Miltank",
+    "supertype": "Pokémon",
+    "number": "069/080",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603380_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603380_400w.jpg"
+    },
+    "tcgplayerId": "603380"
+  },
+  {
+    "id": "jp-xy2-wild-blaze-002/080",
+    "name": "Metapod",
+    "supertype": "Pokémon",
+    "number": "002/080",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603378_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603378_400w.jpg"
+    },
+    "tcgplayerId": "603378"
+  },
+  {
+    "id": "jp-xy2-wild-blaze-044/080",
+    "name": "Barbaracle",
+    "supertype": "Pokémon",
+    "number": "044/080",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603327_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603327_400w.jpg"
+    },
+    "tcgplayerId": "603327"
+  },
+  {
+    "id": "jp-xy2-wild-blaze-043/080",
+    "name": "Binacle",
+    "supertype": "Pokémon",
+    "number": "043/080",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/603329_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/603329_400w.jpg"
+    },
+    "tcgplayerId": "603329"
+  }
+]

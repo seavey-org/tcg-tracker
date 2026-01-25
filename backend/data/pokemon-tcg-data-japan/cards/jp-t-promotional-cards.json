@@ -1,0 +1,242 @@
+[
+  {
+    "id": "jp-t-promotional-cards-014/T",
+    "name": "Articuno",
+    "supertype": "Pokémon",
+    "number": "014/T",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/613961_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/613961_400w.jpg"
+    },
+    "tcgplayerId": "613961"
+  },
+  {
+    "id": "jp-t-promotional-cards-002/T",
+    "name": "Vaporeon",
+    "supertype": "Pokémon",
+    "number": "002/T",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/613949_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/613949_400w.jpg"
+    },
+    "tcgplayerId": "613949"
+  },
+  {
+    "id": "jp-t-promotional-cards-003/T",
+    "name": "Jolteon",
+    "supertype": "Pokémon",
+    "number": "003/T",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/613950_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/613950_400w.jpg"
+    },
+    "tcgplayerId": "613950"
+  },
+  {
+    "id": "jp-t-promotional-cards-013/T",
+    "name": "Moltres",
+    "supertype": "Pokémon",
+    "number": "013/T",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/613960_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/613960_400w.jpg"
+    },
+    "tcgplayerId": "613960"
+  },
+  {
+    "id": "jp-t-promotional-cards-004/T",
+    "name": "Slowpoke",
+    "supertype": "Pokémon",
+    "number": "004/T",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/613951_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/613951_400w.jpg"
+    },
+    "tcgplayerId": "613951"
+  },
+  {
+    "id": "jp-t-promotional-cards-012/T",
+    "name": "Wartortle",
+    "supertype": "Pokémon",
+    "number": "012/T",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/613959_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/613959_400w.jpg"
+    },
+    "tcgplayerId": "613959"
+  },
+  {
+    "id": "jp-t-promotional-cards-024/T",
+    "name": "Imakuni?'s Exploud ex",
+    "supertype": "Pokémon",
+    "number": "024/T",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/613969_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/613969_400w.jpg"
+    },
+    "tcgplayerId": "613969"
+  },
+  {
+    "id": "jp-t-promotional-cards-023/T",
+    "name": "Imakuni?'s Loudred",
+    "supertype": "Trainer",
+    "number": "023/T",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/613968_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/613968_400w.jpg"
+    },
+    "tcgplayerId": "613968"
+  },
+  {
+    "id": "jp-t-promotional-cards-011/T",
+    "name": "Charmeleon",
+    "supertype": "Pokémon",
+    "number": "011/T",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/613958_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/613958_400w.jpg"
+    },
+    "tcgplayerId": "613958"
+  },
+  {
+    "id": "jp-t-promotional-cards-017/T",
+    "name": "Dragonair",
+    "supertype": "Pokémon",
+    "number": "017/T",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/613964_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/613964_400w.jpg"
+    },
+    "tcgplayerId": "613964"
+  },
+  {
+    "id": "jp-t-promotional-cards-005/T",
+    "name": "Slowbro",
+    "supertype": "Pokémon",
+    "number": "005/T",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/613952_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/613952_400w.jpg"
+    },
+    "tcgplayerId": "613952"
+  },
+  {
+    "id": "jp-t-promotional-cards-001/T",
+    "name": "Flareon",
+    "supertype": "Pokémon",
+    "number": "001/T",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/613948_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/613948_400w.jpg"
+    },
+    "tcgplayerId": "613948"
+  },
+  {
+    "id": "jp-t-promotional-cards-016/T",
+    "name": "Dratini",
+    "supertype": "Pokémon",
+    "number": "016/T",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/613963_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/613963_400w.jpg"
+    },
+    "tcgplayerId": "613963"
+  },
+  {
+    "id": "jp-t-promotional-cards-006/T",
+    "name": "Slowking",
+    "supertype": "Pokémon",
+    "number": "006/T",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/613953_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/613953_400w.jpg"
+    },
+    "tcgplayerId": "613953"
+  },
+  {
+    "id": "jp-t-promotional-cards-022/T",
+    "name": "Imakuni?'s Whismur",
+    "supertype": "Trainer",
+    "number": "022/T",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/613967_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/613967_400w.jpg"
+    },
+    "tcgplayerId": "613967"
+  },
+  {
+    "id": "jp-t-promotional-cards-015/T",
+    "name": "Zapdos",
+    "supertype": "Pokémon",
+    "number": "015/T",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/613962_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/613962_400w.jpg"
+    },
+    "tcgplayerId": "613962"
+  },
+  {
+    "id": "jp-t-promotional-cards-009/T",
+    "name": "Croconaw",
+    "supertype": "Pokémon",
+    "number": "009/T",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/613956_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/613956_400w.jpg"
+    },
+    "tcgplayerId": "613956"
+  },
+  {
+    "id": "jp-t-promotional-cards-021/T",
+    "name": "Tyranitar ex",
+    "supertype": "Pokémon",
+    "number": "021/T",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/613966_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/613966_400w.jpg"
+    },
+    "tcgplayerId": "613966"
+  },
+  {
+    "id": "jp-t-promotional-cards-010/T",
+    "name": "Ivysaur",
+    "supertype": "Pokémon",
+    "number": "010/T",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/613957_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/613957_400w.jpg"
+    },
+    "tcgplayerId": "613957"
+  },
+  {
+    "id": "jp-t-promotional-cards-018/T",
+    "name": "Dragonite",
+    "supertype": "Pokémon",
+    "number": "018/T",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/613965_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/613965_400w.jpg"
+    },
+    "tcgplayerId": "613965"
+  }
+]

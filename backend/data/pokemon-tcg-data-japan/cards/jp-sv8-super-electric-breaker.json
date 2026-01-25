@@ -1,0 +1,1682 @@
+[
+  {
+    "id": "jp-sv8-super-electric-breaker-132/106",
+    "name": "Pikachu ex - 132/106",
+    "supertype": "Pokémon",
+    "number": "132/106",
+    "rarity": "Special Art Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/587699_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/587699_400w.jpg"
+    },
+    "tcgplayerId": "587699"
+  },
+  {
+    "id": "jp-sv8-super-electric-breaker-super-electric-breaker-booster-box",
+    "name": "Super Electric Breaker Booster Box",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/587728_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/587728_400w.jpg"
+    },
+    "tcgplayerId": "587728"
+  },
+  {
+    "id": "jp-sv8-super-electric-breaker-131/106",
+    "name": "Milotic ex - 131/106",
+    "supertype": "Pokémon",
+    "number": "131/106",
+    "rarity": "Special Art Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/587698_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/587698_400w.jpg"
+    },
+    "tcgplayerId": "587698"
+  },
+  {
+    "id": "jp-sv8-super-electric-breaker-136/106",
+    "name": "Pikachu ex - 136/106",
+    "supertype": "Pokémon",
+    "number": "136/106",
+    "rarity": "Ultra Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/587703_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/587703_400w.jpg"
+    },
+    "tcgplayerId": "587703"
+  },
+  {
+    "id": "jp-sv8-super-electric-breaker-133/106",
+    "name": "Hydreigon ex - 133/106",
+    "supertype": "Pokémon",
+    "number": "133/106",
+    "rarity": "Special Art Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/587700_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/587700_400w.jpg"
+    },
+    "tcgplayerId": "587700"
+  },
+  {
+    "id": "jp-sv8-super-electric-breaker-135/106",
+    "name": "Jasmine's Gaze - 135/106",
+    "supertype": "Trainer",
+    "number": "135/106",
+    "rarity": "Special Art Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/587697_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/587697_400w.jpg"
+    },
+    "tcgplayerId": "587697"
+  },
+  {
+    "id": "jp-sv8-super-electric-breaker-122/106",
+    "name": "Pikachu ex - 122/106",
+    "supertype": "Pokémon",
+    "number": "122/106",
+    "rarity": "Super Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/587694_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/587694_400w.jpg"
+    },
+    "tcgplayerId": "587694"
+  },
+  {
+    "id": "jp-sv8-super-electric-breaker-130/106",
+    "name": "Durant ex - 130/106",
+    "supertype": "Pokémon",
+    "number": "130/106",
+    "rarity": "Special Art Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/587711_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/587711_400w.jpg"
+    },
+    "tcgplayerId": "587711"
+  },
+  {
+    "id": "jp-sv8-super-electric-breaker-134/106",
+    "name": "Clemont's Wit - 134/106",
+    "supertype": "Trainer",
+    "number": "134/106",
+    "rarity": "Special Art Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/587712_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/587712_400w.jpg"
+    },
+    "tcgplayerId": "587712"
+  },
+  {
+    "id": "jp-sv8-super-electric-breaker-138/106",
+    "name": "Gravity Mountain - 138/106",
+    "supertype": "Pokémon",
+    "number": "138/106",
+    "rarity": "Ultra Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/587701_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/587701_400w.jpg"
+    },
+    "tcgplayerId": "587701"
+  },
+  {
+    "id": "jp-sv8-super-electric-breaker-137/106",
+    "name": "Night Stretcher - 137/106",
+    "supertype": "Pokémon",
+    "number": "137/106",
+    "rarity": "Ultra Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/587702_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/587702_400w.jpg"
+    },
+    "tcgplayerId": "587702"
+  },
+  {
+    "id": "jp-sv8-super-electric-breaker-112/106",
+    "name": "Magneton - 112/106",
+    "supertype": "Pokémon",
+    "number": "112/106",
+    "rarity": "Art Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/587725_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/587725_400w.jpg"
+    },
+    "tcgplayerId": "587725"
+  },
+  {
+    "id": "jp-sv8-super-electric-breaker-109/106",
+    "name": "Ceruledge - 109/106",
+    "supertype": "Pokémon",
+    "number": "109/106",
+    "rarity": "Art Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/587688_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/587688_400w.jpg"
+    },
+    "tcgplayerId": "587688"
+  },
+  {
+    "id": "jp-sv8-super-electric-breaker-114/106",
+    "name": "Mesprit - 114/106",
+    "supertype": "Pokémon",
+    "number": "114/106",
+    "rarity": "Art Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/587691_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/587691_400w.jpg"
+    },
+    "tcgplayerId": "587691"
+  },
+  {
+    "id": "jp-sv8-super-electric-breaker-111/106",
+    "name": "Spheal - 111/106",
+    "supertype": "Pokémon",
+    "number": "111/106",
+    "rarity": "Art Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/587690_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/587690_400w.jpg"
+    },
+    "tcgplayerId": "587690"
+  },
+  {
+    "id": "jp-sv8-super-electric-breaker-super-electric-breaker-booster-pack",
+    "name": "Super Electric Breaker Booster Pack",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/587727_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/587727_400w.jpg"
+    },
+    "tcgplayerId": "587727"
+  },
+  {
+    "id": "jp-sv8-super-electric-breaker-124/106",
+    "name": "Hydreigon ex - 124/106",
+    "supertype": "Pokémon",
+    "number": "124/106",
+    "rarity": "Super Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/587716_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/587716_400w.jpg"
+    },
+    "tcgplayerId": "587716"
+  },
+  {
+    "id": "jp-sv8-super-electric-breaker-125/106",
+    "name": "Tatsugiri ex - 125/106",
+    "supertype": "Pokémon",
+    "number": "125/106",
+    "rarity": "Super Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/587715_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/587715_400w.jpg"
+    },
+    "tcgplayerId": "587715"
+  },
+  {
+    "id": "jp-sv8-super-electric-breaker-117/106",
+    "name": "Slakoth - 117/106",
+    "supertype": "Pokémon",
+    "number": "117/106",
+    "rarity": "Art Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/587722_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/587722_400w.jpg"
+    },
+    "tcgplayerId": "587722"
+  },
+  {
+    "id": "jp-sv8-super-electric-breaker-121/106",
+    "name": "Milotic ex - 121/106",
+    "supertype": "Pokémon",
+    "number": "121/106",
+    "rarity": "Super Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/587717_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/587717_400w.jpg"
+    },
+    "tcgplayerId": "587717"
+  },
+  {
+    "id": "jp-sv8-super-electric-breaker-116/106",
+    "name": "Alolan Dugtrio - 116/106",
+    "supertype": "Pokémon",
+    "number": "116/106",
+    "rarity": "Art Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/587723_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/587723_400w.jpg"
+    },
+    "tcgplayerId": "587723"
+  },
+  {
+    "id": "jp-sv8-super-electric-breaker-115/106",
+    "name": "Phanpy - 115/106",
+    "supertype": "Pokémon",
+    "number": "115/106",
+    "rarity": "Art Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/587692_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/587692_400w.jpg"
+    },
+    "tcgplayerId": "587692"
+  },
+  {
+    "id": "jp-sv8-super-electric-breaker-129/106",
+    "name": "Jasmine's Gaze - 129/106",
+    "supertype": "Trainer",
+    "number": "129/106",
+    "rarity": "Super Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/587704_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/587704_400w.jpg"
+    },
+    "tcgplayerId": "587704"
+  },
+  {
+    "id": "jp-sv8-super-electric-breaker-110/106",
+    "name": "Feebas - 110/106",
+    "supertype": "Pokémon",
+    "number": "110/106",
+    "rarity": "Art Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/587689_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/587689_400w.jpg"
+    },
+    "tcgplayerId": "587689"
+  },
+  {
+    "id": "jp-sv8-super-electric-breaker-128/106",
+    "name": "Clemont's Wit - 128/106",
+    "supertype": "Trainer",
+    "number": "128/106",
+    "rarity": "Super Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/587707_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/587707_400w.jpg"
+    },
+    "tcgplayerId": "587707"
+  },
+  {
+    "id": "jp-sv8-super-electric-breaker-123/106",
+    "name": "Palossand ex - 123/106",
+    "supertype": "Pokémon",
+    "number": "123/106",
+    "rarity": "Super Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/587695_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/587695_400w.jpg"
+    },
+    "tcgplayerId": "587695"
+  },
+  {
+    "id": "jp-sv8-super-electric-breaker-118/106",
+    "name": "Kecleon - 118/106",
+    "supertype": "Pokémon",
+    "number": "118/106",
+    "rarity": "Art Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/587693_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/587693_400w.jpg"
+    },
+    "tcgplayerId": "587693"
+  },
+  {
+    "id": "jp-sv8-super-electric-breaker-033/106",
+    "name": "Pikachu ex - 033/106",
+    "supertype": "Pokémon",
+    "number": "033/106",
+    "rarity": "Double Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/587613_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/587613_400w.jpg"
+    },
+    "tcgplayerId": "587613"
+  },
+  {
+    "id": "jp-sv8-super-electric-breaker-107/106",
+    "name": "Vivillon - 107/106",
+    "supertype": "Pokémon",
+    "number": "107/106",
+    "rarity": "Art Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/587687_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/587687_400w.jpg"
+    },
+    "tcgplayerId": "587687"
+  },
+  {
+    "id": "jp-sv8-super-electric-breaker-108/106",
+    "name": "Larvesta - 108/106",
+    "supertype": "Pokémon",
+    "number": "108/106",
+    "rarity": "Art Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/587726_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/587726_400w.jpg"
+    },
+    "tcgplayerId": "587726"
+  },
+  {
+    "id": "jp-sv8-super-electric-breaker-119/106",
+    "name": "Durant ex - 119/106",
+    "supertype": "Pokémon",
+    "number": "119/106",
+    "rarity": "Super Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/587721_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/587721_400w.jpg"
+    },
+    "tcgplayerId": "587721"
+  },
+  {
+    "id": "jp-sv8-super-electric-breaker-126/106",
+    "name": "Slaking ex - 126/106",
+    "supertype": "Pokémon",
+    "number": "126/106",
+    "rarity": "Super Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/587714_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/587714_400w.jpg"
+    },
+    "tcgplayerId": "587714"
+  },
+  {
+    "id": "jp-sv8-super-electric-breaker-113/106",
+    "name": "Stunfisk - 113/106",
+    "supertype": "Pokémon",
+    "number": "113/106",
+    "rarity": "Art Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/587724_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/587724_400w.jpg"
+    },
+    "tcgplayerId": "587724"
+  },
+  {
+    "id": "jp-sv8-super-electric-breaker-120/106",
+    "name": "Scovillain ex - 120/106",
+    "supertype": "Pokémon",
+    "number": "120/106",
+    "rarity": "Super Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/587720_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/587720_400w.jpg"
+    },
+    "tcgplayerId": "587720"
+  },
+  {
+    "id": "jp-sv8-super-electric-breaker-127/106",
+    "name": "Cyrano - 127/106",
+    "supertype": "Pokémon",
+    "number": "127/106",
+    "rarity": "Super Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/587696_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/587696_400w.jpg"
+    },
+    "tcgplayerId": "587696"
+  },
+  {
+    "id": "jp-sv8-super-electric-breaker-072/106",
+    "name": "Hydreigon ex - 072/106",
+    "supertype": "Pokémon",
+    "number": "072/106",
+    "rarity": "Double Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/587652_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/587652_400w.jpg"
+    },
+    "tcgplayerId": "587652"
+  },
+  {
+    "id": "jp-sv8-super-electric-breaker-095/106",
+    "name": "Scramble Switch",
+    "supertype": "Trainer",
+    "number": "095/106",
+    "rarity": "ACE Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/587675_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/587675_400w.jpg"
+    },
+    "tcgplayerId": "587675"
+  },
+  {
+    "id": "jp-sv8-super-electric-breaker-057/106",
+    "name": "Palossand ex - 057/106",
+    "supertype": "Pokémon",
+    "number": "057/106",
+    "rarity": "Double Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/587637_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/587637_400w.jpg"
+    },
+    "tcgplayerId": "587637"
+  },
+  {
+    "id": "jp-sv8-super-electric-breaker-026/106",
+    "name": "Milotic ex - 026/106",
+    "supertype": "Pokémon",
+    "number": "026/106",
+    "rarity": "Double Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/587606_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/587606_400w.jpg"
+    },
+    "tcgplayerId": "587606"
+  },
+  {
+    "id": "jp-sv8-super-electric-breaker-080/106",
+    "name": "Eternatus",
+    "supertype": "Pokémon",
+    "number": "080/106",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/587660_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/587660_400w.jpg"
+    },
+    "tcgplayerId": "587660"
+  },
+  {
+    "id": "jp-sv8-super-electric-breaker-081/106",
+    "name": "Tatsugiri ex - 081/106",
+    "supertype": "Pokémon",
+    "number": "081/106",
+    "rarity": "Double Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/587661_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/587661_400w.jpg"
+    },
+    "tcgplayerId": "587661"
+  },
+  {
+    "id": "jp-sv8-super-electric-breaker-003/106",
+    "name": "Durant ex - 003/106",
+    "supertype": "Pokémon",
+    "number": "003/106",
+    "rarity": "Double Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/587583_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/587583_400w.jpg"
+    },
+    "tcgplayerId": "587583"
+  },
+  {
+    "id": "jp-sv8-super-electric-breaker-023/106",
+    "name": "Scovillain ex - 023/106",
+    "supertype": "Pokémon",
+    "number": "023/106",
+    "rarity": "Double Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/587603_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/587603_400w.jpg"
+    },
+    "tcgplayerId": "587603"
+  },
+  {
+    "id": "jp-sv8-super-electric-breaker-084/106",
+    "name": "Slaking ex - 084/106",
+    "supertype": "Pokémon",
+    "number": "084/106",
+    "rarity": "Double Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/587664_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/587664_400w.jpg"
+    },
+    "tcgplayerId": "587664"
+  },
+  {
+    "id": "jp-sv8-super-electric-breaker-097/106",
+    "name": "Miracle Intercom",
+    "supertype": "Pokémon",
+    "number": "097/106",
+    "rarity": "ACE Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/587677_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/587677_400w.jpg"
+    },
+    "tcgplayerId": "587677"
+  },
+  {
+    "id": "jp-sv8-super-electric-breaker-098/106",
+    "name": "Amulet of Hope",
+    "supertype": "Pokémon",
+    "number": "098/106",
+    "rarity": "ACE Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/587678_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/587678_400w.jpg"
+    },
+    "tcgplayerId": "587678"
+  },
+  {
+    "id": "jp-sv8-super-electric-breaker-052/106",
+    "name": "Cofagrigus",
+    "supertype": "Pokémon",
+    "number": "052/106",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/587632_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/587632_400w.jpg"
+    },
+    "tcgplayerId": "587632"
+  },
+  {
+    "id": "jp-sv8-super-electric-breaker-066/106",
+    "name": "Gastrodon",
+    "supertype": "Pokémon",
+    "number": "066/106",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/587646_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/587646_400w.jpg"
+    },
+    "tcgplayerId": "587646"
+  },
+  {
+    "id": "jp-sv8-super-electric-breaker-054/106",
+    "name": "Meowstic",
+    "supertype": "Pokémon",
+    "number": "054/106",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/587634_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/587634_400w.jpg"
+    },
+    "tcgplayerId": "587634"
+  },
+  {
+    "id": "jp-sv8-super-electric-breaker-004/106",
+    "name": "Scatterbug",
+    "supertype": "Pokémon",
+    "number": "004/106",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/587584_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/587584_400w.jpg"
+    },
+    "tcgplayerId": "587584"
+  },
+  {
+    "id": "jp-sv8-super-electric-breaker-053/106",
+    "name": "Espurr",
+    "supertype": "Pokémon",
+    "number": "053/106",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/587633_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/587633_400w.jpg"
+    },
+    "tcgplayerId": "587633"
+  },
+  {
+    "id": "jp-sv8-super-electric-breaker-030/106",
+    "name": "Shellos",
+    "supertype": "Pokémon",
+    "number": "030/106",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/587610_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/587610_400w.jpg"
+    },
+    "tcgplayerId": "587610"
+  },
+  {
+    "id": "jp-sv8-super-electric-breaker-082/106",
+    "name": "Slakoth - 082/106",
+    "supertype": "Pokémon",
+    "number": "082/106",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/587662_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/587662_400w.jpg"
+    },
+    "tcgplayerId": "587662"
+  },
+  {
+    "id": "jp-sv8-super-electric-breaker-047/106",
+    "name": "Togekiss",
+    "supertype": "Pokémon",
+    "number": "047/106",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/587627_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/587627_400w.jpg"
+    },
+    "tcgplayerId": "587627"
+  },
+  {
+    "id": "jp-sv8-super-electric-breaker-050/106",
+    "name": "Azelf",
+    "supertype": "Pokémon",
+    "number": "050/106",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/587630_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/587630_400w.jpg"
+    },
+    "tcgplayerId": "587630"
+  },
+  {
+    "id": "jp-sv8-super-electric-breaker-006/106",
+    "name": "Vivillon - 006/106",
+    "supertype": "Pokémon",
+    "number": "006/106",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/587586_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/587586_400w.jpg"
+    },
+    "tcgplayerId": "587586"
+  },
+  {
+    "id": "jp-sv8-super-electric-breaker-049/106",
+    "name": "Mesprit - 049/106",
+    "supertype": "Pokémon",
+    "number": "049/106",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/587629_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/587629_400w.jpg"
+    },
+    "tcgplayerId": "587629"
+  },
+  {
+    "id": "jp-sv8-super-electric-breaker-093/106",
+    "name": "Terapagos",
+    "supertype": "Pokémon",
+    "number": "093/106",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/587673_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/587673_400w.jpg"
+    },
+    "tcgplayerId": "587673"
+  },
+  {
+    "id": "jp-sv8-super-electric-breaker-019/106",
+    "name": "Skeledirge",
+    "supertype": "Pokémon",
+    "number": "019/106",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/587599_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/587599_400w.jpg"
+    },
+    "tcgplayerId": "587599"
+  },
+  {
+    "id": "jp-sv8-super-electric-breaker-032/106",
+    "name": "Chien-Pao",
+    "supertype": "Pokémon",
+    "number": "032/106",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/587612_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/587612_400w.jpg"
+    },
+    "tcgplayerId": "587612"
+  },
+  {
+    "id": "jp-sv8-super-electric-breaker-048/106",
+    "name": "Uxie",
+    "supertype": "Pokémon",
+    "number": "048/106",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/587628_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/587628_400w.jpg"
+    },
+    "tcgplayerId": "587628"
+  },
+  {
+    "id": "jp-sv8-super-electric-breaker-091/106",
+    "name": "Tandemaus",
+    "supertype": "Pokémon",
+    "number": "091/106",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/587671_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/587671_400w.jpg"
+    },
+    "tcgplayerId": "587671"
+  },
+  {
+    "id": "jp-sv8-super-electric-breaker-092/106",
+    "name": "Maushold",
+    "supertype": "Pokémon",
+    "number": "092/106",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/587672_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/587672_400w.jpg"
+    },
+    "tcgplayerId": "587672"
+  },
+  {
+    "id": "jp-sv8-super-electric-breaker-086/106",
+    "name": "Kecleon - 086/106",
+    "supertype": "Pokémon",
+    "number": "086/106",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/587666_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/587666_400w.jpg"
+    },
+    "tcgplayerId": "587666"
+  },
+  {
+    "id": "jp-sv8-super-electric-breaker-037/106",
+    "name": "Rotom",
+    "supertype": "Pokémon",
+    "number": "037/106",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/587617_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/587617_400w.jpg"
+    },
+    "tcgplayerId": "587617"
+  },
+  {
+    "id": "jp-sv8-super-electric-breaker-076/106",
+    "name": "Alolan Diglett",
+    "supertype": "Pokémon",
+    "number": "076/106",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/587656_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/587656_400w.jpg"
+    },
+    "tcgplayerId": "587656"
+  },
+  {
+    "id": "jp-sv8-super-electric-breaker-077/106",
+    "name": "Alolan Dugtrio - 077/106",
+    "supertype": "Pokémon",
+    "number": "077/106",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/587657_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/587657_400w.jpg"
+    },
+    "tcgplayerId": "587657"
+  },
+  {
+    "id": "jp-sv8-super-electric-breaker-012/106",
+    "name": "Victini",
+    "supertype": "Pokémon",
+    "number": "012/106",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/587592_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/587592_400w.jpg"
+    },
+    "tcgplayerId": "587592"
+  },
+  {
+    "id": "jp-sv8-super-electric-breaker-009/106",
+    "name": "Rabsca",
+    "supertype": "Pokémon",
+    "number": "009/106",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/587589_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/587589_400w.jpg"
+    },
+    "tcgplayerId": "587589"
+  },
+  {
+    "id": "jp-sv8-super-electric-breaker-104/106",
+    "name": "Jasmine's Gaze - 104/106",
+    "supertype": "Trainer",
+    "number": "104/106",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/587684_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/587684_400w.jpg"
+    },
+    "tcgplayerId": "587684"
+  },
+  {
+    "id": "jp-sv8-super-electric-breaker-075/106",
+    "name": "Pecharunt",
+    "supertype": "Pokémon",
+    "number": "075/106",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/587655_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/587655_400w.jpg"
+    },
+    "tcgplayerId": "587655"
+  },
+  {
+    "id": "jp-sv8-super-electric-breaker-041/106",
+    "name": "Tapu Koko",
+    "supertype": "Pokémon",
+    "number": "041/106",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/587621_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/587621_400w.jpg"
+    },
+    "tcgplayerId": "587621"
+  },
+  {
+    "id": "jp-sv8-super-electric-breaker-058/106",
+    "name": "Indeedee",
+    "supertype": "Pokémon",
+    "number": "058/106",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/587638_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/587638_400w.jpg"
+    },
+    "tcgplayerId": "587638"
+  },
+  {
+    "id": "jp-sv8-super-electric-breaker-010/106",
+    "name": "Wo-Chien",
+    "supertype": "Pokémon",
+    "number": "010/106",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/587590_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/587590_400w.jpg"
+    },
+    "tcgplayerId": "587590"
+  },
+  {
+    "id": "jp-sv8-super-electric-breaker-045/106",
+    "name": "Togepi",
+    "supertype": "Pokémon",
+    "number": "045/106",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/587625_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/587625_400w.jpg"
+    },
+    "tcgplayerId": "587625"
+  },
+  {
+    "id": "jp-sv8-super-electric-breaker-022/106",
+    "name": "Ceruledge - 022/106",
+    "supertype": "Pokémon",
+    "number": "022/106",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/587602_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/587602_400w.jpg"
+    },
+    "tcgplayerId": "587602"
+  },
+  {
+    "id": "jp-sv8-super-electric-breaker-014/106",
+    "name": "Volcarona",
+    "supertype": "Pokémon",
+    "number": "014/106",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/587594_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/587594_400w.jpg"
+    },
+    "tcgplayerId": "587594"
+  },
+  {
+    "id": "jp-sv8-super-electric-breaker-035/106",
+    "name": "Magneton - 035/106",
+    "supertype": "Pokémon",
+    "number": "035/106",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/587615_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/587615_400w.jpg"
+    },
+    "tcgplayerId": "587615"
+  },
+  {
+    "id": "jp-sv8-super-electric-breaker-040/106",
+    "name": "Stunfisk - 040/106",
+    "supertype": "Pokémon",
+    "number": "040/106",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/587620_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/587620_400w.jpg"
+    },
+    "tcgplayerId": "587620"
+  },
+  {
+    "id": "jp-sv8-super-electric-breaker-011/106",
+    "name": "Paldean Tauros - 011/106",
+    "supertype": "Pokémon",
+    "number": "011/106",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/587591_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/587591_400w.jpg"
+    },
+    "tcgplayerId": "587591"
+  },
+  {
+    "id": "jp-sv8-super-electric-breaker-046/106",
+    "name": "Togetic",
+    "supertype": "Pokémon",
+    "number": "046/106",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/587626_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/587626_400w.jpg"
+    },
+    "tcgplayerId": "587626"
+  },
+  {
+    "id": "jp-sv8-super-electric-breaker-028/106",
+    "name": "Sealeo",
+    "supertype": "Pokémon",
+    "number": "028/106",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/587608_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/587608_400w.jpg"
+    },
+    "tcgplayerId": "587608"
+  },
+  {
+    "id": "jp-sv8-super-electric-breaker-061/106",
+    "name": "Primeape",
+    "supertype": "Pokémon",
+    "number": "061/106",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/587641_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/587641_400w.jpg"
+    },
+    "tcgplayerId": "587641"
+  },
+  {
+    "id": "jp-sv8-super-electric-breaker-027/106",
+    "name": "Spheal - 027/106",
+    "supertype": "Pokémon",
+    "number": "027/106",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/587607_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/587607_400w.jpg"
+    },
+    "tcgplayerId": "587607"
+  },
+  {
+    "id": "jp-sv8-super-electric-breaker-055/106",
+    "name": "Dedenne",
+    "supertype": "Pokémon",
+    "number": "055/106",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/587635_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/587635_400w.jpg"
+    },
+    "tcgplayerId": "587635"
+  },
+  {
+    "id": "jp-sv8-super-electric-breaker-029/106",
+    "name": "Walrein",
+    "supertype": "Pokémon",
+    "number": "029/106",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/587609_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/587609_400w.jpg"
+    },
+    "tcgplayerId": "587609"
+  },
+  {
+    "id": "jp-sv8-super-electric-breaker-042/106",
+    "name": "Wattrel",
+    "supertype": "Pokémon",
+    "number": "042/106",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/587622_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/587622_400w.jpg"
+    },
+    "tcgplayerId": "587622"
+  },
+  {
+    "id": "jp-sv8-super-electric-breaker-102/106",
+    "name": "Cyrano - 102/106",
+    "supertype": "Pokémon",
+    "number": "102/106",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/587682_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/587682_400w.jpg"
+    },
+    "tcgplayerId": "587682"
+  },
+  {
+    "id": "jp-sv8-super-electric-breaker-020/106",
+    "name": "Charcadet",
+    "supertype": "Pokémon",
+    "number": "020/106",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/587600_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/587600_400w.jpg"
+    },
+    "tcgplayerId": "587600"
+  },
+  {
+    "id": "jp-sv8-super-electric-breaker-021/106",
+    "name": "Armarouge",
+    "supertype": "Pokémon",
+    "number": "021/106",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/587601_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/587601_400w.jpg"
+    },
+    "tcgplayerId": "587601"
+  },
+  {
+    "id": "jp-sv8-super-electric-breaker-069/106",
+    "name": "Koraidon",
+    "supertype": "Pokémon",
+    "number": "069/106",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/587649_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/587649_400w.jpg"
+    },
+    "tcgplayerId": "587649"
+  },
+  {
+    "id": "jp-sv8-super-electric-breaker-044/106",
+    "name": "Miraidon",
+    "supertype": "Pokémon",
+    "number": "044/106",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/587624_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/587624_400w.jpg"
+    },
+    "tcgplayerId": "587624"
+  },
+  {
+    "id": "jp-sv8-super-electric-breaker-063/106",
+    "name": "Paldean Tauros - 063/106",
+    "supertype": "Pokémon",
+    "number": "063/106",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/587643_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/587643_400w.jpg"
+    },
+    "tcgplayerId": "587643"
+  },
+  {
+    "id": "jp-sv8-super-electric-breaker-002/106",
+    "name": "Exeggutor",
+    "supertype": "Pokémon",
+    "number": "002/106",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/587582_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/587582_400w.jpg"
+    },
+    "tcgplayerId": "587582"
+  },
+  {
+    "id": "jp-sv8-super-electric-breaker-070/106",
+    "name": "Deino",
+    "supertype": "Pokémon",
+    "number": "070/106",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/587650_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/587650_400w.jpg"
+    },
+    "tcgplayerId": "587650"
+  },
+  {
+    "id": "jp-sv8-super-electric-breaker-015/106",
+    "name": "Sizzlipede",
+    "supertype": "Pokémon",
+    "number": "015/106",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/587595_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/587595_400w.jpg"
+    },
+    "tcgplayerId": "587595"
+  },
+  {
+    "id": "jp-sv8-super-electric-breaker-018/106",
+    "name": "Crocalor",
+    "supertype": "Pokémon",
+    "number": "018/106",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/587598_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/587598_400w.jpg"
+    },
+    "tcgplayerId": "587598"
+  },
+  {
+    "id": "jp-sv8-super-electric-breaker-096/106",
+    "name": "Carefree Cat Toy",
+    "supertype": "Pokémon",
+    "number": "096/106",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/587676_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/587676_400w.jpg"
+    },
+    "tcgplayerId": "587676"
+  },
+  {
+    "id": "jp-sv8-super-electric-breaker-100/106",
+    "name": "Babiri Berry",
+    "supertype": "Pokémon",
+    "number": "100/106",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/587680_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/587680_400w.jpg"
+    },
+    "tcgplayerId": "587680"
+  },
+  {
+    "id": "jp-sv8-super-electric-breaker-083/106",
+    "name": "Vigoroth",
+    "supertype": "Pokémon",
+    "number": "083/106",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/587663_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/587663_400w.jpg"
+    },
+    "tcgplayerId": "587663"
+  },
+  {
+    "id": "jp-sv8-super-electric-breaker-059/106",
+    "name": "Flutter Mane",
+    "supertype": "Pokémon",
+    "number": "059/106",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/587639_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/587639_400w.jpg"
+    },
+    "tcgplayerId": "587639"
+  },
+  {
+    "id": "jp-sv8-super-electric-breaker-073/106",
+    "name": "Shroodle",
+    "supertype": "Pokémon",
+    "number": "073/106",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/587653_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/587653_400w.jpg"
+    },
+    "tcgplayerId": "587653"
+  },
+  {
+    "id": "jp-sv8-super-electric-breaker-051/106",
+    "name": "Yamask",
+    "supertype": "Pokémon",
+    "number": "051/106",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/587631_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/587631_400w.jpg"
+    },
+    "tcgplayerId": "587631"
+  },
+  {
+    "id": "jp-sv8-super-electric-breaker-017/106",
+    "name": "Fuecoco",
+    "supertype": "Pokémon",
+    "number": "017/106",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/587597_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/587597_400w.jpg"
+    },
+    "tcgplayerId": "587597"
+  },
+  {
+    "id": "jp-sv8-super-electric-breaker-067/106",
+    "name": "Glimmet",
+    "supertype": "Pokémon",
+    "number": "067/106",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/587647_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/587647_400w.jpg"
+    },
+    "tcgplayerId": "587647"
+  },
+  {
+    "id": "jp-sv8-super-electric-breaker-099/106",
+    "name": "Colbur Berry",
+    "supertype": "Pokémon",
+    "number": "099/106",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/587679_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/587679_400w.jpg"
+    },
+    "tcgplayerId": "587679"
+  },
+  {
+    "id": "jp-sv8-super-electric-breaker-103/106",
+    "name": "Clemont's Wit - 103/106",
+    "supertype": "Trainer",
+    "number": "103/106",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/587683_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/587683_400w.jpg"
+    },
+    "tcgplayerId": "587683"
+  },
+  {
+    "id": "jp-sv8-super-electric-breaker-064/106",
+    "name": "Phanpy - 064/106",
+    "supertype": "Pokémon",
+    "number": "064/106",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/587644_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/587644_400w.jpg"
+    },
+    "tcgplayerId": "587644"
+  },
+  {
+    "id": "jp-sv8-super-electric-breaker-068/106",
+    "name": "Glimmora",
+    "supertype": "Pokémon",
+    "number": "068/106",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/587648_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/587648_400w.jpg"
+    },
+    "tcgplayerId": "587648"
+  },
+  {
+    "id": "jp-sv8-super-electric-breaker-007/106",
+    "name": "Capsakid",
+    "supertype": "Pokémon",
+    "number": "007/106",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/587587_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/587587_400w.jpg"
+    },
+    "tcgplayerId": "587587"
+  },
+  {
+    "id": "jp-sv8-super-electric-breaker-090/106",
+    "name": "Oranguru",
+    "supertype": "Pokémon",
+    "number": "090/106",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/587670_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/587670_400w.jpg"
+    },
+    "tcgplayerId": "587670"
+  },
+  {
+    "id": "jp-sv8-super-electric-breaker-038/106",
+    "name": "Blitzle",
+    "supertype": "Pokémon",
+    "number": "038/106",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/587618_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/587618_400w.jpg"
+    },
+    "tcgplayerId": "587618"
+  },
+  {
+    "id": "jp-sv8-super-electric-breaker-089/106",
+    "name": "Heliolisk",
+    "supertype": "Pokémon",
+    "number": "089/106",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/587669_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/587669_400w.jpg"
+    },
+    "tcgplayerId": "587669"
+  },
+  {
+    "id": "jp-sv8-super-electric-breaker-105/106",
+    "name": "Exciting Stadium",
+    "supertype": "Pokémon",
+    "number": "105/106",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/587685_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/587685_400w.jpg"
+    },
+    "tcgplayerId": "587685"
+  },
+  {
+    "id": "jp-sv8-super-electric-breaker-034/106",
+    "name": "Magnemite",
+    "supertype": "Pokémon",
+    "number": "034/106",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/587614_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/587614_400w.jpg"
+    },
+    "tcgplayerId": "587614"
+  },
+  {
+    "id": "jp-sv8-super-electric-breaker-031/106",
+    "name": "Iron Bundle",
+    "supertype": "Pokémon",
+    "number": "031/106",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/587611_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/587611_400w.jpg"
+    },
+    "tcgplayerId": "587611"
+  },
+  {
+    "id": "jp-sv8-super-electric-breaker-043/106",
+    "name": "Kilowattrel",
+    "supertype": "Pokémon",
+    "number": "043/106",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/587623_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/587623_400w.jpg"
+    },
+    "tcgplayerId": "587623"
+  },
+  {
+    "id": "jp-sv8-super-electric-breaker-025/106",
+    "name": "Feebas - 025/106",
+    "supertype": "Pokémon",
+    "number": "025/106",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/587605_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/587605_400w.jpg"
+    },
+    "tcgplayerId": "587605"
+  },
+  {
+    "id": "jp-sv8-super-electric-breaker-001/106",
+    "name": "Exeggcute",
+    "supertype": "Pokémon",
+    "number": "001/106",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/587581_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/587581_400w.jpg"
+    },
+    "tcgplayerId": "587581"
+  },
+  {
+    "id": "jp-sv8-super-electric-breaker-005/106",
+    "name": "Spewpa",
+    "supertype": "Pokémon",
+    "number": "005/106",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/587585_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/587585_400w.jpg"
+    },
+    "tcgplayerId": "587585"
+  },
+  {
+    "id": "jp-sv8-super-electric-breaker-060/106",
+    "name": "Mankey",
+    "supertype": "Pokémon",
+    "number": "060/106",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/587640_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/587640_400w.jpg"
+    },
+    "tcgplayerId": "587640"
+  },
+  {
+    "id": "jp-sv8-super-electric-breaker-062/106",
+    "name": "Annihilape",
+    "supertype": "Pokémon",
+    "number": "062/106",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/587642_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/587642_400w.jpg"
+    },
+    "tcgplayerId": "587642"
+  },
+  {
+    "id": "jp-sv8-super-electric-breaker-036/106",
+    "name": "Magnezone",
+    "supertype": "Pokémon",
+    "number": "036/106",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/587616_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/587616_400w.jpg"
+    },
+    "tcgplayerId": "587616"
+  },
+  {
+    "id": "jp-sv8-super-electric-breaker-088/106",
+    "name": "Helioptile",
+    "supertype": "Pokémon",
+    "number": "088/106",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/587668_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/587668_400w.jpg"
+    },
+    "tcgplayerId": "587668"
+  },
+  {
+    "id": "jp-sv8-super-electric-breaker-013/106",
+    "name": "Larvesta - 013/106",
+    "supertype": "Pokémon",
+    "number": "013/106",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/587593_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/587593_400w.jpg"
+    },
+    "tcgplayerId": "587593"
+  },
+  {
+    "id": "jp-sv8-super-electric-breaker-074/106",
+    "name": "Grafaiai",
+    "supertype": "Pokémon",
+    "number": "074/106",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/587654_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/587654_400w.jpg"
+    },
+    "tcgplayerId": "587654"
+  },
+  {
+    "id": "jp-sv8-super-electric-breaker-079/106",
+    "name": "Bronzong",
+    "supertype": "Pokémon",
+    "number": "079/106",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/587659_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/587659_400w.jpg"
+    },
+    "tcgplayerId": "587659"
+  },
+  {
+    "id": "jp-sv8-super-electric-breaker-094/106",
+    "name": "Deduction Set",
+    "supertype": "Pokémon",
+    "number": "094/106",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/587674_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/587674_400w.jpg"
+    },
+    "tcgplayerId": "587674"
+  },
+  {
+    "id": "jp-sv8-super-electric-breaker-101/106",
+    "name": "Technical Machine: Fluorite",
+    "supertype": "Pokémon",
+    "number": "101/106",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/587681_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/587681_400w.jpg"
+    },
+    "tcgplayerId": "587681"
+  },
+  {
+    "id": "jp-sv8-super-electric-breaker-065/106",
+    "name": "Donphan",
+    "supertype": "Pokémon",
+    "number": "065/106",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/587645_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/587645_400w.jpg"
+    },
+    "tcgplayerId": "587645"
+  },
+  {
+    "id": "jp-sv8-super-electric-breaker-016/106",
+    "name": "Centiskorch",
+    "supertype": "Pokémon",
+    "number": "016/106",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/587596_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/587596_400w.jpg"
+    },
+    "tcgplayerId": "587596"
+  },
+  {
+    "id": "jp-sv8-super-electric-breaker-106/106",
+    "name": "Gravity Mountain - 106/106",
+    "supertype": "Pokémon",
+    "number": "106/106",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/587686_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/587686_400w.jpg"
+    },
+    "tcgplayerId": "587686"
+  },
+  {
+    "id": "jp-sv8-super-electric-breaker-039/106",
+    "name": "Zebstrika",
+    "supertype": "Pokémon",
+    "number": "039/106",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/587619_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/587619_400w.jpg"
+    },
+    "tcgplayerId": "587619"
+  },
+  {
+    "id": "jp-sv8-super-electric-breaker-085/106",
+    "name": "Zangoose",
+    "supertype": "Pokémon",
+    "number": "085/106",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/587665_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/587665_400w.jpg"
+    },
+    "tcgplayerId": "587665"
+  },
+  {
+    "id": "jp-sv8-super-electric-breaker-078/106",
+    "name": "Bronzor",
+    "supertype": "Pokémon",
+    "number": "078/106",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/587658_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/587658_400w.jpg"
+    },
+    "tcgplayerId": "587658"
+  },
+  {
+    "id": "jp-sv8-super-electric-breaker-087/106",
+    "name": "Bouffalant",
+    "supertype": "Pokémon",
+    "number": "087/106",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/587667_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/587667_400w.jpg"
+    },
+    "tcgplayerId": "587667"
+  },
+  {
+    "id": "jp-sv8-super-electric-breaker-071/106",
+    "name": "Zweilous",
+    "supertype": "Pokémon",
+    "number": "071/106",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/587651_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/587651_400w.jpg"
+    },
+    "tcgplayerId": "587651"
+  },
+  {
+    "id": "jp-sv8-super-electric-breaker-024/106",
+    "name": "Paldean Tauros - 024/106",
+    "supertype": "Pokémon",
+    "number": "024/106",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/587604_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/587604_400w.jpg"
+    },
+    "tcgplayerId": "587604"
+  },
+  {
+    "id": "jp-sv8-super-electric-breaker-056/106",
+    "name": "Sandygast",
+    "supertype": "Pokémon",
+    "number": "056/106",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/587636_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/587636_400w.jpg"
+    },
+    "tcgplayerId": "587636"
+  },
+  {
+    "id": "jp-sv8-super-electric-breaker-008/106",
+    "name": "Rellor",
+    "supertype": "Pokémon",
+    "number": "008/106",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/587588_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/587588_400w.jpg"
+    },
+    "tcgplayerId": "587588"
+  }
+]

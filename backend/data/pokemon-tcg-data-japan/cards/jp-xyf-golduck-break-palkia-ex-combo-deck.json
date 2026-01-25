@@ -1,0 +1,86 @@
+[
+  {
+    "id": "jp-xyf-golduck-break-palkia-ex-combo-deck-007/016",
+    "name": "Palkia EX",
+    "supertype": "Pokémon",
+    "number": "007/016",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/605370_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/605370_400w.jpg"
+    },
+    "tcgplayerId": "605370"
+  },
+  {
+    "id": "jp-xyf-golduck-break-palkia-ex-combo-deck-003/016",
+    "name": "Golduck BREAK",
+    "supertype": "Pokémon",
+    "number": "003/016",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/605369_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/605369_400w.jpg"
+    },
+    "tcgplayerId": "605369"
+  },
+  {
+    "id": "jp-xyf-golduck-break-palkia-ex-combo-deck-001/016",
+    "name": "Psyduck",
+    "supertype": "Pokémon",
+    "number": "001/016",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/605367_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/605367_400w.jpg"
+    },
+    "tcgplayerId": "605367"
+  },
+  {
+    "id": "jp-xyf-golduck-break-palkia-ex-combo-deck-006/016",
+    "name": "Lapras",
+    "supertype": "Pokémon",
+    "number": "006/016",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/605374_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/605374_400w.jpg"
+    },
+    "tcgplayerId": "605374"
+  },
+  {
+    "id": "jp-xyf-golduck-break-palkia-ex-combo-deck-002/016",
+    "name": "Golduck",
+    "supertype": "Pokémon",
+    "number": "002/016",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/605368_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/605368_400w.jpg"
+    },
+    "tcgplayerId": "605368"
+  },
+  {
+    "id": "jp-xyf-golduck-break-palkia-ex-combo-deck-014/016",
+    "name": "Misty's Determination",
+    "supertype": "Trainer",
+    "number": "014/016",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/605371_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/605371_400w.jpg"
+    },
+    "tcgplayerId": "605371"
+  },
+  {
+    "id": "jp-xyf-golduck-break-palkia-ex-combo-deck-005/016",
+    "name": "Staryu",
+    "supertype": "Pokémon",
+    "number": "005/016",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/605372_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/605372_400w.jpg"
+    },
+    "tcgplayerId": "605372"
+  }
+]

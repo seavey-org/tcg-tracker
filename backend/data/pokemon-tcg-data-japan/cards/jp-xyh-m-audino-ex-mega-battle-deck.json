@@ -1,0 +1,38 @@
+[
+  {
+    "id": "jp-xyh-m-audino-ex-mega-battle-deck-008/026",
+    "name": "Diancie EX",
+    "supertype": "Pokémon",
+    "number": "008/026",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/605427_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/605427_400w.jpg"
+    },
+    "tcgplayerId": "605427"
+  },
+  {
+    "id": "jp-xyh-m-audino-ex-mega-battle-deck-011/026",
+    "name": "Audino EX",
+    "supertype": "Pokémon",
+    "number": "011/026",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/605430_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/605430_400w.jpg"
+    },
+    "tcgplayerId": "605430"
+  },
+  {
+    "id": "jp-xyh-m-audino-ex-mega-battle-deck-012/026",
+    "name": "Audino",
+    "supertype": "Pokémon",
+    "number": "012/026",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/605431_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/605431_400w.jpg"
+    },
+    "tcgplayerId": "605431"
+  }
+]

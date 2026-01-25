@@ -1,0 +1,1214 @@
+[
+  {
+    "id": "jp-dp3-shining-darkness-ho-oh",
+    "name": "Ho-Oh",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/605923_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/605923_400w.jpg"
+    },
+    "tcgplayerId": "605923"
+  },
+  {
+    "id": "jp-dp3-shining-darkness-lugia",
+    "name": "Lugia",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/605935_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/605935_400w.jpg"
+    },
+    "tcgplayerId": "605935"
+  },
+  {
+    "id": "jp-dp3-shining-darkness-charizard",
+    "name": "Charizard",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/605896_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/605896_400w.jpg"
+    },
+    "tcgplayerId": "605896"
+  },
+  {
+    "id": "jp-dp3-shining-darkness-dialga-lv.x",
+    "name": "Dialga LV.X",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/605905_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/605905_400w.jpg"
+    },
+    "tcgplayerId": "605905"
+  },
+  {
+    "id": "jp-dp3-shining-darkness-mew",
+    "name": "Mew",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/605938_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/605938_400w.jpg"
+    },
+    "tcgplayerId": "605938"
+  },
+  {
+    "id": "jp-dp3-shining-darkness-raikou",
+    "name": "Raikou",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/605959_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/605959_400w.jpg"
+    },
+    "tcgplayerId": "605959"
+  },
+  {
+    "id": "jp-dp3-shining-darkness-blastoise",
+    "name": "Blastoise",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/605889_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/605889_400w.jpg"
+    },
+    "tcgplayerId": "605889"
+  },
+  {
+    "id": "jp-dp3-shining-darkness-darkrai-lv.x",
+    "name": "Darkrai LV.X",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/605904_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/605904_400w.jpg"
+    },
+    "tcgplayerId": "605904"
+  },
+  {
+    "id": "jp-dp3-shining-darkness-darkrai",
+    "name": "Darkrai",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/605903_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/605903_400w.jpg"
+    },
+    "tcgplayerId": "605903"
+  },
+  {
+    "id": "jp-dp3-shining-darkness-entei",
+    "name": "Entei",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/605911_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/605911_400w.jpg"
+    },
+    "tcgplayerId": "605911"
+  },
+  {
+    "id": "jp-dp3-shining-darkness-suicune",
+    "name": "Suicune",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/605981_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/605981_400w.jpg"
+    },
+    "tcgplayerId": "605981"
+  },
+  {
+    "id": "jp-dp3-shining-darkness-quagsire",
+    "name": "Quagsire",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/605957_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/605957_400w.jpg"
+    },
+    "tcgplayerId": "605957"
+  },
+  {
+    "id": "jp-dp3-shining-darkness-gallade",
+    "name": "Gallade",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/605916_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/605916_400w.jpg"
+    },
+    "tcgplayerId": "605916"
+  },
+  {
+    "id": "jp-dp3-shining-darkness-venusaur",
+    "name": "Venusaur",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/605994_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/605994_400w.jpg"
+    },
+    "tcgplayerId": "605994"
+  },
+  {
+    "id": "jp-dp3-shining-darkness-salamence",
+    "name": "Salamence",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/605965_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/605965_400w.jpg"
+    },
+    "tcgplayerId": "605965"
+  },
+  {
+    "id": "jp-dp3-shining-darkness-palkia-lv.x",
+    "name": "Palkia LV.X",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/605948_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/605948_400w.jpg"
+    },
+    "tcgplayerId": "605948"
+  },
+  {
+    "id": "jp-dp3-shining-darkness-charmander",
+    "name": "Charmander",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/605897_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/605897_400w.jpg"
+    },
+    "tcgplayerId": "605897"
+  },
+  {
+    "id": "jp-dp3-shining-darkness-absol",
+    "name": "Absol",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/605884_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/605884_400w.jpg"
+    },
+    "tcgplayerId": "605884"
+  },
+  {
+    "id": "jp-dp3-shining-darkness-spinda",
+    "name": "Spinda",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/605978_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/605978_400w.jpg"
+    },
+    "tcgplayerId": "605978"
+  },
+  {
+    "id": "jp-dp3-shining-darkness-bulbasaur",
+    "name": "Bulbasaur",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/605891_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/605891_400w.jpg"
+    },
+    "tcgplayerId": "605891"
+  },
+  {
+    "id": "jp-dp3-shining-darkness-wooper",
+    "name": "Wooper",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/605998_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/605998_400w.jpg"
+    },
+    "tcgplayerId": "605998"
+  },
+  {
+    "id": "jp-dp3-shining-darkness-psyduck",
+    "name": "Psyduck",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/605956_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/605956_400w.jpg"
+    },
+    "tcgplayerId": "605956"
+  },
+  {
+    "id": "jp-dp3-shining-darkness-ampharos",
+    "name": "Ampharos",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/605885_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/605885_400w.jpg"
+    },
+    "tcgplayerId": "605885"
+  },
+  {
+    "id": "jp-dp3-shining-darkness-ludicolo",
+    "name": "Ludicolo",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/605934_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/605934_400w.jpg"
+    },
+    "tcgplayerId": "605934"
+  },
+  {
+    "id": "jp-dp3-shining-darkness-jumpluff",
+    "name": "Jumpluff",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/605926_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/605926_400w.jpg"
+    },
+    "tcgplayerId": "605926"
+  },
+  {
+    "id": "jp-dp3-shining-darkness-ivysaur",
+    "name": "Ivysaur",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/605925_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/605925_400w.jpg"
+    },
+    "tcgplayerId": "605925"
+  },
+  {
+    "id": "jp-dp3-shining-darkness-sunkern",
+    "name": "Sunkern",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/605983_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/605983_400w.jpg"
+    },
+    "tcgplayerId": "605983"
+  },
+  {
+    "id": "jp-dp3-shining-darkness-flygon",
+    "name": "Flygon",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/605914_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/605914_400w.jpg"
+    },
+    "tcgplayerId": "605914"
+  },
+  {
+    "id": "jp-dp3-shining-darkness-shuckle",
+    "name": "Shuckle",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/605973_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/605973_400w.jpg"
+    },
+    "tcgplayerId": "605973"
+  },
+  {
+    "id": "jp-dp3-shining-darkness-sableye",
+    "name": "Sableye",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/605964_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/605964_400w.jpg"
+    },
+    "tcgplayerId": "605964"
+  },
+  {
+    "id": "jp-dp3-shining-darkness-nidorino",
+    "name": "Nidorino",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/605947_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/605947_400w.jpg"
+    },
+    "tcgplayerId": "605947"
+  },
+  {
+    "id": "jp-dp3-shining-darkness-trapinch",
+    "name": "Trapinch",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/605985_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/605985_400w.jpg"
+    },
+    "tcgplayerId": "605985"
+  },
+  {
+    "id": "jp-dp3-shining-darkness-lickilicky",
+    "name": "Lickilicky",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/605930_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/605930_400w.jpg"
+    },
+    "tcgplayerId": "605930"
+  },
+  {
+    "id": "jp-dp3-shining-darkness-muk",
+    "name": "Muk",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/605942_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/605942_400w.jpg"
+    },
+    "tcgplayerId": "605942"
+  },
+  {
+    "id": "jp-dp3-shining-darkness-nidoking",
+    "name": "Nidoking",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/605945_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/605945_400w.jpg"
+    },
+    "tcgplayerId": "605945"
+  },
+  {
+    "id": "jp-dp3-shining-darkness-gastrodon-(east-sea)",
+    "name": "Gastrodon (East Sea)",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/605918_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/605918_400w.jpg"
+    },
+    "tcgplayerId": "605918"
+  },
+  {
+    "id": "jp-dp3-shining-darkness-ralts",
+    "name": "Ralts",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/605960_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/605960_400w.jpg"
+    },
+    "tcgplayerId": "605960"
+  },
+  {
+    "id": "jp-dp3-shining-darkness-diglett",
+    "name": "Diglett",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/605906_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/605906_400w.jpg"
+    },
+    "tcgplayerId": "605906"
+  },
+  {
+    "id": "jp-dp3-shining-darkness-unown-s",
+    "name": "Unown S",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/605989_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/605989_400w.jpg"
+    },
+    "tcgplayerId": "605989"
+  },
+  {
+    "id": "jp-dp3-shining-darkness-squirtle",
+    "name": "Squirtle",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/605979_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/605979_400w.jpg"
+    },
+    "tcgplayerId": "605979"
+  },
+  {
+    "id": "jp-dp3-shining-darkness-roseannes-research",
+    "name": "Roseanne's Research",
+    "supertype": "Trainer",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/605963_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/605963_400w.jpg"
+    },
+    "tcgplayerId": "605963"
+  },
+  {
+    "id": "jp-dp3-shining-darkness-gastrodon-(west-sea)",
+    "name": "Gastrodon (West Sea)",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/605917_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/605917_400w.jpg"
+    },
+    "tcgplayerId": "605917"
+  },
+  {
+    "id": "jp-dp3-shining-darkness-minun",
+    "name": "Minun",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/605940_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/605940_400w.jpg"
+    },
+    "tcgplayerId": "605940"
+  },
+  {
+    "id": "jp-dp3-shining-darkness-unown-z",
+    "name": "Unown Z",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/605991_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/605991_400w.jpg"
+    },
+    "tcgplayerId": "605991"
+  },
+  {
+    "id": "jp-dp3-shining-darkness-smoochum",
+    "name": "Smoochum",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/605977_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/605977_400w.jpg"
+    },
+    "tcgplayerId": "605977"
+  },
+  {
+    "id": "jp-dp3-shining-darkness-unown-k",
+    "name": "Unown K",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/605986_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/605986_400w.jpg"
+    },
+    "tcgplayerId": "605986"
+  },
+  {
+    "id": "jp-dp3-shining-darkness-burmy-(sandy-cloak)",
+    "name": "Burmy (Sandy Cloak)",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/605893_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/605893_400w.jpg"
+    },
+    "tcgplayerId": "605893"
+  },
+  {
+    "id": "jp-dp3-shining-darkness-burmy-(trash-cloak)",
+    "name": "Burmy (Trash Cloak)",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/605894_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/605894_400w.jpg"
+    },
+    "tcgplayerId": "605894"
+  },
+  {
+    "id": "jp-dp3-shining-darkness-phanpy",
+    "name": "Phanpy",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/605949_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/605949_400w.jpg"
+    },
+    "tcgplayerId": "605949"
+  },
+  {
+    "id": "jp-dp3-shining-darkness-rattata",
+    "name": "Rattata",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/605962_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/605962_400w.jpg"
+    },
+    "tcgplayerId": "605962"
+  },
+  {
+    "id": "jp-dp3-shining-darkness-unown-o",
+    "name": "Unown O",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/605988_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/605988_400w.jpg"
+    },
+    "tcgplayerId": "605988"
+  },
+  {
+    "id": "jp-dp3-shining-darkness-duskull",
+    "name": "Duskull",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/605909_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/605909_400w.jpg"
+    },
+    "tcgplayerId": "605909"
+  },
+  {
+    "id": "jp-dp3-shining-darkness-wormadam-(sandy-cloak)",
+    "name": "Wormadam (Sandy Cloak)",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/606000_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/606000_400w.jpg"
+    },
+    "tcgplayerId": "606000"
+  },
+  {
+    "id": "jp-dp3-shining-darkness-nidoranm",
+    "name": "NidoranM",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/605946_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/605946_400w.jpg"
+    },
+    "tcgplayerId": "605946"
+  },
+  {
+    "id": "jp-dp3-shining-darkness-farfetchd",
+    "name": "Farfetch'd",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/605912_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/605912_400w.jpg"
+    },
+    "tcgplayerId": "605912"
+  },
+  {
+    "id": "jp-dp3-shining-darkness-wormadam-(plant-cloak)",
+    "name": "Wormadam (Plant Cloak)",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/605999_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/605999_400w.jpg"
+    },
+    "tcgplayerId": "605999"
+  },
+  {
+    "id": "jp-dp3-shining-darkness-golduck",
+    "name": "Golduck",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/605919_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/605919_400w.jpg"
+    },
+    "tcgplayerId": "605919"
+  },
+  {
+    "id": "jp-dp3-shining-darkness-miltank",
+    "name": "Miltank",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/605939_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/605939_400w.jpg"
+    },
+    "tcgplayerId": "605939"
+  },
+  {
+    "id": "jp-dp3-shining-darkness-smeargle",
+    "name": "Smeargle",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/605976_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/605976_400w.jpg"
+    },
+    "tcgplayerId": "605976"
+  },
+  {
+    "id": "jp-dp3-shining-darkness-pidgeot",
+    "name": "Pidgeot",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/605950_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/605950_400w.jpg"
+    },
+    "tcgplayerId": "605950"
+  },
+  {
+    "id": "jp-dp3-shining-darkness-growlithe",
+    "name": "Growlithe",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/605922_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/605922_400w.jpg"
+    },
+    "tcgplayerId": "605922"
+  },
+  {
+    "id": "jp-dp3-shining-darkness-pidgeotto",
+    "name": "Pidgeotto",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/605951_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/605951_400w.jpg"
+    },
+    "tcgplayerId": "605951"
+  },
+  {
+    "id": "jp-dp3-shining-darkness-lickitung",
+    "name": "Lickitung",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/605931_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/605931_400w.jpg"
+    },
+    "tcgplayerId": "605931"
+  },
+  {
+    "id": "jp-dp3-shining-darkness-pinsir",
+    "name": "Pinsir",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/605953_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/605953_400w.jpg"
+    },
+    "tcgplayerId": "605953"
+  },
+  {
+    "id": "jp-dp3-shining-darkness-sentret",
+    "name": "Sentret",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/605966_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/605966_400w.jpg"
+    },
+    "tcgplayerId": "605966"
+  },
+  {
+    "id": "jp-dp3-shining-darkness-shellos-(east-sea)",
+    "name": "Shellos (East Sea)",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/605971_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/605971_400w.jpg"
+    },
+    "tcgplayerId": "605971"
+  },
+  {
+    "id": "jp-dp3-shining-darkness-mothim",
+    "name": "Mothim",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/605941_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/605941_400w.jpg"
+    },
+    "tcgplayerId": "605941"
+  },
+  {
+    "id": "jp-dp3-shining-darkness-murkrow",
+    "name": "Murkrow",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/605943_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/605943_400w.jpg"
+    },
+    "tcgplayerId": "605943"
+  },
+  {
+    "id": "jp-dp3-shining-darkness-sharpedo",
+    "name": "Sharpedo",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/605967_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/605967_400w.jpg"
+    },
+    "tcgplayerId": "605967"
+  },
+  {
+    "id": "jp-dp3-shining-darkness-shellos-(west-sea)",
+    "name": "Shellos (West Sea)",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/605970_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/605970_400w.jpg"
+    },
+    "tcgplayerId": "605970"
+  },
+  {
+    "id": "jp-dp3-shining-darkness-banette",
+    "name": "Banette",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/605888_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/605888_400w.jpg"
+    },
+    "tcgplayerId": "605888"
+  },
+  {
+    "id": "jp-dp3-shining-darkness-breloom",
+    "name": "Breloom",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/605890_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/605890_400w.jpg"
+    },
+    "tcgplayerId": "605890"
+  },
+  {
+    "id": "jp-dp3-shining-darkness-pidgey",
+    "name": "Pidgey",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/605952_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/605952_400w.jpg"
+    },
+    "tcgplayerId": "605952"
+  },
+  {
+    "id": "jp-dp3-shining-darkness-lombre",
+    "name": "Lombre",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/605932_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/605932_400w.jpg"
+    },
+    "tcgplayerId": "605932"
+  },
+  {
+    "id": "jp-dp3-shining-darkness-shellder",
+    "name": "Shellder",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/605969_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/605969_400w.jpg"
+    },
+    "tcgplayerId": "605969"
+  },
+  {
+    "id": "jp-dp3-shining-darkness-bagon",
+    "name": "Bagon",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/605887_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/605887_400w.jpg"
+    },
+    "tcgplayerId": "605887"
+  },
+  {
+    "id": "jp-dp3-shining-darkness-dugtrio",
+    "name": "Dugtrio",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/605908_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/605908_400w.jpg"
+    },
+    "tcgplayerId": "605908"
+  },
+  {
+    "id": "jp-dp3-shining-darkness-electrode",
+    "name": "Electrode",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/605910_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/605910_400w.jpg"
+    },
+    "tcgplayerId": "605910"
+  },
+  {
+    "id": "jp-dp3-shining-darkness-skiploom",
+    "name": "Skiploom",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/605975_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/605975_400w.jpg"
+    },
+    "tcgplayerId": "605975"
+  },
+  {
+    "id": "jp-dp3-shining-darkness-wormadam-(trash-cloak)",
+    "name": "Wormadam (Trash Cloak)",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/606001_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/606001_400w.jpg"
+    },
+    "tcgplayerId": "606001"
+  },
+  {
+    "id": "jp-dp3-shining-darkness-burmy-(plant-cloak)",
+    "name": "Burmy (Plant Cloak)",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/605892_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/605892_400w.jpg"
+    },
+    "tcgplayerId": "605892"
+  },
+  {
+    "id": "jp-dp3-shining-darkness-xatu",
+    "name": "Xatu",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/606002_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/606002_400w.jpg"
+    },
+    "tcgplayerId": "606002"
+  },
+  {
+    "id": "jp-dp3-shining-darkness-kecleon",
+    "name": "Kecleon",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/605928_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/605928_400w.jpg"
+    },
+    "tcgplayerId": "605928"
+  },
+  {
+    "id": "jp-dp3-shining-darkness-hoppip",
+    "name": "Hoppip",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/605924_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/605924_400w.jpg"
+    },
+    "tcgplayerId": "605924"
+  },
+  {
+    "id": "jp-dp3-shining-darkness-lotad",
+    "name": "Lotad",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/605933_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/605933_400w.jpg"
+    },
+    "tcgplayerId": "605933"
+  },
+  {
+    "id": "jp-dp3-shining-darkness-grimer",
+    "name": "Grimer",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/605921_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/605921_400w.jpg"
+    },
+    "tcgplayerId": "605921"
+  },
+  {
+    "id": "jp-dp3-shining-darkness-mareep",
+    "name": "Mareep",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/605936_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/605936_400w.jpg"
+    },
+    "tcgplayerId": "605936"
+  },
+  {
+    "id": "jp-dp3-shining-darkness-qwilfish",
+    "name": "Qwilfish",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/605958_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/605958_400w.jpg"
+    },
+    "tcgplayerId": "605958"
+  },
+  {
+    "id": "jp-dp3-shining-darkness-donphan",
+    "name": "Donphan",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/605907_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/605907_400w.jpg"
+    },
+    "tcgplayerId": "605907"
+  },
+  {
+    "id": "jp-dp3-shining-darkness-raticate",
+    "name": "Raticate",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/605961_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/605961_400w.jpg"
+    },
+    "tcgplayerId": "605961"
+  },
+  {
+    "id": "jp-dp3-shining-darkness-corsola",
+    "name": "Corsola",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/605901_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/605901_400w.jpg"
+    },
+    "tcgplayerId": "605901"
+  },
+  {
+    "id": "jp-dp3-shining-darkness-shroomish",
+    "name": "Shroomish",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/605972_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/605972_400w.jpg"
+    },
+    "tcgplayerId": "605972"
+  },
+  {
+    "id": "jp-dp3-shining-darkness-cloyster",
+    "name": "Cloyster",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/605900_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/605900_400w.jpg"
+    },
+    "tcgplayerId": "605900"
+  },
+  {
+    "id": "jp-dp3-shining-darkness-shuppet",
+    "name": "Shuppet",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/605974_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/605974_400w.jpg"
+    },
+    "tcgplayerId": "605974"
+  },
+  {
+    "id": "jp-dp3-shining-darkness-stantler",
+    "name": "Stantler",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/605980_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/605980_400w.jpg"
+    },
+    "tcgplayerId": "605980"
+  },
+  {
+    "id": "jp-dp3-shining-darkness-sunflora",
+    "name": "Sunflora",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/605982_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/605982_400w.jpg"
+    },
+    "tcgplayerId": "605982"
+  },
+  {
+    "id": "jp-dp3-shining-darkness-unown-n",
+    "name": "Unown N",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/605987_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/605987_400w.jpg"
+    },
+    "tcgplayerId": "605987"
+  },
+  {
+    "id": "jp-dp3-shining-darkness-venonat",
+    "name": "Venonat",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/605993_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/605993_400w.jpg"
+    },
+    "tcgplayerId": "605993"
+  },
+  {
+    "id": "jp-dp3-shining-darkness-vibrava",
+    "name": "Vibrava",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/605995_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/605995_400w.jpg"
+    },
+    "tcgplayerId": "605995"
+  },
+  {
+    "id": "jp-dp3-shining-darkness-wartortle",
+    "name": "Wartortle",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/605997_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/605997_400w.jpg"
+    },
+    "tcgplayerId": "605997"
+  },
+  {
+    "id": "jp-dp3-shining-darkness-jynx",
+    "name": "Jynx",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/605927_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/605927_400w.jpg"
+    },
+    "tcgplayerId": "605927"
+  }
+]

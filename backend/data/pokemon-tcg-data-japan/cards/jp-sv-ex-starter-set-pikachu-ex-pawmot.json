@@ -1,0 +1,74 @@
+[
+  {
+    "id": "jp-sv-ex-starter-set-pikachu-ex-pawmot-ex-starter-set-pikachu-ex-\u0026-pawmot",
+    "name": "ex Starter Set Pikachu ex \u0026 Pawmot",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/594169_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/594169_400w.jpg"
+    },
+    "tcgplayerId": "594169"
+  },
+  {
+    "id": "jp-sv-ex-starter-set-pikachu-ex-pawmot-006/021",
+    "name": "Pincurchin",
+    "supertype": "Pokémon",
+    "number": "006/021",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/588686_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/588686_400w.jpg"
+    },
+    "tcgplayerId": "588686"
+  },
+  {
+    "id": "jp-sv-ex-starter-set-pikachu-ex-pawmot-010/021",
+    "name": "Lechonk",
+    "supertype": "Pokémon",
+    "number": "010/021",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/588677_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/588677_400w.jpg"
+    },
+    "tcgplayerId": "588677"
+  },
+  {
+    "id": "jp-sv-ex-starter-set-pikachu-ex-pawmot-002/021",
+    "name": "Magnemite",
+    "supertype": "Pokémon",
+    "number": "002/021",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/588683_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/588683_400w.jpg"
+    },
+    "tcgplayerId": "588683"
+  },
+  {
+    "id": "jp-sv-ex-starter-set-pikachu-ex-pawmot-007/021",
+    "name": "Pawmi",
+    "supertype": "Pokémon",
+    "number": "007/021",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/588680_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/588680_400w.jpg"
+    },
+    "tcgplayerId": "588680"
+  },
+  {
+    "id": "jp-sv-ex-starter-set-pikachu-ex-pawmot-001/021",
+    "name": "Pikachu ex",
+    "supertype": "Pokémon",
+    "number": "001/021",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/588678_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/588678_400w.jpg"
+    },
+    "tcgplayerId": "588678"
+  }
+]

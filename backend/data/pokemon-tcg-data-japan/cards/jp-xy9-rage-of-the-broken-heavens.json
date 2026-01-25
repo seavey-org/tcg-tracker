@@ -1,0 +1,482 @@
+[
+  {
+    "id": "jp-xy9-rage-of-the-broken-heavens-089/080",
+    "name": "Gyarados EX - 089/080",
+    "supertype": "Pokémon",
+    "number": "089/080",
+    "rarity": "Ultra Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/604163_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/604163_400w.jpg"
+    },
+    "tcgplayerId": "604163"
+  },
+  {
+    "id": "jp-xy9-rage-of-the-broken-heavens-081/080",
+    "name": "Gyarados EX - 081/080",
+    "supertype": "Pokémon",
+    "number": "081/080",
+    "rarity": "Super Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/604162_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/604162_400w.jpg"
+    },
+    "tcgplayerId": "604162"
+  },
+  {
+    "id": "jp-xy9-rage-of-the-broken-heavens-087/080",
+    "name": "Scizor - 087/080",
+    "supertype": "Pokémon",
+    "number": "087/080",
+    "rarity": "Super Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/604192_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/604192_400w.jpg"
+    },
+    "tcgplayerId": "604192"
+  },
+  {
+    "id": "jp-xy9-rage-of-the-broken-heavens-058/080",
+    "name": "Scizor - 058/080",
+    "supertype": "Pokémon",
+    "number": "058/080",
+    "rarity": "Double Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/604191_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/604191_400w.jpg"
+    },
+    "tcgplayerId": "604191"
+  },
+  {
+    "id": "jp-xy9-rage-of-the-broken-heavens-086/080",
+    "name": "Scizor EX - 086/080",
+    "supertype": "Pokémon",
+    "number": "086/080",
+    "rarity": "Super Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/604194_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/604194_400w.jpg"
+    },
+    "tcgplayerId": "604194"
+  },
+  {
+    "id": "jp-xy9-rage-of-the-broken-heavens-085/080",
+    "name": "Darkrai EX - 085/080",
+    "supertype": "Pokémon",
+    "number": "085/080",
+    "rarity": "Super Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/604137_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/604137_400w.jpg"
+    },
+    "tcgplayerId": "604137"
+  },
+  {
+    "id": "jp-xy9-rage-of-the-broken-heavens-020/080",
+    "name": "Suicune",
+    "supertype": "Pokémon",
+    "number": "020/080",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/604209_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/604209_400w.jpg"
+    },
+    "tcgplayerId": "604209"
+  },
+  {
+    "id": "jp-xy9-rage-of-the-broken-heavens-035/080",
+    "name": "Espeon EX - 035/080",
+    "supertype": "Pokémon",
+    "number": "035/080",
+    "rarity": "Double Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/604145_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/604145_400w.jpg"
+    },
+    "tcgplayerId": "604145"
+  },
+  {
+    "id": "jp-xy9-rage-of-the-broken-heavens-061/080",
+    "name": "Clefairy",
+    "supertype": "Pokémon",
+    "number": "061/080",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/604134_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/604134_400w.jpg"
+    },
+    "tcgplayerId": "604134"
+  },
+  {
+    "id": "jp-xy9-rage-of-the-broken-heavens-068/080",
+    "name": "Ho-Oh EX - 068/080",
+    "supertype": "Pokémon",
+    "number": "068/080",
+    "rarity": "Double Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/604166_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/604166_400w.jpg"
+    },
+    "tcgplayerId": "604166"
+  },
+  {
+    "id": "jp-xy9-rage-of-the-broken-heavens-066/080",
+    "name": "Raticate BREAK",
+    "supertype": "Pokémon",
+    "number": "066/080",
+    "rarity": "Double Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/604188_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/604188_400w.jpg"
+    },
+    "tcgplayerId": "604188"
+  },
+  {
+    "id": "jp-xy9-rage-of-the-broken-heavens-055/080",
+    "name": "Darkrai EX - 055/080",
+    "supertype": "Pokémon",
+    "number": "055/080",
+    "rarity": "Double Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/604136_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/604136_400w.jpg"
+    },
+    "tcgplayerId": "604136"
+  },
+  {
+    "id": "jp-xy9-rage-of-the-broken-heavens-030/080",
+    "name": "Greninja BREAK",
+    "supertype": "Pokémon",
+    "number": "030/080",
+    "rarity": "Double Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/604158_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/604158_400w.jpg"
+    },
+    "tcgplayerId": "604158"
+  },
+  {
+    "id": "jp-xy9-rage-of-the-broken-heavens-057/080",
+    "name": "Scizor EX - 057/080",
+    "supertype": "Pokémon",
+    "number": "057/080",
+    "rarity": "Double Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/604193_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/604193_400w.jpg"
+    },
+    "tcgplayerId": "604193"
+  },
+  {
+    "id": "jp-xy9-rage-of-the-broken-heavens-013/080",
+    "name": "Slowpoke",
+    "supertype": "Pokémon",
+    "number": "013/080",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/604205_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/604205_400w.jpg"
+    },
+    "tcgplayerId": "604205"
+  },
+  {
+    "id": "jp-xy9-rage-of-the-broken-heavens-003/080",
+    "name": "Meganium",
+    "supertype": "Pokémon",
+    "number": "003/080",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/604176_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/604176_400w.jpg"
+    },
+    "tcgplayerId": "604176"
+  },
+  {
+    "id": "jp-xy9-rage-of-the-broken-heavens-039/080",
+    "name": "Trubbish",
+    "supertype": "Pokémon",
+    "number": "039/080",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/604213_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/604213_400w.jpg"
+    },
+    "tcgplayerId": "604213"
+  },
+  {
+    "id": "jp-xy9-rage-of-the-broken-heavens-049/080",
+    "name": "Gible",
+    "supertype": "Pokémon",
+    "number": "049/080",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/604155_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/604155_400w.jpg"
+    },
+    "tcgplayerId": "604155"
+  },
+  {
+    "id": "jp-xy9-rage-of-the-broken-heavens-029/080",
+    "name": "Greninja",
+    "supertype": "Pokémon",
+    "number": "029/080",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/604157_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/604157_400w.jpg"
+    },
+    "tcgplayerId": "604157"
+  },
+  {
+    "id": "jp-xy9-rage-of-the-broken-heavens-040/080",
+    "name": "Garbodor",
+    "supertype": "Pokémon",
+    "number": "040/080",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/604153_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/604153_400w.jpg"
+    },
+    "tcgplayerId": "604153"
+  },
+  {
+    "id": "jp-xy9-rage-of-the-broken-heavens-043/080",
+    "name": "Aegislash",
+    "supertype": "Pokémon",
+    "number": "043/080",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/604127_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/604127_400w.jpg"
+    },
+    "tcgplayerId": "604127"
+  },
+  {
+    "id": "jp-xy9-rage-of-the-broken-heavens-024/080",
+    "name": "Seismitoad",
+    "supertype": "Pokémon",
+    "number": "024/080",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/604197_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/604197_400w.jpg"
+    },
+    "tcgplayerId": "604197"
+  },
+  {
+    "id": "jp-xy9-rage-of-the-broken-heavens-001/080",
+    "name": "Chikorita",
+    "supertype": "Pokémon",
+    "number": "001/080",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/604132_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/604132_400w.jpg"
+    },
+    "tcgplayerId": "604132"
+  },
+  {
+    "id": "jp-xy9-rage-of-the-broken-heavens-056/080",
+    "name": "Pangoro",
+    "supertype": "Pokémon",
+    "number": "056/080",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/604181_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/604181_400w.jpg"
+    },
+    "tcgplayerId": "604181"
+  },
+  {
+    "id": "jp-xy9-rage-of-the-broken-heavens-021/080",
+    "name": "Manaphy EX - 021/080",
+    "supertype": "Pokémon",
+    "number": "021/080",
+    "rarity": "Double Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/604173_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/604173_400w.jpg"
+    },
+    "tcgplayerId": "604173"
+  },
+  {
+    "id": "jp-xy9-rage-of-the-broken-heavens-051/080",
+    "name": "Garchomp",
+    "supertype": "Pokémon",
+    "number": "051/080",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/604154_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/604154_400w.jpg"
+    },
+    "tcgplayerId": "604154"
+  },
+  {
+    "id": "jp-xy9-rage-of-the-broken-heavens-015/080",
+    "name": "Slowking",
+    "supertype": "Pokémon",
+    "number": "015/080",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/604204_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/604204_400w.jpg"
+    },
+    "tcgplayerId": "604204"
+  },
+  {
+    "id": "jp-xy9-rage-of-the-broken-heavens-065/080",
+    "name": "Raticate",
+    "supertype": "Pokémon",
+    "number": "065/080",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/604187_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/604187_400w.jpg"
+    },
+    "tcgplayerId": "604187"
+  },
+  {
+    "id": "jp-xy9-rage-of-the-broken-heavens-025/080",
+    "name": "Ducklett",
+    "supertype": "Pokémon",
+    "number": "025/080",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/604143_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/604143_400w.jpg"
+    },
+    "tcgplayerId": "604143"
+  },
+  {
+    "id": "jp-xy9-rage-of-the-broken-heavens-069/080",
+    "name": "Glameow",
+    "supertype": "Pokémon",
+    "number": "069/080",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/604156_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/604156_400w.jpg"
+    },
+    "tcgplayerId": "604156"
+  },
+  {
+    "id": "jp-xy9-rage-of-the-broken-heavens-037/080",
+    "name": "Drapion",
+    "supertype": "Pokémon",
+    "number": "037/080",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/604141_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/604141_400w.jpg"
+    },
+    "tcgplayerId": "604141"
+  },
+  {
+    "id": "jp-xy9-rage-of-the-broken-heavens-052/080",
+    "name": "Pancham",
+    "supertype": "Pokémon",
+    "number": "052/080",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/604180_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/604180_400w.jpg"
+    },
+    "tcgplayerId": "604180"
+  },
+  {
+    "id": "jp-xy9-rage-of-the-broken-heavens-064/080",
+    "name": "Rattata",
+    "supertype": "Pokémon",
+    "number": "064/080",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/604189_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/604189_400w.jpg"
+    },
+    "tcgplayerId": "604189"
+  },
+  {
+    "id": "jp-xy9-rage-of-the-broken-heavens-010/080",
+    "name": "Numel",
+    "supertype": "Pokémon",
+    "number": "010/080",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/604177_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/604177_400w.jpg"
+    },
+    "tcgplayerId": "604177"
+  },
+  {
+    "id": "jp-xy9-rage-of-the-broken-heavens-034/080",
+    "name": "Hypno",
+    "supertype": "Pokémon",
+    "number": "034/080",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/604169_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/604169_400w.jpg"
+    },
+    "tcgplayerId": "604169"
+  },
+  {
+    "id": "jp-xy9-rage-of-the-broken-heavens-076/080",
+    "name": "Scizor Spirit Link",
+    "supertype": "Pokémon",
+    "number": "076/080",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/604195_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/604195_400w.jpg"
+    },
+    "tcgplayerId": "604195"
+  },
+  {
+    "id": "jp-xy9-rage-of-the-broken-heavens-002/080",
+    "name": "Bayleef",
+    "supertype": "Pokémon",
+    "number": "002/080",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/604128_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/604128_400w.jpg"
+    },
+    "tcgplayerId": "604128"
+  },
+  {
+    "id": "jp-xy9-rage-of-the-broken-heavens-047/080",
+    "name": "Trevenant BREAK",
+    "supertype": "Pokémon",
+    "number": "047/080",
+    "rarity": "Double Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/604212_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/604212_400w.jpg"
+    },
+    "tcgplayerId": "604212"
+  },
+  {
+    "id": "jp-xy9-rage-of-the-broken-heavens-053/080",
+    "name": "Nuzleaf",
+    "supertype": "Pokémon",
+    "number": "053/080",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/604178_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/604178_400w.jpg"
+    },
+    "tcgplayerId": "604178"
+  },
+  {
+    "id": "jp-xy9-rage-of-the-broken-heavens-046/080",
+    "name": "Trevenant",
+    "supertype": "Pokémon",
+    "number": "046/080",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/604211_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/604211_400w.jpg"
+    },
+    "tcgplayerId": "604211"
+  }
+]

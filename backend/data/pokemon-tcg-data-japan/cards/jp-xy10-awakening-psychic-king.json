@@ -1,0 +1,578 @@
+[
+  {
+    "id": "jp-xy10-awakening-psychic-king-084/078",
+    "name": "Altaria - 084/078",
+    "supertype": "Pokémon",
+    "number": "084/078",
+    "rarity": "Super Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/602968_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/602968_400w.jpg"
+    },
+    "tcgplayerId": "602968"
+  },
+  {
+    "id": "jp-xy10-awakening-psychic-king-059/078",
+    "name": "Lugia BREAK",
+    "supertype": "Pokémon",
+    "number": "059/078",
+    "rarity": "Double Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/602943_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/602943_400w.jpg"
+    },
+    "tcgplayerId": "602943"
+  },
+  {
+    "id": "jp-xy10-awakening-psychic-king-042/078",
+    "name": "Umbreon EX - 042/078",
+    "supertype": "Pokémon",
+    "number": "042/078",
+    "rarity": "Double Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/602926_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/602926_400w.jpg"
+    },
+    "tcgplayerId": "602926"
+  },
+  {
+    "id": "jp-xy10-awakening-psychic-king-024/078",
+    "name": "Alakazam - 024/078",
+    "supertype": "Pokémon",
+    "number": "024/078",
+    "rarity": "Double Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/602908_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/602908_400w.jpg"
+    },
+    "tcgplayerId": "602908"
+  },
+  {
+    "id": "jp-xy10-awakening-psychic-king-085/078",
+    "name": "Kingdra EX - 085/078",
+    "supertype": "Pokémon",
+    "number": "085/078",
+    "rarity": "Super Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/602969_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/602969_400w.jpg"
+    },
+    "tcgplayerId": "602969"
+  },
+  {
+    "id": "jp-xy10-awakening-psychic-king-057/078",
+    "name": "Snorlax",
+    "supertype": "Pokémon",
+    "number": "057/078",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/602941_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/602941_400w.jpg"
+    },
+    "tcgplayerId": "602941"
+  },
+  {
+    "id": "jp-xy10-awakening-psychic-king-058/078",
+    "name": "Lugia",
+    "supertype": "Pokémon",
+    "number": "058/078",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/602942_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/602942_400w.jpg"
+    },
+    "tcgplayerId": "602942"
+  },
+  {
+    "id": "jp-xy10-awakening-psychic-king-018/078",
+    "name": "Glaceon EX - 018/078",
+    "supertype": "Pokémon",
+    "number": "018/078",
+    "rarity": "Double Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/602902_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/602902_400w.jpg"
+    },
+    "tcgplayerId": "602902"
+  },
+  {
+    "id": "jp-xy10-awakening-psychic-king-027/078",
+    "name": "Mew",
+    "supertype": "Pokémon",
+    "number": "027/078",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/602911_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/602911_400w.jpg"
+    },
+    "tcgplayerId": "602911"
+  },
+  {
+    "id": "jp-xy10-awakening-psychic-king-008/078",
+    "name": "Moltres",
+    "supertype": "Pokémon",
+    "number": "008/078",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/602892_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/602892_400w.jpg"
+    },
+    "tcgplayerId": "602892"
+  },
+  {
+    "id": "jp-xy10-awakening-psychic-king-023/078",
+    "name": "Alakazam EX - 023/078",
+    "supertype": "Pokémon",
+    "number": "023/078",
+    "rarity": "Double Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/602907_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/602907_400w.jpg"
+    },
+    "tcgplayerId": "602907"
+  },
+  {
+    "id": "jp-xy10-awakening-psychic-king-055/078",
+    "name": "Kingdra EX - 055/078",
+    "supertype": "Pokémon",
+    "number": "055/078",
+    "rarity": "Double Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/602939_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/602939_400w.jpg"
+    },
+    "tcgplayerId": "602939"
+  },
+  {
+    "id": "jp-xy10-awakening-psychic-king-034/078",
+    "name": "Kabutops",
+    "supertype": "Pokémon",
+    "number": "034/078",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/602918_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/602918_400w.jpg"
+    },
+    "tcgplayerId": "602918"
+  },
+  {
+    "id": "jp-xy10-awakening-psychic-king-050/078",
+    "name": "Lucario",
+    "supertype": "Pokémon",
+    "number": "050/078",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/602934_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/602934_400w.jpg"
+    },
+    "tcgplayerId": "602934"
+  },
+  {
+    "id": "jp-xy10-awakening-psychic-king-038/078",
+    "name": "Riolu",
+    "supertype": "Pokémon",
+    "number": "038/078",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/602922_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/602922_400w.jpg"
+    },
+    "tcgplayerId": "602922"
+  },
+  {
+    "id": "jp-xy10-awakening-psychic-king-043/078",
+    "name": "Tyranitar",
+    "supertype": "Pokémon",
+    "number": "043/078",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/602927_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/602927_400w.jpg"
+    },
+    "tcgplayerId": "602927"
+  },
+  {
+    "id": "jp-xy10-awakening-psychic-king-056/078",
+    "name": "Aerodactyl",
+    "supertype": "Pokémon",
+    "number": "056/078",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/602940_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/602940_400w.jpg"
+    },
+    "tcgplayerId": "602940"
+  },
+  {
+    "id": "jp-xy10-awakening-psychic-king-026/078",
+    "name": "Weezing",
+    "supertype": "Pokémon",
+    "number": "026/078",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/602910_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/602910_400w.jpg"
+    },
+    "tcgplayerId": "602910"
+  },
+  {
+    "id": "jp-xy10-awakening-psychic-king-051/078",
+    "name": "Genesect EX - 051/078",
+    "supertype": "Pokémon",
+    "number": "051/078",
+    "rarity": "Double Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/602935_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/602935_400w.jpg"
+    },
+    "tcgplayerId": "602935"
+  },
+  {
+    "id": "jp-xy10-awakening-psychic-king-075/078",
+    "name": "Alakazam Spirit Link",
+    "supertype": "Pokémon",
+    "number": "075/078",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/602959_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/602959_400w.jpg"
+    },
+    "tcgplayerId": "602959"
+  },
+  {
+    "id": "jp-xy10-awakening-psychic-king-017/078",
+    "name": "Omastar BREAK",
+    "supertype": "Pokémon",
+    "number": "017/078",
+    "rarity": "Double Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/602901_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/602901_400w.jpg"
+    },
+    "tcgplayerId": "602901"
+  },
+  {
+    "id": "jp-xy10-awakening-psychic-king-067/078",
+    "name": "Devolution Spray",
+    "supertype": "Pokémon",
+    "number": "067/078",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/602951_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/602951_400w.jpg"
+    },
+    "tcgplayerId": "602951"
+  },
+  {
+    "id": "jp-xy10-awakening-psychic-king-048/078",
+    "name": "Bronzong",
+    "supertype": "Pokémon",
+    "number": "048/078",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/602932_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/602932_400w.jpg"
+    },
+    "tcgplayerId": "602932"
+  },
+  {
+    "id": "jp-xy10-awakening-psychic-king-007/078",
+    "name": "Serperior",
+    "supertype": "Pokémon",
+    "number": "007/078",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/602891_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/602891_400w.jpg"
+    },
+    "tcgplayerId": "602891"
+  },
+  {
+    "id": "jp-xy10-awakening-psychic-king-019/078",
+    "name": "White Kyurem",
+    "supertype": "Pokémon",
+    "number": "019/078",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/602903_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/602903_400w.jpg"
+    },
+    "tcgplayerId": "602903"
+  },
+  {
+    "id": "jp-xy10-awakening-psychic-king-045/078",
+    "name": "Mandibuzz",
+    "supertype": "Pokémon",
+    "number": "045/078",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/602929_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/602929_400w.jpg"
+    },
+    "tcgplayerId": "602929"
+  },
+  {
+    "id": "jp-xy10-awakening-psychic-king-035/078",
+    "name": "Larvitar",
+    "supertype": "Pokémon",
+    "number": "035/078",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/602919_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/602919_400w.jpg"
+    },
+    "tcgplayerId": "602919"
+  },
+  {
+    "id": "jp-xy10-awakening-psychic-king-049/078",
+    "name": "Bronzong BREAK",
+    "supertype": "Pokémon",
+    "number": "049/078",
+    "rarity": "Double Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/602933_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/602933_400w.jpg"
+    },
+    "tcgplayerId": "602933"
+  },
+  {
+    "id": "jp-xy10-awakening-psychic-king-022/078",
+    "name": "Rotom",
+    "supertype": "Pokémon",
+    "number": "022/078",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/602906_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/602906_400w.jpg"
+    },
+    "tcgplayerId": "602906"
+  },
+  {
+    "id": "jp-xy10-awakening-psychic-king-001/078",
+    "name": "Shuckle",
+    "supertype": "Pokémon",
+    "number": "001/078",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/602885_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/602885_400w.jpg"
+    },
+    "tcgplayerId": "602885"
+  },
+  {
+    "id": "jp-xy10-awakening-psychic-king-053/078",
+    "name": "Wigglytuff",
+    "supertype": "Pokémon",
+    "number": "053/078",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/602937_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/602937_400w.jpg"
+    },
+    "tcgplayerId": "602937"
+  },
+  {
+    "id": "jp-xy10-awakening-psychic-king-029/078",
+    "name": "Grumpig",
+    "supertype": "Pokémon",
+    "number": "029/078",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/602913_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/602913_400w.jpg"
+    },
+    "tcgplayerId": "602913"
+  },
+  {
+    "id": "jp-xy10-awakening-psychic-king-076/078",
+    "name": "N",
+    "supertype": "Pokémon",
+    "number": "076/078",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/602960_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/602960_400w.jpg"
+    },
+    "tcgplayerId": "602960"
+  },
+  {
+    "id": "jp-xy10-awakening-psychic-king-030/078",
+    "name": "Solosis",
+    "supertype": "Pokémon",
+    "number": "030/078",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/602914_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/602914_400w.jpg"
+    },
+    "tcgplayerId": "602914"
+  },
+  {
+    "id": "jp-xy10-awakening-psychic-king-005/078",
+    "name": "Snivy",
+    "supertype": "Pokémon",
+    "number": "005/078",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/602889_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/602889_400w.jpg"
+    },
+    "tcgplayerId": "602889"
+  },
+  {
+    "id": "jp-xy10-awakening-psychic-king-039/078",
+    "name": "Carbink",
+    "supertype": "Pokémon",
+    "number": "039/078",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/602923_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/602923_400w.jpg"
+    },
+    "tcgplayerId": "602923"
+  },
+  {
+    "id": "jp-xy10-awakening-psychic-king-015/078",
+    "name": "Omanyte",
+    "supertype": "Pokémon",
+    "number": "015/078",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/602899_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/602899_400w.jpg"
+    },
+    "tcgplayerId": "602899"
+  },
+  {
+    "id": "jp-xy10-awakening-psychic-king-025/078",
+    "name": "Koffing",
+    "supertype": "Pokémon",
+    "number": "025/078",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/602909_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/602909_400w.jpg"
+    },
+    "tcgplayerId": "602909"
+  },
+  {
+    "id": "jp-xy10-awakening-psychic-king-006/078",
+    "name": "Servine",
+    "supertype": "Pokémon",
+    "number": "006/078",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/602890_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/602890_400w.jpg"
+    },
+    "tcgplayerId": "602890"
+  },
+  {
+    "id": "jp-xy10-awakening-psychic-king-065/078",
+    "name": "Cinccino",
+    "supertype": "Pokémon",
+    "number": "065/078",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/602949_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/602949_400w.jpg"
+    },
+    "tcgplayerId": "602949"
+  },
+  {
+    "id": "jp-xy10-awakening-psychic-king-033/078",
+    "name": "Kabuto",
+    "supertype": "Pokémon",
+    "number": "033/078",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/602917_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/602917_400w.jpg"
+    },
+    "tcgplayerId": "602917"
+  },
+  {
+    "id": "jp-xy10-awakening-psychic-king-052/078",
+    "name": "Jigglypuff",
+    "supertype": "Pokémon",
+    "number": "052/078",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/602936_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/602936_400w.jpg"
+    },
+    "tcgplayerId": "602936"
+  },
+  {
+    "id": "jp-xy10-awakening-psychic-king-073/078",
+    "name": "Bent Spoon",
+    "supertype": "Pokémon",
+    "number": "073/078",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/602957_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/602957_400w.jpg"
+    },
+    "tcgplayerId": "602957"
+  },
+  {
+    "id": "jp-xy10-awakening-psychic-king-069/078",
+    "name": "Helix Fossil Omanyte",
+    "supertype": "Pokémon",
+    "number": "069/078",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/602953_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/602953_400w.jpg"
+    },
+    "tcgplayerId": "602953"
+  },
+  {
+    "id": "jp-xy10-awakening-psychic-king-013/078",
+    "name": "Seel",
+    "supertype": "Pokémon",
+    "number": "013/078",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/602897_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/602897_400w.jpg"
+    },
+    "tcgplayerId": "602897"
+  },
+  {
+    "id": "jp-xy10-awakening-psychic-king-020/078",
+    "name": "Binacle",
+    "supertype": "Pokémon",
+    "number": "020/078",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/602904_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/602904_400w.jpg"
+    },
+    "tcgplayerId": "602904"
+  },
+  {
+    "id": "jp-xy10-awakening-psychic-king-066/078",
+    "name": "Fossil Excavation Kit",
+    "supertype": "Pokémon",
+    "number": "066/078",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/602950_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/602950_400w.jpg"
+    },
+    "tcgplayerId": "602950"
+  },
+  {
+    "id": "jp-xy10-awakening-psychic-king-040/078",
+    "name": "Zygarde - 040/078",
+    "supertype": "Pokémon",
+    "number": "040/078",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/602924_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/602924_400w.jpg"
+    },
+    "tcgplayerId": "602924"
+  }
+]

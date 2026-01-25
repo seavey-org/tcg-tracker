@@ -1,0 +1,98 @@
+[
+  {
+    "id": "jp-sv-skeledirge-ex-terastal-starter-set-skeledirge-ex-terastal-starter-deck",
+    "name": "Skeledirge ex Terastal Starter Deck",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/594101_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/594101_400w.jpg"
+    },
+    "tcgplayerId": "594101"
+  },
+  {
+    "id": "jp-sv-skeledirge-ex-terastal-starter-set-001/020",
+    "name": "Magmar",
+    "supertype": "Pokémon",
+    "number": "001/020",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/588978_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/588978_400w.jpg"
+    },
+    "tcgplayerId": "588978"
+  },
+  {
+    "id": "jp-sv-skeledirge-ex-terastal-starter-set-008/020",
+    "name": "Skeledirge ex",
+    "supertype": "Pokémon",
+    "number": "008/020",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/588985_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/588985_400w.jpg"
+    },
+    "tcgplayerId": "588985"
+  },
+  {
+    "id": "jp-sv-skeledirge-ex-terastal-starter-set-005/020",
+    "name": "Fuecoco",
+    "supertype": "Pokémon",
+    "number": "005/020",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/588982_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/588982_400w.jpg"
+    },
+    "tcgplayerId": "588982"
+  },
+  {
+    "id": "jp-sv-skeledirge-ex-terastal-starter-set-007/020",
+    "name": "Mew",
+    "supertype": "Pokémon",
+    "number": "007/020",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/588984_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/588984_400w.jpg"
+    },
+    "tcgplayerId": "588984"
+  },
+  {
+    "id": "jp-sv-skeledirge-ex-terastal-starter-set-011/020",
+    "name": "Nest Ball",
+    "supertype": "Trainer",
+    "number": "011/020",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/588988_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/588988_400w.jpg"
+    },
+    "tcgplayerId": "588988"
+  },
+  {
+    "id": "jp-sv-skeledirge-ex-terastal-starter-set-003/020",
+    "name": "Heat Rotom",
+    "supertype": "Pokémon",
+    "number": "003/020",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/588980_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/588980_400w.jpg"
+    },
+    "tcgplayerId": "588980"
+  },
+  {
+    "id": "jp-sv-skeledirge-ex-terastal-starter-set-016/020",
+    "name": "Iono",
+    "supertype": "Pokémon",
+    "number": "016/020",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/588993_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/588993_400w.jpg"
+    },
+    "tcgplayerId": "588993"
+  }
+]

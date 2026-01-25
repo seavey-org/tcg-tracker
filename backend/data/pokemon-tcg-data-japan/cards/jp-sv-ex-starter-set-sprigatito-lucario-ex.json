@@ -1,0 +1,98 @@
+[
+  {
+    "id": "jp-sv-ex-starter-set-sprigatito-lucario-ex-ex-starter-set-sprigatito-\u0026-lucario-ex",
+    "name": "ex Starter Set Sprigatito \u0026 Lucario ex",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/594375_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/594375_400w.jpg"
+    },
+    "tcgplayerId": "594375"
+  },
+  {
+    "id": "jp-sv-ex-starter-set-sprigatito-lucario-ex-005/023",
+    "name": "Floragato",
+    "supertype": "Pokémon",
+    "number": "005/023",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/591248_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/591248_400w.jpg"
+    },
+    "tcgplayerId": "591248"
+  },
+  {
+    "id": "jp-sv-ex-starter-set-sprigatito-lucario-ex-004/023",
+    "name": "Sprigatito",
+    "supertype": "Pokémon",
+    "number": "004/023",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/591247_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/591247_400w.jpg"
+    },
+    "tcgplayerId": "591247"
+  },
+  {
+    "id": "jp-sv-ex-starter-set-sprigatito-lucario-ex-011/023",
+    "name": "Lechonk",
+    "supertype": "Pokémon",
+    "number": "011/023",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/591254_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/591254_400w.jpg"
+    },
+    "tcgplayerId": "591254"
+  },
+  {
+    "id": "jp-sv-ex-starter-set-sprigatito-lucario-ex-002/023",
+    "name": "Breloom",
+    "supertype": "Pokémon",
+    "number": "002/023",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/591245_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/591245_400w.jpg"
+    },
+    "tcgplayerId": "591245"
+  },
+  {
+    "id": "jp-sv-ex-starter-set-sprigatito-lucario-ex-001/023",
+    "name": "Shroomish",
+    "supertype": "Pokémon",
+    "number": "001/023",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/591244_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/591244_400w.jpg"
+    },
+    "tcgplayerId": "591244"
+  },
+  {
+    "id": "jp-sv-ex-starter-set-sprigatito-lucario-ex-006/023",
+    "name": "Meowscarada",
+    "supertype": "Pokémon",
+    "number": "006/023",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/591249_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/591249_400w.jpg"
+    },
+    "tcgplayerId": "591249"
+  },
+  {
+    "id": "jp-sv-ex-starter-set-sprigatito-lucario-ex-009/023",
+    "name": "Lucario ex",
+    "supertype": "Pokémon",
+    "number": "009/023",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/591252_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/591252_400w.jpg"
+    },
+    "tcgplayerId": "591252"
+  }
+]

@@ -1,0 +1,74 @@
+[
+  {
+    "id": "jp-sv-ex-special-set-ex-special-set",
+    "name": "ex Special Set",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/594104_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/594104_400w.jpg"
+    },
+    "tcgplayerId": "594104"
+  },
+  {
+    "id": "jp-sv-ex-special-set-005/007",
+    "name": "Pawmot ex",
+    "supertype": "Pokémon",
+    "number": "005/007",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/588692_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/588692_400w.jpg"
+    },
+    "tcgplayerId": "588692"
+  },
+  {
+    "id": "jp-sv-ex-special-set-007/007",
+    "name": "Houndstone ex",
+    "supertype": "Pokémon",
+    "number": "007/007",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/588693_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/588693_400w.jpg"
+    },
+    "tcgplayerId": "588693"
+  },
+  {
+    "id": "jp-sv-ex-special-set-003/007",
+    "name": "Pawmi",
+    "supertype": "Pokémon",
+    "number": "003/007",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/588687_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/588687_400w.jpg"
+    },
+    "tcgplayerId": "588687"
+  },
+  {
+    "id": "jp-sv-ex-special-set-001/007",
+    "name": "Toedscool",
+    "supertype": "Pokémon",
+    "number": "001/007",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/588688_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/588688_400w.jpg"
+    },
+    "tcgplayerId": "588688"
+  },
+  {
+    "id": "jp-sv-ex-special-set-002/007",
+    "name": "Toedscruel ex",
+    "supertype": "Pokémon",
+    "number": "002/007",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/588691_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/588691_400w.jpg"
+    },
+    "tcgplayerId": "588691"
+  }
+]

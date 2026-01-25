@@ -1,0 +1,62 @@
+[
+  {
+    "id": "jp-world-champions-pack-060/108",
+    "name": "Absol ex",
+    "supertype": "Pokémon",
+    "number": "060/108",
+    "rarity": "",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/609299_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/609299_400w.jpg"
+    },
+    "tcgplayerId": "609299"
+  },
+  {
+    "id": "jp-world-champions-pack-068/108",
+    "name": "Metagross ex",
+    "supertype": "Pokémon",
+    "number": "068/108",
+    "rarity": "",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/609307_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/609307_400w.jpg"
+    },
+    "tcgplayerId": "609307"
+  },
+  {
+    "id": "jp-world-champions-pack-046/108",
+    "name": "Kabuto",
+    "supertype": "Pokémon",
+    "number": "046/108",
+    "rarity": "",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/609285_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/609285_400w.jpg"
+    },
+    "tcgplayerId": "609285"
+  },
+  {
+    "id": "jp-world-champions-pack-017/108",
+    "name": "Omastar",
+    "supertype": "Pokémon",
+    "number": "017/108",
+    "rarity": "",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/609256_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/609256_400w.jpg"
+    },
+    "tcgplayerId": "609256"
+  },
+  {
+    "id": "jp-world-champions-pack-025/108",
+    "name": "Magnemite",
+    "supertype": "Pokémon",
+    "number": "025/108",
+    "rarity": "",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/609264_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/609264_400w.jpg"
+    },
+    "tcgplayerId": "609264"
+  }
+]

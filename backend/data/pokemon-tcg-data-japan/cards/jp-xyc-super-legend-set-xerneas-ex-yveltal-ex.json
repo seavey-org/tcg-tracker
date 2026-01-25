@@ -1,0 +1,62 @@
+[
+  {
+    "id": "jp-xyc-super-legend-set-xerneas-ex-yveltal-ex-012/023",
+    "name": "Xerneas EX - 012/023",
+    "supertype": "Pokémon",
+    "number": "012/023",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/605146_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/605146_400w.jpg"
+    },
+    "tcgplayerId": "605146"
+  },
+  {
+    "id": "jp-xyc-super-legend-set-xerneas-ex-yveltal-ex-006/023",
+    "name": "Yveltal EX - 006/023",
+    "supertype": "Pokémon",
+    "number": "006/023",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/605140_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/605140_400w.jpg"
+    },
+    "tcgplayerId": "605140"
+  },
+  {
+    "id": "jp-xyc-super-legend-set-xerneas-ex-yveltal-ex-011/023",
+    "name": "Xerneas EX - 011/023",
+    "supertype": "Pokémon",
+    "number": "011/023",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/605145_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/605145_400w.jpg"
+    },
+    "tcgplayerId": "605145"
+  },
+  {
+    "id": "jp-xyc-super-legend-set-xerneas-ex-yveltal-ex-005/023",
+    "name": "Yveltal EX - 005/023",
+    "supertype": "Pokémon",
+    "number": "005/023",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/605139_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/605139_400w.jpg"
+    },
+    "tcgplayerId": "605139"
+  },
+  {
+    "id": "jp-xyc-super-legend-set-xerneas-ex-yveltal-ex-019/023",
+    "name": "Tierno",
+    "supertype": "Pokémon",
+    "number": "019/023",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/605153_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/605153_400w.jpg"
+    },
+    "tcgplayerId": "605153"
+  }
+]
