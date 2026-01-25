@@ -1,0 +1,686 @@
+[
+  {
+    "id": "jp-l3-clash-at-the-summit-071/080",
+    "name": "Kyogre \u0026 Groudon Legend - 071/080",
+    "supertype": "Pokémon",
+    "number": "071/080",
+    "rarity": "Rare Holo LEGEND",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608447_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608447_400w.jpg"
+    },
+    "tcgplayerId": "608447"
+  },
+  {
+    "id": "jp-l3-clash-at-the-summit-074/080",
+    "name": "Rayquaza \u0026 Deoxys Legend - 074/080",
+    "supertype": "Pokémon",
+    "number": "074/080",
+    "rarity": "Rare Holo LEGEND",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608450_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608450_400w.jpg"
+    },
+    "tcgplayerId": "608450"
+  },
+  {
+    "id": "jp-l3-clash-at-the-summit-070/080",
+    "name": "Kyogre \u0026 Groudon Legend - 070/080",
+    "supertype": "Pokémon",
+    "number": "070/080",
+    "rarity": "Rare Holo LEGEND",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608446_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608446_400w.jpg"
+    },
+    "tcgplayerId": "608446"
+  },
+  {
+    "id": "jp-l3-clash-at-the-summit-045/080",
+    "name": "Machamp - 045/080",
+    "supertype": "Pokémon",
+    "number": "045/080",
+    "rarity": "Super Rare Holo",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608421_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608421_400w.jpg"
+    },
+    "tcgplayerId": "608421"
+  },
+  {
+    "id": "jp-l3-clash-at-the-summit-072/080",
+    "name": "Palkia \u0026 Dialga Legend - 072/080",
+    "supertype": "Pokémon",
+    "number": "072/080",
+    "rarity": "Rare Holo LEGEND",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608448_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608448_400w.jpg"
+    },
+    "tcgplayerId": "608448"
+  },
+  {
+    "id": "jp-l3-clash-at-the-summit-064/080",
+    "name": "Ditto",
+    "supertype": "Pokémon",
+    "number": "064/080",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608440_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608440_400w.jpg"
+    },
+    "tcgplayerId": "608440"
+  },
+  {
+    "id": "jp-l3-clash-at-the-summit-015/080",
+    "name": "Psyduck",
+    "supertype": "Pokémon",
+    "number": "015/080",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608391_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608391_400w.jpg"
+    },
+    "tcgplayerId": "608391"
+  },
+  {
+    "id": "jp-l3-clash-at-the-summit-006/080",
+    "name": "Yanmega - 006/080",
+    "supertype": "Pokémon",
+    "number": "006/080",
+    "rarity": "Super Rare Holo",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608382_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608382_400w.jpg"
+    },
+    "tcgplayerId": "608382"
+  },
+  {
+    "id": "jp-l3-clash-at-the-summit-075/080",
+    "name": "Rayquaza \u0026 Deoxys Legend - 075/080",
+    "supertype": "Pokémon",
+    "number": "075/080",
+    "rarity": "Rare Holo LEGEND",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608451_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608451_400w.jpg"
+    },
+    "tcgplayerId": "608451"
+  },
+  {
+    "id": "jp-l3-clash-at-the-summit-073/080",
+    "name": "Palkia \u0026 Dialga Legend - 073/080",
+    "supertype": "Pokémon",
+    "number": "073/080",
+    "rarity": "Rare Holo LEGEND",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608449_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608449_400w.jpg"
+    },
+    "tcgplayerId": "608449"
+  },
+  {
+    "id": "jp-l3-clash-at-the-summit-077/080",
+    "name": "Black Belt (Mirror Holofoil)",
+    "supertype": "Pokémon",
+    "number": "077/080",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608534_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608534_400w.jpg"
+    },
+    "tcgplayerId": "608534"
+  },
+  {
+    "id": "jp-l3-clash-at-the-summit-010/080",
+    "name": "Ponyta",
+    "supertype": "Pokémon",
+    "number": "010/080",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608386_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608386_400w.jpg"
+    },
+    "tcgplayerId": "608386"
+  },
+  {
+    "id": "jp-l3-clash-at-the-summit-057/080",
+    "name": "Bronzong",
+    "supertype": "Pokémon",
+    "number": "057/080",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608433_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608433_400w.jpg"
+    },
+    "tcgplayerId": "608433"
+  },
+  {
+    "id": "jp-l3-clash-at-the-summit-037/080",
+    "name": "Celebi - 037/080",
+    "supertype": "Pokémon",
+    "number": "037/080",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608413_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608413_400w.jpg"
+    },
+    "tcgplayerId": "608413"
+  },
+  {
+    "id": "jp-l3-clash-at-the-summit-027/080",
+    "name": "Electrode - 027/080",
+    "supertype": "Pokémon",
+    "number": "027/080",
+    "rarity": "Super Rare Holo",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608403_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608403_400w.jpg"
+    },
+    "tcgplayerId": "608403"
+  },
+  {
+    "id": "jp-l3-clash-at-the-summit-079/080",
+    "name": "Indigo Plateau",
+    "supertype": "Pokémon",
+    "number": "079/080",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608455_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608455_400w.jpg"
+    },
+    "tcgplayerId": "608455"
+  },
+  {
+    "id": "jp-l3-clash-at-the-summit-041/080",
+    "name": "Nidoking",
+    "supertype": "Pokémon",
+    "number": "041/080",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608417_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608417_400w.jpg"
+    },
+    "tcgplayerId": "608417"
+  },
+  {
+    "id": "jp-l3-clash-at-the-summit-057/080",
+    "name": "Bronzong (Mirror Holofoil)",
+    "supertype": "Pokémon",
+    "number": "057/080",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608514_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608514_400w.jpg"
+    },
+    "tcgplayerId": "608514"
+  },
+  {
+    "id": "jp-l3-clash-at-the-summit-040/080",
+    "name": "Skorupi",
+    "supertype": "Pokémon",
+    "number": "040/080",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608416_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608416_400w.jpg"
+    },
+    "tcgplayerId": "608416"
+  },
+  {
+    "id": "jp-l3-clash-at-the-summit-024/080",
+    "name": "Luvdisc",
+    "supertype": "Pokémon",
+    "number": "024/080",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608400_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608400_400w.jpg"
+    },
+    "tcgplayerId": "608400"
+  },
+  {
+    "id": "jp-l3-clash-at-the-summit-018/080",
+    "name": "Tentacruel",
+    "supertype": "Pokémon",
+    "number": "018/080",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608394_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608394_400w.jpg"
+    },
+    "tcgplayerId": "608394"
+  },
+  {
+    "id": "jp-l3-clash-at-the-summit-039/080",
+    "name": "Grumpig",
+    "supertype": "Pokémon",
+    "number": "039/080",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608415_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608415_400w.jpg"
+    },
+    "tcgplayerId": "608415"
+  },
+  {
+    "id": "jp-l3-clash-at-the-summit-055/080",
+    "name": "Aggron",
+    "supertype": "Pokémon",
+    "number": "055/080",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608431_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608431_400w.jpg"
+    },
+    "tcgplayerId": "608431"
+  },
+  {
+    "id": "jp-l3-clash-at-the-summit-030/080",
+    "name": "Electivire",
+    "supertype": "Pokémon",
+    "number": "030/080",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608406_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608406_400w.jpg"
+    },
+    "tcgplayerId": "608406"
+  },
+  {
+    "id": "jp-l3-clash-at-the-summit-036/080",
+    "name": "Unown",
+    "supertype": "Pokémon",
+    "number": "036/080",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608412_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608412_400w.jpg"
+    },
+    "tcgplayerId": "608412"
+  },
+  {
+    "id": "jp-l3-clash-at-the-summit-067/080",
+    "name": "Porygon-Z",
+    "supertype": "Pokémon",
+    "number": "067/080",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608443_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608443_400w.jpg"
+    },
+    "tcgplayerId": "608443"
+  },
+  {
+    "id": "jp-l3-clash-at-the-summit-023/080",
+    "name": "Wailord (Mirror Holofoil)",
+    "supertype": "Pokémon",
+    "number": "023/080",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608480_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608480_400w.jpg"
+    },
+    "tcgplayerId": "608480"
+  },
+  {
+    "id": "jp-l3-clash-at-the-summit-008/080",
+    "name": "Kricketot",
+    "supertype": "Pokémon",
+    "number": "008/080",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608384_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608384_400w.jpg"
+    },
+    "tcgplayerId": "608384"
+  },
+  {
+    "id": "jp-l3-clash-at-the-summit-016/080",
+    "name": "Golduck",
+    "supertype": "Pokémon",
+    "number": "016/080",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608392_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608392_400w.jpg"
+    },
+    "tcgplayerId": "608392"
+  },
+  {
+    "id": "jp-l3-clash-at-the-summit-066/080",
+    "name": "Porygon2",
+    "supertype": "Pokémon",
+    "number": "066/080",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608442_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608442_400w.jpg"
+    },
+    "tcgplayerId": "608442"
+  },
+  {
+    "id": "jp-l3-clash-at-the-summit-023/080",
+    "name": "Wailord",
+    "supertype": "Pokémon",
+    "number": "023/080",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608399_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608399_400w.jpg"
+    },
+    "tcgplayerId": "608399"
+  },
+  {
+    "id": "jp-l3-clash-at-the-summit-047/080",
+    "name": "Marowak",
+    "supertype": "Pokémon",
+    "number": "047/080",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608423_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608423_400w.jpg"
+    },
+    "tcgplayerId": "608423"
+  },
+  {
+    "id": "jp-l3-clash-at-the-summit-011/080",
+    "name": "Rapidash",
+    "supertype": "Pokémon",
+    "number": "011/080",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608387_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608387_400w.jpg"
+    },
+    "tcgplayerId": "608387"
+  },
+  {
+    "id": "jp-l3-clash-at-the-summit-035/080",
+    "name": "Nidorino",
+    "supertype": "Pokémon",
+    "number": "035/080",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608411_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608411_400w.jpg"
+    },
+    "tcgplayerId": "608411"
+  },
+  {
+    "id": "jp-l3-clash-at-the-summit-017/080",
+    "name": "Tentacool",
+    "supertype": "Pokémon",
+    "number": "017/080",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608393_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608393_400w.jpg"
+    },
+    "tcgplayerId": "608393"
+  },
+  {
+    "id": "jp-l3-clash-at-the-summit-038/080",
+    "name": "Spoink",
+    "supertype": "Pokémon",
+    "number": "038/080",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608414_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608414_400w.jpg"
+    },
+    "tcgplayerId": "608414"
+  },
+  {
+    "id": "jp-l3-clash-at-the-summit-012/080",
+    "name": "Magby",
+    "supertype": "Pokémon",
+    "number": "012/080",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608388_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608388_400w.jpg"
+    },
+    "tcgplayerId": "608388"
+  },
+  {
+    "id": "jp-l3-clash-at-the-summit-009/080",
+    "name": "Kricketune",
+    "supertype": "Pokémon",
+    "number": "009/080",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608385_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608385_400w.jpg"
+    },
+    "tcgplayerId": "608385"
+  },
+  {
+    "id": "jp-l3-clash-at-the-summit-044/080",
+    "name": "Machamp - 044/080",
+    "supertype": "Pokémon",
+    "number": "044/080",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608420_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608420_400w.jpg"
+    },
+    "tcgplayerId": "608420"
+  },
+  {
+    "id": "jp-l3-clash-at-the-summit-068/080",
+    "name": "Aipom",
+    "supertype": "Pokémon",
+    "number": "068/080",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608444_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608444_400w.jpg"
+    },
+    "tcgplayerId": "608444"
+  },
+  {
+    "id": "jp-l3-clash-at-the-summit-034/080",
+    "name": "Nidoran M",
+    "supertype": "Pokémon",
+    "number": "034/080",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608410_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608410_400w.jpg"
+    },
+    "tcgplayerId": "608410"
+  },
+  {
+    "id": "jp-l3-clash-at-the-summit-065/080",
+    "name": "Porygon",
+    "supertype": "Pokémon",
+    "number": "065/080",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608441_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608441_400w.jpg"
+    },
+    "tcgplayerId": "608441"
+  },
+  {
+    "id": "jp-l3-clash-at-the-summit-063/080",
+    "name": "Kangaskhan",
+    "supertype": "Pokémon",
+    "number": "063/080",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608439_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608439_400w.jpg"
+    },
+    "tcgplayerId": "608439"
+  },
+  {
+    "id": "jp-l3-clash-at-the-summit-046/080",
+    "name": "Cubone",
+    "supertype": "Pokémon",
+    "number": "046/080",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608422_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608422_400w.jpg"
+    },
+    "tcgplayerId": "608422"
+  },
+  {
+    "id": "jp-l3-clash-at-the-summit-058/080",
+    "name": "Pidgey",
+    "supertype": "Pokémon",
+    "number": "058/080",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608434_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608434_400w.jpg"
+    },
+    "tcgplayerId": "608434"
+  },
+  {
+    "id": "jp-l3-clash-at-the-summit-059/080",
+    "name": "Pidgeotto",
+    "supertype": "Pokémon",
+    "number": "059/080",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608435_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608435_400w.jpg"
+    },
+    "tcgplayerId": "608435"
+  },
+  {
+    "id": "jp-l3-clash-at-the-summit-043/080",
+    "name": "Machoke",
+    "supertype": "Pokémon",
+    "number": "043/080",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608419_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608419_400w.jpg"
+    },
+    "tcgplayerId": "608419"
+  },
+  {
+    "id": "jp-l3-clash-at-the-summit-029/080",
+    "name": "Electabuzz",
+    "supertype": "Pokémon",
+    "number": "029/080",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608405_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608405_400w.jpg"
+    },
+    "tcgplayerId": "608405"
+  },
+  {
+    "id": "jp-l3-clash-at-the-summit-042/080",
+    "name": "Machop",
+    "supertype": "Pokémon",
+    "number": "042/080",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608418_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608418_400w.jpg"
+    },
+    "tcgplayerId": "608418"
+  },
+  {
+    "id": "jp-l3-clash-at-the-summit-051/080",
+    "name": "Sharpedo",
+    "supertype": "Pokémon",
+    "number": "051/080",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608427_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608427_400w.jpg"
+    },
+    "tcgplayerId": "608427"
+  },
+  {
+    "id": "jp-l3-clash-at-the-summit-077/080",
+    "name": "Black Belt",
+    "supertype": "Pokémon",
+    "number": "077/080",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608453_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608453_400w.jpg"
+    },
+    "tcgplayerId": "608453"
+  },
+  {
+    "id": "jp-l3-clash-at-the-summit-019/080",
+    "name": "Swinub",
+    "supertype": "Pokémon",
+    "number": "019/080",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608395_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608395_400w.jpg"
+    },
+    "tcgplayerId": "608395"
+  },
+  {
+    "id": "jp-l3-clash-at-the-summit-020/080",
+    "name": "Piloswine",
+    "supertype": "Pokémon",
+    "number": "020/080",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608396_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608396_400w.jpg"
+    },
+    "tcgplayerId": "608396"
+  },
+  {
+    "id": "jp-l3-clash-at-the-summit-062/080",
+    "name": "Lickilicky",
+    "supertype": "Pokémon",
+    "number": "062/080",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608438_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608438_400w.jpg"
+    },
+    "tcgplayerId": "608438"
+  },
+  {
+    "id": "jp-l3-clash-at-the-summit-002/080",
+    "name": "Weepinbell",
+    "supertype": "Pokémon",
+    "number": "002/080",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608378_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608378_400w.jpg"
+    },
+    "tcgplayerId": "608378"
+  },
+  {
+    "id": "jp-l3-clash-at-the-summit-021/080",
+    "name": "Mamoswine",
+    "supertype": "Pokémon",
+    "number": "021/080",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608397_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608397_400w.jpg"
+    },
+    "tcgplayerId": "608397"
+  },
+  {
+    "id": "jp-l3-clash-at-the-summit-056/080",
+    "name": "Bronzor",
+    "supertype": "Pokémon",
+    "number": "056/080",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608432_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608432_400w.jpg"
+    },
+    "tcgplayerId": "608432"
+  }
+]

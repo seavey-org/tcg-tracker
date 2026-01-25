@@ -1,0 +1,434 @@
+[
+  {
+    "id": "jp-bw6-cold-flare-062/059",
+    "name": "White Kyurem EX - 062/059",
+    "supertype": "Pokémon",
+    "number": "062/059",
+    "rarity": "Super Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601655_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601655_400w.jpg"
+    },
+    "tcgplayerId": "601655"
+  },
+  {
+    "id": "jp-bw6-cold-flare-061/059",
+    "name": "Keldeo EX - 061/059",
+    "supertype": "Pokémon",
+    "number": "061/059",
+    "rarity": "Super Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601654_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601654_400w.jpg"
+    },
+    "tcgplayerId": "601654"
+  },
+  {
+    "id": "jp-bw6-cold-flare-012/059",
+    "name": "Squirtle",
+    "supertype": "Pokémon",
+    "number": "012/059",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601631_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601631_400w.jpg"
+    },
+    "tcgplayerId": "601631"
+  },
+  {
+    "id": "jp-bw6-cold-flare-040/059",
+    "name": "Skarmory",
+    "supertype": "Pokémon",
+    "number": "040/059",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601629_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601629_400w.jpg"
+    },
+    "tcgplayerId": "601629"
+  },
+  {
+    "id": "jp-bw6-cold-flare-004/059",
+    "name": "Celebi EX - 004/059",
+    "supertype": "Pokémon",
+    "number": "004/059",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601640_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601640_400w.jpg"
+    },
+    "tcgplayerId": "601640"
+  },
+  {
+    "id": "jp-bw6-cold-flare-039/059",
+    "name": "Scizor",
+    "supertype": "Pokémon",
+    "number": "039/059",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601648_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601648_400w.jpg"
+    },
+    "tcgplayerId": "601648"
+  },
+  {
+    "id": "jp-bw6-cold-flare-041/059",
+    "name": "White Kyurem EX - 041/059",
+    "supertype": "Pokémon",
+    "number": "041/059",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601651_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601651_400w.jpg"
+    },
+    "tcgplayerId": "601651"
+  },
+  {
+    "id": "jp-bw6-cold-flare-015/059",
+    "name": "Psyduck",
+    "supertype": "Pokémon",
+    "number": "015/059",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601624_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601624_400w.jpg"
+    },
+    "tcgplayerId": "601624"
+  },
+  {
+    "id": "jp-bw6-cold-flare-042/059",
+    "name": "Ditto",
+    "supertype": "Pokémon",
+    "number": "042/059",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601644_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601644_400w.jpg"
+    },
+    "tcgplayerId": "601644"
+  },
+  {
+    "id": "jp-bw6-cold-flare-038/059",
+    "name": "Crustle",
+    "supertype": "Pokémon",
+    "number": "038/059",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601642_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601642_400w.jpg"
+    },
+    "tcgplayerId": "601642"
+  },
+  {
+    "id": "jp-bw6-cold-flare-019/059",
+    "name": "Keldeo EX - 019/059",
+    "supertype": "Pokémon",
+    "number": "019/059",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601647_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601647_400w.jpg"
+    },
+    "tcgplayerId": "601647"
+  },
+  {
+    "id": "jp-bw6-cold-flare-031/059",
+    "name": "Sandshrew",
+    "supertype": "Pokémon",
+    "number": "031/059",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601625_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601625_400w.jpg"
+    },
+    "tcgplayerId": "601625"
+  },
+  {
+    "id": "jp-bw6-cold-flare-026/059",
+    "name": "Dusknoir",
+    "supertype": "Pokémon",
+    "number": "026/059",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601645_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601645_400w.jpg"
+    },
+    "tcgplayerId": "601645"
+  },
+  {
+    "id": "jp-bw6-cold-flare-060/059",
+    "name": "Celebi EX - 060/059",
+    "supertype": "Pokémon",
+    "number": "060/059",
+    "rarity": "Super Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601653_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601653_400w.jpg"
+    },
+    "tcgplayerId": "601653"
+  },
+  {
+    "id": "jp-bw6-cold-flare-014/059",
+    "name": "Blastoise",
+    "supertype": "Pokémon",
+    "number": "014/059",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601639_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601639_400w.jpg"
+    },
+    "tcgplayerId": "601639"
+  },
+  {
+    "id": "jp-bw6-cold-flare-002/059",
+    "name": "Tangrowth",
+    "supertype": "Pokémon",
+    "number": "002/059",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601650_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601650_400w.jpg"
+    },
+    "tcgplayerId": "601650"
+  },
+  {
+    "id": "jp-bw6-cold-flare-047/059",
+    "name": "Skitty",
+    "supertype": "Pokémon",
+    "number": "047/059",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601630_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601630_400w.jpg"
+    },
+    "tcgplayerId": "601630"
+  },
+  {
+    "id": "jp-bw6-cold-flare-018/059",
+    "name": "Swanna",
+    "supertype": "Pokémon",
+    "number": "018/059",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601673_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601673_400w.jpg"
+    },
+    "tcgplayerId": "601673"
+  },
+  {
+    "id": "jp-bw6-cold-flare-008/059",
+    "name": "Petilil",
+    "supertype": "Pokémon",
+    "number": "008/059",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601623_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601623_400w.jpg"
+    },
+    "tcgplayerId": "601623"
+  },
+  {
+    "id": "jp-bw6-cold-flare-048/059",
+    "name": "Delcatty",
+    "supertype": "Pokémon",
+    "number": "048/059",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601662_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601662_400w.jpg"
+    },
+    "tcgplayerId": "601662"
+  },
+  {
+    "id": "jp-bw6-cold-flare-013/059",
+    "name": "Wartortle",
+    "supertype": "Pokémon",
+    "number": "013/059",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601635_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601635_400w.jpg"
+    },
+    "tcgplayerId": "601635"
+  },
+  {
+    "id": "jp-bw6-cold-flare-022/059",
+    "name": "Joltik",
+    "supertype": "Pokémon",
+    "number": "022/059",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601618_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601618_400w.jpg"
+    },
+    "tcgplayerId": "601618"
+  },
+  {
+    "id": "jp-bw6-cold-flare-010/059",
+    "name": "Numel",
+    "supertype": "Pokémon",
+    "number": "010/059",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601621_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601621_400w.jpg"
+    },
+    "tcgplayerId": "601621"
+  },
+  {
+    "id": "jp-bw6-cold-flare-024/059",
+    "name": "Duskull",
+    "supertype": "Pokémon",
+    "number": "024/059",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601614_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601614_400w.jpg"
+    },
+    "tcgplayerId": "601614"
+  },
+  {
+    "id": "jp-bw6-cold-flare-003/059",
+    "name": "Scyther",
+    "supertype": "Pokémon",
+    "number": "003/059",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601627_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601627_400w.jpg"
+    },
+    "tcgplayerId": "601627"
+  },
+  {
+    "id": "jp-bw6-cold-flare-007/059",
+    "name": "Leavanny",
+    "supertype": "Pokémon",
+    "number": "007/059",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601669_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601669_400w.jpg"
+    },
+    "tcgplayerId": "601669"
+  },
+  {
+    "id": "jp-bw6-cold-flare-034/059",
+    "name": "Timburr",
+    "supertype": "Pokémon",
+    "number": "034/059",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601634_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601634_400w.jpg"
+    },
+    "tcgplayerId": "601634"
+  },
+  {
+    "id": "jp-bw6-cold-flare-009/059",
+    "name": "Lilligant",
+    "supertype": "Pokémon",
+    "number": "009/059",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601670_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601670_400w.jpg"
+    },
+    "tcgplayerId": "601670"
+  },
+  {
+    "id": "jp-bw6-cold-flare-046/059",
+    "name": "Exploud",
+    "supertype": "Pokémon",
+    "number": "046/059",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601665_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601665_400w.jpg"
+    },
+    "tcgplayerId": "601665"
+  },
+  {
+    "id": "jp-bw6-cold-flare-037/059",
+    "name": "Dwebble",
+    "supertype": "Pokémon",
+    "number": "037/059",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601615_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601615_400w.jpg"
+    },
+    "tcgplayerId": "601615"
+  },
+  {
+    "id": "jp-bw6-cold-flare-053/059",
+    "name": "Stoutland",
+    "supertype": "Pokémon",
+    "number": "053/059",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601649_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601649_400w.jpg"
+    },
+    "tcgplayerId": "601649"
+  },
+  {
+    "id": "jp-bw6-cold-flare-056/059",
+    "name": "Skyla",
+    "supertype": "Pokémon",
+    "number": "056/059",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601671_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601671_400w.jpg"
+    },
+    "tcgplayerId": "601671"
+  },
+  {
+    "id": "jp-bw6-cold-flare-049/059",
+    "name": "Patrat",
+    "supertype": "Pokémon",
+    "number": "049/059",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601622_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601622_400w.jpg"
+    },
+    "tcgplayerId": "601622"
+  },
+  {
+    "id": "jp-bw6-cold-flare-017/059",
+    "name": "Ducklett",
+    "supertype": "Pokémon",
+    "number": "017/059",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601612_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601612_400w.jpg"
+    },
+    "tcgplayerId": "601612"
+  },
+  {
+    "id": "jp-bw6-cold-flare-006/059",
+    "name": "Swadloon",
+    "supertype": "Pokémon",
+    "number": "006/059",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601632_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601632_400w.jpg"
+    },
+    "tcgplayerId": "601632"
+  },
+  {
+    "id": "jp-bw6-cold-flare-032/059",
+    "name": "Sandslash",
+    "supertype": "Pokémon",
+    "number": "032/059",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601626_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601626_400w.jpg"
+    },
+    "tcgplayerId": "601626"
+  }
+]

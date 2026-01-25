@@ -1,0 +1,470 @@
+[
+  {
+    "id": "jp-bw8-thunder-knuckle-053/051",
+    "name": "Latias EX - 053/051",
+    "supertype": "Pokémon",
+    "number": "053/051",
+    "rarity": "Super Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/602296_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/602296_400w.jpg"
+    },
+    "tcgplayerId": "602296"
+  },
+  {
+    "id": "jp-bw8-thunder-knuckle-055/051",
+    "name": "Professor Juniper",
+    "supertype": "Trainer",
+    "number": "055/051",
+    "rarity": "Super Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/602297_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/602297_400w.jpg"
+    },
+    "tcgplayerId": "602297"
+  },
+  {
+    "id": "jp-bw8-thunder-knuckle-052/051",
+    "name": "Thundurus EX (Team Plasma) - 052/051",
+    "supertype": "Pokémon",
+    "number": "052/051",
+    "rarity": "Super Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/602298_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/602298_400w.jpg"
+    },
+    "tcgplayerId": "602298"
+  },
+  {
+    "id": "jp-bw8-thunder-knuckle-031/051",
+    "name": "Umbreon (Team Plasma)",
+    "supertype": "Pokémon",
+    "number": "031/051",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/602295_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/602295_400w.jpg"
+    },
+    "tcgplayerId": "602295"
+  },
+  {
+    "id": "jp-bw8-thunder-knuckle-054/051",
+    "name": "Tornadus EX (Team Plasma) - 054/051",
+    "supertype": "Pokémon",
+    "number": "054/051",
+    "rarity": "Super Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/602299_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/602299_400w.jpg"
+    },
+    "tcgplayerId": "602299"
+  },
+  {
+    "id": "jp-bw8-thunder-knuckle-040/051",
+    "name": "Dragonite",
+    "supertype": "Pokémon",
+    "number": "040/051",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/602285_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/602285_400w.jpg"
+    },
+    "tcgplayerId": "602285"
+  },
+  {
+    "id": "jp-bw8-thunder-knuckle-041/051",
+    "name": "Latias EX - 041/051",
+    "supertype": "Pokémon",
+    "number": "041/051",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/602289_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/602289_400w.jpg"
+    },
+    "tcgplayerId": "602289"
+  },
+  {
+    "id": "jp-bw8-thunder-knuckle-007/051",
+    "name": "Flareon (Team Plasma)",
+    "supertype": "Pokémon",
+    "number": "007/051",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/602307_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/602307_400w.jpg"
+    },
+    "tcgplayerId": "602307"
+  },
+  {
+    "id": "jp-bw8-thunder-knuckle-009/051",
+    "name": "Vaporeon (Team Plasma)",
+    "supertype": "Pokémon",
+    "number": "009/051",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/602318_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/602318_400w.jpg"
+    },
+    "tcgplayerId": "602318"
+  },
+  {
+    "id": "jp-bw8-thunder-knuckle-010/051",
+    "name": "Wooper",
+    "supertype": "Pokémon",
+    "number": "010/051",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/602283_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/602283_400w.jpg"
+    },
+    "tcgplayerId": "602283"
+  },
+  {
+    "id": "jp-bw8-thunder-knuckle-016/051",
+    "name": "Kyurem (Team Plasma)",
+    "supertype": "Pokémon",
+    "number": "016/051",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/602288_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/602288_400w.jpg"
+    },
+    "tcgplayerId": "602288"
+  },
+  {
+    "id": "jp-bw8-thunder-knuckle-020/051",
+    "name": "Thundurus EX (Team Plasma) - 020/051",
+    "supertype": "Pokémon",
+    "number": "020/051",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/602293_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/602293_400w.jpg"
+    },
+    "tcgplayerId": "602293"
+  },
+  {
+    "id": "jp-bw8-thunder-knuckle-042/051",
+    "name": "Eevee",
+    "supertype": "Pokémon",
+    "number": "042/051",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/602266_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/602266_400w.jpg"
+    },
+    "tcgplayerId": "602266"
+  },
+  {
+    "id": "jp-bw8-thunder-knuckle-008/051",
+    "name": "Reshiram",
+    "supertype": "Pokémon",
+    "number": "008/051",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/602292_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/602292_400w.jpg"
+    },
+    "tcgplayerId": "602292"
+  },
+  {
+    "id": "jp-bw8-thunder-knuckle-046/051",
+    "name": "Tornadus EX (Team Plasma) - 046/051",
+    "supertype": "Pokémon",
+    "number": "046/051",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/602294_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/602294_400w.jpg"
+    },
+    "tcgplayerId": "602294"
+  },
+  {
+    "id": "jp-bw8-thunder-knuckle-027/051",
+    "name": "Metagross (Team Plasma)",
+    "supertype": "Pokémon",
+    "number": "027/051",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/602291_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/602291_400w.jpg"
+    },
+    "tcgplayerId": "602291"
+  },
+  {
+    "id": "jp-bw8-thunder-knuckle-001/051",
+    "name": "Weedle",
+    "supertype": "Pokémon",
+    "number": "001/051",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/602282_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/602282_400w.jpg"
+    },
+    "tcgplayerId": "602282"
+  },
+  {
+    "id": "jp-bw8-thunder-knuckle-034/051",
+    "name": "Deino",
+    "supertype": "Pokémon",
+    "number": "034/051",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/602263_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/602263_400w.jpg"
+    },
+    "tcgplayerId": "602263"
+  },
+  {
+    "id": "jp-bw8-thunder-knuckle-003/051",
+    "name": "Beedrill",
+    "supertype": "Pokémon",
+    "number": "003/051",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/602303_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/602303_400w.jpg"
+    },
+    "tcgplayerId": "602303"
+  },
+  {
+    "id": "jp-bw8-thunder-knuckle-039/051",
+    "name": "Dragonair",
+    "supertype": "Pokémon",
+    "number": "039/051",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/602264_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/602264_400w.jpg"
+    },
+    "tcgplayerId": "602264"
+  },
+  {
+    "id": "jp-bw8-thunder-knuckle-028/051",
+    "name": "Nidoking",
+    "supertype": "Pokémon",
+    "number": "028/051",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/602311_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/602311_400w.jpg"
+    },
+    "tcgplayerId": "602311"
+  },
+  {
+    "id": "jp-bw8-thunder-knuckle-033/051",
+    "name": "Bisharp (Team Plasma)",
+    "supertype": "Pokémon",
+    "number": "033/051",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/602304_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/602304_400w.jpg"
+    },
+    "tcgplayerId": "602304"
+  },
+  {
+    "id": "jp-bw8-thunder-knuckle-017/051",
+    "name": "Voltorb",
+    "supertype": "Pokémon",
+    "number": "017/051",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/602281_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/602281_400w.jpg"
+    },
+    "tcgplayerId": "602281"
+  },
+  {
+    "id": "jp-bw8-thunder-knuckle-023/051",
+    "name": "Grimer",
+    "supertype": "Pokémon",
+    "number": "023/051",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/602267_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/602267_400w.jpg"
+    },
+    "tcgplayerId": "602267"
+  },
+  {
+    "id": "jp-bw8-thunder-knuckle-006/051",
+    "name": "Leafeon (Team Plasma)",
+    "supertype": "Pokémon",
+    "number": "006/051",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/602309_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/602309_400w.jpg"
+    },
+    "tcgplayerId": "602309"
+  },
+  {
+    "id": "jp-bw8-thunder-knuckle-043/051",
+    "name": "Starly",
+    "supertype": "Pokémon",
+    "number": "043/051",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/602278_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/602278_400w.jpg"
+    },
+    "tcgplayerId": "602278"
+  },
+  {
+    "id": "jp-bw8-thunder-knuckle-024/051",
+    "name": "Muk (Team Plasma)",
+    "supertype": "Pokémon",
+    "number": "024/051",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/602310_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/602310_400w.jpg"
+    },
+    "tcgplayerId": "602310"
+  },
+  {
+    "id": "jp-bw8-thunder-knuckle-044/051",
+    "name": "Staravia",
+    "supertype": "Pokémon",
+    "number": "044/051",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/602277_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/602277_400w.jpg"
+    },
+    "tcgplayerId": "602277"
+  },
+  {
+    "id": "jp-bw8-thunder-knuckle-045/051",
+    "name": "Staraptor",
+    "supertype": "Pokémon",
+    "number": "045/051",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/602315_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/602315_400w.jpg"
+    },
+    "tcgplayerId": "602315"
+  },
+  {
+    "id": "jp-bw8-thunder-knuckle-021/051",
+    "name": "NidoranM",
+    "supertype": "Pokémon",
+    "number": "021/051",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/602273_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/602273_400w.jpg"
+    },
+    "tcgplayerId": "602273"
+  },
+  {
+    "id": "jp-bw8-thunder-knuckle-022/051",
+    "name": "Nidorino",
+    "supertype": "Pokémon",
+    "number": "022/051",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/602274_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/602274_400w.jpg"
+    },
+    "tcgplayerId": "602274"
+  },
+  {
+    "id": "jp-bw8-thunder-knuckle-011/051",
+    "name": "Quagsire",
+    "supertype": "Pokémon",
+    "number": "011/051",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/602313_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/602313_400w.jpg"
+    },
+    "tcgplayerId": "602313"
+  },
+  {
+    "id": "jp-bw8-thunder-knuckle-030/051",
+    "name": "Hariyama",
+    "supertype": "Pokémon",
+    "number": "030/051",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/602268_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/602268_400w.jpg"
+    },
+    "tcgplayerId": "602268"
+  },
+  {
+    "id": "jp-bw8-thunder-knuckle-025/051",
+    "name": "Beldum",
+    "supertype": "Pokémon",
+    "number": "025/051",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/602261_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/602261_400w.jpg"
+    },
+    "tcgplayerId": "602261"
+  },
+  {
+    "id": "jp-bw8-thunder-knuckle-018/051",
+    "name": "Electrode",
+    "supertype": "Pokémon",
+    "number": "018/051",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/602286_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/602286_400w.jpg"
+    },
+    "tcgplayerId": "602286"
+  },
+  {
+    "id": "jp-bw8-thunder-knuckle-015/051",
+    "name": "Cryogonal (Team Plasma)",
+    "supertype": "Pokémon",
+    "number": "015/051",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/602306_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/602306_400w.jpg"
+    },
+    "tcgplayerId": "602306"
+  },
+  {
+    "id": "jp-bw8-thunder-knuckle-051/051",
+    "name": "Plasma Energy",
+    "supertype": "Energy",
+    "number": "051/051",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/602312_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/602312_400w.jpg"
+    },
+    "tcgplayerId": "602312"
+  },
+  {
+    "id": "jp-bw8-thunder-knuckle-014/051",
+    "name": "Vanilluxe (Team Plasma)",
+    "supertype": "Pokémon",
+    "number": "014/051",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/602317_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/602317_400w.jpg"
+    },
+    "tcgplayerId": "602317"
+  },
+  {
+    "id": "jp-bw8-thunder-knuckle-002/051",
+    "name": "Kakuna",
+    "supertype": "Pokémon",
+    "number": "002/051",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/602269_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/602269_400w.jpg"
+    },
+    "tcgplayerId": "602269"
+  }
+]

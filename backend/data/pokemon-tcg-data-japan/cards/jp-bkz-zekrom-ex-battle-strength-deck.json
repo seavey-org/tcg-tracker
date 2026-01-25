@@ -1,0 +1,134 @@
+[
+  {
+    "id": "jp-bkz-zekrom-ex-battle-strength-deck-009/018",
+    "name": "Zekrom EX",
+    "supertype": "Pokémon",
+    "number": "009/018",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/604709_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/604709_400w.jpg"
+    },
+    "tcgplayerId": "604709"
+  },
+  {
+    "id": "jp-bkz-zekrom-ex-battle-strength-deck-010/018",
+    "name": "Eevee",
+    "supertype": "Pokémon",
+    "number": "010/018",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/604710_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/604710_400w.jpg"
+    },
+    "tcgplayerId": "604710"
+  },
+  {
+    "id": "jp-bkz-zekrom-ex-battle-strength-deck-002/018",
+    "name": "Leafeon",
+    "supertype": "Pokémon",
+    "number": "002/018",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/604702_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/604702_400w.jpg"
+    },
+    "tcgplayerId": "604702"
+  },
+  {
+    "id": "jp-bkz-zekrom-ex-battle-strength-deck-005/018",
+    "name": "Shinx",
+    "supertype": "Pokémon",
+    "number": "005/018",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/604704_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/604704_400w.jpg"
+    },
+    "tcgplayerId": "604704"
+  },
+  {
+    "id": "jp-bkz-zekrom-ex-battle-strength-deck-001/018",
+    "name": "Scyther",
+    "supertype": "Pokémon",
+    "number": "001/018",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/604701_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/604701_400w.jpg"
+    },
+    "tcgplayerId": "604701"
+  },
+  {
+    "id": "jp-bkz-zekrom-ex-battle-strength-deck-007/018",
+    "name": "Emolga",
+    "supertype": "Pokémon",
+    "number": "007/018",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/604707_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/604707_400w.jpg"
+    },
+    "tcgplayerId": "604707"
+  },
+  {
+    "id": "jp-bkz-zekrom-ex-battle-strength-deck-006/018",
+    "name": "Luxio",
+    "supertype": "Pokémon",
+    "number": "006/018",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/604706_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/604706_400w.jpg"
+    },
+    "tcgplayerId": "604706"
+  },
+  {
+    "id": "jp-bkz-zekrom-ex-battle-strength-deck-016/018",
+    "name": "N",
+    "supertype": "Pokémon",
+    "number": "016/018",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/604700_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/604700_400w.jpg"
+    },
+    "tcgplayerId": "604700"
+  },
+  {
+    "id": "jp-bkz-zekrom-ex-battle-strength-deck-017/018",
+    "name": "Cheren",
+    "supertype": "Pokémon",
+    "number": "017/018",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/604699_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/604699_400w.jpg"
+    },
+    "tcgplayerId": "604699"
+  },
+  {
+    "id": "jp-bkz-zekrom-ex-battle-strength-deck-004/018",
+    "name": "Crustle",
+    "supertype": "Pokémon",
+    "number": "004/018",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/604705_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/604705_400w.jpg"
+    },
+    "tcgplayerId": "604705"
+  },
+  {
+    "id": "jp-bkz-zekrom-ex-battle-strength-deck-003/018",
+    "name": "Dwebble",
+    "supertype": "Pokémon",
+    "number": "003/018",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/604703_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/604703_400w.jpg"
+    },
+    "tcgplayerId": "604703"
+  }
+]

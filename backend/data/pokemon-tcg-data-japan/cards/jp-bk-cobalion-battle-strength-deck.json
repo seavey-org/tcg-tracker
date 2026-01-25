@@ -1,0 +1,62 @@
+[
+  {
+    "id": "jp-bk-cobalion-battle-strength-deck-001/014",
+    "name": "Zorua",
+    "supertype": "Pokémon",
+    "number": "001/014",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/605003_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/605003_400w.jpg"
+    },
+    "tcgplayerId": "605003"
+  },
+  {
+    "id": "jp-bk-cobalion-battle-strength-deck-002/014",
+    "name": "Zoroark",
+    "supertype": "Pokémon",
+    "number": "002/014",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/605004_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/605004_400w.jpg"
+    },
+    "tcgplayerId": "605004"
+  },
+  {
+    "id": "jp-bk-cobalion-battle-strength-deck-014/014",
+    "name": "Bianca",
+    "supertype": "Pokémon",
+    "number": "014/014",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/605002_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/605002_400w.jpg"
+    },
+    "tcgplayerId": "605002"
+  },
+  {
+    "id": "jp-bk-cobalion-battle-strength-deck-013/014",
+    "name": "Cobalion",
+    "supertype": "Pokémon",
+    "number": "013/014",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/605001_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/605001_400w.jpg"
+    },
+    "tcgplayerId": "605001"
+  },
+  {
+    "id": "jp-bk-cobalion-battle-strength-deck-006/014",
+    "name": "Lillipup",
+    "supertype": "Pokémon",
+    "number": "006/014",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/605008_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/605008_400w.jpg"
+    },
+    "tcgplayerId": "605008"
+  }
+]

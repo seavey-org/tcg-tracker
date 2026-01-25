@@ -1,0 +1,86 @@
+[
+  {
+    "id": "jp-smp1-rockruff-full-power-deck-013/013",
+    "name": "Bewear",
+    "supertype": "Pokémon",
+    "number": "013/013",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/597539_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/597539_400w.jpg"
+    },
+    "tcgplayerId": "597539"
+  },
+  {
+    "id": "jp-smp1-rockruff-full-power-deck-001/013",
+    "name": "Litten",
+    "supertype": "Pokémon",
+    "number": "001/013",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/597529_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/597529_400w.jpg"
+    },
+    "tcgplayerId": "597529"
+  },
+  {
+    "id": "jp-smp1-rockruff-full-power-deck-010/013",
+    "name": "Rayquaza",
+    "supertype": "Pokémon",
+    "number": "010/013",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/597531_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/597531_400w.jpg"
+    },
+    "tcgplayerId": "597531"
+  },
+  {
+    "id": "jp-smp1-rockruff-full-power-deck-004/013",
+    "name": "Sharpedo",
+    "supertype": "Pokémon",
+    "number": "004/013",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/597534_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/597534_400w.jpg"
+    },
+    "tcgplayerId": "597534"
+  },
+  {
+    "id": "jp-smp1-rockruff-full-power-deck-012/013",
+    "name": "Stufful",
+    "supertype": "Pokémon",
+    "number": "012/013",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/597538_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/597538_400w.jpg"
+    },
+    "tcgplayerId": "597538"
+  },
+  {
+    "id": "jp-smp1-rockruff-full-power-deck-009/013",
+    "name": "Lycanroc GX",
+    "supertype": "Pokémon",
+    "number": "009/013",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/597528_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/597528_400w.jpg"
+    },
+    "tcgplayerId": "597528"
+  },
+  {
+    "id": "jp-smp1-rockruff-full-power-deck-002/013",
+    "name": "Turtonator",
+    "supertype": "Pokémon",
+    "number": "002/013",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/597532_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/597532_400w.jpg"
+    },
+    "tcgplayerId": "597532"
+  }
+]

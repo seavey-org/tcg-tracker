@@ -1,0 +1,722 @@
+[
+  {
+    "id": "jp-sm7a-thunderclap-spark-thunderclap-spark-booster-box",
+    "name": "Thunderclap Spark Booster Box",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/576940_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/576940_400w.jpg"
+    },
+    "tcgplayerId": "576940"
+  },
+  {
+    "id": "jp-sm7a-thunderclap-spark-thunderclap-spark-booster-pack",
+    "name": "Thunderclap Spark Booster Pack",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/576932_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/576932_400w.jpg"
+    },
+    "tcgplayerId": "576932"
+  },
+  {
+    "id": "jp-sm7a-thunderclap-spark-069/060",
+    "name": "Zeraora GX - 069/060",
+    "supertype": "Pokémon",
+    "number": "069/060",
+    "rarity": "Hyper Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/572529_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/572529_400w.jpg"
+    },
+    "tcgplayerId": "572529"
+  },
+  {
+    "id": "jp-sm7a-thunderclap-spark-070/060",
+    "name": "Genesect GX - 070/060",
+    "supertype": "Pokémon",
+    "number": "070/060",
+    "rarity": "Hyper Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/572530_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/572530_400w.jpg"
+    },
+    "tcgplayerId": "572530"
+  },
+  {
+    "id": "jp-sm7a-thunderclap-spark-067/060",
+    "name": "Virizion GX - 067/060",
+    "supertype": "Pokémon",
+    "number": "067/060",
+    "rarity": "Hyper Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/572527_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/572527_400w.jpg"
+    },
+    "tcgplayerId": "572527"
+  },
+  {
+    "id": "jp-sm7a-thunderclap-spark-068/060",
+    "name": "Magcargo GX - 068/060",
+    "supertype": "Pokémon",
+    "number": "068/060",
+    "rarity": "Hyper Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/572528_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/572528_400w.jpg"
+    },
+    "tcgplayerId": "572528"
+  },
+  {
+    "id": "jp-sm7a-thunderclap-spark-043/060",
+    "name": "Ditto Prism Star",
+    "supertype": "Pokémon",
+    "number": "043/060",
+    "rarity": "Prism Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/572503_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/572503_400w.jpg"
+    },
+    "tcgplayerId": "572503"
+  },
+  {
+    "id": "jp-sm7a-thunderclap-spark-064/060",
+    "name": "Genesect GX - 064/060",
+    "supertype": "Pokémon",
+    "number": "064/060",
+    "rarity": "Super Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/572524_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/572524_400w.jpg"
+    },
+    "tcgplayerId": "572524"
+  },
+  {
+    "id": "jp-sm7a-thunderclap-spark-066/060",
+    "name": "Judge - 066/060",
+    "supertype": "Pokémon",
+    "number": "066/060",
+    "rarity": "Super Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/572526_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/572526_400w.jpg"
+    },
+    "tcgplayerId": "572526"
+  },
+  {
+    "id": "jp-sm7a-thunderclap-spark-063/060",
+    "name": "Zeraora GX - 063/060",
+    "supertype": "Pokémon",
+    "number": "063/060",
+    "rarity": "Super Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/572523_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/572523_400w.jpg"
+    },
+    "tcgplayerId": "572523"
+  },
+  {
+    "id": "jp-sm7a-thunderclap-spark-062/060",
+    "name": "Magcargo GX - 062/060",
+    "supertype": "Pokémon",
+    "number": "062/060",
+    "rarity": "Super Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/572522_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/572522_400w.jpg"
+    },
+    "tcgplayerId": "572522"
+  },
+  {
+    "id": "jp-sm7a-thunderclap-spark-017/060",
+    "name": "Lapras",
+    "supertype": "Pokémon",
+    "number": "017/060",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/572477_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/572477_400w.jpg"
+    },
+    "tcgplayerId": "572477"
+  },
+  {
+    "id": "jp-sm7a-thunderclap-spark-034/060",
+    "name": "Onix",
+    "supertype": "Pokémon",
+    "number": "034/060",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/572494_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/572494_400w.jpg"
+    },
+    "tcgplayerId": "572494"
+  },
+  {
+    "id": "jp-sm7a-thunderclap-spark-018/060",
+    "name": "Suicune",
+    "supertype": "Pokémon",
+    "number": "018/060",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/572478_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/572478_400w.jpg"
+    },
+    "tcgplayerId": "572478"
+  },
+  {
+    "id": "jp-sm7a-thunderclap-spark-028/060",
+    "name": "Pachirisu",
+    "supertype": "Pokémon",
+    "number": "028/060",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/572488_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/572488_400w.jpg"
+    },
+    "tcgplayerId": "572488"
+  },
+  {
+    "id": "jp-sm7a-thunderclap-spark-041/060",
+    "name": "Genesect GX - 041/060",
+    "supertype": "Pokémon",
+    "number": "041/060",
+    "rarity": "Double Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/572501_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/572501_400w.jpg"
+    },
+    "tcgplayerId": "572501"
+  },
+  {
+    "id": "jp-sm7a-thunderclap-spark-033/060",
+    "name": "Zeraora GX - 033/060",
+    "supertype": "Pokémon",
+    "number": "033/060",
+    "rarity": "Double Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/572493_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/572493_400w.jpg"
+    },
+    "tcgplayerId": "572493"
+  },
+  {
+    "id": "jp-sm7a-thunderclap-spark-012/060",
+    "name": "Magcargo GX - 012/060",
+    "supertype": "Pokémon",
+    "number": "012/060",
+    "rarity": "Double Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/572472_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/572472_400w.jpg"
+    },
+    "tcgplayerId": "572472"
+  },
+  {
+    "id": "jp-sm7a-thunderclap-spark-006/060",
+    "name": "Virizion GX - 006/060",
+    "supertype": "Pokémon",
+    "number": "006/060",
+    "rarity": "Double Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/572466_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/572466_400w.jpg"
+    },
+    "tcgplayerId": "572466"
+  },
+  {
+    "id": "jp-sm7a-thunderclap-spark-005/060",
+    "name": "Dustox",
+    "supertype": "Pokémon",
+    "number": "005/060",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/572465_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/572465_400w.jpg"
+    },
+    "tcgplayerId": "572465"
+  },
+  {
+    "id": "jp-sm7a-thunderclap-spark-057/060",
+    "name": "Judge - 057/060",
+    "supertype": "Pokémon",
+    "number": "057/060",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/572517_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/572517_400w.jpg"
+    },
+    "tcgplayerId": "572517"
+  },
+  {
+    "id": "jp-sm7a-thunderclap-spark-024/060",
+    "name": "Primarina",
+    "supertype": "Pokémon",
+    "number": "024/060",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/572484_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/572484_400w.jpg"
+    },
+    "tcgplayerId": "572484"
+  },
+  {
+    "id": "jp-sm7a-thunderclap-spark-040/060",
+    "name": "Cobalion",
+    "supertype": "Pokémon",
+    "number": "040/060",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/572500_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/572500_400w.jpg"
+    },
+    "tcgplayerId": "572500"
+  },
+  {
+    "id": "jp-sm7a-thunderclap-spark-037/060",
+    "name": "Steelix",
+    "supertype": "Pokémon",
+    "number": "037/060",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/572497_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/572497_400w.jpg"
+    },
+    "tcgplayerId": "572497"
+  },
+  {
+    "id": "jp-sm7a-thunderclap-spark-021/060",
+    "name": "White Kyurem",
+    "supertype": "Pokémon",
+    "number": "021/060",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/572481_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/572481_400w.jpg"
+    },
+    "tcgplayerId": "572481"
+  },
+  {
+    "id": "jp-sm7a-thunderclap-spark-032/060",
+    "name": "Tapu Koko",
+    "supertype": "Pokémon",
+    "number": "032/060",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/572492_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/572492_400w.jpg"
+    },
+    "tcgplayerId": "572492"
+  },
+  {
+    "id": "jp-sm7a-thunderclap-spark-044/060",
+    "name": "Kecleon",
+    "supertype": "Pokémon",
+    "number": "044/060",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/572504_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/572504_400w.jpg"
+    },
+    "tcgplayerId": "572504"
+  },
+  {
+    "id": "jp-sm7a-thunderclap-spark-056/060",
+    "name": "Sightseer",
+    "supertype": "Pokémon",
+    "number": "056/060",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/572516_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/572516_400w.jpg"
+    },
+    "tcgplayerId": "572516"
+  },
+  {
+    "id": "jp-sm7a-thunderclap-spark-014/060",
+    "name": "Victini",
+    "supertype": "Pokémon",
+    "number": "014/060",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/572474_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/572474_400w.jpg"
+    },
+    "tcgplayerId": "572474"
+  },
+  {
+    "id": "jp-sm7a-thunderclap-spark-010/060",
+    "name": "Moltres",
+    "supertype": "Pokémon",
+    "number": "010/060",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/572470_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/572470_400w.jpg"
+    },
+    "tcgplayerId": "572470"
+  },
+  {
+    "id": "jp-sm7a-thunderclap-spark-045/060",
+    "name": "Energy Switch",
+    "supertype": "Energy",
+    "number": "045/060",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/572505_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/572505_400w.jpg"
+    },
+    "tcgplayerId": "572505"
+  },
+  {
+    "id": "jp-sm7a-thunderclap-spark-052/060",
+    "name": "Mixed Herbs",
+    "supertype": "Pokémon",
+    "number": "052/060",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/572512_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/572512_400w.jpg"
+    },
+    "tcgplayerId": "572512"
+  },
+  {
+    "id": "jp-sm7a-thunderclap-spark-036/060",
+    "name": "Alolan Dugtrio",
+    "supertype": "Pokémon",
+    "number": "036/060",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/572496_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/572496_400w.jpg"
+    },
+    "tcgplayerId": "572496"
+  },
+  {
+    "id": "jp-sm7a-thunderclap-spark-042/060",
+    "name": "Magearna",
+    "supertype": "Pokémon",
+    "number": "042/060",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/572502_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/572502_400w.jpg"
+    },
+    "tcgplayerId": "572502"
+  },
+  {
+    "id": "jp-sm7a-thunderclap-spark-035/060",
+    "name": "Alolan Diglett",
+    "supertype": "Pokémon",
+    "number": "035/060",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/572495_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/572495_400w.jpg"
+    },
+    "tcgplayerId": "572495"
+  },
+  {
+    "id": "jp-sm7a-thunderclap-spark-001/060",
+    "name": "Pinsir",
+    "supertype": "Pokémon",
+    "number": "001/060",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/572461_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/572461_400w.jpg"
+    },
+    "tcgplayerId": "572461"
+  },
+  {
+    "id": "jp-sm7a-thunderclap-spark-058/060",
+    "name": "Thunder Mountain",
+    "supertype": "Pokémon",
+    "number": "058/060",
+    "rarity": "Prism Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/572518_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/572518_400w.jpg"
+    },
+    "tcgplayerId": "572518"
+  },
+  {
+    "id": "jp-sm7a-thunderclap-spark-038/060",
+    "name": "Dialga",
+    "supertype": "Pokémon",
+    "number": "038/060",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/572498_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/572498_400w.jpg"
+    },
+    "tcgplayerId": "572498"
+  },
+  {
+    "id": "jp-sm7a-thunderclap-spark-016/060",
+    "name": "Pyroar",
+    "supertype": "Pokémon",
+    "number": "016/060",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/572476_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/572476_400w.jpg"
+    },
+    "tcgplayerId": "572476"
+  },
+  {
+    "id": "jp-sm7a-thunderclap-spark-060/060",
+    "name": "Unit Energy GRW",
+    "supertype": "Energy",
+    "number": "060/060",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/572520_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/572520_400w.jpg"
+    },
+    "tcgplayerId": "572520"
+  },
+  {
+    "id": "jp-sm7a-thunderclap-spark-002/060",
+    "name": "Shuckle",
+    "supertype": "Pokémon",
+    "number": "002/060",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/572462_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/572462_400w.jpg"
+    },
+    "tcgplayerId": "572462"
+  },
+  {
+    "id": "jp-sm7a-thunderclap-spark-020/060",
+    "name": "Beartic",
+    "supertype": "Pokémon",
+    "number": "020/060",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/572480_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/572480_400w.jpg"
+    },
+    "tcgplayerId": "572480"
+  },
+  {
+    "id": "jp-sm7a-thunderclap-spark-027/060",
+    "name": "Electivire",
+    "supertype": "Pokémon",
+    "number": "027/060",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/572487_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/572487_400w.jpg"
+    },
+    "tcgplayerId": "572487"
+  },
+  {
+    "id": "jp-sm7a-thunderclap-spark-055/060",
+    "name": "Kahili - 055/060",
+    "supertype": "Pokémon",
+    "number": "055/060",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/572515_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/572515_400w.jpg"
+    },
+    "tcgplayerId": "572515"
+  },
+  {
+    "id": "jp-sm7a-thunderclap-spark-009/060",
+    "name": "Tapu Bulu",
+    "supertype": "Pokémon",
+    "number": "009/060",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/572469_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/572469_400w.jpg"
+    },
+    "tcgplayerId": "572469"
+  },
+  {
+    "id": "jp-sm7a-thunderclap-spark-026/060",
+    "name": "Electabuzz",
+    "supertype": "Pokémon",
+    "number": "026/060",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/572486_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/572486_400w.jpg"
+    },
+    "tcgplayerId": "572486"
+  },
+  {
+    "id": "jp-sm7a-thunderclap-spark-019/060",
+    "name": "Cubchoo",
+    "supertype": "Pokémon",
+    "number": "019/060",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/572479_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/572479_400w.jpg"
+    },
+    "tcgplayerId": "572479"
+  },
+  {
+    "id": "jp-sm7a-thunderclap-spark-004/060",
+    "name": "Cascoon",
+    "supertype": "Pokémon",
+    "number": "004/060",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/572464_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/572464_400w.jpg"
+    },
+    "tcgplayerId": "572464"
+  },
+  {
+    "id": "jp-sm7a-thunderclap-spark-022/060",
+    "name": "Popplio",
+    "supertype": "Pokémon",
+    "number": "022/060",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/572482_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/572482_400w.jpg"
+    },
+    "tcgplayerId": "572482"
+  },
+  {
+    "id": "jp-sm7a-thunderclap-spark-008/060",
+    "name": "Gogoat",
+    "supertype": "Pokémon",
+    "number": "008/060",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/572468_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/572468_400w.jpg"
+    },
+    "tcgplayerId": "572468"
+  },
+  {
+    "id": "jp-sm7a-thunderclap-spark-023/060",
+    "name": "Brionne",
+    "supertype": "Pokémon",
+    "number": "023/060",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/572483_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/572483_400w.jpg"
+    },
+    "tcgplayerId": "572483"
+  },
+  {
+    "id": "jp-sm7a-thunderclap-spark-015/060",
+    "name": "Litleo",
+    "supertype": "Pokémon",
+    "number": "015/060",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/572475_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/572475_400w.jpg"
+    },
+    "tcgplayerId": "572475"
+  },
+  {
+    "id": "jp-sm7a-thunderclap-spark-025/060",
+    "name": "Bruxish",
+    "supertype": "Pokémon",
+    "number": "025/060",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/572485_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/572485_400w.jpg"
+    },
+    "tcgplayerId": "572485"
+  },
+  {
+    "id": "jp-sm7a-thunderclap-spark-059/060",
+    "name": "Double Colorless Energy",
+    "supertype": "Energy",
+    "number": "059/060",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/572519_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/572519_400w.jpg"
+    },
+    "tcgplayerId": "572519"
+  },
+  {
+    "id": "jp-sm7a-thunderclap-spark-013/060",
+    "name": "Heatran",
+    "supertype": "Pokémon",
+    "number": "013/060",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/572473_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/572473_400w.jpg"
+    },
+    "tcgplayerId": "572473"
+  },
+  {
+    "id": "jp-sm7a-thunderclap-spark-003/060",
+    "name": "Wurmple",
+    "supertype": "Pokémon",
+    "number": "003/060",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/572463_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/572463_400w.jpg"
+    },
+    "tcgplayerId": "572463"
+  },
+  {
+    "id": "jp-sm7a-thunderclap-spark-011/060",
+    "name": "Slugma",
+    "supertype": "Pokémon",
+    "number": "011/060",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/572471_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/572471_400w.jpg"
+    },
+    "tcgplayerId": "572471"
+  },
+  {
+    "id": "jp-sm7a-thunderclap-spark-031/060",
+    "name": "Stunfisk",
+    "supertype": "Pokémon",
+    "number": "031/060",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/572491_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/572491_400w.jpg"
+    },
+    "tcgplayerId": "572491"
+  },
+  {
+    "id": "jp-sm7a-thunderclap-spark-007/060",
+    "name": "Skiddo",
+    "supertype": "Pokémon",
+    "number": "007/060",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/572467_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/572467_400w.jpg"
+    },
+    "tcgplayerId": "572467"
+  },
+  {
+    "id": "jp-sm7a-thunderclap-spark-030/060",
+    "name": "Zebstrika",
+    "supertype": "Pokémon",
+    "number": "030/060",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/572490_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/572490_400w.jpg"
+    },
+    "tcgplayerId": "572490"
+  }
+]

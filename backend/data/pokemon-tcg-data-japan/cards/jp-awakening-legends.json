@@ -1,0 +1,674 @@
+[
+  {
+    "id": "jp-awakening-legends-shining-gyarados",
+    "name": "Shining Gyarados",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Super Rare Holo",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575241_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575241_400w.jpg"
+    },
+    "tcgplayerId": "575241"
+  },
+  {
+    "id": "jp-awakening-legends-ho-oh",
+    "name": "Ho-Oh",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575231_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575231_400w.jpg"
+    },
+    "tcgplayerId": "575231"
+  },
+  {
+    "id": "jp-awakening-legends-raikou",
+    "name": "Raikou",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575238_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575238_400w.jpg"
+    },
+    "tcgplayerId": "575238"
+  },
+  {
+    "id": "jp-awakening-legends-celebi",
+    "name": "Celebi",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575227_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575227_400w.jpg"
+    },
+    "tcgplayerId": "575227"
+  },
+  {
+    "id": "jp-awakening-legends-suicune",
+    "name": "Suicune",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575240_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575240_400w.jpg"
+    },
+    "tcgplayerId": "575240"
+  },
+  {
+    "id": "jp-awakening-legends-entei",
+    "name": "Entei",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575230_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575230_400w.jpg"
+    },
+    "tcgplayerId": "575230"
+  },
+  {
+    "id": "jp-awakening-legends-houndoom",
+    "name": "Houndoom",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575232_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575232_400w.jpg"
+    },
+    "tcgplayerId": "575232"
+  },
+  {
+    "id": "jp-awakening-legends-aerodactyl",
+    "name": "Aerodactyl",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575224_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575224_400w.jpg"
+    },
+    "tcgplayerId": "575224"
+  },
+  {
+    "id": "jp-awakening-legends-kingdra",
+    "name": "Kingdra",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575234_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575234_400w.jpg"
+    },
+    "tcgplayerId": "575234"
+  },
+  {
+    "id": "jp-awakening-legends-starmie",
+    "name": "Starmie",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575239_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575239_400w.jpg"
+    },
+    "tcgplayerId": "575239"
+  },
+  {
+    "id": "jp-awakening-legends-ampharos",
+    "name": "Ampharos",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575225_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575225_400w.jpg"
+    },
+    "tcgplayerId": "575225"
+  },
+  {
+    "id": "jp-awakening-legends-magneton",
+    "name": "Magneton",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575235_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575235_400w.jpg"
+    },
+    "tcgplayerId": "575235"
+  },
+  {
+    "id": "jp-awakening-legends-blissey",
+    "name": "Blissey",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575226_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575226_400w.jpg"
+    },
+    "tcgplayerId": "575226"
+  },
+  {
+    "id": "jp-awakening-legends-porygon2",
+    "name": "Porygon2",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575237_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575237_400w.jpg"
+    },
+    "tcgplayerId": "575237"
+  },
+  {
+    "id": "jp-awakening-legends-crobat",
+    "name": "Crobat",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575228_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575228_400w.jpg"
+    },
+    "tcgplayerId": "575228"
+  },
+  {
+    "id": "jp-awakening-legends-delibird",
+    "name": "Delibird",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575229_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575229_400w.jpg"
+    },
+    "tcgplayerId": "575229"
+  },
+  {
+    "id": "jp-awakening-legends-misdreavus",
+    "name": "Misdreavus",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575236_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575236_400w.jpg"
+    },
+    "tcgplayerId": "575236"
+  },
+  {
+    "id": "jp-awakening-legends-raichu",
+    "name": "Raichu",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575255_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575255_400w.jpg"
+    },
+    "tcgplayerId": "575255"
+  },
+  {
+    "id": "jp-awakening-legends-quagsire",
+    "name": "Quagsire",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575213_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575213_400w.jpg"
+    },
+    "tcgplayerId": "575213"
+  },
+  {
+    "id": "jp-awakening-legends-jumpluff",
+    "name": "Jumpluff",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575233_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575233_400w.jpg"
+    },
+    "tcgplayerId": "575233"
+  },
+  {
+    "id": "jp-awakening-legends-healing-field",
+    "name": "Healing Field",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575247_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575247_400w.jpg"
+    },
+    "tcgplayerId": "575247"
+  },
+  {
+    "id": "jp-awakening-legends-rockets-hideout",
+    "name": "Rocket's Hideout",
+    "supertype": "Trainer",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575256_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575256_400w.jpg"
+    },
+    "tcgplayerId": "575256"
+  },
+  {
+    "id": "jp-awakening-legends-octillery",
+    "name": "Octillery",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575251_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575251_400w.jpg"
+    },
+    "tcgplayerId": "575251"
+  },
+  {
+    "id": "jp-awakening-legends-unown-k",
+    "name": "Unown K",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575222_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575222_400w.jpg"
+    },
+    "tcgplayerId": "575222"
+  },
+  {
+    "id": "jp-awakening-legends-old-rod",
+    "name": "Old Rod",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575211_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575211_400w.jpg"
+    },
+    "tcgplayerId": "575211"
+  },
+  {
+    "id": "jp-awakening-legends-skiploom",
+    "name": "Skiploom",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575216_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575216_400w.jpg"
+    },
+    "tcgplayerId": "575216"
+  },
+  {
+    "id": "jp-awakening-legends-balloon-berry",
+    "name": "Balloon Berry",
+    "supertype": "Trainer",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575243_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575243_400w.jpg"
+    },
+    "tcgplayerId": "575243"
+  },
+  {
+    "id": "jp-awakening-legends-pokemon-breeder-fields",
+    "name": "Pokemon Breeder Fields",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575254_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575254_400w.jpg"
+    },
+    "tcgplayerId": "575254"
+  },
+  {
+    "id": "jp-awakening-legends-unown-b",
+    "name": "Unown B",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575260_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575260_400w.jpg"
+    },
+    "tcgplayerId": "575260"
+  },
+  {
+    "id": "jp-awakening-legends-unown-y",
+    "name": "Unown Y",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575261_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575261_400w.jpg"
+    },
+    "tcgplayerId": "575261"
+  },
+  {
+    "id": "jp-awakening-legends-jynx",
+    "name": "Jynx",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575248_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575248_400w.jpg"
+    },
+    "tcgplayerId": "575248"
+  },
+  {
+    "id": "jp-awakening-legends-flaaffy",
+    "name": "Flaaffy",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575244_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575244_400w.jpg"
+    },
+    "tcgplayerId": "575244"
+  },
+  {
+    "id": "jp-awakening-legends-golbat",
+    "name": "Golbat",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575245_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575245_400w.jpg"
+    },
+    "tcgplayerId": "575245"
+  },
+  {
+    "id": "jp-awakening-legends-goldeen",
+    "name": "Goldeen",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575209_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575209_400w.jpg"
+    },
+    "tcgplayerId": "575209"
+  },
+  {
+    "id": "jp-awakening-legends-murkrow",
+    "name": "Murkrow",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575210_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575210_400w.jpg"
+    },
+    "tcgplayerId": "575210"
+  },
+  {
+    "id": "jp-awakening-legends-lanturn",
+    "name": "Lanturn",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575249_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575249_400w.jpg"
+    },
+    "tcgplayerId": "575249"
+  },
+  {
+    "id": "jp-awakening-legends-magcargo",
+    "name": "Magcargo",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575250_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575250_400w.jpg"
+    },
+    "tcgplayerId": "575250"
+  },
+  {
+    "id": "jp-awakening-legends-shuckle",
+    "name": "Shuckle",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575258_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575258_400w.jpg"
+    },
+    "tcgplayerId": "575258"
+  },
+  {
+    "id": "jp-awakening-legends-seaking",
+    "name": "Seaking",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575257_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575257_400w.jpg"
+    },
+    "tcgplayerId": "575257"
+  },
+  {
+    "id": "jp-awakening-legends-staryu",
+    "name": "Staryu",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575220_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575220_400w.jpg"
+    },
+    "tcgplayerId": "575220"
+  },
+  {
+    "id": "jp-awakening-legends-chinchou",
+    "name": "Chinchou",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575206_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575206_400w.jpg"
+    },
+    "tcgplayerId": "575206"
+  },
+  {
+    "id": "jp-awakening-legends-graveler",
+    "name": "Graveler",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575246_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575246_400w.jpg"
+    },
+    "tcgplayerId": "575246"
+  },
+  {
+    "id": "jp-awakening-legends-slugma",
+    "name": "Slugma",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575217_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575217_400w.jpg"
+    },
+    "tcgplayerId": "575217"
+  },
+  {
+    "id": "jp-awakening-legends-snubbull",
+    "name": "Snubbull",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575219_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575219_400w.jpg"
+    },
+    "tcgplayerId": "575219"
+  },
+  {
+    "id": "jp-awakening-legends-qwilfish",
+    "name": "Qwilfish",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575214_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575214_400w.jpg"
+    },
+    "tcgplayerId": "575214"
+  },
+  {
+    "id": "jp-awakening-legends-piloswine",
+    "name": "Piloswine",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575253_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575253_400w.jpg"
+    },
+    "tcgplayerId": "575253"
+  },
+  {
+    "id": "jp-awakening-legends-aipom",
+    "name": "Aipom",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575205_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575205_400w.jpg"
+    },
+    "tcgplayerId": "575205"
+  },
+  {
+    "id": "jp-awakening-legends-stantler",
+    "name": "Stantler",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575259_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575259_400w.jpg"
+    },
+    "tcgplayerId": "575259"
+  },
+  {
+    "id": "jp-awakening-legends-smoochum",
+    "name": "Smoochum",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575218_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575218_400w.jpg"
+    },
+    "tcgplayerId": "575218"
+  },
+  {
+    "id": "jp-awakening-legends-farfetchd",
+    "name": "Farfetch'd",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575207_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575207_400w.jpg"
+    },
+    "tcgplayerId": "575207"
+  },
+  {
+    "id": "jp-awakening-legends-geodude",
+    "name": "Geodude",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575208_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575208_400w.jpg"
+    },
+    "tcgplayerId": "575208"
+  },
+  {
+    "id": "jp-awakening-legends-remoraid",
+    "name": "Remoraid",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575215_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575215_400w.jpg"
+    },
+    "tcgplayerId": "575215"
+  },
+  {
+    "id": "jp-awakening-legends-zubat",
+    "name": "Zubat",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575223_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575223_400w.jpg"
+    },
+    "tcgplayerId": "575223"
+  },
+  {
+    "id": "jp-awakening-legends-paras",
+    "name": "Paras",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575212_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575212_400w.jpg"
+    },
+    "tcgplayerId": "575212"
+  },
+  {
+    "id": "jp-awakening-legends-swinub",
+    "name": "Swinub",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575221_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575221_400w.jpg"
+    },
+    "tcgplayerId": "575221"
+  },
+  {
+    "id": "jp-awakening-legends-parasect",
+    "name": "Parasect",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575252_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575252_400w.jpg"
+    },
+    "tcgplayerId": "575252"
+  }
+]

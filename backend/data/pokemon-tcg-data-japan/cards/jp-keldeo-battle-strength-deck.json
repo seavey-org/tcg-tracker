@@ -1,0 +1,26 @@
+[
+  {
+    "id": "jp-keldeo-battle-strength-deck-001/015",
+    "name": "Psyduck",
+    "supertype": "Pokémon",
+    "number": "001/015",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/604842_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/604842_400w.jpg"
+    },
+    "tcgplayerId": "604842"
+  },
+  {
+    "id": "jp-keldeo-battle-strength-deck-004/015",
+    "name": "Keldeo",
+    "supertype": "Pokémon",
+    "number": "004/015",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/604840_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/604840_400w.jpg"
+    },
+    "tcgplayerId": "604840"
+  }
+]

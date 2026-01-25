@@ -1,0 +1,50 @@
+[
+  {
+    "id": "jp-smj-tag-team-gx-premium-trainer-box-004/035",
+    "name": "Quagsire",
+    "supertype": "Pokémon",
+    "number": "004/035",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/596644_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/596644_400w.jpg"
+    },
+    "tcgplayerId": "596644"
+  },
+  {
+    "id": "jp-smj-tag-team-gx-premium-trainer-box-003/035",
+    "name": "Wooper",
+    "supertype": "Pokémon",
+    "number": "003/035",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/596643_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/596643_400w.jpg"
+    },
+    "tcgplayerId": "596643"
+  },
+  {
+    "id": "jp-smj-tag-team-gx-premium-trainer-box-010/035",
+    "name": "Tapu Lele GX",
+    "supertype": "Pokémon",
+    "number": "010/035",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/596625_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/596625_400w.jpg"
+    },
+    "tcgplayerId": "596625"
+  },
+  {
+    "id": "jp-smj-tag-team-gx-premium-trainer-box-028/035",
+    "name": "Cynthia",
+    "supertype": "Pokémon",
+    "number": "028/035",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/596633_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/596633_400w.jpg"
+    },
+    "tcgplayerId": "596633"
+  }
+]

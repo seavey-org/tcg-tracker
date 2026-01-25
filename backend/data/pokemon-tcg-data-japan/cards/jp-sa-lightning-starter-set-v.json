@@ -1,0 +1,62 @@
+[
+  {
+    "id": "jp-sa-lightning-starter-set-v-007/024",
+    "name": "Yamper",
+    "supertype": "Pokémon",
+    "number": "007/024",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/596057_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/596057_400w.jpg"
+    },
+    "tcgplayerId": "596057"
+  },
+  {
+    "id": "jp-sa-lightning-starter-set-v-008/024",
+    "name": "Boltund",
+    "supertype": "Pokémon",
+    "number": "008/024",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/596058_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/596058_400w.jpg"
+    },
+    "tcgplayerId": "596058"
+  },
+  {
+    "id": "jp-sa-lightning-starter-set-v-003/024",
+    "name": "Chinchou",
+    "supertype": "Pokémon",
+    "number": "003/024",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/596054_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/596054_400w.jpg"
+    },
+    "tcgplayerId": "596054"
+  },
+  {
+    "id": "jp-sa-lightning-starter-set-v-001/024",
+    "name": "Pikachu",
+    "supertype": "Pokémon",
+    "number": "001/024",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/596052_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/596052_400w.jpg"
+    },
+    "tcgplayerId": "596052"
+  },
+  {
+    "id": "jp-sa-lightning-starter-set-v-009/024",
+    "name": "Morpeko",
+    "supertype": "Pokémon",
+    "number": "009/024",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/596059_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/596059_400w.jpg"
+    },
+    "tcgplayerId": "596059"
+  }
+]

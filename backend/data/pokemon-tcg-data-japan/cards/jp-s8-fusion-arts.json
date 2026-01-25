@@ -1,0 +1,1478 @@
+[
+  {
+    "id": "jp-s8-fusion-arts-119/100",
+    "name": "Mew VMAX - 119/100",
+    "supertype": "Pokémon",
+    "number": "119/100",
+    "rarity": "Hyper Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/569620_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/569620_400w.jpg"
+    },
+    "tcgplayerId": "569620"
+  },
+  {
+    "id": "jp-s8-fusion-arts-fusion-arts-booster-box",
+    "name": "Fusion Arts Booster Box",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/565262_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/565262_400w.jpg"
+    },
+    "tcgplayerId": "565262"
+  },
+  {
+    "id": "jp-s8-fusion-arts-106/100",
+    "name": "Mew V - 106/100",
+    "supertype": "Pokémon",
+    "number": "106/100",
+    "rarity": "Super Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/569607_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/569607_400w.jpg"
+    },
+    "tcgplayerId": "569607"
+  },
+  {
+    "id": "jp-s8-fusion-arts-118/100",
+    "name": "Mew VMAX - 118/100",
+    "supertype": "Pokémon",
+    "number": "118/100",
+    "rarity": "Hyper Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/569619_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/569619_400w.jpg"
+    },
+    "tcgplayerId": "569619"
+  },
+  {
+    "id": "jp-s8-fusion-arts-109/100",
+    "name": "Genesect V - 109/100",
+    "supertype": "Pokémon",
+    "number": "109/100",
+    "rarity": "Super Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/569610_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/569610_400w.jpg"
+    },
+    "tcgplayerId": "569610"
+  },
+  {
+    "id": "jp-s8-fusion-arts-122/100",
+    "name": "Elesa's Sparkle - 122/100",
+    "supertype": "Trainer",
+    "number": "122/100",
+    "rarity": "Hyper Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/569623_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/569623_400w.jpg"
+    },
+    "tcgplayerId": "569623"
+  },
+  {
+    "id": "jp-s8-fusion-arts-105/100",
+    "name": "Mew V - 105/100",
+    "supertype": "Pokémon",
+    "number": "105/100",
+    "rarity": "Super Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/569606_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/569606_400w.jpg"
+    },
+    "tcgplayerId": "569606"
+  },
+  {
+    "id": "jp-s8-fusion-arts-113/100",
+    "name": "Elesa's Sparkle - 113/100",
+    "supertype": "Trainer",
+    "number": "113/100",
+    "rarity": "Super Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/569614_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/569614_400w.jpg"
+    },
+    "tcgplayerId": "569614"
+  },
+  {
+    "id": "jp-s8-fusion-arts-116/100",
+    "name": "Chandelure VMAX - 116/100",
+    "supertype": "Pokémon",
+    "number": "116/100",
+    "rarity": "Hyper Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/569617_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/569617_400w.jpg"
+    },
+    "tcgplayerId": "569617"
+  },
+  {
+    "id": "jp-s8-fusion-arts-111/100",
+    "name": "Greedent V - 111/100",
+    "supertype": "Pokémon",
+    "number": "111/100",
+    "rarity": "Super Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/569612_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/569612_400w.jpg"
+    },
+    "tcgplayerId": "569612"
+  },
+  {
+    "id": "jp-s8-fusion-arts-125/100",
+    "name": "Flaaffy",
+    "supertype": "Pokémon",
+    "number": "125/100",
+    "rarity": "Ultra Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/569626_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/569626_400w.jpg"
+    },
+    "tcgplayerId": "569626"
+  },
+  {
+    "id": "jp-s8-fusion-arts-128/100",
+    "name": "Grass Energy",
+    "supertype": "Energy",
+    "number": "128/100",
+    "rarity": "Ultra Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/577430_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/577430_400w.jpg"
+    },
+    "tcgplayerId": "577430"
+  },
+  {
+    "id": "jp-s8-fusion-arts-117/100",
+    "name": "Boltund VMAX - 117/100",
+    "supertype": "Pokémon",
+    "number": "117/100",
+    "rarity": "Hyper Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/569618_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/569618_400w.jpg"
+    },
+    "tcgplayerId": "569618"
+  },
+  {
+    "id": "jp-s8-fusion-arts-fusion-arts-booster-pack",
+    "name": "Fusion Arts Booster Pack",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/565263_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/565263_400w.jpg"
+    },
+    "tcgplayerId": "565263"
+  },
+  {
+    "id": "jp-s8-fusion-arts-124/100",
+    "name": "Chili \u0026 Cilan \u0026 Cress - 124/100",
+    "supertype": "Pokémon",
+    "number": "124/100",
+    "rarity": "Hyper Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/569625_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/569625_400w.jpg"
+    },
+    "tcgplayerId": "569625"
+  },
+  {
+    "id": "jp-s8-fusion-arts-129/100",
+    "name": "Fire Energy",
+    "supertype": "Energy",
+    "number": "129/100",
+    "rarity": "Ultra Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/577431_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/577431_400w.jpg"
+    },
+    "tcgplayerId": "577431"
+  },
+  {
+    "id": "jp-s8-fusion-arts-120/100",
+    "name": "Greedent VMAX - 120/100",
+    "supertype": "Pokémon",
+    "number": "120/100",
+    "rarity": "Hyper Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/569621_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/569621_400w.jpg"
+    },
+    "tcgplayerId": "569621"
+  },
+  {
+    "id": "jp-s8-fusion-arts-114/100",
+    "name": "Dancer - 114/100",
+    "supertype": "Pokémon",
+    "number": "114/100",
+    "rarity": "Super Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/569615_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/569615_400w.jpg"
+    },
+    "tcgplayerId": "569615"
+  },
+  {
+    "id": "jp-s8-fusion-arts-121/100",
+    "name": "Sidney - 121/100",
+    "supertype": "Pokémon",
+    "number": "121/100",
+    "rarity": "Hyper Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/569622_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/569622_400w.jpg"
+    },
+    "tcgplayerId": "569622"
+  },
+  {
+    "id": "jp-s8-fusion-arts-040/100",
+    "name": "Mew VMAX - 040/100",
+    "supertype": "Pokémon",
+    "number": "040/100",
+    "rarity": "Triple Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/569541_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/569541_400w.jpg"
+    },
+    "tcgplayerId": "569541"
+  },
+  {
+    "id": "jp-s8-fusion-arts-126/100",
+    "name": "Power Tablet - 126/100",
+    "supertype": "Pokémon",
+    "number": "126/100",
+    "rarity": "Ultra Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/569627_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/569627_400w.jpg"
+    },
+    "tcgplayerId": "569627"
+  },
+  {
+    "id": "jp-s8-fusion-arts-127/100",
+    "name": "Training Court",
+    "supertype": "Pokémon",
+    "number": "127/100",
+    "rarity": "Ultra Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/569628_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/569628_400w.jpg"
+    },
+    "tcgplayerId": "569628"
+  },
+  {
+    "id": "jp-s8-fusion-arts-104/100",
+    "name": "Boltund V - 104/100",
+    "supertype": "Pokémon",
+    "number": "104/100",
+    "rarity": "Super Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/569605_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/569605_400w.jpg"
+    },
+    "tcgplayerId": "569605"
+  },
+  {
+    "id": "jp-s8-fusion-arts-115/100",
+    "name": "Chili \u0026 Cilan \u0026 Cress - 115/100",
+    "supertype": "Pokémon",
+    "number": "115/100",
+    "rarity": "Super Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/569616_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/569616_400w.jpg"
+    },
+    "tcgplayerId": "569616"
+  },
+  {
+    "id": "jp-s8-fusion-arts-108/100",
+    "name": "Genesect V - 108/100",
+    "supertype": "Pokémon",
+    "number": "108/100",
+    "rarity": "Super Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/569609_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/569609_400w.jpg"
+    },
+    "tcgplayerId": "569609"
+  },
+  {
+    "id": "jp-s8-fusion-arts-101/100",
+    "name": "Tsareena V - 101/100",
+    "supertype": "Pokémon",
+    "number": "101/100",
+    "rarity": "Super Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/569602_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/569602_400w.jpg"
+    },
+    "tcgplayerId": "569602"
+  },
+  {
+    "id": "jp-s8-fusion-arts-102/100",
+    "name": "Chandelure V - 102/100",
+    "supertype": "Pokémon",
+    "number": "102/100",
+    "rarity": "Super Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/569603_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/569603_400w.jpg"
+    },
+    "tcgplayerId": "569603"
+  },
+  {
+    "id": "jp-s8-fusion-arts-103/100",
+    "name": "Crabominable V - 103/100",
+    "supertype": "Pokémon",
+    "number": "103/100",
+    "rarity": "Super Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/569604_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/569604_400w.jpg"
+    },
+    "tcgplayerId": "569604"
+  },
+  {
+    "id": "jp-s8-fusion-arts-107/100",
+    "name": "Hoopa V - 107/100",
+    "supertype": "Pokémon",
+    "number": "107/100",
+    "rarity": "Super Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/569608_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/569608_400w.jpg"
+    },
+    "tcgplayerId": "569608"
+  },
+  {
+    "id": "jp-s8-fusion-arts-123/100",
+    "name": "Dancer - 123/100",
+    "supertype": "Pokémon",
+    "number": "123/100",
+    "rarity": "Hyper Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/569624_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/569624_400w.jpg"
+    },
+    "tcgplayerId": "569624"
+  },
+  {
+    "id": "jp-s8-fusion-arts-110/100",
+    "name": "Greedent V - 110/100",
+    "supertype": "Pokémon",
+    "number": "110/100",
+    "rarity": "Super Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/569611_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/569611_400w.jpg"
+    },
+    "tcgplayerId": "569611"
+  },
+  {
+    "id": "jp-s8-fusion-arts-112/100",
+    "name": "Sidney - 112/100",
+    "supertype": "Pokémon",
+    "number": "112/100",
+    "rarity": "Super Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/569613_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/569613_400w.jpg"
+    },
+    "tcgplayerId": "569613"
+  },
+  {
+    "id": "jp-s8-fusion-arts-045/100",
+    "name": "Deoxys",
+    "supertype": "Pokémon",
+    "number": "045/100",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/569546_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/569546_400w.jpg"
+    },
+    "tcgplayerId": "569546"
+  },
+  {
+    "id": "jp-s8-fusion-arts-039/100",
+    "name": "Mew V - 039/100",
+    "supertype": "Pokémon",
+    "number": "039/100",
+    "rarity": "Double Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/569540_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/569540_400w.jpg"
+    },
+    "tcgplayerId": "569540"
+  },
+  {
+    "id": "jp-s8-fusion-arts-015/100",
+    "name": "Chandelure VMAX - 015/100",
+    "supertype": "Pokémon",
+    "number": "015/100",
+    "rarity": "Triple Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/569516_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/569516_400w.jpg"
+    },
+    "tcgplayerId": "569516"
+  },
+  {
+    "id": "jp-s8-fusion-arts-037/100",
+    "name": "Toxtricity",
+    "supertype": "Pokémon",
+    "number": "037/100",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/569538_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/569538_400w.jpg"
+    },
+    "tcgplayerId": "569538"
+  },
+  {
+    "id": "jp-s8-fusion-arts-022/100",
+    "name": "Feraligatr",
+    "supertype": "Pokémon",
+    "number": "022/100",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/569523_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/569523_400w.jpg"
+    },
+    "tcgplayerId": "569523"
+  },
+  {
+    "id": "jp-s8-fusion-arts-071/100",
+    "name": "Meltan",
+    "supertype": "Pokémon",
+    "number": "071/100",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/569572_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/569572_400w.jpg"
+    },
+    "tcgplayerId": "569572"
+  },
+  {
+    "id": "jp-s8-fusion-arts-079/100",
+    "name": "Dunsparce",
+    "supertype": "Pokémon",
+    "number": "079/100",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/569580_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/569580_400w.jpg"
+    },
+    "tcgplayerId": "569580"
+  },
+  {
+    "id": "jp-s8-fusion-arts-063/100",
+    "name": "Garbodor",
+    "supertype": "Pokémon",
+    "number": "063/100",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/569564_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/569564_400w.jpg"
+    },
+    "tcgplayerId": "569564"
+  },
+  {
+    "id": "jp-s8-fusion-arts-005/100",
+    "name": "Breloom",
+    "supertype": "Pokémon",
+    "number": "005/100",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/569506_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/569506_400w.jpg"
+    },
+    "tcgplayerId": "569506"
+  },
+  {
+    "id": "jp-s8-fusion-arts-006/100",
+    "name": "Maractus",
+    "supertype": "Pokémon",
+    "number": "006/100",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/569507_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/569507_400w.jpg"
+    },
+    "tcgplayerId": "569507"
+  },
+  {
+    "id": "jp-s8-fusion-arts-068/100",
+    "name": "Durant",
+    "supertype": "Pokémon",
+    "number": "068/100",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/569569_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/569569_400w.jpg"
+    },
+    "tcgplayerId": "569569"
+  },
+  {
+    "id": "jp-s8-fusion-arts-035/100",
+    "name": "Boltund VMAX - 035/100",
+    "supertype": "Pokémon",
+    "number": "035/100",
+    "rarity": "Triple Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/569536_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/569536_400w.jpg"
+    },
+    "tcgplayerId": "569536"
+  },
+  {
+    "id": "jp-s8-fusion-arts-024/100",
+    "name": "Huntail",
+    "supertype": "Pokémon",
+    "number": "024/100",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/569525_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/569525_400w.jpg"
+    },
+    "tcgplayerId": "569525"
+  },
+  {
+    "id": "jp-s8-fusion-arts-072/100",
+    "name": "Melmetal",
+    "supertype": "Pokémon",
+    "number": "072/100",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/569573_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/569573_400w.jpg"
+    },
+    "tcgplayerId": "569573"
+  },
+  {
+    "id": "jp-s8-fusion-arts-044/100",
+    "name": "Galarian Cursola",
+    "supertype": "Pokémon",
+    "number": "044/100",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/569545_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/569545_400w.jpg"
+    },
+    "tcgplayerId": "569545"
+  },
+  {
+    "id": "jp-s8-fusion-arts-091/100",
+    "name": "Battle VIP Pass",
+    "supertype": "Pokémon",
+    "number": "091/100",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/569592_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/569592_400w.jpg"
+    },
+    "tcgplayerId": "569592"
+  },
+  {
+    "id": "jp-s8-fusion-arts-078/100",
+    "name": "Goodra",
+    "supertype": "Pokémon",
+    "number": "078/100",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/569579_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/569579_400w.jpg"
+    },
+    "tcgplayerId": "569579"
+  },
+  {
+    "id": "jp-s8-fusion-arts-058/100",
+    "name": "Falinks",
+    "supertype": "Pokémon",
+    "number": "058/100",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/569559_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/569559_400w.jpg"
+    },
+    "tcgplayerId": "569559"
+  },
+  {
+    "id": "jp-s8-fusion-arts-086/100",
+    "name": "Greedent VMAX - 086/100",
+    "supertype": "Pokémon",
+    "number": "086/100",
+    "rarity": "Triple Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/569587_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/569587_400w.jpg"
+    },
+    "tcgplayerId": "569587"
+  },
+  {
+    "id": "jp-s8-fusion-arts-014/100",
+    "name": "Chandelure V - 014/100",
+    "supertype": "Pokémon",
+    "number": "014/100",
+    "rarity": "Double Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/569515_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/569515_400w.jpg"
+    },
+    "tcgplayerId": "569515"
+  },
+  {
+    "id": "jp-s8-fusion-arts-027/100",
+    "name": "Pyukumuku",
+    "supertype": "Pokémon",
+    "number": "027/100",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/569528_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/569528_400w.jpg"
+    },
+    "tcgplayerId": "569528"
+  },
+  {
+    "id": "jp-s8-fusion-arts-050/100",
+    "name": "Drakloak",
+    "supertype": "Pokémon",
+    "number": "050/100",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/569551_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/569551_400w.jpg"
+    },
+    "tcgplayerId": "569551"
+  },
+  {
+    "id": "jp-s8-fusion-arts-013/100",
+    "name": "Arcanine",
+    "supertype": "Pokémon",
+    "number": "013/100",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/569514_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/569514_400w.jpg"
+    },
+    "tcgplayerId": "569514"
+  },
+  {
+    "id": "jp-s8-fusion-arts-011/100",
+    "name": "Tsareena V - 011/100",
+    "supertype": "Pokémon",
+    "number": "011/100",
+    "rarity": "Double Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/569512_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/569512_400w.jpg"
+    },
+    "tcgplayerId": "569512"
+  },
+  {
+    "id": "jp-s8-fusion-arts-074/100",
+    "name": "Latias",
+    "supertype": "Pokémon",
+    "number": "074/100",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/569575_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/569575_400w.jpg"
+    },
+    "tcgplayerId": "569575"
+  },
+  {
+    "id": "jp-s8-fusion-arts-019/100",
+    "name": "Starmie",
+    "supertype": "Pokémon",
+    "number": "019/100",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/569520_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/569520_400w.jpg"
+    },
+    "tcgplayerId": "569520"
+  },
+  {
+    "id": "jp-s8-fusion-arts-056/100",
+    "name": "Steelix",
+    "supertype": "Pokémon",
+    "number": "056/100",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/569557_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/569557_400w.jpg"
+    },
+    "tcgplayerId": "569557"
+  },
+  {
+    "id": "jp-s8-fusion-arts-085/100",
+    "name": "Greedent V - 085/100",
+    "supertype": "Pokémon",
+    "number": "085/100",
+    "rarity": "Double Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/569586_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/569586_400w.jpg"
+    },
+    "tcgplayerId": "569586"
+  },
+  {
+    "id": "jp-s8-fusion-arts-055/100",
+    "name": "Onix",
+    "supertype": "Pokémon",
+    "number": "055/100",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/569556_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/569556_400w.jpg"
+    },
+    "tcgplayerId": "569556"
+  },
+  {
+    "id": "jp-s8-fusion-arts-069/100",
+    "name": "Genesect V - 069/100",
+    "supertype": "Pokémon",
+    "number": "069/100",
+    "rarity": "Double Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/569570_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/569570_400w.jpg"
+    },
+    "tcgplayerId": "569570"
+  },
+  {
+    "id": "jp-s8-fusion-arts-066/100",
+    "name": "Hoopa V - 066/100",
+    "supertype": "Pokémon",
+    "number": "066/100",
+    "rarity": "Double Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/569567_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/569567_400w.jpg"
+    },
+    "tcgplayerId": "569567"
+  },
+  {
+    "id": "jp-s8-fusion-arts-026/100",
+    "name": "Crabominable V - 026/100",
+    "supertype": "Pokémon",
+    "number": "026/100",
+    "rarity": "Double Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/569527_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/569527_400w.jpg"
+    },
+    "tcgplayerId": "569527"
+  },
+  {
+    "id": "jp-s8-fusion-arts-009/100",
+    "name": "Virizion",
+    "supertype": "Pokémon",
+    "number": "009/100",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/569510_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/569510_400w.jpg"
+    },
+    "tcgplayerId": "569510"
+  },
+  {
+    "id": "jp-s8-fusion-arts-094/100",
+    "name": "Farewell Bell",
+    "supertype": "Pokémon",
+    "number": "094/100",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/569595_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/569595_400w.jpg"
+    },
+    "tcgplayerId": "569595"
+  },
+  {
+    "id": "jp-s8-fusion-arts-090/100",
+    "name": "Cross Switcher",
+    "supertype": "Trainer",
+    "number": "090/100",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/569591_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/569591_400w.jpg"
+    },
+    "tcgplayerId": "569591"
+  },
+  {
+    "id": "jp-s8-fusion-arts-012/100",
+    "name": "Growlithe",
+    "supertype": "Pokémon",
+    "number": "012/100",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/569513_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/569513_400w.jpg"
+    },
+    "tcgplayerId": "569513"
+  },
+  {
+    "id": "jp-s8-fusion-arts-088/100",
+    "name": "Corvisquire",
+    "supertype": "Pokémon",
+    "number": "088/100",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/569589_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/569589_400w.jpg"
+    },
+    "tcgplayerId": "569589"
+  },
+  {
+    "id": "jp-s8-fusion-arts-092/100",
+    "name": "Power Tablet - 092/100",
+    "supertype": "Pokémon",
+    "number": "092/100",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/569593_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/569593_400w.jpg"
+    },
+    "tcgplayerId": "569593"
+  },
+  {
+    "id": "jp-s8-fusion-arts-008/100",
+    "name": "Accelgor",
+    "supertype": "Pokémon",
+    "number": "008/100",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/569509_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/569509_400w.jpg"
+    },
+    "tcgplayerId": "569509"
+  },
+  {
+    "id": "jp-s8-fusion-arts-061/100",
+    "name": "Galarian Obstagoon",
+    "supertype": "Pokémon",
+    "number": "061/100",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/569562_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/569562_400w.jpg"
+    },
+    "tcgplayerId": "569562"
+  },
+  {
+    "id": "jp-s8-fusion-arts-030/100",
+    "name": "Helioptile",
+    "supertype": "Pokémon",
+    "number": "030/100",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/569531_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/569531_400w.jpg"
+    },
+    "tcgplayerId": "569531"
+  },
+  {
+    "id": "jp-s8-fusion-arts-003/100",
+    "name": "Butterfree",
+    "supertype": "Pokémon",
+    "number": "003/100",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/569504_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/569504_400w.jpg"
+    },
+    "tcgplayerId": "569504"
+  },
+  {
+    "id": "jp-s8-fusion-arts-054/100",
+    "name": "Golem",
+    "supertype": "Pokémon",
+    "number": "054/100",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/569555_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/569555_400w.jpg"
+    },
+    "tcgplayerId": "569555"
+  },
+  {
+    "id": "jp-s8-fusion-arts-083/100",
+    "name": "Bunnelby",
+    "supertype": "Pokémon",
+    "number": "083/100",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/569584_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/569584_400w.jpg"
+    },
+    "tcgplayerId": "569584"
+  },
+  {
+    "id": "jp-s8-fusion-arts-034/100",
+    "name": "Boltund V - 034/100",
+    "supertype": "Pokémon",
+    "number": "034/100",
+    "rarity": "Double Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/569535_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/569535_400w.jpg"
+    },
+    "tcgplayerId": "569535"
+  },
+  {
+    "id": "jp-s8-fusion-arts-021/100",
+    "name": "Croconaw",
+    "supertype": "Pokémon",
+    "number": "021/100",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/569522_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/569522_400w.jpg"
+    },
+    "tcgplayerId": "569522"
+  },
+  {
+    "id": "jp-s8-fusion-arts-049/100",
+    "name": "Dreepy",
+    "supertype": "Pokémon",
+    "number": "049/100",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/569550_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/569550_400w.jpg"
+    },
+    "tcgplayerId": "569550"
+  },
+  {
+    "id": "jp-s8-fusion-arts-025/100",
+    "name": "Gorebyss",
+    "supertype": "Pokémon",
+    "number": "025/100",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/569526_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/569526_400w.jpg"
+    },
+    "tcgplayerId": "569526"
+  },
+  {
+    "id": "jp-s8-fusion-arts-043/100",
+    "name": "Galarian Corsola",
+    "supertype": "Pokémon",
+    "number": "043/100",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/569544_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/569544_400w.jpg"
+    },
+    "tcgplayerId": "569544"
+  },
+  {
+    "id": "jp-s8-fusion-arts-048/100",
+    "name": "Meloetta",
+    "supertype": "Pokémon",
+    "number": "048/100",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/569549_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/569549_400w.jpg"
+    },
+    "tcgplayerId": "569549"
+  },
+  {
+    "id": "jp-s8-fusion-arts-017/100",
+    "name": "Oricorio",
+    "supertype": "Pokémon",
+    "number": "017/100",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/569518_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/569518_400w.jpg"
+    },
+    "tcgplayerId": "569518"
+  },
+  {
+    "id": "jp-s8-fusion-arts-020/100",
+    "name": "Totodile",
+    "supertype": "Pokémon",
+    "number": "020/100",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/569521_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/569521_400w.jpg"
+    },
+    "tcgplayerId": "569521"
+  },
+  {
+    "id": "jp-s8-fusion-arts-073/100",
+    "name": "Corviknight",
+    "supertype": "Pokémon",
+    "number": "073/100",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/569574_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/569574_400w.jpg"
+    },
+    "tcgplayerId": "569574"
+  },
+  {
+    "id": "jp-s8-fusion-arts-075/100",
+    "name": "Latios",
+    "supertype": "Pokémon",
+    "number": "075/100",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/569576_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/569576_400w.jpg"
+    },
+    "tcgplayerId": "569576"
+  },
+  {
+    "id": "jp-s8-fusion-arts-028/100",
+    "name": "Snom",
+    "supertype": "Pokémon",
+    "number": "028/100",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/569529_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/569529_400w.jpg"
+    },
+    "tcgplayerId": "569529"
+  },
+  {
+    "id": "jp-s8-fusion-arts-010/100",
+    "name": "Grubbin",
+    "supertype": "Pokémon",
+    "number": "010/100",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/569511_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/569511_400w.jpg"
+    },
+    "tcgplayerId": "569511"
+  },
+  {
+    "id": "jp-s8-fusion-arts-051/100",
+    "name": "Dragapult",
+    "supertype": "Pokémon",
+    "number": "051/100",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/569552_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/569552_400w.jpg"
+    },
+    "tcgplayerId": "569552"
+  },
+  {
+    "id": "jp-s8-fusion-arts-082/100",
+    "name": "Delcatty",
+    "supertype": "Pokémon",
+    "number": "082/100",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/569583_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/569583_400w.jpg"
+    },
+    "tcgplayerId": "569583"
+  },
+  {
+    "id": "jp-s8-fusion-arts-023/100",
+    "name": "Clamperl",
+    "supertype": "Pokémon",
+    "number": "023/100",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/569524_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/569524_400w.jpg"
+    },
+    "tcgplayerId": "569524"
+  },
+  {
+    "id": "jp-s8-fusion-arts-032/100",
+    "name": "Charjabug",
+    "supertype": "Pokémon",
+    "number": "032/100",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/569533_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/569533_400w.jpg"
+    },
+    "tcgplayerId": "569533"
+  },
+  {
+    "id": "jp-s8-fusion-arts-029/100",
+    "name": "Frosmoth",
+    "supertype": "Pokémon",
+    "number": "029/100",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/569530_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/569530_400w.jpg"
+    },
+    "tcgplayerId": "569530"
+  },
+  {
+    "id": "jp-s8-fusion-arts-038/100",
+    "name": "Jynx",
+    "supertype": "Pokémon",
+    "number": "038/100",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/569539_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/569539_400w.jpg"
+    },
+    "tcgplayerId": "569539"
+  },
+  {
+    "id": "jp-s8-fusion-arts-052/100",
+    "name": "Geodude",
+    "supertype": "Pokémon",
+    "number": "052/100",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/569553_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/569553_400w.jpg"
+    },
+    "tcgplayerId": "569553"
+  },
+  {
+    "id": "jp-s8-fusion-arts-064/100",
+    "name": "Vullaby",
+    "supertype": "Pokémon",
+    "number": "064/100",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/569565_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/569565_400w.jpg"
+    },
+    "tcgplayerId": "569565"
+  },
+  {
+    "id": "jp-s8-fusion-arts-036/100",
+    "name": "Toxel",
+    "supertype": "Pokémon",
+    "number": "036/100",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/569537_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/569537_400w.jpg"
+    },
+    "tcgplayerId": "569537"
+  },
+  {
+    "id": "jp-s8-fusion-arts-053/100",
+    "name": "Graveler",
+    "supertype": "Pokémon",
+    "number": "053/100",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/569554_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/569554_400w.jpg"
+    },
+    "tcgplayerId": "569554"
+  },
+  {
+    "id": "jp-s8-fusion-arts-096/100",
+    "name": "Elesa's Sparkle - 096/100",
+    "supertype": "Trainer",
+    "number": "096/100",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/569597_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/569597_400w.jpg"
+    },
+    "tcgplayerId": "569597"
+  },
+  {
+    "id": "jp-s8-fusion-arts-065/100",
+    "name": "Mandibuzz",
+    "supertype": "Pokémon",
+    "number": "065/100",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/569566_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/569566_400w.jpg"
+    },
+    "tcgplayerId": "569566"
+  },
+  {
+    "id": "jp-s8-fusion-arts-084/100",
+    "name": "Diggersby",
+    "supertype": "Pokémon",
+    "number": "084/100",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/569585_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/569585_400w.jpg"
+    },
+    "tcgplayerId": "569585"
+  },
+  {
+    "id": "jp-s8-fusion-arts-001/100",
+    "name": "Caterpie",
+    "supertype": "Pokémon",
+    "number": "001/100",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/569502_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/569502_400w.jpg"
+    },
+    "tcgplayerId": "569502"
+  },
+  {
+    "id": "jp-s8-fusion-arts-059/100",
+    "name": "Galarian Zigzagoon",
+    "supertype": "Pokémon",
+    "number": "059/100",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/569560_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/569560_400w.jpg"
+    },
+    "tcgplayerId": "569560"
+  },
+  {
+    "id": "jp-s8-fusion-arts-041/100",
+    "name": "Snubbull",
+    "supertype": "Pokémon",
+    "number": "041/100",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/569542_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/569542_400w.jpg"
+    },
+    "tcgplayerId": "569542"
+  },
+  {
+    "id": "jp-s8-fusion-arts-046/100",
+    "name": "Munna",
+    "supertype": "Pokémon",
+    "number": "046/100",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/569547_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/569547_400w.jpg"
+    },
+    "tcgplayerId": "569547"
+  },
+  {
+    "id": "jp-s8-fusion-arts-007/100",
+    "name": "Shelmet",
+    "supertype": "Pokémon",
+    "number": "007/100",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/569508_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/569508_400w.jpg"
+    },
+    "tcgplayerId": "569508"
+  },
+  {
+    "id": "jp-s8-fusion-arts-077/100",
+    "name": "Sliggoo",
+    "supertype": "Pokémon",
+    "number": "077/100",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/569578_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/569578_400w.jpg"
+    },
+    "tcgplayerId": "569578"
+  },
+  {
+    "id": "jp-s8-fusion-arts-042/100",
+    "name": "Granbull",
+    "supertype": "Pokémon",
+    "number": "042/100",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/569543_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/569543_400w.jpg"
+    },
+    "tcgplayerId": "569543"
+  },
+  {
+    "id": "jp-s8-fusion-arts-047/100",
+    "name": "Musharna",
+    "supertype": "Pokémon",
+    "number": "047/100",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/569548_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/569548_400w.jpg"
+    },
+    "tcgplayerId": "569548"
+  },
+  {
+    "id": "jp-s8-fusion-arts-060/100",
+    "name": "Galarian Linoone",
+    "supertype": "Pokémon",
+    "number": "060/100",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/569561_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/569561_400w.jpg"
+    },
+    "tcgplayerId": "569561"
+  },
+  {
+    "id": "jp-s8-fusion-arts-062/100",
+    "name": "Trubbish",
+    "supertype": "Pokémon",
+    "number": "062/100",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/569563_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/569563_400w.jpg"
+    },
+    "tcgplayerId": "569563"
+  },
+  {
+    "id": "jp-s8-fusion-arts-081/100",
+    "name": "Skitty",
+    "supertype": "Pokémon",
+    "number": "081/100",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/569582_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/569582_400w.jpg"
+    },
+    "tcgplayerId": "569582"
+  },
+  {
+    "id": "jp-s8-fusion-arts-080/100",
+    "name": "Smeargle",
+    "supertype": "Pokémon",
+    "number": "080/100",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/569581_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/569581_400w.jpg"
+    },
+    "tcgplayerId": "569581"
+  },
+  {
+    "id": "jp-s8-fusion-arts-002/100",
+    "name": "Metapod",
+    "supertype": "Pokémon",
+    "number": "002/100",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/569503_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/569503_400w.jpg"
+    },
+    "tcgplayerId": "569503"
+  },
+  {
+    "id": "jp-s8-fusion-arts-087/100",
+    "name": "Rookidee",
+    "supertype": "Pokémon",
+    "number": "087/100",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/569588_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/569588_400w.jpg"
+    },
+    "tcgplayerId": "569588"
+  },
+  {
+    "id": "jp-s8-fusion-arts-033/100",
+    "name": "Vikavolt",
+    "supertype": "Pokémon",
+    "number": "033/100",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/569534_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/569534_400w.jpg"
+    },
+    "tcgplayerId": "569534"
+  },
+  {
+    "id": "jp-s8-fusion-arts-099/100",
+    "name": "Skaters' Park",
+    "supertype": "Pokémon",
+    "number": "099/100",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/569600_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/569600_400w.jpg"
+    },
+    "tcgplayerId": "569600"
+  },
+  {
+    "id": "jp-s8-fusion-arts-016/100",
+    "name": "Heatmor",
+    "supertype": "Pokémon",
+    "number": "016/100",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/569517_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/569517_400w.jpg"
+    },
+    "tcgplayerId": "569517"
+  },
+  {
+    "id": "jp-s8-fusion-arts-098/100",
+    "name": "Chili \u0026 Cilan \u0026 Cress - 098/100",
+    "supertype": "Pokémon",
+    "number": "098/100",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/569599_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/569599_400w.jpg"
+    },
+    "tcgplayerId": "569599"
+  },
+  {
+    "id": "jp-s8-fusion-arts-070/100",
+    "name": "Togedemaru",
+    "supertype": "Pokémon",
+    "number": "070/100",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/569571_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/569571_400w.jpg"
+    },
+    "tcgplayerId": "569571"
+  },
+  {
+    "id": "jp-s8-fusion-arts-004/100",
+    "name": "Shroomish",
+    "supertype": "Pokémon",
+    "number": "004/100",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/569505_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/569505_400w.jpg"
+    },
+    "tcgplayerId": "569505"
+  },
+  {
+    "id": "jp-s8-fusion-arts-076/100",
+    "name": "Goomy",
+    "supertype": "Pokémon",
+    "number": "076/100",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/569577_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/569577_400w.jpg"
+    },
+    "tcgplayerId": "569577"
+  },
+  {
+    "id": "jp-s8-fusion-arts-018/100",
+    "name": "Staryu",
+    "supertype": "Pokémon",
+    "number": "018/100",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/569519_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/569519_400w.jpg"
+    },
+    "tcgplayerId": "569519"
+  }
+]

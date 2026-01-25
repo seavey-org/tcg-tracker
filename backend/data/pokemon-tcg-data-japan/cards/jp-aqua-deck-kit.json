@@ -1,0 +1,182 @@
+[
+  {
+    "id": "jp-aqua-deck-kit-014/033",
+    "name": "Raikou ex",
+    "supertype": "Pokémon",
+    "number": "014/033",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612759_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612759_400w.jpg"
+    },
+    "tcgplayerId": "612759"
+  },
+  {
+    "id": "jp-aqua-deck-kit-013/033",
+    "name": "Team Aqua's Kyogre",
+    "supertype": "Trainer",
+    "number": "013/033",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612774_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612774_400w.jpg"
+    },
+    "tcgplayerId": "612774"
+  },
+  {
+    "id": "jp-aqua-deck-kit-021/033",
+    "name": "Team Aqua's Poochyena - 021/033",
+    "supertype": "Trainer",
+    "number": "021/033",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612780_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612780_400w.jpg"
+    },
+    "tcgplayerId": "612780"
+  },
+  {
+    "id": "jp-aqua-deck-kit-022/033",
+    "name": "Team Aqua's Mightyena - 022/033",
+    "supertype": "Trainer",
+    "number": "022/033",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612777_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612777_400w.jpg"
+    },
+    "tcgplayerId": "612777"
+  },
+  {
+    "id": "jp-aqua-deck-kit-019/033",
+    "name": "Team Aqua's Manectric",
+    "supertype": "Trainer",
+    "number": "019/033",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612776_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612776_400w.jpg"
+    },
+    "tcgplayerId": "612776"
+  },
+  {
+    "id": "jp-aqua-deck-kit-012/033",
+    "name": "Team Aqua's Walrein - 012/033",
+    "supertype": "Trainer",
+    "number": "012/033",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612786_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612786_400w.jpg"
+    },
+    "tcgplayerId": "612786"
+  },
+  {
+    "id": "jp-aqua-deck-kit-005/033",
+    "name": "Team Aqua's Corphish - 005/033",
+    "supertype": "Trainer",
+    "number": "005/033",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612770_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612770_400w.jpg"
+    },
+    "tcgplayerId": "612770"
+  },
+  {
+    "id": "jp-aqua-deck-kit-008/033",
+    "name": "Team Aqua's Spheal - 008/033",
+    "supertype": "Trainer",
+    "number": "008/033",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612785_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612785_400w.jpg"
+    },
+    "tcgplayerId": "612785"
+  },
+  {
+    "id": "jp-aqua-deck-kit-011/033",
+    "name": "Team Aqua's Walrein - 011/033",
+    "supertype": "Trainer",
+    "number": "011/033",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612787_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612787_400w.jpg"
+    },
+    "tcgplayerId": "612787"
+  },
+  {
+    "id": "jp-aqua-deck-kit-007/033",
+    "name": "Team Aqua's Spheal - 007/033",
+    "supertype": "Trainer",
+    "number": "007/033",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612784_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612784_400w.jpg"
+    },
+    "tcgplayerId": "612784"
+  },
+  {
+    "id": "jp-aqua-deck-kit-003/033",
+    "name": "Team Aqua's Sharpedo",
+    "supertype": "Trainer",
+    "number": "003/033",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612783_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612783_400w.jpg"
+    },
+    "tcgplayerId": "612783"
+  },
+  {
+    "id": "jp-aqua-deck-kit-004/033",
+    "name": "Team Aqua's Corphish - 004/033",
+    "supertype": "Trainer",
+    "number": "004/033",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612769_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612769_400w.jpg"
+    },
+    "tcgplayerId": "612769"
+  },
+  {
+    "id": "jp-aqua-deck-kit-018/033",
+    "name": "Team Aqua's Electrike - 018/033",
+    "supertype": "Trainer",
+    "number": "018/033",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612772_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612772_400w.jpg"
+    },
+    "tcgplayerId": "612772"
+  },
+  {
+    "id": "jp-aqua-deck-kit-017/033",
+    "name": "Team Aqua's Electrike - 017/033",
+    "supertype": "Trainer",
+    "number": "017/033",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612773_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612773_400w.jpg"
+    },
+    "tcgplayerId": "612773"
+  },
+  {
+    "id": "jp-aqua-deck-kit-016/033",
+    "name": "Team Aqua's Lanturn",
+    "supertype": "Trainer",
+    "number": "016/033",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612775_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612775_400w.jpg"
+    },
+    "tcgplayerId": "612775"
+  }
+]

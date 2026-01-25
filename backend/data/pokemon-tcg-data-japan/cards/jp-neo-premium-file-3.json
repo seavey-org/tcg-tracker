@@ -1,0 +1,110 @@
+[
+  {
+    "id": "jp-neo-premium-file-3-celebi",
+    "name": "Celebi",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/607897_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/607897_400w.jpg"
+    },
+    "tcgplayerId": "607897"
+  },
+  {
+    "id": "jp-neo-premium-file-3-entei",
+    "name": "Entei",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/607898_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/607898_400w.jpg"
+    },
+    "tcgplayerId": "607898"
+  },
+  {
+    "id": "jp-neo-premium-file-3-lugia",
+    "name": "Lugia",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/607901_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/607901_400w.jpg"
+    },
+    "tcgplayerId": "607901"
+  },
+  {
+    "id": "jp-neo-premium-file-3-ho-oh",
+    "name": "Ho-oh",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/607905_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/607905_400w.jpg"
+    },
+    "tcgplayerId": "607905"
+  },
+  {
+    "id": "jp-neo-premium-file-3-suicune",
+    "name": "Suicune",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/607899_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/607899_400w.jpg"
+    },
+    "tcgplayerId": "607899"
+  },
+  {
+    "id": "jp-neo-premium-file-3-raikou",
+    "name": "Raikou",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/607900_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/607900_400w.jpg"
+    },
+    "tcgplayerId": "607900"
+  },
+  {
+    "id": "jp-neo-premium-file-3-sudowoodo",
+    "name": "Sudowoodo",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/607902_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/607902_400w.jpg"
+    },
+    "tcgplayerId": "607902"
+  },
+  {
+    "id": "jp-neo-premium-file-3-sneasel",
+    "name": "Sneasel",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/607904_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/607904_400w.jpg"
+    },
+    "tcgplayerId": "607904"
+  },
+  {
+    "id": "jp-neo-premium-file-3-skarmory",
+    "name": "Skarmory",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/607903_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/607903_400w.jpg"
+    },
+    "tcgplayerId": "607903"
+  }
+]

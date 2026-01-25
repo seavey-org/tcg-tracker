@@ -1,0 +1,50 @@
+[
+  {
+    "id": "jp-ss-silver-lance-jet-black-spirit-jumbo-pack-set-006/006",
+    "name": "Horror P Energy",
+    "supertype": "Energy",
+    "number": "006/006",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/593960_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/593960_400w.jpg"
+    },
+    "tcgplayerId": "593960"
+  },
+  {
+    "id": "jp-ss-silver-lance-jet-black-spirit-jumbo-pack-set-005/006",
+    "name": "Wash W Energy",
+    "supertype": "Energy",
+    "number": "005/006",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/593959_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/593959_400w.jpg"
+    },
+    "tcgplayerId": "593959"
+  },
+  {
+    "id": "jp-ss-silver-lance-jet-black-spirit-jumbo-pack-set-003/006",
+    "name": "Suspicious Food Tin",
+    "supertype": "Pokémon",
+    "number": "003/006",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/593957_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/593957_400w.jpg"
+    },
+    "tcgplayerId": "593957"
+  },
+  {
+    "id": "jp-ss-silver-lance-jet-black-spirit-jumbo-pack-set-002/006",
+    "name": "Shadow Rider Calyrex V",
+    "supertype": "Pokémon",
+    "number": "002/006",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/593956_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/593956_400w.jpg"
+    },
+    "tcgplayerId": "593956"
+  }
+]

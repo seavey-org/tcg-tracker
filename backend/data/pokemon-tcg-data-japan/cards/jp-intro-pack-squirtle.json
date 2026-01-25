@@ -1,0 +1,254 @@
+[
+  {
+    "id": "jp-intro-pack-squirtle-blastoise",
+    "name": "Blastoise",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/614651_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/614651_400w.jpg"
+    },
+    "tcgplayerId": "614651"
+  },
+  {
+    "id": "jp-intro-pack-squirtle-16",
+    "name": "Squirtle - 16",
+    "supertype": "Pokémon",
+    "number": "16",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/614664_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/614664_400w.jpg"
+    },
+    "tcgplayerId": "614664"
+  },
+  {
+    "id": "jp-intro-pack-squirtle-37",
+    "name": "Squirtle - 37",
+    "supertype": "Pokémon",
+    "number": "37",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/614666_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/614666_400w.jpg"
+    },
+    "tcgplayerId": "614666"
+  },
+  {
+    "id": "jp-intro-pack-squirtle-10",
+    "name": "Wartortle - 10",
+    "supertype": "Pokémon",
+    "number": "10",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/614670_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/614670_400w.jpg"
+    },
+    "tcgplayerId": "614670"
+  },
+  {
+    "id": "jp-intro-pack-squirtle-32",
+    "name": "Arcanine",
+    "supertype": "Pokémon",
+    "number": "32",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/614630_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/614630_400w.jpg"
+    },
+    "tcgplayerId": "614630"
+  },
+  {
+    "id": "jp-intro-pack-squirtle-40",
+    "name": "Squirtle - 40",
+    "supertype": "Pokémon",
+    "number": "40",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/614667_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/614667_400w.jpg"
+    },
+    "tcgplayerId": "614667"
+  },
+  {
+    "id": "jp-intro-pack-squirtle-3",
+    "name": "Wartortle - 3",
+    "supertype": "Pokémon",
+    "number": "3",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/614669_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/614669_400w.jpg"
+    },
+    "tcgplayerId": "614669"
+  },
+  {
+    "id": "jp-intro-pack-squirtle-26",
+    "name": "Growlithe - 26",
+    "supertype": "Pokémon",
+    "number": "26",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/614657_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/614657_400w.jpg"
+    },
+    "tcgplayerId": "614657"
+  },
+  {
+    "id": "jp-intro-pack-squirtle-18",
+    "name": "Squirtle - 18",
+    "supertype": "Pokémon",
+    "number": "18",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/614665_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/614665_400w.jpg"
+    },
+    "tcgplayerId": "614665"
+  },
+  {
+    "id": "jp-intro-pack-squirtle-25",
+    "name": "Double Colorless Energy",
+    "supertype": "Energy",
+    "number": "25",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/614653_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/614653_400w.jpg"
+    },
+    "tcgplayerId": "614653"
+  },
+  {
+    "id": "jp-intro-pack-squirtle-39",
+    "name": "Magmar",
+    "supertype": "Pokémon",
+    "number": "39",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/614660_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/614660_400w.jpg"
+    },
+    "tcgplayerId": "614660"
+  },
+  {
+    "id": "jp-intro-pack-squirtle-13",
+    "name": "Spearow",
+    "supertype": "Pokémon",
+    "number": "13",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/614663_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/614663_400w.jpg"
+    },
+    "tcgplayerId": "614663"
+  },
+  {
+    "id": "jp-intro-pack-squirtle-1",
+    "name": "Growlithe - 1",
+    "supertype": "Pokémon",
+    "number": "1",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/614656_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/614656_400w.jpg"
+    },
+    "tcgplayerId": "614656"
+  },
+  {
+    "id": "jp-intro-pack-squirtle-9",
+    "name": "Poliwag",
+    "supertype": "Pokémon",
+    "number": "9",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/614661_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/614661_400w.jpg"
+    },
+    "tcgplayerId": "614661"
+  },
+  {
+    "id": "jp-intro-pack-squirtle-17",
+    "name": "Basic Fighting Energy - 17",
+    "supertype": "Energy",
+    "number": "17",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/614633_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/614633_400w.jpg"
+    },
+    "tcgplayerId": "614633"
+  },
+  {
+    "id": "jp-intro-pack-squirtle-38",
+    "name": "Basic Water Energy - 38",
+    "supertype": "Energy",
+    "number": "38",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/614649_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/614649_400w.jpg"
+    },
+    "tcgplayerId": "614649"
+  },
+  {
+    "id": "jp-intro-pack-squirtle-11",
+    "name": "Basic Fire Energy - 11",
+    "supertype": "Energy",
+    "number": "11",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/614637_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/614637_400w.jpg"
+    },
+    "tcgplayerId": "614637"
+  },
+  {
+    "id": "jp-intro-pack-squirtle-34",
+    "name": "Basic Fighting Energy - 34",
+    "supertype": "Energy",
+    "number": "34",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/614634_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/614634_400w.jpg"
+    },
+    "tcgplayerId": "614634"
+  },
+  {
+    "id": "jp-intro-pack-squirtle-12",
+    "name": "Basic Fighting Energy - 12",
+    "supertype": "Energy",
+    "number": "12",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/614631_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/614631_400w.jpg"
+    },
+    "tcgplayerId": "614631"
+  },
+  {
+    "id": "jp-intro-pack-squirtle-33",
+    "name": "Basic Fire Energy - 33",
+    "supertype": "Energy",
+    "number": "33",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/614640_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/614640_400w.jpg"
+    },
+    "tcgplayerId": "614640"
+  },
+  {
+    "id": "jp-intro-pack-squirtle-14",
+    "name": "Jigglypuff",
+    "supertype": "Pokémon",
+    "number": "14",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/614658_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/614658_400w.jpg"
+    },
+    "tcgplayerId": "614658"
+  }
+]

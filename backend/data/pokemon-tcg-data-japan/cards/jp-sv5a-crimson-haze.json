@@ -1,0 +1,1190 @@
+[
+  {
+    "id": "jp-sv5a-crimson-haze-crimson-haze-booster-box-case",
+    "name": "Crimson Haze Booster Box Case",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/625585_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/625585_400w.jpg"
+    },
+    "tcgplayerId": "625585"
+  },
+  {
+    "id": "jp-sv5a-crimson-haze-090/066",
+    "name": "Greninja ex - 090/066",
+    "supertype": "Pokémon",
+    "number": "090/066",
+    "rarity": "Special Art Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/566145_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/566145_400w.jpg"
+    },
+    "tcgplayerId": "566145"
+  },
+  {
+    "id": "jp-sv5a-crimson-haze-crimson-haze-booster-box",
+    "name": "Crimson Haze Booster Box",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/565226_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/565226_400w.jpg"
+    },
+    "tcgplayerId": "565226"
+  },
+  {
+    "id": "jp-sv5a-crimson-haze-092/066",
+    "name": "Perrin - 092/066",
+    "supertype": "Pokémon",
+    "number": "092/066",
+    "rarity": "Special Art Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/566147_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/566147_400w.jpg"
+    },
+    "tcgplayerId": "566147"
+  },
+  {
+    "id": "jp-sv5a-crimson-haze-091/066",
+    "name": "Bloodmoon Ursaluna ex - 091/066",
+    "supertype": "Pokémon",
+    "number": "091/066",
+    "rarity": "Special Art Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/566146_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/566146_400w.jpg"
+    },
+    "tcgplayerId": "566146"
+  },
+  {
+    "id": "jp-sv5a-crimson-haze-078/066",
+    "name": "Eevee - 078/066",
+    "supertype": "Pokémon",
+    "number": "078/066",
+    "rarity": "Art Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/566133_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/566133_400w.jpg"
+    },
+    "tcgplayerId": "566133"
+  },
+  {
+    "id": "jp-sv5a-crimson-haze-093/066",
+    "name": "Lana's Aid - 093/066",
+    "supertype": "Trainer",
+    "number": "093/066",
+    "rarity": "Special Art Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/566148_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/566148_400w.jpg"
+    },
+    "tcgplayerId": "566148"
+  },
+  {
+    "id": "jp-sv5a-crimson-haze-089/066",
+    "name": "Sinistcha ex - 089/066",
+    "supertype": "Pokémon",
+    "number": "089/066",
+    "rarity": "Special Art Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/566144_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/566144_400w.jpg"
+    },
+    "tcgplayerId": "566144"
+  },
+  {
+    "id": "jp-sv5a-crimson-haze-075/066",
+    "name": "Hisuian Growlithe - 075/066",
+    "supertype": "Pokémon",
+    "number": "075/066",
+    "rarity": "Art Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/566130_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/566130_400w.jpg"
+    },
+    "tcgplayerId": "566130"
+  },
+  {
+    "id": "jp-sv5a-crimson-haze-094/066",
+    "name": "Bloodmoon Ursaluna ex - 094/066",
+    "supertype": "Pokémon",
+    "number": "094/066",
+    "rarity": "Ultra Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/566149_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/566149_400w.jpg"
+    },
+    "tcgplayerId": "566149"
+  },
+  {
+    "id": "jp-sv5a-crimson-haze-096/066",
+    "name": "Luminous Energy",
+    "supertype": "Energy",
+    "number": "096/066",
+    "rarity": "Ultra Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/566151_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/566151_400w.jpg"
+    },
+    "tcgplayerId": "566151"
+  },
+  {
+    "id": "jp-sv5a-crimson-haze-083/066",
+    "name": "Greninja ex - 083/066",
+    "supertype": "Pokémon",
+    "number": "083/066",
+    "rarity": "Super Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/566138_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/566138_400w.jpg"
+    },
+    "tcgplayerId": "566138"
+  },
+  {
+    "id": "jp-sv5a-crimson-haze-087/066",
+    "name": "Perrin - 087/066",
+    "supertype": "Pokémon",
+    "number": "087/066",
+    "rarity": "Super Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/566142_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/566142_400w.jpg"
+    },
+    "tcgplayerId": "566142"
+  },
+  {
+    "id": "jp-sv5a-crimson-haze-088/066",
+    "name": "Lana's Aid - 088/066",
+    "supertype": "Trainer",
+    "number": "088/066",
+    "rarity": "Super Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/566143_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/566143_400w.jpg"
+    },
+    "tcgplayerId": "566143"
+  },
+  {
+    "id": "jp-sv5a-crimson-haze-095/066",
+    "name": "Rescue Board",
+    "supertype": "Pokémon",
+    "number": "095/066",
+    "rarity": "Ultra Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/566150_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/566150_400w.jpg"
+    },
+    "tcgplayerId": "566150"
+  },
+  {
+    "id": "jp-sv5a-crimson-haze-crimson-haze-booster-pack",
+    "name": "Crimson Haze Booster Pack",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/565227_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/565227_400w.jpg"
+    },
+    "tcgplayerId": "565227"
+  },
+  {
+    "id": "jp-sv5a-crimson-haze-070/066",
+    "name": "Infernape - 070/066",
+    "supertype": "Pokémon",
+    "number": "070/066",
+    "rarity": "Art Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/566125_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/566125_400w.jpg"
+    },
+    "tcgplayerId": "566125"
+  },
+  {
+    "id": "jp-sv5a-crimson-haze-067/066",
+    "name": "Pinsir - 067/066",
+    "supertype": "Pokémon",
+    "number": "067/066",
+    "rarity": "Art Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/566122_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/566122_400w.jpg"
+    },
+    "tcgplayerId": "566122"
+  },
+  {
+    "id": "jp-sv5a-crimson-haze-071/066",
+    "name": "Phione - 071/066",
+    "supertype": "Pokémon",
+    "number": "071/066",
+    "rarity": "Art Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/566126_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/566126_400w.jpg"
+    },
+    "tcgplayerId": "566126"
+  },
+  {
+    "id": "jp-sv5a-crimson-haze-081/066",
+    "name": "Iron Thorns ex - 081/066",
+    "supertype": "Pokémon",
+    "number": "081/066",
+    "rarity": "Super Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/566136_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/566136_400w.jpg"
+    },
+    "tcgplayerId": "566136"
+  },
+  {
+    "id": "jp-sv5a-crimson-haze-077/066",
+    "name": "Applin - 077/066",
+    "supertype": "Pokémon",
+    "number": "077/066",
+    "rarity": "Art Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/566132_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/566132_400w.jpg"
+    },
+    "tcgplayerId": "566132"
+  },
+  {
+    "id": "jp-sv5a-crimson-haze-074/066",
+    "name": "Enamorus - 074/066",
+    "supertype": "Pokémon",
+    "number": "074/066",
+    "rarity": "Art Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/566129_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/566129_400w.jpg"
+    },
+    "tcgplayerId": "566129"
+  },
+  {
+    "id": "jp-sv5a-crimson-haze-069/066",
+    "name": "Torkoal - 069/066",
+    "supertype": "Pokémon",
+    "number": "069/066",
+    "rarity": "Art Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/566124_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/566124_400w.jpg"
+    },
+    "tcgplayerId": "566124"
+  },
+  {
+    "id": "jp-sv5a-crimson-haze-082/066",
+    "name": "Scream Tail ex - 082/066",
+    "supertype": "Pokémon",
+    "number": "082/066",
+    "rarity": "Super Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/566137_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/566137_400w.jpg"
+    },
+    "tcgplayerId": "566137"
+  },
+  {
+    "id": "jp-sv5a-crimson-haze-076/066",
+    "name": "Probopass - 076/066",
+    "supertype": "Pokémon",
+    "number": "076/066",
+    "rarity": "Art Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/566131_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/566131_400w.jpg"
+    },
+    "tcgplayerId": "566131"
+  },
+  {
+    "id": "jp-sv5a-crimson-haze-068/066",
+    "name": "Poltchageist - 068/066",
+    "supertype": "Pokémon",
+    "number": "068/066",
+    "rarity": "Art Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/566123_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/566123_400w.jpg"
+    },
+    "tcgplayerId": "566123"
+  },
+  {
+    "id": "jp-sv5a-crimson-haze-079/066",
+    "name": "Sinistcha ex - 079/066",
+    "supertype": "Pokémon",
+    "number": "079/066",
+    "rarity": "Super Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/566134_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/566134_400w.jpg"
+    },
+    "tcgplayerId": "566134"
+  },
+  {
+    "id": "jp-sv5a-crimson-haze-073/066",
+    "name": "Heliolisk - 073/066",
+    "supertype": "Pokémon",
+    "number": "073/066",
+    "rarity": "Art Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/566128_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/566128_400w.jpg"
+    },
+    "tcgplayerId": "566128"
+  },
+  {
+    "id": "jp-sv5a-crimson-haze-072/066",
+    "name": "Cramorant - 072/066",
+    "supertype": "Pokémon",
+    "number": "072/066",
+    "rarity": "Art Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/566127_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/566127_400w.jpg"
+    },
+    "tcgplayerId": "566127"
+  },
+  {
+    "id": "jp-sv5a-crimson-haze-084/066",
+    "name": "Bloodmoon Ursaluna ex - 084/066",
+    "supertype": "Pokémon",
+    "number": "084/066",
+    "rarity": "Super Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/566139_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/566139_400w.jpg"
+    },
+    "tcgplayerId": "566139"
+  },
+  {
+    "id": "jp-sv5a-crimson-haze-080/066",
+    "name": "Magcargo ex - 080/066",
+    "supertype": "Pokémon",
+    "number": "080/066",
+    "rarity": "Super Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/566135_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/566135_400w.jpg"
+    },
+    "tcgplayerId": "566135"
+  },
+  {
+    "id": "jp-sv5a-crimson-haze-053/066",
+    "name": "Unfair Stamp",
+    "supertype": "Pokémon",
+    "number": "053/066",
+    "rarity": "ACE Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/566108_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/566108_400w.jpg"
+    },
+    "tcgplayerId": "566108"
+  },
+  {
+    "id": "jp-sv5a-crimson-haze-059/066",
+    "name": "Survival Brace",
+    "supertype": "Pokémon",
+    "number": "059/066",
+    "rarity": "ACE Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/566114_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/566114_400w.jpg"
+    },
+    "tcgplayerId": "566114"
+  },
+  {
+    "id": "jp-sv5a-crimson-haze-086/066",
+    "name": "Lucian - 086/066",
+    "supertype": "Pokémon",
+    "number": "086/066",
+    "rarity": "Super Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/566141_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/566141_400w.jpg"
+    },
+    "tcgplayerId": "566141"
+  },
+  {
+    "id": "jp-sv5a-crimson-haze-085/066",
+    "name": "Caretaker - 085/066",
+    "supertype": "Pokémon",
+    "number": "085/066",
+    "rarity": "Super Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/566140_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/566140_400w.jpg"
+    },
+    "tcgplayerId": "566140"
+  },
+  {
+    "id": "jp-sv5a-crimson-haze-026/066",
+    "name": "Walking Wake",
+    "supertype": "Pokémon",
+    "number": "026/066",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/566081_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/566081_400w.jpg"
+    },
+    "tcgplayerId": "566081"
+  },
+  {
+    "id": "jp-sv5a-crimson-haze-042/066",
+    "name": "Hisuian Arcanine",
+    "supertype": "Pokémon",
+    "number": "042/066",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/566097_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/566097_400w.jpg"
+    },
+    "tcgplayerId": "566097"
+  },
+  {
+    "id": "jp-sv5a-crimson-haze-045/066",
+    "name": "Greninja ex - 045/066",
+    "supertype": "Pokémon",
+    "number": "045/066",
+    "rarity": "Double Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/566100_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/566100_400w.jpg"
+    },
+    "tcgplayerId": "566100"
+  },
+  {
+    "id": "jp-sv5a-crimson-haze-040/066",
+    "name": "Scream Tail ex - 040/066",
+    "supertype": "Pokémon",
+    "number": "040/066",
+    "rarity": "Double Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/566095_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/566095_400w.jpg"
+    },
+    "tcgplayerId": "566095"
+  },
+  {
+    "id": "jp-sv5a-crimson-haze-027/066",
+    "name": "Zapdos",
+    "supertype": "Pokémon",
+    "number": "027/066",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/566082_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/566082_400w.jpg"
+    },
+    "tcgplayerId": "566082"
+  },
+  {
+    "id": "jp-sv5a-crimson-haze-039/066",
+    "name": "Enamorus - 039/066",
+    "supertype": "Pokémon",
+    "number": "039/066",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/566094_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/566094_400w.jpg"
+    },
+    "tcgplayerId": "566094"
+  },
+  {
+    "id": "jp-sv5a-crimson-haze-055/066",
+    "name": "Hyper Aroma",
+    "supertype": "Pokémon",
+    "number": "055/066",
+    "rarity": "ACE Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/566110_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/566110_400w.jpg"
+    },
+    "tcgplayerId": "566110"
+  },
+  {
+    "id": "jp-sv5a-crimson-haze-013/066",
+    "name": "Magcargo ex - 013/066",
+    "supertype": "Pokémon",
+    "number": "013/066",
+    "rarity": "Double Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/566068_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/566068_400w.jpg"
+    },
+    "tcgplayerId": "566068"
+  },
+  {
+    "id": "jp-sv5a-crimson-haze-052/066",
+    "name": "Bloodmoon Ursaluna ex - 052/066",
+    "supertype": "Pokémon",
+    "number": "052/066",
+    "rarity": "Double Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/566107_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/566107_400w.jpg"
+    },
+    "tcgplayerId": "566107"
+  },
+  {
+    "id": "jp-sv5a-crimson-haze-009/066",
+    "name": "Sinistcha ex - 009/066",
+    "supertype": "Pokémon",
+    "number": "009/066",
+    "rarity": "Double Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/566064_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/566064_400w.jpg"
+    },
+    "tcgplayerId": "566064"
+  },
+  {
+    "id": "jp-sv5a-crimson-haze-017/066",
+    "name": "Infernape - 017/066",
+    "supertype": "Pokémon",
+    "number": "017/066",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/566072_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/566072_400w.jpg"
+    },
+    "tcgplayerId": "566072"
+  },
+  {
+    "id": "jp-sv5a-crimson-haze-058/066",
+    "name": "Love Ball",
+    "supertype": "Pokémon",
+    "number": "058/066",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/566113_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/566113_400w.jpg"
+    },
+    "tcgplayerId": "566113"
+  },
+  {
+    "id": "jp-sv5a-crimson-haze-063/066",
+    "name": "Perrin - 063/066",
+    "supertype": "Pokémon",
+    "number": "063/066",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/566118_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/566118_400w.jpg"
+    },
+    "tcgplayerId": "566118"
+  },
+  {
+    "id": "jp-sv5a-crimson-haze-051/066",
+    "name": "Snorlax",
+    "supertype": "Pokémon",
+    "number": "051/066",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/566106_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/566106_400w.jpg"
+    },
+    "tcgplayerId": "566106"
+  },
+  {
+    "id": "jp-sv5a-crimson-haze-033/066",
+    "name": "Iron Thorns ex - 033/066",
+    "supertype": "Pokémon",
+    "number": "033/066",
+    "rarity": "Double Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/566088_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/566088_400w.jpg"
+    },
+    "tcgplayerId": "566088"
+  },
+  {
+    "id": "jp-sv5a-crimson-haze-047/066",
+    "name": "Ting-Lu",
+    "supertype": "Pokémon",
+    "number": "047/066",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/566102_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/566102_400w.jpg"
+    },
+    "tcgplayerId": "566102"
+  },
+  {
+    "id": "jp-sv5a-crimson-haze-050/066",
+    "name": "Eevee - 050/066",
+    "supertype": "Pokémon",
+    "number": "050/066",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/566105_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/566105_400w.jpg"
+    },
+    "tcgplayerId": "566105"
+  },
+  {
+    "id": "jp-sv5a-crimson-haze-021/066",
+    "name": "Glaceon",
+    "supertype": "Pokémon",
+    "number": "021/066",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/566076_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/566076_400w.jpg"
+    },
+    "tcgplayerId": "566076"
+  },
+  {
+    "id": "jp-sv5a-crimson-haze-007/066",
+    "name": "Iron Leaves",
+    "supertype": "Pokémon",
+    "number": "007/066",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/566062_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/566062_400w.jpg"
+    },
+    "tcgplayerId": "566062"
+  },
+  {
+    "id": "jp-sv5a-crimson-haze-025/066",
+    "name": "Cramorant - 025/066",
+    "supertype": "Pokémon",
+    "number": "025/066",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/566080_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/566080_400w.jpg"
+    },
+    "tcgplayerId": "566080"
+  },
+  {
+    "id": "jp-sv5a-crimson-haze-023/066",
+    "name": "Froakie",
+    "supertype": "Pokémon",
+    "number": "023/066",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/566078_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/566078_400w.jpg"
+    },
+    "tcgplayerId": "566078"
+  },
+  {
+    "id": "jp-sv5a-crimson-haze-014/066",
+    "name": "Torkoal - 014/066",
+    "supertype": "Pokémon",
+    "number": "014/066",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/566069_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/566069_400w.jpg"
+    },
+    "tcgplayerId": "566069"
+  },
+  {
+    "id": "jp-sv5a-crimson-haze-029/066",
+    "name": "Heliolisk - 029/066",
+    "supertype": "Pokémon",
+    "number": "029/066",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/566084_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/566084_400w.jpg"
+    },
+    "tcgplayerId": "566084"
+  },
+  {
+    "id": "jp-sv5a-crimson-haze-032/066",
+    "name": "Bellibolt",
+    "supertype": "Pokémon",
+    "number": "032/066",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/566087_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/566087_400w.jpg"
+    },
+    "tcgplayerId": "566087"
+  },
+  {
+    "id": "jp-sv5a-crimson-haze-044/066",
+    "name": "Probopass - 044/066",
+    "supertype": "Pokémon",
+    "number": "044/066",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/566099_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/566099_400w.jpg"
+    },
+    "tcgplayerId": "566099"
+  },
+  {
+    "id": "jp-sv5a-crimson-haze-001/066",
+    "name": "Tangela",
+    "supertype": "Pokémon",
+    "number": "001/066",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/566056_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/566056_400w.jpg"
+    },
+    "tcgplayerId": "566056"
+  },
+  {
+    "id": "jp-sv5a-crimson-haze-006/066",
+    "name": "Leafeon",
+    "supertype": "Pokémon",
+    "number": "006/066",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/566061_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/566061_400w.jpg"
+    },
+    "tcgplayerId": "566061"
+  },
+  {
+    "id": "jp-sv5a-crimson-haze-018/066",
+    "name": "Chi-Yu",
+    "supertype": "Pokémon",
+    "number": "018/066",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/566073_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/566073_400w.jpg"
+    },
+    "tcgplayerId": "566073"
+  },
+  {
+    "id": "jp-sv5a-crimson-haze-066/066",
+    "name": "Boomerang Energy",
+    "supertype": "Energy",
+    "number": "066/066",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/566121_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/566121_400w.jpg"
+    },
+    "tcgplayerId": "566121"
+  },
+  {
+    "id": "jp-sv5a-crimson-haze-049/066",
+    "name": "Dipplin",
+    "supertype": "Pokémon",
+    "number": "049/066",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/566104_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/566104_400w.jpg"
+    },
+    "tcgplayerId": "566104"
+  },
+  {
+    "id": "jp-sv5a-crimson-haze-041/066",
+    "name": "Hisuian Growlithe - 041/066",
+    "supertype": "Pokémon",
+    "number": "041/066",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/566096_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/566096_400w.jpg"
+    },
+    "tcgplayerId": "566096"
+  },
+  {
+    "id": "jp-sv5a-crimson-haze-024/066",
+    "name": "Frogadier",
+    "supertype": "Pokémon",
+    "number": "024/066",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/566079_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/566079_400w.jpg"
+    },
+    "tcgplayerId": "566079"
+  },
+  {
+    "id": "jp-sv5a-crimson-haze-064/066",
+    "name": "Lana's Aid - 064/066",
+    "supertype": "Trainer",
+    "number": "064/066",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/566119_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/566119_400w.jpg"
+    },
+    "tcgplayerId": "566119"
+  },
+  {
+    "id": "jp-sv5a-crimson-haze-057/066",
+    "name": "Pokemon Catcher",
+    "supertype": "Pokémon",
+    "number": "057/066",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/566112_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/566112_400w.jpg"
+    },
+    "tcgplayerId": "566112"
+  },
+  {
+    "id": "jp-sv5a-crimson-haze-054/066",
+    "name": "Enhanced Hammer",
+    "supertype": "Pokémon",
+    "number": "054/066",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/566109_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/566109_400w.jpg"
+    },
+    "tcgplayerId": "566109"
+  },
+  {
+    "id": "jp-sv5a-crimson-haze-030/066",
+    "name": "Morpeko",
+    "supertype": "Pokémon",
+    "number": "030/066",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/566085_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/566085_400w.jpg"
+    },
+    "tcgplayerId": "566085"
+  },
+  {
+    "id": "jp-sv5a-crimson-haze-010/066",
+    "name": "Vulpix",
+    "supertype": "Pokémon",
+    "number": "010/066",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/566065_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/566065_400w.jpg"
+    },
+    "tcgplayerId": "566065"
+  },
+  {
+    "id": "jp-sv5a-crimson-haze-016/066",
+    "name": "Monferno",
+    "supertype": "Pokémon",
+    "number": "016/066",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/566071_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/566071_400w.jpg"
+    },
+    "tcgplayerId": "566071"
+  },
+  {
+    "id": "jp-sv5a-crimson-haze-002/066",
+    "name": "Tangrowth",
+    "supertype": "Pokémon",
+    "number": "002/066",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/566057_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/566057_400w.jpg"
+    },
+    "tcgplayerId": "566057"
+  },
+  {
+    "id": "jp-sv5a-crimson-haze-037/066",
+    "name": "Floette",
+    "supertype": "Pokémon",
+    "number": "037/066",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/566092_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/566092_400w.jpg"
+    },
+    "tcgplayerId": "566092"
+  },
+  {
+    "id": "jp-sv5a-crimson-haze-056/066",
+    "name": "Switch",
+    "supertype": "Trainer",
+    "number": "056/066",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/566111_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/566111_400w.jpg"
+    },
+    "tcgplayerId": "566111"
+  },
+  {
+    "id": "jp-sv5a-crimson-haze-038/066",
+    "name": "Florges",
+    "supertype": "Pokémon",
+    "number": "038/066",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/566093_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/566093_400w.jpg"
+    },
+    "tcgplayerId": "566093"
+  },
+  {
+    "id": "jp-sv5a-crimson-haze-011/066",
+    "name": "Ninetales",
+    "supertype": "Pokémon",
+    "number": "011/066",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/566066_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/566066_400w.jpg"
+    },
+    "tcgplayerId": "566066"
+  },
+  {
+    "id": "jp-sv5a-crimson-haze-043/066",
+    "name": "Nosepass",
+    "supertype": "Pokémon",
+    "number": "043/066",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/566098_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/566098_400w.jpg"
+    },
+    "tcgplayerId": "566098"
+  },
+  {
+    "id": "jp-sv5a-crimson-haze-034/066",
+    "name": "Girafarig",
+    "supertype": "Pokémon",
+    "number": "034/066",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/566089_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/566089_400w.jpg"
+    },
+    "tcgplayerId": "566089"
+  },
+  {
+    "id": "jp-sv5a-crimson-haze-008/066",
+    "name": "Poltchageist - 008/066",
+    "supertype": "Pokémon",
+    "number": "008/066",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/566063_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/566063_400w.jpg"
+    },
+    "tcgplayerId": "566063"
+  },
+  {
+    "id": "jp-sv5a-crimson-haze-020/066",
+    "name": "Crawdaunt",
+    "supertype": "Pokémon",
+    "number": "020/066",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/566075_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/566075_400w.jpg"
+    },
+    "tcgplayerId": "566075"
+  },
+  {
+    "id": "jp-sv5a-crimson-haze-031/066",
+    "name": "Tadbulb",
+    "supertype": "Pokémon",
+    "number": "031/066",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/566086_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/566086_400w.jpg"
+    },
+    "tcgplayerId": "566086"
+  },
+  {
+    "id": "jp-sv5a-crimson-haze-012/066",
+    "name": "Slugma",
+    "supertype": "Pokémon",
+    "number": "012/066",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/566067_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/566067_400w.jpg"
+    },
+    "tcgplayerId": "566067"
+  },
+  {
+    "id": "jp-sv5a-crimson-haze-048/066",
+    "name": "Applin - 048/066",
+    "supertype": "Pokémon",
+    "number": "048/066",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/566103_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/566103_400w.jpg"
+    },
+    "tcgplayerId": "566103"
+  },
+  {
+    "id": "jp-sv5a-crimson-haze-036/066",
+    "name": "Flabebe",
+    "supertype": "Pokémon",
+    "number": "036/066",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/566091_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/566091_400w.jpg"
+    },
+    "tcgplayerId": "566091"
+  },
+  {
+    "id": "jp-sv5a-crimson-haze-061/066",
+    "name": "Caretaker - 061/066",
+    "supertype": "Pokémon",
+    "number": "061/066",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/566116_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/566116_400w.jpg"
+    },
+    "tcgplayerId": "566116"
+  },
+  {
+    "id": "jp-sv5a-crimson-haze-060/066",
+    "name": "Lucky Helmet",
+    "supertype": "Pokémon",
+    "number": "060/066",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/566115_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/566115_400w.jpg"
+    },
+    "tcgplayerId": "566115"
+  },
+  {
+    "id": "jp-sv5a-crimson-haze-035/066",
+    "name": "Farigiraf",
+    "supertype": "Pokémon",
+    "number": "035/066",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/566090_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/566090_400w.jpg"
+    },
+    "tcgplayerId": "566090"
+  },
+  {
+    "id": "jp-sv5a-crimson-haze-046/066",
+    "name": "Hawlucha",
+    "supertype": "Pokémon",
+    "number": "046/066",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/566101_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/566101_400w.jpg"
+    },
+    "tcgplayerId": "566101"
+  },
+  {
+    "id": "jp-sv5a-crimson-haze-028/066",
+    "name": "Helioptile",
+    "supertype": "Pokémon",
+    "number": "028/066",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/566083_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/566083_400w.jpg"
+    },
+    "tcgplayerId": "566083"
+  },
+  {
+    "id": "jp-sv5a-crimson-haze-004/066",
+    "name": "Spinarak",
+    "supertype": "Pokémon",
+    "number": "004/066",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/566059_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/566059_400w.jpg"
+    },
+    "tcgplayerId": "566059"
+  },
+  {
+    "id": "jp-sv5a-crimson-haze-015/100",
+    "name": "Chimchar",
+    "supertype": "Pokémon",
+    "number": "015/100",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/566070_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/566070_400w.jpg"
+    },
+    "tcgplayerId": "566070"
+  },
+  {
+    "id": "jp-sv5a-crimson-haze-022/066",
+    "name": "Phione - 022/066",
+    "supertype": "Pokémon",
+    "number": "022/066",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/566077_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/566077_400w.jpg"
+    },
+    "tcgplayerId": "566077"
+  },
+  {
+    "id": "jp-sv5a-crimson-haze-019/066",
+    "name": "Corphish",
+    "supertype": "Pokémon",
+    "number": "019/066",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/566074_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/566074_400w.jpg"
+    },
+    "tcgplayerId": "566074"
+  },
+  {
+    "id": "jp-sv5a-crimson-haze-003/066",
+    "name": "Pinsir - 003/066",
+    "supertype": "Pokémon",
+    "number": "003/066",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/566058_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/566058_400w.jpg"
+    },
+    "tcgplayerId": "566058"
+  },
+  {
+    "id": "jp-sv5a-crimson-haze-005/066",
+    "name": "Ariados",
+    "supertype": "Pokémon",
+    "number": "005/066",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/566060_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/566060_400w.jpg"
+    },
+    "tcgplayerId": "566060"
+  },
+  {
+    "id": "jp-sv5a-crimson-haze-065/066",
+    "name": "Community Center",
+    "supertype": "Pokémon",
+    "number": "065/066",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/566120_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/566120_400w.jpg"
+    },
+    "tcgplayerId": "566120"
+  },
+  {
+    "id": "jp-sv5a-crimson-haze-062/066",
+    "name": "Lucian - 062/066",
+    "supertype": "Pokémon",
+    "number": "062/066",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/566117_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/566117_400w.jpg"
+    },
+    "tcgplayerId": "566117"
+  }
+]

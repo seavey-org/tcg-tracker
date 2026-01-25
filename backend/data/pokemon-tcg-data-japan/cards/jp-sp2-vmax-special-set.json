@@ -1,0 +1,62 @@
+[
+  {
+    "id": "jp-sp2-vmax-special-set-003/004",
+    "name": "Morpeko VMAX",
+    "supertype": "Pokémon",
+    "number": "003/004",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/594898_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/594898_400w.jpg"
+    },
+    "tcgplayerId": "594898"
+  },
+  {
+    "id": "jp-sp2-vmax-special-set-002/004",
+    "name": "Cinderace VMAX",
+    "supertype": "Pokémon",
+    "number": "002/004",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/594899_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/594899_400w.jpg"
+    },
+    "tcgplayerId": "594899"
+  },
+  {
+    "id": "jp-sp2-vmax-special-set-004/004",
+    "name": "Cramorant VMAX",
+    "supertype": "Pokémon",
+    "number": "004/004",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/594901_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/594901_400w.jpg"
+    },
+    "tcgplayerId": "594901"
+  },
+  {
+    "id": "jp-sp2-vmax-special-set-001/004",
+    "name": "Dhelmise VMAX",
+    "supertype": "Pokémon",
+    "number": "001/004",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/594900_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/594900_400w.jpg"
+    },
+    "tcgplayerId": "594900"
+  },
+  {
+    "id": "jp-sp2-vmax-special-set-GRA",
+    "name": "Grass Energy (Mirror Holofoil)",
+    "supertype": "Energy",
+    "number": "GRA",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/594904_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/594904_400w.jpg"
+    },
+    "tcgplayerId": "594904"
+  }
+]

@@ -1,0 +1,746 @@
+[
+  {
+    "id": "jp-l2-revival-legends-044/080",
+    "name": "Tyranitar",
+    "supertype": "Pokémon",
+    "number": "044/080",
+    "rarity": "Super Rare Holo",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608838_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608838_400w.jpg"
+    },
+    "tcgplayerId": "608838"
+  },
+  {
+    "id": "jp-l2-revival-legends-048/080",
+    "name": "Scizor",
+    "supertype": "Pokémon",
+    "number": "048/080",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608842_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608842_400w.jpg"
+    },
+    "tcgplayerId": "608842"
+  },
+  {
+    "id": "jp-l2-revival-legends-037/080",
+    "name": "Umbreon (Reverse Holofoil)",
+    "supertype": "Pokémon",
+    "number": "037/080",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608912_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608912_400w.jpg"
+    },
+    "tcgplayerId": "608912"
+  },
+  {
+    "id": "jp-l2-revival-legends-037/080",
+    "name": "Umbreon",
+    "supertype": "Pokémon",
+    "number": "037/080",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608831_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608831_400w.jpg"
+    },
+    "tcgplayerId": "608831"
+  },
+  {
+    "id": "jp-l2-revival-legends-066/080",
+    "name": "Suicune \u0026 Entei Legend - 066/080",
+    "supertype": "Pokémon",
+    "number": "066/080",
+    "rarity": "Rare Holo LEGEND",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608860_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608860_400w.jpg"
+    },
+    "tcgplayerId": "608860"
+  },
+  {
+    "id": "jp-l2-revival-legends-068/080",
+    "name": "Raikou \u0026 Suicune Legend - 068/080 (Reverse Holofoil)",
+    "supertype": "Pokémon",
+    "number": "068/080",
+    "rarity": "Rare Holo LEGEND",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608943_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608943_400w.jpg"
+    },
+    "tcgplayerId": "608943"
+  },
+  {
+    "id": "jp-l2-revival-legends-024/080",
+    "name": "Espeon",
+    "supertype": "Pokémon",
+    "number": "024/080",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608818_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608818_400w.jpg"
+    },
+    "tcgplayerId": "608818"
+  },
+  {
+    "id": "jp-l2-revival-legends-067/080",
+    "name": "Raikou \u0026 Suicune Legend - 067/080",
+    "supertype": "Pokémon",
+    "number": "067/080",
+    "rarity": "Rare Holo LEGEND",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608861_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608861_400w.jpg"
+    },
+    "tcgplayerId": "608861"
+  },
+  {
+    "id": "jp-l2-revival-legends-068/080",
+    "name": "Raikou \u0026 Suicune Legend - 068/080",
+    "supertype": "Pokémon",
+    "number": "068/080",
+    "rarity": "Rare Holo LEGEND",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608862_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608862_400w.jpg"
+    },
+    "tcgplayerId": "608862"
+  },
+  {
+    "id": "jp-l2-revival-legends-063/080",
+    "name": "Entei \u0026 Raikou Legend - 063/080",
+    "supertype": "Pokémon",
+    "number": "063/080",
+    "rarity": "Rare Holo LEGEND",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608857_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608857_400w.jpg"
+    },
+    "tcgplayerId": "608857"
+  },
+  {
+    "id": "jp-l2-revival-legends-064/080",
+    "name": "Entei \u0026 Raikou Legend - 064/080",
+    "supertype": "Pokémon",
+    "number": "064/080",
+    "rarity": "Rare Holo LEGEND",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608858_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608858_400w.jpg"
+    },
+    "tcgplayerId": "608858"
+  },
+  {
+    "id": "jp-l2-revival-legends-047/080",
+    "name": "Steelix",
+    "supertype": "Pokémon",
+    "number": "047/080",
+    "rarity": "Super Rare Holo",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608841_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608841_400w.jpg"
+    },
+    "tcgplayerId": "608841"
+  },
+  {
+    "id": "jp-l2-revival-legends-015/080",
+    "name": "Kingdra - 015/080",
+    "supertype": "Pokémon",
+    "number": "015/080",
+    "rarity": "Super Rare Holo",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608809_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608809_400w.jpg"
+    },
+    "tcgplayerId": "608809"
+  },
+  {
+    "id": "jp-l2-revival-legends-043/080",
+    "name": "Houndoom (Reverse Holofoil)",
+    "supertype": "Pokémon",
+    "number": "043/080",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608918_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608918_400w.jpg"
+    },
+    "tcgplayerId": "608918"
+  },
+  {
+    "id": "jp-l2-revival-legends-036/080",
+    "name": "Hariyama (Reverse Holofoil)",
+    "supertype": "Pokémon",
+    "number": "036/080",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608911_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608911_400w.jpg"
+    },
+    "tcgplayerId": "608911"
+  },
+  {
+    "id": "jp-l2-revival-legends-043/080",
+    "name": "Houndoom",
+    "supertype": "Pokémon",
+    "number": "043/080",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608837_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608837_400w.jpg"
+    },
+    "tcgplayerId": "608837"
+  },
+  {
+    "id": "jp-l2-revival-legends-061/080",
+    "name": "Togekiss",
+    "supertype": "Pokémon",
+    "number": "061/080",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608855_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608855_400w.jpg"
+    },
+    "tcgplayerId": "608855"
+  },
+  {
+    "id": "jp-l2-revival-legends-054/080",
+    "name": "Rattata (Reverse Holofoil)",
+    "supertype": "Pokémon",
+    "number": "054/080",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608929_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608929_400w.jpg"
+    },
+    "tcgplayerId": "608929"
+  },
+  {
+    "id": "jp-l2-revival-legends-062/080",
+    "name": "Smeargle",
+    "supertype": "Pokémon",
+    "number": "062/080",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608856_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608856_400w.jpg"
+    },
+    "tcgplayerId": "608856"
+  },
+  {
+    "id": "jp-l2-revival-legends-016/080",
+    "name": "Vaporeon (Reverse Holofoil)",
+    "supertype": "Pokémon",
+    "number": "016/080",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608891_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608891_400w.jpg"
+    },
+    "tcgplayerId": "608891"
+  },
+  {
+    "id": "jp-l2-revival-legends-035/080",
+    "name": "Makuhita",
+    "supertype": "Pokémon",
+    "number": "035/080",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608829_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608829_400w.jpg"
+    },
+    "tcgplayerId": "608829"
+  },
+  {
+    "id": "jp-l2-revival-legends-054/080",
+    "name": "Rattata",
+    "supertype": "Pokémon",
+    "number": "054/080",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608848_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608848_400w.jpg"
+    },
+    "tcgplayerId": "608848"
+  },
+  {
+    "id": "jp-l2-revival-legends-020/080",
+    "name": "Lanturn - 020/080",
+    "supertype": "Pokémon",
+    "number": "020/080",
+    "rarity": "Super Rare Holo",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608814_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608814_400w.jpg"
+    },
+    "tcgplayerId": "608814"
+  },
+  {
+    "id": "jp-l2-revival-legends-005/080",
+    "name": "Scyther",
+    "supertype": "Pokémon",
+    "number": "005/080",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608799_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608799_400w.jpg"
+    },
+    "tcgplayerId": "608799"
+  },
+  {
+    "id": "jp-l2-revival-legends-042/080",
+    "name": "Houndour",
+    "supertype": "Pokémon",
+    "number": "042/080",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608836_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608836_400w.jpg"
+    },
+    "tcgplayerId": "608836"
+  },
+  {
+    "id": "jp-l2-revival-legends-059/080",
+    "name": "Togepi",
+    "supertype": "Pokémon",
+    "number": "059/080",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608853_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608853_400w.jpg"
+    },
+    "tcgplayerId": "608853"
+  },
+  {
+    "id": "jp-l2-revival-legends-077/080",
+    "name": "Ruins of Alph",
+    "supertype": "Pokémon",
+    "number": "077/080",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608871_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608871_400w.jpg"
+    },
+    "tcgplayerId": "608871"
+  },
+  {
+    "id": "jp-l2-revival-legends-060/080",
+    "name": "Togetic",
+    "supertype": "Pokémon",
+    "number": "060/080",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608854_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608854_400w.jpg"
+    },
+    "tcgplayerId": "608854"
+  },
+  {
+    "id": "jp-l2-revival-legends-058/080",
+    "name": "Eevee",
+    "supertype": "Pokémon",
+    "number": "058/080",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608852_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608852_400w.jpg"
+    },
+    "tcgplayerId": "608852"
+  },
+  {
+    "id": "jp-l2-revival-legends-014/080",
+    "name": "Kingdra - 014/080",
+    "supertype": "Pokémon",
+    "number": "014/080",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608808_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608808_400w.jpg"
+    },
+    "tcgplayerId": "608808"
+  },
+  {
+    "id": "jp-l2-revival-legends-046/080",
+    "name": "Forretress",
+    "supertype": "Pokémon",
+    "number": "046/080",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608840_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608840_400w.jpg"
+    },
+    "tcgplayerId": "608840"
+  },
+  {
+    "id": "jp-l2-revival-legends-039/080",
+    "name": "Honchkrow (Reverse Holofoil)",
+    "supertype": "Pokémon",
+    "number": "039/080",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608914_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608914_400w.jpg"
+    },
+    "tcgplayerId": "608914"
+  },
+  {
+    "id": "jp-l2-revival-legends-012/080",
+    "name": "Horsea (Reverse Holofoil)",
+    "supertype": "Pokémon",
+    "number": "012/080",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608887_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608887_400w.jpg"
+    },
+    "tcgplayerId": "608887"
+  },
+  {
+    "id": "jp-l2-revival-legends-023/080",
+    "name": "Muk",
+    "supertype": "Pokémon",
+    "number": "023/080",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608817_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608817_400w.jpg"
+    },
+    "tcgplayerId": "608817"
+  },
+  {
+    "id": "jp-l2-revival-legends-074/080",
+    "name": "Flower Shop Lady (Reverse Holofoil)",
+    "supertype": "Pokémon",
+    "number": "074/080",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608949_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608949_400w.jpg"
+    },
+    "tcgplayerId": "608949"
+  },
+  {
+    "id": "jp-l2-revival-legends-050/080",
+    "name": "Mawile",
+    "supertype": "Pokémon",
+    "number": "050/080",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608844_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608844_400w.jpg"
+    },
+    "tcgplayerId": "608844"
+  },
+  {
+    "id": "jp-l2-revival-legends-028/080",
+    "name": "Drifloon",
+    "supertype": "Pokémon",
+    "number": "028/080",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608822_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608822_400w.jpg"
+    },
+    "tcgplayerId": "608822"
+  },
+  {
+    "id": "jp-l2-revival-legends-001/080",
+    "name": "Oddish",
+    "supertype": "Pokémon",
+    "number": "001/080",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608795_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608795_400w.jpg"
+    },
+    "tcgplayerId": "608795"
+  },
+  {
+    "id": "jp-l2-revival-legends-050/080",
+    "name": "Mawile (Reverse Holofoil)",
+    "supertype": "Pokémon",
+    "number": "050/080",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608925_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608925_400w.jpg"
+    },
+    "tcgplayerId": "608925"
+  },
+  {
+    "id": "jp-l2-revival-legends-033/080",
+    "name": "Larvitar",
+    "supertype": "Pokémon",
+    "number": "033/080",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608827_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608827_400w.jpg"
+    },
+    "tcgplayerId": "608827"
+  },
+  {
+    "id": "jp-l2-revival-legends-027/080",
+    "name": "Unown",
+    "supertype": "Pokémon",
+    "number": "027/080",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608821_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608821_400w.jpg"
+    },
+    "tcgplayerId": "608821"
+  },
+  {
+    "id": "jp-l2-revival-legends-060/080",
+    "name": "Togetic (Reverse Holofoil)",
+    "supertype": "Pokémon",
+    "number": "060/080",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608935_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608935_400w.jpg"
+    },
+    "tcgplayerId": "608935"
+  },
+  {
+    "id": "jp-l2-revival-legends-016/080",
+    "name": "Vaporeon",
+    "supertype": "Pokémon",
+    "number": "016/080",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608810_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608810_400w.jpg"
+    },
+    "tcgplayerId": "608810"
+  },
+  {
+    "id": "jp-l2-revival-legends-011/080",
+    "name": "Magcargo",
+    "supertype": "Pokémon",
+    "number": "011/080",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608805_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608805_400w.jpg"
+    },
+    "tcgplayerId": "608805"
+  },
+  {
+    "id": "jp-l2-revival-legends-053/080",
+    "name": "Metagross",
+    "supertype": "Pokémon",
+    "number": "053/080",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608847_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608847_400w.jpg"
+    },
+    "tcgplayerId": "608847"
+  },
+  {
+    "id": "jp-l2-revival-legends-038/080",
+    "name": "Murkrow",
+    "supertype": "Pokémon",
+    "number": "038/080",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608832_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608832_400w.jpg"
+    },
+    "tcgplayerId": "608832"
+  },
+  {
+    "id": "jp-l2-revival-legends-055/080",
+    "name": "Raticate",
+    "supertype": "Pokémon",
+    "number": "055/080",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608849_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608849_400w.jpg"
+    },
+    "tcgplayerId": "608849"
+  },
+  {
+    "id": "jp-l2-revival-legends-076/080",
+    "name": "Team Rocket's Trickery",
+    "supertype": "Trainer",
+    "number": "076/080",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608870_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608870_400w.jpg"
+    },
+    "tcgplayerId": "608870"
+  },
+  {
+    "id": "jp-l2-revival-legends-045/080",
+    "name": "Sableye",
+    "supertype": "Pokémon",
+    "number": "045/080",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608839_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608839_400w.jpg"
+    },
+    "tcgplayerId": "608839"
+  },
+  {
+    "id": "jp-l2-revival-legends-010/080",
+    "name": "Slugma",
+    "supertype": "Pokémon",
+    "number": "010/080",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608804_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608804_400w.jpg"
+    },
+    "tcgplayerId": "608804"
+  },
+  {
+    "id": "jp-l2-revival-legends-053/080",
+    "name": "Metagross (Reverse Holofoil)",
+    "supertype": "Pokémon",
+    "number": "053/080",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608928_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608928_400w.jpg"
+    },
+    "tcgplayerId": "608928"
+  },
+  {
+    "id": "jp-l2-revival-legends-051/080",
+    "name": "Beldum",
+    "supertype": "Pokémon",
+    "number": "051/080",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608845_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608845_400w.jpg"
+    },
+    "tcgplayerId": "608845"
+  },
+  {
+    "id": "jp-l2-revival-legends-002/080",
+    "name": "Gloom",
+    "supertype": "Pokémon",
+    "number": "002/080",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608796_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608796_400w.jpg"
+    },
+    "tcgplayerId": "608796"
+  },
+  {
+    "id": "jp-l2-revival-legends-034/080",
+    "name": "Pupitar (Reverse Holofoil)",
+    "supertype": "Pokémon",
+    "number": "034/080",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608909_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608909_400w.jpg"
+    },
+    "tcgplayerId": "608909"
+  },
+  {
+    "id": "jp-l2-revival-legends-017/080",
+    "name": "Jolteon",
+    "supertype": "Pokémon",
+    "number": "017/080",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608811_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608811_400w.jpg"
+    },
+    "tcgplayerId": "608811"
+  },
+  {
+    "id": "jp-l2-revival-legends-071/080",
+    "name": "Rare Candy",
+    "supertype": "Pokémon",
+    "number": "071/080",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608865_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608865_400w.jpg"
+    },
+    "tcgplayerId": "608865"
+  },
+  {
+    "id": "jp-l2-revival-legends-018/080",
+    "name": "Chinchou",
+    "supertype": "Pokémon",
+    "number": "018/080",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608812_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608812_400w.jpg"
+    },
+    "tcgplayerId": "608812"
+  },
+  {
+    "id": "jp-l2-revival-legends-030/080",
+    "name": "Onix",
+    "supertype": "Pokémon",
+    "number": "030/080",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608824_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608824_400w.jpg"
+    },
+    "tcgplayerId": "608824"
+  },
+  {
+    "id": "jp-l2-revival-legends-045/080",
+    "name": "Sableye (Reverse Holofoil)",
+    "supertype": "Pokémon",
+    "number": "045/080",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608920_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608920_400w.jpg"
+    },
+    "tcgplayerId": "608920"
+  },
+  {
+    "id": "jp-l2-revival-legends-041/080",
+    "name": "Weavile",
+    "supertype": "Pokémon",
+    "number": "041/080",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608835_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608835_400w.jpg"
+    },
+    "tcgplayerId": "608835"
+  },
+  {
+    "id": "jp-l2-revival-legends-013/080",
+    "name": "Seadra",
+    "supertype": "Pokémon",
+    "number": "013/080",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608807_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608807_400w.jpg"
+    },
+    "tcgplayerId": "608807"
+  },
+  {
+    "id": "jp-l2-revival-legends-078/080",
+    "name": "Burned Tower",
+    "supertype": "Pokémon",
+    "number": "078/080",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608872_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608872_400w.jpg"
+    },
+    "tcgplayerId": "608872"
+  }
+]

@@ -1,0 +1,38 @@
+[
+  {
+    "id": "jp-champion-road-totodile",
+    "name": "Totodile",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/617309_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/617309_400w.jpg"
+    },
+    "tcgplayerId": "617309"
+  },
+  {
+    "id": "jp-champion-road-chikorita",
+    "name": "Chikorita",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/617306_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/617306_400w.jpg"
+    },
+    "tcgplayerId": "617306"
+  },
+  {
+    "id": "jp-champion-road-cyndaquil",
+    "name": "Cyndaquil",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/617307_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/617307_400w.jpg"
+    },
+    "tcgplayerId": "617307"
+  }
+]

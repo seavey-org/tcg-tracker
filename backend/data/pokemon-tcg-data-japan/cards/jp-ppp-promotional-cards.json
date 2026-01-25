@@ -1,0 +1,50 @@
+[
+  {
+    "id": "jp-ppp-promotional-cards-003/PPP",
+    "name": "Piplup",
+    "supertype": "Pokémon",
+    "number": "003/PPP",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/613884_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/613884_400w.jpg"
+    },
+    "tcgplayerId": "613884"
+  },
+  {
+    "id": "jp-ppp-promotional-cards-004/PPP",
+    "name": "Manaphy",
+    "supertype": "Pokémon",
+    "number": "004/PPP",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/613886_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/613886_400w.jpg"
+    },
+    "tcgplayerId": "613886"
+  },
+  {
+    "id": "jp-ppp-promotional-cards-002/PPP",
+    "name": "Chimchar",
+    "supertype": "Pokémon",
+    "number": "002/PPP",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/613883_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/613883_400w.jpg"
+    },
+    "tcgplayerId": "613883"
+  },
+  {
+    "id": "jp-ppp-promotional-cards-001/PPP",
+    "name": "Turtwig",
+    "supertype": "Pokémon",
+    "number": "001/PPP",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/613885_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/613885_400w.jpg"
+    },
+    "tcgplayerId": "613885"
+  }
+]

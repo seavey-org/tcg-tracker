@@ -1,0 +1,686 @@
+[
+  {
+    "id": "jp-crossing-the-ruins-umbreon",
+    "name": "Umbreon",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575428_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575428_400w.jpg"
+    },
+    "tcgplayerId": "575428"
+  },
+  {
+    "id": "jp-crossing-the-ruins-espeon",
+    "name": "Espeon",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575416_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575416_400w.jpg"
+    },
+    "tcgplayerId": "575416"
+  },
+  {
+    "id": "jp-crossing-the-ruins-dark-raichu",
+    "name": "Dark Raichu",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Super Rare Holo",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575433_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575433_400w.jpg"
+    },
+    "tcgplayerId": "575433"
+  },
+  {
+    "id": "jp-crossing-the-ruins-tyranitar",
+    "name": "Tyranitar",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575427_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575427_400w.jpg"
+    },
+    "tcgplayerId": "575427"
+  },
+  {
+    "id": "jp-crossing-the-ruins-beedrill",
+    "name": "Beedrill",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575414_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575414_400w.jpg"
+    },
+    "tcgplayerId": "575414"
+  },
+  {
+    "id": "jp-crossing-the-ruins-butterfree",
+    "name": "Butterfree",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575415_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575415_400w.jpg"
+    },
+    "tcgplayerId": "575415"
+  },
+  {
+    "id": "jp-crossing-the-ruins-politoed",
+    "name": "Politoed",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575423_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575423_400w.jpg"
+    },
+    "tcgplayerId": "575423"
+  },
+  {
+    "id": "jp-crossing-the-ruins-houndoom",
+    "name": "Houndoom",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575419_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575419_400w.jpg"
+    },
+    "tcgplayerId": "575419"
+  },
+  {
+    "id": "jp-crossing-the-ruins-houndour-(hr)",
+    "name": "Houndour (HR)",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575420_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575420_400w.jpg"
+    },
+    "tcgplayerId": "575420"
+  },
+  {
+    "id": "jp-crossing-the-ruins-poliwrath",
+    "name": "Poliwrath",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575424_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575424_400w.jpg"
+    },
+    "tcgplayerId": "575424"
+  },
+  {
+    "id": "jp-crossing-the-ruins-kabutops",
+    "name": "Kabutops",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575421_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575421_400w.jpg"
+    },
+    "tcgplayerId": "575421"
+  },
+  {
+    "id": "jp-crossing-the-ruins-scizor",
+    "name": "Scizor",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575425_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575425_400w.jpg"
+    },
+    "tcgplayerId": "575425"
+  },
+  {
+    "id": "jp-crossing-the-ruins-magnemite",
+    "name": "Magnemite",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575422_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575422_400w.jpg"
+    },
+    "tcgplayerId": "575422"
+  },
+  {
+    "id": "jp-crossing-the-ruins-ursaring",
+    "name": "Ursaring",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575430_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575430_400w.jpg"
+    },
+    "tcgplayerId": "575430"
+  },
+  {
+    "id": "jp-crossing-the-ruins-wobbuffet",
+    "name": "Wobbuffet",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575431_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575431_400w.jpg"
+    },
+    "tcgplayerId": "575431"
+  },
+  {
+    "id": "jp-crossing-the-ruins-unown-a",
+    "name": "Unown A",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575429_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575429_400w.jpg"
+    },
+    "tcgplayerId": "575429"
+  },
+  {
+    "id": "jp-crossing-the-ruins-smeargle",
+    "name": "Smeargle",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575426_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575426_400w.jpg"
+    },
+    "tcgplayerId": "575426"
+  },
+  {
+    "id": "jp-crossing-the-ruins-hitmontop",
+    "name": "Hitmontop",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575418_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575418_400w.jpg"
+    },
+    "tcgplayerId": "575418"
+  },
+  {
+    "id": "jp-crossing-the-ruins-forretress",
+    "name": "Forretress",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575417_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575417_400w.jpg"
+    },
+    "tcgplayerId": "575417"
+  },
+  {
+    "id": "jp-crossing-the-ruins-yanma",
+    "name": "Yanma",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575432_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575432_400w.jpg"
+    },
+    "tcgplayerId": "575432"
+  },
+  {
+    "id": "jp-crossing-the-ruins-eevee",
+    "name": "Eevee",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575435_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575435_400w.jpg"
+    },
+    "tcgplayerId": "575435"
+  },
+  {
+    "id": "jp-crossing-the-ruins-unown-u",
+    "name": "Unown U",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575451_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575451_400w.jpg"
+    },
+    "tcgplayerId": "575451"
+  },
+  {
+    "id": "jp-crossing-the-ruins-unown-f",
+    "name": "Unown F",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575449_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575449_400w.jpg"
+    },
+    "tcgplayerId": "575449"
+  },
+  {
+    "id": "jp-crossing-the-ruins-unown-d",
+    "name": "Unown D",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575448_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575448_400w.jpg"
+    },
+    "tcgplayerId": "575448"
+  },
+  {
+    "id": "jp-crossing-the-ruins-ruin-wall-[aerodactyl]",
+    "name": "Ruin Wall [Aerodactyl]",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575446_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575446_400w.jpg"
+    },
+    "tcgplayerId": "575446"
+  },
+  {
+    "id": "jp-crossing-the-ruins-houndour-(u)",
+    "name": "Houndour (U)",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575437_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575437_400w.jpg"
+    },
+    "tcgplayerId": "575437"
+  },
+  {
+    "id": "jp-crossing-the-ruins-ruin-wall-[kabuto]",
+    "name": "Ruin Wall [Kabuto]",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575445_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575445_400w.jpg"
+    },
+    "tcgplayerId": "575445"
+  },
+  {
+    "id": "jp-crossing-the-ruins-unown-i",
+    "name": "Unown I",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575411_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575411_400w.jpg"
+    },
+    "tcgplayerId": "575411"
+  },
+  {
+    "id": "jp-crossing-the-ruins-unown-m",
+    "name": "Unown M",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575450_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575450_400w.jpg"
+    },
+    "tcgplayerId": "575450"
+  },
+  {
+    "id": "jp-crossing-the-ruins-scyther",
+    "name": "Scyther",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575447_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575447_400w.jpg"
+    },
+    "tcgplayerId": "575447"
+  },
+  {
+    "id": "jp-crossing-the-ruins-natu",
+    "name": "Natu",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575403_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575403_400w.jpg"
+    },
+    "tcgplayerId": "575403"
+  },
+  {
+    "id": "jp-crossing-the-ruins-igglybuff",
+    "name": "Igglybuff",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575439_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575439_400w.jpg"
+    },
+    "tcgplayerId": "575439"
+  },
+  {
+    "id": "jp-crossing-the-ruins-tyrogue",
+    "name": "Tyrogue",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575410_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575410_400w.jpg"
+    },
+    "tcgplayerId": "575410"
+  },
+  {
+    "id": "jp-crossing-the-ruins-energy-ark",
+    "name": "Energy Ark",
+    "supertype": "Energy",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575398_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575398_400w.jpg"
+    },
+    "tcgplayerId": "575398"
+  },
+  {
+    "id": "jp-crossing-the-ruins-kakuna",
+    "name": "Kakuna",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575440_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575440_400w.jpg"
+    },
+    "tcgplayerId": "575440"
+  },
+  {
+    "id": "jp-crossing-the-ruins-poliwhirl",
+    "name": "Poliwhirl",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575443_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575443_400w.jpg"
+    },
+    "tcgplayerId": "575443"
+  },
+  {
+    "id": "jp-crossing-the-ruins-wooper",
+    "name": "Wooper",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575413_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575413_400w.jpg"
+    },
+    "tcgplayerId": "575413"
+  },
+  {
+    "id": "jp-crossing-the-ruins-fossil-egg",
+    "name": "Fossil Egg",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575436_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575436_400w.jpg"
+    },
+    "tcgplayerId": "575436"
+  },
+  {
+    "id": "jp-crossing-the-ruins-xatu",
+    "name": "Xatu",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575452_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575452_400w.jpg"
+    },
+    "tcgplayerId": "575452"
+  },
+  {
+    "id": "jp-crossing-the-ruins-teddiursa",
+    "name": "Teddiursa",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575409_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575409_400w.jpg"
+    },
+    "tcgplayerId": "575409"
+  },
+  {
+    "id": "jp-crossing-the-ruins-hyper-devolution-spray",
+    "name": "Hyper Devolution Spray",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575438_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575438_400w.jpg"
+    },
+    "tcgplayerId": "575438"
+  },
+  {
+    "id": "jp-crossing-the-ruins-corsola",
+    "name": "Corsola",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575434_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575434_400w.jpg"
+    },
+    "tcgplayerId": "575434"
+  },
+  {
+    "id": "jp-crossing-the-ruins-caterpie",
+    "name": "Caterpie",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575396_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575396_400w.jpg"
+    },
+    "tcgplayerId": "575396"
+  },
+  {
+    "id": "jp-crossing-the-ruins-metapod",
+    "name": "Metapod",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575441_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575441_400w.jpg"
+    },
+    "tcgplayerId": "575441"
+  },
+  {
+    "id": "jp-crossing-the-ruins-poliwag",
+    "name": "Poliwag",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575406_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575406_400w.jpg"
+    },
+    "tcgplayerId": "575406"
+  },
+  {
+    "id": "jp-crossing-the-ruins-omastar",
+    "name": "Omastar",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575442_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575442_400w.jpg"
+    },
+    "tcgplayerId": "575442"
+  },
+  {
+    "id": "jp-crossing-the-ruins-omanyte",
+    "name": "Omanyte",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575404_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575404_400w.jpg"
+    },
+    "tcgplayerId": "575404"
+  },
+  {
+    "id": "jp-crossing-the-ruins-pupitar",
+    "name": "Pupitar",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575444_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575444_400w.jpg"
+    },
+    "tcgplayerId": "575444"
+  },
+  {
+    "id": "jp-crossing-the-ruins-dunsparce",
+    "name": "Dunsparce",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575397_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575397_400w.jpg"
+    },
+    "tcgplayerId": "575397"
+  },
+  {
+    "id": "jp-crossing-the-ruins-sentret",
+    "name": "Sentret",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575407_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575407_400w.jpg"
+    },
+    "tcgplayerId": "575407"
+  },
+  {
+    "id": "jp-crossing-the-ruins-kabuto",
+    "name": "Kabuto",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575400_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575400_400w.jpg"
+    },
+    "tcgplayerId": "575400"
+  },
+  {
+    "id": "jp-crossing-the-ruins-mareep",
+    "name": "Mareep",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575402_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575402_400w.jpg"
+    },
+    "tcgplayerId": "575402"
+  },
+  {
+    "id": "jp-crossing-the-ruins-weedle",
+    "name": "Weedle",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575412_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575412_400w.jpg"
+    },
+    "tcgplayerId": "575412"
+  },
+  {
+    "id": "jp-crossing-the-ruins-pineco",
+    "name": "Pineco",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575405_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575405_400w.jpg"
+    },
+    "tcgplayerId": "575405"
+  },
+  {
+    "id": "jp-crossing-the-ruins-larvitar",
+    "name": "Larvitar",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575401_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575401_400w.jpg"
+    },
+    "tcgplayerId": "575401"
+  },
+  {
+    "id": "jp-crossing-the-ruins-spinarak",
+    "name": "Spinarak",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575408_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575408_400w.jpg"
+    },
+    "tcgplayerId": "575408"
+  },
+  {
+    "id": "jp-crossing-the-ruins-hoppip",
+    "name": "Hoppip",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575399_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575399_400w.jpg"
+    },
+    "tcgplayerId": "575399"
+  }
+]

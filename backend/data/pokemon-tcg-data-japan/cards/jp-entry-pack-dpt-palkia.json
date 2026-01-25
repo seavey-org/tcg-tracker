@@ -1,0 +1,62 @@
+[
+  {
+    "id": "jp-entry-pack-dpt-palkia-004/013",
+    "name": "Empoleon",
+    "supertype": "Pokémon",
+    "number": "004/013",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/609057_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/609057_400w.jpg"
+    },
+    "tcgplayerId": "609057"
+  },
+  {
+    "id": "jp-entry-pack-dpt-palkia-002/013",
+    "name": "Piplup",
+    "supertype": "Pokémon",
+    "number": "002/013",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/609055_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/609055_400w.jpg"
+    },
+    "tcgplayerId": "609055"
+  },
+  {
+    "id": "jp-entry-pack-dpt-palkia-001/013",
+    "name": "Lapras",
+    "supertype": "Pokémon",
+    "number": "001/013",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/609054_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/609054_400w.jpg"
+    },
+    "tcgplayerId": "609054"
+  },
+  {
+    "id": "jp-entry-pack-dpt-palkia-008/013",
+    "name": "Tauros",
+    "supertype": "Pokémon",
+    "number": "008/013",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/609062_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/609062_400w.jpg"
+    },
+    "tcgplayerId": "609062"
+  },
+  {
+    "id": "jp-entry-pack-dpt-palkia-005/013",
+    "name": "Palkia",
+    "supertype": "Pokémon",
+    "number": "005/013",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/609058_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/609058_400w.jpg"
+    },
+    "tcgplayerId": "609058"
+  }
+]

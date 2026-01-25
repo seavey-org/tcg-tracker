@@ -1,0 +1,86 @@
+[
+  {
+    "id": "jp-s8a-g-25th-anniversary-golden-box-001/015",
+    "name": "Pikachu V - 001/015",
+    "supertype": "Pokémon",
+    "number": "001/015",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/594175_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/594175_400w.jpg"
+    },
+    "tcgplayerId": "594175"
+  },
+  {
+    "id": "jp-s8a-g-25th-anniversary-golden-box-002/015",
+    "name": "Poke Ball - 002/015",
+    "supertype": "Trainer",
+    "number": "002/015",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/594171_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/594171_400w.jpg"
+    },
+    "tcgplayerId": "594171"
+  },
+  {
+    "id": "jp-s8a-g-25th-anniversary-golden-box-006/015",
+    "name": "Pikachu VMAX",
+    "supertype": "Pokémon",
+    "number": "006/015",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/594174_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/594174_400w.jpg"
+    },
+    "tcgplayerId": "594174"
+  },
+  {
+    "id": "jp-s8a-g-25th-anniversary-golden-box-003/015",
+    "name": "Pikachu",
+    "supertype": "Pokémon",
+    "number": "003/015",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/594172_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/594172_400w.jpg"
+    },
+    "tcgplayerId": "594172"
+  },
+  {
+    "id": "jp-s8a-g-25th-anniversary-golden-box-004/015",
+    "name": "Raichu",
+    "supertype": "Pokémon",
+    "number": "004/015",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/647445_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/647445_400w.jpg"
+    },
+    "tcgplayerId": "647445"
+  },
+  {
+    "id": "jp-s8a-g-25th-anniversary-golden-box-005/015",
+    "name": "Pikachu V - 005/015",
+    "supertype": "Pokémon",
+    "number": "005/015",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/594173_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/594173_400w.jpg"
+    },
+    "tcgplayerId": "594173"
+  },
+  {
+    "id": "jp-s8a-g-25th-anniversary-golden-box-014/015",
+    "name": "Poke Kid",
+    "supertype": "Pokémon",
+    "number": "014/015",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/647452_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/647452_400w.jpg"
+    },
+    "tcgplayerId": "647452"
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "id": "jp-emerald-gift-box-deoxys-019/019",
+    "name": "Deoxys ex - 019/019",
+    "supertype": "Pokémon",
+    "number": "019/019",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612962_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612962_400w.jpg"
+    },
+    "tcgplayerId": "612962"
+  },
+  {
+    "id": "jp-emerald-gift-box-deoxys-005/019",
+    "name": "Baltoy",
+    "supertype": "Pokémon",
+    "number": "005/019",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612948_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612948_400w.jpg"
+    },
+    "tcgplayerId": "612948"
+  }
+]

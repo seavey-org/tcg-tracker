@@ -1,0 +1,542 @@
+[
+  {
+    "id": "jp-rulers-of-the-heavens-038/054",
+    "name": "Dragonite ex",
+    "supertype": "Pokémon",
+    "number": "038/054",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/613002_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/613002_400w.jpg"
+    },
+    "tcgplayerId": "613002"
+  },
+  {
+    "id": "jp-rulers-of-the-heavens-047/054",
+    "name": "Rayquaza ex",
+    "supertype": "Pokémon",
+    "number": "047/054",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/613000_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/613000_400w.jpg"
+    },
+    "tcgplayerId": "613000"
+  },
+  {
+    "id": "jp-rulers-of-the-heavens-015/054",
+    "name": "Kingdra ex",
+    "supertype": "Pokémon",
+    "number": "015/054",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/613003_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/613003_400w.jpg"
+    },
+    "tcgplayerId": "613003"
+  },
+  {
+    "id": "jp-rulers-of-the-heavens-025/054",
+    "name": "Ampharos ex",
+    "supertype": "Pokémon",
+    "number": "025/054",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/613001_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/613001_400w.jpg"
+    },
+    "tcgplayerId": "613001"
+  },
+  {
+    "id": "jp-rulers-of-the-heavens-002/054",
+    "name": "Muk ex",
+    "supertype": "Pokémon",
+    "number": "002/054",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/613005_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/613005_400w.jpg"
+    },
+    "tcgplayerId": "613005"
+  },
+  {
+    "id": "jp-rulers-of-the-heavens-046/054",
+    "name": "Salamence",
+    "supertype": "Pokémon",
+    "number": "046/054",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612979_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612979_400w.jpg"
+    },
+    "tcgplayerId": "612979"
+  },
+  {
+    "id": "jp-rulers-of-the-heavens-048/054",
+    "name": "Absol",
+    "supertype": "Pokémon",
+    "number": "048/054",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612983_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612983_400w.jpg"
+    },
+    "tcgplayerId": "612983"
+  },
+  {
+    "id": "jp-rulers-of-the-heavens-009/054",
+    "name": "Magcargo ex",
+    "supertype": "Pokémon",
+    "number": "009/054",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/613004_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/613004_400w.jpg"
+    },
+    "tcgplayerId": "613004"
+  },
+  {
+    "id": "jp-rulers-of-the-heavens-027/054",
+    "name": "Minun",
+    "supertype": "Pokémon",
+    "number": "027/054",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612984_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612984_400w.jpg"
+    },
+    "tcgplayerId": "612984"
+  },
+  {
+    "id": "jp-rulers-of-the-heavens-026/054",
+    "name": "Plusle",
+    "supertype": "Pokémon",
+    "number": "026/054",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612985_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612985_400w.jpg"
+    },
+    "tcgplayerId": "612985"
+  },
+  {
+    "id": "jp-rulers-of-the-heavens-041/054",
+    "name": "Flygon",
+    "supertype": "Pokémon",
+    "number": "041/054",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612982_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612982_400w.jpg"
+    },
+    "tcgplayerId": "612982"
+  },
+  {
+    "id": "jp-rulers-of-the-heavens-010/054",
+    "name": "Torkoal",
+    "supertype": "Pokémon",
+    "number": "010/054",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612987_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612987_400w.jpg"
+    },
+    "tcgplayerId": "612987"
+  },
+  {
+    "id": "jp-rulers-of-the-heavens-013/054",
+    "name": "Magikarp",
+    "supertype": "Pokémon",
+    "number": "013/054",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612972_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612972_400w.jpg"
+    },
+    "tcgplayerId": "612972"
+  },
+  {
+    "id": "jp-rulers-of-the-heavens-034/054",
+    "name": "Golem",
+    "supertype": "Pokémon",
+    "number": "034/054",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612978_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612978_400w.jpg"
+    },
+    "tcgplayerId": "612978"
+  },
+  {
+    "id": "jp-rulers-of-the-heavens-006/054",
+    "name": "Shedinja",
+    "supertype": "Pokémon",
+    "number": "006/054",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612977_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612977_400w.jpg"
+    },
+    "tcgplayerId": "612977"
+  },
+  {
+    "id": "jp-rulers-of-the-heavens-014/054",
+    "name": "Gyarados",
+    "supertype": "Pokémon",
+    "number": "014/054",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612996_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612996_400w.jpg"
+    },
+    "tcgplayerId": "612996"
+  },
+  {
+    "id": "jp-rulers-of-the-heavens-007/054",
+    "name": "Roselia",
+    "supertype": "Pokémon",
+    "number": "007/054",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612986_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612986_400w.jpg"
+    },
+    "tcgplayerId": "612986"
+  },
+  {
+    "id": "jp-rulers-of-the-heavens-043/054",
+    "name": "Altaria",
+    "supertype": "Pokémon",
+    "number": "043/054",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612980_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612980_400w.jpg"
+    },
+    "tcgplayerId": "612980"
+  },
+  {
+    "id": "jp-rulers-of-the-heavens-001/054",
+    "name": "Grimer",
+    "supertype": "Pokémon",
+    "number": "001/054",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612969_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612969_400w.jpg"
+    },
+    "tcgplayerId": "612969"
+  },
+  {
+    "id": "jp-rulers-of-the-heavens-017/054",
+    "name": "Whiscash",
+    "supertype": "Pokémon",
+    "number": "017/054",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612997_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612997_400w.jpg"
+    },
+    "tcgplayerId": "612997"
+  },
+  {
+    "id": "jp-rulers-of-the-heavens-029/054",
+    "name": "Spoink",
+    "supertype": "Pokémon",
+    "number": "029/054",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612965_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612965_400w.jpg"
+    },
+    "tcgplayerId": "612965"
+  },
+  {
+    "id": "jp-rulers-of-the-heavens-016/054",
+    "name": "Barboach",
+    "supertype": "Pokémon",
+    "number": "016/054",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612970_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612970_400w.jpg"
+    },
+    "tcgplayerId": "612970"
+  },
+  {
+    "id": "jp-rulers-of-the-heavens-031/054",
+    "name": "Shuppet",
+    "supertype": "Pokémon",
+    "number": "031/054",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/613015_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/613015_400w.jpg"
+    },
+    "tcgplayerId": "613015"
+  },
+  {
+    "id": "jp-rulers-of-the-heavens-032/054",
+    "name": "Geodude",
+    "supertype": "Pokémon",
+    "number": "032/054",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612967_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612967_400w.jpg"
+    },
+    "tcgplayerId": "612967"
+  },
+  {
+    "id": "jp-rulers-of-the-heavens-037/054",
+    "name": "Dragonair",
+    "supertype": "Pokémon",
+    "number": "037/054",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612991_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612991_400w.jpg"
+    },
+    "tcgplayerId": "612991"
+  },
+  {
+    "id": "jp-rulers-of-the-heavens-019/054",
+    "name": "Crawdaunt",
+    "supertype": "Pokémon",
+    "number": "019/054",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612981_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612981_400w.jpg"
+    },
+    "tcgplayerId": "612981"
+  },
+  {
+    "id": "jp-rulers-of-the-heavens-028/054",
+    "name": "Girafarig",
+    "supertype": "Pokémon",
+    "number": "028/054",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612998_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612998_400w.jpg"
+    },
+    "tcgplayerId": "612998"
+  },
+  {
+    "id": "jp-rulers-of-the-heavens-042/054",
+    "name": "Swablu",
+    "supertype": "Pokémon",
+    "number": "042/054",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612973_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612973_400w.jpg"
+    },
+    "tcgplayerId": "612973"
+  },
+  {
+    "id": "jp-rulers-of-the-heavens-049/054",
+    "name": "Skarmory",
+    "supertype": "Pokémon",
+    "number": "049/054",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612999_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612999_400w.jpg"
+    },
+    "tcgplayerId": "612999"
+  },
+  {
+    "id": "jp-rulers-of-the-heavens-052/054",
+    "name": "Mr. Briney's Compassion",
+    "supertype": "Trainer",
+    "number": "052/054",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/613010_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/613010_400w.jpg"
+    },
+    "tcgplayerId": "613010"
+  },
+  {
+    "id": "jp-rulers-of-the-heavens-004/054",
+    "name": "Nincada",
+    "supertype": "Pokémon",
+    "number": "004/054",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612964_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612964_400w.jpg"
+    },
+    "tcgplayerId": "612964"
+  },
+  {
+    "id": "jp-rulers-of-the-heavens-003/054",
+    "name": "Wurmple",
+    "supertype": "Pokémon",
+    "number": "003/054",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612975_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612975_400w.jpg"
+    },
+    "tcgplayerId": "612975"
+  },
+  {
+    "id": "jp-rulers-of-the-heavens-018/054",
+    "name": "Corphish",
+    "supertype": "Pokémon",
+    "number": "018/054",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612971_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612971_400w.jpg"
+    },
+    "tcgplayerId": "612971"
+  },
+  {
+    "id": "jp-rulers-of-the-heavens-020/054",
+    "name": "Snorunt",
+    "supertype": "Pokémon",
+    "number": "020/054",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/613016_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/613016_400w.jpg"
+    },
+    "tcgplayerId": "613016"
+  },
+  {
+    "id": "jp-rulers-of-the-heavens-036/054",
+    "name": "Dratini",
+    "supertype": "Pokémon",
+    "number": "036/054",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/613011_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/613011_400w.jpg"
+    },
+    "tcgplayerId": "613011"
+  },
+  {
+    "id": "jp-rulers-of-the-heavens-021/054",
+    "name": "Magnemite",
+    "supertype": "Pokémon",
+    "number": "021/054",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612963_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612963_400w.jpg"
+    },
+    "tcgplayerId": "612963"
+  },
+  {
+    "id": "jp-rulers-of-the-heavens-011/054",
+    "name": "Horsea",
+    "supertype": "Pokémon",
+    "number": "011/054",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/613012_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/613012_400w.jpg"
+    },
+    "tcgplayerId": "613012"
+  },
+  {
+    "id": "jp-rulers-of-the-heavens-030/054",
+    "name": "Grumpig",
+    "supertype": "Pokémon",
+    "number": "030/054",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612976_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612976_400w.jpg"
+    },
+    "tcgplayerId": "612976"
+  },
+  {
+    "id": "jp-rulers-of-the-heavens-023/054",
+    "name": "Mareep",
+    "supertype": "Pokémon",
+    "number": "023/054",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612966_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612966_400w.jpg"
+    },
+    "tcgplayerId": "612966"
+  },
+  {
+    "id": "jp-rulers-of-the-heavens-044/054",
+    "name": "Bagon",
+    "supertype": "Pokémon",
+    "number": "044/054",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/613013_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/613013_400w.jpg"
+    },
+    "tcgplayerId": "613013"
+  },
+  {
+    "id": "jp-rulers-of-the-heavens-008/054",
+    "name": "Slugma",
+    "supertype": "Pokémon",
+    "number": "008/054",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612968_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612968_400w.jpg"
+    },
+    "tcgplayerId": "612968"
+  },
+  {
+    "id": "jp-rulers-of-the-heavens-012/054",
+    "name": "Seadra",
+    "supertype": "Pokémon",
+    "number": "012/054",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612993_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612993_400w.jpg"
+    },
+    "tcgplayerId": "612993"
+  },
+  {
+    "id": "jp-rulers-of-the-heavens-040/054",
+    "name": "Vibrava",
+    "supertype": "Pokémon",
+    "number": "040/054",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612995_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612995_400w.jpg"
+    },
+    "tcgplayerId": "612995"
+  },
+  {
+    "id": "jp-rulers-of-the-heavens-035/054",
+    "name": "Meditite",
+    "supertype": "Pokémon",
+    "number": "035/054",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/613014_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/613014_400w.jpg"
+    },
+    "tcgplayerId": "613014"
+  },
+  {
+    "id": "jp-rulers-of-the-heavens-045/054",
+    "name": "Shelgon",
+    "supertype": "Pokémon",
+    "number": "045/054",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612994_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612994_400w.jpg"
+    },
+    "tcgplayerId": "612994"
+  }
+]

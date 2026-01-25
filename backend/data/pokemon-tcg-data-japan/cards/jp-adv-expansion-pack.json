@@ -1,0 +1,566 @@
+[
+  {
+    "id": "jp-adv-expansion-pack-026/055",
+    "name": "Mewtwo ex",
+    "supertype": "Pokémon",
+    "number": "026/055",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/613082_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/613082_400w.jpg"
+    },
+    "tcgplayerId": "613082"
+  },
+  {
+    "id": "jp-adv-expansion-pack-046/055",
+    "name": "Sneasel ex",
+    "supertype": "Pokémon",
+    "number": "046/055",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/613083_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/613083_400w.jpg"
+    },
+    "tcgplayerId": "613083"
+  },
+  {
+    "id": "jp-adv-expansion-pack-036/055",
+    "name": "Chansey ex",
+    "supertype": "Pokémon",
+    "number": "036/055",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/613079_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/613079_400w.jpg"
+    },
+    "tcgplayerId": "613079"
+  },
+  {
+    "id": "jp-adv-expansion-pack-003/055",
+    "name": "Sceptile",
+    "supertype": "Pokémon",
+    "number": "003/055",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/613063_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/613063_400w.jpg"
+    },
+    "tcgplayerId": "613063"
+  },
+  {
+    "id": "jp-adv-expansion-pack-030/055",
+    "name": "Hitmonchan ex",
+    "supertype": "Pokémon",
+    "number": "030/055",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/613081_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/613081_400w.jpg"
+    },
+    "tcgplayerId": "613081"
+  },
+  {
+    "id": "jp-adv-expansion-pack-022/055",
+    "name": "Wailord",
+    "supertype": "Pokémon",
+    "number": "022/055",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/613066_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/613066_400w.jpg"
+    },
+    "tcgplayerId": "613066"
+  },
+  {
+    "id": "jp-adv-expansion-pack-011/055",
+    "name": "Blaziken",
+    "supertype": "Pokémon",
+    "number": "011/055",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/613055_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/613055_400w.jpg"
+    },
+    "tcgplayerId": "613055"
+  },
+  {
+    "id": "jp-adv-expansion-pack-029/055",
+    "name": "Gardevoir",
+    "supertype": "Pokémon",
+    "number": "029/055",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/613059_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/613059_400w.jpg"
+    },
+    "tcgplayerId": "613059"
+  },
+  {
+    "id": "jp-adv-expansion-pack-016/055",
+    "name": "Swampert",
+    "supertype": "Pokémon",
+    "number": "016/055",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/613065_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/613065_400w.jpg"
+    },
+    "tcgplayerId": "613065"
+  },
+  {
+    "id": "jp-adv-expansion-pack-045/055",
+    "name": "Delcatty",
+    "supertype": "Pokémon",
+    "number": "045/055",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/613057_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/613057_400w.jpg"
+    },
+    "tcgplayerId": "613057"
+  },
+  {
+    "id": "jp-adv-expansion-pack-038/055",
+    "name": "Linoone",
+    "supertype": "Pokémon",
+    "number": "038/055",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/613071_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/613071_400w.jpg"
+    },
+    "tcgplayerId": "613071"
+  },
+  {
+    "id": "jp-adv-expansion-pack-023/055",
+    "name": "Electabuzz ex",
+    "supertype": "Pokémon",
+    "number": "023/055",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/613080_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/613080_400w.jpg"
+    },
+    "tcgplayerId": "613080"
+  },
+  {
+    "id": "jp-adv-expansion-pack-020/055",
+    "name": "Sharpedo",
+    "supertype": "Pokémon",
+    "number": "020/055",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/613075_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/613075_400w.jpg"
+    },
+    "tcgplayerId": "613075"
+  },
+  {
+    "id": "jp-adv-expansion-pack-048/055",
+    "name": "Mightyena",
+    "supertype": "Pokémon",
+    "number": "048/055",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/613062_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/613062_400w.jpg"
+    },
+    "tcgplayerId": "613062"
+  },
+  {
+    "id": "jp-adv-expansion-pack-013/055",
+    "name": "Camerupt",
+    "supertype": "Pokémon",
+    "number": "013/055",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/613056_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/613056_400w.jpg"
+    },
+    "tcgplayerId": "613056"
+  },
+  {
+    "id": "jp-adv-expansion-pack-051/055",
+    "name": "Aggron",
+    "supertype": "Pokémon",
+    "number": "051/055",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/613053_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/613053_400w.jpg"
+    },
+    "tcgplayerId": "613053"
+  },
+  {
+    "id": "jp-adv-expansion-pack-008/055",
+    "name": "Dustox",
+    "supertype": "Pokémon",
+    "number": "008/055",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/613058_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/613058_400w.jpg"
+    },
+    "tcgplayerId": "613058"
+  },
+  {
+    "id": "jp-adv-expansion-pack-034/055",
+    "name": "Hariyama",
+    "supertype": "Pokémon",
+    "number": "034/055",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/613060_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/613060_400w.jpg"
+    },
+    "tcgplayerId": "613060"
+  },
+  {
+    "id": "jp-adv-expansion-pack-006/055",
+    "name": "Beautifly",
+    "supertype": "Pokémon",
+    "number": "006/055",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/613054_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/613054_400w.jpg"
+    },
+    "tcgplayerId": "613054"
+  },
+  {
+    "id": "jp-adv-expansion-pack-049/055",
+    "name": "Aron",
+    "supertype": "Pokémon",
+    "number": "049/055",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/613084_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/613084_400w.jpg"
+    },
+    "tcgplayerId": "613084"
+  },
+  {
+    "id": "jp-adv-expansion-pack-027/055",
+    "name": "Ralts",
+    "supertype": "Pokémon",
+    "number": "027/055",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/613047_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/613047_400w.jpg"
+    },
+    "tcgplayerId": "613047"
+  },
+  {
+    "id": "jp-adv-expansion-pack-006/055",
+    "name": "Beautifly",
+    "supertype": "Pokémon",
+    "number": "006/055",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/613054_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/613054_400w.jpg"
+    },
+    "tcgplayerId": "613054"
+  },
+  {
+    "id": "jp-adv-expansion-pack-041/055",
+    "name": "Slakoth",
+    "supertype": "Pokémon",
+    "number": "041/055",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/613094_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/613094_400w.jpg"
+    },
+    "tcgplayerId": "613094"
+  },
+  {
+    "id": "jp-adv-expansion-pack-043/055",
+    "name": "Slaking",
+    "supertype": "Pokémon",
+    "number": "043/055",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/613064_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/613064_400w.jpg"
+    },
+    "tcgplayerId": "613064"
+  },
+  {
+    "id": "jp-adv-expansion-pack-047/055",
+    "name": "Poochyena",
+    "supertype": "Pokémon",
+    "number": "047/055",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/613046_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/613046_400w.jpg"
+    },
+    "tcgplayerId": "613046"
+  },
+  {
+    "id": "jp-adv-expansion-pack-024/055",
+    "name": "Electrike",
+    "supertype": "Pokémon",
+    "number": "024/055",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/613087_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/613087_400w.jpg"
+    },
+    "tcgplayerId": "613087"
+  },
+  {
+    "id": "jp-adv-expansion-pack-010/055",
+    "name": "Breloom",
+    "supertype": "Pokémon",
+    "number": "010/055",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/613067_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/613067_400w.jpg"
+    },
+    "tcgplayerId": "613067"
+  },
+  {
+    "id": "jp-adv-expansion-pack-005/055",
+    "name": "Silcoon",
+    "supertype": "Pokémon",
+    "number": "005/055",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/613092_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/613092_400w.jpg"
+    },
+    "tcgplayerId": "613092"
+  },
+  {
+    "id": "jp-adv-expansion-pack-044/055",
+    "name": "Skitty",
+    "supertype": "Pokémon",
+    "number": "044/055",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/613093_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/613093_400w.jpg"
+    },
+    "tcgplayerId": "613093"
+  },
+  {
+    "id": "jp-adv-expansion-pack-031/055",
+    "name": "Phanpy",
+    "supertype": "Pokémon",
+    "number": "031/055",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/613045_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/613045_400w.jpg"
+    },
+    "tcgplayerId": "613045"
+  },
+  {
+    "id": "jp-adv-expansion-pack-012/055",
+    "name": "Numel",
+    "supertype": "Pokémon",
+    "number": "012/055",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/613044_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/613044_400w.jpg"
+    },
+    "tcgplayerId": "613044"
+  },
+  {
+    "id": "jp-adv-expansion-pack-001/055",
+    "name": "Koffing",
+    "supertype": "Pokémon",
+    "number": "001/055",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/613042_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/613042_400w.jpg"
+    },
+    "tcgplayerId": "613042"
+  },
+  {
+    "id": "jp-adv-expansion-pack-007/055",
+    "name": "Cascoon",
+    "supertype": "Pokémon",
+    "number": "007/055",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/613086_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/613086_400w.jpg"
+    },
+    "tcgplayerId": "613086"
+  },
+  {
+    "id": "jp-adv-expansion-pack-028/055",
+    "name": "Kirlia",
+    "supertype": "Pokémon",
+    "number": "028/055",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/613069_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/613069_400w.jpg"
+    },
+    "tcgplayerId": "613069"
+  },
+  {
+    "id": "jp-adv-expansion-pack-019/055",
+    "name": "Carvanha",
+    "supertype": "Pokémon",
+    "number": "019/055",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/613085_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/613085_400w.jpg"
+    },
+    "tcgplayerId": "613085"
+  },
+  {
+    "id": "jp-adv-expansion-pack-009/055",
+    "name": "Shroomish",
+    "supertype": "Pokémon",
+    "number": "009/055",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/613048_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/613048_400w.jpg"
+    },
+    "tcgplayerId": "613048"
+  },
+  {
+    "id": "jp-adv-expansion-pack-035/055",
+    "name": "Nosepass",
+    "supertype": "Pokémon",
+    "number": "035/055",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/613072_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/613072_400w.jpg"
+    },
+    "tcgplayerId": "613072"
+  },
+  {
+    "id": "jp-adv-expansion-pack-037/055",
+    "name": "Zigzagoon",
+    "supertype": "Pokémon",
+    "number": "037/055",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/613052_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/613052_400w.jpg"
+    },
+    "tcgplayerId": "613052"
+  },
+  {
+    "id": "jp-adv-expansion-pack-017/055",
+    "name": "Wingull",
+    "supertype": "Pokémon",
+    "number": "017/055",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/613050_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/613050_400w.jpg"
+    },
+    "tcgplayerId": "613050"
+  },
+  {
+    "id": "jp-adv-expansion-pack-055/055",
+    "name": "Oran Berry",
+    "supertype": "Pokémon",
+    "number": "055/055",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/613089_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/613089_400w.jpg"
+    },
+    "tcgplayerId": "613089"
+  },
+  {
+    "id": "jp-adv-expansion-pack-040/055",
+    "name": "Swellow",
+    "supertype": "Pokémon",
+    "number": "040/055",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/613076_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/613076_400w.jpg"
+    },
+    "tcgplayerId": "613076"
+  },
+  {
+    "id": "jp-adv-expansion-pack-039/055",
+    "name": "Taillow",
+    "supertype": "Pokémon",
+    "number": "039/055",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/613049_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/613049_400w.jpg"
+    },
+    "tcgplayerId": "613049"
+  },
+  {
+    "id": "jp-adv-expansion-pack-042/055",
+    "name": "Vigoroth",
+    "supertype": "Pokémon",
+    "number": "042/055",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/613077_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/613077_400w.jpg"
+    },
+    "tcgplayerId": "613077"
+  },
+  {
+    "id": "jp-adv-expansion-pack-002/055",
+    "name": "Weezing",
+    "supertype": "Pokémon",
+    "number": "002/055",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/613078_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/613078_400w.jpg"
+    },
+    "tcgplayerId": "613078"
+  },
+  {
+    "id": "jp-adv-expansion-pack-021/055",
+    "name": "Wailmer",
+    "supertype": "Pokémon",
+    "number": "021/055",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/613095_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/613095_400w.jpg"
+    },
+    "tcgplayerId": "613095"
+  },
+  {
+    "id": "jp-adv-expansion-pack-033/055",
+    "name": "Makuhita",
+    "supertype": "Pokémon",
+    "number": "033/055",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/613043_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/613043_400w.jpg"
+    },
+    "tcgplayerId": "613043"
+  },
+  {
+    "id": "jp-adv-expansion-pack-014/055",
+    "name": "Goldeen",
+    "supertype": "Pokémon",
+    "number": "014/055",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/613041_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/613041_400w.jpg"
+    },
+    "tcgplayerId": "613041"
+  }
+]

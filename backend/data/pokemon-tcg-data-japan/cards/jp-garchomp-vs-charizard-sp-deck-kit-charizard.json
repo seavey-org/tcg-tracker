@@ -1,0 +1,182 @@
+[
+  {
+    "id": "jp-garchomp-vs-charizard-sp-deck-kit-charizard-002/016",
+    "name": "Charizard G LV.X",
+    "supertype": "Pokémon",
+    "number": "002/016",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608732_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608732_400w.jpg"
+    },
+    "tcgplayerId": "608732"
+  },
+  {
+    "id": "jp-garchomp-vs-charizard-sp-deck-kit-charizard-001/016",
+    "name": "Charizard G",
+    "supertype": "Pokémon",
+    "number": "001/016",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608731_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608731_400w.jpg"
+    },
+    "tcgplayerId": "608731"
+  },
+  {
+    "id": "jp-garchomp-vs-charizard-sp-deck-kit-charizard-006/016",
+    "name": "Sableye G",
+    "supertype": "Pokémon",
+    "number": "006/016",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608736_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608736_400w.jpg"
+    },
+    "tcgplayerId": "608736"
+  },
+  {
+    "id": "jp-garchomp-vs-charizard-sp-deck-kit-charizard-003/016",
+    "name": "Arcanine G",
+    "supertype": "Pokémon",
+    "number": "003/016",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608733_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608733_400w.jpg"
+    },
+    "tcgplayerId": "608733"
+  },
+  {
+    "id": "jp-garchomp-vs-charizard-sp-deck-kit-charizard-007/016",
+    "name": "Crawdaunt G",
+    "supertype": "Pokémon",
+    "number": "007/016",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608737_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608737_400w.jpg"
+    },
+    "tcgplayerId": "608737"
+  },
+  {
+    "id": "jp-garchomp-vs-charizard-sp-deck-kit-charizard-004/016",
+    "name": "Camerupt G",
+    "supertype": "Pokémon",
+    "number": "004/016",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608734_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608734_400w.jpg"
+    },
+    "tcgplayerId": "608734"
+  },
+  {
+    "id": "jp-garchomp-vs-charizard-sp-deck-kit-charizard-008/016",
+    "name": "Raticate G",
+    "supertype": "Pokémon",
+    "number": "008/016",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608738_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608738_400w.jpg"
+    },
+    "tcgplayerId": "608738"
+  },
+  {
+    "id": "jp-garchomp-vs-charizard-sp-deck-kit-charizard-005/016",
+    "name": "Manectric G",
+    "supertype": "Pokémon",
+    "number": "005/016",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608735_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608735_400w.jpg"
+    },
+    "tcgplayerId": "608735"
+  },
+  {
+    "id": "jp-garchomp-vs-charizard-sp-deck-kit-charizard-016/016",
+    "name": "SP Energy",
+    "supertype": "Energy",
+    "number": "016/016",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608746_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608746_400w.jpg"
+    },
+    "tcgplayerId": "608746"
+  },
+  {
+    "id": "jp-garchomp-vs-charizard-sp-deck-kit-charizard-011/016",
+    "name": "Switch",
+    "supertype": "Trainer",
+    "number": "011/016",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608741_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608741_400w.jpg"
+    },
+    "tcgplayerId": "608741"
+  },
+  {
+    "id": "jp-garchomp-vs-charizard-sp-deck-kit-charizard-014/016",
+    "name": "Team Galactic's Invention G-107 Technical Machine {{SP|G}}",
+    "supertype": "Pokémon",
+    "number": "014/016",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608744_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608744_400w.jpg"
+    },
+    "tcgplayerId": "608744"
+  },
+  {
+    "id": "jp-garchomp-vs-charizard-sp-deck-kit-charizard-013/016",
+    "name": "Poke Ball",
+    "supertype": "Trainer",
+    "number": "013/016",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608743_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608743_400w.jpg"
+    },
+    "tcgplayerId": "608743"
+  },
+  {
+    "id": "jp-garchomp-vs-charizard-sp-deck-kit-charizard-012/016",
+    "name": "Pokedex HANDY910is",
+    "supertype": "Pokémon",
+    "number": "012/016",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608742_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608742_400w.jpg"
+    },
+    "tcgplayerId": "608742"
+  },
+  {
+    "id": "jp-garchomp-vs-charizard-sp-deck-kit-charizard-010/016",
+    "name": "Energy Search",
+    "supertype": "Energy",
+    "number": "010/016",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608740_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608740_400w.jpg"
+    },
+    "tcgplayerId": "608740"
+  },
+  {
+    "id": "jp-garchomp-vs-charizard-sp-deck-kit-charizard-009/016",
+    "name": "Energy Restore",
+    "supertype": "Energy",
+    "number": "009/016",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608739_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608739_400w.jpg"
+    },
+    "tcgplayerId": "608739"
+  }
+]

@@ -1,0 +1,74 @@
+[
+  {
+    "id": "jp-bkr-reshiram-ex-battle-strength-deck-010/018",
+    "name": "Eevee",
+    "supertype": "Pokémon",
+    "number": "010/018",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/604683_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/604683_400w.jpg"
+    },
+    "tcgplayerId": "604683"
+  },
+  {
+    "id": "jp-bkr-reshiram-ex-battle-strength-deck-001/018",
+    "name": "Growlithe",
+    "supertype": "Pokémon",
+    "number": "001/018",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/604686_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/604686_400w.jpg"
+    },
+    "tcgplayerId": "604686"
+  },
+  {
+    "id": "jp-bkr-reshiram-ex-battle-strength-deck-004/018",
+    "name": "Reshiram EX",
+    "supertype": "Pokémon",
+    "number": "004/018",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/604689_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/604689_400w.jpg"
+    },
+    "tcgplayerId": "604689"
+  },
+  {
+    "id": "jp-bkr-reshiram-ex-battle-strength-deck-009/018",
+    "name": "Chansey",
+    "supertype": "Pokémon",
+    "number": "009/018",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/604694_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/604694_400w.jpg"
+    },
+    "tcgplayerId": "604694"
+  },
+  {
+    "id": "jp-bkr-reshiram-ex-battle-strength-deck-006/018",
+    "name": "Glaceon",
+    "supertype": "Pokémon",
+    "number": "006/018",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/604691_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/604691_400w.jpg"
+    },
+    "tcgplayerId": "604691"
+  },
+  {
+    "id": "jp-bkr-reshiram-ex-battle-strength-deck-005/018",
+    "name": "Lapras",
+    "supertype": "Pokémon",
+    "number": "005/018",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/604690_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/604690_400w.jpg"
+    },
+    "tcgplayerId": "604690"
+  }
+]

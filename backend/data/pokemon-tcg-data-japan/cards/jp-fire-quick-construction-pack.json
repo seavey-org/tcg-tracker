@@ -1,0 +1,50 @@
+[
+  {
+    "id": "jp-fire-quick-construction-pack-006/015",
+    "name": "Camerupt ex",
+    "supertype": "Pokémon",
+    "number": "006/015",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612171_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612171_400w.jpg"
+    },
+    "tcgplayerId": "612171"
+  },
+  {
+    "id": "jp-fire-quick-construction-pack-005/015",
+    "name": "Numel",
+    "supertype": "Pokémon",
+    "number": "005/015",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612173_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612173_400w.jpg"
+    },
+    "tcgplayerId": "612173"
+  },
+  {
+    "id": "jp-fire-quick-construction-pack-002/015",
+    "name": "Ninetales",
+    "supertype": "Pokémon",
+    "number": "002/015",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612175_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612175_400w.jpg"
+    },
+    "tcgplayerId": "612175"
+  },
+  {
+    "id": "jp-fire-quick-construction-pack-001/015",
+    "name": "Vulpix",
+    "supertype": "Pokémon",
+    "number": "001/015",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612176_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612176_400w.jpg"
+    },
+    "tcgplayerId": "612176"
+  }
+]

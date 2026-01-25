@@ -1,0 +1,578 @@
+[
+  {
+    "id": "jp-dp5-temple-of-anger-azelf-lv.x",
+    "name": "Azelf LV.X",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/606951_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/606951_400w.jpg"
+    },
+    "tcgplayerId": "606951"
+  },
+  {
+    "id": "jp-dp5-temple-of-anger-porygon-z-lv.x",
+    "name": "Porygon-Z LV.X",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/606992_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/606992_400w.jpg"
+    },
+    "tcgplayerId": "606992"
+  },
+  {
+    "id": "jp-dp5-temple-of-anger-deoxys-normal-forme",
+    "name": "Deoxys Normal Forme",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/606959_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/606959_400w.jpg"
+    },
+    "tcgplayerId": "606959"
+  },
+  {
+    "id": "jp-dp5-temple-of-anger-kingdra",
+    "name": "Kingdra",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/606977_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/606977_400w.jpg"
+    },
+    "tcgplayerId": "606977"
+  },
+  {
+    "id": "jp-dp5-temple-of-anger-luxray",
+    "name": "Luxray",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/606980_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/606980_400w.jpg"
+    },
+    "tcgplayerId": "606980"
+  },
+  {
+    "id": "jp-dp5-temple-of-anger-bellossom",
+    "name": "Bellossom",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/606953_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/606953_400w.jpg"
+    },
+    "tcgplayerId": "606953"
+  },
+  {
+    "id": "jp-dp5-temple-of-anger-magnezone-lv.x",
+    "name": "Magnezone LV.X",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/606981_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/606981_400w.jpg"
+    },
+    "tcgplayerId": "606981"
+  },
+  {
+    "id": "jp-dp5-temple-of-anger-deoxys-defense-forme",
+    "name": "Deoxys Defense Forme",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/606961_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/606961_400w.jpg"
+    },
+    "tcgplayerId": "606961"
+  },
+  {
+    "id": "jp-dp5-temple-of-anger-metagross",
+    "name": "Metagross",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/606984_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/606984_400w.jpg"
+    },
+    "tcgplayerId": "606984"
+  },
+  {
+    "id": "jp-dp5-temple-of-anger-deoxys-attack-forme",
+    "name": "Deoxys Attack Forme",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/606960_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/606960_400w.jpg"
+    },
+    "tcgplayerId": "606960"
+  },
+  {
+    "id": "jp-dp5-temple-of-anger-ditto",
+    "name": "Ditto",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/606963_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/606963_400w.jpg"
+    },
+    "tcgplayerId": "606963"
+  },
+  {
+    "id": "jp-dp5-temple-of-anger-houndoom",
+    "name": "Houndoom",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/606974_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/606974_400w.jpg"
+    },
+    "tcgplayerId": "606974"
+  },
+  {
+    "id": "jp-dp5-temple-of-anger-skitty",
+    "name": "Skitty",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/607000_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/607000_400w.jpg"
+    },
+    "tcgplayerId": "607000"
+  },
+  {
+    "id": "jp-dp5-temple-of-anger-deoxys-speed-forme",
+    "name": "Deoxys Speed Forme",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/606962_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/606962_400w.jpg"
+    },
+    "tcgplayerId": "606962"
+  },
+  {
+    "id": "jp-dp5-temple-of-anger-mamoswine",
+    "name": "Mamoswine",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/606982_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/606982_400w.jpg"
+    },
+    "tcgplayerId": "606982"
+  },
+  {
+    "id": "jp-dp5-temple-of-anger-jirachi",
+    "name": "Jirachi",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/606976_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/606976_400w.jpg"
+    },
+    "tcgplayerId": "606976"
+  },
+  {
+    "id": "jp-dp5-temple-of-anger-registeel",
+    "name": "Registeel",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/606997_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/606997_400w.jpg"
+    },
+    "tcgplayerId": "606997"
+  },
+  {
+    "id": "jp-dp5-temple-of-anger-hitmontop",
+    "name": "Hitmontop",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/606972_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/606972_400w.jpg"
+    },
+    "tcgplayerId": "606972"
+  },
+  {
+    "id": "jp-dp5-temple-of-anger-delcatty",
+    "name": "Delcatty",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/606958_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/606958_400w.jpg"
+    },
+    "tcgplayerId": "606958"
+  },
+  {
+    "id": "jp-dp5-temple-of-anger-unown-!",
+    "name": "Unown !",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/607009_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/607009_400w.jpg"
+    },
+    "tcgplayerId": "607009"
+  },
+  {
+    "id": "jp-dp5-temple-of-anger-cynthias-feelings",
+    "name": "Cynthia's Feelings",
+    "supertype": "Trainer",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/606957_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/606957_400w.jpg"
+    },
+    "tcgplayerId": "606957"
+  },
+  {
+    "id": "jp-dp5-temple-of-anger-regigigas",
+    "name": "Regigigas",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/606995_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/606995_400w.jpg"
+    },
+    "tcgplayerId": "606995"
+  },
+  {
+    "id": "jp-dp5-temple-of-anger-froslass",
+    "name": "Froslass",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/606967_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/606967_400w.jpg"
+    },
+    "tcgplayerId": "606967"
+  },
+  {
+    "id": "jp-dp5-temple-of-anger-meowth",
+    "name": "Meowth",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/606983_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/606983_400w.jpg"
+    },
+    "tcgplayerId": "606983"
+  },
+  {
+    "id": "jp-dp5-temple-of-anger-sneasel",
+    "name": "Sneasel",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/607001_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/607001_400w.jpg"
+    },
+    "tcgplayerId": "607001"
+  },
+  {
+    "id": "jp-dp5-temple-of-anger-tyrogue",
+    "name": "Tyrogue",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/607008_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/607008_400w.jpg"
+    },
+    "tcgplayerId": "607008"
+  },
+  {
+    "id": "jp-dp5-temple-of-anger-staryu",
+    "name": "Staryu",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/607004_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/607004_400w.jpg"
+    },
+    "tcgplayerId": "607004"
+  },
+  {
+    "id": "jp-dp5-temple-of-anger-probopass",
+    "name": "Probopass",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/606993_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/606993_400w.jpg"
+    },
+    "tcgplayerId": "606993"
+  },
+  {
+    "id": "jp-dp5-temple-of-anger-exeggutor",
+    "name": "Exeggutor",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/606966_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/606966_400w.jpg"
+    },
+    "tcgplayerId": "606966"
+  },
+  {
+    "id": "jp-dp5-temple-of-anger-starmie",
+    "name": "Starmie",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/607003_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/607003_400w.jpg"
+    },
+    "tcgplayerId": "607003"
+  },
+  {
+    "id": "jp-dp5-temple-of-anger-gloom",
+    "name": "Gloom",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/606968_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/606968_400w.jpg"
+    },
+    "tcgplayerId": "606968"
+  },
+  {
+    "id": "jp-dp5-temple-of-anger-houndour",
+    "name": "Houndour",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/606975_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/606975_400w.jpg"
+    },
+    "tcgplayerId": "606975"
+  },
+  {
+    "id": "jp-dp5-temple-of-anger-unown-j",
+    "name": "Unown J",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/607010_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/607010_400w.jpg"
+    },
+    "tcgplayerId": "607010"
+  },
+  {
+    "id": "jp-dp5-temple-of-anger-chinchou",
+    "name": "Chinchou",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/606955_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/606955_400w.jpg"
+    },
+    "tcgplayerId": "606955"
+  },
+  {
+    "id": "jp-dp5-temple-of-anger-oddish",
+    "name": "Oddish",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/606989_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/606989_400w.jpg"
+    },
+    "tcgplayerId": "606989"
+  },
+  {
+    "id": "jp-dp5-temple-of-anger-swinub",
+    "name": "Swinub",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/607006_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/607006_400w.jpg"
+    },
+    "tcgplayerId": "607006"
+  },
+  {
+    "id": "jp-dp5-temple-of-anger-lanturn",
+    "name": "Lanturn",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/606978_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/606978_400w.jpg"
+    },
+    "tcgplayerId": "606978"
+  },
+  {
+    "id": "jp-dp5-temple-of-anger-beldum",
+    "name": "Beldum",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/606952_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/606952_400w.jpg"
+    },
+    "tcgplayerId": "606952"
+  },
+  {
+    "id": "jp-dp5-temple-of-anger-seadra",
+    "name": "Seadra",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/606998_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/606998_400w.jpg"
+    },
+    "tcgplayerId": "606998"
+  },
+  {
+    "id": "jp-dp5-temple-of-anger-horsea",
+    "name": "Horsea",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/606973_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/606973_400w.jpg"
+    },
+    "tcgplayerId": "606973"
+  },
+  {
+    "id": "jp-dp5-temple-of-anger-exeggcute",
+    "name": "Exeggcute",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/606965_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/606965_400w.jpg"
+    },
+    "tcgplayerId": "606965"
+  },
+  {
+    "id": "jp-dp5-temple-of-anger-shedinja",
+    "name": "Shedinja",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/606999_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/606999_400w.jpg"
+    },
+    "tcgplayerId": "606999"
+  },
+  {
+    "id": "jp-dp5-temple-of-anger-hitmonlee",
+    "name": "Hitmonlee",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/606971_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/606971_400w.jpg"
+    },
+    "tcgplayerId": "606971"
+  },
+  {
+    "id": "jp-dp5-temple-of-anger-hitmonchan",
+    "name": "Hitmonchan",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/606970_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/606970_400w.jpg"
+    },
+    "tcgplayerId": "606970"
+  },
+  {
+    "id": "jp-dp5-temple-of-anger-unown-r",
+    "name": "Unown R",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/607011_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/607011_400w.jpg"
+    },
+    "tcgplayerId": "607011"
+  },
+  {
+    "id": "jp-dp5-temple-of-anger-piloswine",
+    "name": "Piloswine",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/606991_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/606991_400w.jpg"
+    },
+    "tcgplayerId": "606991"
+  },
+  {
+    "id": "jp-dp5-temple-of-anger-nosepass",
+    "name": "Nosepass",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/606988_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/606988_400w.jpg"
+    },
+    "tcgplayerId": "606988"
+  },
+  {
+    "id": "jp-dp5-temple-of-anger-anorith",
+    "name": "Anorith",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/606948_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/606948_400w.jpg"
+    },
+    "tcgplayerId": "606948"
+  }
+]

@@ -1,0 +1,350 @@
+[
+  {
+    "id": "jp-intro-pack-bulbasaur-3",
+    "name": "Raichu",
+    "supertype": "Pokémon",
+    "number": "3",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/614626_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/614626_400w.jpg"
+    },
+    "tcgplayerId": "614626"
+  },
+  {
+    "id": "jp-intro-pack-bulbasaur-venusaur",
+    "name": "Venusaur",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/614629_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/614629_400w.jpg"
+    },
+    "tcgplayerId": "614629"
+  },
+  {
+    "id": "jp-intro-pack-bulbasaur-13",
+    "name": "Pikachu - 13",
+    "supertype": "Pokémon",
+    "number": "13",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/614623_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/614623_400w.jpg"
+    },
+    "tcgplayerId": "614623"
+  },
+  {
+    "id": "jp-intro-pack-bulbasaur-35",
+    "name": "Bulbasaur - 35",
+    "supertype": "Pokémon",
+    "number": "35",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/614612_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/614612_400w.jpg"
+    },
+    "tcgplayerId": "614612"
+  },
+  {
+    "id": "jp-intro-pack-bulbasaur-18",
+    "name": "Bulbasaur - 18",
+    "supertype": "Pokémon",
+    "number": "18",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/614610_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/614610_400w.jpg"
+    },
+    "tcgplayerId": "614610"
+  },
+  {
+    "id": "jp-intro-pack-bulbasaur-37",
+    "name": "Jynx",
+    "supertype": "Pokémon",
+    "number": "37",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/614620_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/614620_400w.jpg"
+    },
+    "tcgplayerId": "614620"
+  },
+  {
+    "id": "jp-intro-pack-bulbasaur-1",
+    "name": "Bulbasaur - 1",
+    "supertype": "Pokémon",
+    "number": "1",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/614609_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/614609_400w.jpg"
+    },
+    "tcgplayerId": "614609"
+  },
+  {
+    "id": "jp-intro-pack-bulbasaur-39",
+    "name": "Koffing",
+    "supertype": "Pokémon",
+    "number": "39",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/614621_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/614621_400w.jpg"
+    },
+    "tcgplayerId": "614621"
+  },
+  {
+    "id": "jp-intro-pack-bulbasaur-29",
+    "name": "Bulbasaur - 29",
+    "supertype": "Pokémon",
+    "number": "29",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/614611_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/614611_400w.jpg"
+    },
+    "tcgplayerId": "614611"
+  },
+  {
+    "id": "jp-intro-pack-bulbasaur-40",
+    "name": "Pikachu - 40",
+    "supertype": "Pokémon",
+    "number": "40",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/614624_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/614624_400w.jpg"
+    },
+    "tcgplayerId": "614624"
+  },
+  {
+    "id": "jp-intro-pack-bulbasaur-16",
+    "name": "Meowth",
+    "supertype": "Pokémon",
+    "number": "16",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/614622_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/614622_400w.jpg"
+    },
+    "tcgplayerId": "614622"
+  },
+  {
+    "id": "jp-intro-pack-bulbasaur-26",
+    "name": "Electabuzz",
+    "supertype": "Pokémon",
+    "number": "26",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/614616_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/614616_400w.jpg"
+    },
+    "tcgplayerId": "614616"
+  },
+  {
+    "id": "jp-intro-pack-bulbasaur-22",
+    "name": "Ivysaur - 22",
+    "supertype": "Pokémon",
+    "number": "22",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/614618_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/614618_400w.jpg"
+    },
+    "tcgplayerId": "614618"
+  },
+  {
+    "id": "jp-intro-pack-bulbasaur-32",
+    "name": "Ivysaur - 32",
+    "supertype": "Pokémon",
+    "number": "32",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/614619_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/614619_400w.jpg"
+    },
+    "tcgplayerId": "614619"
+  },
+  {
+    "id": "jp-intro-pack-bulbasaur-9",
+    "name": "Super Scoop Up",
+    "supertype": "Pokémon",
+    "number": "9",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/614627_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/614627_400w.jpg"
+    },
+    "tcgplayerId": "614627"
+  },
+  {
+    "id": "jp-intro-pack-bulbasaur-23",
+    "name": "Double Colorless Energy",
+    "supertype": "Energy",
+    "number": "23",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/614614_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/614614_400w.jpg"
+    },
+    "tcgplayerId": "614614"
+  },
+  {
+    "id": "jp-intro-pack-bulbasaur-2",
+    "name": "Drowzee",
+    "supertype": "Pokémon",
+    "number": "2",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/614615_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/614615_400w.jpg"
+    },
+    "tcgplayerId": "614615"
+  },
+  {
+    "id": "jp-intro-pack-bulbasaur-20",
+    "name": "Bill's Teleporter",
+    "supertype": "Trainer",
+    "number": "20",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/614608_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/614608_400w.jpg"
+    },
+    "tcgplayerId": "614608"
+  },
+  {
+    "id": "jp-intro-pack-bulbasaur-15",
+    "name": "Basic Grass Energy - 15",
+    "supertype": "Energy",
+    "number": "15",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/614593_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/614593_400w.jpg"
+    },
+    "tcgplayerId": "614593"
+  },
+  {
+    "id": "jp-intro-pack-bulbasaur-5",
+    "name": "Basic Grass Energy - 5",
+    "supertype": "Energy",
+    "number": "5",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/614590_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/614590_400w.jpg"
+    },
+    "tcgplayerId": "614590"
+  },
+  {
+    "id": "jp-intro-pack-bulbasaur-27",
+    "name": "Basic Psychic Energy - 27",
+    "supertype": "Energy",
+    "number": "27",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/614605_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/614605_400w.jpg"
+    },
+    "tcgplayerId": "614605"
+  },
+  {
+    "id": "jp-intro-pack-bulbasaur-8",
+    "name": "Basic Grass Energy - 8",
+    "supertype": "Energy",
+    "number": "8",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/614591_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/614591_400w.jpg"
+    },
+    "tcgplayerId": "614591"
+  },
+  {
+    "id": "jp-intro-pack-bulbasaur-38",
+    "name": "Basic Psychic Energy - 38",
+    "supertype": "Energy",
+    "number": "38",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/614607_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/614607_400w.jpg"
+    },
+    "tcgplayerId": "614607"
+  },
+  {
+    "id": "jp-intro-pack-bulbasaur-17",
+    "name": "Basic Lightning Energy - 17",
+    "supertype": "Energy",
+    "number": "17",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/614602_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/614602_400w.jpg"
+    },
+    "tcgplayerId": "614602"
+  },
+  {
+    "id": "jp-intro-pack-bulbasaur-12",
+    "name": "Basic Lightning Energy - 12",
+    "supertype": "Energy",
+    "number": "12",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/614600_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/614600_400w.jpg"
+    },
+    "tcgplayerId": "614600"
+  },
+  {
+    "id": "jp-intro-pack-bulbasaur-31",
+    "name": "Basic Psychic Energy - 31",
+    "supertype": "Energy",
+    "number": "31",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/614606_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/614606_400w.jpg"
+    },
+    "tcgplayerId": "614606"
+  },
+  {
+    "id": "jp-intro-pack-bulbasaur-33",
+    "name": "Basic Lightning Energy - 33",
+    "supertype": "Energy",
+    "number": "33",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/614603_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/614603_400w.jpg"
+    },
+    "tcgplayerId": "614603"
+  },
+  {
+    "id": "jp-intro-pack-bulbasaur-10",
+    "name": "Basic Lightning Energy - 10",
+    "supertype": "Energy",
+    "number": "10",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/614599_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/614599_400w.jpg"
+    },
+    "tcgplayerId": "614599"
+  },
+  {
+    "id": "jp-intro-pack-bulbasaur-6",
+    "name": "Basic Lightning Energy - 6",
+    "supertype": "Energy",
+    "number": "6",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/614598_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/614598_400w.jpg"
+    },
+    "tcgplayerId": "614598"
+  }
+]

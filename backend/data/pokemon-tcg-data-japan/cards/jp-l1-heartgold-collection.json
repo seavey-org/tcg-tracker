@@ -1,0 +1,554 @@
+[
+  {
+    "id": "jp-l1-heartgold-collection-025/070",
+    "name": "Feraligatr - 025/070",
+    "supertype": "Pokémon",
+    "number": "025/070",
+    "rarity": "Super Rare Holo",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608027_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608027_400w.jpg"
+    },
+    "tcgplayerId": "608027"
+  },
+  {
+    "id": "jp-l1-heartgold-collection-013/070",
+    "name": "Growlithe (Mirror Holofoil)",
+    "supertype": "Pokémon",
+    "number": "013/070",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608086_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608086_400w.jpg"
+    },
+    "tcgplayerId": "608086"
+  },
+  {
+    "id": "jp-l1-heartgold-collection-039/070",
+    "name": "Slowking",
+    "supertype": "Pokémon",
+    "number": "039/070",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608042_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608042_400w.jpg"
+    },
+    "tcgplayerId": "608042"
+  },
+  {
+    "id": "jp-l1-heartgold-collection-034/070",
+    "name": "Ampharos - 034/070",
+    "supertype": "Pokémon",
+    "number": "034/070",
+    "rarity": "Super Rare Holo",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608036_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608036_400w.jpg"
+    },
+    "tcgplayerId": "608036"
+  },
+  {
+    "id": "jp-l1-heartgold-collection-034/070",
+    "name": "Donphan - 034/070",
+    "supertype": "Pokémon",
+    "number": "034/070",
+    "rarity": "Super Rare Holo",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608037_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608037_400w.jpg"
+    },
+    "tcgplayerId": "608037"
+  },
+  {
+    "id": "jp-l1-heartgold-collection-011/070",
+    "name": "Shuckle",
+    "supertype": "Pokémon",
+    "number": "011/070",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608013_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608013_400w.jpg"
+    },
+    "tcgplayerId": "608013"
+  },
+  {
+    "id": "jp-l1-heartgold-collection-059/070",
+    "name": "Noctowl",
+    "supertype": "Pokémon",
+    "number": "059/070",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608061_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608061_400w.jpg"
+    },
+    "tcgplayerId": "608061"
+  },
+  {
+    "id": "jp-l1-heartgold-collection-014/070",
+    "name": "Arcanine",
+    "supertype": "Pokémon",
+    "number": "014/070",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608016_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608016_400w.jpg"
+    },
+    "tcgplayerId": "608016"
+  },
+  {
+    "id": "jp-l1-heartgold-collection-021/070",
+    "name": "Lapras (Mirror Holofoil)",
+    "supertype": "Pokémon",
+    "number": "021/070",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608094_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608094_400w.jpg"
+    },
+    "tcgplayerId": "608094"
+  },
+  {
+    "id": "jp-l1-heartgold-collection-037/070",
+    "name": "Smoochum",
+    "supertype": "Pokémon",
+    "number": "037/070",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608040_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608040_400w.jpg"
+    },
+    "tcgplayerId": "608040"
+  },
+  {
+    "id": "jp-l1-heartgold-collection-036/070",
+    "name": "Weezing (Mirror Holofoil)",
+    "supertype": "Pokémon",
+    "number": "036/070",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608117_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608117_400w.jpg"
+    },
+    "tcgplayerId": "608117"
+  },
+  {
+    "id": "jp-l1-heartgold-collection-030/070",
+    "name": "Mantine",
+    "supertype": "Pokémon",
+    "number": "030/070",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608032_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608032_400w.jpg"
+    },
+    "tcgplayerId": "608032"
+  },
+  {
+    "id": "jp-l1-heartgold-collection-033/070",
+    "name": "Ampharos (Mirror Holofoil) - 033/070",
+    "supertype": "Pokémon",
+    "number": "033/070",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608106_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608106_400w.jpg"
+    },
+    "tcgplayerId": "608106"
+  },
+  {
+    "id": "jp-l1-heartgold-collection-049/070",
+    "name": "Cleffa",
+    "supertype": "Pokémon",
+    "number": "049/070",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608051_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608051_400w.jpg"
+    },
+    "tcgplayerId": "608051"
+  },
+  {
+    "id": "jp-l1-heartgold-collection-004/070",
+    "name": "Spinarak (Mirror Holofoil)",
+    "supertype": "Pokémon",
+    "number": "004/070",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608077_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608077_400w.jpg"
+    },
+    "tcgplayerId": "608077"
+  },
+  {
+    "id": "jp-l1-heartgold-collection-052/070",
+    "name": "Chansey (Mirror Holofoil)",
+    "supertype": "Pokémon",
+    "number": "052/070",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608153_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608153_400w.jpg"
+    },
+    "tcgplayerId": "608153"
+  },
+  {
+    "id": "jp-l1-heartgold-collection-012/070",
+    "name": "Heracross (Mirror Holofoil)",
+    "supertype": "Pokémon",
+    "number": "012/070",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608085_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608085_400w.jpg"
+    },
+    "tcgplayerId": "608085"
+  },
+  {
+    "id": "jp-l1-heartgold-collection-044/070",
+    "name": "Phanpy (Mirror Holofoil)",
+    "supertype": "Pokémon",
+    "number": "044/070",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608137_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608137_400w.jpg"
+    },
+    "tcgplayerId": "608137"
+  },
+  {
+    "id": "jp-l1-heartgold-collection-070/070",
+    "name": "Double Colorless Energy",
+    "supertype": "Energy",
+    "number": "070/070",
+    "rarity": "",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608072_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608072_400w.jpg"
+    },
+    "tcgplayerId": "608072"
+  },
+  {
+    "id": "jp-l1-heartgold-collection-022/070",
+    "name": "Totodile",
+    "supertype": "Pokémon",
+    "number": "022/070",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608024_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608024_400w.jpg"
+    },
+    "tcgplayerId": "608024"
+  },
+  {
+    "id": "jp-l1-heartgold-collection-055/070",
+    "name": "Tauros",
+    "supertype": "Pokémon",
+    "number": "055/070",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608057_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608057_400w.jpg"
+    },
+    "tcgplayerId": "608057"
+  },
+  {
+    "id": "jp-l1-heartgold-collection-004/070",
+    "name": "Spinarak",
+    "supertype": "Pokémon",
+    "number": "004/070",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608006_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608006_400w.jpg"
+    },
+    "tcgplayerId": "608006"
+  },
+  {
+    "id": "jp-l1-heartgold-collection-017/070",
+    "name": "Slowpoke",
+    "supertype": "Pokémon",
+    "number": "017/070",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608019_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608019_400w.jpg"
+    },
+    "tcgplayerId": "608019"
+  },
+  {
+    "id": "jp-l1-heartgold-collection-008/070",
+    "name": "Jumpluff",
+    "supertype": "Pokémon",
+    "number": "008/070",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608010_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608010_400w.jpg"
+    },
+    "tcgplayerId": "608010"
+  },
+  {
+    "id": "jp-l1-heartgold-collection-032/070",
+    "name": "Flaaffy",
+    "supertype": "Pokémon",
+    "number": "032/070",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608034_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608034_400w.jpg"
+    },
+    "tcgplayerId": "608034"
+  },
+  {
+    "id": "jp-l1-heartgold-collection-040/070",
+    "name": "Unown",
+    "supertype": "Pokémon",
+    "number": "040/070",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608043_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608043_400w.jpg"
+    },
+    "tcgplayerId": "608043"
+  },
+  {
+    "id": "jp-l1-heartgold-collection-038/070",
+    "name": "Jynx (Mirror Holofoil)",
+    "supertype": "Pokémon",
+    "number": "038/070",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608123_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608123_400w.jpg"
+    },
+    "tcgplayerId": "608123"
+  },
+  {
+    "id": "jp-l1-heartgold-collection-043/070",
+    "name": "Primeape",
+    "supertype": "Pokémon",
+    "number": "043/070",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608046_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608046_400w.jpg"
+    },
+    "tcgplayerId": "608046"
+  },
+  {
+    "id": "jp-l1-heartgold-collection-031/070",
+    "name": "Mareep",
+    "supertype": "Pokémon",
+    "number": "031/070",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608033_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608033_400w.jpg"
+    },
+    "tcgplayerId": "608033"
+  },
+  {
+    "id": "jp-l1-heartgold-collection-044/070",
+    "name": "Phanpy",
+    "supertype": "Pokémon",
+    "number": "044/070",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608047_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608047_400w.jpg"
+    },
+    "tcgplayerId": "608047"
+  },
+  {
+    "id": "jp-l1-heartgold-collection-041/070",
+    "name": "Wobbuffet",
+    "supertype": "Pokémon",
+    "number": "041/070",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608044_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608044_400w.jpg"
+    },
+    "tcgplayerId": "608044"
+  },
+  {
+    "id": "jp-l1-heartgold-collection-023/070",
+    "name": "Croconaw",
+    "supertype": "Pokémon",
+    "number": "023/070",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608025_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608025_400w.jpg"
+    },
+    "tcgplayerId": "608025"
+  },
+  {
+    "id": "jp-l1-heartgold-collection-035/070",
+    "name": "Koffing",
+    "supertype": "Pokémon",
+    "number": "035/070",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608038_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608038_400w.jpg"
+    },
+    "tcgplayerId": "608038"
+  },
+  {
+    "id": "jp-l1-heartgold-collection-042/070",
+    "name": "Mankey",
+    "supertype": "Pokémon",
+    "number": "042/070",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608045_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608045_400w.jpg"
+    },
+    "tcgplayerId": "608045"
+  },
+  {
+    "id": "jp-l1-heartgold-collection-012/070",
+    "name": "Heracross",
+    "supertype": "Pokémon",
+    "number": "012/070",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608014_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608014_400w.jpg"
+    },
+    "tcgplayerId": "608014"
+  },
+  {
+    "id": "jp-l1-heartgold-collection-010/070",
+    "name": "Sunflora",
+    "supertype": "Pokémon",
+    "number": "010/070",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608012_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608012_400w.jpg"
+    },
+    "tcgplayerId": "608012"
+  },
+  {
+    "id": "jp-l1-heartgold-collection-061/070",
+    "name": "Dunsparce",
+    "supertype": "Pokémon",
+    "number": "061/070",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608063_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608063_400w.jpg"
+    },
+    "tcgplayerId": "608063"
+  },
+  {
+    "id": "jp-l1-heartgold-collection-066/070",
+    "name": "Poke Ball (Mirror Holofoil)",
+    "supertype": "Trainer",
+    "number": "066/070",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608186_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608186_400w.jpg"
+    },
+    "tcgplayerId": "608186"
+  },
+  {
+    "id": "jp-l1-heartgold-collection-009/070",
+    "name": "Sunkern",
+    "supertype": "Pokémon",
+    "number": "009/070",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608011_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608011_400w.jpg"
+    },
+    "tcgplayerId": "608011"
+  },
+  {
+    "id": "jp-l1-heartgold-collection-020/070",
+    "name": "Starmie",
+    "supertype": "Pokémon",
+    "number": "020/070",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608022_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608022_400w.jpg"
+    },
+    "tcgplayerId": "608022"
+  },
+  {
+    "id": "jp-l1-heartgold-collection-045/070",
+    "name": "Donphan - 045/070",
+    "supertype": "Pokémon",
+    "number": "045/070",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608048_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608048_400w.jpg"
+    },
+    "tcgplayerId": "608048"
+  },
+  {
+    "id": "jp-l1-heartgold-collection-024/070",
+    "name": "Feraligatr (Mirror Holofoil) - 024/070",
+    "supertype": "Pokémon",
+    "number": "024/070",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608097_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608097_400w.jpg"
+    },
+    "tcgplayerId": "608097"
+  },
+  {
+    "id": "jp-l1-heartgold-collection-024/070",
+    "name": "Feraligatr - 024/070",
+    "supertype": "Pokémon",
+    "number": "024/070",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608026_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608026_400w.jpg"
+    },
+    "tcgplayerId": "608026"
+  },
+  {
+    "id": "jp-l1-heartgold-collection-060/070",
+    "name": "Girafarig",
+    "supertype": "Pokémon",
+    "number": "060/070",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608062_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608062_400w.jpg"
+    },
+    "tcgplayerId": "608062"
+  },
+  {
+    "id": "jp-l1-heartgold-collection-002/070",
+    "name": "Kakuna",
+    "supertype": "Pokémon",
+    "number": "002/070",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608004_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608004_400w.jpg"
+    },
+    "tcgplayerId": "608004"
+  },
+  {
+    "id": "jp-l1-heartgold-collection-058/070",
+    "name": "Hoothoot",
+    "supertype": "Pokémon",
+    "number": "058/070",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608060_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608060_400w.jpg"
+    },
+    "tcgplayerId": "608060"
+  }
+]

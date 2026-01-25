@@ -1,0 +1,26 @@
+[
+  {
+    "id": "jp-emerald-gift-box-rayquaza-018/019",
+    "name": "Rayquaza ex",
+    "supertype": "Pokémon",
+    "number": "018/019",
+    "rarity": "",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/613038_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/613038_400w.jpg"
+    },
+    "tcgplayerId": "613038"
+  },
+  {
+    "id": "jp-emerald-gift-box-rayquaza-018/019",
+    "name": "Rayquaza ex",
+    "supertype": "Pokémon",
+    "number": "018/019",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/613038_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/613038_400w.jpg"
+    },
+    "tcgplayerId": "613038"
+  }
+]

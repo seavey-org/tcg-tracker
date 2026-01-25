@@ -1,0 +1,122 @@
+[
+  {
+    "id": "jp-m-master-deck-build-box-speed-style-008/049",
+    "name": "Kyogre EX",
+    "supertype": "Pokémon",
+    "number": "008/049",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/606475_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/606475_400w.jpg"
+    },
+    "tcgplayerId": "606475"
+  },
+  {
+    "id": "jp-m-master-deck-build-box-speed-style-003/049",
+    "name": "Sceptile",
+    "supertype": "Pokémon",
+    "number": "003/049",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/606476_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/606476_400w.jpg"
+    },
+    "tcgplayerId": "606476"
+  },
+  {
+    "id": "jp-m-master-deck-build-box-speed-style-011/049",
+    "name": "Pikachu",
+    "supertype": "Pokémon",
+    "number": "011/049",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/606450_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/606450_400w.jpg"
+    },
+    "tcgplayerId": "606450"
+  },
+  {
+    "id": "jp-m-master-deck-build-box-speed-style-010/049",
+    "name": "Seismitoad EX",
+    "supertype": "Pokémon",
+    "number": "010/049",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/606461_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/606461_400w.jpg"
+    },
+    "tcgplayerId": "606461"
+  },
+  {
+    "id": "jp-m-master-deck-build-box-speed-style-018/049",
+    "name": "Bronzor",
+    "supertype": "Pokémon",
+    "number": "018/049",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/606464_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/606464_400w.jpg"
+    },
+    "tcgplayerId": "606464"
+  },
+  {
+    "id": "jp-m-master-deck-build-box-speed-style-023/049",
+    "name": "Hydreigon",
+    "supertype": "Pokémon",
+    "number": "023/049",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/606468_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/606468_400w.jpg"
+    },
+    "tcgplayerId": "606468"
+  },
+  {
+    "id": "jp-m-master-deck-build-box-speed-style-013/049",
+    "name": "Manectric EX",
+    "supertype": "Pokémon",
+    "number": "013/049",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/606473_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/606473_400w.jpg"
+    },
+    "tcgplayerId": "606473"
+  },
+  {
+    "id": "jp-m-master-deck-build-box-speed-style-001/049",
+    "name": "Treecko",
+    "supertype": "Pokémon",
+    "number": "001/049",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/606478_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/606478_400w.jpg"
+    },
+    "tcgplayerId": "606478"
+  },
+  {
+    "id": "jp-m-master-deck-build-box-speed-style-042/049",
+    "name": "Tierno",
+    "supertype": "Pokémon",
+    "number": "042/049",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/606449_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/606449_400w.jpg"
+    },
+    "tcgplayerId": "606449"
+  },
+  {
+    "id": "jp-m-master-deck-build-box-speed-style-040/049",
+    "name": "Head Ringer Team Flare Hyper Gear",
+    "supertype": "Pokémon",
+    "number": "040/049",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/606472_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/606472_400w.jpg"
+    },
+    "tcgplayerId": "606472"
+  }
+]

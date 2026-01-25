@@ -1,0 +1,506 @@
+[
+  {
+    "id": "jp-bw3-hail-blizzard-057/052",
+    "name": "Chandelure - 057/052",
+    "supertype": "Pokémon",
+    "number": "057/052",
+    "rarity": "Ultra Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601061_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601061_400w.jpg"
+    },
+    "tcgplayerId": "601061"
+  },
+  {
+    "id": "jp-bw3-hail-blizzard-053/052",
+    "name": "Kyurem EX - 053/052",
+    "supertype": "Pokémon",
+    "number": "053/052",
+    "rarity": "Super Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601082_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601082_400w.jpg"
+    },
+    "tcgplayerId": "601082"
+  },
+  {
+    "id": "jp-bw3-hail-blizzard-054/052",
+    "name": "Groudon EX - 054/052",
+    "supertype": "Pokémon",
+    "number": "054/052",
+    "rarity": "Super Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601074_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601074_400w.jpg"
+    },
+    "tcgplayerId": "601074"
+  },
+  {
+    "id": "jp-bw3-hail-blizzard-055/052",
+    "name": "Regigigas EX - 055/052",
+    "supertype": "Pokémon",
+    "number": "055/052",
+    "rarity": "Super Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601097_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601097_400w.jpg"
+    },
+    "tcgplayerId": "601097"
+  },
+  {
+    "id": "jp-bw3-hail-blizzard-032/052",
+    "name": "Groudon EX - 032/052",
+    "supertype": "Pokémon",
+    "number": "032/052",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601073_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601073_400w.jpg"
+    },
+    "tcgplayerId": "601073"
+  },
+  {
+    "id": "jp-bw3-hail-blizzard-010/052",
+    "name": "Arcanine",
+    "supertype": "Pokémon",
+    "number": "010/052",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601054_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601054_400w.jpg"
+    },
+    "tcgplayerId": "601054"
+  },
+  {
+    "id": "jp-bw3-hail-blizzard-034/052",
+    "name": "Lucario",
+    "supertype": "Pokémon",
+    "number": "034/052",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601087_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601087_400w.jpg"
+    },
+    "tcgplayerId": "601087"
+  },
+  {
+    "id": "jp-bw3-hail-blizzard-015/052",
+    "name": "Lapras",
+    "supertype": "Pokémon",
+    "number": "015/052",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601084_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601084_400w.jpg"
+    },
+    "tcgplayerId": "601084"
+  },
+  {
+    "id": "jp-bw3-hail-blizzard-045/052",
+    "name": "Regigigas EX - 045/052",
+    "supertype": "Pokémon",
+    "number": "045/052",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601096_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601096_400w.jpg"
+    },
+    "tcgplayerId": "601096"
+  },
+  {
+    "id": "jp-bw3-hail-blizzard-020/052",
+    "name": "Beartic",
+    "supertype": "Pokémon",
+    "number": "020/052",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601055_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601055_400w.jpg"
+    },
+    "tcgplayerId": "601055"
+  },
+  {
+    "id": "jp-bw3-hail-blizzard-004/052",
+    "name": "Lilligant",
+    "supertype": "Pokémon",
+    "number": "004/052",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601085_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601085_400w.jpg"
+    },
+    "tcgplayerId": "601085"
+  },
+  {
+    "id": "jp-bw3-hail-blizzard-005/052",
+    "name": "Deerling",
+    "supertype": "Pokémon",
+    "number": "005/052",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601067_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601067_400w.jpg"
+    },
+    "tcgplayerId": "601067"
+  },
+  {
+    "id": "jp-bw3-hail-blizzard-028/052",
+    "name": "Gardevoir",
+    "supertype": "Pokémon",
+    "number": "028/052",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601072_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601072_400w.jpg"
+    },
+    "tcgplayerId": "601072"
+  },
+  {
+    "id": "jp-bw3-hail-blizzard-023/052",
+    "name": "Pikachu",
+    "supertype": "Pokémon",
+    "number": "023/052",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601092_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601092_400w.jpg"
+    },
+    "tcgplayerId": "601092"
+  },
+  {
+    "id": "jp-bw3-hail-blizzard-042/052",
+    "name": "Bisharp",
+    "supertype": "Pokémon",
+    "number": "042/052",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601057_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601057_400w.jpg"
+    },
+    "tcgplayerId": "601057"
+  },
+  {
+    "id": "jp-bw3-hail-blizzard-033/052",
+    "name": "Riolu",
+    "supertype": "Pokémon",
+    "number": "033/052",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601098_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601098_400w.jpg"
+    },
+    "tcgplayerId": "601098"
+  },
+  {
+    "id": "jp-bw3-hail-blizzard-027/052",
+    "name": "Kirlia",
+    "supertype": "Pokémon",
+    "number": "027/052",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601080_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601080_400w.jpg"
+    },
+    "tcgplayerId": "601080"
+  },
+  {
+    "id": "jp-bw3-hail-blizzard-041/052",
+    "name": "Pawniard",
+    "supertype": "Pokémon",
+    "number": "041/052",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601089_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601089_400w.jpg"
+    },
+    "tcgplayerId": "601089"
+  },
+  {
+    "id": "jp-bw3-hail-blizzard-022/052",
+    "name": "Kyurem EX - 022/052",
+    "supertype": "Pokémon",
+    "number": "022/052",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601081_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601081_400w.jpg"
+    },
+    "tcgplayerId": "601081"
+  },
+  {
+    "id": "jp-bw3-hail-blizzard-025/052",
+    "name": "Zapdos",
+    "supertype": "Pokémon",
+    "number": "025/052",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601109_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601109_400w.jpg"
+    },
+    "tcgplayerId": "601109"
+  },
+  {
+    "id": "jp-bw3-hail-blizzard-029/052",
+    "name": "Darmanitan",
+    "supertype": "Pokémon",
+    "number": "029/052",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601065_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601065_400w.jpg"
+    },
+    "tcgplayerId": "601065"
+  },
+  {
+    "id": "jp-bw3-hail-blizzard-026/052",
+    "name": "Ralts",
+    "supertype": "Pokémon",
+    "number": "026/052",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601095_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601095_400w.jpg"
+    },
+    "tcgplayerId": "601095"
+  },
+  {
+    "id": "jp-bw3-hail-blizzard-016/052",
+    "name": "Vanillite",
+    "supertype": "Pokémon",
+    "number": "016/052",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601105_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601105_400w.jpg"
+    },
+    "tcgplayerId": "601105"
+  },
+  {
+    "id": "jp-bw3-hail-blizzard-044/052",
+    "name": "Wigglytuff",
+    "supertype": "Pokémon",
+    "number": "044/052",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601108_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601108_400w.jpg"
+    },
+    "tcgplayerId": "601108"
+  },
+  {
+    "id": "jp-bw3-hail-blizzard-014/052",
+    "name": "Chandelure - 014/052",
+    "supertype": "Pokémon",
+    "number": "014/052",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601060_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601060_400w.jpg"
+    },
+    "tcgplayerId": "601060"
+  },
+  {
+    "id": "jp-bw3-hail-blizzard-018/052",
+    "name": "Vanilluxe",
+    "supertype": "Pokémon",
+    "number": "018/052",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601106_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601106_400w.jpg"
+    },
+    "tcgplayerId": "601106"
+  },
+  {
+    "id": "jp-bw3-hail-blizzard-009/052",
+    "name": "Growlithe",
+    "supertype": "Pokémon",
+    "number": "009/052",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601075_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601075_400w.jpg"
+    },
+    "tcgplayerId": "601075"
+  },
+  {
+    "id": "jp-bw3-hail-blizzard-012/052",
+    "name": "Litwick",
+    "supertype": "Pokémon",
+    "number": "012/052",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601086_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601086_400w.jpg"
+    },
+    "tcgplayerId": "601086"
+  },
+  {
+    "id": "jp-bw3-hail-blizzard-013/052",
+    "name": "Lampent",
+    "supertype": "Pokémon",
+    "number": "013/052",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601083_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601083_400w.jpg"
+    },
+    "tcgplayerId": "601083"
+  },
+  {
+    "id": "jp-bw3-hail-blizzard-001/052",
+    "name": "Pansage",
+    "supertype": "Pokémon",
+    "number": "001/052",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601088_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601088_400w.jpg"
+    },
+    "tcgplayerId": "601088"
+  },
+  {
+    "id": "jp-bw3-hail-blizzard-046/052",
+    "name": "Pidove",
+    "supertype": "Pokémon",
+    "number": "046/052",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601091_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601091_400w.jpg"
+    },
+    "tcgplayerId": "601091"
+  },
+  {
+    "id": "jp-bw3-hail-blizzard-019/052",
+    "name": "Cubchoo",
+    "supertype": "Pokémon",
+    "number": "019/052",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601064_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601064_400w.jpg"
+    },
+    "tcgplayerId": "601064"
+  },
+  {
+    "id": "jp-bw3-hail-blizzard-002/052",
+    "name": "Simisage",
+    "supertype": "Pokémon",
+    "number": "002/052",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601100_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601100_400w.jpg"
+    },
+    "tcgplayerId": "601100"
+  },
+  {
+    "id": "jp-bw3-hail-blizzard-043/052",
+    "name": "Jigglypuff",
+    "supertype": "Pokémon",
+    "number": "043/052",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601079_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601079_400w.jpg"
+    },
+    "tcgplayerId": "601079"
+  },
+  {
+    "id": "jp-bw3-hail-blizzard-006/052",
+    "name": "Sawsbuck",
+    "supertype": "Pokémon",
+    "number": "006/052",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601099_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601099_400w.jpg"
+    },
+    "tcgplayerId": "601099"
+  },
+  {
+    "id": "jp-bw3-hail-blizzard-050/052",
+    "name": "Cilan",
+    "supertype": "Pokémon",
+    "number": "050/052",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601062_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601062_400w.jpg"
+    },
+    "tcgplayerId": "601062"
+  },
+  {
+    "id": "jp-bw3-hail-blizzard-011/052",
+    "name": "Darumaka",
+    "supertype": "Pokémon",
+    "number": "011/052",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601066_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601066_400w.jpg"
+    },
+    "tcgplayerId": "601066"
+  },
+  {
+    "id": "jp-bw3-hail-blizzard-007/052",
+    "name": "Foongus",
+    "supertype": "Pokémon",
+    "number": "007/052",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601071_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601071_400w.jpg"
+    },
+    "tcgplayerId": "601071"
+  },
+  {
+    "id": "jp-bw3-hail-blizzard-003/052",
+    "name": "Petilil",
+    "supertype": "Pokémon",
+    "number": "003/052",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601090_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601090_400w.jpg"
+    },
+    "tcgplayerId": "601090"
+  },
+  {
+    "id": "jp-bw3-hail-blizzard-021/052",
+    "name": "Cryogonal",
+    "supertype": "Pokémon",
+    "number": "021/052",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601063_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601063_400w.jpg"
+    },
+    "tcgplayerId": "601063"
+  },
+  {
+    "id": "jp-bw3-hail-blizzard-017/052",
+    "name": "Vanillish",
+    "supertype": "Pokémon",
+    "number": "017/052",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601104_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601104_400w.jpg"
+    },
+    "tcgplayerId": "601104"
+  },
+  {
+    "id": "jp-bw3-hail-blizzard-035/052",
+    "name": "Hippopotas",
+    "supertype": "Pokémon",
+    "number": "035/052",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601077_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601077_400w.jpg"
+    },
+    "tcgplayerId": "601077"
+  }
+]

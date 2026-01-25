@@ -1,0 +1,110 @@
+[
+  {
+    "id": "jp-ptr-regigigas-lv-x-collection-pack-002/012",
+    "name": "Leafeon",
+    "supertype": "Pokémon",
+    "number": "002/012",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/607920_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/607920_400w.jpg"
+    },
+    "tcgplayerId": "607920"
+  },
+  {
+    "id": "jp-ptr-regigigas-lv-x-collection-pack-011/012",
+    "name": "Regigigas LV.X",
+    "supertype": "Pokémon",
+    "number": "011/012",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/607927_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/607927_400w.jpg"
+    },
+    "tcgplayerId": "607927"
+  },
+  {
+    "id": "jp-ptr-regigigas-lv-x-collection-pack-012/012",
+    "name": "Time-Space Distortion",
+    "supertype": "Pokémon",
+    "number": "012/012",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/607918_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/607918_400w.jpg"
+    },
+    "tcgplayerId": "607918"
+  },
+  {
+    "id": "jp-ptr-regigigas-lv-x-collection-pack-008/012",
+    "name": "Cresselia",
+    "supertype": "Pokémon",
+    "number": "008/012",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/607919_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/607919_400w.jpg"
+    },
+    "tcgplayerId": "607919"
+  },
+  {
+    "id": "jp-ptr-regigigas-lv-x-collection-pack-004/012",
+    "name": "Shellos",
+    "supertype": "Pokémon",
+    "number": "004/012",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/607922_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/607922_400w.jpg"
+    },
+    "tcgplayerId": "607922"
+  },
+  {
+    "id": "jp-ptr-regigigas-lv-x-collection-pack-010/012",
+    "name": "Lopunny",
+    "supertype": "Pokémon",
+    "number": "010/012",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/607929_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/607929_400w.jpg"
+    },
+    "tcgplayerId": "607929"
+  },
+  {
+    "id": "jp-ptr-regigigas-lv-x-collection-pack-001/012",
+    "name": "Turtwig",
+    "supertype": "Pokémon",
+    "number": "001/012",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/607923_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/607923_400w.jpg"
+    },
+    "tcgplayerId": "607923"
+  },
+  {
+    "id": "jp-ptr-regigigas-lv-x-collection-pack-005/012",
+    "name": "Phione",
+    "supertype": "Pokémon",
+    "number": "005/012",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/607921_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/607921_400w.jpg"
+    },
+    "tcgplayerId": "607921"
+  },
+  {
+    "id": "jp-ptr-regigigas-lv-x-collection-pack-007/012",
+    "name": "Chingling",
+    "supertype": "Pokémon",
+    "number": "007/012",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/607925_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/607925_400w.jpg"
+    },
+    "tcgplayerId": "607925"
+  }
+]

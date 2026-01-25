@@ -1,0 +1,38 @@
+[
+  {
+    "id": "jp-fighting-quick-construction-pack-007/015",
+    "name": "Medicham ex",
+    "supertype": "Pokémon",
+    "number": "007/015",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612158_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612158_400w.jpg"
+    },
+    "tcgplayerId": "612158"
+  },
+  {
+    "id": "jp-fighting-quick-construction-pack-010/015",
+    "name": "Mr. Stone's Project",
+    "supertype": "Trainer",
+    "number": "010/015",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612161_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612161_400w.jpg"
+    },
+    "tcgplayerId": "612161"
+  },
+  {
+    "id": "jp-fighting-quick-construction-pack-005/015",
+    "name": "Nosepass",
+    "supertype": "Pokémon",
+    "number": "005/015",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612156_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612156_400w.jpg"
+    },
+    "tcgplayerId": "612156"
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "id": "jp-smk-trainer-battle-decks-021/031",
+    "name": "Misty's Water Command",
+    "supertype": "Trainer",
+    "number": "021/031",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/596589_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/596589_400w.jpg"
+    },
+    "tcgplayerId": "596589"
+  },
+  {
+    "id": "jp-smk-trainer-battle-decks-001/031",
+    "name": "Psyduck",
+    "supertype": "Pokémon",
+    "number": "001/031",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/596569_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/596569_400w.jpg"
+    },
+    "tcgplayerId": "596569"
+  }
+]

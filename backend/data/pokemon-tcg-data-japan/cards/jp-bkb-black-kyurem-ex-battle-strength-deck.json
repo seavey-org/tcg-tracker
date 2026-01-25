@@ -1,0 +1,62 @@
+[
+  {
+    "id": "jp-bkb-black-kyurem-ex-battle-strength-deck-008/018",
+    "name": "Black Kyurem EX",
+    "supertype": "Pokémon",
+    "number": "008/018",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/604951_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/604951_400w.jpg"
+    },
+    "tcgplayerId": "604951"
+  },
+  {
+    "id": "jp-bkb-black-kyurem-ex-battle-strength-deck-007/018",
+    "name": "Zapdos EX (Team Plasma)",
+    "supertype": "Pokémon",
+    "number": "007/018",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/604952_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/604952_400w.jpg"
+    },
+    "tcgplayerId": "604952"
+  },
+  {
+    "id": "jp-bkb-black-kyurem-ex-battle-strength-deck-002/018",
+    "name": "Frillish",
+    "supertype": "Pokémon",
+    "number": "002/018",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/604954_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/604954_400w.jpg"
+    },
+    "tcgplayerId": "604954"
+  },
+  {
+    "id": "jp-bkb-black-kyurem-ex-battle-strength-deck-004/018",
+    "name": "Magnemite",
+    "supertype": "Pokémon",
+    "number": "004/018",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/604956_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/604956_400w.jpg"
+    },
+    "tcgplayerId": "604956"
+  },
+  {
+    "id": "jp-bkb-black-kyurem-ex-battle-strength-deck-010/018",
+    "name": "Ultra Ball",
+    "supertype": "Trainer",
+    "number": "010/018",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/604947_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/604947_400w.jpg"
+    },
+    "tcgplayerId": "604947"
+  }
+]

@@ -1,0 +1,566 @@
+[
+  {
+    "id": "jp-holon-research-tower-075/086",
+    "name": "Metagross Star",
+    "supertype": "Pokémon",
+    "number": "075/086",
+    "rarity": "Shiny Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/611417_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/611417_400w.jpg"
+    },
+    "tcgplayerId": "611417"
+  },
+  {
+    "id": "jp-holon-research-tower-030/086",
+    "name": "Vaporeon (Delta Species)",
+    "supertype": "Pokémon",
+    "number": "030/086",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/611394_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/611394_400w.jpg"
+    },
+    "tcgplayerId": "611394"
+  },
+  {
+    "id": "jp-holon-research-tower-019/086",
+    "name": "Mewtwo (Delta Species)",
+    "supertype": "Pokémon",
+    "number": "019/086",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/611386_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/611386_400w.jpg"
+    },
+    "tcgplayerId": "611386"
+  },
+  {
+    "id": "jp-holon-research-tower-069/086",
+    "name": "Umbreon (Delta Species)",
+    "supertype": "Pokémon",
+    "number": "069/086",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/611393_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/611393_400w.jpg"
+    },
+    "tcgplayerId": "611393"
+  },
+  {
+    "id": "jp-holon-research-tower-049/086",
+    "name": "Espeon (Delta Species)",
+    "supertype": "Pokémon",
+    "number": "049/086",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/611376_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/611376_400w.jpg"
+    },
+    "tcgplayerId": "611376"
+  },
+  {
+    "id": "jp-holon-research-tower-050/086",
+    "name": "Gardevoir (Delta Species)",
+    "supertype": "Pokémon",
+    "number": "050/086",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/611378_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/611378_400w.jpg"
+    },
+    "tcgplayerId": "611378"
+  },
+  {
+    "id": "jp-holon-research-tower-043/086",
+    "name": "Rayquaza (Delta Species)",
+    "supertype": "Pokémon",
+    "number": "043/086",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/611388_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/611388_400w.jpg"
+    },
+    "tcgplayerId": "611388"
+  },
+  {
+    "id": "jp-holon-research-tower-020/086",
+    "name": "Tyranitar (Delta Species)",
+    "supertype": "Pokémon",
+    "number": "020/086",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/611392_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/611392_400w.jpg"
+    },
+    "tcgplayerId": "611392"
+  },
+  {
+    "id": "jp-holon-research-tower-039/086",
+    "name": "Dragonite (Delta Species)",
+    "supertype": "Pokémon",
+    "number": "039/086",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/611375_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/611375_400w.jpg"
+    },
+    "tcgplayerId": "611375"
+  },
+  {
+    "id": "jp-holon-research-tower-042/086",
+    "name": "Latios (Delta Species)",
+    "supertype": "Pokémon",
+    "number": "042/086",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/611383_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/611383_400w.jpg"
+    },
+    "tcgplayerId": "611383"
+  },
+  {
+    "id": "jp-holon-research-tower-038/086",
+    "name": "Jolteon (Delta Species)",
+    "supertype": "Pokémon",
+    "number": "038/086",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/611381_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/611381_400w.jpg"
+    },
+    "tcgplayerId": "611381"
+  },
+  {
+    "id": "jp-holon-research-tower-041/086",
+    "name": "Latias (Delta Species)",
+    "supertype": "Pokémon",
+    "number": "041/086",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/611382_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/611382_400w.jpg"
+    },
+    "tcgplayerId": "611382"
+  },
+  {
+    "id": "jp-holon-research-tower-046/086",
+    "name": "Ditto - 046/086",
+    "supertype": "Pokémon",
+    "number": "046/086",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/611399_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/611399_400w.jpg"
+    },
+    "tcgplayerId": "611399"
+  },
+  {
+    "id": "jp-holon-research-tower-021/086",
+    "name": "Salamence (Delta Species)",
+    "supertype": "Pokémon",
+    "number": "021/086",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/611389_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/611389_400w.jpg"
+    },
+    "tcgplayerId": "611389"
+  },
+  {
+    "id": "jp-holon-research-tower-058/086",
+    "name": "Marowak (Delta Species)",
+    "supertype": "Pokémon",
+    "number": "058/086",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/611384_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/611384_400w.jpg"
+    },
+    "tcgplayerId": "611384"
+  },
+  {
+    "id": "jp-holon-research-tower-010/086",
+    "name": "Beedrill (Delta Species)",
+    "supertype": "Pokémon",
+    "number": "010/086",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/611373_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/611373_400w.jpg"
+    },
+    "tcgplayerId": "611373"
+  },
+  {
+    "id": "jp-holon-research-tower-044/086",
+    "name": "Drowzee",
+    "supertype": "Pokémon",
+    "number": "044/086",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/611356_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/611356_400w.jpg"
+    },
+    "tcgplayerId": "611356"
+  },
+  {
+    "id": "jp-holon-research-tower-070/086",
+    "name": "Mightyena (Delta Species)",
+    "supertype": "Pokémon",
+    "number": "070/086",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/611387_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/611387_400w.jpg"
+    },
+    "tcgplayerId": "611387"
+  },
+  {
+    "id": "jp-holon-research-tower-073/086",
+    "name": "Eevee (Delta Species)",
+    "supertype": "Pokémon",
+    "number": "073/086",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/611420_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/611420_400w.jpg"
+    },
+    "tcgplayerId": "611420"
+  },
+  {
+    "id": "jp-holon-research-tower-025/086",
+    "name": "Slowking",
+    "supertype": "Pokémon",
+    "number": "025/086",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/611409_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/611409_400w.jpg"
+    },
+    "tcgplayerId": "611409"
+  },
+  {
+    "id": "jp-holon-research-tower-072/086",
+    "name": "Holon's Magneton",
+    "supertype": "Pokémon",
+    "number": "072/086",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/611380_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/611380_400w.jpg"
+    },
+    "tcgplayerId": "611380"
+  },
+  {
+    "id": "jp-holon-research-tower-032/086",
+    "name": "Holon's Electrode",
+    "supertype": "Pokémon",
+    "number": "032/086",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/611379_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/611379_400w.jpg"
+    },
+    "tcgplayerId": "611379"
+  },
+  {
+    "id": "jp-holon-research-tower-059/086",
+    "name": "Meowth",
+    "supertype": "Pokémon",
+    "number": "059/086",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/611363_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/611363_400w.jpg"
+    },
+    "tcgplayerId": "611363"
+  },
+  {
+    "id": "jp-holon-research-tower-064/086",
+    "name": "Taillow",
+    "supertype": "Pokémon",
+    "number": "064/086",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/611370_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/611370_400w.jpg"
+    },
+    "tcgplayerId": "611370"
+  },
+  {
+    "id": "jp-holon-research-tower-005/086",
+    "name": "Koffing",
+    "supertype": "Pokémon",
+    "number": "005/086",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/611360_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/611360_400w.jpg"
+    },
+    "tcgplayerId": "611360"
+  },
+  {
+    "id": "jp-holon-research-tower-013/086",
+    "name": "Larvitar (Delta Species)",
+    "supertype": "Pokémon",
+    "number": "013/086",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/611361_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/611361_400w.jpg"
+    },
+    "tcgplayerId": "611361"
+  },
+  {
+    "id": "jp-holon-research-tower-067/086",
+    "name": "Castform",
+    "supertype": "Pokémon",
+    "number": "067/086",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/611395_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/611395_400w.jpg"
+    },
+    "tcgplayerId": "611395"
+  },
+  {
+    "id": "jp-holon-research-tower-035/086",
+    "name": "Dragonair (Delta Species)",
+    "supertype": "Pokémon",
+    "number": "035/086",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/611419_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/611419_400w.jpg"
+    },
+    "tcgplayerId": "611419"
+  },
+  {
+    "id": "jp-holon-research-tower-051/086",
+    "name": "Sandshrew",
+    "supertype": "Pokémon",
+    "number": "051/086",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/611367_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/611367_400w.jpg"
+    },
+    "tcgplayerId": "611367"
+  },
+  {
+    "id": "jp-holon-research-tower-034/086",
+    "name": "Dratini (Delta Species)",
+    "supertype": "Pokémon",
+    "number": "034/086",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/611355_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/611355_400w.jpg"
+    },
+    "tcgplayerId": "611355"
+  },
+  {
+    "id": "jp-holon-research-tower-057/086",
+    "name": "Sandslash (Delta Species)",
+    "supertype": "Pokémon",
+    "number": "057/086",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/611390_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/611390_400w.jpg"
+    },
+    "tcgplayerId": "611390"
+  },
+  {
+    "id": "jp-holon-research-tower-066/086",
+    "name": "Azurill",
+    "supertype": "Pokémon",
+    "number": "066/086",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/611418_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/611418_400w.jpg"
+    },
+    "tcgplayerId": "611418"
+  },
+  {
+    "id": "jp-holon-research-tower-062/086",
+    "name": "Porygon",
+    "supertype": "Pokémon",
+    "number": "062/086",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/611365_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/611365_400w.jpg"
+    },
+    "tcgplayerId": "611365"
+  },
+  {
+    "id": "jp-holon-research-tower-037/086",
+    "name": "Metang (Delta Species)",
+    "supertype": "Pokémon",
+    "number": "037/086",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/611434_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/611434_400w.jpg"
+    },
+    "tcgplayerId": "611434"
+  },
+  {
+    "id": "jp-holon-research-tower-036/086",
+    "name": "Beldum (Delta Species)",
+    "supertype": "Pokémon",
+    "number": "036/086",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/611353_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/611353_400w.jpg"
+    },
+    "tcgplayerId": "611353"
+  },
+  {
+    "id": "jp-holon-research-tower-068/086",
+    "name": "Poochyena",
+    "supertype": "Pokémon",
+    "number": "068/086",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/611364_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/611364_400w.jpg"
+    },
+    "tcgplayerId": "611364"
+  },
+  {
+    "id": "jp-holon-research-tower-014/086",
+    "name": "Pupitar (Delta Species)",
+    "supertype": "Pokémon",
+    "number": "014/086",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/611435_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/611435_400w.jpg"
+    },
+    "tcgplayerId": "611435"
+  },
+  {
+    "id": "jp-holon-research-tower-002/086",
+    "name": "Kakuna",
+    "supertype": "Pokémon",
+    "number": "002/086",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/611358_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/611358_400w.jpg"
+    },
+    "tcgplayerId": "611358"
+  },
+  {
+    "id": "jp-holon-research-tower-052/086",
+    "name": "Cubone",
+    "supertype": "Pokémon",
+    "number": "052/086",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/611354_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/611354_400w.jpg"
+    },
+    "tcgplayerId": "611354"
+  },
+  {
+    "id": "jp-holon-research-tower-048/086",
+    "name": "Kirlia",
+    "supertype": "Pokémon",
+    "number": "048/086",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/611359_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/611359_400w.jpg"
+    },
+    "tcgplayerId": "611359"
+  },
+  {
+    "id": "jp-holon-research-tower-004/086",
+    "name": "Golbat",
+    "supertype": "Pokémon",
+    "number": "004/086",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/611357_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/611357_400w.jpg"
+    },
+    "tcgplayerId": "611357"
+  },
+  {
+    "id": "jp-holon-research-tower-023/086",
+    "name": "Staryu",
+    "supertype": "Pokémon",
+    "number": "023/086",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/611369_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/611369_400w.jpg"
+    },
+    "tcgplayerId": "611369"
+  },
+  {
+    "id": "jp-holon-research-tower-022/086",
+    "name": "Slowpoke",
+    "supertype": "Pokémon",
+    "number": "022/086",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/611368_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/611368_400w.jpg"
+    },
+    "tcgplayerId": "611368"
+  },
+  {
+    "id": "jp-holon-research-tower-003/086",
+    "name": "Zubat",
+    "supertype": "Pokémon",
+    "number": "003/086",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/611372_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/611372_400w.jpg"
+    },
+    "tcgplayerId": "611372"
+  },
+  {
+    "id": "jp-holon-research-tower-079/086",
+    "name": "Holon Mentor",
+    "supertype": "Pokémon",
+    "number": "079/086",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/611426_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/611426_400w.jpg"
+    },
+    "tcgplayerId": "611426"
+  },
+  {
+    "id": "jp-holon-research-tower-074/086",
+    "name": "Skarmory",
+    "supertype": "Pokémon",
+    "number": "074/086",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/611437_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/611437_400w.jpg"
+    },
+    "tcgplayerId": "611437"
+  },
+  {
+    "id": "jp-holon-research-tower-063/086",
+    "name": "Porygon2",
+    "supertype": "Pokémon",
+    "number": "063/086",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/611407_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/611407_400w.jpg"
+    },
+    "tcgplayerId": "611407"
+  }
+]

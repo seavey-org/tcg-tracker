@@ -1,0 +1,50 @@
+[
+  {
+    "id": "jp-rampardos-the-attacker-constructed-half-deck-cranidos",
+    "name": "Cranidos",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/609113_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/609113_400w.jpg"
+    },
+    "tcgplayerId": "609113"
+  },
+  {
+    "id": "jp-rampardos-the-attacker-constructed-half-deck-unown-m",
+    "name": "Unown M",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/609123_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/609123_400w.jpg"
+    },
+    "tcgplayerId": "609123"
+  },
+  {
+    "id": "jp-rampardos-the-attacker-constructed-half-deck-pikachu",
+    "name": "Pikachu",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/609120_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/609120_400w.jpg"
+    },
+    "tcgplayerId": "609120"
+  },
+  {
+    "id": "jp-rampardos-the-attacker-constructed-half-deck-raichu",
+    "name": "Raichu",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/609122_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/609122_400w.jpg"
+    },
+    "tcgplayerId": "609122"
+  }
+]

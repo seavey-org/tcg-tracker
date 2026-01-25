@@ -1,0 +1,50 @@
+[
+  {
+    "id": "jp-garchomp-half-deck-002/015",
+    "name": "Gyarados",
+    "supertype": "Pokémon",
+    "number": "002/015",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/604865_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/604865_400w.jpg"
+    },
+    "tcgplayerId": "604865"
+  },
+  {
+    "id": "jp-garchomp-half-deck-007/015",
+    "name": "Garchomp",
+    "supertype": "Pokémon",
+    "number": "007/015",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/604858_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/604858_400w.jpg"
+    },
+    "tcgplayerId": "604858"
+  },
+  {
+    "id": "jp-garchomp-half-deck-001/015",
+    "name": "Magikarp",
+    "supertype": "Pokémon",
+    "number": "001/015",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/604864_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/604864_400w.jpg"
+    },
+    "tcgplayerId": "604864"
+  },
+  {
+    "id": "jp-garchomp-half-deck-004/015",
+    "name": "Manectric",
+    "supertype": "Pokémon",
+    "number": "004/015",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/604866_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/604866_400w.jpg"
+    },
+    "tcgplayerId": "604866"
+  }
+]

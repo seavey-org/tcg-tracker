@@ -1,0 +1,26 @@
+[
+  {
+    "id": "jp-gift-box-latias-011/018",
+    "name": "Latias ex",
+    "supertype": "Pokémon",
+    "number": "011/018",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612729_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612729_400w.jpg"
+    },
+    "tcgplayerId": "612729"
+  },
+  {
+    "id": "jp-gift-box-latias-007/018",
+    "name": "Ludicolo",
+    "supertype": "Pokémon",
+    "number": "007/018",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612725_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612725_400w.jpg"
+    },
+    "tcgplayerId": "612725"
+  }
+]

@@ -1,0 +1,38 @@
+[
+  {
+    "id": "jp-sa-fighting-starter-set-v-002/024",
+    "name": "Dugtrio",
+    "supertype": "Pokémon",
+    "number": "002/024",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/595461_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/595461_400w.jpg"
+    },
+    "tcgplayerId": "595461"
+  },
+  {
+    "id": "jp-sa-fighting-starter-set-v-006/024",
+    "name": "Mudbray",
+    "supertype": "Pokémon",
+    "number": "006/024",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/595465_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/595465_400w.jpg"
+    },
+    "tcgplayerId": "595465"
+  },
+  {
+    "id": "jp-sa-fighting-starter-set-v-005/024",
+    "name": "Regirock V",
+    "supertype": "Pokémon",
+    "number": "005/024",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/595464_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/595464_400w.jpg"
+    },
+    "tcgplayerId": "595464"
+  }
+]

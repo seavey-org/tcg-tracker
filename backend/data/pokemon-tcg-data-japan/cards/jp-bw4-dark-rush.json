@@ -1,0 +1,614 @@
+[
+  {
+    "id": "jp-bw4-dark-rush-074/069",
+    "name": "Gardevoir",
+    "supertype": "Pokémon",
+    "number": "074/069",
+    "rarity": "Ultra Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601387_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601387_400w.jpg"
+    },
+    "tcgplayerId": "601387"
+  },
+  {
+    "id": "jp-bw4-dark-rush-071/069",
+    "name": "Raikou EX - 071/069",
+    "supertype": "Pokémon",
+    "number": "071/069",
+    "rarity": "Super Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601410_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601410_400w.jpg"
+    },
+    "tcgplayerId": "601410"
+  },
+  {
+    "id": "jp-bw4-dark-rush-072/069",
+    "name": "Darkrai EX - 072/069",
+    "supertype": "Pokémon",
+    "number": "072/069",
+    "rarity": "Super Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601372_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601372_400w.jpg"
+    },
+    "tcgplayerId": "601372"
+  },
+  {
+    "id": "jp-bw4-dark-rush-070/069",
+    "name": "Entei EX - 070/069",
+    "supertype": "Pokémon",
+    "number": "070/069",
+    "rarity": "Super Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601381_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601381_400w.jpg"
+    },
+    "tcgplayerId": "601381"
+  },
+  {
+    "id": "jp-bw4-dark-rush-044/069",
+    "name": "Darkrai EX - 044/069",
+    "supertype": "Pokémon",
+    "number": "044/069",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601371_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601371_400w.jpg"
+    },
+    "tcgplayerId": "601371"
+  },
+  {
+    "id": "jp-bw4-dark-rush-042/069",
+    "name": "Umbreon",
+    "supertype": "Pokémon",
+    "number": "042/069",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601426_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601426_400w.jpg"
+    },
+    "tcgplayerId": "601426"
+  },
+  {
+    "id": "jp-bw4-dark-rush-027/069",
+    "name": "Minun",
+    "supertype": "Pokémon",
+    "number": "027/069",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601403_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601403_400w.jpg"
+    },
+    "tcgplayerId": "601403"
+  },
+  {
+    "id": "jp-bw4-dark-rush-009/069",
+    "name": "Entei EX - 009/069",
+    "supertype": "Pokémon",
+    "number": "009/069",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601380_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601380_400w.jpg"
+    },
+    "tcgplayerId": "601380"
+  },
+  {
+    "id": "jp-bw4-dark-rush-033/069",
+    "name": "Espeon",
+    "supertype": "Pokémon",
+    "number": "033/069",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601383_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601383_400w.jpg"
+    },
+    "tcgplayerId": "601383"
+  },
+  {
+    "id": "jp-bw4-dark-rush-025/069",
+    "name": "Raikou EX - 025/069",
+    "supertype": "Pokémon",
+    "number": "025/069",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601409_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601409_400w.jpg"
+    },
+    "tcgplayerId": "601409"
+  },
+  {
+    "id": "jp-bw4-dark-rush-018/069",
+    "name": "Vaporeon",
+    "supertype": "Pokémon",
+    "number": "018/069",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601427_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601427_400w.jpg"
+    },
+    "tcgplayerId": "601427"
+  },
+  {
+    "id": "jp-bw4-dark-rush-058/069",
+    "name": "Eevee",
+    "supertype": "Pokémon",
+    "number": "058/069",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601377_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601377_400w.jpg"
+    },
+    "tcgplayerId": "601377"
+  },
+  {
+    "id": "jp-bw4-dark-rush-028/069",
+    "name": "Joltik",
+    "supertype": "Pokémon",
+    "number": "028/069",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601393_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601393_400w.jpg"
+    },
+    "tcgplayerId": "601393"
+  },
+  {
+    "id": "jp-bw4-dark-rush-012/069",
+    "name": "Blaziken",
+    "supertype": "Pokémon",
+    "number": "012/069",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601362_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601362_400w.jpg"
+    },
+    "tcgplayerId": "601362"
+  },
+  {
+    "id": "jp-bw4-dark-rush-003/069",
+    "name": "Venusaur",
+    "supertype": "Pokémon",
+    "number": "003/069",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601428_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601428_400w.jpg"
+    },
+    "tcgplayerId": "601428"
+  },
+  {
+    "id": "jp-bw4-dark-rush-024/069",
+    "name": "Jolteon",
+    "supertype": "Pokémon",
+    "number": "024/069",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601392_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601392_400w.jpg"
+    },
+    "tcgplayerId": "601392"
+  },
+  {
+    "id": "jp-bw4-dark-rush-019/069",
+    "name": "Piplup",
+    "supertype": "Pokémon",
+    "number": "019/069",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601405_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601405_400w.jpg"
+    },
+    "tcgplayerId": "601405"
+  },
+  {
+    "id": "jp-bw4-dark-rush-047/069",
+    "name": "Krookodile",
+    "supertype": "Pokémon",
+    "number": "047/069",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601399_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601399_400w.jpg"
+    },
+    "tcgplayerId": "601399"
+  },
+  {
+    "id": "jp-bw4-dark-rush-055/069",
+    "name": "Klinklang",
+    "supertype": "Pokémon",
+    "number": "055/069",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601397_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601397_400w.jpg"
+    },
+    "tcgplayerId": "601397"
+  },
+  {
+    "id": "jp-bw4-dark-rush-034/069",
+    "name": "Slowking",
+    "supertype": "Pokémon",
+    "number": "034/069",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601416_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601416_400w.jpg"
+    },
+    "tcgplayerId": "601416"
+  },
+  {
+    "id": "jp-bw4-dark-rush-049/069",
+    "name": "Zoroark",
+    "supertype": "Pokémon",
+    "number": "049/069",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601433_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601433_400w.jpg"
+    },
+    "tcgplayerId": "601433"
+  },
+  {
+    "id": "jp-bw4-dark-rush-008/069",
+    "name": "Flareon",
+    "supertype": "Pokémon",
+    "number": "008/069",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601385_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601385_400w.jpg"
+    },
+    "tcgplayerId": "601385"
+  },
+  {
+    "id": "jp-bw4-dark-rush-062/069",
+    "name": "Tornadus EX - 062/069",
+    "supertype": "Pokémon",
+    "number": "062/069",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601422_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601422_400w.jpg"
+    },
+    "tcgplayerId": "601422"
+  },
+  {
+    "id": "jp-bw4-dark-rush-021/069",
+    "name": "Empoleon",
+    "supertype": "Pokémon",
+    "number": "021/069",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601378_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601378_400w.jpg"
+    },
+    "tcgplayerId": "601378"
+  },
+  {
+    "id": "jp-bw4-dark-rush-016/069",
+    "name": "Slowpoke",
+    "supertype": "Pokémon",
+    "number": "016/069",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601417_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601417_400w.jpg"
+    },
+    "tcgplayerId": "601417"
+  },
+  {
+    "id": "jp-bw4-dark-rush-073/069",
+    "name": "Tornadus EX - 073/069",
+    "supertype": "Pokémon",
+    "number": "073/069",
+    "rarity": "Super Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601423_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601423_400w.jpg"
+    },
+    "tcgplayerId": "601423"
+  },
+  {
+    "id": "jp-bw4-dark-rush-057/069",
+    "name": "Blissey",
+    "supertype": "Pokémon",
+    "number": "057/069",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601363_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601363_400w.jpg"
+    },
+    "tcgplayerId": "601363"
+  },
+  {
+    "id": "jp-bw4-dark-rush-032/069",
+    "name": "Eelektross",
+    "supertype": "Pokémon",
+    "number": "032/069",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601376_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601376_400w.jpg"
+    },
+    "tcgplayerId": "601376"
+  },
+  {
+    "id": "jp-bw4-dark-rush-026/069",
+    "name": "Plusle",
+    "supertype": "Pokémon",
+    "number": "026/069",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601406_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601406_400w.jpg"
+    },
+    "tcgplayerId": "601406"
+  },
+  {
+    "id": "jp-bw4-dark-rush-001/069",
+    "name": "Bulbasaur",
+    "supertype": "Pokémon",
+    "number": "001/069",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601364_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601364_400w.jpg"
+    },
+    "tcgplayerId": "601364"
+  },
+  {
+    "id": "jp-bw4-dark-rush-039/069",
+    "name": "Aerodactyl",
+    "supertype": "Pokémon",
+    "number": "039/069",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601360_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601360_400w.jpg"
+    },
+    "tcgplayerId": "601360"
+  },
+  {
+    "id": "jp-bw4-dark-rush-017/069",
+    "name": "Slowbro",
+    "supertype": "Pokémon",
+    "number": "017/069",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601415_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601415_400w.jpg"
+    },
+    "tcgplayerId": "601415"
+  },
+  {
+    "id": "jp-bw4-dark-rush-010/069",
+    "name": "Torchic",
+    "supertype": "Pokémon",
+    "number": "010/069",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601421_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601421_400w.jpg"
+    },
+    "tcgplayerId": "601421"
+  },
+  {
+    "id": "jp-bw4-dark-rush-015/069",
+    "name": "Volcarona",
+    "supertype": "Pokémon",
+    "number": "015/069",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601429_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601429_400w.jpg"
+    },
+    "tcgplayerId": "601429"
+  },
+  {
+    "id": "jp-bw4-dark-rush-056/069",
+    "name": "Chansey",
+    "supertype": "Pokémon",
+    "number": "056/069",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601366_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601366_400w.jpg"
+    },
+    "tcgplayerId": "601366"
+  },
+  {
+    "id": "jp-bw4-dark-rush-030/069",
+    "name": "Tynamo",
+    "supertype": "Pokémon",
+    "number": "030/069",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601425_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601425_400w.jpg"
+    },
+    "tcgplayerId": "601425"
+  },
+  {
+    "id": "jp-bw4-dark-rush-040/069",
+    "name": "Drilbur",
+    "supertype": "Pokémon",
+    "number": "040/069",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601373_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601373_400w.jpg"
+    },
+    "tcgplayerId": "601373"
+  },
+  {
+    "id": "jp-bw4-dark-rush-068/069",
+    "name": "Hooligans Jim \u0026 Cas",
+    "supertype": "Pokémon",
+    "number": "068/069",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601390_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601390_400w.jpg"
+    },
+    "tcgplayerId": "601390"
+  },
+  {
+    "id": "jp-bw4-dark-rush-011/069",
+    "name": "Combusken",
+    "supertype": "Pokémon",
+    "number": "011/069",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601368_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601368_400w.jpg"
+    },
+    "tcgplayerId": "601368"
+  },
+  {
+    "id": "jp-bw4-dark-rush-037/069",
+    "name": "Yamask",
+    "supertype": "Pokémon",
+    "number": "037/069",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601432_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601432_400w.jpg"
+    },
+    "tcgplayerId": "601432"
+  },
+  {
+    "id": "jp-bw4-dark-rush-046/069",
+    "name": "Krokorok",
+    "supertype": "Pokémon",
+    "number": "046/069",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601398_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601398_400w.jpg"
+    },
+    "tcgplayerId": "601398"
+  },
+  {
+    "id": "jp-bw4-dark-rush-059/069",
+    "name": "Lillipup",
+    "supertype": "Pokémon",
+    "number": "059/069",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601401_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601401_400w.jpg"
+    },
+    "tcgplayerId": "601401"
+  },
+  {
+    "id": "jp-bw4-dark-rush-014/069",
+    "name": "Larvesta",
+    "supertype": "Pokémon",
+    "number": "014/069",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601400_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601400_400w.jpg"
+    },
+    "tcgplayerId": "601400"
+  },
+  {
+    "id": "jp-bw4-dark-rush-043/069",
+    "name": "Sableye",
+    "supertype": "Pokémon",
+    "number": "043/069",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601412_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601412_400w.jpg"
+    },
+    "tcgplayerId": "601412"
+  },
+  {
+    "id": "jp-bw4-dark-rush-045/069",
+    "name": "Sandile",
+    "supertype": "Pokémon",
+    "number": "045/069",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601413_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601413_400w.jpg"
+    },
+    "tcgplayerId": "601413"
+  },
+  {
+    "id": "jp-bw4-dark-rush-048/069",
+    "name": "Zorua",
+    "supertype": "Pokémon",
+    "number": "048/069",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601434_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601434_400w.jpg"
+    },
+    "tcgplayerId": "601434"
+  },
+  {
+    "id": "jp-bw4-dark-rush-002/069",
+    "name": "Ivysaur",
+    "supertype": "Pokémon",
+    "number": "002/069",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601391_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601391_400w.jpg"
+    },
+    "tcgplayerId": "601391"
+  },
+  {
+    "id": "jp-bw4-dark-rush-036/069",
+    "name": "Swoobat",
+    "supertype": "Pokémon",
+    "number": "036/069",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601420_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601420_400w.jpg"
+    },
+    "tcgplayerId": "601420"
+  },
+  {
+    "id": "jp-bw4-dark-rush-022/069",
+    "name": "Ducklett",
+    "supertype": "Pokémon",
+    "number": "022/069",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601374_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601374_400w.jpg"
+    },
+    "tcgplayerId": "601374"
+  },
+  {
+    "id": "jp-bw4-dark-rush-020/069",
+    "name": "Prinplup",
+    "supertype": "Pokémon",
+    "number": "020/069",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601408_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601408_400w.jpg"
+    },
+    "tcgplayerId": "601408"
+  },
+  {
+    "id": "jp-bw4-dark-rush-067/069",
+    "name": "Dark Claw",
+    "supertype": "Pokémon",
+    "number": "067/069",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601369_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601369_400w.jpg"
+    },
+    "tcgplayerId": "601369"
+  }
+]

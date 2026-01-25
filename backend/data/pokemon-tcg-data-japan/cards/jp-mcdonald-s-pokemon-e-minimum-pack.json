@@ -1,0 +1,266 @@
+[
+  {
+    "id": "jp-mcdonald-s-pokemon-e-minimum-pack-007/018",
+    "name": "Squirtle",
+    "supertype": "Pokémon",
+    "number": "007/018",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/613934_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/613934_400w.jpg"
+    },
+    "tcgplayerId": "613934"
+  },
+  {
+    "id": "jp-mcdonald-s-pokemon-e-minimum-pack-010/018",
+    "name": "Pikachu",
+    "supertype": "Pokémon",
+    "number": "010/018",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/613937_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/613937_400w.jpg"
+    },
+    "tcgplayerId": "613937"
+  },
+  {
+    "id": "jp-mcdonald-s-pokemon-e-minimum-pack-004/018",
+    "name": "Charmander",
+    "supertype": "Pokémon",
+    "number": "004/018",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/613931_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/613931_400w.jpg"
+    },
+    "tcgplayerId": "613931"
+  },
+  {
+    "id": "jp-mcdonald-s-pokemon-e-minimum-pack-003/018",
+    "name": "Chikorita",
+    "supertype": "Pokémon",
+    "number": "003/018",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/613930_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/613930_400w.jpg"
+    },
+    "tcgplayerId": "613930"
+  },
+  {
+    "id": "jp-mcdonald-s-pokemon-e-minimum-pack-018/018",
+    "name": "Larvitar",
+    "supertype": "Pokémon",
+    "number": "018/018",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/613945_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/613945_400w.jpg"
+    },
+    "tcgplayerId": "613945"
+  },
+  {
+    "id": "jp-mcdonald-s-pokemon-e-minimum-pack-009/018",
+    "name": "Marill",
+    "supertype": "Pokémon",
+    "number": "009/018",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/613936_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/613936_400w.jpg"
+    },
+    "tcgplayerId": "613936"
+  },
+  {
+    "id": "jp-mcdonald-s-pokemon-e-minimum-pack-008/018",
+    "name": "Totodile",
+    "supertype": "Pokémon",
+    "number": "008/018",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/613935_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/613935_400w.jpg"
+    },
+    "tcgplayerId": "613935"
+  },
+  {
+    "id": "jp-mcdonald-s-pokemon-e-minimum-pack-001/018",
+    "name": "Bulbasaur",
+    "supertype": "Pokémon",
+    "number": "001/018",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/613928_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/613928_400w.jpg"
+    },
+    "tcgplayerId": "613928"
+  },
+  {
+    "id": "jp-mcdonald-s-pokemon-e-minimum-pack-012/018",
+    "name": "Mareep",
+    "supertype": "Pokémon",
+    "number": "012/018",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/613939_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/613939_400w.jpg"
+    },
+    "tcgplayerId": "613939"
+  },
+  {
+    "id": "jp-mcdonald-s-pokemon-e-minimum-pack-lightning-energy",
+    "name": "Lightning Energy",
+    "supertype": "Energy",
+    "number": "N/A",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/654630_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/654630_400w.jpg"
+    },
+    "tcgplayerId": "654630"
+  },
+  {
+    "id": "jp-mcdonald-s-pokemon-e-minimum-pack-water-energy",
+    "name": "Water Energy",
+    "supertype": "Energy",
+    "number": "N/A",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/654629_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/654629_400w.jpg"
+    },
+    "tcgplayerId": "654629"
+  },
+  {
+    "id": "jp-mcdonald-s-pokemon-e-minimum-pack-fire-energy",
+    "name": "Fire Energy",
+    "supertype": "Energy",
+    "number": "N/A",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/654628_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/654628_400w.jpg"
+    },
+    "tcgplayerId": "654628"
+  },
+  {
+    "id": "jp-mcdonald-s-pokemon-e-minimum-pack-005/018",
+    "name": "Vulpix",
+    "supertype": "Pokémon",
+    "number": "005/018",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/613932_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/613932_400w.jpg"
+    },
+    "tcgplayerId": "613932"
+  },
+  {
+    "id": "jp-mcdonald-s-pokemon-e-minimum-pack-017/018",
+    "name": "Phanpy",
+    "supertype": "Pokémon",
+    "number": "017/018",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/613944_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/613944_400w.jpg"
+    },
+    "tcgplayerId": "613944"
+  },
+  {
+    "id": "jp-mcdonald-s-pokemon-e-minimum-pack-002/018",
+    "name": "Oddish",
+    "supertype": "Pokémon",
+    "number": "002/018",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/613929_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/613929_400w.jpg"
+    },
+    "tcgplayerId": "613929"
+  },
+  {
+    "id": "jp-mcdonald-s-pokemon-e-minimum-pack-psychic-energy",
+    "name": "Psychic Energy",
+    "supertype": "Energy",
+    "number": "N/A",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/654631_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/654631_400w.jpg"
+    },
+    "tcgplayerId": "654631"
+  },
+  {
+    "id": "jp-mcdonald-s-pokemon-e-minimum-pack-013/018",
+    "name": "Abra",
+    "supertype": "Pokémon",
+    "number": "013/018",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/613940_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/613940_400w.jpg"
+    },
+    "tcgplayerId": "613940"
+  },
+  {
+    "id": "jp-mcdonald-s-pokemon-e-minimum-pack-006/018",
+    "name": "Cyndaquil",
+    "supertype": "Pokémon",
+    "number": "006/018",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/613933_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/613933_400w.jpg"
+    },
+    "tcgplayerId": "613933"
+  },
+  {
+    "id": "jp-mcdonald-s-pokemon-e-minimum-pack-011/018",
+    "name": "Chinchou",
+    "supertype": "Pokémon",
+    "number": "011/018",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/613938_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/613938_400w.jpg"
+    },
+    "tcgplayerId": "613938"
+  },
+  {
+    "id": "jp-mcdonald-s-pokemon-e-minimum-pack-016/018",
+    "name": "Sandshrew",
+    "supertype": "Pokémon",
+    "number": "016/018",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/613943_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/613943_400w.jpg"
+    },
+    "tcgplayerId": "613943"
+  },
+  {
+    "id": "jp-mcdonald-s-pokemon-e-minimum-pack-015/018",
+    "name": "Natu",
+    "supertype": "Pokémon",
+    "number": "015/018",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/613942_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/613942_400w.jpg"
+    },
+    "tcgplayerId": "613942"
+  },
+  {
+    "id": "jp-mcdonald-s-pokemon-e-minimum-pack-grass-energy",
+    "name": "Grass Energy",
+    "supertype": "Energy",
+    "number": "N/A",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/654627_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/654627_400w.jpg"
+    },
+    "tcgplayerId": "654627"
+  }
+]

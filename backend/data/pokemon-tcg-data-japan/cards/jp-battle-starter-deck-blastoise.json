@@ -1,0 +1,50 @@
+[
+  {
+    "id": "jp-battle-starter-deck-blastoise-003/010",
+    "name": "Blastoise",
+    "supertype": "Pokémon",
+    "number": "003/010",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/609424_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/609424_400w.jpg"
+    },
+    "tcgplayerId": "609424"
+  },
+  {
+    "id": "jp-battle-starter-deck-blastoise-002/010",
+    "name": "Wartortle",
+    "supertype": "Pokémon",
+    "number": "002/010",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/609428_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/609428_400w.jpg"
+    },
+    "tcgplayerId": "609428"
+  },
+  {
+    "id": "jp-battle-starter-deck-blastoise-006/010",
+    "name": "Manaphy",
+    "supertype": "Pokémon",
+    "number": "006/010",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/609430_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/609430_400w.jpg"
+    },
+    "tcgplayerId": "609430"
+  },
+  {
+    "id": "jp-battle-starter-deck-blastoise-005/010",
+    "name": "Floatzel",
+    "supertype": "Pokémon",
+    "number": "005/010",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/609425_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/609425_400w.jpg"
+    },
+    "tcgplayerId": "609425"
+  }
+]

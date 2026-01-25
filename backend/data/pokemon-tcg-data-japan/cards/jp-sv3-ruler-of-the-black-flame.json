@@ -1,0 +1,1718 @@
+[
+  {
+    "id": "jp-sv3-ruler-of-the-black-flame-134/108",
+    "name": "Charizard ex - 134/108",
+    "supertype": "Pokémon",
+    "number": "134/108",
+    "rarity": "Special Art Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/567088_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/567088_400w.jpg"
+    },
+    "tcgplayerId": "567088"
+  },
+  {
+    "id": "jp-sv3-ruler-of-the-black-flame-ruler-of-the-black-flame-booster-box",
+    "name": "Ruler of the Black Flame Booster Box",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/565236_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/565236_400w.jpg"
+    },
+    "tcgplayerId": "565236"
+  },
+  {
+    "id": "jp-sv3-ruler-of-the-black-flame-139/108",
+    "name": "Charizard ex - 139/108",
+    "supertype": "Pokémon",
+    "number": "139/108",
+    "rarity": "Ultra Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/567093_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/567093_400w.jpg"
+    },
+    "tcgplayerId": "567093"
+  },
+  {
+    "id": "jp-sv3-ruler-of-the-black-flame-136/108",
+    "name": "Pidgeot ex - 136/108",
+    "supertype": "Pokémon",
+    "number": "136/108",
+    "rarity": "Special Art Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/567090_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/567090_400w.jpg"
+    },
+    "tcgplayerId": "567090"
+  },
+  {
+    "id": "jp-sv3-ruler-of-the-black-flame-125/108",
+    "name": "Charizard ex - 125/108",
+    "supertype": "Pokémon",
+    "number": "125/108",
+    "rarity": "Super Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/567079_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/567079_400w.jpg"
+    },
+    "tcgplayerId": "567079"
+  },
+  {
+    "id": "jp-sv3-ruler-of-the-black-flame-138/108",
+    "name": "Poppy - 138/108",
+    "supertype": "Pokémon",
+    "number": "138/108",
+    "rarity": "Special Art Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/567092_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/567092_400w.jpg"
+    },
+    "tcgplayerId": "567092"
+  },
+  {
+    "id": "jp-sv3-ruler-of-the-black-flame-113/108",
+    "name": "Cleffa - 113/108",
+    "supertype": "Pokémon",
+    "number": "113/108",
+    "rarity": "Art Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/567067_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/567067_400w.jpg"
+    },
+    "tcgplayerId": "567067"
+  },
+  {
+    "id": "jp-sv3-ruler-of-the-black-flame-110/108",
+    "name": "Ninetales - 110/108",
+    "supertype": "Pokémon",
+    "number": "110/108",
+    "rarity": "Art Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/567064_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/567064_400w.jpg"
+    },
+    "tcgplayerId": "567064"
+  },
+  {
+    "id": "jp-sv3-ruler-of-the-black-flame-141/108",
+    "name": "Basic Fire Energy",
+    "supertype": "Energy",
+    "number": "141/108",
+    "rarity": "Ultra Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/567095_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/567095_400w.jpg"
+    },
+    "tcgplayerId": "567095"
+  },
+  {
+    "id": "jp-sv3-ruler-of-the-black-flame-133/108",
+    "name": "Eiscue ex - 133/108",
+    "supertype": "Pokémon",
+    "number": "133/108",
+    "rarity": "Special Art Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/567087_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/567087_400w.jpg"
+    },
+    "tcgplayerId": "567087"
+  },
+  {
+    "id": "jp-sv3-ruler-of-the-black-flame-137/108",
+    "name": "Geeta - 137/108",
+    "supertype": "Pokémon",
+    "number": "137/108",
+    "rarity": "Special Art Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/567091_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/567091_400w.jpg"
+    },
+    "tcgplayerId": "567091"
+  },
+  {
+    "id": "jp-sv3-ruler-of-the-black-flame-135/108",
+    "name": "Revavroom ex - 135/108",
+    "supertype": "Pokémon",
+    "number": "135/108",
+    "rarity": "Special Art Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/567089_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/567089_400w.jpg"
+    },
+    "tcgplayerId": "567089"
+  },
+  {
+    "id": "jp-sv3-ruler-of-the-black-flame-140/108",
+    "name": "Artazon",
+    "supertype": "Pokémon",
+    "number": "140/108",
+    "rarity": "Ultra Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/567094_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/567094_400w.jpg"
+    },
+    "tcgplayerId": "567094"
+  },
+  {
+    "id": "jp-sv3-ruler-of-the-black-flame-122/108",
+    "name": "Tyranitar ex - 122/108",
+    "supertype": "Pokémon",
+    "number": "122/108",
+    "rarity": "Super Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/567076_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/567076_400w.jpg"
+    },
+    "tcgplayerId": "567076"
+  },
+  {
+    "id": "jp-sv3-ruler-of-the-black-flame-109/108",
+    "name": "Gloom - 109/108",
+    "supertype": "Pokémon",
+    "number": "109/108",
+    "rarity": "Art Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/567063_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/567063_400w.jpg"
+    },
+    "tcgplayerId": "567063"
+  },
+  {
+    "id": "jp-sv3-ruler-of-the-black-flame-116/108",
+    "name": "Scizor - 116/108",
+    "supertype": "Pokémon",
+    "number": "116/108",
+    "rarity": "Art Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/567070_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/567070_400w.jpg"
+    },
+    "tcgplayerId": "567070"
+  },
+  {
+    "id": "jp-sv3-ruler-of-the-black-flame-ruler-of-the-black-flame-booster-pack",
+    "name": "Ruler of the Black Flame Booster Pack",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/565237_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/565237_400w.jpg"
+    },
+    "tcgplayerId": "565237"
+  },
+  {
+    "id": "jp-sv3-ruler-of-the-black-flame-126/108",
+    "name": "Absol ex - 126/108",
+    "supertype": "Pokémon",
+    "number": "126/108",
+    "rarity": "Super Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/567080_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/567080_400w.jpg"
+    },
+    "tcgplayerId": "567080"
+  },
+  {
+    "id": "jp-sv3-ruler-of-the-black-flame-128/108",
+    "name": "Pidgeot ex - 128/108",
+    "supertype": "Pokémon",
+    "number": "128/108",
+    "rarity": "Super Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/567082_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/567082_400w.jpg"
+    },
+    "tcgplayerId": "567082"
+  },
+  {
+    "id": "jp-sv3-ruler-of-the-black-flame-118/108",
+    "name": "Pidgey - 118/108",
+    "supertype": "Pokémon",
+    "number": "118/108",
+    "rarity": "Art Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/567072_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/567072_400w.jpg"
+    },
+    "tcgplayerId": "567072"
+  },
+  {
+    "id": "jp-sv3-ruler-of-the-black-flame-120/108",
+    "name": "Lechonk - 120/108",
+    "supertype": "Pokémon",
+    "number": "120/108",
+    "rarity": "Art Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/567074_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/567074_400w.jpg"
+    },
+    "tcgplayerId": "567074"
+  },
+  {
+    "id": "jp-sv3-ruler-of-the-black-flame-115/108",
+    "name": "Houndour - 115/108",
+    "supertype": "Pokémon",
+    "number": "115/108",
+    "rarity": "Art Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/567069_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/567069_400w.jpg"
+    },
+    "tcgplayerId": "567069"
+  },
+  {
+    "id": "jp-sv3-ruler-of-the-black-flame-066/108",
+    "name": "Charizard ex - 066/108",
+    "supertype": "Pokémon",
+    "number": "066/108",
+    "rarity": "Double Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/567020_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/567020_400w.jpg"
+    },
+    "tcgplayerId": "567020"
+  },
+  {
+    "id": "jp-sv3-ruler-of-the-black-flame-119/108",
+    "name": "Pidgeotto - 119/108",
+    "supertype": "Pokémon",
+    "number": "119/108",
+    "rarity": "Art Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/567073_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/567073_400w.jpg"
+    },
+    "tcgplayerId": "567073"
+  },
+  {
+    "id": "jp-sv3-ruler-of-the-black-flame-130/108",
+    "name": "Ortega - 130/108",
+    "supertype": "Pokémon",
+    "number": "130/108",
+    "rarity": "Super Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/567084_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/567084_400w.jpg"
+    },
+    "tcgplayerId": "567084"
+  },
+  {
+    "id": "jp-sv3-ruler-of-the-black-flame-131/108",
+    "name": "Poppy - 131/108",
+    "supertype": "Pokémon",
+    "number": "131/108",
+    "rarity": "Super Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/567085_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/567085_400w.jpg"
+    },
+    "tcgplayerId": "567085"
+  },
+  {
+    "id": "jp-sv3-ruler-of-the-black-flame-129/108",
+    "name": "Geeta - 129/108",
+    "supertype": "Pokémon",
+    "number": "129/108",
+    "rarity": "Super Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/567083_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/567083_400w.jpg"
+    },
+    "tcgplayerId": "567083"
+  },
+  {
+    "id": "jp-sv3-ruler-of-the-black-flame-114/108",
+    "name": "Larvitar - 114/108",
+    "supertype": "Pokémon",
+    "number": "114/108",
+    "rarity": "Art Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/567068_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/567068_400w.jpg"
+    },
+    "tcgplayerId": "567068"
+  },
+  {
+    "id": "jp-sv3-ruler-of-the-black-flame-132/108",
+    "name": "Ryme - 132/108",
+    "supertype": "Pokémon",
+    "number": "132/108",
+    "rarity": "Super Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/567086_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/567086_400w.jpg"
+    },
+    "tcgplayerId": "567086"
+  },
+  {
+    "id": "jp-sv3-ruler-of-the-black-flame-112/108",
+    "name": "Bellibolt - 112/108",
+    "supertype": "Pokémon",
+    "number": "112/108",
+    "rarity": "Art Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/567066_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/567066_400w.jpg"
+    },
+    "tcgplayerId": "567066"
+  },
+  {
+    "id": "jp-sv3-ruler-of-the-black-flame-111/108",
+    "name": "Palafin - 111/108",
+    "supertype": "Pokémon",
+    "number": "111/108",
+    "rarity": "Art Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/567065_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/567065_400w.jpg"
+    },
+    "tcgplayerId": "567065"
+  },
+  {
+    "id": "jp-sv3-ruler-of-the-black-flame-124/108",
+    "name": "Glimmora ex - 124/108",
+    "supertype": "Pokémon",
+    "number": "124/108",
+    "rarity": "Super Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/567078_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/567078_400w.jpg"
+    },
+    "tcgplayerId": "567078"
+  },
+  {
+    "id": "jp-sv3-ruler-of-the-black-flame-121/108",
+    "name": "Eiscue ex - 121/108",
+    "supertype": "Pokémon",
+    "number": "121/108",
+    "rarity": "Super Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/567075_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/567075_400w.jpg"
+    },
+    "tcgplayerId": "567075"
+  },
+  {
+    "id": "jp-sv3-ruler-of-the-black-flame-123/108",
+    "name": "Vespiquen ex - 123/108",
+    "supertype": "Pokémon",
+    "number": "123/108",
+    "rarity": "Super Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/567077_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/567077_400w.jpg"
+    },
+    "tcgplayerId": "567077"
+  },
+  {
+    "id": "jp-sv3-ruler-of-the-black-flame-127/108",
+    "name": "Revavroom ex - 127/108",
+    "supertype": "Pokémon",
+    "number": "127/108",
+    "rarity": "Super Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/567081_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/567081_400w.jpg"
+    },
+    "tcgplayerId": "567081"
+  },
+  {
+    "id": "jp-sv3-ruler-of-the-black-flame-117/108",
+    "name": "Varoom - 117/108",
+    "supertype": "Pokémon",
+    "number": "117/108",
+    "rarity": "Art Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/567071_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/567071_400w.jpg"
+    },
+    "tcgplayerId": "567071"
+  },
+  {
+    "id": "jp-sv3-ruler-of-the-black-flame-031/108",
+    "name": "Palafin - 031/108",
+    "supertype": "Pokémon",
+    "number": "031/108",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/566985_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/566985_400w.jpg"
+    },
+    "tcgplayerId": "566985"
+  },
+  {
+    "id": "jp-sv3-ruler-of-the-black-flame-103/108",
+    "name": "Geeta - 103/108",
+    "supertype": "Pokémon",
+    "number": "103/108",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/567057_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/567057_400w.jpg"
+    },
+    "tcgplayerId": "567057"
+  },
+  {
+    "id": "jp-sv3-ruler-of-the-black-flame-089/108",
+    "name": "Pidgeot ex - 089/108",
+    "supertype": "Pokémon",
+    "number": "089/108",
+    "rarity": "Double Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/567043_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/567043_400w.jpg"
+    },
+    "tcgplayerId": "567043"
+  },
+  {
+    "id": "jp-sv3-ruler-of-the-black-flame-101/108",
+    "name": "Patrol Cap",
+    "supertype": "Pokémon",
+    "number": "101/108",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/567055_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/567055_400w.jpg"
+    },
+    "tcgplayerId": "567055"
+  },
+  {
+    "id": "jp-sv3-ruler-of-the-black-flame-073/108",
+    "name": "Absol ex - 073/108",
+    "supertype": "Pokémon",
+    "number": "073/108",
+    "rarity": "Double Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/567027_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/567027_400w.jpg"
+    },
+    "tcgplayerId": "567027"
+  },
+  {
+    "id": "jp-sv3-ruler-of-the-black-flame-074/108",
+    "name": "Darkrai",
+    "supertype": "Pokémon",
+    "number": "074/108",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/567028_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/567028_400w.jpg"
+    },
+    "tcgplayerId": "567028"
+  },
+  {
+    "id": "jp-sv3-ruler-of-the-black-flame-032/108",
+    "name": "Tyranitar ex - 032/108",
+    "supertype": "Pokémon",
+    "number": "032/108",
+    "rarity": "Double Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/566986_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/566986_400w.jpg"
+    },
+    "tcgplayerId": "566986"
+  },
+  {
+    "id": "jp-sv3-ruler-of-the-black-flame-051/108",
+    "name": "Vespiquen ex - 051/108",
+    "supertype": "Pokémon",
+    "number": "051/108",
+    "rarity": "Double Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/567005_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/567005_400w.jpg"
+    },
+    "tcgplayerId": "567005"
+  },
+  {
+    "id": "jp-sv3-ruler-of-the-black-flame-016/108",
+    "name": "Entei",
+    "supertype": "Pokémon",
+    "number": "016/108",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/566970_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/566970_400w.jpg"
+    },
+    "tcgplayerId": "566970"
+  },
+  {
+    "id": "jp-sv3-ruler-of-the-black-flame-097/108",
+    "name": "Lechonk - 097/108",
+    "supertype": "Pokémon",
+    "number": "097/108",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/567051_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/567051_400w.jpg"
+    },
+    "tcgplayerId": "567051"
+  },
+  {
+    "id": "jp-sv3-ruler-of-the-black-flame-050/108",
+    "name": "Claydol",
+    "supertype": "Pokémon",
+    "number": "050/108",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/567004_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/567004_400w.jpg"
+    },
+    "tcgplayerId": "567004"
+  },
+  {
+    "id": "jp-sv3-ruler-of-the-black-flame-085/108",
+    "name": "Revavroom ex - 085/108",
+    "supertype": "Pokémon",
+    "number": "085/108",
+    "rarity": "Double Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/567039_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/567039_400w.jpg"
+    },
+    "tcgplayerId": "567039"
+  },
+  {
+    "id": "jp-sv3-ruler-of-the-black-flame-070/108",
+    "name": "Umbreon",
+    "supertype": "Pokémon",
+    "number": "070/108",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/567024_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/567024_400w.jpg"
+    },
+    "tcgplayerId": "567024"
+  },
+  {
+    "id": "jp-sv3-ruler-of-the-black-flame-020/108",
+    "name": "Eiscue ex - 020/108",
+    "supertype": "Pokémon",
+    "number": "020/108",
+    "rarity": "Double Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/566974_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/566974_400w.jpg"
+    },
+    "tcgplayerId": "566974"
+  },
+  {
+    "id": "jp-sv3-ruler-of-the-black-flame-015/108",
+    "name": "Ninetales - 015/108",
+    "supertype": "Pokémon",
+    "number": "015/108",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/566969_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/566969_400w.jpg"
+    },
+    "tcgplayerId": "566969"
+  },
+  {
+    "id": "jp-sv3-ruler-of-the-black-flame-045/108",
+    "name": "Togekiss",
+    "supertype": "Pokémon",
+    "number": "045/108",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/566999_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/566999_400w.jpg"
+    },
+    "tcgplayerId": "566999"
+  },
+  {
+    "id": "jp-sv3-ruler-of-the-black-flame-036/108",
+    "name": "Thundurus",
+    "supertype": "Pokémon",
+    "number": "036/108",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/566990_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/566990_400w.jpg"
+    },
+    "tcgplayerId": "566990"
+  },
+  {
+    "id": "jp-sv3-ruler-of-the-black-flame-091/108",
+    "name": "Eevee",
+    "supertype": "Pokémon",
+    "number": "091/108",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/567045_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/567045_400w.jpg"
+    },
+    "tcgplayerId": "567045"
+  },
+  {
+    "id": "jp-sv3-ruler-of-the-black-flame-046/108",
+    "name": "Espeon",
+    "supertype": "Pokémon",
+    "number": "046/108",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/567000_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/567000_400w.jpg"
+    },
+    "tcgplayerId": "567000"
+  },
+  {
+    "id": "jp-sv3-ruler-of-the-black-flame-012/108",
+    "name": "Charmander",
+    "supertype": "Pokémon",
+    "number": "012/108",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/566966_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/566966_400w.jpg"
+    },
+    "tcgplayerId": "566966"
+  },
+  {
+    "id": "jp-sv3-ruler-of-the-black-flame-047/108",
+    "name": "Lunatone",
+    "supertype": "Pokémon",
+    "number": "047/108",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/567001_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/567001_400w.jpg"
+    },
+    "tcgplayerId": "567001"
+  },
+  {
+    "id": "jp-sv3-ruler-of-the-black-flame-077/108",
+    "name": "Scizor - 077/108",
+    "supertype": "Pokémon",
+    "number": "077/108",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/567031_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/567031_400w.jpg"
+    },
+    "tcgplayerId": "567031"
+  },
+  {
+    "id": "jp-sv3-ruler-of-the-black-flame-079/108",
+    "name": "Probopass",
+    "supertype": "Pokémon",
+    "number": "079/108",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/567033_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/567033_400w.jpg"
+    },
+    "tcgplayerId": "567033"
+  },
+  {
+    "id": "jp-sv3-ruler-of-the-black-flame-044/108",
+    "name": "Togetic",
+    "supertype": "Pokémon",
+    "number": "044/108",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/566998_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/566998_400w.jpg"
+    },
+    "tcgplayerId": "566998"
+  },
+  {
+    "id": "jp-sv3-ruler-of-the-black-flame-065/108",
+    "name": "Glimmora ex - 065/108",
+    "supertype": "Pokémon",
+    "number": "065/108",
+    "rarity": "Double Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/567019_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/567019_400w.jpg"
+    },
+    "tcgplayerId": "567019"
+  },
+  {
+    "id": "jp-sv3-ruler-of-the-black-flame-100/108",
+    "name": "Letter of Encouragement",
+    "supertype": "Pokémon",
+    "number": "100/108",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/567054_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/567054_400w.jpg"
+    },
+    "tcgplayerId": "567054"
+  },
+  {
+    "id": "jp-sv3-ruler-of-the-black-flame-067/108",
+    "name": "Paldean Wooper - 067/108",
+    "supertype": "Pokémon",
+    "number": "067/108",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/567021_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/567021_400w.jpg"
+    },
+    "tcgplayerId": "567021"
+  },
+  {
+    "id": "jp-sv3-ruler-of-the-black-flame-043/108",
+    "name": "Togepi",
+    "supertype": "Pokémon",
+    "number": "043/108",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/566997_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/566997_400w.jpg"
+    },
+    "tcgplayerId": "566997"
+  },
+  {
+    "id": "jp-sv3-ruler-of-the-black-flame-009/108",
+    "name": "Capsakid - 009/108",
+    "supertype": "Pokémon",
+    "number": "009/108",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/566963_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/566963_400w.jpg"
+    },
+    "tcgplayerId": "566963"
+  },
+  {
+    "id": "jp-sv3-ruler-of-the-black-flame-037/108",
+    "name": "Toxel",
+    "supertype": "Pokémon",
+    "number": "037/108",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/566991_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/566991_400w.jpg"
+    },
+    "tcgplayerId": "566991"
+  },
+  {
+    "id": "jp-sv3-ruler-of-the-black-flame-063/108",
+    "name": "Glimmet - 063/108",
+    "supertype": "Pokémon",
+    "number": "063/108",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/567017_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/567017_400w.jpg"
+    },
+    "tcgplayerId": "567017"
+  },
+  {
+    "id": "jp-sv3-ruler-of-the-black-flame-061/108",
+    "name": "Rockruff",
+    "supertype": "Pokémon",
+    "number": "061/108",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/567015_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/567015_400w.jpg"
+    },
+    "tcgplayerId": "567015"
+  },
+  {
+    "id": "jp-sv3-ruler-of-the-black-flame-098/108",
+    "name": "Oinkologne",
+    "supertype": "Pokémon",
+    "number": "098/108",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/567052_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/567052_400w.jpg"
+    },
+    "tcgplayerId": "567052"
+  },
+  {
+    "id": "jp-sv3-ruler-of-the-black-flame-006/108",
+    "name": "Combee",
+    "supertype": "Pokémon",
+    "number": "006/108",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/566960_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/566960_400w.jpg"
+    },
+    "tcgplayerId": "566960"
+  },
+  {
+    "id": "jp-sv3-ruler-of-the-black-flame-075/108",
+    "name": "Inkay",
+    "supertype": "Pokémon",
+    "number": "075/108",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/567029_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/567029_400w.jpg"
+    },
+    "tcgplayerId": "567029"
+  },
+  {
+    "id": "jp-sv3-ruler-of-the-black-flame-041/108",
+    "name": "Bellibolt - 041/108",
+    "supertype": "Pokémon",
+    "number": "041/108",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/566995_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/566995_400w.jpg"
+    },
+    "tcgplayerId": "566995"
+  },
+  {
+    "id": "jp-sv3-ruler-of-the-black-flame-102/108",
+    "name": "Vengeful Punch",
+    "supertype": "Pokémon",
+    "number": "102/108",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/567056_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/567056_400w.jpg"
+    },
+    "tcgplayerId": "567056"
+  },
+  {
+    "id": "jp-sv3-ruler-of-the-black-flame-069/108",
+    "name": "Paldean Clodsire",
+    "supertype": "Pokémon",
+    "number": "069/108",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/567023_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/567023_400w.jpg"
+    },
+    "tcgplayerId": "567023"
+  },
+  {
+    "id": "jp-sv3-ruler-of-the-black-flame-011/108",
+    "name": "Scovillain",
+    "supertype": "Pokémon",
+    "number": "011/108",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/566965_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/566965_400w.jpg"
+    },
+    "tcgplayerId": "566965"
+  },
+  {
+    "id": "jp-sv3-ruler-of-the-black-flame-038/108",
+    "name": "Toxtricity",
+    "supertype": "Pokémon",
+    "number": "038/108",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/566992_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/566992_400w.jpg"
+    },
+    "tcgplayerId": "566992"
+  },
+  {
+    "id": "jp-sv3-ruler-of-the-black-flame-052/108",
+    "name": "Greavard - 052/108",
+    "supertype": "Pokémon",
+    "number": "052/108",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/567006_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/567006_400w.jpg"
+    },
+    "tcgplayerId": "567006"
+  },
+  {
+    "id": "jp-sv3-ruler-of-the-black-flame-056/108",
+    "name": "Pupitar",
+    "supertype": "Pokémon",
+    "number": "056/108",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/567010_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/567010_400w.jpg"
+    },
+    "tcgplayerId": "567010"
+  },
+  {
+    "id": "jp-sv3-ruler-of-the-black-flame-072/108",
+    "name": "Houndoom",
+    "supertype": "Pokémon",
+    "number": "072/108",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/567026_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/567026_400w.jpg"
+    },
+    "tcgplayerId": "567026"
+  },
+  {
+    "id": "jp-sv3-ruler-of-the-black-flame-054/108",
+    "name": "Houndstone",
+    "supertype": "Pokémon",
+    "number": "054/108",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/567008_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/567008_400w.jpg"
+    },
+    "tcgplayerId": "567008"
+  },
+  {
+    "id": "jp-sv3-ruler-of-the-black-flame-090/108",
+    "name": "Kangaskhan",
+    "supertype": "Pokémon",
+    "number": "090/108",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/567044_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/567044_400w.jpg"
+    },
+    "tcgplayerId": "567044"
+  },
+  {
+    "id": "jp-sv3-ruler-of-the-black-flame-082/108",
+    "name": "Kingambit",
+    "supertype": "Pokémon",
+    "number": "082/108",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/567036_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/567036_400w.jpg"
+    },
+    "tcgplayerId": "567036"
+  },
+  {
+    "id": "jp-sv3-ruler-of-the-black-flame-096/108",
+    "name": "Lechonk - 096/108",
+    "supertype": "Pokémon",
+    "number": "096/108",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/567050_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/567050_400w.jpg"
+    },
+    "tcgplayerId": "567050"
+  },
+  {
+    "id": "jp-sv3-ruler-of-the-black-flame-068/108",
+    "name": "Paldean Wooper - 068/108",
+    "supertype": "Pokémon",
+    "number": "068/108",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/567022_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/567022_400w.jpg"
+    },
+    "tcgplayerId": "567022"
+  },
+  {
+    "id": "jp-sv3-ruler-of-the-black-flame-013/108",
+    "name": "Charmeleon",
+    "supertype": "Pokémon",
+    "number": "013/108",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/566967_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/566967_400w.jpg"
+    },
+    "tcgplayerId": "566967"
+  },
+  {
+    "id": "jp-sv3-ruler-of-the-black-flame-027/108",
+    "name": "Beartic",
+    "supertype": "Pokémon",
+    "number": "027/108",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/566981_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/566981_400w.jpg"
+    },
+    "tcgplayerId": "566981"
+  },
+  {
+    "id": "jp-sv3-ruler-of-the-black-flame-003/108",
+    "name": "Bellossom",
+    "supertype": "Pokémon",
+    "number": "003/108",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/566957_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/566957_400w.jpg"
+    },
+    "tcgplayerId": "566957"
+  },
+  {
+    "id": "jp-sv3-ruler-of-the-black-flame-040/108",
+    "name": "Tadbulb - 040/108",
+    "supertype": "Pokémon",
+    "number": "040/108",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/566994_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/566994_400w.jpg"
+    },
+    "tcgplayerId": "566994"
+  },
+  {
+    "id": "jp-sv3-ruler-of-the-black-flame-004/108",
+    "name": "Scyther",
+    "supertype": "Pokémon",
+    "number": "004/108",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/566958_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/566958_400w.jpg"
+    },
+    "tcgplayerId": "566958"
+  },
+  {
+    "id": "jp-sv3-ruler-of-the-black-flame-025/108",
+    "name": "Seismitoad",
+    "supertype": "Pokémon",
+    "number": "025/108",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/566979_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/566979_400w.jpg"
+    },
+    "tcgplayerId": "566979"
+  },
+  {
+    "id": "jp-sv3-ruler-of-the-black-flame-022/108",
+    "name": "Sharpedo",
+    "supertype": "Pokémon",
+    "number": "022/108",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/566976_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/566976_400w.jpg"
+    },
+    "tcgplayerId": "566976"
+  },
+  {
+    "id": "jp-sv3-ruler-of-the-black-flame-053/108",
+    "name": "Greavard - 053/108",
+    "supertype": "Pokémon",
+    "number": "053/108",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/567007_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/567007_400w.jpg"
+    },
+    "tcgplayerId": "567007"
+  },
+  {
+    "id": "jp-sv3-ruler-of-the-black-flame-014/108",
+    "name": "Vulpix",
+    "supertype": "Pokémon",
+    "number": "014/108",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/566968_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/566968_400w.jpg"
+    },
+    "tcgplayerId": "566968"
+  },
+  {
+    "id": "jp-sv3-ruler-of-the-black-flame-042/108",
+    "name": "Cleffa - 042/108",
+    "supertype": "Pokémon",
+    "number": "042/108",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/566996_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/566996_400w.jpg"
+    },
+    "tcgplayerId": "566996"
+  },
+  {
+    "id": "jp-sv3-ruler-of-the-black-flame-084/108",
+    "name": "Varoom - 084/108",
+    "supertype": "Pokémon",
+    "number": "084/108",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/567038_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/567038_400w.jpg"
+    },
+    "tcgplayerId": "567038"
+  },
+  {
+    "id": "jp-sv3-ruler-of-the-black-flame-030/108",
+    "name": "Finizen - 030/108",
+    "supertype": "Pokémon",
+    "number": "030/108",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/566984_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/566984_400w.jpg"
+    },
+    "tcgplayerId": "566984"
+  },
+  {
+    "id": "jp-sv3-ruler-of-the-black-flame-083/108",
+    "name": "Varoom - 083/108",
+    "supertype": "Pokémon",
+    "number": "083/108",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/567037_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/567037_400w.jpg"
+    },
+    "tcgplayerId": "567037"
+  },
+  {
+    "id": "jp-sv3-ruler-of-the-black-flame-029/108",
+    "name": "Finizen - 029/108",
+    "supertype": "Pokémon",
+    "number": "029/108",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/566983_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/566983_400w.jpg"
+    },
+    "tcgplayerId": "566983"
+  },
+  {
+    "id": "jp-sv3-ruler-of-the-black-flame-071/108",
+    "name": "Houndour - 071/108",
+    "supertype": "Pokémon",
+    "number": "071/108",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/567025_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/567025_400w.jpg"
+    },
+    "tcgplayerId": "567025"
+  },
+  {
+    "id": "jp-sv3-ruler-of-the-black-flame-076/108",
+    "name": "Malamar",
+    "supertype": "Pokémon",
+    "number": "076/108",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/567030_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/567030_400w.jpg"
+    },
+    "tcgplayerId": "567030"
+  },
+  {
+    "id": "jp-sv3-ruler-of-the-black-flame-060/108",
+    "name": "Diggersby",
+    "supertype": "Pokémon",
+    "number": "060/108",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/567014_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/567014_400w.jpg"
+    },
+    "tcgplayerId": "567014"
+  },
+  {
+    "id": "jp-sv3-ruler-of-the-black-flame-058/108",
+    "name": "Bonsly",
+    "supertype": "Pokémon",
+    "number": "058/108",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/567012_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/567012_400w.jpg"
+    },
+    "tcgplayerId": "567012"
+  },
+  {
+    "id": "jp-sv3-ruler-of-the-black-flame-094/108",
+    "name": "Swablu",
+    "supertype": "Pokémon",
+    "number": "094/108",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/567048_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/567048_400w.jpg"
+    },
+    "tcgplayerId": "567048"
+  },
+  {
+    "id": "jp-sv3-ruler-of-the-black-flame-064/108",
+    "name": "Glimmet - 064/108",
+    "supertype": "Pokémon",
+    "number": "064/108",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/567018_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/567018_400w.jpg"
+    },
+    "tcgplayerId": "567018"
+  },
+  {
+    "id": "jp-sv3-ruler-of-the-black-flame-062/108",
+    "name": "Lycanroc",
+    "supertype": "Pokémon",
+    "number": "062/108",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/567016_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/567016_400w.jpg"
+    },
+    "tcgplayerId": "567016"
+  },
+  {
+    "id": "jp-sv3-ruler-of-the-black-flame-001/108",
+    "name": "Oddish",
+    "supertype": "Pokémon",
+    "number": "001/108",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/566955_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/566955_400w.jpg"
+    },
+    "tcgplayerId": "566955"
+  },
+  {
+    "id": "jp-sv3-ruler-of-the-black-flame-034/108",
+    "name": "Eelektrik",
+    "supertype": "Pokémon",
+    "number": "034/108",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/566988_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/566988_400w.jpg"
+    },
+    "tcgplayerId": "566988"
+  },
+  {
+    "id": "jp-sv3-ruler-of-the-black-flame-078/108",
+    "name": "Mawile",
+    "supertype": "Pokémon",
+    "number": "078/108",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/567032_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/567032_400w.jpg"
+    },
+    "tcgplayerId": "567032"
+  },
+  {
+    "id": "jp-sv3-ruler-of-the-black-flame-057/108",
+    "name": "Nosepass",
+    "supertype": "Pokémon",
+    "number": "057/108",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/567011_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/567011_400w.jpg"
+    },
+    "tcgplayerId": "567011"
+  },
+  {
+    "id": "jp-sv3-ruler-of-the-black-flame-028/108",
+    "name": "Cryogonal",
+    "supertype": "Pokémon",
+    "number": "028/108",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/566982_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/566982_400w.jpg"
+    },
+    "tcgplayerId": "566982"
+  },
+  {
+    "id": "jp-sv3-ruler-of-the-black-flame-048/108",
+    "name": "Solrock",
+    "supertype": "Pokémon",
+    "number": "048/108",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/567002_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/567002_400w.jpg"
+    },
+    "tcgplayerId": "567002"
+  },
+  {
+    "id": "jp-sv3-ruler-of-the-black-flame-055/108",
+    "name": "Larvitar - 055/108",
+    "supertype": "Pokémon",
+    "number": "055/108",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/567009_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/567009_400w.jpg"
+    },
+    "tcgplayerId": "567009"
+  },
+  {
+    "id": "jp-sv3-ruler-of-the-black-flame-093/108",
+    "name": "Linoone",
+    "supertype": "Pokémon",
+    "number": "093/108",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/567047_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/567047_400w.jpg"
+    },
+    "tcgplayerId": "567047"
+  },
+  {
+    "id": "jp-sv3-ruler-of-the-black-flame-002/108",
+    "name": "Gloom - 002/108",
+    "supertype": "Pokémon",
+    "number": "002/108",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/566956_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/566956_400w.jpg"
+    },
+    "tcgplayerId": "566956"
+  },
+  {
+    "id": "jp-sv3-ruler-of-the-black-flame-087/108",
+    "name": "Pidgey - 087/108",
+    "supertype": "Pokémon",
+    "number": "087/108",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/567041_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/567041_400w.jpg"
+    },
+    "tcgplayerId": "567041"
+  },
+  {
+    "id": "jp-sv3-ruler-of-the-black-flame-088/108",
+    "name": "Pidgeotto - 088/108",
+    "supertype": "Pokémon",
+    "number": "088/108",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/567042_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/567042_400w.jpg"
+    },
+    "tcgplayerId": "567042"
+  },
+  {
+    "id": "jp-sv3-ruler-of-the-black-flame-023/108",
+    "name": "Tympole",
+    "supertype": "Pokémon",
+    "number": "023/108",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/566977_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/566977_400w.jpg"
+    },
+    "tcgplayerId": "566977"
+  },
+  {
+    "id": "jp-sv3-ruler-of-the-black-flame-086/108",
+    "name": "Altaria",
+    "supertype": "Pokémon",
+    "number": "086/108",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/567040_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/567040_400w.jpg"
+    },
+    "tcgplayerId": "567040"
+  },
+  {
+    "id": "jp-sv3-ruler-of-the-black-flame-007/108",
+    "name": "Phantump",
+    "supertype": "Pokémon",
+    "number": "007/108",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/566961_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/566961_400w.jpg"
+    },
+    "tcgplayerId": "566961"
+  },
+  {
+    "id": "jp-sv3-ruler-of-the-black-flame-021/108",
+    "name": "Carvanha",
+    "supertype": "Pokémon",
+    "number": "021/108",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/566975_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/566975_400w.jpg"
+    },
+    "tcgplayerId": "566975"
+  },
+  {
+    "id": "jp-sv3-ruler-of-the-black-flame-018/108",
+    "name": "Darmanitan",
+    "supertype": "Pokémon",
+    "number": "018/108",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/566972_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/566972_400w.jpg"
+    },
+    "tcgplayerId": "566972"
+  },
+  {
+    "id": "jp-sv3-ruler-of-the-black-flame-099/108",
+    "name": "Flamigo",
+    "supertype": "Pokémon",
+    "number": "099/108",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/567053_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/567053_400w.jpg"
+    },
+    "tcgplayerId": "567053"
+  },
+  {
+    "id": "jp-sv3-ruler-of-the-black-flame-019/108",
+    "name": "Heatmor",
+    "supertype": "Pokémon",
+    "number": "019/108",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/566973_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/566973_400w.jpg"
+    },
+    "tcgplayerId": "566973"
+  },
+  {
+    "id": "jp-sv3-ruler-of-the-black-flame-024/108",
+    "name": "Palpitoad",
+    "supertype": "Pokémon",
+    "number": "024/108",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/566978_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/566978_400w.jpg"
+    },
+    "tcgplayerId": "566978"
+  },
+  {
+    "id": "jp-sv3-ruler-of-the-black-flame-105/108",
+    "name": "Poppy - 105/108",
+    "supertype": "Pokémon",
+    "number": "105/108",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/567059_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/567059_400w.jpg"
+    },
+    "tcgplayerId": "567059"
+  },
+  {
+    "id": "jp-sv3-ruler-of-the-black-flame-107/108",
+    "name": "Town Store",
+    "supertype": "Pokémon",
+    "number": "107/108",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/567061_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/567061_400w.jpg"
+    },
+    "tcgplayerId": "567061"
+  },
+  {
+    "id": "jp-sv3-ruler-of-the-black-flame-059/108",
+    "name": "Stunfisk",
+    "supertype": "Pokémon",
+    "number": "059/108",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/567013_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/567013_400w.jpg"
+    },
+    "tcgplayerId": "567013"
+  },
+  {
+    "id": "jp-sv3-ruler-of-the-black-flame-035/108",
+    "name": "Eelektross",
+    "supertype": "Pokémon",
+    "number": "035/108",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/566989_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/566989_400w.jpg"
+    },
+    "tcgplayerId": "566989"
+  },
+  {
+    "id": "jp-sv3-ruler-of-the-black-flame-104/108",
+    "name": "Ortega - 104/108",
+    "supertype": "Pokémon",
+    "number": "104/108",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/567058_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/567058_400w.jpg"
+    },
+    "tcgplayerId": "567058"
+  },
+  {
+    "id": "jp-sv3-ruler-of-the-black-flame-008/108",
+    "name": "Trevenant",
+    "supertype": "Pokémon",
+    "number": "008/108",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/566962_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/566962_400w.jpg"
+    },
+    "tcgplayerId": "566962"
+  },
+  {
+    "id": "jp-sv3-ruler-of-the-black-flame-010/108",
+    "name": "Capsakid - 010/108",
+    "supertype": "Pokémon",
+    "number": "010/108",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/566964_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/566964_400w.jpg"
+    },
+    "tcgplayerId": "566964"
+  },
+  {
+    "id": "jp-sv3-ruler-of-the-black-flame-026/108",
+    "name": "Cubchoo",
+    "supertype": "Pokémon",
+    "number": "026/108",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/566980_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/566980_400w.jpg"
+    },
+    "tcgplayerId": "566980"
+  },
+  {
+    "id": "jp-sv3-ruler-of-the-black-flame-005/108",
+    "name": "Shuckle",
+    "supertype": "Pokémon",
+    "number": "005/108",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/566959_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/566959_400w.jpg"
+    },
+    "tcgplayerId": "566959"
+  },
+  {
+    "id": "jp-sv3-ruler-of-the-black-flame-092/108",
+    "name": "Zigzagoon",
+    "supertype": "Pokémon",
+    "number": "092/108",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/567046_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/567046_400w.jpg"
+    },
+    "tcgplayerId": "567046"
+  },
+  {
+    "id": "jp-sv3-ruler-of-the-black-flame-108/108",
+    "name": "Pokemon League Headquarters",
+    "supertype": "Pokémon",
+    "number": "108/108",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/567062_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/567062_400w.jpg"
+    },
+    "tcgplayerId": "567062"
+  },
+  {
+    "id": "jp-sv3-ruler-of-the-black-flame-081/108",
+    "name": "Bisharp",
+    "supertype": "Pokémon",
+    "number": "081/108",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/567035_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/567035_400w.jpg"
+    },
+    "tcgplayerId": "567035"
+  },
+  {
+    "id": "jp-sv3-ruler-of-the-black-flame-039/108",
+    "name": "Tadbulb - 039/108",
+    "supertype": "Pokémon",
+    "number": "039/108",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/566993_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/566993_400w.jpg"
+    },
+    "tcgplayerId": "566993"
+  },
+  {
+    "id": "jp-sv3-ruler-of-the-black-flame-017/108",
+    "name": "Darumaka",
+    "supertype": "Pokémon",
+    "number": "017/108",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/566971_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/566971_400w.jpg"
+    },
+    "tcgplayerId": "566971"
+  },
+  {
+    "id": "jp-sv3-ruler-of-the-black-flame-049/108",
+    "name": "Baltoy",
+    "supertype": "Pokémon",
+    "number": "049/108",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/567003_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/567003_400w.jpg"
+    },
+    "tcgplayerId": "567003"
+  },
+  {
+    "id": "jp-sv3-ruler-of-the-black-flame-095/108",
+    "name": "Bunnelby",
+    "supertype": "Pokémon",
+    "number": "095/108",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/567049_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/567049_400w.jpg"
+    },
+    "tcgplayerId": "567049"
+  },
+  {
+    "id": "jp-sv3-ruler-of-the-black-flame-033/108",
+    "name": "Tynamo",
+    "supertype": "Pokémon",
+    "number": "033/108",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/566987_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/566987_400w.jpg"
+    },
+    "tcgplayerId": "566987"
+  },
+  {
+    "id": "jp-sv3-ruler-of-the-black-flame-080/108",
+    "name": "Pawniard",
+    "supertype": "Pokémon",
+    "number": "080/108",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/567034_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/567034_400w.jpg"
+    },
+    "tcgplayerId": "567034"
+  },
+  {
+    "id": "jp-sv3-ruler-of-the-black-flame-106/108",
+    "name": "Ryme - 106/108",
+    "supertype": "Pokémon",
+    "number": "106/108",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/567060_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/567060_400w.jpg"
+    },
+    "tcgplayerId": "567060"
+  }
+]

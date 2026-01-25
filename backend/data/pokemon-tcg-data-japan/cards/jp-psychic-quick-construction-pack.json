@@ -1,0 +1,38 @@
+[
+  {
+    "id": "jp-psychic-quick-construction-pack-006/015",
+    "name": "Dusclops ex",
+    "supertype": "Pokémon",
+    "number": "006/015",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612216_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612216_400w.jpg"
+    },
+    "tcgplayerId": "612216"
+  },
+  {
+    "id": "jp-psychic-quick-construction-pack-001/015",
+    "name": "Ralts",
+    "supertype": "Pokémon",
+    "number": "001/015",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612221_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612221_400w.jpg"
+    },
+    "tcgplayerId": "612221"
+  },
+  {
+    "id": "jp-psychic-quick-construction-pack-002/015",
+    "name": "Kirlia",
+    "supertype": "Pokémon",
+    "number": "002/015",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612220_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612220_400w.jpg"
+    },
+    "tcgplayerId": "612220"
+  }
+]

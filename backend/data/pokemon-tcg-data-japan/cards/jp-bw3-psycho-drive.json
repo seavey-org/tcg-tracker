@@ -1,0 +1,482 @@
+[
+  {
+    "id": "jp-bw3-psycho-drive-055/052",
+    "name": "Mewtwo EX - 055/052",
+    "supertype": "Pokémon",
+    "number": "055/052",
+    "rarity": "Super Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601005_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601005_400w.jpg"
+    },
+    "tcgplayerId": "601005"
+  },
+  {
+    "id": "jp-bw3-psycho-drive-053/052",
+    "name": "Shaymin EX - 053/052",
+    "supertype": "Pokémon",
+    "number": "053/052",
+    "rarity": "Super Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601025_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601025_400w.jpg"
+    },
+    "tcgplayerId": "601025"
+  },
+  {
+    "id": "jp-bw3-psycho-drive-054/052",
+    "name": "Kyogre EX - 054/052",
+    "supertype": "Pokémon",
+    "number": "054/052",
+    "rarity": "Super Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/600998_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/600998_400w.jpg"
+    },
+    "tcgplayerId": "600998"
+  },
+  {
+    "id": "jp-bw3-psycho-drive-048/052",
+    "name": "Cinccino",
+    "supertype": "Pokémon",
+    "number": "048/052",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/600984_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/600984_400w.jpg"
+    },
+    "tcgplayerId": "600984"
+  },
+  {
+    "id": "jp-bw3-psycho-drive-008/052",
+    "name": "Leavanny",
+    "supertype": "Pokémon",
+    "number": "008/052",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/600999_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/600999_400w.jpg"
+    },
+    "tcgplayerId": "600999"
+  },
+  {
+    "id": "jp-bw3-psycho-drive-023/052",
+    "name": "Luxray",
+    "supertype": "Pokémon",
+    "number": "023/052",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601002_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601002_400w.jpg"
+    },
+    "tcgplayerId": "601002"
+  },
+  {
+    "id": "jp-bw3-psycho-drive-042/052",
+    "name": "Scrafty",
+    "supertype": "Pokémon",
+    "number": "042/052",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601020_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601020_400w.jpg"
+    },
+    "tcgplayerId": "601020"
+  },
+  {
+    "id": "jp-bw3-psycho-drive-015/052",
+    "name": "Kyogre EX - 015/052",
+    "supertype": "Pokémon",
+    "number": "015/052",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/600997_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/600997_400w.jpg"
+    },
+    "tcgplayerId": "600997"
+  },
+  {
+    "id": "jp-bw3-psycho-drive-028/052",
+    "name": "Mewtwo EX - 028/052",
+    "supertype": "Pokémon",
+    "number": "028/052",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601004_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601004_400w.jpg"
+    },
+    "tcgplayerId": "601004"
+  },
+  {
+    "id": "jp-bw3-psycho-drive-014/052",
+    "name": "Articuno",
+    "supertype": "Pokémon",
+    "number": "014/052",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/600981_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/600981_400w.jpg"
+    },
+    "tcgplayerId": "600981"
+  },
+  {
+    "id": "jp-bw3-psycho-drive-009/052",
+    "name": "Moltres",
+    "supertype": "Pokémon",
+    "number": "009/052",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601009_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601009_400w.jpg"
+    },
+    "tcgplayerId": "601009"
+  },
+  {
+    "id": "jp-bw3-psycho-drive-025/052",
+    "name": "Zebstrika",
+    "supertype": "Pokémon",
+    "number": "025/052",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601036_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601036_400w.jpg"
+    },
+    "tcgplayerId": "601036"
+  },
+  {
+    "id": "jp-bw3-psycho-drive-034/052",
+    "name": "Timburr",
+    "supertype": "Pokémon",
+    "number": "034/052",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601035_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601035_400w.jpg"
+    },
+    "tcgplayerId": "601035"
+  },
+  {
+    "id": "jp-bw3-psycho-drive-016/052",
+    "name": "Panpour",
+    "supertype": "Pokémon",
+    "number": "016/052",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601014_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601014_400w.jpg"
+    },
+    "tcgplayerId": "601014"
+  },
+  {
+    "id": "jp-bw3-psycho-drive-005/052",
+    "name": "Shaymin EX - 005/052",
+    "supertype": "Pokémon",
+    "number": "005/052",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601024_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601024_400w.jpg"
+    },
+    "tcgplayerId": "601024"
+  },
+  {
+    "id": "jp-bw3-psycho-drive-030/052",
+    "name": "Musharna",
+    "supertype": "Pokémon",
+    "number": "030/052",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601012_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601012_400w.jpg"
+    },
+    "tcgplayerId": "601012"
+  },
+  {
+    "id": "jp-bw3-psycho-drive-027/052",
+    "name": "Muk",
+    "supertype": "Pokémon",
+    "number": "027/052",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601010_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601010_400w.jpg"
+    },
+    "tcgplayerId": "601010"
+  },
+  {
+    "id": "jp-bw3-psycho-drive-019/052",
+    "name": "Frillish",
+    "supertype": "Pokémon",
+    "number": "019/052",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/600990_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/600990_400w.jpg"
+    },
+    "tcgplayerId": "600990"
+  },
+  {
+    "id": "jp-bw3-psycho-drive-010/052",
+    "name": "Pansear",
+    "supertype": "Pokémon",
+    "number": "010/052",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601015_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601015_400w.jpg"
+    },
+    "tcgplayerId": "601015"
+  },
+  {
+    "id": "jp-bw3-psycho-drive-039/052",
+    "name": "Nuzleaf",
+    "supertype": "Pokémon",
+    "number": "039/052",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601013_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601013_400w.jpg"
+    },
+    "tcgplayerId": "601013"
+  },
+  {
+    "id": "jp-bw3-psycho-drive-046/052",
+    "name": "Persian",
+    "supertype": "Pokémon",
+    "number": "046/052",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601016_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601016_400w.jpg"
+    },
+    "tcgplayerId": "601016"
+  },
+  {
+    "id": "jp-bw3-psycho-drive-012/052",
+    "name": "Staryu",
+    "supertype": "Pokémon",
+    "number": "012/052",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601033_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601033_400w.jpg"
+    },
+    "tcgplayerId": "601033"
+  },
+  {
+    "id": "jp-bw3-psycho-drive-047/052",
+    "name": "Minccino",
+    "supertype": "Pokémon",
+    "number": "047/052",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601008_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601008_400w.jpg"
+    },
+    "tcgplayerId": "601008"
+  },
+  {
+    "id": "jp-bw3-psycho-drive-032/052",
+    "name": "Duosion",
+    "supertype": "Pokémon",
+    "number": "032/052",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/600986_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/600986_400w.jpg"
+    },
+    "tcgplayerId": "600986"
+  },
+  {
+    "id": "jp-bw3-psycho-drive-031/052",
+    "name": "Solosis",
+    "supertype": "Pokémon",
+    "number": "031/052",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601031_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601031_400w.jpg"
+    },
+    "tcgplayerId": "601031"
+  },
+  {
+    "id": "jp-bw3-psycho-drive-006/052",
+    "name": "Sewaddle",
+    "supertype": "Pokémon",
+    "number": "006/052",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601023_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601023_400w.jpg"
+    },
+    "tcgplayerId": "601023"
+  },
+  {
+    "id": "jp-bw3-psycho-drive-045/052",
+    "name": "Meowth",
+    "supertype": "Pokémon",
+    "number": "045/052",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601003_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601003_400w.jpg"
+    },
+    "tcgplayerId": "601003"
+  },
+  {
+    "id": "jp-bw3-psycho-drive-001/052",
+    "name": "Pinsir",
+    "supertype": "Pokémon",
+    "number": "001/052",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601017_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601017_400w.jpg"
+    },
+    "tcgplayerId": "601017"
+  },
+  {
+    "id": "jp-bw3-psycho-drive-043/052",
+    "name": "Ferroseed",
+    "supertype": "Pokémon",
+    "number": "043/052",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/600988_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/600988_400w.jpg"
+    },
+    "tcgplayerId": "600988"
+  },
+  {
+    "id": "jp-bw3-psycho-drive-041/052",
+    "name": "Scraggy",
+    "supertype": "Pokémon",
+    "number": "041/052",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601021_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601021_400w.jpg"
+    },
+    "tcgplayerId": "601021"
+  },
+  {
+    "id": "jp-bw3-psycho-drive-007/052",
+    "name": "Swadloon",
+    "supertype": "Pokémon",
+    "number": "007/052",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601034_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601034_400w.jpg"
+    },
+    "tcgplayerId": "601034"
+  },
+  {
+    "id": "jp-bw3-psycho-drive-029/052",
+    "name": "Munna",
+    "supertype": "Pokémon",
+    "number": "029/052",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601011_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601011_400w.jpg"
+    },
+    "tcgplayerId": "601011"
+  },
+  {
+    "id": "jp-bw3-psycho-drive-021/052",
+    "name": "Shinx",
+    "supertype": "Pokémon",
+    "number": "021/052",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601027_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601027_400w.jpg"
+    },
+    "tcgplayerId": "601027"
+  },
+  {
+    "id": "jp-bw3-psycho-drive-022/052",
+    "name": "Luxio",
+    "supertype": "Pokémon",
+    "number": "022/052",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601001_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601001_400w.jpg"
+    },
+    "tcgplayerId": "601001"
+  },
+  {
+    "id": "jp-bw3-psycho-drive-052/052",
+    "name": "Prism Energy",
+    "supertype": "Energy",
+    "number": "052/052",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601018_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601018_400w.jpg"
+    },
+    "tcgplayerId": "601018"
+  },
+  {
+    "id": "jp-bw3-psycho-drive-024/052",
+    "name": "Blitzle",
+    "supertype": "Pokémon",
+    "number": "024/052",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/600983_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/600983_400w.jpg"
+    },
+    "tcgplayerId": "600983"
+  },
+  {
+    "id": "jp-bw3-psycho-drive-033/052",
+    "name": "Reuniclus",
+    "supertype": "Pokémon",
+    "number": "033/052",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601019_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601019_400w.jpg"
+    },
+    "tcgplayerId": "601019"
+  },
+  {
+    "id": "jp-bw3-psycho-drive-026/052",
+    "name": "Grimer",
+    "supertype": "Pokémon",
+    "number": "026/052",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/600991_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/600991_400w.jpg"
+    },
+    "tcgplayerId": "600991"
+  },
+  {
+    "id": "jp-bw3-psycho-drive-003/052",
+    "name": "Kricketot",
+    "supertype": "Pokémon",
+    "number": "003/052",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/600995_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/600995_400w.jpg"
+    },
+    "tcgplayerId": "600995"
+  },
+  {
+    "id": "jp-bw3-psycho-drive-020/052",
+    "name": "Jellicent",
+    "supertype": "Pokémon",
+    "number": "020/052",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/600994_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/600994_400w.jpg"
+    },
+    "tcgplayerId": "600994"
+  }
+]

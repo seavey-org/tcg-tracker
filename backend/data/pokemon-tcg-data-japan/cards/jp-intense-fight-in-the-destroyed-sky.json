@@ -1,0 +1,914 @@
+[
+  {
+    "id": "jp-intense-fight-in-the-destroyed-sky-092/092",
+    "name": "Charizard",
+    "supertype": "Pokémon",
+    "number": "092/092",
+    "rarity": "Ultra Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608118_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608118_400w.jpg"
+    },
+    "tcgplayerId": "608118"
+  },
+  {
+    "id": "jp-intense-fight-in-the-destroyed-sky-032/092",
+    "name": "Gengar",
+    "supertype": "Pokémon",
+    "number": "032/092",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608156_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608156_400w.jpg"
+    },
+    "tcgplayerId": "608156"
+  },
+  {
+    "id": "jp-intense-fight-in-the-destroyed-sky-028/092",
+    "name": "Voltorb - 028/092",
+    "supertype": "Pokémon",
+    "number": "028/092",
+    "rarity": "Common Holo",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608234_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608234_400w.jpg"
+    },
+    "tcgplayerId": "608234"
+  },
+  {
+    "id": "jp-intense-fight-in-the-destroyed-sky-090/092",
+    "name": "Charmander",
+    "supertype": "Pokémon",
+    "number": "090/092",
+    "rarity": "Ultra-Rare Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608119_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608119_400w.jpg"
+    },
+    "tcgplayerId": "608119"
+  },
+  {
+    "id": "jp-intense-fight-in-the-destroyed-sky-042/092",
+    "name": "Dusknoir LV.X",
+    "supertype": "Pokémon",
+    "number": "042/092",
+    "rarity": "Rare Holo LV.X",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608142_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608142_400w.jpg"
+    },
+    "tcgplayerId": "608142"
+  },
+  {
+    "id": "jp-intense-fight-in-the-destroyed-sky-015/092",
+    "name": "Heatran LV.X",
+    "supertype": "Pokémon",
+    "number": "015/092",
+    "rarity": "Rare Holo LV.X",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608165_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608165_400w.jpg"
+    },
+    "tcgplayerId": "608165"
+  },
+  {
+    "id": "jp-intense-fight-in-the-destroyed-sky-026/092",
+    "name": "Raichu LV.X",
+    "supertype": "Pokémon",
+    "number": "026/092",
+    "rarity": "Rare Holo LV.X",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608205_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608205_400w.jpg"
+    },
+    "tcgplayerId": "608205"
+  },
+  {
+    "id": "jp-intense-fight-in-the-destroyed-sky-005/092",
+    "name": "Sceptile",
+    "supertype": "Pokémon",
+    "number": "005/092",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608213_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608213_400w.jpg"
+    },
+    "tcgplayerId": "608213"
+  },
+  {
+    "id": "jp-intense-fight-in-the-destroyed-sky-016/092",
+    "name": "Magikarp",
+    "supertype": "Pokémon",
+    "number": "016/092",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608178_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608178_400w.jpg"
+    },
+    "tcgplayerId": "608178"
+  },
+  {
+    "id": "jp-intense-fight-in-the-destroyed-sky-039/092",
+    "name": "Duskull - 039/092",
+    "supertype": "Pokémon",
+    "number": "039/092",
+    "rarity": "Common Holo",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608145_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608145_400w.jpg"
+    },
+    "tcgplayerId": "608145"
+  },
+  {
+    "id": "jp-intense-fight-in-the-destroyed-sky-048/092",
+    "name": "Giratina",
+    "supertype": "Pokémon",
+    "number": "048/092",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608158_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608158_400w.jpg"
+    },
+    "tcgplayerId": "608158"
+  },
+  {
+    "id": "jp-intense-fight-in-the-destroyed-sky-025/092",
+    "name": "Raichu",
+    "supertype": "Pokémon",
+    "number": "025/092",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608204_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608204_400w.jpg"
+    },
+    "tcgplayerId": "608204"
+  },
+  {
+    "id": "jp-intense-fight-in-the-destroyed-sky-059/092",
+    "name": "Torterra",
+    "supertype": "Pokémon",
+    "number": "059/092",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608230_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608230_400w.jpg"
+    },
+    "tcgplayerId": "608230"
+  },
+  {
+    "id": "jp-intense-fight-in-the-destroyed-sky-080/092",
+    "name": "Regigigas LV.X",
+    "supertype": "Pokémon",
+    "number": "080/092",
+    "rarity": "Rare Holo LV.X",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608208_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608208_400w.jpg"
+    },
+    "tcgplayerId": "608208"
+  },
+  {
+    "id": "jp-intense-fight-in-the-destroyed-sky-004/092",
+    "name": "Scizor",
+    "supertype": "Pokémon",
+    "number": "004/092",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608214_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608214_400w.jpg"
+    },
+    "tcgplayerId": "608214"
+  },
+  {
+    "id": "jp-intense-fight-in-the-destroyed-sky-071/092",
+    "name": "Dialga",
+    "supertype": "Pokémon",
+    "number": "071/092",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608129_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608129_400w.jpg"
+    },
+    "tcgplayerId": "608129"
+  },
+  {
+    "id": "jp-intense-fight-in-the-destroyed-sky-051/092",
+    "name": "Machamp",
+    "supertype": "Pokémon",
+    "number": "051/092",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608173_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608173_400w.jpg"
+    },
+    "tcgplayerId": "608173"
+  },
+  {
+    "id": "jp-intense-fight-in-the-destroyed-sky-017/092",
+    "name": "Gyarados",
+    "supertype": "Pokémon",
+    "number": "017/092",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608161_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608161_400w.jpg"
+    },
+    "tcgplayerId": "608161"
+  },
+  {
+    "id": "jp-intense-fight-in-the-destroyed-sky-024/092",
+    "name": "Pikachu",
+    "supertype": "Pokémon",
+    "number": "024/092",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608197_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608197_400w.jpg"
+    },
+    "tcgplayerId": "608197"
+  },
+  {
+    "id": "jp-intense-fight-in-the-destroyed-sky-070/092",
+    "name": "Empoleon",
+    "supertype": "Pokémon",
+    "number": "070/092",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608148_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608148_400w.jpg"
+    },
+    "tcgplayerId": "608148"
+  },
+  {
+    "id": "jp-intense-fight-in-the-destroyed-sky-030/092",
+    "name": "Gastly",
+    "supertype": "Pokémon",
+    "number": "030/092",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608154_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608154_400w.jpg"
+    },
+    "tcgplayerId": "608154"
+  },
+  {
+    "id": "jp-intense-fight-in-the-destroyed-sky-091/092",
+    "name": "Charmeleon",
+    "supertype": "Pokémon",
+    "number": "091/092",
+    "rarity": "Ultra-Rare Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608120_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608120_400w.jpg"
+    },
+    "tcgplayerId": "608120"
+  },
+  {
+    "id": "jp-intense-fight-in-the-destroyed-sky-020/092",
+    "name": "Lumineon",
+    "supertype": "Pokémon",
+    "number": "020/092",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608170_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608170_400w.jpg"
+    },
+    "tcgplayerId": "608170"
+  },
+  {
+    "id": "jp-intense-fight-in-the-destroyed-sky-044/092",
+    "name": "Drifloon - 044/092",
+    "supertype": "Pokémon",
+    "number": "044/092",
+    "rarity": "Common Holo",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608136_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608136_400w.jpg"
+    },
+    "tcgplayerId": "608136"
+  },
+  {
+    "id": "jp-intense-fight-in-the-destroyed-sky-003/092",
+    "name": "Scyther",
+    "supertype": "Pokémon",
+    "number": "003/092",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608215_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608215_400w.jpg"
+    },
+    "tcgplayerId": "608215"
+  },
+  {
+    "id": "jp-intense-fight-in-the-destroyed-sky-014/092",
+    "name": "Rapidash",
+    "supertype": "Pokémon",
+    "number": "014/092",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608206_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608206_400w.jpg"
+    },
+    "tcgplayerId": "608206"
+  },
+  {
+    "id": "jp-intense-fight-in-the-destroyed-sky-060/092",
+    "name": "Infernape",
+    "supertype": "Pokémon",
+    "number": "060/092",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608167_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608167_400w.jpg"
+    },
+    "tcgplayerId": "608167"
+  },
+  {
+    "id": "jp-intense-fight-in-the-destroyed-sky-012/092",
+    "name": "Shaymin LV.X",
+    "supertype": "Pokémon",
+    "number": "012/092",
+    "rarity": "Rare Holo LV.X",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608217_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608217_400w.jpg"
+    },
+    "tcgplayerId": "608217"
+  },
+  {
+    "id": "jp-intense-fight-in-the-destroyed-sky-011/092",
+    "name": "Shaymin",
+    "supertype": "Pokémon",
+    "number": "011/092",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608216_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608216_400w.jpg"
+    },
+    "tcgplayerId": "608216"
+  },
+  {
+    "id": "jp-intense-fight-in-the-destroyed-sky-035/092",
+    "name": "Budew",
+    "supertype": "Pokémon",
+    "number": "035/092",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608116_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608116_400w.jpg"
+    },
+    "tcgplayerId": "608116"
+  },
+  {
+    "id": "jp-intense-fight-in-the-destroyed-sky-034/092",
+    "name": "Mismagius",
+    "supertype": "Pokémon",
+    "number": "034/092",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608194_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608194_400w.jpg"
+    },
+    "tcgplayerId": "608194"
+  },
+  {
+    "id": "jp-intense-fight-in-the-destroyed-sky-068/092",
+    "name": "Magnezone",
+    "supertype": "Pokémon",
+    "number": "068/092",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608185_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608185_400w.jpg"
+    },
+    "tcgplayerId": "608185"
+  },
+  {
+    "id": "jp-intense-fight-in-the-destroyed-sky-050/092",
+    "name": "Machoke",
+    "supertype": "Pokémon",
+    "number": "050/092",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608175_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608175_400w.jpg"
+    },
+    "tcgplayerId": "608175"
+  },
+  {
+    "id": "jp-intense-fight-in-the-destroyed-sky-061/092",
+    "name": "Tyranitar",
+    "supertype": "Pokémon",
+    "number": "061/092",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608231_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608231_400w.jpg"
+    },
+    "tcgplayerId": "608231"
+  },
+  {
+    "id": "jp-intense-fight-in-the-destroyed-sky-062/092",
+    "name": "Sableye",
+    "supertype": "Pokémon",
+    "number": "062/092",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608211_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608211_400w.jpg"
+    },
+    "tcgplayerId": "608211"
+  },
+  {
+    "id": "jp-intense-fight-in-the-destroyed-sky-054/092",
+    "name": "Swinub",
+    "supertype": "Pokémon",
+    "number": "054/092",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608227_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608227_400w.jpg"
+    },
+    "tcgplayerId": "608227"
+  },
+  {
+    "id": "jp-intense-fight-in-the-destroyed-sky-008/092",
+    "name": "Cherubi",
+    "supertype": "Pokémon",
+    "number": "008/092",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608124_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608124_400w.jpg"
+    },
+    "tcgplayerId": "608124"
+  },
+  {
+    "id": "jp-intense-fight-in-the-destroyed-sky-073/092",
+    "name": "Shelgon",
+    "supertype": "Pokémon",
+    "number": "073/092",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608218_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608218_400w.jpg"
+    },
+    "tcgplayerId": "608218"
+  },
+  {
+    "id": "jp-intense-fight-in-the-destroyed-sky-078/092",
+    "name": "Bidoof",
+    "supertype": "Pokémon",
+    "number": "078/092",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608112_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608112_400w.jpg"
+    },
+    "tcgplayerId": "608112"
+  },
+  {
+    "id": "jp-intense-fight-in-the-destroyed-sky-074/092",
+    "name": "Salamence",
+    "supertype": "Pokémon",
+    "number": "074/092",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608212_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608212_400w.jpg"
+    },
+    "tcgplayerId": "608212"
+  },
+  {
+    "id": "jp-intense-fight-in-the-destroyed-sky-043/092",
+    "name": "Drifloon - 043/092",
+    "supertype": "Pokémon",
+    "number": "043/092",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608134_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608134_400w.jpg"
+    },
+    "tcgplayerId": "608134"
+  },
+  {
+    "id": "jp-intense-fight-in-the-destroyed-sky-041/092",
+    "name": "Dusknoir",
+    "supertype": "Pokémon",
+    "number": "041/092",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608140_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608140_400w.jpg"
+    },
+    "tcgplayerId": "608140"
+  },
+  {
+    "id": "jp-intense-fight-in-the-destroyed-sky-023/092",
+    "name": "Pichu",
+    "supertype": "Pokémon",
+    "number": "023/092",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608196_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608196_400w.jpg"
+    },
+    "tcgplayerId": "608196"
+  },
+  {
+    "id": "jp-intense-fight-in-the-destroyed-sky-069/092",
+    "name": "Steelix",
+    "supertype": "Pokémon",
+    "number": "069/092",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608225_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608225_400w.jpg"
+    },
+    "tcgplayerId": "608225"
+  },
+  {
+    "id": "jp-intense-fight-in-the-destroyed-sky-063/092",
+    "name": "Stunky",
+    "supertype": "Pokémon",
+    "number": "063/092",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608226_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608226_400w.jpg"
+    },
+    "tcgplayerId": "608226"
+  },
+  {
+    "id": "jp-intense-fight-in-the-destroyed-sky-001/092",
+    "name": "Tangela",
+    "supertype": "Pokémon",
+    "number": "001/092",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608228_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608228_400w.jpg"
+    },
+    "tcgplayerId": "608228"
+  },
+  {
+    "id": "jp-intense-fight-in-the-destroyed-sky-079/092",
+    "name": "Regigigas",
+    "supertype": "Pokémon",
+    "number": "079/092",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608207_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608207_400w.jpg"
+    },
+    "tcgplayerId": "608207"
+  },
+  {
+    "id": "jp-intense-fight-in-the-destroyed-sky-002/092",
+    "name": "Tangrowth",
+    "supertype": "Pokémon",
+    "number": "002/092",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608229_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608229_400w.jpg"
+    },
+    "tcgplayerId": "608229"
+  },
+  {
+    "id": "jp-intense-fight-in-the-destroyed-sky-057/092",
+    "name": "Larvitar",
+    "supertype": "Pokémon",
+    "number": "057/092",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608168_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608168_400w.jpg"
+    },
+    "tcgplayerId": "608168"
+  },
+  {
+    "id": "jp-intense-fight-in-the-destroyed-sky-013/092",
+    "name": "Ponyta",
+    "supertype": "Pokémon",
+    "number": "013/092",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608202_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608202_400w.jpg"
+    },
+    "tcgplayerId": "608202"
+  },
+  {
+    "id": "jp-intense-fight-in-the-destroyed-sky-031/092",
+    "name": "Haunter",
+    "supertype": "Pokémon",
+    "number": "031/092",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608163_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608163_400w.jpg"
+    },
+    "tcgplayerId": "608163"
+  },
+  {
+    "id": "jp-intense-fight-in-the-destroyed-sky-067/092",
+    "name": "Magneton",
+    "supertype": "Pokémon",
+    "number": "067/092",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608182_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608182_400w.jpg"
+    },
+    "tcgplayerId": "608182"
+  },
+  {
+    "id": "jp-intense-fight-in-the-destroyed-sky-006/092",
+    "name": "Combee",
+    "supertype": "Pokémon",
+    "number": "006/092",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608125_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608125_400w.jpg"
+    },
+    "tcgplayerId": "608125"
+  },
+  {
+    "id": "jp-intense-fight-in-the-destroyed-sky-049/092",
+    "name": "Machop",
+    "supertype": "Pokémon",
+    "number": "049/092",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608177_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608177_400w.jpg"
+    },
+    "tcgplayerId": "608177"
+  },
+  {
+    "id": "jp-intense-fight-in-the-destroyed-sky-066/092",
+    "name": "Magnemite",
+    "supertype": "Pokémon",
+    "number": "066/092",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608180_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608180_400w.jpg"
+    },
+    "tcgplayerId": "608180"
+  },
+  {
+    "id": "jp-intense-fight-in-the-destroyed-sky-086/092",
+    "name": "Energy Link",
+    "supertype": "Energy",
+    "number": "086/092",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608150_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608150_400w.jpg"
+    },
+    "tcgplayerId": "608150"
+  },
+  {
+    "id": "jp-intense-fight-in-the-destroyed-sky-010/092",
+    "name": "Skorupi",
+    "supertype": "Pokémon",
+    "number": "010/092",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608219_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608219_400w.jpg"
+    },
+    "tcgplayerId": "608219"
+  },
+  {
+    "id": "jp-intense-fight-in-the-destroyed-sky-040/092",
+    "name": "Dusclops",
+    "supertype": "Pokémon",
+    "number": "040/092",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608138_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608138_400w.jpg"
+    },
+    "tcgplayerId": "608138"
+  },
+  {
+    "id": "jp-intense-fight-in-the-destroyed-sky-033/092",
+    "name": "Misdreavus",
+    "supertype": "Pokémon",
+    "number": "033/092",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608192_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608192_400w.jpg"
+    },
+    "tcgplayerId": "608192"
+  },
+  {
+    "id": "jp-intense-fight-in-the-destroyed-sky-038/092",
+    "name": "Duskull - 038/092",
+    "supertype": "Pokémon",
+    "number": "038/092",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608144_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608144_400w.jpg"
+    },
+    "tcgplayerId": "608144"
+  },
+  {
+    "id": "jp-intense-fight-in-the-destroyed-sky-053/092",
+    "name": "Onix",
+    "supertype": "Pokémon",
+    "number": "053/092",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608195_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608195_400w.jpg"
+    },
+    "tcgplayerId": "608195"
+  },
+  {
+    "id": "jp-intense-fight-in-the-destroyed-sky-037/092",
+    "name": "Roserade",
+    "supertype": "Pokémon",
+    "number": "037/092",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608210_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608210_400w.jpg"
+    },
+    "tcgplayerId": "608210"
+  },
+  {
+    "id": "jp-intense-fight-in-the-destroyed-sky-009/092",
+    "name": "Cherrim",
+    "supertype": "Pokémon",
+    "number": "009/092",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608122_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608122_400w.jpg"
+    },
+    "tcgplayerId": "608122"
+  },
+  {
+    "id": "jp-intense-fight-in-the-destroyed-sky-045/092",
+    "name": "Drifblim",
+    "supertype": "Pokémon",
+    "number": "045/092",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608133_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608133_400w.jpg"
+    },
+    "tcgplayerId": "608133"
+  },
+  {
+    "id": "jp-intense-fight-in-the-destroyed-sky-007/092",
+    "name": "Vespiquen",
+    "supertype": "Pokémon",
+    "number": "007/092",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608232_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608232_400w.jpg"
+    },
+    "tcgplayerId": "608232"
+  },
+  {
+    "id": "jp-intense-fight-in-the-destroyed-sky-021/092",
+    "name": "Snover",
+    "supertype": "Pokémon",
+    "number": "021/092",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608221_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608221_400w.jpg"
+    },
+    "tcgplayerId": "608221"
+  },
+  {
+    "id": "jp-intense-fight-in-the-destroyed-sky-075/092",
+    "name": "Starly",
+    "supertype": "Pokémon",
+    "number": "075/092",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608224_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608224_400w.jpg"
+    },
+    "tcgplayerId": "608224"
+  },
+  {
+    "id": "jp-intense-fight-in-the-destroyed-sky-029/092",
+    "name": "Electrode",
+    "supertype": "Pokémon",
+    "number": "029/092",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608147_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608147_400w.jpg"
+    },
+    "tcgplayerId": "608147"
+  },
+  {
+    "id": "jp-intense-fight-in-the-destroyed-sky-058/092",
+    "name": "Pupitar",
+    "supertype": "Pokémon",
+    "number": "058/092",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608203_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608203_400w.jpg"
+    },
+    "tcgplayerId": "608203"
+  },
+  {
+    "id": "jp-intense-fight-in-the-destroyed-sky-085/092",
+    "name": "Poke Blower +",
+    "supertype": "Pokémon",
+    "number": "085/092",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608199_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608199_400w.jpg"
+    },
+    "tcgplayerId": "608199"
+  },
+  {
+    "id": "jp-intense-fight-in-the-destroyed-sky-055/092",
+    "name": "Piloswine",
+    "supertype": "Pokémon",
+    "number": "055/092",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608198_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608198_400w.jpg"
+    },
+    "tcgplayerId": "608198"
+  },
+  {
+    "id": "jp-intense-fight-in-the-destroyed-sky-019/092",
+    "name": "Finneon",
+    "supertype": "Pokémon",
+    "number": "019/092",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608152_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608152_400w.jpg"
+    },
+    "tcgplayerId": "608152"
+  },
+  {
+    "id": "jp-intense-fight-in-the-destroyed-sky-087/092",
+    "name": "Marley's Request",
+    "supertype": "Trainer",
+    "number": "087/092",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608190_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608190_400w.jpg"
+    },
+    "tcgplayerId": "608190"
+  },
+  {
+    "id": "jp-intense-fight-in-the-destroyed-sky-072/092",
+    "name": "Bagon",
+    "supertype": "Pokémon",
+    "number": "072/092",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608109_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608109_400w.jpg"
+    },
+    "tcgplayerId": "608109"
+  },
+  {
+    "id": "jp-intense-fight-in-the-destroyed-sky-027/092",
+    "name": "Voltorb - 027/092",
+    "supertype": "Pokémon",
+    "number": "027/092",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608233_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608233_400w.jpg"
+    },
+    "tcgplayerId": "608233"
+  },
+  {
+    "id": "jp-intense-fight-in-the-destroyed-sky-018/092",
+    "name": "Bibarel",
+    "supertype": "Pokémon",
+    "number": "018/092",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608111_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608111_400w.jpg"
+    },
+    "tcgplayerId": "608111"
+  }
+]

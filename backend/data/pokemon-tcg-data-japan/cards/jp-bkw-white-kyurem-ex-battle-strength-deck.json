@@ -1,0 +1,98 @@
+[
+  {
+    "id": "jp-bkw-white-kyurem-ex-battle-strength-deck-004/018",
+    "name": "Sharpedo (Team Plasma)",
+    "supertype": "Pokémon",
+    "number": "004/018",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/604973_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/604973_400w.jpg"
+    },
+    "tcgplayerId": "604973"
+  },
+  {
+    "id": "jp-bkw-white-kyurem-ex-battle-strength-deck-005/018",
+    "name": "Vanillite",
+    "supertype": "Pokémon",
+    "number": "005/018",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/604974_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/604974_400w.jpg"
+    },
+    "tcgplayerId": "604974"
+  },
+  {
+    "id": "jp-bkw-white-kyurem-ex-battle-strength-deck-002/018",
+    "name": "Litwick",
+    "supertype": "Pokémon",
+    "number": "002/018",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/604971_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/604971_400w.jpg"
+    },
+    "tcgplayerId": "604971"
+  },
+  {
+    "id": "jp-bkw-white-kyurem-ex-battle-strength-deck-017/018",
+    "name": "Skyla",
+    "supertype": "Pokémon",
+    "number": "017/018",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/604967_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/604967_400w.jpg"
+    },
+    "tcgplayerId": "604967"
+  },
+  {
+    "id": "jp-bkw-white-kyurem-ex-battle-strength-deck-003/018",
+    "name": "Carvanha",
+    "supertype": "Pokémon",
+    "number": "003/018",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/604972_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/604972_400w.jpg"
+    },
+    "tcgplayerId": "604972"
+  },
+  {
+    "id": "jp-bkw-white-kyurem-ex-battle-strength-deck-006/018",
+    "name": "Vanillish",
+    "supertype": "Pokémon",
+    "number": "006/018",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/604975_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/604975_400w.jpg"
+    },
+    "tcgplayerId": "604975"
+  },
+  {
+    "id": "jp-bkw-white-kyurem-ex-battle-strength-deck-015/018",
+    "name": "Professor Juniper",
+    "supertype": "Trainer",
+    "number": "015/018",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/604962_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/604962_400w.jpg"
+    },
+    "tcgplayerId": "604962"
+  },
+  {
+    "id": "jp-bkw-white-kyurem-ex-battle-strength-deck-007/018",
+    "name": "Vanilluxe",
+    "supertype": "Pokémon",
+    "number": "007/018",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/604976_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/604976_400w.jpg"
+    },
+    "tcgplayerId": "604976"
+  }
+]

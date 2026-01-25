@@ -1,0 +1,14 @@
+[
+  {
+    "id": "jp-master-kit-bulbasaur-005/015",
+    "name": "Raichu",
+    "supertype": "Pokémon",
+    "number": "005/015",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/611638_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/611638_400w.jpg"
+    },
+    "tcgplayerId": "611638"
+  }
+]

@@ -1,0 +1,314 @@
+[
+  {
+    "id": "jp-s8a-p-promo-card-pack-25th-anniversary-edition-001/025",
+    "name": "Charizard",
+    "supertype": "Pokémon",
+    "number": "001/025",
+    "rarity": "",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/594633_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/594633_400w.jpg"
+    },
+    "tcgplayerId": "594633"
+  },
+  {
+    "id": "jp-s8a-p-promo-card-pack-25th-anniversary-edition-012/025",
+    "name": "Umbreon Star",
+    "supertype": "Pokémon",
+    "number": "012/025",
+    "rarity": "",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/594630_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/594630_400w.jpg"
+    },
+    "tcgplayerId": "594630"
+  },
+  {
+    "id": "jp-s8a-p-promo-card-pack-25th-anniversary-edition-007/025",
+    "name": "_____'s Pikachu",
+    "supertype": "Pokémon",
+    "number": "007/025",
+    "rarity": "",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/594628_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/594628_400w.jpg"
+    },
+    "tcgplayerId": "594628"
+  },
+  {
+    "id": "jp-s8a-p-promo-card-pack-25th-anniversary-edition-promo-card-25th-anniversary-collection-booster-pack",
+    "name": "Promo Card 25th Anniversary Collection Booster Pack",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/657880_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/657880_400w.jpg"
+    },
+    "tcgplayerId": "657880"
+  },
+  {
+    "id": "jp-s8a-p-promo-card-pack-25th-anniversary-edition-010/025",
+    "name": "Shining Magikarp",
+    "supertype": "Pokémon",
+    "number": "010/025",
+    "rarity": "",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/594622_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/594622_400w.jpg"
+    },
+    "tcgplayerId": "594622"
+  },
+  {
+    "id": "jp-s8a-p-promo-card-pack-25th-anniversary-edition-021/025",
+    "name": "Zekrom",
+    "supertype": "Pokémon",
+    "number": "021/025",
+    "rarity": "",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/594638_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/594638_400w.jpg"
+    },
+    "tcgplayerId": "594638"
+  },
+  {
+    "id": "jp-s8a-p-promo-card-pack-25th-anniversary-edition-024/025",
+    "name": "M Rayquaza EX",
+    "supertype": "Pokémon",
+    "number": "024/025",
+    "rarity": "",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/594641_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/594641_400w.jpg"
+    },
+    "tcgplayerId": "594641"
+  },
+  {
+    "id": "jp-s8a-p-promo-card-pack-25th-anniversary-edition-020/025",
+    "name": "Reshiram",
+    "supertype": "Pokémon",
+    "number": "020/025",
+    "rarity": "",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/594637_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/594637_400w.jpg"
+    },
+    "tcgplayerId": "594637"
+  },
+  {
+    "id": "jp-s8a-p-promo-card-pack-25th-anniversary-edition-003/025",
+    "name": "Blastoise",
+    "supertype": "Pokémon",
+    "number": "003/025",
+    "rarity": "",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/594619_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/594619_400w.jpg"
+    },
+    "tcgplayerId": "594619"
+  },
+  {
+    "id": "jp-s8a-p-promo-card-pack-25th-anniversary-edition-002/025",
+    "name": "Venusaur",
+    "supertype": "Pokémon",
+    "number": "002/025",
+    "rarity": "",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/594618_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/594618_400w.jpg"
+    },
+    "tcgplayerId": "594618"
+  },
+  {
+    "id": "jp-s8a-p-promo-card-pack-25th-anniversary-edition-014/025",
+    "name": "Mew ex",
+    "supertype": "Pokémon",
+    "number": "014/025",
+    "rarity": "",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/594632_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/594632_400w.jpg"
+    },
+    "tcgplayerId": "594632"
+  },
+  {
+    "id": "jp-s8a-p-promo-card-pack-25th-anniversary-edition-015/025",
+    "name": "Gardevoir ex (Delta Species)",
+    "supertype": "Pokémon",
+    "number": "015/025",
+    "rarity": "",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/594627_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/594627_400w.jpg"
+    },
+    "tcgplayerId": "594627"
+  },
+  {
+    "id": "jp-s8a-p-promo-card-pack-25th-anniversary-edition-005/025",
+    "name": "Dark Gyarados",
+    "supertype": "Pokémon",
+    "number": "005/025",
+    "rarity": "",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/594621_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/594621_400w.jpg"
+    },
+    "tcgplayerId": "594621"
+  },
+  {
+    "id": "jp-s8a-p-promo-card-pack-25th-anniversary-edition-006/025",
+    "name": "Here Comes Team Rocket!",
+    "supertype": "Pokémon",
+    "number": "006/025",
+    "rarity": "",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/594624_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/594624_400w.jpg"
+    },
+    "tcgplayerId": "594624"
+  },
+  {
+    "id": "jp-s8a-p-promo-card-pack-25th-anniversary-edition-022/025",
+    "name": "Mewtwo EX",
+    "supertype": "Pokémon",
+    "number": "022/025",
+    "rarity": "",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/594639_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/594639_400w.jpg"
+    },
+    "tcgplayerId": "594639"
+  },
+  {
+    "id": "jp-s8a-p-promo-card-pack-25th-anniversary-edition-008/025",
+    "name": "Rocket's Zapdos",
+    "supertype": "Trainer",
+    "number": "008/025",
+    "rarity": "",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/594625_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/594625_400w.jpg"
+    },
+    "tcgplayerId": "594625"
+  },
+  {
+    "id": "jp-s8a-p-promo-card-pack-25th-anniversary-edition-009/025",
+    "name": "Cleffa",
+    "supertype": "Pokémon",
+    "number": "009/025",
+    "rarity": "",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/594623_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/594623_400w.jpg"
+    },
+    "tcgplayerId": "594623"
+  },
+  {
+    "id": "jp-s8a-p-promo-card-pack-25th-anniversary-edition-011/025",
+    "name": "Team Magma's Groudon",
+    "supertype": "Trainer",
+    "number": "011/025",
+    "rarity": "",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/594631_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/594631_400w.jpg"
+    },
+    "tcgplayerId": "594631"
+  },
+  {
+    "id": "jp-s8a-p-promo-card-pack-25th-anniversary-edition-018/025",
+    "name": "Garchomp C LV.X",
+    "supertype": "Pokémon",
+    "number": "018/025",
+    "rarity": "",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/594634_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/594634_400w.jpg"
+    },
+    "tcgplayerId": "594634"
+  },
+  {
+    "id": "jp-s8a-p-promo-card-pack-25th-anniversary-edition-017/025",
+    "name": "Luxray GL LV.X",
+    "supertype": "Pokémon",
+    "number": "017/025",
+    "rarity": "",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/594635_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/594635_400w.jpg"
+    },
+    "tcgplayerId": "594635"
+  },
+  {
+    "id": "jp-s8a-p-promo-card-pack-25th-anniversary-edition-023/025",
+    "name": "Xerneas EX",
+    "supertype": "Pokémon",
+    "number": "023/025",
+    "rarity": "",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/594640_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/594640_400w.jpg"
+    },
+    "tcgplayerId": "594640"
+  },
+  {
+    "id": "jp-s8a-p-promo-card-pack-25th-anniversary-edition-025/025",
+    "name": "Tapu Lele GX",
+    "supertype": "Pokémon",
+    "number": "025/025",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/594642_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/594642_400w.jpg"
+    },
+    "tcgplayerId": "594642"
+  },
+  {
+    "id": "jp-s8a-p-promo-card-pack-25th-anniversary-edition-004/025",
+    "name": "Imposter Professor Oak",
+    "supertype": "Trainer",
+    "number": "004/025",
+    "rarity": "",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/594620_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/594620_400w.jpg"
+    },
+    "tcgplayerId": "594620"
+  },
+  {
+    "id": "jp-s8a-p-promo-card-pack-25th-anniversary-edition-013/025",
+    "name": "Rocket's Admin.",
+    "supertype": "Trainer",
+    "number": "013/025",
+    "rarity": "",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/594626_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/594626_400w.jpg"
+    },
+    "tcgplayerId": "594626"
+  },
+  {
+    "id": "jp-s8a-p-promo-card-pack-25th-anniversary-edition-016/025",
+    "name": "Claydol",
+    "supertype": "Pokémon",
+    "number": "016/025",
+    "rarity": "",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/594629_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/594629_400w.jpg"
+    },
+    "tcgplayerId": "594629"
+  },
+  {
+    "id": "jp-s8a-p-promo-card-pack-25th-anniversary-edition-019/025",
+    "name": "Donphan",
+    "supertype": "Pokémon",
+    "number": "019/025",
+    "rarity": "",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/594636_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/594636_400w.jpg"
+    },
+    "tcgplayerId": "594636"
+  }
+]

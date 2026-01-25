@@ -1,0 +1,554 @@
+[
+  {
+    "id": "jp-magma-vs-aqua-two-ambitions-014/080",
+    "name": "Arcanine",
+    "supertype": "Pokémon",
+    "number": "014/080",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612849_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612849_400w.jpg"
+    },
+    "tcgplayerId": "612849"
+  },
+  {
+    "id": "jp-magma-vs-aqua-two-ambitions-040/080",
+    "name": "Espeon",
+    "supertype": "Pokémon",
+    "number": "040/080",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612846_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612846_400w.jpg"
+    },
+    "tcgplayerId": "612846"
+  },
+  {
+    "id": "jp-magma-vs-aqua-two-ambitions-062/080",
+    "name": "Umbreon",
+    "supertype": "Pokémon",
+    "number": "062/080",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612847_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612847_400w.jpg"
+    },
+    "tcgplayerId": "612847"
+  },
+  {
+    "id": "jp-magma-vs-aqua-two-ambitions-015/080",
+    "name": "Flareon",
+    "supertype": "Pokémon",
+    "number": "015/080",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612844_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612844_400w.jpg"
+    },
+    "tcgplayerId": "612844"
+  },
+  {
+    "id": "jp-magma-vs-aqua-two-ambitions-026/080",
+    "name": "Kabutops ex",
+    "supertype": "Pokémon",
+    "number": "026/080",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612869_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612869_400w.jpg"
+    },
+    "tcgplayerId": "612869"
+  },
+  {
+    "id": "jp-magma-vs-aqua-two-ambitions-018/080",
+    "name": "Blaziken ex",
+    "supertype": "Pokémon",
+    "number": "018/080",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612870_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612870_400w.jpg"
+    },
+    "tcgplayerId": "612870"
+  },
+  {
+    "id": "jp-magma-vs-aqua-two-ambitions-009/080",
+    "name": "Cradily ex",
+    "supertype": "Pokémon",
+    "number": "009/080",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612871_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612871_400w.jpg"
+    },
+    "tcgplayerId": "612871"
+  },
+  {
+    "id": "jp-magma-vs-aqua-two-ambitions-020/080",
+    "name": "Team Magma's Houndoom",
+    "supertype": "Pokémon",
+    "number": "020/080",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612838_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612838_400w.jpg"
+    },
+    "tcgplayerId": "612838"
+  },
+  {
+    "id": "jp-magma-vs-aqua-two-ambitions-022/080",
+    "name": "Vaporeon",
+    "supertype": "Pokémon",
+    "number": "022/080",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612848_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612848_400w.jpg"
+    },
+    "tcgplayerId": "612848"
+  },
+  {
+    "id": "jp-magma-vs-aqua-two-ambitions-048/080",
+    "name": "Golem ex",
+    "supertype": "Pokémon",
+    "number": "048/080",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612875_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612875_400w.jpg"
+    },
+    "tcgplayerId": "612875"
+  },
+  {
+    "id": "jp-magma-vs-aqua-two-ambitions-006/080",
+    "name": "Sceptile ex",
+    "supertype": "Pokémon",
+    "number": "006/080",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612872_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612872_400w.jpg"
+    },
+    "tcgplayerId": "612872"
+  },
+  {
+    "id": "jp-magma-vs-aqua-two-ambitions-027/080",
+    "name": "Suicune ex",
+    "supertype": "Pokémon",
+    "number": "027/080",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612874_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612874_400w.jpg"
+    },
+    "tcgplayerId": "612874"
+  },
+  {
+    "id": "jp-magma-vs-aqua-two-ambitions-050/080",
+    "name": "Swampert ex",
+    "supertype": "Pokémon",
+    "number": "050/080",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612873_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612873_400w.jpg"
+    },
+    "tcgplayerId": "612873"
+  },
+  {
+    "id": "jp-magma-vs-aqua-two-ambitions-037/080",
+    "name": "Jolteon",
+    "supertype": "Pokémon",
+    "number": "037/080",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612845_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612845_400w.jpg"
+    },
+    "tcgplayerId": "612845"
+  },
+  {
+    "id": "jp-magma-vs-aqua-two-ambitions-035/080",
+    "name": "Team Aqua's Sharpedo",
+    "supertype": "Pokémon",
+    "number": "035/080",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612840_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612840_400w.jpg"
+    },
+    "tcgplayerId": "612840"
+  },
+  {
+    "id": "jp-magma-vs-aqua-two-ambitions-065/080",
+    "name": "Steelix",
+    "supertype": "Pokémon",
+    "number": "065/080",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612850_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612850_400w.jpg"
+    },
+    "tcgplayerId": "612850"
+  },
+  {
+    "id": "jp-magma-vs-aqua-two-ambitions-053/080",
+    "name": "Team Magma's Rhydon",
+    "supertype": "Pokémon",
+    "number": "053/080",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612851_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612851_400w.jpg"
+    },
+    "tcgplayerId": "612851"
+  },
+  {
+    "id": "jp-magma-vs-aqua-two-ambitions-039/080",
+    "name": "Team Aqua's Manectric",
+    "supertype": "Pokémon",
+    "number": "039/080",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612841_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612841_400w.jpg"
+    },
+    "tcgplayerId": "612841"
+  },
+  {
+    "id": "jp-magma-vs-aqua-two-ambitions-012/080",
+    "name": "Team Aqua's Cacturne",
+    "supertype": "Pokémon",
+    "number": "012/080",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612843_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612843_400w.jpg"
+    },
+    "tcgplayerId": "612843"
+  },
+  {
+    "id": "jp-magma-vs-aqua-two-ambitions-024/080",
+    "name": "Omastar",
+    "supertype": "Pokémon",
+    "number": "024/080",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612836_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612836_400w.jpg"
+    },
+    "tcgplayerId": "612836"
+  },
+  {
+    "id": "jp-magma-vs-aqua-two-ambitions-036/080",
+    "name": "Team Aqua's Crawdaunt",
+    "supertype": "Pokémon",
+    "number": "036/080",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612842_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612842_400w.jpg"
+    },
+    "tcgplayerId": "612842"
+  },
+  {
+    "id": "jp-magma-vs-aqua-two-ambitions-054/080",
+    "name": "Eevee",
+    "supertype": "Pokémon",
+    "number": "054/080",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612829_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612829_400w.jpg"
+    },
+    "tcgplayerId": "612829"
+  },
+  {
+    "id": "jp-magma-vs-aqua-two-ambitions-021/080",
+    "name": "Team Magma's Torkoal",
+    "supertype": "Pokémon",
+    "number": "021/080",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612839_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612839_400w.jpg"
+    },
+    "tcgplayerId": "612839"
+  },
+  {
+    "id": "jp-magma-vs-aqua-two-ambitions-023/080",
+    "name": "Omanyte",
+    "supertype": "Pokémon",
+    "number": "023/080",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612883_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612883_400w.jpg"
+    },
+    "tcgplayerId": "612883"
+  },
+  {
+    "id": "jp-magma-vs-aqua-two-ambitions-028/080",
+    "name": "Mudkip",
+    "supertype": "Pokémon",
+    "number": "028/080",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612824_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612824_400w.jpg"
+    },
+    "tcgplayerId": "612824"
+  },
+  {
+    "id": "jp-magma-vs-aqua-two-ambitions-049/080",
+    "name": "Onix",
+    "supertype": "Pokémon",
+    "number": "049/080",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612832_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612832_400w.jpg"
+    },
+    "tcgplayerId": "612832"
+  },
+  {
+    "id": "jp-magma-vs-aqua-two-ambitions-011/080",
+    "name": "Team Aqua's Cacnea",
+    "supertype": "Trainer",
+    "number": "011/080",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612895_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612895_400w.jpg"
+    },
+    "tcgplayerId": "612895"
+  },
+  {
+    "id": "jp-magma-vs-aqua-two-ambitions-061/080",
+    "name": "Team Magma's Zangoose",
+    "supertype": "Trainer",
+    "number": "061/080",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612855_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612855_400w.jpg"
+    },
+    "tcgplayerId": "612855"
+  },
+  {
+    "id": "jp-magma-vs-aqua-two-ambitions-041/080",
+    "name": "Ralts",
+    "supertype": "Pokémon",
+    "number": "041/080",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612821_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612821_400w.jpg"
+    },
+    "tcgplayerId": "612821"
+  },
+  {
+    "id": "jp-magma-vs-aqua-two-ambitions-017/080",
+    "name": "Combusken",
+    "supertype": "Pokémon",
+    "number": "017/080",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612858_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612858_400w.jpg"
+    },
+    "tcgplayerId": "612858"
+  },
+  {
+    "id": "jp-magma-vs-aqua-two-ambitions-019/080",
+    "name": "Team Magma's Houndour",
+    "supertype": "Trainer",
+    "number": "019/080",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612893_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612893_400w.jpg"
+    },
+    "tcgplayerId": "612893"
+  },
+  {
+    "id": "jp-magma-vs-aqua-two-ambitions-057/080",
+    "name": "Linoone",
+    "supertype": "Pokémon",
+    "number": "057/080",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612899_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612899_400w.jpg"
+    },
+    "tcgplayerId": "612899"
+  },
+  {
+    "id": "jp-magma-vs-aqua-two-ambitions-016/080",
+    "name": "Torchic",
+    "supertype": "Pokémon",
+    "number": "016/080",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612822_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612822_400w.jpg"
+    },
+    "tcgplayerId": "612822"
+  },
+  {
+    "id": "jp-magma-vs-aqua-two-ambitions-013/080",
+    "name": "Growlithe",
+    "supertype": "Pokémon",
+    "number": "013/080",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612831_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612831_400w.jpg"
+    },
+    "tcgplayerId": "612831"
+  },
+  {
+    "id": "jp-magma-vs-aqua-two-ambitions-043/080",
+    "name": "Duskull",
+    "supertype": "Pokémon",
+    "number": "043/080",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612828_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612828_400w.jpg"
+    },
+    "tcgplayerId": "612828"
+  },
+  {
+    "id": "jp-magma-vs-aqua-two-ambitions-042/080",
+    "name": "Kirlia",
+    "supertype": "Pokémon",
+    "number": "042/080",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612852_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612852_400w.jpg"
+    },
+    "tcgplayerId": "612852"
+  },
+  {
+    "id": "jp-magma-vs-aqua-two-ambitions-029/080",
+    "name": "Marshtomp",
+    "supertype": "Pokémon",
+    "number": "029/080",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612861_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612861_400w.jpg"
+    },
+    "tcgplayerId": "612861"
+  },
+  {
+    "id": "jp-magma-vs-aqua-two-ambitions-068/080",
+    "name": "Warp Point",
+    "supertype": "Pokémon",
+    "number": "068/080",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612881_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612881_400w.jpg"
+    },
+    "tcgplayerId": "612881"
+  },
+  {
+    "id": "jp-magma-vs-aqua-two-ambitions-010/080",
+    "name": "Team Aqua's Seviper",
+    "supertype": "Pokémon",
+    "number": "010/080",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612856_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612856_400w.jpg"
+    },
+    "tcgplayerId": "612856"
+  },
+  {
+    "id": "jp-magma-vs-aqua-two-ambitions-005/080",
+    "name": "Grovyle",
+    "supertype": "Pokémon",
+    "number": "005/080",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612860_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612860_400w.jpg"
+    },
+    "tcgplayerId": "612860"
+  },
+  {
+    "id": "jp-magma-vs-aqua-two-ambitions-060/080",
+    "name": "Delcatty",
+    "supertype": "Pokémon",
+    "number": "060/080",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612891_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612891_400w.jpg"
+    },
+    "tcgplayerId": "612891"
+  },
+  {
+    "id": "jp-magma-vs-aqua-two-ambitions-059/080",
+    "name": "Skitty",
+    "supertype": "Pokémon",
+    "number": "059/080",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612833_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612833_400w.jpg"
+    },
+    "tcgplayerId": "612833"
+  },
+  {
+    "id": "jp-magma-vs-aqua-two-ambitions-007/080",
+    "name": "Cacnea",
+    "supertype": "Pokémon",
+    "number": "007/080",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612827_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612827_400w.jpg"
+    },
+    "tcgplayerId": "612827"
+  },
+  {
+    "id": "jp-magma-vs-aqua-two-ambitions-075/080",
+    "name": "Archie",
+    "supertype": "Pokémon",
+    "number": "075/080",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612853_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612853_400w.jpg"
+    },
+    "tcgplayerId": "612853"
+  },
+  {
+    "id": "jp-magma-vs-aqua-two-ambitions-001/080",
+    "name": "Ekans",
+    "supertype": "Pokémon",
+    "number": "001/080",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612830_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612830_400w.jpg"
+    },
+    "tcgplayerId": "612830"
+  },
+  {
+    "id": "jp-magma-vs-aqua-two-ambitions-056/080",
+    "name": "Dunsparce",
+    "supertype": "Pokémon",
+    "number": "056/080",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612835_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612835_400w.jpg"
+    },
+    "tcgplayerId": "612835"
+  }
+]

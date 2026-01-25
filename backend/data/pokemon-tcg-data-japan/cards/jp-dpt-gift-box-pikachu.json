@@ -1,0 +1,38 @@
+[
+  {
+    "id": "jp-dpt-gift-box-pikachu-004/015",
+    "name": "Pikachu",
+    "supertype": "Pokémon",
+    "number": "004/015",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608976_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608976_400w.jpg"
+    },
+    "tcgplayerId": "608976"
+  },
+  {
+    "id": "jp-dpt-gift-box-pikachu-008/015",
+    "name": "Lopunny",
+    "supertype": "Pokémon",
+    "number": "008/015",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608975_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608975_400w.jpg"
+    },
+    "tcgplayerId": "608975"
+  },
+  {
+    "id": "jp-dpt-gift-box-pikachu-007/015",
+    "name": "Buneary",
+    "supertype": "Pokémon",
+    "number": "007/015",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608969_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608969_400w.jpg"
+    },
+    "tcgplayerId": "608969"
+  }
+]

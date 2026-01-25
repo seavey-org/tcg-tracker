@@ -1,0 +1,50 @@
+[
+  {
+    "id": "jp-sm0-pikachu-s-new-friends-004/004",
+    "name": "Pikachu",
+    "supertype": "Pokémon",
+    "number": "004/004",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/576609_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/576609_400w.jpg"
+    },
+    "tcgplayerId": "576609"
+  },
+  {
+    "id": "jp-sm0-pikachu-s-new-friends-002/004",
+    "name": "Litten",
+    "supertype": "Pokémon",
+    "number": "002/004",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/576607_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/576607_400w.jpg"
+    },
+    "tcgplayerId": "576607"
+  },
+  {
+    "id": "jp-sm0-pikachu-s-new-friends-003/004",
+    "name": "Popplio",
+    "supertype": "Pokémon",
+    "number": "003/004",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/576608_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/576608_400w.jpg"
+    },
+    "tcgplayerId": "576608"
+  },
+  {
+    "id": "jp-sm0-pikachu-s-new-friends-001/004",
+    "name": "Rowlet",
+    "supertype": "Pokémon",
+    "number": "001/004",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/576606_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/576606_400w.jpg"
+    },
+    "tcgplayerId": "576606"
+  }
+]

@@ -1,0 +1,62 @@
+[
+  {
+    "id": "jp-entry-pack-dpt-dialga-004/013",
+    "name": "Infernape",
+    "supertype": "Pokémon",
+    "number": "004/013",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/609032_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/609032_400w.jpg"
+    },
+    "tcgplayerId": "609032"
+  },
+  {
+    "id": "jp-entry-pack-dpt-dialga-007/013",
+    "name": "Dialga",
+    "supertype": "Pokémon",
+    "number": "007/013",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/609035_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/609035_400w.jpg"
+    },
+    "tcgplayerId": "609035"
+  },
+  {
+    "id": "jp-entry-pack-dpt-dialga-008/013",
+    "name": "Dunsparce",
+    "supertype": "Pokémon",
+    "number": "008/013",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/609036_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/609036_400w.jpg"
+    },
+    "tcgplayerId": "609036"
+  },
+  {
+    "id": "jp-entry-pack-dpt-dialga-001/013",
+    "name": "Torkoal",
+    "supertype": "Pokémon",
+    "number": "001/013",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/609029_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/609029_400w.jpg"
+    },
+    "tcgplayerId": "609029"
+  },
+  {
+    "id": "jp-entry-pack-dpt-dialga-002/013",
+    "name": "Chimchar",
+    "supertype": "Pokémon",
+    "number": "002/013",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/609030_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/609030_400w.jpg"
+    },
+    "tcgplayerId": "609030"
+  }
+]

@@ -1,0 +1,38 @@
+[
+  {
+    "id": "jp-battle-starter-deck-raichu-001/011",
+    "name": "Pikachu",
+    "supertype": "Pokémon",
+    "number": "001/011",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/609446_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/609446_400w.jpg"
+    },
+    "tcgplayerId": "609446"
+  },
+  {
+    "id": "jp-battle-starter-deck-raichu-002/011",
+    "name": "Raichu",
+    "supertype": "Pokémon",
+    "number": "002/011",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/609444_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/609444_400w.jpg"
+    },
+    "tcgplayerId": "609444"
+  },
+  {
+    "id": "jp-battle-starter-deck-raichu-009/011",
+    "name": "Poke Ball",
+    "supertype": "Trainer",
+    "number": "009/011",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/609441_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/609441_400w.jpg"
+    },
+    "tcgplayerId": "609441"
+  }
+]

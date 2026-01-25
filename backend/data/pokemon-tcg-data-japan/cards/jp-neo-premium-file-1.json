@@ -1,0 +1,110 @@
+[
+  {
+    "id": "jp-neo-premium-file-1-typhlosion",
+    "name": "Typhlosion",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/607835_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/607835_400w.jpg"
+    },
+    "tcgplayerId": "607835"
+  },
+  {
+    "id": "jp-neo-premium-file-1-feraligatr",
+    "name": "Feraligatr",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/607838_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/607838_400w.jpg"
+    },
+    "tcgplayerId": "607838"
+  },
+  {
+    "id": "jp-neo-premium-file-1-meganium",
+    "name": "Meganium",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/607832_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/607832_400w.jpg"
+    },
+    "tcgplayerId": "607832"
+  },
+  {
+    "id": "jp-neo-premium-file-1-cyndaquil",
+    "name": "Cyndaquil",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/607833_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/607833_400w.jpg"
+    },
+    "tcgplayerId": "607833"
+  },
+  {
+    "id": "jp-neo-premium-file-1-croconaw",
+    "name": "Croconaw",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/607837_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/607837_400w.jpg"
+    },
+    "tcgplayerId": "607837"
+  },
+  {
+    "id": "jp-neo-premium-file-1-chikorita",
+    "name": "Chikorita",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/607830_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/607830_400w.jpg"
+    },
+    "tcgplayerId": "607830"
+  },
+  {
+    "id": "jp-neo-premium-file-1-totodile",
+    "name": "Totodile",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/607836_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/607836_400w.jpg"
+    },
+    "tcgplayerId": "607836"
+  },
+  {
+    "id": "jp-neo-premium-file-1-bayleef",
+    "name": "Bayleef",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/607831_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/607831_400w.jpg"
+    },
+    "tcgplayerId": "607831"
+  },
+  {
+    "id": "jp-neo-premium-file-1-quilava",
+    "name": "Quilava",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/607834_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/607834_400w.jpg"
+    },
+    "tcgplayerId": "607834"
+  }
+]

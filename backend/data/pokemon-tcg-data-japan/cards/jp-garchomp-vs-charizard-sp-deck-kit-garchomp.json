@@ -1,0 +1,134 @@
+[
+  {
+    "id": "jp-garchomp-vs-charizard-sp-deck-kit-garchomp-005/016",
+    "name": "Altaria C",
+    "supertype": "Pokémon",
+    "number": "005/016",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608751_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608751_400w.jpg"
+    },
+    "tcgplayerId": "608751"
+  },
+  {
+    "id": "jp-garchomp-vs-charizard-sp-deck-kit-garchomp-001/016",
+    "name": "Milotic C",
+    "supertype": "Pokémon",
+    "number": "001/016",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608747_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608747_400w.jpg"
+    },
+    "tcgplayerId": "608747"
+  },
+  {
+    "id": "jp-garchomp-vs-charizard-sp-deck-kit-garchomp-008/016",
+    "name": "Togekiss C",
+    "supertype": "Pokémon",
+    "number": "008/016",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608754_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608754_400w.jpg"
+    },
+    "tcgplayerId": "608754"
+  },
+  {
+    "id": "jp-garchomp-vs-charizard-sp-deck-kit-garchomp-003/016",
+    "name": "Spiritomb C",
+    "supertype": "Pokémon",
+    "number": "003/016",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608749_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608749_400w.jpg"
+    },
+    "tcgplayerId": "608749"
+  },
+  {
+    "id": "jp-garchomp-vs-charizard-sp-deck-kit-garchomp-007/016",
+    "name": "Garchomp C LV.X",
+    "supertype": "Pokémon",
+    "number": "007/016",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608753_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608753_400w.jpg"
+    },
+    "tcgplayerId": "608753"
+  },
+  {
+    "id": "jp-garchomp-vs-charizard-sp-deck-kit-garchomp-006/016",
+    "name": "Garchomp C",
+    "supertype": "Pokémon",
+    "number": "006/016",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608752_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608752_400w.jpg"
+    },
+    "tcgplayerId": "608752"
+  },
+  {
+    "id": "jp-garchomp-vs-charizard-sp-deck-kit-garchomp-004/016",
+    "name": "Lucario C",
+    "supertype": "Pokémon",
+    "number": "004/016",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608750_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608750_400w.jpg"
+    },
+    "tcgplayerId": "608750"
+  },
+  {
+    "id": "jp-garchomp-vs-charizard-sp-deck-kit-garchomp-015/016",
+    "name": "Cynthia's Guidance",
+    "supertype": "Trainer",
+    "number": "015/016",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608757_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608757_400w.jpg"
+    },
+    "tcgplayerId": "608757"
+  },
+  {
+    "id": "jp-garchomp-vs-charizard-sp-deck-kit-garchomp-002/016",
+    "name": "Roserade C",
+    "supertype": "Pokémon",
+    "number": "002/016",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608748_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608748_400w.jpg"
+    },
+    "tcgplayerId": "608748"
+  },
+  {
+    "id": "jp-garchomp-vs-charizard-sp-deck-kit-garchomp-009/016",
+    "name": "Energy Switch",
+    "supertype": "Energy",
+    "number": "009/016",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608755_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608755_400w.jpg"
+    },
+    "tcgplayerId": "608755"
+  },
+  {
+    "id": "jp-garchomp-vs-charizard-sp-deck-kit-garchomp-014/016",
+    "name": "Buffer Piece",
+    "supertype": "Pokémon",
+    "number": "014/016",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608756_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608756_400w.jpg"
+    },
+    "tcgplayerId": "608756"
+  }
+]

@@ -1,0 +1,38 @@
+[
+  {
+    "id": "jp-battle-starter-deck-magmortar-002/009",
+    "name": "Ninetales",
+    "supertype": "Pokémon",
+    "number": "002/009",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/609436_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/609436_400w.jpg"
+    },
+    "tcgplayerId": "609436"
+  },
+  {
+    "id": "jp-battle-starter-deck-magmortar-001/009",
+    "name": "Vulpix",
+    "supertype": "Pokémon",
+    "number": "001/009",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/609435_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/609435_400w.jpg"
+    },
+    "tcgplayerId": "609435"
+  },
+  {
+    "id": "jp-battle-starter-deck-magmortar-005/009",
+    "name": "Numel",
+    "supertype": "Pokémon",
+    "number": "005/009",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/609433_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/609433_400w.jpg"
+    },
+    "tcgplayerId": "609433"
+  }
+]

@@ -1,0 +1,470 @@
+[
+  {
+    "id": "jp-bw8-spiral-force-054/051",
+    "name": "Latios EX - 054/051",
+    "supertype": "Pokémon",
+    "number": "054/051",
+    "rarity": "Super Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/602241_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/602241_400w.jpg"
+    },
+    "tcgplayerId": "602241"
+  },
+  {
+    "id": "jp-bw8-spiral-force-053/051",
+    "name": "Deoxys EX (Team Plasma) - 053/051",
+    "supertype": "Pokémon",
+    "number": "053/051",
+    "rarity": "Super Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/602238_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/602238_400w.jpg"
+    },
+    "tcgplayerId": "602238"
+  },
+  {
+    "id": "jp-bw8-spiral-force-056/051",
+    "name": "Empoleon",
+    "supertype": "Pokémon",
+    "number": "056/051",
+    "rarity": "Ultra Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/602242_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/602242_400w.jpg"
+    },
+    "tcgplayerId": "602242"
+  },
+  {
+    "id": "jp-bw8-spiral-force-052/051",
+    "name": "Heatran EX (Team Plasma) - 052/051",
+    "supertype": "Pokémon",
+    "number": "052/051",
+    "rarity": "Super Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/602240_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/602240_400w.jpg"
+    },
+    "tcgplayerId": "602240"
+  },
+  {
+    "id": "jp-bw8-spiral-force-057/051",
+    "name": "Sigilyph",
+    "supertype": "Pokémon",
+    "number": "057/051",
+    "rarity": "Ultra Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/602243_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/602243_400w.jpg"
+    },
+    "tcgplayerId": "602243"
+  },
+  {
+    "id": "jp-bw8-spiral-force-012/051",
+    "name": "Glaceon (Team Plasma)",
+    "supertype": "Pokémon",
+    "number": "012/051",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/602231_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/602231_400w.jpg"
+    },
+    "tcgplayerId": "602231"
+  },
+  {
+    "id": "jp-bw8-spiral-force-025/051",
+    "name": "Deoxys EX (Team Plasma) - 025/051",
+    "supertype": "Pokémon",
+    "number": "025/051",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/602230_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/602230_400w.jpg"
+    },
+    "tcgplayerId": "602230"
+  },
+  {
+    "id": "jp-bw8-spiral-force-027/051",
+    "name": "Cofagrigus (Team Plasma)",
+    "supertype": "Pokémon",
+    "number": "027/051",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/602229_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/602229_400w.jpg"
+    },
+    "tcgplayerId": "602229"
+  },
+  {
+    "id": "jp-bw8-spiral-force-033/051",
+    "name": "Absol (Team Plasma)",
+    "supertype": "Pokémon",
+    "number": "033/051",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/602227_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/602227_400w.jpg"
+    },
+    "tcgplayerId": "602227"
+  },
+  {
+    "id": "jp-bw8-spiral-force-024/051",
+    "name": "Espeon (Team Plasma)",
+    "supertype": "Pokémon",
+    "number": "024/051",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/602245_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/602245_400w.jpg"
+    },
+    "tcgplayerId": "602245"
+  },
+  {
+    "id": "jp-bw8-spiral-force-039/051",
+    "name": "Latios EX - 039/051",
+    "supertype": "Pokémon",
+    "number": "039/051",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/602234_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/602234_400w.jpg"
+    },
+    "tcgplayerId": "602234"
+  },
+  {
+    "id": "jp-bw8-spiral-force-046/051",
+    "name": "Kecleon",
+    "supertype": "Pokémon",
+    "number": "046/051",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/602250_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/602250_400w.jpg"
+    },
+    "tcgplayerId": "602250"
+  },
+  {
+    "id": "jp-bw8-spiral-force-023/051",
+    "name": "Mr. Mime",
+    "supertype": "Pokémon",
+    "number": "023/051",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/602252_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/602252_400w.jpg"
+    },
+    "tcgplayerId": "602252"
+  },
+  {
+    "id": "jp-bw8-spiral-force-005/051",
+    "name": "Sceptile",
+    "supertype": "Pokémon",
+    "number": "005/051",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/602236_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/602236_400w.jpg"
+    },
+    "tcgplayerId": "602236"
+  },
+  {
+    "id": "jp-bw8-spiral-force-006/051",
+    "name": "Heatran EX (Team Plasma) - 006/051",
+    "supertype": "Pokémon",
+    "number": "006/051",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/602232_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/602232_400w.jpg"
+    },
+    "tcgplayerId": "602232"
+  },
+  {
+    "id": "jp-bw8-spiral-force-019/051",
+    "name": "Zekrom",
+    "supertype": "Pokémon",
+    "number": "019/051",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/602237_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/602237_400w.jpg"
+    },
+    "tcgplayerId": "602237"
+  },
+  {
+    "id": "jp-bw8-spiral-force-003/051",
+    "name": "Treecko",
+    "supertype": "Pokémon",
+    "number": "003/051",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/602224_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/602224_400w.jpg"
+    },
+    "tcgplayerId": "602224"
+  },
+  {
+    "id": "jp-bw8-spiral-force-016/051",
+    "name": "Jolteon (Team Plasma)",
+    "supertype": "Pokémon",
+    "number": "016/051",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/602249_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/602249_400w.jpg"
+    },
+    "tcgplayerId": "602249"
+  },
+  {
+    "id": "jp-bw8-spiral-force-045/051",
+    "name": "Miltank",
+    "supertype": "Pokémon",
+    "number": "045/051",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/602214_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/602214_400w.jpg"
+    },
+    "tcgplayerId": "602214"
+  },
+  {
+    "id": "jp-bw8-spiral-force-038/051",
+    "name": "Kingdra",
+    "supertype": "Pokémon",
+    "number": "038/051",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/602233_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/602233_400w.jpg"
+    },
+    "tcgplayerId": "602233"
+  },
+  {
+    "id": "jp-bw8-spiral-force-009/051",
+    "name": "Chandelure (Team Plasma)",
+    "supertype": "Pokémon",
+    "number": "009/051",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/602228_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/602228_400w.jpg"
+    },
+    "tcgplayerId": "602228"
+  },
+  {
+    "id": "jp-bw8-spiral-force-037/051",
+    "name": "Steelix (Team Plasma)",
+    "supertype": "Pokémon",
+    "number": "037/051",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/602258_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/602258_400w.jpg"
+    },
+    "tcgplayerId": "602258"
+  },
+  {
+    "id": "jp-bw8-spiral-force-022/051",
+    "name": "Nidoqueen",
+    "supertype": "Pokémon",
+    "number": "022/051",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/602253_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/602253_400w.jpg"
+    },
+    "tcgplayerId": "602253"
+  },
+  {
+    "id": "jp-bw8-spiral-force-028/051",
+    "name": "Mankey",
+    "supertype": "Pokémon",
+    "number": "028/051",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/602213_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/602213_400w.jpg"
+    },
+    "tcgplayerId": "602213"
+  },
+  {
+    "id": "jp-bw8-spiral-force-042/051",
+    "name": "Eevee",
+    "supertype": "Pokémon",
+    "number": "042/051",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/602204_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/602204_400w.jpg"
+    },
+    "tcgplayerId": "602204"
+  },
+  {
+    "id": "jp-bw8-spiral-force-007/051",
+    "name": "Litwick",
+    "supertype": "Pokémon",
+    "number": "007/051",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/602212_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/602212_400w.jpg"
+    },
+    "tcgplayerId": "602212"
+  },
+  {
+    "id": "jp-bw8-spiral-force-004/051",
+    "name": "Grovyle",
+    "supertype": "Pokémon",
+    "number": "004/051",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/602206_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/602206_400w.jpg"
+    },
+    "tcgplayerId": "602206"
+  },
+  {
+    "id": "jp-bw8-spiral-force-026/051",
+    "name": "Yamask",
+    "supertype": "Pokémon",
+    "number": "026/051",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/602226_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/602226_400w.jpg"
+    },
+    "tcgplayerId": "602226"
+  },
+  {
+    "id": "jp-bw8-spiral-force-015/051",
+    "name": "Seismitoad (Team Plasma)",
+    "supertype": "Pokémon",
+    "number": "015/051",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/602257_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/602257_400w.jpg"
+    },
+    "tcgplayerId": "602257"
+  },
+  {
+    "id": "jp-bw8-spiral-force-041/051",
+    "name": "Raticate (Team Plasma)",
+    "supertype": "Pokémon",
+    "number": "041/051",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/602256_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/602256_400w.jpg"
+    },
+    "tcgplayerId": "602256"
+  },
+  {
+    "id": "jp-bw8-spiral-force-017/051",
+    "name": "Chinchou",
+    "supertype": "Pokémon",
+    "number": "017/051",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/602203_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/602203_400w.jpg"
+    },
+    "tcgplayerId": "602203"
+  },
+  {
+    "id": "jp-bw8-spiral-force-044/051",
+    "name": "Noctowl",
+    "supertype": "Pokémon",
+    "number": "044/051",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/602254_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/602254_400w.jpg"
+    },
+    "tcgplayerId": "602254"
+  },
+  {
+    "id": "jp-bw8-spiral-force-048/051",
+    "name": "Ghetsis - 048/051",
+    "supertype": "Pokémon",
+    "number": "048/051",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/602248_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/602248_400w.jpg"
+    },
+    "tcgplayerId": "602248"
+  },
+  {
+    "id": "jp-bw8-spiral-force-008/051",
+    "name": "Lampent",
+    "supertype": "Pokémon",
+    "number": "008/051",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/602210_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/602210_400w.jpg"
+    },
+    "tcgplayerId": "602210"
+  },
+  {
+    "id": "jp-bw8-spiral-force-050/051",
+    "name": "Rock Guard",
+    "supertype": "Pokémon",
+    "number": "050/051",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/602235_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/602235_400w.jpg"
+    },
+    "tcgplayerId": "602235"
+  },
+  {
+    "id": "jp-bw8-spiral-force-040/051",
+    "name": "Rattata",
+    "supertype": "Pokémon",
+    "number": "040/051",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/602220_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/602220_400w.jpg"
+    },
+    "tcgplayerId": "602220"
+  },
+  {
+    "id": "jp-bw8-spiral-force-032/051",
+    "name": "Weavile (Team Plasma)",
+    "supertype": "Pokémon",
+    "number": "032/051",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/602260_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/602260_400w.jpg"
+    },
+    "tcgplayerId": "602260"
+  },
+  {
+    "id": "jp-bw8-spiral-force-001/051",
+    "name": "Exeggcute",
+    "supertype": "Pokémon",
+    "number": "001/051",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/602205_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/602205_400w.jpg"
+    },
+    "tcgplayerId": "602205"
+  },
+  {
+    "id": "jp-bw8-spiral-force-043/051",
+    "name": "Hoothoot",
+    "supertype": "Pokémon",
+    "number": "043/051",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/602207_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/602207_400w.jpg"
+    },
+    "tcgplayerId": "602207"
+  }
+]

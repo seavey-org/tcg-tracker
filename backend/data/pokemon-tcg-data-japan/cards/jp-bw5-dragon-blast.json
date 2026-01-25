@@ -1,0 +1,470 @@
+[
+  {
+    "id": "jp-bw5-dragon-blast-055/050",
+    "name": "Rayquaza",
+    "supertype": "Pokémon",
+    "number": "055/050",
+    "rarity": "Ultra Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601472_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601472_400w.jpg"
+    },
+    "tcgplayerId": "601472"
+  },
+  {
+    "id": "jp-bw5-dragon-blast-051/050",
+    "name": "Mew EX - 051/050",
+    "supertype": "Pokémon",
+    "number": "051/050",
+    "rarity": "Super Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601470_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601470_400w.jpg"
+    },
+    "tcgplayerId": "601470"
+  },
+  {
+    "id": "jp-bw5-dragon-blast-053/050",
+    "name": "Giratina EX - 053/050",
+    "supertype": "Pokémon",
+    "number": "053/050",
+    "rarity": "Super Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601469_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601469_400w.jpg"
+    },
+    "tcgplayerId": "601469"
+  },
+  {
+    "id": "jp-bw5-dragon-blast-052/050",
+    "name": "Terrakion EX - 052/050",
+    "supertype": "Pokémon",
+    "number": "052/050",
+    "rarity": "Super Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601471_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601471_400w.jpg"
+    },
+    "tcgplayerId": "601471"
+  },
+  {
+    "id": "jp-bw5-dragon-blast-054/050",
+    "name": "Reuniclus",
+    "supertype": "Pokémon",
+    "number": "054/050",
+    "rarity": "Ultra Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601473_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601473_400w.jpg"
+    },
+    "tcgplayerId": "601473"
+  },
+  {
+    "id": "jp-bw5-dragon-blast-022/050",
+    "name": "Mew EX - 022/050",
+    "supertype": "Pokémon",
+    "number": "022/050",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601464_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601464_400w.jpg"
+    },
+    "tcgplayerId": "601464"
+  },
+  {
+    "id": "jp-bw5-dragon-blast-039/050",
+    "name": "Giratina EX - 039/050",
+    "supertype": "Pokémon",
+    "number": "039/050",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601462_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601462_400w.jpg"
+    },
+    "tcgplayerId": "601462"
+  },
+  {
+    "id": "jp-bw5-dragon-blast-012/050",
+    "name": "Wailord",
+    "supertype": "Pokémon",
+    "number": "012/050",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601468_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601468_400w.jpg"
+    },
+    "tcgplayerId": "601468"
+  },
+  {
+    "id": "jp-bw5-dragon-blast-010/050",
+    "name": "Ninetales",
+    "supertype": "Pokémon",
+    "number": "010/050",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601465_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601465_400w.jpg"
+    },
+    "tcgplayerId": "601465"
+  },
+  {
+    "id": "jp-bw5-dragon-blast-032/050",
+    "name": "Terrakion EX - 032/050",
+    "supertype": "Pokémon",
+    "number": "032/050",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601467_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601467_400w.jpg"
+    },
+    "tcgplayerId": "601467"
+  },
+  {
+    "id": "jp-bw5-dragon-blast-046/050",
+    "name": "Bibarel",
+    "supertype": "Pokémon",
+    "number": "046/050",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601476_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601476_400w.jpg"
+    },
+    "tcgplayerId": "601476"
+  },
+  {
+    "id": "jp-bw5-dragon-blast-018/050",
+    "name": "Alomomola",
+    "supertype": "Pokémon",
+    "number": "018/050",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601436_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601436_400w.jpg"
+    },
+    "tcgplayerId": "601436"
+  },
+  {
+    "id": "jp-bw5-dragon-blast-037/050",
+    "name": "Aggron",
+    "supertype": "Pokémon",
+    "number": "037/050",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601459_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601459_400w.jpg"
+    },
+    "tcgplayerId": "601459"
+  },
+  {
+    "id": "jp-bw5-dragon-blast-003/050",
+    "name": "Wurmple",
+    "supertype": "Pokémon",
+    "number": "003/050",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601457_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601457_400w.jpg"
+    },
+    "tcgplayerId": "601457"
+  },
+  {
+    "id": "jp-bw5-dragon-blast-024/050",
+    "name": "Drifloon",
+    "supertype": "Pokémon",
+    "number": "024/050",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601444_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601444_400w.jpg"
+    },
+    "tcgplayerId": "601444"
+  },
+  {
+    "id": "jp-bw5-dragon-blast-047/050",
+    "name": "Audino",
+    "supertype": "Pokémon",
+    "number": "047/050",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601438_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601438_400w.jpg"
+    },
+    "tcgplayerId": "601438"
+  },
+  {
+    "id": "jp-bw5-dragon-blast-043/050",
+    "name": "Aipom",
+    "supertype": "Pokémon",
+    "number": "043/050",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601435_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601435_400w.jpg"
+    },
+    "tcgplayerId": "601435"
+  },
+  {
+    "id": "jp-bw5-dragon-blast-028/050",
+    "name": "Garbodor",
+    "supertype": "Pokémon",
+    "number": "028/050",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601461_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601461_400w.jpg"
+    },
+    "tcgplayerId": "601461"
+  },
+  {
+    "id": "jp-bw5-dragon-blast-042/050",
+    "name": "Hydreigon",
+    "supertype": "Pokémon",
+    "number": "042/050",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601463_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601463_400w.jpg"
+    },
+    "tcgplayerId": "601463"
+  },
+  {
+    "id": "jp-bw5-dragon-blast-013/050",
+    "name": "Buizel",
+    "supertype": "Pokémon",
+    "number": "013/050",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601441_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601441_400w.jpg"
+    },
+    "tcgplayerId": "601441"
+  },
+  {
+    "id": "jp-bw5-dragon-blast-045/050",
+    "name": "Bidoof",
+    "supertype": "Pokémon",
+    "number": "045/050",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601440_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601440_400w.jpg"
+    },
+    "tcgplayerId": "601440"
+  },
+  {
+    "id": "jp-bw5-dragon-blast-027/050",
+    "name": "Trubbish",
+    "supertype": "Pokémon",
+    "number": "027/050",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601453_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601453_400w.jpg"
+    },
+    "tcgplayerId": "601453"
+  },
+  {
+    "id": "jp-bw5-dragon-blast-019/050",
+    "name": "Mareep",
+    "supertype": "Pokémon",
+    "number": "019/050",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601448_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601448_400w.jpg"
+    },
+    "tcgplayerId": "601448"
+  },
+  {
+    "id": "jp-bw5-dragon-blast-017/050",
+    "name": "Seismitoad",
+    "supertype": "Pokémon",
+    "number": "017/050",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601487_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601487_400w.jpg"
+    },
+    "tcgplayerId": "601487"
+  },
+  {
+    "id": "jp-bw5-dragon-blast-004/050",
+    "name": "Silcoon",
+    "supertype": "Pokémon",
+    "number": "004/050",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601451_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601451_400w.jpg"
+    },
+    "tcgplayerId": "601451"
+  },
+  {
+    "id": "jp-bw5-dragon-blast-031/050",
+    "name": "Stunfisk",
+    "supertype": "Pokémon",
+    "number": "031/050",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601452_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601452_400w.jpg"
+    },
+    "tcgplayerId": "601452"
+  },
+  {
+    "id": "jp-bw5-dragon-blast-011/050",
+    "name": "Wailmer",
+    "supertype": "Pokémon",
+    "number": "011/050",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601456_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601456_400w.jpg"
+    },
+    "tcgplayerId": "601456"
+  },
+  {
+    "id": "jp-bw5-dragon-blast-001/050",
+    "name": "Yanma",
+    "supertype": "Pokémon",
+    "number": "001/050",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601458_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601458_400w.jpg"
+    },
+    "tcgplayerId": "601458"
+  },
+  {
+    "id": "jp-bw5-dragon-blast-044/050",
+    "name": "Ambipom",
+    "supertype": "Pokémon",
+    "number": "044/050",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601474_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601474_400w.jpg"
+    },
+    "tcgplayerId": "601474"
+  },
+  {
+    "id": "jp-bw5-dragon-blast-029/050",
+    "name": "Baltoy",
+    "supertype": "Pokémon",
+    "number": "029/050",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601439_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601439_400w.jpg"
+    },
+    "tcgplayerId": "601439"
+  },
+  {
+    "id": "jp-bw5-dragon-blast-006/050",
+    "name": "Cascoon",
+    "supertype": "Pokémon",
+    "number": "006/050",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601442_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601442_400w.jpg"
+    },
+    "tcgplayerId": "601442"
+  },
+  {
+    "id": "jp-bw5-dragon-blast-030/050",
+    "name": "Claydol",
+    "supertype": "Pokémon",
+    "number": "030/050",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601478_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601478_400w.jpg"
+    },
+    "tcgplayerId": "601478"
+  },
+  {
+    "id": "jp-bw5-dragon-blast-040/050",
+    "name": "Deino",
+    "supertype": "Pokémon",
+    "number": "040/050",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601443_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601443_400w.jpg"
+    },
+    "tcgplayerId": "601443"
+  },
+  {
+    "id": "jp-bw5-dragon-blast-025/050",
+    "name": "Drifblim",
+    "supertype": "Pokémon",
+    "number": "025/050",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601480_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601480_400w.jpg"
+    },
+    "tcgplayerId": "601480"
+  },
+  {
+    "id": "jp-bw5-dragon-blast-023/050",
+    "name": "Dustox",
+    "supertype": "Pokémon",
+    "number": "023/050",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601481_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601481_400w.jpg"
+    },
+    "tcgplayerId": "601481"
+  },
+  {
+    "id": "jp-bw5-dragon-blast-014/050",
+    "name": "Floatzel",
+    "supertype": "Pokémon",
+    "number": "014/050",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601482_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601482_400w.jpg"
+    },
+    "tcgplayerId": "601482"
+  },
+  {
+    "id": "jp-bw5-dragon-blast-034/050",
+    "name": "Honchkrow",
+    "supertype": "Pokémon",
+    "number": "034/050",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601483_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601483_400w.jpg"
+    },
+    "tcgplayerId": "601483"
+  },
+  {
+    "id": "jp-bw5-dragon-blast-016/050",
+    "name": "Palpitoad",
+    "supertype": "Pokémon",
+    "number": "016/050",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601484_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601484_400w.jpg"
+    },
+    "tcgplayerId": "601484"
+  },
+  {
+    "id": "jp-bw5-dragon-blast-007/050",
+    "name": "Roselia",
+    "supertype": "Pokémon",
+    "number": "007/050",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601450_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601450_400w.jpg"
+    },
+    "tcgplayerId": "601450"
+  }
+]

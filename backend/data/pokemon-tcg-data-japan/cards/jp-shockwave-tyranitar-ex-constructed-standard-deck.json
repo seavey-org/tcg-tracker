@@ -1,0 +1,26 @@
+[
+  {
+    "id": "jp-shockwave-tyranitar-ex-constructed-standard-deck-004/024",
+    "name": "Tyranitar ex (Delta Species)",
+    "supertype": "Pokémon",
+    "number": "004/024",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/611515_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/611515_400w.jpg"
+    },
+    "tcgplayerId": "611515"
+  },
+  {
+    "id": "jp-shockwave-tyranitar-ex-constructed-standard-deck-007/024",
+    "name": "Electabuzz (Delta Species)",
+    "supertype": "Pokémon",
+    "number": "007/024",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/611518_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/611518_400w.jpg"
+    },
+    "tcgplayerId": "611518"
+  }
+]

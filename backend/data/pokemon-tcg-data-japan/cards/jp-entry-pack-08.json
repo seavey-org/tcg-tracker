@@ -1,0 +1,134 @@
+[
+  {
+    "id": "jp-entry-pack-08-infernape",
+    "name": "Infernape",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/609357_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/609357_400w.jpg"
+    },
+    "tcgplayerId": "609357"
+  },
+  {
+    "id": "jp-entry-pack-08-grotle",
+    "name": "Grotle",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/609354_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/609354_400w.jpg"
+    },
+    "tcgplayerId": "609354"
+  },
+  {
+    "id": "jp-entry-pack-08-turtwig",
+    "name": "Turtwig",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/609373_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/609373_400w.jpg"
+    },
+    "tcgplayerId": "609373"
+  },
+  {
+    "id": "jp-entry-pack-08-piplup",
+    "name": "Piplup",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/609362_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/609362_400w.jpg"
+    },
+    "tcgplayerId": "609362"
+  },
+  {
+    "id": "jp-entry-pack-08-glameow",
+    "name": "Glameow",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/609353_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/609353_400w.jpg"
+    },
+    "tcgplayerId": "609353"
+  },
+  {
+    "id": "jp-entry-pack-08-drifloon",
+    "name": "Drifloon",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/609347_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/609347_400w.jpg"
+    },
+    "tcgplayerId": "609347"
+  },
+  {
+    "id": "jp-entry-pack-08-rotom",
+    "name": "Rotom",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/609367_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/609367_400w.jpg"
+    },
+    "tcgplayerId": "609367"
+  },
+  {
+    "id": "jp-entry-pack-08-prinplup",
+    "name": "Prinplup",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/609366_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/609366_400w.jpg"
+    },
+    "tcgplayerId": "609366"
+  },
+  {
+    "id": "jp-entry-pack-08-lickitung",
+    "name": "Lickitung",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/609358_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/609358_400w.jpg"
+    },
+    "tcgplayerId": "609358"
+  },
+  {
+    "id": "jp-entry-pack-08-sudowoodo",
+    "name": "Sudowoodo",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/609368_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/609368_400w.jpg"
+    },
+    "tcgplayerId": "609368"
+  },
+  {
+    "id": "jp-entry-pack-08-torterra",
+    "name": "Torterra",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/609371_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/609371_400w.jpg"
+    },
+    "tcgplayerId": "609371"
+  }
+]

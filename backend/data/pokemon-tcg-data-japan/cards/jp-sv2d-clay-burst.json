@@ -1,0 +1,1214 @@
+[
+  {
+    "id": "jp-sv2d-clay-burst-096/071",
+    "name": "Iono - 096/071",
+    "supertype": "Pokémon",
+    "number": "096/071",
+    "rarity": "Special Art Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/565958_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/565958_400w.jpg"
+    },
+    "tcgplayerId": "565958"
+  },
+  {
+    "id": "jp-sv2d-clay-burst-clay-burst-booster-box",
+    "name": "Clay Burst Booster Box",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/565240_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/565240_400w.jpg"
+    },
+    "tcgplayerId": "565240"
+  },
+  {
+    "id": "jp-sv2d-clay-burst-091/071",
+    "name": "Iono - 091/071",
+    "supertype": "Pokémon",
+    "number": "091/071",
+    "rarity": "Super Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/565953_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/565953_400w.jpg"
+    },
+    "tcgplayerId": "565953"
+  },
+  {
+    "id": "jp-sv2d-clay-burst-092/071",
+    "name": "Chi-Yu ex - 092/071",
+    "supertype": "Pokémon",
+    "number": "092/071",
+    "rarity": "Special Art Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/565954_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/565954_400w.jpg"
+    },
+    "tcgplayerId": "565954"
+  },
+  {
+    "id": "jp-sv2d-clay-burst-093/071",
+    "name": "Tinkaton ex - 093/071",
+    "supertype": "Pokémon",
+    "number": "093/071",
+    "rarity": "Special Art Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/565955_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/565955_400w.jpg"
+    },
+    "tcgplayerId": "565955"
+  },
+  {
+    "id": "jp-sv2d-clay-burst-081/071",
+    "name": "Maushold - 081/071",
+    "supertype": "Pokémon",
+    "number": "081/071",
+    "rarity": "Art Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/565943_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/565943_400w.jpg"
+    },
+    "tcgplayerId": "565943"
+  },
+  {
+    "id": "jp-sv2d-clay-burst-074/071",
+    "name": "Raichu - 074/071",
+    "supertype": "Pokémon",
+    "number": "074/071",
+    "rarity": "Art Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/565936_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/565936_400w.jpg"
+    },
+    "tcgplayerId": "565936"
+  },
+  {
+    "id": "jp-sv2d-clay-burst-094/071",
+    "name": "Ting-Lu ex - 094/071",
+    "supertype": "Pokémon",
+    "number": "094/071",
+    "rarity": "Special Art Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/565956_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/565956_400w.jpg"
+    },
+    "tcgplayerId": "565956"
+  },
+  {
+    "id": "jp-sv2d-clay-burst-079/071",
+    "name": "Tyranitar - 079/071",
+    "supertype": "Pokémon",
+    "number": "079/071",
+    "rarity": "Art Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/565941_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/565941_400w.jpg"
+    },
+    "tcgplayerId": "565941"
+  },
+  {
+    "id": "jp-sv2d-clay-burst-095/071",
+    "name": "Saguaro - 095/071",
+    "supertype": "Pokémon",
+    "number": "095/071",
+    "rarity": "Special Art Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/565957_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/565957_400w.jpg"
+    },
+    "tcgplayerId": "565957"
+  },
+  {
+    "id": "jp-sv2d-clay-burst-098/071",
+    "name": "Superior Energy Retrieval",
+    "supertype": "Energy",
+    "number": "098/071",
+    "rarity": "Ultra Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/565960_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/565960_400w.jpg"
+    },
+    "tcgplayerId": "565960"
+  },
+  {
+    "id": "jp-sv2d-clay-burst-099/071",
+    "name": "Grass Energy",
+    "supertype": "Energy",
+    "number": "099/071",
+    "rarity": "Ultra Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/577562_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/577562_400w.jpg"
+    },
+    "tcgplayerId": "577562"
+  },
+  {
+    "id": "jp-sv2d-clay-burst-097/071",
+    "name": "Ting-Lu ex - 097/071",
+    "supertype": "Pokémon",
+    "number": "097/071",
+    "rarity": "Ultra Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/565959_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/565959_400w.jpg"
+    },
+    "tcgplayerId": "565959"
+  },
+  {
+    "id": "jp-sv2d-clay-burst-087/071",
+    "name": "Tinkaton ex - 087/071",
+    "supertype": "Pokémon",
+    "number": "087/071",
+    "rarity": "Super Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/565949_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/565949_400w.jpg"
+    },
+    "tcgplayerId": "565949"
+  },
+  {
+    "id": "jp-sv2d-clay-burst-076/071",
+    "name": "Tinkatink - 076/071",
+    "supertype": "Pokémon",
+    "number": "076/071",
+    "rarity": "Art Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/565938_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/565938_400w.jpg"
+    },
+    "tcgplayerId": "565938"
+  },
+  {
+    "id": "jp-sv2d-clay-burst-072/071",
+    "name": "Heracross - 072/071",
+    "supertype": "Pokémon",
+    "number": "072/071",
+    "rarity": "Art Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/565934_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/565934_400w.jpg"
+    },
+    "tcgplayerId": "565934"
+  },
+  {
+    "id": "jp-sv2d-clay-burst-077/071",
+    "name": "Tinkatuff - 077/071",
+    "supertype": "Pokémon",
+    "number": "077/071",
+    "rarity": "Art Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/565939_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/565939_400w.jpg"
+    },
+    "tcgplayerId": "565939"
+  },
+  {
+    "id": "jp-sv2d-clay-burst-clay-burst-booster-pack",
+    "name": "Clay Burst Booster Pack",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/565241_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/565241_400w.jpg"
+    },
+    "tcgplayerId": "565241"
+  },
+  {
+    "id": "jp-sv2d-clay-burst-073/071",
+    "name": "Fletchinder - 073/071",
+    "supertype": "Pokémon",
+    "number": "073/071",
+    "rarity": "Art Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/565935_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/565935_400w.jpg"
+    },
+    "tcgplayerId": "565935"
+  },
+  {
+    "id": "jp-sv2d-clay-burst-086/071",
+    "name": "Bellibolt ex - 086/071",
+    "supertype": "Pokémon",
+    "number": "086/071",
+    "rarity": "Super Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/565948_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/565948_400w.jpg"
+    },
+    "tcgplayerId": "565948"
+  },
+  {
+    "id": "jp-sv2d-clay-burst-085/071",
+    "name": "Chi-Yu ex - 085/071",
+    "supertype": "Pokémon",
+    "number": "085/071",
+    "rarity": "Super Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/565947_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/565947_400w.jpg"
+    },
+    "tcgplayerId": "565947"
+  },
+  {
+    "id": "jp-sv2d-clay-burst-083/071",
+    "name": "Farigiraf - 083/071",
+    "supertype": "Pokémon",
+    "number": "083/071",
+    "rarity": "Art Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/565945_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/565945_400w.jpg"
+    },
+    "tcgplayerId": "565945"
+  },
+  {
+    "id": "jp-sv2d-clay-burst-082/071",
+    "name": "Flamigo - 082/071",
+    "supertype": "Pokémon",
+    "number": "082/071",
+    "rarity": "Art Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/565944_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/565944_400w.jpg"
+    },
+    "tcgplayerId": "565944"
+  },
+  {
+    "id": "jp-sv2d-clay-burst-080/071",
+    "name": "Grafaiai - 080/071",
+    "supertype": "Pokémon",
+    "number": "080/071",
+    "rarity": "Art Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/565942_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/565942_400w.jpg"
+    },
+    "tcgplayerId": "565942"
+  },
+  {
+    "id": "jp-sv2d-clay-burst-075/071",
+    "name": "Sandygast - 075/071",
+    "supertype": "Pokémon",
+    "number": "075/071",
+    "rarity": "Art Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/565937_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/565937_400w.jpg"
+    },
+    "tcgplayerId": "565937"
+  },
+  {
+    "id": "jp-sv2d-clay-burst-089/071",
+    "name": "Noivern ex - 089/071",
+    "supertype": "Pokémon",
+    "number": "089/071",
+    "rarity": "Super Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/565951_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/565951_400w.jpg"
+    },
+    "tcgplayerId": "565951"
+  },
+  {
+    "id": "jp-sv2d-clay-burst-078/071",
+    "name": "Nacli - 078/071",
+    "supertype": "Pokémon",
+    "number": "078/071",
+    "rarity": "Art Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/565940_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/565940_400w.jpg"
+    },
+    "tcgplayerId": "565940"
+  },
+  {
+    "id": "jp-sv2d-clay-burst-084/071",
+    "name": "Forretress ex - 084/071",
+    "supertype": "Pokémon",
+    "number": "084/071",
+    "rarity": "Super Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/565946_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/565946_400w.jpg"
+    },
+    "tcgplayerId": "565946"
+  },
+  {
+    "id": "jp-sv2d-clay-burst-088/071",
+    "name": "Ting-Lu ex - 088/071",
+    "supertype": "Pokémon",
+    "number": "088/071",
+    "rarity": "Super Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/565950_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/565950_400w.jpg"
+    },
+    "tcgplayerId": "565950"
+  },
+  {
+    "id": "jp-sv2d-clay-burst-090/071",
+    "name": "Saguaro - 090/071",
+    "supertype": "Pokémon",
+    "number": "090/071",
+    "rarity": "Super Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/565952_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/565952_400w.jpg"
+    },
+    "tcgplayerId": "565952"
+  },
+  {
+    "id": "jp-sv2d-clay-burst-035/071",
+    "name": "Tinkaton ex - 035/071",
+    "supertype": "Pokémon",
+    "number": "035/071",
+    "rarity": "Double Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/565897_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/565897_400w.jpg"
+    },
+    "tcgplayerId": "565897"
+  },
+  {
+    "id": "jp-sv2d-clay-burst-031/071",
+    "name": "Ceruledge",
+    "supertype": "Pokémon",
+    "number": "031/071",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/565893_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/565893_400w.jpg"
+    },
+    "tcgplayerId": "565893"
+  },
+  {
+    "id": "jp-sv2d-clay-burst-016/071",
+    "name": "Chi-Yu ex - 016/071",
+    "supertype": "Pokémon",
+    "number": "016/071",
+    "rarity": "Double Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/565878_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/565878_400w.jpg"
+    },
+    "tcgplayerId": "565878"
+  },
+  {
+    "id": "jp-sv2d-clay-burst-052/071",
+    "name": "Tyranitar - 052/071",
+    "supertype": "Pokémon",
+    "number": "052/071",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/565914_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/565914_400w.jpg"
+    },
+    "tcgplayerId": "565914"
+  },
+  {
+    "id": "jp-sv2d-clay-burst-027/071",
+    "name": "Wigglytuff",
+    "supertype": "Pokémon",
+    "number": "027/071",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/565889_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/565889_400w.jpg"
+    },
+    "tcgplayerId": "565889"
+  },
+  {
+    "id": "jp-sv2d-clay-burst-025/071",
+    "name": "Bellibolt ex - 025/071",
+    "supertype": "Pokémon",
+    "number": "025/071",
+    "rarity": "Double Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/565887_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/565887_400w.jpg"
+    },
+    "tcgplayerId": "565887"
+  },
+  {
+    "id": "jp-sv2d-clay-burst-058/071",
+    "name": "Noivern ex - 058/071",
+    "supertype": "Pokémon",
+    "number": "058/071",
+    "rarity": "Double Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/565920_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/565920_400w.jpg"
+    },
+    "tcgplayerId": "565920"
+  },
+  {
+    "id": "jp-sv2d-clay-burst-005/071",
+    "name": "Forretress ex - 005/071",
+    "supertype": "Pokémon",
+    "number": "005/071",
+    "rarity": "Double Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/565867_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/565867_400w.jpg"
+    },
+    "tcgplayerId": "565867"
+  },
+  {
+    "id": "jp-sv2d-clay-burst-051/071",
+    "name": "Weavile",
+    "supertype": "Pokémon",
+    "number": "051/071",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/565913_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/565913_400w.jpg"
+    },
+    "tcgplayerId": "565913"
+  },
+  {
+    "id": "jp-sv2d-clay-burst-021/071",
+    "name": "Luxray",
+    "supertype": "Pokémon",
+    "number": "021/071",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/565883_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/565883_400w.jpg"
+    },
+    "tcgplayerId": "565883"
+  },
+  {
+    "id": "jp-sv2d-clay-burst-003/071",
+    "name": "Jumpluff",
+    "supertype": "Pokémon",
+    "number": "003/071",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/565865_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/565865_400w.jpg"
+    },
+    "tcgplayerId": "565865"
+  },
+  {
+    "id": "jp-sv2d-clay-burst-064/071",
+    "name": "Maushold - 064/071",
+    "supertype": "Pokémon",
+    "number": "064/071",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/565926_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/565926_400w.jpg"
+    },
+    "tcgplayerId": "565926"
+  },
+  {
+    "id": "jp-sv2d-clay-burst-028/071",
+    "name": "Spiritomb",
+    "supertype": "Pokémon",
+    "number": "028/071",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/565890_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/565890_400w.jpg"
+    },
+    "tcgplayerId": "565890"
+  },
+  {
+    "id": "jp-sv2d-clay-burst-049/071",
+    "name": "Ting-Lu ex - 049/071",
+    "supertype": "Pokémon",
+    "number": "049/071",
+    "rarity": "Double Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/565911_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/565911_400w.jpg"
+    },
+    "tcgplayerId": "565911"
+  },
+  {
+    "id": "jp-sv2d-clay-burst-017/071",
+    "name": "Pikachu",
+    "supertype": "Pokémon",
+    "number": "017/071",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/565879_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/565879_400w.jpg"
+    },
+    "tcgplayerId": "565879"
+  },
+  {
+    "id": "jp-sv2d-clay-burst-010/071",
+    "name": "Numel",
+    "supertype": "Pokémon",
+    "number": "010/071",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/565872_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/565872_400w.jpg"
+    },
+    "tcgplayerId": "565872"
+  },
+  {
+    "id": "jp-sv2d-clay-burst-069/071",
+    "name": "Iono - 069/071",
+    "supertype": "Pokémon",
+    "number": "069/071",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/565931_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/565931_400w.jpg"
+    },
+    "tcgplayerId": "565931"
+  },
+  {
+    "id": "jp-sv2d-clay-burst-063/071",
+    "name": "Tandemaus - 063/071",
+    "supertype": "Pokémon",
+    "number": "063/071",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/565925_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/565925_400w.jpg"
+    },
+    "tcgplayerId": "565925"
+  },
+  {
+    "id": "jp-sv2d-clay-burst-062/071",
+    "name": "Tandemaus - 062/071",
+    "supertype": "Pokémon",
+    "number": "062/071",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/565924_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/565924_400w.jpg"
+    },
+    "tcgplayerId": "565924"
+  },
+  {
+    "id": "jp-sv2d-clay-burst-037/071",
+    "name": "Pupitar",
+    "supertype": "Pokémon",
+    "number": "037/071",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/565899_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/565899_400w.jpg"
+    },
+    "tcgplayerId": "565899"
+  },
+  {
+    "id": "jp-sv2d-clay-burst-033/071",
+    "name": "Tinkatink - 033/071",
+    "supertype": "Pokémon",
+    "number": "033/071",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/565895_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/565895_400w.jpg"
+    },
+    "tcgplayerId": "565895"
+  },
+  {
+    "id": "jp-sv2d-clay-burst-039/071",
+    "name": "Whiscash",
+    "supertype": "Pokémon",
+    "number": "039/071",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/565901_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/565901_400w.jpg"
+    },
+    "tcgplayerId": "565901"
+  },
+  {
+    "id": "jp-sv2d-clay-burst-050/071",
+    "name": "Sneasel",
+    "supertype": "Pokémon",
+    "number": "050/071",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/565912_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/565912_400w.jpg"
+    },
+    "tcgplayerId": "565912"
+  },
+  {
+    "id": "jp-sv2d-clay-burst-070/071",
+    "name": "Calamitous Wasteland",
+    "supertype": "Pokémon",
+    "number": "070/071",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/565932_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/565932_400w.jpg"
+    },
+    "tcgplayerId": "565932"
+  },
+  {
+    "id": "jp-sv2d-clay-burst-032/071",
+    "name": "Tinkatink - 032/071",
+    "supertype": "Pokémon",
+    "number": "032/071",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/565894_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/565894_400w.jpg"
+    },
+    "tcgplayerId": "565894"
+  },
+  {
+    "id": "jp-sv2d-clay-burst-022/071",
+    "name": "Pincurchin",
+    "supertype": "Pokémon",
+    "number": "022/071",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/565884_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/565884_400w.jpg"
+    },
+    "tcgplayerId": "565884"
+  },
+  {
+    "id": "jp-sv2d-clay-burst-055/071",
+    "name": "Grafaiai - 055/071",
+    "supertype": "Pokémon",
+    "number": "055/071",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/565917_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/565917_400w.jpg"
+    },
+    "tcgplayerId": "565917"
+  },
+  {
+    "id": "jp-sv2d-clay-burst-026/071",
+    "name": "Jigglypuff",
+    "supertype": "Pokémon",
+    "number": "026/071",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/565888_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/565888_400w.jpg"
+    },
+    "tcgplayerId": "565888"
+  },
+  {
+    "id": "jp-sv2d-clay-burst-018/071",
+    "name": "Raichu - 018/071",
+    "supertype": "Pokémon",
+    "number": "018/071",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/565880_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/565880_400w.jpg"
+    },
+    "tcgplayerId": "565880"
+  },
+  {
+    "id": "jp-sv2d-clay-burst-009/071",
+    "name": "Spidops",
+    "supertype": "Pokémon",
+    "number": "009/071",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/565871_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/565871_400w.jpg"
+    },
+    "tcgplayerId": "565871"
+  },
+  {
+    "id": "jp-sv2d-clay-burst-060/071",
+    "name": "Farigiraf - 060/071",
+    "supertype": "Pokémon",
+    "number": "060/071",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/565922_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/565922_400w.jpg"
+    },
+    "tcgplayerId": "565922"
+  },
+  {
+    "id": "jp-sv2d-clay-burst-030/071",
+    "name": "Palossand",
+    "supertype": "Pokémon",
+    "number": "030/071",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/565892_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/565892_400w.jpg"
+    },
+    "tcgplayerId": "565892"
+  },
+  {
+    "id": "jp-sv2d-clay-burst-023/071",
+    "name": "Tadbulb - 023/071",
+    "supertype": "Pokémon",
+    "number": "023/071",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/565885_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/565885_400w.jpg"
+    },
+    "tcgplayerId": "565885"
+  },
+  {
+    "id": "jp-sv2d-clay-burst-036/071",
+    "name": "Larvitar",
+    "supertype": "Pokémon",
+    "number": "036/071",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/565898_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/565898_400w.jpg"
+    },
+    "tcgplayerId": "565898"
+  },
+  {
+    "id": "jp-sv2d-clay-burst-006/071",
+    "name": "Heracross - 006/071",
+    "supertype": "Pokémon",
+    "number": "006/071",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/565868_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/565868_400w.jpg"
+    },
+    "tcgplayerId": "565868"
+  },
+  {
+    "id": "jp-sv2d-clay-burst-015/071",
+    "name": "Charcadet - 015/071",
+    "supertype": "Pokémon",
+    "number": "015/071",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/565877_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/565877_400w.jpg"
+    },
+    "tcgplayerId": "565877"
+  },
+  {
+    "id": "jp-sv2d-clay-burst-019/071",
+    "name": "Shinx",
+    "supertype": "Pokémon",
+    "number": "019/071",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/565881_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/565881_400w.jpg"
+    },
+    "tcgplayerId": "565881"
+  },
+  {
+    "id": "jp-sv2d-clay-burst-013/071",
+    "name": "Talonflame",
+    "supertype": "Pokémon",
+    "number": "013/071",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/565875_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/565875_400w.jpg"
+    },
+    "tcgplayerId": "565875"
+  },
+  {
+    "id": "jp-sv2d-clay-burst-007/071",
+    "name": "Tarountula - 007/071",
+    "supertype": "Pokémon",
+    "number": "007/071",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/565869_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/565869_400w.jpg"
+    },
+    "tcgplayerId": "565869"
+  },
+  {
+    "id": "jp-sv2d-clay-burst-008/071",
+    "name": "Tarountula - 008/071",
+    "supertype": "Pokémon",
+    "number": "008/071",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/565870_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/565870_400w.jpg"
+    },
+    "tcgplayerId": "565870"
+  },
+  {
+    "id": "jp-sv2d-clay-burst-054/071",
+    "name": "Shroodle - 054/071",
+    "supertype": "Pokémon",
+    "number": "054/071",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/565916_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/565916_400w.jpg"
+    },
+    "tcgplayerId": "565916"
+  },
+  {
+    "id": "jp-sv2d-clay-burst-044/071",
+    "name": "Passimian",
+    "supertype": "Pokémon",
+    "number": "044/071",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/565906_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/565906_400w.jpg"
+    },
+    "tcgplayerId": "565906"
+  },
+  {
+    "id": "jp-sv2d-clay-burst-045/071",
+    "name": "Nacli - 045/071",
+    "supertype": "Pokémon",
+    "number": "045/071",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/565907_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/565907_400w.jpg"
+    },
+    "tcgplayerId": "565907"
+  },
+  {
+    "id": "jp-sv2d-clay-burst-056/071",
+    "name": "Bombirdier",
+    "supertype": "Pokémon",
+    "number": "056/071",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/565918_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/565918_400w.jpg"
+    },
+    "tcgplayerId": "565918"
+  },
+  {
+    "id": "jp-sv2d-clay-burst-066/071",
+    "name": "Delivery Drone",
+    "supertype": "Pokémon",
+    "number": "066/071",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/565928_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/565928_400w.jpg"
+    },
+    "tcgplayerId": "565928"
+  },
+  {
+    "id": "jp-sv2d-clay-burst-024/071",
+    "name": "Tadbulb - 024/071",
+    "supertype": "Pokémon",
+    "number": "024/071",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/565886_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/565886_400w.jpg"
+    },
+    "tcgplayerId": "565886"
+  },
+  {
+    "id": "jp-sv2d-clay-burst-029/071",
+    "name": "Sandygast - 029/071",
+    "supertype": "Pokémon",
+    "number": "029/071",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/565891_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/565891_400w.jpg"
+    },
+    "tcgplayerId": "565891"
+  },
+  {
+    "id": "jp-sv2d-clay-burst-014/071",
+    "name": "Charcadet - 014/071",
+    "supertype": "Pokémon",
+    "number": "014/071",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/565876_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/565876_400w.jpg"
+    },
+    "tcgplayerId": "565876"
+  },
+  {
+    "id": "jp-sv2d-clay-burst-053/071",
+    "name": "Shroodle - 053/071",
+    "supertype": "Pokémon",
+    "number": "053/071",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/565915_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/565915_400w.jpg"
+    },
+    "tcgplayerId": "565915"
+  },
+  {
+    "id": "jp-sv2d-clay-burst-020/071",
+    "name": "Luxio",
+    "supertype": "Pokémon",
+    "number": "020/071",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/565882_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/565882_400w.jpg"
+    },
+    "tcgplayerId": "565882"
+  },
+  {
+    "id": "jp-sv2d-clay-burst-065/071",
+    "name": "Flamigo - 065/071",
+    "supertype": "Pokémon",
+    "number": "065/071",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/565927_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/565927_400w.jpg"
+    },
+    "tcgplayerId": "565927"
+  },
+  {
+    "id": "jp-sv2d-clay-burst-043/071",
+    "name": "Crabominable",
+    "supertype": "Pokémon",
+    "number": "043/071",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/565905_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/565905_400w.jpg"
+    },
+    "tcgplayerId": "565905"
+  },
+  {
+    "id": "jp-sv2d-clay-burst-067/071",
+    "name": "Bravery Charm",
+    "supertype": "Pokémon",
+    "number": "067/071",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/565929_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/565929_400w.jpg"
+    },
+    "tcgplayerId": "565929"
+  },
+  {
+    "id": "jp-sv2d-clay-burst-046/071",
+    "name": "Nacli - 046/071",
+    "supertype": "Pokémon",
+    "number": "046/071",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/565908_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/565908_400w.jpg"
+    },
+    "tcgplayerId": "565908"
+  },
+  {
+    "id": "jp-sv2d-clay-burst-004/071",
+    "name": "Pineco",
+    "supertype": "Pokémon",
+    "number": "004/071",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/565866_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/565866_400w.jpg"
+    },
+    "tcgplayerId": "565866"
+  },
+  {
+    "id": "jp-sv2d-clay-burst-011/071",
+    "name": "Camerupt",
+    "supertype": "Pokémon",
+    "number": "011/071",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/565873_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/565873_400w.jpg"
+    },
+    "tcgplayerId": "565873"
+  },
+  {
+    "id": "jp-sv2d-clay-burst-061/071",
+    "name": "Fletchling",
+    "supertype": "Pokémon",
+    "number": "061/071",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/565923_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/565923_400w.jpg"
+    },
+    "tcgplayerId": "565923"
+  },
+  {
+    "id": "jp-sv2d-clay-burst-001/071",
+    "name": "Hoppip",
+    "supertype": "Pokémon",
+    "number": "001/071",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/565863_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/565863_400w.jpg"
+    },
+    "tcgplayerId": "565863"
+  },
+  {
+    "id": "jp-sv2d-clay-burst-068/071",
+    "name": "Saguaro - 068/071",
+    "supertype": "Pokémon",
+    "number": "068/071",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/565930_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/565930_400w.jpg"
+    },
+    "tcgplayerId": "565930"
+  },
+  {
+    "id": "jp-sv2d-clay-burst-042/071",
+    "name": "Crabrawler",
+    "supertype": "Pokémon",
+    "number": "042/071",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/565904_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/565904_400w.jpg"
+    },
+    "tcgplayerId": "565904"
+  },
+  {
+    "id": "jp-sv2d-clay-burst-034/071",
+    "name": "Tinkatuff - 034/071",
+    "supertype": "Pokémon",
+    "number": "034/071",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/565896_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/565896_400w.jpg"
+    },
+    "tcgplayerId": "565896"
+  },
+  {
+    "id": "jp-sv2d-clay-burst-057/071",
+    "name": "Noibat",
+    "supertype": "Pokémon",
+    "number": "057/071",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/565919_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/565919_400w.jpg"
+    },
+    "tcgplayerId": "565919"
+  },
+  {
+    "id": "jp-sv2d-clay-burst-002/071",
+    "name": "Skiploom",
+    "supertype": "Pokémon",
+    "number": "002/071",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/565864_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/565864_400w.jpg"
+    },
+    "tcgplayerId": "565864"
+  },
+  {
+    "id": "jp-sv2d-clay-burst-047/071",
+    "name": "Naclstack",
+    "supertype": "Pokémon",
+    "number": "047/071",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/565909_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/565909_400w.jpg"
+    },
+    "tcgplayerId": "565909"
+  },
+  {
+    "id": "jp-sv2d-clay-burst-038/071",
+    "name": "Barboach",
+    "supertype": "Pokémon",
+    "number": "038/071",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/565900_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/565900_400w.jpg"
+    },
+    "tcgplayerId": "565900"
+  },
+  {
+    "id": "jp-sv2d-clay-burst-048/071",
+    "name": "Garganacl",
+    "supertype": "Pokémon",
+    "number": "048/071",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/565910_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/565910_400w.jpg"
+    },
+    "tcgplayerId": "565910"
+  },
+  {
+    "id": "jp-sv2d-clay-burst-059/071",
+    "name": "Girafarig",
+    "supertype": "Pokémon",
+    "number": "059/071",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/565921_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/565921_400w.jpg"
+    },
+    "tcgplayerId": "565921"
+  },
+  {
+    "id": "jp-sv2d-clay-burst-041/071",
+    "name": "Toxicroak",
+    "supertype": "Pokémon",
+    "number": "041/071",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/565903_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/565903_400w.jpg"
+    },
+    "tcgplayerId": "565903"
+  },
+  {
+    "id": "jp-sv2d-clay-burst-012/071",
+    "name": "Fletchinder - 012/071",
+    "supertype": "Pokémon",
+    "number": "012/071",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/565874_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/565874_400w.jpg"
+    },
+    "tcgplayerId": "565874"
+  },
+  {
+    "id": "jp-sv2d-clay-burst-040/071",
+    "name": "Croagunk",
+    "supertype": "Pokémon",
+    "number": "040/071",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/565902_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/565902_400w.jpg"
+    },
+    "tcgplayerId": "565902"
+  },
+  {
+    "id": "jp-sv2d-clay-burst-071/071",
+    "name": "Therapeutic Energy",
+    "supertype": "Energy",
+    "number": "071/071",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/565933_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/565933_400w.jpg"
+    },
+    "tcgplayerId": "565933"
+  }
+]

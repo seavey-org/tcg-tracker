@@ -1,0 +1,26 @@
+[
+  {
+    "id": "jp-battle-gift-set-thundurus-vs-tornadus-020/020",
+    "name": "Bianca",
+    "supertype": "Pokémon",
+    "number": "020/020",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/604919_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/604919_400w.jpg"
+    },
+    "tcgplayerId": "604919"
+  },
+  {
+    "id": "jp-battle-gift-set-thundurus-vs-tornadus-012/020",
+    "name": "Bisharp",
+    "supertype": "Pokémon",
+    "number": "012/020",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/604911_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/604911_400w.jpg"
+    },
+    "tcgplayerId": "604911"
+  }
+]

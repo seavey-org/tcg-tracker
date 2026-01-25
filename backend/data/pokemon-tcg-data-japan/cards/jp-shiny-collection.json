@@ -1,0 +1,302 @@
+[
+  {
+    "id": "jp-shiny-collection-022/020",
+    "name": "Reshiram",
+    "supertype": "Pokémon",
+    "number": "022/020",
+    "rarity": "Super Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/602841_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/602841_400w.jpg"
+    },
+    "tcgplayerId": "602841"
+  },
+  {
+    "id": "jp-shiny-collection-021/020",
+    "name": "Shaymin EX",
+    "supertype": "Pokémon",
+    "number": "021/020",
+    "rarity": "Super Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/602844_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/602844_400w.jpg"
+    },
+    "tcgplayerId": "602844"
+  },
+  {
+    "id": "jp-shiny-collection-024/020",
+    "name": "Mew EX",
+    "supertype": "Pokémon",
+    "number": "024/020",
+    "rarity": "Super Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/602848_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/602848_400w.jpg"
+    },
+    "tcgplayerId": "602848"
+  },
+  {
+    "id": "jp-shiny-collection-023/020",
+    "name": "Emolga",
+    "supertype": "Pokémon",
+    "number": "023/020",
+    "rarity": "Super Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/602849_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/602849_400w.jpg"
+    },
+    "tcgplayerId": "602849"
+  },
+  {
+    "id": "jp-shiny-collection-007/020",
+    "name": "Pikachu",
+    "supertype": "Pokémon",
+    "number": "007/020",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/602843_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/602843_400w.jpg"
+    },
+    "tcgplayerId": "602843"
+  },
+  {
+    "id": "jp-shiny-collection-025/020",
+    "name": "Meloetta EX - 025/020",
+    "supertype": "Pokémon",
+    "number": "025/020",
+    "rarity": "Super Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/602860_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/602860_400w.jpg"
+    },
+    "tcgplayerId": "602860"
+  },
+  {
+    "id": "jp-shiny-collection-014/020",
+    "name": "Eevee",
+    "supertype": "Pokémon",
+    "number": "014/020",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/602847_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/602847_400w.jpg"
+    },
+    "tcgplayerId": "602847"
+  },
+  {
+    "id": "jp-shiny-collection-004/020",
+    "name": "Growlithe",
+    "supertype": "Pokémon",
+    "number": "004/020",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/602854_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/602854_400w.jpg"
+    },
+    "tcgplayerId": "602854"
+  },
+  {
+    "id": "jp-shiny-collection-019/020",
+    "name": "Cinccino",
+    "supertype": "Pokémon",
+    "number": "019/020",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/602845_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/602845_400w.jpg"
+    },
+    "tcgplayerId": "602845"
+  },
+  {
+    "id": "jp-shiny-collection-010/020",
+    "name": "Gardevoir",
+    "supertype": "Pokémon",
+    "number": "010/020",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/602858_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/602858_400w.jpg"
+    },
+    "tcgplayerId": "602858"
+  },
+  {
+    "id": "jp-shiny-collection-006/020",
+    "name": "Piplup",
+    "supertype": "Pokémon",
+    "number": "006/020",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/602855_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/602855_400w.jpg"
+    },
+    "tcgplayerId": "602855"
+  },
+  {
+    "id": "jp-shiny-collection-011/020",
+    "name": "Meloetta EX - 011/020",
+    "supertype": "Pokémon",
+    "number": "011/020",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/602859_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/602859_400w.jpg"
+    },
+    "tcgplayerId": "602859"
+  },
+  {
+    "id": "jp-shiny-collection-013/020",
+    "name": "Purrloin",
+    "supertype": "Pokémon",
+    "number": "013/020",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/602850_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/602850_400w.jpg"
+    },
+    "tcgplayerId": "602850"
+  },
+  {
+    "id": "jp-shiny-collection-008/020",
+    "name": "Ralts",
+    "supertype": "Pokémon",
+    "number": "008/020",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/602856_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/602856_400w.jpg"
+    },
+    "tcgplayerId": "602856"
+  },
+  {
+    "id": "jp-shiny-collection-020/020",
+    "name": "Elesa",
+    "supertype": "Pokémon",
+    "number": "020/020",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/602865_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/602865_400w.jpg"
+    },
+    "tcgplayerId": "602865"
+  },
+  {
+    "id": "jp-shiny-collection-018/020",
+    "name": "Minccino",
+    "supertype": "Pokémon",
+    "number": "018/020",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/602842_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/602842_400w.jpg"
+    },
+    "tcgplayerId": "602842"
+  },
+  {
+    "id": "jp-shiny-collection-003/020",
+    "name": "Serperior",
+    "supertype": "Pokémon",
+    "number": "003/020",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/602853_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/602853_400w.jpg"
+    },
+    "tcgplayerId": "602853"
+  },
+  {
+    "id": "jp-shiny-collection-012/020",
+    "name": "Stunfisk",
+    "supertype": "Pokémon",
+    "number": "012/020",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/602861_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/602861_400w.jpg"
+    },
+    "tcgplayerId": "602861"
+  },
+  {
+    "id": "jp-shiny-collection-009/020",
+    "name": "Kirlia",
+    "supertype": "Pokémon",
+    "number": "009/020",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/602857_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/602857_400w.jpg"
+    },
+    "tcgplayerId": "602857"
+  },
+  {
+    "id": "jp-shiny-collection-016/020",
+    "name": "Ursaring",
+    "supertype": "Pokémon",
+    "number": "016/020",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/602863_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/602863_400w.jpg"
+    },
+    "tcgplayerId": "602863"
+  },
+  {
+    "id": "jp-shiny-collection-005/020",
+    "name": "Torchic",
+    "supertype": "Pokémon",
+    "number": "005/020",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/602846_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/602846_400w.jpg"
+    },
+    "tcgplayerId": "602846"
+  },
+  {
+    "id": "jp-shiny-collection-002/020",
+    "name": "Servine",
+    "supertype": "Pokémon",
+    "number": "002/020",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/602852_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/602852_400w.jpg"
+    },
+    "tcgplayerId": "602852"
+  },
+  {
+    "id": "jp-shiny-collection-017/020",
+    "name": "Audino",
+    "supertype": "Pokémon",
+    "number": "017/020",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/602864_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/602864_400w.jpg"
+    },
+    "tcgplayerId": "602864"
+  },
+  {
+    "id": "jp-shiny-collection-001/020",
+    "name": "Snivy",
+    "supertype": "Pokémon",
+    "number": "001/020",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/602851_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/602851_400w.jpg"
+    },
+    "tcgplayerId": "602851"
+  },
+  {
+    "id": "jp-shiny-collection-015/020",
+    "name": "Teddiursa",
+    "supertype": "Pokémon",
+    "number": "015/020",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/602862_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/602862_400w.jpg"
+    },
+    "tcgplayerId": "602862"
+  }
+]

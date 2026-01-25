@@ -1,0 +1,98 @@
+[
+  {
+    "id": "jp-arceus-lv-x-deck-lightning-psychic-011/017",
+    "name": "Arceus LV.X",
+    "supertype": "Pokémon",
+    "number": "011/017",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/609413_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/609413_400w.jpg"
+    },
+    "tcgplayerId": "609413"
+  },
+  {
+    "id": "jp-arceus-lv-x-deck-lightning-psychic-006/017",
+    "name": "Gengar",
+    "supertype": "Pokémon",
+    "number": "006/017",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/609408_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/609408_400w.jpg"
+    },
+    "tcgplayerId": "609408"
+  },
+  {
+    "id": "jp-arceus-lv-x-deck-lightning-psychic-008/017",
+    "name": "Arceus - 008/017",
+    "supertype": "Pokémon",
+    "number": "008/017",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/609410_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/609410_400w.jpg"
+    },
+    "tcgplayerId": "609410"
+  },
+  {
+    "id": "jp-arceus-lv-x-deck-lightning-psychic-003/017",
+    "name": "Arceus - 003/017",
+    "supertype": "Pokémon",
+    "number": "003/017",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/609405_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/609405_400w.jpg"
+    },
+    "tcgplayerId": "609405"
+  },
+  {
+    "id": "jp-arceus-lv-x-deck-lightning-psychic-005/017",
+    "name": "Haunter",
+    "supertype": "Pokémon",
+    "number": "005/017",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/609407_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/609407_400w.jpg"
+    },
+    "tcgplayerId": "609407"
+  },
+  {
+    "id": "jp-arceus-lv-x-deck-lightning-psychic-004/017",
+    "name": "Gastly",
+    "supertype": "Pokémon",
+    "number": "004/017",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/609406_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/609406_400w.jpg"
+    },
+    "tcgplayerId": "609406"
+  },
+  {
+    "id": "jp-arceus-lv-x-deck-lightning-psychic-007/017",
+    "name": "Gulpin",
+    "supertype": "Pokémon",
+    "number": "007/017",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/609409_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/609409_400w.jpg"
+    },
+    "tcgplayerId": "609409"
+  },
+  {
+    "id": "jp-arceus-lv-x-deck-lightning-psychic-001/017",
+    "name": "Electrike",
+    "supertype": "Pokémon",
+    "number": "001/017",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/609403_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/609403_400w.jpg"
+    },
+    "tcgplayerId": "609403"
+  }
+]

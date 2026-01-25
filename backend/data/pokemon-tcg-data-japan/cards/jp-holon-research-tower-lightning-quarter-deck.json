@@ -1,0 +1,38 @@
+[
+  {
+    "id": "jp-holon-research-tower-lightning-quarter-deck-004/015",
+    "name": "Jolteon ex",
+    "supertype": "Pokémon",
+    "number": "004/015",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/611239_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/611239_400w.jpg"
+    },
+    "tcgplayerId": "611239"
+  },
+  {
+    "id": "jp-holon-research-tower-lightning-quarter-deck-003/015",
+    "name": "Ditto",
+    "supertype": "Pokémon",
+    "number": "003/015",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/611236_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/611236_400w.jpg"
+    },
+    "tcgplayerId": "611236"
+  },
+  {
+    "id": "jp-holon-research-tower-lightning-quarter-deck-013/015",
+    "name": "Basic Lightning Energy - 013/015",
+    "supertype": "Energy",
+    "number": "013/015",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/611246_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/611246_400w.jpg"
+    },
+    "tcgplayerId": "611246"
+  }
+]

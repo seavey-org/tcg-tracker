@@ -1,0 +1,50 @@
+[
+  {
+    "id": "jp-infernape-vs-gallade-sp-deck-kit-gallade-009/018",
+    "name": "Gallade E4 LV.X",
+    "supertype": "Pokémon",
+    "number": "009/018",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608769_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608769_400w.jpg"
+    },
+    "tcgplayerId": "608769"
+  },
+  {
+    "id": "jp-infernape-vs-gallade-sp-deck-kit-gallade-008/018",
+    "name": "Gallade E4",
+    "supertype": "Pokémon",
+    "number": "008/018",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608768_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608768_400w.jpg"
+    },
+    "tcgplayerId": "608768"
+  },
+  {
+    "id": "jp-infernape-vs-gallade-sp-deck-kit-gallade-001/018",
+    "name": "Scizor E4",
+    "supertype": "Pokémon",
+    "number": "001/018",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608761_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608761_400w.jpg"
+    },
+    "tcgplayerId": "608761"
+  },
+  {
+    "id": "jp-infernape-vs-gallade-sp-deck-kit-gallade-004/018",
+    "name": "Yanmega E4",
+    "supertype": "Pokémon",
+    "number": "004/018",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608764_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608764_400w.jpg"
+    },
+    "tcgplayerId": "608764"
+  }
+]

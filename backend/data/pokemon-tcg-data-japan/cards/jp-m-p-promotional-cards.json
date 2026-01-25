@@ -1,0 +1,134 @@
+[
+  {
+    "id": "jp-m-p-promotional-cards-020/M-P",
+    "name": "Pikachu - 020/M-P",
+    "supertype": "Pokémon",
+    "number": "020/M-P",
+    "rarity": "Promo",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/649586_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/649586_400w.jpg"
+    },
+    "tcgplayerId": "649586"
+  },
+  {
+    "id": "jp-m-p-promotional-cards-007/M-P",
+    "name": "Lillie's Determination - 007/M-P",
+    "supertype": "Trainer",
+    "number": "007/M-P",
+    "rarity": "Promo",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/649581_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/649581_400w.jpg"
+    },
+    "tcgplayerId": "649581"
+  },
+  {
+    "id": "jp-m-p-promotional-cards-mcdonalds-japan-promo-booster-(2025)",
+    "name": "McDonald's Japan Promo Booster (2025)",
+    "supertype": "Trainer",
+    "number": "N/A",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/651131_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/651131_400w.jpg"
+    },
+    "tcgplayerId": "651131"
+  },
+  {
+    "id": "jp-m-p-promotional-cards-001/M-P",
+    "name": "Chikorita - 001/M-P",
+    "supertype": "Pokémon",
+    "number": "001/M-P",
+    "rarity": "Promo",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/649575_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/649575_400w.jpg"
+    },
+    "tcgplayerId": "649575"
+  },
+  {
+    "id": "jp-m-p-promotional-cards-002/M-P",
+    "name": "Lapras ex - 002/M-P",
+    "supertype": "Pokémon",
+    "number": "002/M-P",
+    "rarity": "Promo",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/649576_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/649576_400w.jpg"
+    },
+    "tcgplayerId": "649576"
+  },
+  {
+    "id": "jp-m-p-promotional-cards-022/M-P",
+    "name": "Riolu - 022/M-P",
+    "supertype": "Pokémon",
+    "number": "022/M-P",
+    "rarity": "Promo",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/649588_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/649588_400w.jpg"
+    },
+    "tcgplayerId": "649588"
+  },
+  {
+    "id": "jp-m-p-promotional-cards-004/M-P",
+    "name": "Makuhita - 004/M-P",
+    "supertype": "Pokémon",
+    "number": "004/M-P",
+    "rarity": "Promo",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/649578_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/649578_400w.jpg"
+    },
+    "tcgplayerId": "649578"
+  },
+  {
+    "id": "jp-m-p-promotional-cards-021/M-P",
+    "name": "Ralts - 021/M-P",
+    "supertype": "Pokémon",
+    "number": "021/M-P",
+    "rarity": "Promo",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/649587_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/649587_400w.jpg"
+    },
+    "tcgplayerId": "649587"
+  },
+  {
+    "id": "jp-m-p-promotional-cards-018/M-P",
+    "name": "Fuecoco - 018/M-P",
+    "supertype": "Pokémon",
+    "number": "018/M-P",
+    "rarity": "Promo",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/649584_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/649584_400w.jpg"
+    },
+    "tcgplayerId": "649584"
+  },
+  {
+    "id": "jp-m-p-promotional-cards-017/M-P",
+    "name": "Sprigatito - 017/M-P",
+    "supertype": "Pokémon",
+    "number": "017/M-P",
+    "rarity": "Promo",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/649583_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/649583_400w.jpg"
+    },
+    "tcgplayerId": "649583"
+  },
+  {
+    "id": "jp-m-p-promotional-cards-019/M-P",
+    "name": "Quaxly - 019/M-P",
+    "supertype": "Pokémon",
+    "number": "019/M-P",
+    "rarity": "Promo",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/649585_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/649585_400w.jpg"
+    },
+    "tcgplayerId": "649585"
+  }
+]

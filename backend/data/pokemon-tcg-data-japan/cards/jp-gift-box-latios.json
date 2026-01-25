@@ -1,0 +1,38 @@
+[
+  {
+    "id": "jp-gift-box-latios-011/018",
+    "name": "Latios ex",
+    "supertype": "Pokémon",
+    "number": "011/018",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612747_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612747_400w.jpg"
+    },
+    "tcgplayerId": "612747"
+  },
+  {
+    "id": "jp-gift-box-latios-009/018",
+    "name": "Spearow",
+    "supertype": "Pokémon",
+    "number": "009/018",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612745_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612745_400w.jpg"
+    },
+    "tcgplayerId": "612745"
+  },
+  {
+    "id": "jp-gift-box-latios-008/018",
+    "name": "Trapinch",
+    "supertype": "Pokémon",
+    "number": "008/018",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612744_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612744_400w.jpg"
+    },
+    "tcgplayerId": "612744"
+  }
+]

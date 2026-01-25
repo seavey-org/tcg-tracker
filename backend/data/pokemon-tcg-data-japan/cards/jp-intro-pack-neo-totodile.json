@@ -1,0 +1,122 @@
+[
+  {
+    "id": "jp-intro-pack-neo-totodile-pichu",
+    "name": "Pichu",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/614135_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/614135_400w.jpg"
+    },
+    "tcgplayerId": "614135"
+  },
+  {
+    "id": "jp-intro-pack-neo-totodile-abra",
+    "name": "Abra",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/614102_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/614102_400w.jpg"
+    },
+    "tcgplayerId": "614102"
+  },
+  {
+    "id": "jp-intro-pack-neo-totodile-feraligatr",
+    "name": "Feraligatr",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/614123_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/614123_400w.jpg"
+    },
+    "tcgplayerId": "614123"
+  },
+  {
+    "id": "jp-intro-pack-neo-totodile-18",
+    "name": "Mareep - 18",
+    "supertype": "Pokémon",
+    "number": "18",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/614130_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/614130_400w.jpg"
+    },
+    "tcgplayerId": "614130"
+  },
+  {
+    "id": "jp-intro-pack-neo-totodile-21",
+    "name": "Totodile - 21",
+    "supertype": "Pokémon",
+    "number": "21",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/614141_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/614141_400w.jpg"
+    },
+    "tcgplayerId": "614141"
+  },
+  {
+    "id": "jp-intro-pack-neo-totodile-24",
+    "name": "Qwilfish",
+    "supertype": "Pokémon",
+    "number": "24",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/614138_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/614138_400w.jpg"
+    },
+    "tcgplayerId": "614138"
+  },
+  {
+    "id": "jp-intro-pack-neo-totodile-lucky-stadium",
+    "name": "Lucky Stadium",
+    "supertype": "Trainer",
+    "number": "N/A",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/614129_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/614129_400w.jpg"
+    },
+    "tcgplayerId": "614129"
+  },
+  {
+    "id": "jp-intro-pack-neo-totodile-9",
+    "name": "Basic Lightning Energy - 9",
+    "supertype": "Energy",
+    "number": "9",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/614104_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/614104_400w.jpg"
+    },
+    "tcgplayerId": "614104"
+  },
+  {
+    "id": "jp-intro-pack-neo-totodile-23",
+    "name": "Basic Lightning Energy - 23",
+    "supertype": "Energy",
+    "number": "23",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/614106_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/614106_400w.jpg"
+    },
+    "tcgplayerId": "614106"
+  },
+  {
+    "id": "jp-intro-pack-neo-totodile-natu",
+    "name": "Natu",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/614134_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/614134_400w.jpg"
+    },
+    "tcgplayerId": "614134"
+  }
+]

@@ -1,0 +1,38 @@
+[
+  {
+    "id": "jp-japanese-cd-promo-charizard",
+    "name": "Charizard",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/670191_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/670191_400w.jpg"
+    },
+    "tcgplayerId": "670191"
+  },
+  {
+    "id": "jp-japanese-cd-promo-blastoise",
+    "name": "Blastoise",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/670189_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/670189_400w.jpg"
+    },
+    "tcgplayerId": "670189"
+  },
+  {
+    "id": "jp-japanese-cd-promo-mistys-treatment",
+    "name": "Misty's Treatment",
+    "supertype": "Trainer",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/670162_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/670162_400w.jpg"
+    },
+    "tcgplayerId": "670162"
+  }
+]

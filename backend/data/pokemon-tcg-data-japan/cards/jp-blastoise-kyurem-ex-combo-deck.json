@@ -1,0 +1,86 @@
+[
+  {
+    "id": "jp-blastoise-kyurem-ex-combo-deck-003/018",
+    "name": "Blastoise",
+    "supertype": "Pokémon",
+    "number": "003/018",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/604728_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/604728_400w.jpg"
+    },
+    "tcgplayerId": "604728"
+  },
+  {
+    "id": "jp-blastoise-kyurem-ex-combo-deck-006/018",
+    "name": "Kyurem EX",
+    "supertype": "Pokémon",
+    "number": "006/018",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/604729_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/604729_400w.jpg"
+    },
+    "tcgplayerId": "604729"
+  },
+  {
+    "id": "jp-blastoise-kyurem-ex-combo-deck-004/018",
+    "name": "Suicune",
+    "supertype": "Pokémon",
+    "number": "004/018",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/604732_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/604732_400w.jpg"
+    },
+    "tcgplayerId": "604732"
+  },
+  {
+    "id": "jp-blastoise-kyurem-ex-combo-deck-009/018",
+    "name": "Ultra Ball",
+    "supertype": "Trainer",
+    "number": "009/018",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/604725_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/604725_400w.jpg"
+    },
+    "tcgplayerId": "604725"
+  },
+  {
+    "id": "jp-blastoise-kyurem-ex-combo-deck-016/018",
+    "name": "Skyla",
+    "supertype": "Pokémon",
+    "number": "016/018",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/604727_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/604727_400w.jpg"
+    },
+    "tcgplayerId": "604727"
+  },
+  {
+    "id": "jp-blastoise-kyurem-ex-combo-deck-002/018",
+    "name": "Wartortle",
+    "supertype": "Pokémon",
+    "number": "002/018",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/604731_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/604731_400w.jpg"
+    },
+    "tcgplayerId": "604731"
+  },
+  {
+    "id": "jp-blastoise-kyurem-ex-combo-deck-005/018",
+    "name": "Ducklett",
+    "supertype": "Pokémon",
+    "number": "005/018",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/604733_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/604733_400w.jpg"
+    },
+    "tcgplayerId": "604733"
+  }
+]

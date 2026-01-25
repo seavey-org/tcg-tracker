@@ -1,0 +1,38 @@
+[
+  {
+    "id": "jp-holon-research-tower-fire-quarter-deck-004/015",
+    "name": "Flareon ex",
+    "supertype": "Pokémon",
+    "number": "004/015",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/611221_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/611221_400w.jpg"
+    },
+    "tcgplayerId": "611221"
+  },
+  {
+    "id": "jp-holon-research-tower-fire-quarter-deck-007/015",
+    "name": "Eevee",
+    "supertype": "Pokémon",
+    "number": "007/015",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/611220_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/611220_400w.jpg"
+    },
+    "tcgplayerId": "611220"
+  },
+  {
+    "id": "jp-holon-research-tower-fire-quarter-deck-001/015",
+    "name": "Ponyta",
+    "supertype": "Pokémon",
+    "number": "001/015",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/611226_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/611226_400w.jpg"
+    },
+    "tcgplayerId": "611226"
+  }
+]

@@ -1,0 +1,122 @@
+[
+  {
+    "id": "jp-intro-pack-neo-chikorita-13",
+    "name": "Quilava",
+    "supertype": "Pokémon",
+    "number": "13",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/614096_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/614096_400w.jpg"
+    },
+    "tcgplayerId": "614096"
+  },
+  {
+    "id": "jp-intro-pack-neo-chikorita-23",
+    "name": "Cyndaquil - 23",
+    "supertype": "Pokémon",
+    "number": "23",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/614082_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/614082_400w.jpg"
+    },
+    "tcgplayerId": "614082"
+  },
+  {
+    "id": "jp-intro-pack-neo-chikorita-meganium",
+    "name": "Meganium",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/614091_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/614091_400w.jpg"
+    },
+    "tcgplayerId": "614091"
+  },
+  {
+    "id": "jp-intro-pack-neo-chikorita-1",
+    "name": "Chikorita - 1",
+    "supertype": "Pokémon",
+    "number": "1",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/614079_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/614079_400w.jpg"
+    },
+    "tcgplayerId": "614079"
+  },
+  {
+    "id": "jp-intro-pack-neo-chikorita-12",
+    "name": "Growlithe",
+    "supertype": "Pokémon",
+    "number": "12",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/614086_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/614086_400w.jpg"
+    },
+    "tcgplayerId": "614086"
+  },
+  {
+    "id": "jp-intro-pack-neo-chikorita-geodude",
+    "name": "Geodude",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/614085_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/614085_400w.jpg"
+    },
+    "tcgplayerId": "614085"
+  },
+  {
+    "id": "jp-intro-pack-neo-chikorita-metal-energy",
+    "name": "Metal Energy",
+    "supertype": "Energy",
+    "number": "N/A",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/614092_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/614092_400w.jpg"
+    },
+    "tcgplayerId": "614092"
+  },
+  {
+    "id": "jp-intro-pack-neo-chikorita-6",
+    "name": "Basic Fighting Energy - 6",
+    "supertype": "Energy",
+    "number": "6",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/614061_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/614061_400w.jpg"
+    },
+    "tcgplayerId": "614061"
+  },
+  {
+    "id": "jp-intro-pack-neo-chikorita-18",
+    "name": "Basic Fighting Energy - 18",
+    "supertype": "Energy",
+    "number": "18",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/614063_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/614063_400w.jpg"
+    },
+    "tcgplayerId": "614063"
+  },
+  {
+    "id": "jp-intro-pack-neo-chikorita-berry",
+    "name": "Berry",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/614077_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/614077_400w.jpg"
+    },
+    "tcgplayerId": "614077"
+  }
+]

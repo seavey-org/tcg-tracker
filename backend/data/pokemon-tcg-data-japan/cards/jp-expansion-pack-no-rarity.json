@@ -1,0 +1,182 @@
+[
+  {
+    "id": "jp-expansion-pack-no-rarity-squirtle",
+    "name": "Squirtle",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/577020_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/577020_400w.jpg"
+    },
+    "tcgplayerId": "577020"
+  },
+  {
+    "id": "jp-expansion-pack-no-rarity-nidoran-m",
+    "name": "Nidoran M",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/577011_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/577011_400w.jpg"
+    },
+    "tcgplayerId": "577011"
+  },
+  {
+    "id": "jp-expansion-pack-no-rarity-abra",
+    "name": "Abra",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/576996_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/576996_400w.jpg"
+    },
+    "tcgplayerId": "576996"
+  },
+  {
+    "id": "jp-expansion-pack-no-rarity-weedle",
+    "name": "Weedle",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/577027_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/577027_400w.jpg"
+    },
+    "tcgplayerId": "577027"
+  },
+  {
+    "id": "jp-expansion-pack-no-rarity-electabuzz",
+    "name": "Electabuzz",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/577050_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/577050_400w.jpg"
+    },
+    "tcgplayerId": "577050"
+  },
+  {
+    "id": "jp-expansion-pack-no-rarity-machoke",
+    "name": "Machoke",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/577073_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/577073_400w.jpg"
+    },
+    "tcgplayerId": "577073"
+  },
+  {
+    "id": "jp-expansion-pack-no-rarity-drowzee",
+    "name": "Drowzee",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/577003_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/577003_400w.jpg"
+    },
+    "tcgplayerId": "577003"
+  },
+  {
+    "id": "jp-expansion-pack-no-rarity-machop",
+    "name": "Machop",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/577008_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/577008_400w.jpg"
+    },
+    "tcgplayerId": "577008"
+  },
+  {
+    "id": "jp-expansion-pack-no-rarity-defender",
+    "name": "Defender",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/577062_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/577062_400w.jpg"
+    },
+    "tcgplayerId": "577062"
+  },
+  {
+    "id": "jp-expansion-pack-no-rarity-potion",
+    "name": "Potion",
+    "supertype": "Trainer",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/577017_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/577017_400w.jpg"
+    },
+    "tcgplayerId": "577017"
+  },
+  {
+    "id": "jp-expansion-pack-no-rarity-poliwrath",
+    "name": "Poliwrath",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/577040_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/577040_400w.jpg"
+    },
+    "tcgplayerId": "577040"
+  },
+  {
+    "id": "jp-expansion-pack-no-rarity-magmar",
+    "name": "Magmar",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/577075_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/577075_400w.jpg"
+    },
+    "tcgplayerId": "577075"
+  },
+  {
+    "id": "jp-expansion-pack-no-rarity-staryu",
+    "name": "Staryu",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/577022_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/577022_400w.jpg"
+    },
+    "tcgplayerId": "577022"
+  },
+  {
+    "id": "jp-expansion-pack-no-rarity-metapod",
+    "name": "Metapod",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/577010_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/577010_400w.jpg"
+    },
+    "tcgplayerId": "577010"
+  },
+  {
+    "id": "jp-expansion-pack-no-rarity-seel",
+    "name": "Seel",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/577087_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/577087_400w.jpg"
+    },
+    "tcgplayerId": "577087"
+  }
+]

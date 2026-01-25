@@ -1,0 +1,38 @@
+[
+  {
+    "id": "jp-battle-starter-deck-torterra-004/010",
+    "name": "Torterra",
+    "supertype": "Pokémon",
+    "number": "004/010",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/609454_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/609454_400w.jpg"
+    },
+    "tcgplayerId": "609454"
+  },
+  {
+    "id": "jp-battle-starter-deck-torterra-002/010",
+    "name": "Turtwig",
+    "supertype": "Pokémon",
+    "number": "002/010",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/609457_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/609457_400w.jpg"
+    },
+    "tcgplayerId": "609457"
+  },
+  {
+    "id": "jp-battle-starter-deck-torterra-005/010",
+    "name": "Cherubi",
+    "supertype": "Pokémon",
+    "number": "005/010",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/609459_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/609459_400w.jpg"
+    },
+    "tcgplayerId": "609459"
+  }
+]

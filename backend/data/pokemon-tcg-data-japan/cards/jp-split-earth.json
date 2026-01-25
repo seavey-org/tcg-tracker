@@ -1,0 +1,890 @@
+[
+  {
+    "id": "jp-split-earth-043/088",
+    "name": "Alakazam - 043/088",
+    "supertype": "Pokémon",
+    "number": "043/088",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/576166_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/576166_400w.jpg"
+    },
+    "tcgplayerId": "576166"
+  },
+  {
+    "id": "jp-split-earth-027/088",
+    "name": "Vaporeon - 027/088",
+    "supertype": "Pokémon",
+    "number": "027/088",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/576249_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/576249_400w.jpg"
+    },
+    "tcgplayerId": "576249"
+  },
+  {
+    "id": "jp-split-earth-017/088",
+    "name": "Flareon - 017/088",
+    "supertype": "Pokémon",
+    "number": "017/088",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/576177_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/576177_400w.jpg"
+    },
+    "tcgplayerId": "576177"
+  },
+  {
+    "id": "jp-split-earth-037/088",
+    "name": "Jolteon - 037/088",
+    "supertype": "Pokémon",
+    "number": "037/088",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/576189_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/576189_400w.jpg"
+    },
+    "tcgplayerId": "576189"
+  },
+  {
+    "id": "jp-split-earth-072/088",
+    "name": "Umbreon - 072/088",
+    "supertype": "Pokémon",
+    "number": "072/088",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/576245_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/576245_400w.jpg"
+    },
+    "tcgplayerId": "576245"
+  },
+  {
+    "id": "jp-split-earth-039/088",
+    "name": "Raikou - 039/088",
+    "supertype": "Pokémon",
+    "number": "039/088",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/576226_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/576226_400w.jpg"
+    },
+    "tcgplayerId": "576226"
+  },
+  {
+    "id": "jp-split-earth-035/088",
+    "name": "Raichu - 035/088",
+    "supertype": "Pokémon",
+    "number": "035/088",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/576224_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/576224_400w.jpg"
+    },
+    "tcgplayerId": "576224"
+  },
+  {
+    "id": "jp-split-earth-045/088",
+    "name": "Starmie - 045/088",
+    "supertype": "Pokémon",
+    "number": "045/088",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/576240_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/576240_400w.jpg"
+    },
+    "tcgplayerId": "576240"
+  },
+  {
+    "id": "jp-split-earth-058/088",
+    "name": "Kabutops - 058/088",
+    "supertype": "Pokémon",
+    "number": "058/088",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/576193_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/576193_400w.jpg"
+    },
+    "tcgplayerId": "576193"
+  },
+  {
+    "id": "jp-split-earth-033/088",
+    "name": "Pikachu",
+    "supertype": "Pokémon",
+    "number": "033/088",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/576215_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/576215_400w.jpg"
+    },
+    "tcgplayerId": "576215"
+  },
+  {
+    "id": "jp-split-earth-020/088",
+    "name": "Magcargo - 020/088",
+    "supertype": "Pokémon",
+    "number": "020/088",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/576200_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/576200_400w.jpg"
+    },
+    "tcgplayerId": "576200"
+  },
+  {
+    "id": "jp-split-earth-009/088",
+    "name": "Crobat - 009/088",
+    "supertype": "Pokémon",
+    "number": "009/088",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/576170_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/576170_400w.jpg"
+    },
+    "tcgplayerId": "576170"
+  },
+  {
+    "id": "jp-split-earth-075/088",
+    "name": "Forretress - 075/088",
+    "supertype": "Pokémon",
+    "number": "075/088",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/576179_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/576179_400w.jpg"
+    },
+    "tcgplayerId": "576179"
+  },
+  {
+    "id": "jp-split-earth-007/088",
+    "name": "Ledian - 007/088",
+    "supertype": "Pokémon",
+    "number": "007/088",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/576196_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/576196_400w.jpg"
+    },
+    "tcgplayerId": "576196"
+  },
+  {
+    "id": "jp-split-earth-064/088",
+    "name": "Ditto",
+    "supertype": "Pokémon",
+    "number": "064/088",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/576174_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/576174_400w.jpg"
+    },
+    "tcgplayerId": "576174"
+  },
+  {
+    "id": "jp-split-earth-042/088",
+    "name": "Alakazam - 042/088",
+    "supertype": "Pokémon",
+    "number": "042/088",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/576167_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/576167_400w.jpg"
+    },
+    "tcgplayerId": "576167"
+  },
+  {
+    "id": "jp-split-earth-071/088",
+    "name": "Umbreon - 071/088",
+    "supertype": "Pokémon",
+    "number": "071/088",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/576246_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/576246_400w.jpg"
+    },
+    "tcgplayerId": "576246"
+  },
+  {
+    "id": "jp-split-earth-031/088",
+    "name": "Politoed - 031/088",
+    "supertype": "Pokémon",
+    "number": "031/088",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/576218_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/576218_400w.jpg"
+    },
+    "tcgplayerId": "576218"
+  },
+  {
+    "id": "jp-split-earth-034/088",
+    "name": "Raichu - 034/088",
+    "supertype": "Pokémon",
+    "number": "034/088",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/576225_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/576225_400w.jpg"
+    },
+    "tcgplayerId": "576225"
+  },
+  {
+    "id": "jp-split-earth-065/088",
+    "name": "Eevee",
+    "supertype": "Pokémon",
+    "number": "065/088",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/576176_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/576176_400w.jpg"
+    },
+    "tcgplayerId": "576176"
+  },
+  {
+    "id": "jp-split-earth-036/088",
+    "name": "Jolteon - 036/088",
+    "supertype": "Pokémon",
+    "number": "036/088",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/576190_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/576190_400w.jpg"
+    },
+    "tcgplayerId": "576190"
+  },
+  {
+    "id": "jp-split-earth-030/088",
+    "name": "Politoed - 030/088",
+    "supertype": "Pokémon",
+    "number": "030/088",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/576219_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/576219_400w.jpg"
+    },
+    "tcgplayerId": "576219"
+  },
+  {
+    "id": "jp-split-earth-003/088",
+    "name": "Golbat",
+    "supertype": "Pokémon",
+    "number": "003/088",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/576183_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/576183_400w.jpg"
+    },
+    "tcgplayerId": "576183"
+  },
+  {
+    "id": "jp-split-earth-008/088",
+    "name": "Crobat - 008/088",
+    "supertype": "Pokémon",
+    "number": "008/088",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/576171_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/576171_400w.jpg"
+    },
+    "tcgplayerId": "576171"
+  },
+  {
+    "id": "jp-split-earth-002/088",
+    "name": "Zubat - 002/088",
+    "supertype": "Pokémon",
+    "number": "002/088",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/576254_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/576254_400w.jpg"
+    },
+    "tcgplayerId": "576254"
+  },
+  {
+    "id": "jp-split-earth-041/088",
+    "name": "Kadabra",
+    "supertype": "Pokémon",
+    "number": "041/088",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/576195_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/576195_400w.jpg"
+    },
+    "tcgplayerId": "576195"
+  },
+  {
+    "id": "jp-split-earth-051/088",
+    "name": "Poliwrath - 051/088",
+    "supertype": "Pokémon",
+    "number": "051/088",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/576223_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/576223_400w.jpg"
+    },
+    "tcgplayerId": "576223"
+  },
+  {
+    "id": "jp-split-earth-016/088",
+    "name": "Flareon - 016/088",
+    "supertype": "Pokémon",
+    "number": "016/088",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/576178_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/576178_400w.jpg"
+    },
+    "tcgplayerId": "576178"
+  },
+  {
+    "id": "jp-split-earth-057/088",
+    "name": "Kabutops - 057/088",
+    "supertype": "Pokémon",
+    "number": "057/088",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/576194_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/576194_400w.jpg"
+    },
+    "tcgplayerId": "576194"
+  },
+  {
+    "id": "jp-split-earth-049/088",
+    "name": "Sandshrew+A78",
+    "supertype": "Pokémon",
+    "number": "049/088",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/576233_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/576233_400w.jpg"
+    },
+    "tcgplayerId": "576233"
+  },
+  {
+    "id": "jp-split-earth-062/088",
+    "name": "Meowth",
+    "supertype": "Pokémon",
+    "number": "062/088",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/576203_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/576203_400w.jpg"
+    },
+    "tcgplayerId": "576203"
+  },
+  {
+    "id": "jp-split-earth-055/088",
+    "name": "Rhydon - 055/088",
+    "supertype": "Pokémon",
+    "number": "055/088",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/576230_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/576230_400w.jpg"
+    },
+    "tcgplayerId": "576230"
+  },
+  {
+    "id": "jp-split-earth-006/088",
+    "name": "Ledian - 006/088",
+    "supertype": "Pokémon",
+    "number": "006/088",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/576197_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/576197_400w.jpg"
+    },
+    "tcgplayerId": "576197"
+  },
+  {
+    "id": "jp-split-earth-044/088",
+    "name": "Starmie - 044/088",
+    "supertype": "Pokémon",
+    "number": "044/088",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/576241_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/576241_400w.jpg"
+    },
+    "tcgplayerId": "576241"
+  },
+  {
+    "id": "jp-split-earth-059/088",
+    "name": "Aerodactyl",
+    "supertype": "Pokémon",
+    "number": "059/088",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/576165_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/576165_400w.jpg"
+    },
+    "tcgplayerId": "576165"
+  },
+  {
+    "id": "jp-split-earth-067/088",
+    "name": "Dunsparce",
+    "supertype": "Pokémon",
+    "number": "067/088",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/576175_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/576175_400w.jpg"
+    },
+    "tcgplayerId": "576175"
+  },
+  {
+    "id": "jp-split-earth-063/088",
+    "name": "Persian",
+    "supertype": "Pokémon",
+    "number": "063/088",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/576214_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/576214_400w.jpg"
+    },
+    "tcgplayerId": "576214"
+  },
+  {
+    "id": "jp-split-earth-073/088",
+    "name": "Murkrow",
+    "supertype": "Pokémon",
+    "number": "073/088",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/576206_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/576206_400w.jpg"
+    },
+    "tcgplayerId": "576206"
+  },
+  {
+    "id": "jp-split-earth-024/088",
+    "name": "Staryu - 024/088",
+    "supertype": "Pokémon",
+    "number": "024/088",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/576244_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/576244_400w.jpg"
+    },
+    "tcgplayerId": "576244"
+  },
+  {
+    "id": "jp-split-earth-078/088",
+    "name": "Desert Shaman",
+    "supertype": "Pokémon",
+    "number": "078/088",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/576173_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/576173_400w.jpg"
+    },
+    "tcgplayerId": "576173"
+  },
+  {
+    "id": "jp-split-earth-029/088",
+    "name": "Omastar",
+    "supertype": "Pokémon",
+    "number": "029/088",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/576212_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/576212_400w.jpg"
+    },
+    "tcgplayerId": "576212"
+  },
+  {
+    "id": "jp-split-earth-011/088",
+    "name": "Pineco - 011/088",
+    "supertype": "Pokémon",
+    "number": "011/088",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/576216_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/576216_400w.jpg"
+    },
+    "tcgplayerId": "576216"
+  },
+  {
+    "id": "jp-split-earth-015/088",
+    "name": "Heracross",
+    "supertype": "Pokémon",
+    "number": "015/088",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/576186_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/576186_400w.jpg"
+    },
+    "tcgplayerId": "576186"
+  },
+  {
+    "id": "jp-split-earth-076/088",
+    "name": "Skarmory",
+    "supertype": "Pokémon",
+    "number": "076/088",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/576236_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/576236_400w.jpg"
+    },
+    "tcgplayerId": "576236"
+  },
+  {
+    "id": "jp-split-earth-040/088",
+    "name": "Abra",
+    "supertype": "Pokémon",
+    "number": "040/088",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/576164_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/576164_400w.jpg"
+    },
+    "tcgplayerId": "576164"
+  },
+  {
+    "id": "jp-split-earth-023/088",
+    "name": "Staryu - 023/088",
+    "supertype": "Pokémon",
+    "number": "023/088",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/576243_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/576243_400w.jpg"
+    },
+    "tcgplayerId": "576243"
+  },
+  {
+    "id": "jp-split-earth-050/088",
+    "name": "Sandslash",
+    "supertype": "Pokémon",
+    "number": "050/088",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/576234_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/576234_400w.jpg"
+    },
+    "tcgplayerId": "576234"
+  },
+  {
+    "id": "jp-split-earth-005/088",
+    "name": "Ledyba - 005/088",
+    "supertype": "Pokémon",
+    "number": "005/088",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/576199_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/576199_400w.jpg"
+    },
+    "tcgplayerId": "576199"
+  },
+  {
+    "id": "jp-split-earth-047/088",
+    "name": "Wobbuffet",
+    "supertype": "Pokémon",
+    "number": "047/088",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/576251_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/576251_400w.jpg"
+    },
+    "tcgplayerId": "576251"
+  },
+  {
+    "id": "jp-split-earth-021/088",
+    "name": "Poliwag",
+    "supertype": "Pokémon",
+    "number": "021/088",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/576220_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/576220_400w.jpg"
+    },
+    "tcgplayerId": "576220"
+  },
+  {
+    "id": "jp-split-earth-004/088",
+    "name": "Ledyba - 004/088",
+    "supertype": "Pokémon",
+    "number": "004/088",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/576198_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/576198_400w.jpg"
+    },
+    "tcgplayerId": "576198"
+  },
+  {
+    "id": "jp-split-earth-056/088",
+    "name": "Kabuto",
+    "supertype": "Pokémon",
+    "number": "056/088",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/576191_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/576191_400w.jpg"
+    },
+    "tcgplayerId": "576191"
+  },
+  {
+    "id": "jp-split-earth-046/088",
+    "name": "Misdreavus",
+    "supertype": "Pokémon",
+    "number": "046/088",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/576205_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/576205_400w.jpg"
+    },
+    "tcgplayerId": "576205"
+  },
+  {
+    "id": "jp-split-earth-088/088",
+    "name": "Mirage Stadium",
+    "supertype": "Trainer",
+    "number": "088/088",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/576204_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/576204_400w.jpg"
+    },
+    "tcgplayerId": "576204"
+  },
+  {
+    "id": "jp-split-earth-001/088",
+    "name": "Zubat - 001/088",
+    "supertype": "Pokémon",
+    "number": "001/088",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/576253_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/576253_400w.jpg"
+    },
+    "tcgplayerId": "576253"
+  },
+  {
+    "id": "jp-split-earth-018/088",
+    "name": "Slugma",
+    "supertype": "Pokémon",
+    "number": "018/088",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/576237_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/576237_400w.jpg"
+    },
+    "tcgplayerId": "576237"
+  },
+  {
+    "id": "jp-split-earth-061/088",
+    "name": "Raticate",
+    "supertype": "Pokémon",
+    "number": "061/088",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/576228_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/576228_400w.jpg"
+    },
+    "tcgplayerId": "576228"
+  },
+  {
+    "id": "jp-split-earth-069/088",
+    "name": "Granbull",
+    "supertype": "Pokémon",
+    "number": "069/088",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/576185_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/576185_400w.jpg"
+    },
+    "tcgplayerId": "576185"
+  },
+  {
+    "id": "jp-split-earth-022/088",
+    "name": "Poliwhirl",
+    "supertype": "Pokémon",
+    "number": "022/088",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/576221_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/576221_400w.jpg"
+    },
+    "tcgplayerId": "576221"
+  },
+  {
+    "id": "jp-split-earth-025/088",
+    "name": "Starmie - 025/088",
+    "supertype": "Pokémon",
+    "number": "025/088",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/576242_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/576242_400w.jpg"
+    },
+    "tcgplayerId": "576242"
+  },
+  {
+    "id": "jp-split-earth-087/088",
+    "name": "Underground Lake",
+    "supertype": "Pokémon",
+    "number": "087/088",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/576248_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/576248_400w.jpg"
+    },
+    "tcgplayerId": "576248"
+  },
+  {
+    "id": "jp-split-earth-028/088",
+    "name": "Omanyte",
+    "supertype": "Pokémon",
+    "number": "028/088",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/576211_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/576211_400w.jpg"
+    },
+    "tcgplayerId": "576211"
+  },
+  {
+    "id": "jp-split-earth-026/088",
+    "name": "Vaporeon - 026/088",
+    "supertype": "Pokémon",
+    "number": "026/088",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/576250_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/576250_400w.jpg"
+    },
+    "tcgplayerId": "576250"
+  },
+  {
+    "id": "jp-split-earth-060/088",
+    "name": "Rattata",
+    "supertype": "Pokémon",
+    "number": "060/088",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/576229_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/576229_400w.jpg"
+    },
+    "tcgplayerId": "576229"
+  },
+  {
+    "id": "jp-split-earth-013/088",
+    "name": "Forretress - 013/088",
+    "supertype": "Pokémon",
+    "number": "013/088",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/576181_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/576181_400w.jpg"
+    },
+    "tcgplayerId": "576181"
+  },
+  {
+    "id": "jp-split-earth-032/088",
+    "name": "Mantine",
+    "supertype": "Pokémon",
+    "number": "032/088",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/576202_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/576202_400w.jpg"
+    },
+    "tcgplayerId": "576202"
+  },
+  {
+    "id": "jp-split-earth-068/088",
+    "name": "Snubbull",
+    "supertype": "Pokémon",
+    "number": "068/088",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/576238_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/576238_400w.jpg"
+    },
+    "tcgplayerId": "576238"
+  },
+  {
+    "id": "jp-split-earth-048/088",
+    "name": "Girafarig",
+    "supertype": "Pokémon",
+    "number": "048/088",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/576182_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/576182_400w.jpg"
+    },
+    "tcgplayerId": "576182"
+  },
+  {
+    "id": "jp-split-earth-070/088",
+    "name": "Buried Fossil",
+    "supertype": "Pokémon",
+    "number": "070/088",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/576168_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/576168_400w.jpg"
+    },
+    "tcgplayerId": "576168"
+  },
+  {
+    "id": "jp-split-earth-066/088",
+    "name": "Cleffa",
+    "supertype": "Pokémon",
+    "number": "066/088",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/576169_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/576169_400w.jpg"
+    },
+    "tcgplayerId": "576169"
+  },
+  {
+    "id": "jp-split-earth-010/088",
+    "name": "Yanma",
+    "supertype": "Pokémon",
+    "number": "010/088",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/576252_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/576252_400w.jpg"
+    },
+    "tcgplayerId": "576252"
+  },
+  {
+    "id": "jp-split-earth-083/088",
+    "name": "Mystery Plate a",
+    "supertype": "Pokémon",
+    "number": "083/088",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/576207_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/576207_400w.jpg"
+    },
+    "tcgplayerId": "576207"
+  },
+  {
+    "id": "jp-split-earth-084/088",
+    "name": "Mystery Plate B",
+    "supertype": "Pokémon",
+    "number": "084/088",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/576208_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/576208_400w.jpg"
+    },
+    "tcgplayerId": "576208"
+  },
+  {
+    "id": "jp-split-earth-053/088",
+    "name": "Rhyhorn",
+    "supertype": "Pokémon",
+    "number": "053/088",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/576232_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/576232_400w.jpg"
+    },
+    "tcgplayerId": "576232"
+  }
+]

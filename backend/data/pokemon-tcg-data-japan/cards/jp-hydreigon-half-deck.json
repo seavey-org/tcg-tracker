@@ -1,0 +1,62 @@
+[
+  {
+    "id": "jp-hydreigon-half-deck-006/015",
+    "name": "Houndoom",
+    "supertype": "Pokémon",
+    "number": "006/015",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/604884_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/604884_400w.jpg"
+    },
+    "tcgplayerId": "604884"
+  },
+  {
+    "id": "jp-hydreigon-half-deck-009/015",
+    "name": "Hydreigon",
+    "supertype": "Pokémon",
+    "number": "009/015",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/604874_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/604874_400w.jpg"
+    },
+    "tcgplayerId": "604874"
+  },
+  {
+    "id": "jp-hydreigon-half-deck-002/015",
+    "name": "Roserade",
+    "supertype": "Pokémon",
+    "number": "002/015",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/604875_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/604875_400w.jpg"
+    },
+    "tcgplayerId": "604875"
+  },
+  {
+    "id": "jp-hydreigon-half-deck-008/015",
+    "name": "Zweilous",
+    "supertype": "Pokémon",
+    "number": "008/015",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/604880_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/604880_400w.jpg"
+    },
+    "tcgplayerId": "604880"
+  },
+  {
+    "id": "jp-hydreigon-half-deck-007/015",
+    "name": "Deino",
+    "supertype": "Pokémon",
+    "number": "007/015",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/604879_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/604879_400w.jpg"
+    },
+    "tcgplayerId": "604879"
+  }
+]

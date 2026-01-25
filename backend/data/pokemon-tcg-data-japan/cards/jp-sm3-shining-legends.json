@@ -1,0 +1,578 @@
+[
+  {
+    "id": "jp-sm3-shining-legends-shining-legends-booster-box",
+    "name": "Shining Legends Booster Box",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/576925_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/576925_400w.jpg"
+    },
+    "tcgplayerId": "576925"
+  },
+  {
+    "id": "jp-sm3-shining-legends-082/072",
+    "name": "Mewtwo GX - 082/072",
+    "supertype": "Pokémon",
+    "number": "082/072",
+    "rarity": "Shining",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/573996_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/573996_400w.jpg"
+    },
+    "tcgplayerId": "573996"
+  },
+  {
+    "id": "jp-sm3-shining-legends-041/072",
+    "name": "Shining Mew",
+    "supertype": "Pokémon",
+    "number": "041/072",
+    "rarity": "Shining",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/573955_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/573955_400w.jpg"
+    },
+    "tcgplayerId": "573955"
+  },
+  {
+    "id": "jp-sm3-shining-legends-058/072",
+    "name": "Shining Lugia",
+    "supertype": "Pokémon",
+    "number": "058/072",
+    "rarity": "Shining",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/573972_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/573972_400w.jpg"
+    },
+    "tcgplayerId": "573972"
+  },
+  {
+    "id": "jp-sm3-shining-legends-081/072",
+    "name": "Zoroark GX - 081/072",
+    "supertype": "Pokémon",
+    "number": "081/072",
+    "rarity": "Hyper Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/573995_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/573995_400w.jpg"
+    },
+    "tcgplayerId": "573995"
+  },
+  {
+    "id": "jp-sm3-shining-legends-077/072",
+    "name": "Pokemon Breeder - 077/072",
+    "supertype": "Pokémon",
+    "number": "077/072",
+    "rarity": "Super Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/573991_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/573991_400w.jpg"
+    },
+    "tcgplayerId": "573991"
+  },
+  {
+    "id": "jp-sm3-shining-legends-057/072",
+    "name": "Shining Rayquaza",
+    "supertype": "Pokémon",
+    "number": "057/072",
+    "rarity": "Shining",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/573971_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/573971_400w.jpg"
+    },
+    "tcgplayerId": "573971"
+  },
+  {
+    "id": "jp-sm3-shining-legends-043/072",
+    "name": "Shining Jirachi",
+    "supertype": "Pokémon",
+    "number": "043/072",
+    "rarity": "Shining",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/573957_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/573957_400w.jpg"
+    },
+    "tcgplayerId": "573957"
+  },
+  {
+    "id": "jp-sm3-shining-legends-059/072",
+    "name": "Shining Arceus",
+    "supertype": "Pokémon",
+    "number": "059/072",
+    "rarity": "Shining",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/573973_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/573973_400w.jpg"
+    },
+    "tcgplayerId": "573973"
+  },
+  {
+    "id": "jp-sm3-shining-legends-004/072",
+    "name": "Shining Celebi",
+    "supertype": "Pokémon",
+    "number": "004/072",
+    "rarity": "Shining",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/573918_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/573918_400w.jpg"
+    },
+    "tcgplayerId": "573918"
+  },
+  {
+    "id": "jp-sm3-shining-legends-076/072",
+    "name": "Zoroark GX - 076/072",
+    "supertype": "Pokémon",
+    "number": "076/072",
+    "rarity": "Super Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/573990_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/573990_400w.jpg"
+    },
+    "tcgplayerId": "573990"
+  },
+  {
+    "id": "jp-sm3-shining-legends-010/072",
+    "name": "Shining Genesect",
+    "supertype": "Pokémon",
+    "number": "010/072",
+    "rarity": "Shining",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/573924_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/573924_400w.jpg"
+    },
+    "tcgplayerId": "573924"
+  },
+  {
+    "id": "jp-sm3-shining-legends-029/072",
+    "name": "Pikachu",
+    "supertype": "Pokémon",
+    "number": "029/072",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/573943_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/573943_400w.jpg"
+    },
+    "tcgplayerId": "573943"
+  },
+  {
+    "id": "jp-sm3-shining-legends-028/072",
+    "name": "Shining Volcanion",
+    "supertype": "Pokémon",
+    "number": "028/072",
+    "rarity": "Shining",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/573942_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/573942_400w.jpg"
+    },
+    "tcgplayerId": "573942"
+  },
+  {
+    "id": "jp-sm3-shining-legends-002/072",
+    "name": "Ivysaur",
+    "supertype": "Pokémon",
+    "number": "002/072",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/573916_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/573916_400w.jpg"
+    },
+    "tcgplayerId": "573916"
+  },
+  {
+    "id": "jp-sm3-shining-legends-034/072",
+    "name": "Plusle",
+    "supertype": "Pokémon",
+    "number": "034/072",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/573948_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/573948_400w.jpg"
+    },
+    "tcgplayerId": "573948"
+  },
+  {
+    "id": "jp-sm3-shining-legends-040/072",
+    "name": "Mewtwo GX - 040/072",
+    "supertype": "Pokémon",
+    "number": "040/072",
+    "rarity": "Double Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/573954_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/573954_400w.jpg"
+    },
+    "tcgplayerId": "573954"
+  },
+  {
+    "id": "jp-sm3-shining-legends-011/072",
+    "name": "Entei GX - 011/072",
+    "supertype": "Pokémon",
+    "number": "011/072",
+    "rarity": "Double Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/573925_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/573925_400w.jpg"
+    },
+    "tcgplayerId": "573925"
+  },
+  {
+    "id": "jp-sm3-shining-legends-035/072",
+    "name": "Minun",
+    "supertype": "Pokémon",
+    "number": "035/072",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/573949_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/573949_400w.jpg"
+    },
+    "tcgplayerId": "573949"
+  },
+  {
+    "id": "jp-sm3-shining-legends-068/072",
+    "name": "Pokemon Breeder - 068/072",
+    "supertype": "Pokémon",
+    "number": "068/072",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/573982_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/573982_400w.jpg"
+    },
+    "tcgplayerId": "573982"
+  },
+  {
+    "id": "jp-sm3-shining-legends-001/072",
+    "name": "Bulbasaur",
+    "supertype": "Pokémon",
+    "number": "001/072",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/573915_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/573915_400w.jpg"
+    },
+    "tcgplayerId": "573915"
+  },
+  {
+    "id": "jp-sm3-shining-legends-030/072",
+    "name": "Raichu GX - 030/072",
+    "supertype": "Pokémon",
+    "number": "030/072",
+    "rarity": "Double Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/573944_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/573944_400w.jpg"
+    },
+    "tcgplayerId": "573944"
+  },
+  {
+    "id": "jp-sm3-shining-legends-003/072",
+    "name": "Venusaur",
+    "supertype": "Pokémon",
+    "number": "003/072",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/573917_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/573917_400w.jpg"
+    },
+    "tcgplayerId": "573917"
+  },
+  {
+    "id": "jp-sm3-shining-legends-015/072",
+    "name": "Reshiram",
+    "supertype": "Pokémon",
+    "number": "015/072",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/573929_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/573929_400w.jpg"
+    },
+    "tcgplayerId": "573929"
+  },
+  {
+    "id": "jp-sm3-shining-legends-033/072",
+    "name": "Raikou",
+    "supertype": "Pokémon",
+    "number": "033/072",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/573947_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/573947_400w.jpg"
+    },
+    "tcgplayerId": "573947"
+  },
+  {
+    "id": "jp-sm3-shining-legends-036/072",
+    "name": "Zekrom",
+    "supertype": "Pokémon",
+    "number": "036/072",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/573950_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/573950_400w.jpg"
+    },
+    "tcgplayerId": "573950"
+  },
+  {
+    "id": "jp-sm3-shining-legends-025/072",
+    "name": "Palkia",
+    "supertype": "Pokémon",
+    "number": "025/072",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/573939_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/573939_400w.jpg"
+    },
+    "tcgplayerId": "573939"
+  },
+  {
+    "id": "jp-sm3-shining-legends-046/072",
+    "name": "Marshadow",
+    "supertype": "Pokémon",
+    "number": "046/072",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/573960_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/573960_400w.jpg"
+    },
+    "tcgplayerId": "573960"
+  },
+  {
+    "id": "jp-sm3-shining-legends-048/072",
+    "name": "Spiritomb",
+    "supertype": "Pokémon",
+    "number": "048/072",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/573962_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/573962_400w.jpg"
+    },
+    "tcgplayerId": "573962"
+  },
+  {
+    "id": "jp-sm3-shining-legends-056/072",
+    "name": "Hoopa",
+    "supertype": "Pokémon",
+    "number": "056/072",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/573970_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/573970_400w.jpg"
+    },
+    "tcgplayerId": "573970"
+  },
+  {
+    "id": "jp-sm3-shining-legends-042/072",
+    "name": "Latios",
+    "supertype": "Pokémon",
+    "number": "042/072",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/573956_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/573956_400w.jpg"
+    },
+    "tcgplayerId": "573956"
+  },
+  {
+    "id": "jp-sm3-shining-legends-008/072",
+    "name": "Shaymin",
+    "supertype": "Pokémon",
+    "number": "008/072",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/573922_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/573922_400w.jpg"
+    },
+    "tcgplayerId": "573922"
+  },
+  {
+    "id": "jp-sm3-shining-legends-044/072",
+    "name": "Golett",
+    "supertype": "Pokémon",
+    "number": "044/072",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/573958_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/573958_400w.jpg"
+    },
+    "tcgplayerId": "573958"
+  },
+  {
+    "id": "jp-sm3-shining-legends-009/072",
+    "name": "Virizion",
+    "supertype": "Pokémon",
+    "number": "009/072",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/573923_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/573923_400w.jpg"
+    },
+    "tcgplayerId": "573923"
+  },
+  {
+    "id": "jp-sm3-shining-legends-013/072",
+    "name": "Larvesta",
+    "supertype": "Pokémon",
+    "number": "013/072",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/573927_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/573927_400w.jpg"
+    },
+    "tcgplayerId": "573927"
+  },
+  {
+    "id": "jp-sm3-shining-legends-054/072",
+    "name": "Zoroark GX - 054/072",
+    "supertype": "Pokémon",
+    "number": "054/072",
+    "rarity": "Double Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/573968_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/573968_400w.jpg"
+    },
+    "tcgplayerId": "573968"
+  },
+  {
+    "id": "jp-sm3-shining-legends-070/072",
+    "name": "Lillie",
+    "supertype": "Pokémon",
+    "number": "070/072",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/573984_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/573984_400w.jpg"
+    },
+    "tcgplayerId": "573984"
+  },
+  {
+    "id": "jp-sm3-shining-legends-045/072",
+    "name": "Golurk",
+    "supertype": "Pokémon",
+    "number": "045/072",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/573959_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/573959_400w.jpg"
+    },
+    "tcgplayerId": "573959"
+  },
+  {
+    "id": "jp-sm3-shining-legends-039/072",
+    "name": "Jynx",
+    "supertype": "Pokémon",
+    "number": "039/072",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/573953_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/573953_400w.jpg"
+    },
+    "tcgplayerId": "573953"
+  },
+  {
+    "id": "jp-sm3-shining-legends-023/072",
+    "name": "Buizel",
+    "supertype": "Pokémon",
+    "number": "023/072",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/573937_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/573937_400w.jpg"
+    },
+    "tcgplayerId": "573937"
+  },
+  {
+    "id": "jp-sm3-shining-legends-055/072",
+    "name": "Yveltal",
+    "supertype": "Pokémon",
+    "number": "055/072",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/573969_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/573969_400w.jpg"
+    },
+    "tcgplayerId": "573969"
+  },
+  {
+    "id": "jp-sm3-shining-legends-026/072",
+    "name": "Manaphy",
+    "supertype": "Pokémon",
+    "number": "026/072",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/573940_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/573940_400w.jpg"
+    },
+    "tcgplayerId": "573940"
+  },
+  {
+    "id": "jp-sm3-shining-legends-027/072",
+    "name": "Keldeo",
+    "supertype": "Pokémon",
+    "number": "027/072",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/573941_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/573941_400w.jpg"
+    },
+    "tcgplayerId": "573941"
+  },
+  {
+    "id": "jp-sm3-shining-legends-052/072",
+    "name": "Scrafty",
+    "supertype": "Pokémon",
+    "number": "052/072",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/573966_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/573966_400w.jpg"
+    },
+    "tcgplayerId": "573966"
+  },
+  {
+    "id": "jp-sm3-shining-legends-051/072",
+    "name": "Scraggy",
+    "supertype": "Pokémon",
+    "number": "051/072",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/573965_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/573965_400w.jpg"
+    },
+    "tcgplayerId": "573965"
+  },
+  {
+    "id": "jp-sm3-shining-legends-006/072",
+    "name": "Breloom",
+    "supertype": "Pokémon",
+    "number": "006/072",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/573920_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/573920_400w.jpg"
+    },
+    "tcgplayerId": "573920"
+  },
+  {
+    "id": "jp-sm3-shining-legends-012/072",
+    "name": "Torkoal",
+    "supertype": "Pokémon",
+    "number": "012/072",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/573926_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/573926_400w.jpg"
+    },
+    "tcgplayerId": "573926"
+  },
+  {
+    "id": "jp-sm3-shining-legends-021/072",
+    "name": "Feraligatr",
+    "supertype": "Pokémon",
+    "number": "021/072",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/573935_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/573935_400w.jpg"
+    },
+    "tcgplayerId": "573935"
+  }
+]

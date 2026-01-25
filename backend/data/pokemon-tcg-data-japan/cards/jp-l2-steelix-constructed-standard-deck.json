@@ -1,0 +1,62 @@
+[
+  {
+    "id": "jp-l2-steelix-constructed-standard-deck-001/019",
+    "name": "Scyther",
+    "supertype": "Pokémon",
+    "number": "001/019",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/611122_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/611122_400w.jpg"
+    },
+    "tcgplayerId": "611122"
+  },
+  {
+    "id": "jp-l2-steelix-constructed-standard-deck-008/019",
+    "name": "Scizor",
+    "supertype": "Pokémon",
+    "number": "008/019",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/611119_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/611119_400w.jpg"
+    },
+    "tcgplayerId": "611119"
+  },
+  {
+    "id": "jp-l2-steelix-constructed-standard-deck-002/019",
+    "name": "Pinsir",
+    "supertype": "Pokémon",
+    "number": "002/019",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/611117_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/611117_400w.jpg"
+    },
+    "tcgplayerId": "611117"
+  },
+  {
+    "id": "jp-l2-steelix-constructed-standard-deck-019/019",
+    "name": "Metal Energy",
+    "supertype": "Energy",
+    "number": "019/019",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/611111_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/611111_400w.jpg"
+    },
+    "tcgplayerId": "611111"
+  },
+  {
+    "id": "jp-l2-steelix-constructed-standard-deck-013/019",
+    "name": "Moomoo Milk",
+    "supertype": "Pokémon",
+    "number": "013/019",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/611129_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/611129_400w.jpg"
+    },
+    "tcgplayerId": "611129"
+  }
+]

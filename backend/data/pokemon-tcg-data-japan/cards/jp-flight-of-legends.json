@@ -1,0 +1,830 @@
+[
+  {
+    "id": "jp-flight-of-legends-048/082",
+    "name": "Gengar ex",
+    "supertype": "Pokémon",
+    "number": "048/082",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612401_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612401_400w.jpg"
+    },
+    "tcgplayerId": "612401"
+  },
+  {
+    "id": "jp-flight-of-legends-035/082",
+    "name": "Gyarados ex",
+    "supertype": "Pokémon",
+    "number": "035/082",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612404_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612404_400w.jpg"
+    },
+    "tcgplayerId": "612404"
+  },
+  {
+    "id": "jp-flight-of-legends-023/082",
+    "name": "Rapidash",
+    "supertype": "Pokémon",
+    "number": "023/082",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612442_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612442_400w.jpg"
+    },
+    "tcgplayerId": "612442"
+  },
+  {
+    "id": "jp-flight-of-legends-031/082",
+    "name": "Cloyster",
+    "supertype": "Pokémon",
+    "number": "031/082",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612388_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612388_400w.jpg"
+    },
+    "tcgplayerId": "612388"
+  },
+  {
+    "id": "jp-flight-of-legends-074/082",
+    "name": "Snorlax",
+    "supertype": "Pokémon",
+    "number": "074/082",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612448_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612448_400w.jpg"
+    },
+    "tcgplayerId": "612448"
+  },
+  {
+    "id": "jp-flight-of-legends-066/082",
+    "name": "Clefable ex",
+    "supertype": "Pokémon",
+    "number": "066/082",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612386_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612386_400w.jpg"
+    },
+    "tcgplayerId": "612386"
+  },
+  {
+    "id": "jp-flight-of-legends-053/082",
+    "name": "Mr. Mime ex - 053/082",
+    "supertype": "Pokémon",
+    "number": "053/082",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612419_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612419_400w.jpg"
+    },
+    "tcgplayerId": "612419"
+  },
+  {
+    "id": "jp-flight-of-legends-024/082",
+    "name": "Moltres ex",
+    "supertype": "Pokémon",
+    "number": "024/082",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612418_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612418_400w.jpg"
+    },
+    "tcgplayerId": "612418"
+  },
+  {
+    "id": "jp-flight-of-legends-036/082",
+    "name": "Articuno ex",
+    "supertype": "Pokémon",
+    "number": "036/082",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612378_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612378_400w.jpg"
+    },
+    "tcgplayerId": "612378"
+  },
+  {
+    "id": "jp-flight-of-legends-072/082",
+    "name": "Ditto",
+    "supertype": "Pokémon",
+    "number": "072/082",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612392_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612392_400w.jpg"
+    },
+    "tcgplayerId": "612392"
+  },
+  {
+    "id": "jp-flight-of-legends-063/082",
+    "name": "Marowak",
+    "supertype": "Pokémon",
+    "number": "063/082",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612416_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612416_400w.jpg"
+    },
+    "tcgplayerId": "612416"
+  },
+  {
+    "id": "jp-flight-of-legends-042/082",
+    "name": "Electrode ex",
+    "supertype": "Pokémon",
+    "number": "042/082",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612395_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612395_400w.jpg"
+    },
+    "tcgplayerId": "612395"
+  },
+  {
+    "id": "jp-flight-of-legends-019/082",
+    "name": "Scyther",
+    "supertype": "Pokémon",
+    "number": "019/082",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612443_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612443_400w.jpg"
+    },
+    "tcgplayerId": "612443"
+  },
+  {
+    "id": "jp-flight-of-legends-056/082",
+    "name": "Nidoking",
+    "supertype": "Pokémon",
+    "number": "056/082",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612422_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612422_400w.jpg"
+    },
+    "tcgplayerId": "612422"
+  },
+  {
+    "id": "jp-flight-of-legends-038/082",
+    "name": "Raichu",
+    "supertype": "Pokémon",
+    "number": "038/082",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612441_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612441_400w.jpg"
+    },
+    "tcgplayerId": "612441"
+  },
+  {
+    "id": "jp-flight-of-legends-054/082",
+    "name": "Mr. Mime ex - 054/082",
+    "supertype": "Pokémon",
+    "number": "054/082",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612420_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612420_400w.jpg"
+    },
+    "tcgplayerId": "612420"
+  },
+  {
+    "id": "jp-flight-of-legends-045/082",
+    "name": "Slowbro",
+    "supertype": "Pokémon",
+    "number": "045/082",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612446_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612446_400w.jpg"
+    },
+    "tcgplayerId": "612446"
+  },
+  {
+    "id": "jp-flight-of-legends-026/082",
+    "name": "Poliwhirl",
+    "supertype": "Pokémon",
+    "number": "026/082",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612435_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612435_400w.jpg"
+    },
+    "tcgplayerId": "612435"
+  },
+  {
+    "id": "jp-flight-of-legends-070/082",
+    "name": "Kangaskhan",
+    "supertype": "Pokémon",
+    "number": "070/082",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612408_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612408_400w.jpg"
+    },
+    "tcgplayerId": "612408"
+  },
+  {
+    "id": "jp-flight-of-legends-029/082",
+    "name": "Dewgong",
+    "supertype": "Pokémon",
+    "number": "029/082",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612390_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612390_400w.jpg"
+    },
+    "tcgplayerId": "612390"
+  },
+  {
+    "id": "jp-flight-of-legends-055/082",
+    "name": "Nidoqueen",
+    "supertype": "Pokémon",
+    "number": "055/082",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612423_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612423_400w.jpg"
+    },
+    "tcgplayerId": "612423"
+  },
+  {
+    "id": "jp-flight-of-legends-003/082",
+    "name": "Butterfree",
+    "supertype": "Pokémon",
+    "number": "003/082",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612382_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612382_400w.jpg"
+    },
+    "tcgplayerId": "612382"
+  },
+  {
+    "id": "jp-flight-of-legends-062/082",
+    "name": "Cubone",
+    "supertype": "Pokémon",
+    "number": "062/082",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612389_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612389_400w.jpg"
+    },
+    "tcgplayerId": "612389"
+  },
+  {
+    "id": "jp-flight-of-legends-037/082",
+    "name": "Pikachu",
+    "supertype": "Pokémon",
+    "number": "037/082",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612432_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612432_400w.jpg"
+    },
+    "tcgplayerId": "612432"
+  },
+  {
+    "id": "jp-flight-of-legends-034/082",
+    "name": "Magikarp",
+    "supertype": "Pokémon",
+    "number": "034/082",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612412_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612412_400w.jpg"
+    },
+    "tcgplayerId": "612412"
+  },
+  {
+    "id": "jp-flight-of-legends-047/082",
+    "name": "Haunter",
+    "supertype": "Pokémon",
+    "number": "047/082",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612405_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612405_400w.jpg"
+    },
+    "tcgplayerId": "612405"
+  },
+  {
+    "id": "jp-flight-of-legends-073/082",
+    "name": "Porygon",
+    "supertype": "Pokémon",
+    "number": "073/082",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612438_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612438_400w.jpg"
+    },
+    "tcgplayerId": "612438"
+  },
+  {
+    "id": "jp-flight-of-legends-044/082",
+    "name": "Slowpoke",
+    "supertype": "Pokémon",
+    "number": "044/082",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612447_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612447_400w.jpg"
+    },
+    "tcgplayerId": "612447"
+  },
+  {
+    "id": "jp-flight-of-legends-071/082",
+    "name": "Tauros",
+    "supertype": "Pokémon",
+    "number": "071/082",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612450_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612450_400w.jpg"
+    },
+    "tcgplayerId": "612450"
+  },
+  {
+    "id": "jp-flight-of-legends-015/082",
+    "name": "Bellsprout",
+    "supertype": "Pokémon",
+    "number": "015/082",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612380_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612380_400w.jpg"
+    },
+    "tcgplayerId": "612380"
+  },
+  {
+    "id": "jp-flight-of-legends-057/082",
+    "name": "Diglett",
+    "supertype": "Pokémon",
+    "number": "057/082",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612391_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612391_400w.jpg"
+    },
+    "tcgplayerId": "612391"
+  },
+  {
+    "id": "jp-flight-of-legends-021/082",
+    "name": "Arcanine",
+    "supertype": "Pokémon",
+    "number": "021/082",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612377_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612377_400w.jpg"
+    },
+    "tcgplayerId": "612377"
+  },
+  {
+    "id": "jp-flight-of-legends-001/082",
+    "name": "Caterpie",
+    "supertype": "Pokémon",
+    "number": "001/082",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612383_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612383_400w.jpg"
+    },
+    "tcgplayerId": "612383"
+  },
+  {
+    "id": "jp-flight-of-legends-033/082",
+    "name": "Kingler",
+    "supertype": "Pokémon",
+    "number": "033/082",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612409_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612409_400w.jpg"
+    },
+    "tcgplayerId": "612409"
+  },
+  {
+    "id": "jp-flight-of-legends-006/082",
+    "name": "Beedrill",
+    "supertype": "Pokémon",
+    "number": "006/082",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612379_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612379_400w.jpg"
+    },
+    "tcgplayerId": "612379"
+  },
+  {
+    "id": "jp-flight-of-legends-051/082",
+    "name": "Exeggcute",
+    "supertype": "Pokémon",
+    "number": "051/082",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612396_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612396_400w.jpg"
+    },
+    "tcgplayerId": "612396"
+  },
+  {
+    "id": "jp-flight-of-legends-022/082",
+    "name": "Ponyta",
+    "supertype": "Pokémon",
+    "number": "022/082",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612437_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612437_400w.jpg"
+    },
+    "tcgplayerId": "612437"
+  },
+  {
+    "id": "jp-flight-of-legends-010/082",
+    "name": "Nidorino",
+    "supertype": "Pokémon",
+    "number": "010/082",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612427_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612427_400w.jpg"
+    },
+    "tcgplayerId": "612427"
+  },
+  {
+    "id": "jp-flight-of-legends-030/082",
+    "name": "Shellder",
+    "supertype": "Pokémon",
+    "number": "030/082",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612445_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612445_400w.jpg"
+    },
+    "tcgplayerId": "612445"
+  },
+  {
+    "id": "jp-flight-of-legends-020/082",
+    "name": "Growlithe",
+    "supertype": "Pokémon",
+    "number": "020/082",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612403_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612403_400w.jpg"
+    },
+    "tcgplayerId": "612403"
+  },
+  {
+    "id": "jp-flight-of-legends-069/082",
+    "name": "Chansey",
+    "supertype": "Pokémon",
+    "number": "069/082",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612385_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612385_400w.jpg"
+    },
+    "tcgplayerId": "612385"
+  },
+  {
+    "id": "jp-flight-of-legends-016/082",
+    "name": "Weepinbell",
+    "supertype": "Pokémon",
+    "number": "016/082",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612457_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612457_400w.jpg"
+    },
+    "tcgplayerId": "612457"
+  },
+  {
+    "id": "jp-flight-of-legends-046/082",
+    "name": "Gastly",
+    "supertype": "Pokémon",
+    "number": "046/082",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612400_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612400_400w.jpg"
+    },
+    "tcgplayerId": "612400"
+  },
+  {
+    "id": "jp-flight-of-legends-014/082",
+    "name": "Venomoth",
+    "supertype": "Pokémon",
+    "number": "014/082",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612451_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612451_400w.jpg"
+    },
+    "tcgplayerId": "612451"
+  },
+  {
+    "id": "jp-flight-of-legends-004/082",
+    "name": "Weedle",
+    "supertype": "Pokémon",
+    "number": "004/082",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612456_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612456_400w.jpg"
+    },
+    "tcgplayerId": "612456"
+  },
+  {
+    "id": "jp-flight-of-legends-028/082",
+    "name": "Seel",
+    "supertype": "Pokémon",
+    "number": "028/082",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612444_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612444_400w.jpg"
+    },
+    "tcgplayerId": "612444"
+  },
+  {
+    "id": "jp-flight-of-legends-076/082",
+    "name": "VS Seeker",
+    "supertype": "Pokémon",
+    "number": "076/082",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612455_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612455_400w.jpg"
+    },
+    "tcgplayerId": "612455"
+  },
+  {
+    "id": "jp-flight-of-legends-013/082",
+    "name": "Venonat",
+    "supertype": "Pokémon",
+    "number": "013/082",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612452_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612452_400w.jpg"
+    },
+    "tcgplayerId": "612452"
+  },
+  {
+    "id": "jp-flight-of-legends-007/082",
+    "name": "NidoranF",
+    "supertype": "Pokémon",
+    "number": "007/082",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612424_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612424_400w.jpg"
+    },
+    "tcgplayerId": "612424"
+  },
+  {
+    "id": "jp-flight-of-legends-009/082",
+    "name": "NidoranM",
+    "supertype": "Pokémon",
+    "number": "009/082",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612425_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612425_400w.jpg"
+    },
+    "tcgplayerId": "612425"
+  },
+  {
+    "id": "jp-flight-of-legends-041/082",
+    "name": "Voltorb",
+    "supertype": "Pokémon",
+    "number": "041/082",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612454_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612454_400w.jpg"
+    },
+    "tcgplayerId": "612454"
+  },
+  {
+    "id": "jp-flight-of-legends-079/082",
+    "name": "Celio's Network",
+    "supertype": "Trainer",
+    "number": "079/082",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612384_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612384_400w.jpg"
+    },
+    "tcgplayerId": "612384"
+  },
+  {
+    "id": "jp-flight-of-legends-032/082",
+    "name": "Krabby",
+    "supertype": "Pokémon",
+    "number": "032/082",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612410_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612410_400w.jpg"
+    },
+    "tcgplayerId": "612410"
+  },
+  {
+    "id": "jp-flight-of-legends-077/082",
+    "name": "PokeDex HANDY909",
+    "supertype": "Pokémon",
+    "number": "077/082",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612433_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612433_400w.jpg"
+    },
+    "tcgplayerId": "612433"
+  },
+  {
+    "id": "jp-flight-of-legends-025/082",
+    "name": "Poliwag",
+    "supertype": "Pokémon",
+    "number": "025/082",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612434_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612434_400w.jpg"
+    },
+    "tcgplayerId": "612434"
+  },
+  {
+    "id": "jp-flight-of-legends-081/082",
+    "name": "Exp. Share",
+    "supertype": "Pokémon",
+    "number": "081/082",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612398_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612398_400w.jpg"
+    },
+    "tcgplayerId": "612398"
+  },
+  {
+    "id": "jp-flight-of-legends-061/082",
+    "name": "Onix",
+    "supertype": "Pokémon",
+    "number": "061/082",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612428_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612428_400w.jpg"
+    },
+    "tcgplayerId": "612428"
+  },
+  {
+    "id": "jp-flight-of-legends-078/082",
+    "name": "Professor Oak's Research",
+    "supertype": "Trainer",
+    "number": "078/082",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612440_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612440_400w.jpg"
+    },
+    "tcgplayerId": "612440"
+  },
+  {
+    "id": "jp-flight-of-legends-065/082",
+    "name": "Clefairy",
+    "supertype": "Pokémon",
+    "number": "065/082",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612387_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612387_400w.jpg"
+    },
+    "tcgplayerId": "612387"
+  },
+  {
+    "id": "jp-flight-of-legends-082/082",
+    "name": "Mt. Moon",
+    "supertype": "Pokémon",
+    "number": "082/082",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612421_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612421_400w.jpg"
+    },
+    "tcgplayerId": "612421"
+  },
+  {
+    "id": "jp-flight-of-legends-049/082",
+    "name": "Drowzee",
+    "supertype": "Pokémon",
+    "number": "049/082",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612393_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612393_400w.jpg"
+    },
+    "tcgplayerId": "612393"
+  },
+  {
+    "id": "jp-flight-of-legends-011/082",
+    "name": "Paras",
+    "supertype": "Pokémon",
+    "number": "011/082",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612429_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612429_400w.jpg"
+    },
+    "tcgplayerId": "612429"
+  },
+  {
+    "id": "jp-flight-of-legends-005/082",
+    "name": "Kakuna",
+    "supertype": "Pokémon",
+    "number": "005/082",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612407_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612407_400w.jpg"
+    },
+    "tcgplayerId": "612407"
+  },
+  {
+    "id": "jp-flight-of-legends-060/082",
+    "name": "Primeape",
+    "supertype": "Pokémon",
+    "number": "060/082",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612439_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612439_400w.jpg"
+    },
+    "tcgplayerId": "612439"
+  },
+  {
+    "id": "jp-flight-of-legends-058/082",
+    "name": "Dugtrio",
+    "supertype": "Pokémon",
+    "number": "058/082",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612394_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612394_400w.jpg"
+    },
+    "tcgplayerId": "612394"
+  },
+  {
+    "id": "jp-flight-of-legends-039/082",
+    "name": "Magnemite",
+    "supertype": "Pokémon",
+    "number": "039/082",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612413_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612413_400w.jpg"
+    },
+    "tcgplayerId": "612413"
+  },
+  {
+    "id": "jp-flight-of-legends-059/082",
+    "name": "Mankey",
+    "supertype": "Pokémon",
+    "number": "059/082",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612415_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612415_400w.jpg"
+    },
+    "tcgplayerId": "612415"
+  },
+  {
+    "id": "jp-flight-of-legends-012/082",
+    "name": "Parasect",
+    "supertype": "Pokémon",
+    "number": "012/082",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612430_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612430_400w.jpg"
+    },
+    "tcgplayerId": "612430"
+  },
+  {
+    "id": "jp-flight-of-legends-068/082",
+    "name": "Lickitung",
+    "supertype": "Pokémon",
+    "number": "068/082",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612411_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612411_400w.jpg"
+    },
+    "tcgplayerId": "612411"
+  }
+]

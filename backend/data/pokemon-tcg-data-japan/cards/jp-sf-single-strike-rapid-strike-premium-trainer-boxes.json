@@ -1,0 +1,50 @@
+[
+  {
+    "id": "jp-sf-single-strike-rapid-strike-premium-trainer-boxes-005/033",
+    "name": "Dedenne GX",
+    "supertype": "Pokémon",
+    "number": "005/033",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/596134_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/596134_400w.jpg"
+    },
+    "tcgplayerId": "596134"
+  },
+  {
+    "id": "jp-sf-single-strike-rapid-strike-premium-trainer-boxes-001/033",
+    "name": "Snom",
+    "supertype": "Pokémon",
+    "number": "001/033",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/596130_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/596130_400w.jpg"
+    },
+    "tcgplayerId": "596130"
+  },
+  {
+    "id": "jp-sf-single-strike-rapid-strike-premium-trainer-boxes-007/033",
+    "name": "Rapid Strike Urshifu V",
+    "supertype": "Pokémon",
+    "number": "007/033",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/596136_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/596136_400w.jpg"
+    },
+    "tcgplayerId": "596136"
+  },
+  {
+    "id": "jp-sf-single-strike-rapid-strike-premium-trainer-boxes-006/033",
+    "name": "Single Strike Urshifu V",
+    "supertype": "Pokémon",
+    "number": "006/033",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/596135_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/596135_400w.jpg"
+    },
+    "tcgplayerId": "596135"
+  }
+]

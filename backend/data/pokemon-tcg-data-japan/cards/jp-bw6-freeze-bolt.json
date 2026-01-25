@@ -1,0 +1,458 @@
+[
+  {
+    "id": "jp-bw6-freeze-bolt-063/059",
+    "name": "Cheren",
+    "supertype": "Pokémon",
+    "number": "063/059",
+    "rarity": "Super Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601588_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601588_400w.jpg"
+    },
+    "tcgplayerId": "601588"
+  },
+  {
+    "id": "jp-bw6-freeze-bolt-060/059",
+    "name": "Cresselia EX - 060/059",
+    "supertype": "Pokémon",
+    "number": "060/059",
+    "rarity": "Super Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601589_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601589_400w.jpg"
+    },
+    "tcgplayerId": "601589"
+  },
+  {
+    "id": "jp-bw6-freeze-bolt-061/059",
+    "name": "Landorus EX - 061/059",
+    "supertype": "Pokémon",
+    "number": "061/059",
+    "rarity": "Super Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601590_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601590_400w.jpg"
+    },
+    "tcgplayerId": "601590"
+  },
+  {
+    "id": "jp-bw6-freeze-bolt-012/059",
+    "name": "Charizard",
+    "supertype": "Pokémon",
+    "number": "012/059",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601575_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601575_400w.jpg"
+    },
+    "tcgplayerId": "601575"
+  },
+  {
+    "id": "jp-bw6-freeze-bolt-064/059",
+    "name": "Golurk",
+    "supertype": "Pokémon",
+    "number": "064/059",
+    "rarity": "Ultra Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601591_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601591_400w.jpg"
+    },
+    "tcgplayerId": "601591"
+  },
+  {
+    "id": "jp-bw6-freeze-bolt-027/059",
+    "name": "Cresselia EX - 027/059",
+    "supertype": "Pokémon",
+    "number": "027/059",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601576_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601576_400w.jpg"
+    },
+    "tcgplayerId": "601576"
+  },
+  {
+    "id": "jp-bw6-freeze-bolt-032/059",
+    "name": "Scolipede",
+    "supertype": "Pokémon",
+    "number": "032/059",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601584_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601584_400w.jpg"
+    },
+    "tcgplayerId": "601584"
+  },
+  {
+    "id": "jp-bw6-freeze-bolt-044/059",
+    "name": "Flygon",
+    "supertype": "Pokémon",
+    "number": "044/059",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601578_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601578_400w.jpg"
+    },
+    "tcgplayerId": "601578"
+  },
+  {
+    "id": "jp-bw6-freeze-bolt-024/059",
+    "name": "Zebstrika",
+    "supertype": "Pokémon",
+    "number": "024/059",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601586_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601586_400w.jpg"
+    },
+    "tcgplayerId": "601586"
+  },
+  {
+    "id": "jp-bw6-freeze-bolt-045/059",
+    "name": "Black Kyurem EX - 045/059",
+    "supertype": "Pokémon",
+    "number": "045/059",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601574_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601574_400w.jpg"
+    },
+    "tcgplayerId": "601574"
+  },
+  {
+    "id": "jp-bw6-freeze-bolt-040/059",
+    "name": "Landorus EX - 040/059",
+    "supertype": "Pokémon",
+    "number": "040/059",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601581_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601581_400w.jpg"
+    },
+    "tcgplayerId": "601581"
+  },
+  {
+    "id": "jp-bw6-freeze-bolt-004/059",
+    "name": "Bellossom",
+    "supertype": "Pokémon",
+    "number": "004/059",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601594_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601594_400w.jpg"
+    },
+    "tcgplayerId": "601594"
+  },
+  {
+    "id": "jp-bw6-freeze-bolt-020/059",
+    "name": "Delibird",
+    "supertype": "Pokémon",
+    "number": "020/059",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601554_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601554_400w.jpg"
+    },
+    "tcgplayerId": "601554"
+  },
+  {
+    "id": "jp-bw6-freeze-bolt-058/059",
+    "name": "Gold Potion",
+    "supertype": "Trainer",
+    "number": "058/059",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601580_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601580_400w.jpg"
+    },
+    "tcgplayerId": "601580"
+  },
+  {
+    "id": "jp-bw6-freeze-bolt-011/059",
+    "name": "Charmeleon",
+    "supertype": "Pokémon",
+    "number": "011/059",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601550_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601550_400w.jpg"
+    },
+    "tcgplayerId": "601550"
+  },
+  {
+    "id": "jp-bw6-freeze-bolt-010/059",
+    "name": "Charmander",
+    "supertype": "Pokémon",
+    "number": "010/059",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601549_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601549_400w.jpg"
+    },
+    "tcgplayerId": "601549"
+  },
+  {
+    "id": "jp-bw6-freeze-bolt-033/059",
+    "name": "Meloetta",
+    "supertype": "Pokémon",
+    "number": "033/059",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601583_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601583_400w.jpg"
+    },
+    "tcgplayerId": "601583"
+  },
+  {
+    "id": "jp-bw6-freeze-bolt-050/059",
+    "name": "Pidove",
+    "supertype": "Pokémon",
+    "number": "050/059",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601565_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601565_400w.jpg"
+    },
+    "tcgplayerId": "601565"
+  },
+  {
+    "id": "jp-bw6-freeze-bolt-042/059",
+    "name": "Liepard",
+    "supertype": "Pokémon",
+    "number": "042/059",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601582_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601582_400w.jpg"
+    },
+    "tcgplayerId": "601582"
+  },
+  {
+    "id": "jp-bw6-freeze-bolt-003/059",
+    "name": "Vileplume",
+    "supertype": "Pokémon",
+    "number": "003/059",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601585_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601585_400w.jpg"
+    },
+    "tcgplayerId": "601585"
+  },
+  {
+    "id": "jp-bw6-freeze-bolt-017/059",
+    "name": "Swinub",
+    "supertype": "Pokémon",
+    "number": "017/059",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601569_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601569_400w.jpg"
+    },
+    "tcgplayerId": "601569"
+  },
+  {
+    "id": "jp-bw6-freeze-bolt-015/059",
+    "name": "Marill",
+    "supertype": "Pokémon",
+    "number": "015/059",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601560_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601560_400w.jpg"
+    },
+    "tcgplayerId": "601560"
+  },
+  {
+    "id": "jp-bw6-freeze-bolt-038/059",
+    "name": "Mienfoo",
+    "supertype": "Pokémon",
+    "number": "038/059",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601561_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601561_400w.jpg"
+    },
+    "tcgplayerId": "601561"
+  },
+  {
+    "id": "jp-bw6-freeze-bolt-036/059",
+    "name": "Trapinch",
+    "supertype": "Pokémon",
+    "number": "036/059",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601571_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601571_400w.jpg"
+    },
+    "tcgplayerId": "601571"
+  },
+  {
+    "id": "jp-bw6-freeze-bolt-035/059",
+    "name": "Gliscor",
+    "supertype": "Pokémon",
+    "number": "035/059",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601579_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601579_400w.jpg"
+    },
+    "tcgplayerId": "601579"
+  },
+  {
+    "id": "jp-bw6-freeze-bolt-009/059",
+    "name": "Whimsicott",
+    "supertype": "Pokémon",
+    "number": "009/059",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601610_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601610_400w.jpg"
+    },
+    "tcgplayerId": "601610"
+  },
+  {
+    "id": "jp-bw6-freeze-bolt-048/059",
+    "name": "Buneary",
+    "supertype": "Pokémon",
+    "number": "048/059",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601548_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601548_400w.jpg"
+    },
+    "tcgplayerId": "601548"
+  },
+  {
+    "id": "jp-bw6-freeze-bolt-046/059",
+    "name": "Rattata",
+    "supertype": "Pokémon",
+    "number": "046/059",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601567_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601567_400w.jpg"
+    },
+    "tcgplayerId": "601567"
+  },
+  {
+    "id": "jp-bw6-freeze-bolt-022/059",
+    "name": "Jellicent",
+    "supertype": "Pokémon",
+    "number": "022/059",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601599_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601599_400w.jpg"
+    },
+    "tcgplayerId": "601599"
+  },
+  {
+    "id": "jp-bw6-freeze-bolt-013/059",
+    "name": "Darumaka",
+    "supertype": "Pokémon",
+    "number": "013/059",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601553_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601553_400w.jpg"
+    },
+    "tcgplayerId": "601553"
+  },
+  {
+    "id": "jp-bw6-freeze-bolt-021/059",
+    "name": "Frillish",
+    "supertype": "Pokémon",
+    "number": "021/059",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601555_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601555_400w.jpg"
+    },
+    "tcgplayerId": "601555"
+  },
+  {
+    "id": "jp-bw6-freeze-bolt-028/059",
+    "name": "Munna",
+    "supertype": "Pokémon",
+    "number": "028/059",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601563_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601563_400w.jpg"
+    },
+    "tcgplayerId": "601563"
+  },
+  {
+    "id": "jp-bw6-freeze-bolt-006/059",
+    "name": "Combee",
+    "supertype": "Pokémon",
+    "number": "006/059",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601551_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601551_400w.jpg"
+    },
+    "tcgplayerId": "601551"
+  },
+  {
+    "id": "jp-bw6-freeze-bolt-005/059",
+    "name": "Heracross",
+    "supertype": "Pokémon",
+    "number": "005/059",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601558_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601558_400w.jpg"
+    },
+    "tcgplayerId": "601558"
+  },
+  {
+    "id": "jp-bw6-freeze-bolt-037/059",
+    "name": "Lunatone",
+    "supertype": "Pokémon",
+    "number": "037/059",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601600_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601600_400w.jpg"
+    },
+    "tcgplayerId": "601600"
+  },
+  {
+    "id": "jp-bw6-freeze-bolt-031/059",
+    "name": "Whirlipede",
+    "supertype": "Pokémon",
+    "number": "031/059",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601573_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601573_400w.jpg"
+    },
+    "tcgplayerId": "601573"
+  },
+  {
+    "id": "jp-bw6-freeze-bolt-002/059",
+    "name": "Gloom",
+    "supertype": "Pokémon",
+    "number": "002/059",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601557_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601557_400w.jpg"
+    },
+    "tcgplayerId": "601557"
+  },
+  {
+    "id": "jp-bw6-freeze-bolt-029/059",
+    "name": "Musharna",
+    "supertype": "Pokémon",
+    "number": "029/059",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601602_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601602_400w.jpg"
+    },
+    "tcgplayerId": "601602"
+  }
+]

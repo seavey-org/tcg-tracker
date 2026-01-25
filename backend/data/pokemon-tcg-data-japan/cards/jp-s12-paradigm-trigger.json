@@ -1,0 +1,1526 @@
+[
+  {
+    "id": "jp-s12-paradigm-trigger-110/098",
+    "name": "Lugia V - 110/098",
+    "supertype": "Pokémon",
+    "number": "110/098",
+    "rarity": "Super Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/570168_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/570168_400w.jpg"
+    },
+    "tcgplayerId": "570168"
+  },
+  {
+    "id": "jp-s12-paradigm-trigger-paradigm-trigger-booster-box",
+    "name": "Paradigm Trigger Booster Box",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/565250_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/565250_400w.jpg"
+    },
+    "tcgplayerId": "565250"
+  },
+  {
+    "id": "jp-s12-paradigm-trigger-103/098",
+    "name": "Unown V - 103/098",
+    "supertype": "Pokémon",
+    "number": "103/098",
+    "rarity": "Super Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/570161_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/570161_400w.jpg"
+    },
+    "tcgplayerId": "570161"
+  },
+  {
+    "id": "jp-s12-paradigm-trigger-108/098",
+    "name": "Regidrago V - 108/098",
+    "supertype": "Pokémon",
+    "number": "108/098",
+    "rarity": "Super Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/570166_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/570166_400w.jpg"
+    },
+    "tcgplayerId": "570166"
+  },
+  {
+    "id": "jp-s12-paradigm-trigger-123/098",
+    "name": "Lugia VSTAR - 123/098",
+    "supertype": "Pokémon",
+    "number": "123/098",
+    "rarity": "Ultra Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/570181_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/570181_400w.jpg"
+    },
+    "tcgplayerId": "570181"
+  },
+  {
+    "id": "jp-s12-paradigm-trigger-118/098",
+    "name": "Lugia VSTAR - 118/098",
+    "supertype": "Pokémon",
+    "number": "118/098",
+    "rarity": "Hyper Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/570176_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/570176_400w.jpg"
+    },
+    "tcgplayerId": "570176"
+  },
+  {
+    "id": "jp-s12-paradigm-trigger-109/098",
+    "name": "Lugia V - 109/098",
+    "supertype": "Pokémon",
+    "number": "109/098",
+    "rarity": "Super Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/570167_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/570167_400w.jpg"
+    },
+    "tcgplayerId": "570167"
+  },
+  {
+    "id": "jp-s12-paradigm-trigger-117/098",
+    "name": "Regidrago VSTAR - 117/098",
+    "supertype": "Pokémon",
+    "number": "117/098",
+    "rarity": "Hyper Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/570175_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/570175_400w.jpg"
+    },
+    "tcgplayerId": "570175"
+  },
+  {
+    "id": "jp-s12-paradigm-trigger-113/098",
+    "name": "Candice - 113/098",
+    "supertype": "Pokémon",
+    "number": "113/098",
+    "rarity": "Super Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/570171_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/570171_400w.jpg"
+    },
+    "tcgplayerId": "570171"
+  },
+  {
+    "id": "jp-s12-paradigm-trigger-106/098",
+    "name": "Skuntank V - 106/098",
+    "supertype": "Pokémon",
+    "number": "106/098",
+    "rarity": "Super Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/570164_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/570164_400w.jpg"
+    },
+    "tcgplayerId": "570164"
+  },
+  {
+    "id": "jp-s12-paradigm-trigger-116/098",
+    "name": "Unown VSTAR - 116/098",
+    "supertype": "Pokémon",
+    "number": "116/098",
+    "rarity": "Hyper Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/570174_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/570174_400w.jpg"
+    },
+    "tcgplayerId": "570174"
+  },
+  {
+    "id": "jp-s12-paradigm-trigger-125/098",
+    "name": "Gapejaw Bog",
+    "supertype": "Pokémon",
+    "number": "125/098",
+    "rarity": "Ultra Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/570183_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/570183_400w.jpg"
+    },
+    "tcgplayerId": "570183"
+  },
+  {
+    "id": "jp-s12-paradigm-trigger-121/098",
+    "name": "Candice - 121/098",
+    "supertype": "Pokémon",
+    "number": "121/098",
+    "rarity": "Hyper Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/570179_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/570179_400w.jpg"
+    },
+    "tcgplayerId": "570179"
+  },
+  {
+    "id": "jp-s12-paradigm-trigger-paradigm-trigger-booster-pack",
+    "name": "Paradigm Trigger Booster Pack",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/565251_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/565251_400w.jpg"
+    },
+    "tcgplayerId": "565251"
+  },
+  {
+    "id": "jp-s12-paradigm-trigger-079/098",
+    "name": "Lugia V - 079/098",
+    "supertype": "Pokémon",
+    "number": "079/098",
+    "rarity": "Double Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/570137_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/570137_400w.jpg"
+    },
+    "tcgplayerId": "570137"
+  },
+  {
+    "id": "jp-s12-paradigm-trigger-114/098",
+    "name": "Lance - 114/098",
+    "supertype": "Pokémon",
+    "number": "114/098",
+    "rarity": "Super Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/570172_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/570172_400w.jpg"
+    },
+    "tcgplayerId": "570172"
+  },
+  {
+    "id": "jp-s12-paradigm-trigger-107/098",
+    "name": "Regidrago V - 107/098",
+    "supertype": "Pokémon",
+    "number": "107/098",
+    "rarity": "Super Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/570165_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/570165_400w.jpg"
+    },
+    "tcgplayerId": "570165"
+  },
+  {
+    "id": "jp-s12-paradigm-trigger-115/098",
+    "name": "Regieleki VMAX - 115/098",
+    "supertype": "Pokémon",
+    "number": "115/098",
+    "rarity": "Hyper Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/570173_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/570173_400w.jpg"
+    },
+    "tcgplayerId": "570173"
+  },
+  {
+    "id": "jp-s12-paradigm-trigger-122/098",
+    "name": "Lance - 122/098",
+    "supertype": "Pokémon",
+    "number": "122/098",
+    "rarity": "Hyper Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/570180_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/570180_400w.jpg"
+    },
+    "tcgplayerId": "570180"
+  },
+  {
+    "id": "jp-s12-paradigm-trigger-120/098",
+    "name": "Brandon - 120/098",
+    "supertype": "Pokémon",
+    "number": "120/098",
+    "rarity": "Hyper Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/570178_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/570178_400w.jpg"
+    },
+    "tcgplayerId": "570178"
+  },
+  {
+    "id": "jp-s12-paradigm-trigger-124/098",
+    "name": "Leafy Camo Poncho",
+    "supertype": "Pokémon",
+    "number": "124/098",
+    "rarity": "Ultra Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/570182_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/570182_400w.jpg"
+    },
+    "tcgplayerId": "570182"
+  },
+  {
+    "id": "jp-s12-paradigm-trigger-111/098",
+    "name": "Worker - 111/098",
+    "supertype": "Pokémon",
+    "number": "111/098",
+    "rarity": "Super Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/570169_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/570169_400w.jpg"
+    },
+    "tcgplayerId": "570169"
+  },
+  {
+    "id": "jp-s12-paradigm-trigger-119/098",
+    "name": "Worker - 119/098",
+    "supertype": "Pokémon",
+    "number": "119/098",
+    "rarity": "Hyper Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/570177_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/570177_400w.jpg"
+    },
+    "tcgplayerId": "570177"
+  },
+  {
+    "id": "jp-s12-paradigm-trigger-100/098",
+    "name": "Omastar V - 100/098",
+    "supertype": "Pokémon",
+    "number": "100/098",
+    "rarity": "Super Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/570158_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/570158_400w.jpg"
+    },
+    "tcgplayerId": "570158"
+  },
+  {
+    "id": "jp-s12-paradigm-trigger-105/098",
+    "name": "Skuntank V - 105/098",
+    "supertype": "Pokémon",
+    "number": "105/098",
+    "rarity": "Super Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/570163_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/570163_400w.jpg"
+    },
+    "tcgplayerId": "570163"
+  },
+  {
+    "id": "jp-s12-paradigm-trigger-101/098",
+    "name": "Regieleki V - 101/098",
+    "supertype": "Pokémon",
+    "number": "101/098",
+    "rarity": "Super Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/570159_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/570159_400w.jpg"
+    },
+    "tcgplayerId": "570159"
+  },
+  {
+    "id": "jp-s12-paradigm-trigger-104/098",
+    "name": "Hisuian Arcanine V - 104/098",
+    "supertype": "Pokémon",
+    "number": "104/098",
+    "rarity": "Super Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/570162_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/570162_400w.jpg"
+    },
+    "tcgplayerId": "570162"
+  },
+  {
+    "id": "jp-s12-paradigm-trigger-080/098",
+    "name": "Lugia VSTAR - 080/098",
+    "supertype": "Pokémon",
+    "number": "080/098",
+    "rarity": "Triple Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/570138_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/570138_400w.jpg"
+    },
+    "tcgplayerId": "570138"
+  },
+  {
+    "id": "jp-s12-paradigm-trigger-102/098",
+    "name": "Unown V - 102/098",
+    "supertype": "Pokémon",
+    "number": "102/098",
+    "rarity": "Super Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/570160_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/570160_400w.jpg"
+    },
+    "tcgplayerId": "570160"
+  },
+  {
+    "id": "jp-s12-paradigm-trigger-099/098",
+    "name": "Chesnaught V - 099/098",
+    "supertype": "Pokémon",
+    "number": "099/098",
+    "rarity": "Super Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/570157_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/570157_400w.jpg"
+    },
+    "tcgplayerId": "570157"
+  },
+  {
+    "id": "jp-s12-paradigm-trigger-112/098",
+    "name": "Brandon - 112/098",
+    "supertype": "Pokémon",
+    "number": "112/098",
+    "rarity": "Super Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/570170_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/570170_400w.jpg"
+    },
+    "tcgplayerId": "570170"
+  },
+  {
+    "id": "jp-s12-paradigm-trigger-092/098",
+    "name": "Forest Seal Stone",
+    "supertype": "Pokémon",
+    "number": "092/098",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/570150_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/570150_400w.jpg"
+    },
+    "tcgplayerId": "570150"
+  },
+  {
+    "id": "jp-s12-paradigm-trigger-077/098",
+    "name": "Regidrago VSTAR - 077/098",
+    "supertype": "Pokémon",
+    "number": "077/098",
+    "rarity": "Triple Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/570135_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/570135_400w.jpg"
+    },
+    "tcgplayerId": "570135"
+  },
+  {
+    "id": "jp-s12-paradigm-trigger-036/098",
+    "name": "Unown VSTAR - 036/098",
+    "supertype": "Pokémon",
+    "number": "036/098",
+    "rarity": "Triple Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/570094_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/570094_400w.jpg"
+    },
+    "tcgplayerId": "570094"
+  },
+  {
+    "id": "jp-s12-paradigm-trigger-034/098",
+    "name": "Regieleki VMAX - 034/098",
+    "supertype": "Pokémon",
+    "number": "034/098",
+    "rarity": "Triple Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/570092_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/570092_400w.jpg"
+    },
+    "tcgplayerId": "570092"
+  },
+  {
+    "id": "jp-s12-paradigm-trigger-055/098",
+    "name": "Stonjourner",
+    "supertype": "Pokémon",
+    "number": "055/098",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/570113_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/570113_400w.jpg"
+    },
+    "tcgplayerId": "570113"
+  },
+  {
+    "id": "jp-s12-paradigm-trigger-072/098",
+    "name": "Dragonite",
+    "supertype": "Pokémon",
+    "number": "072/098",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/570130_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/570130_400w.jpg"
+    },
+    "tcgplayerId": "570130"
+  },
+  {
+    "id": "jp-s12-paradigm-trigger-042/098",
+    "name": "Reuniclus",
+    "supertype": "Pokémon",
+    "number": "042/098",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/570100_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/570100_400w.jpg"
+    },
+    "tcgplayerId": "570100"
+  },
+  {
+    "id": "jp-s12-paradigm-trigger-002/098",
+    "name": "Gloom",
+    "supertype": "Pokémon",
+    "number": "002/098",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/570060_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/570060_400w.jpg"
+    },
+    "tcgplayerId": "570060"
+  },
+  {
+    "id": "jp-s12-paradigm-trigger-046/098",
+    "name": "Hisuian Arcanine V - 046/098",
+    "supertype": "Pokémon",
+    "number": "046/098",
+    "rarity": "Double Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/570104_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/570104_400w.jpg"
+    },
+    "tcgplayerId": "570104"
+  },
+  {
+    "id": "jp-s12-paradigm-trigger-018/098",
+    "name": "Omastar V - 018/098",
+    "supertype": "Pokémon",
+    "number": "018/098",
+    "rarity": "Double Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/570076_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/570076_400w.jpg"
+    },
+    "tcgplayerId": "570076"
+  },
+  {
+    "id": "jp-s12-paradigm-trigger-066/098",
+    "name": "Lairon",
+    "supertype": "Pokémon",
+    "number": "066/098",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/570124_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/570124_400w.jpg"
+    },
+    "tcgplayerId": "570124"
+  },
+  {
+    "id": "jp-s12-paradigm-trigger-035/098",
+    "name": "Unown V - 035/098",
+    "supertype": "Pokémon",
+    "number": "035/098",
+    "rarity": "Double Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/570093_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/570093_400w.jpg"
+    },
+    "tcgplayerId": "570093"
+  },
+  {
+    "id": "jp-s12-paradigm-trigger-005/098",
+    "name": "Tangrowth",
+    "supertype": "Pokémon",
+    "number": "005/098",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/570063_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/570063_400w.jpg"
+    },
+    "tcgplayerId": "570063"
+  },
+  {
+    "id": "jp-s12-paradigm-trigger-009/098",
+    "name": "Chesnaught V - 009/098",
+    "supertype": "Pokémon",
+    "number": "009/098",
+    "rarity": "Double Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/570067_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/570067_400w.jpg"
+    },
+    "tcgplayerId": "570067"
+  },
+  {
+    "id": "jp-s12-paradigm-trigger-084/098",
+    "name": "Rufflet",
+    "supertype": "Pokémon",
+    "number": "084/098",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/570142_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/570142_400w.jpg"
+    },
+    "tcgplayerId": "570142"
+  },
+  {
+    "id": "jp-s12-paradigm-trigger-056/098",
+    "name": "Skuntank V - 056/098",
+    "supertype": "Pokémon",
+    "number": "056/098",
+    "rarity": "Double Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/570114_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/570114_400w.jpg"
+    },
+    "tcgplayerId": "570114"
+  },
+  {
+    "id": "jp-s12-paradigm-trigger-076/098",
+    "name": "Regidrago V - 076/098",
+    "supertype": "Pokémon",
+    "number": "076/098",
+    "rarity": "Double Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/570134_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/570134_400w.jpg"
+    },
+    "tcgplayerId": "570134"
+  },
+  {
+    "id": "jp-s12-paradigm-trigger-024/098",
+    "name": "Pikachu",
+    "supertype": "Pokémon",
+    "number": "024/098",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/570082_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/570082_400w.jpg"
+    },
+    "tcgplayerId": "570082"
+  },
+  {
+    "id": "jp-s12-paradigm-trigger-078/098",
+    "name": "Tauros",
+    "supertype": "Pokémon",
+    "number": "078/098",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/570136_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/570136_400w.jpg"
+    },
+    "tcgplayerId": "570136"
+  },
+  {
+    "id": "jp-s12-paradigm-trigger-083/098",
+    "name": "Archeops",
+    "supertype": "Pokémon",
+    "number": "083/098",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/570141_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/570141_400w.jpg"
+    },
+    "tcgplayerId": "570141"
+  },
+  {
+    "id": "jp-s12-paradigm-trigger-020/098",
+    "name": "Glalie",
+    "supertype": "Pokémon",
+    "number": "020/098",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/570078_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/570078_400w.jpg"
+    },
+    "tcgplayerId": "570078"
+  },
+  {
+    "id": "jp-s12-paradigm-trigger-096/098",
+    "name": "Lance - 096/098",
+    "supertype": "Pokémon",
+    "number": "096/098",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/570154_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/570154_400w.jpg"
+    },
+    "tcgplayerId": "570154"
+  },
+  {
+    "id": "jp-s12-paradigm-trigger-051/098",
+    "name": "Terrakion",
+    "supertype": "Pokémon",
+    "number": "051/098",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/570109_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/570109_400w.jpg"
+    },
+    "tcgplayerId": "570109"
+  },
+  {
+    "id": "jp-s12-paradigm-trigger-033/098",
+    "name": "Regieleki V - 033/098",
+    "supertype": "Pokémon",
+    "number": "033/098",
+    "rarity": "Double Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/570091_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/570091_400w.jpg"
+    },
+    "tcgplayerId": "570091"
+  },
+  {
+    "id": "jp-s12-paradigm-trigger-032/098",
+    "name": "Zeraora",
+    "supertype": "Pokémon",
+    "number": "032/098",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/570090_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/570090_400w.jpg"
+    },
+    "tcgplayerId": "570090"
+  },
+  {
+    "id": "jp-s12-paradigm-trigger-012/098",
+    "name": "Victini",
+    "supertype": "Pokémon",
+    "number": "012/098",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/570070_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/570070_400w.jpg"
+    },
+    "tcgplayerId": "570070"
+  },
+  {
+    "id": "jp-s12-paradigm-trigger-071/098",
+    "name": "Dragonair",
+    "supertype": "Pokémon",
+    "number": "071/098",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/570129_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/570129_400w.jpg"
+    },
+    "tcgplayerId": "570129"
+  },
+  {
+    "id": "jp-s12-paradigm-trigger-054/098",
+    "name": "Lycanroc",
+    "supertype": "Pokémon",
+    "number": "054/098",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/570112_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/570112_400w.jpg"
+    },
+    "tcgplayerId": "570112"
+  },
+  {
+    "id": "jp-s12-paradigm-trigger-025/098",
+    "name": "Raichu",
+    "supertype": "Pokémon",
+    "number": "025/098",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/570083_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/570083_400w.jpg"
+    },
+    "tcgplayerId": "570083"
+  },
+  {
+    "id": "jp-s12-paradigm-trigger-097/098",
+    "name": "Primordial Altar",
+    "supertype": "Pokémon",
+    "number": "097/098",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/570155_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/570155_400w.jpg"
+    },
+    "tcgplayerId": "570155"
+  },
+  {
+    "id": "jp-s12-paradigm-trigger-023/098",
+    "name": "Keldeo",
+    "supertype": "Pokémon",
+    "number": "023/098",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/570081_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/570081_400w.jpg"
+    },
+    "tcgplayerId": "570081"
+  },
+  {
+    "id": "jp-s12-paradigm-trigger-022/098",
+    "name": "Relicanth",
+    "supertype": "Pokémon",
+    "number": "022/098",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/570080_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/570080_400w.jpg"
+    },
+    "tcgplayerId": "570080"
+  },
+  {
+    "id": "jp-s12-paradigm-trigger-044/098",
+    "name": "Beheeyem",
+    "supertype": "Pokémon",
+    "number": "044/098",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/570102_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/570102_400w.jpg"
+    },
+    "tcgplayerId": "570102"
+  },
+  {
+    "id": "jp-s12-paradigm-trigger-004/098",
+    "name": "Tangela",
+    "supertype": "Pokémon",
+    "number": "004/098",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/570062_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/570062_400w.jpg"
+    },
+    "tcgplayerId": "570062"
+  },
+  {
+    "id": "jp-s12-paradigm-trigger-021/098",
+    "name": "Froslass",
+    "supertype": "Pokémon",
+    "number": "021/098",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/570079_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/570079_400w.jpg"
+    },
+    "tcgplayerId": "570079"
+  },
+  {
+    "id": "jp-s12-paradigm-trigger-007/098",
+    "name": "Ariados",
+    "supertype": "Pokémon",
+    "number": "007/098",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/570065_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/570065_400w.jpg"
+    },
+    "tcgplayerId": "570065"
+  },
+  {
+    "id": "jp-s12-paradigm-trigger-058/098",
+    "name": "Liepard",
+    "supertype": "Pokémon",
+    "number": "058/098",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/570116_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/570116_400w.jpg"
+    },
+    "tcgplayerId": "570116"
+  },
+  {
+    "id": "jp-s12-paradigm-trigger-090/098",
+    "name": "Unidentified Fossil",
+    "supertype": "Pokémon",
+    "number": "090/098",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/570148_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/570148_400w.jpg"
+    },
+    "tcgplayerId": "570148"
+  },
+  {
+    "id": "jp-s12-paradigm-trigger-028/098",
+    "name": "Luxray",
+    "supertype": "Pokémon",
+    "number": "028/098",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/570086_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/570086_400w.jpg"
+    },
+    "tcgplayerId": "570086"
+  },
+  {
+    "id": "jp-s12-paradigm-trigger-027/098",
+    "name": "Luxio",
+    "supertype": "Pokémon",
+    "number": "027/098",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/570085_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/570085_400w.jpg"
+    },
+    "tcgplayerId": "570085"
+  },
+  {
+    "id": "jp-s12-paradigm-trigger-011/098",
+    "name": "Rapidash",
+    "supertype": "Pokémon",
+    "number": "011/098",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/570069_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/570069_400w.jpg"
+    },
+    "tcgplayerId": "570069"
+  },
+  {
+    "id": "jp-s12-paradigm-trigger-075/098",
+    "name": "Zygarde",
+    "supertype": "Pokémon",
+    "number": "075/098",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/570133_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/570133_400w.jpg"
+    },
+    "tcgplayerId": "570133"
+  },
+  {
+    "id": "jp-s12-paradigm-trigger-029/098",
+    "name": "Stunfisk",
+    "supertype": "Pokémon",
+    "number": "029/098",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/570087_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/570087_400w.jpg"
+    },
+    "tcgplayerId": "570087"
+  },
+  {
+    "id": "jp-s12-paradigm-trigger-038/098",
+    "name": "Medicham",
+    "supertype": "Pokémon",
+    "number": "038/098",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/570096_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/570096_400w.jpg"
+    },
+    "tcgplayerId": "570096"
+  },
+  {
+    "id": "jp-s12-paradigm-trigger-014/098",
+    "name": "Volcarona",
+    "supertype": "Pokémon",
+    "number": "014/098",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/570072_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/570072_400w.jpg"
+    },
+    "tcgplayerId": "570072"
+  },
+  {
+    "id": "jp-s12-paradigm-trigger-060/098",
+    "name": "Skrelp",
+    "supertype": "Pokémon",
+    "number": "060/098",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/570118_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/570118_400w.jpg"
+    },
+    "tcgplayerId": "570118"
+  },
+  {
+    "id": "jp-s12-paradigm-trigger-088/098",
+    "name": "Oranguru",
+    "supertype": "Pokémon",
+    "number": "088/098",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/570146_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/570146_400w.jpg"
+    },
+    "tcgplayerId": "570146"
+  },
+  {
+    "id": "jp-s12-paradigm-trigger-074/098",
+    "name": "Noivern",
+    "supertype": "Pokémon",
+    "number": "074/098",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/570132_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/570132_400w.jpg"
+    },
+    "tcgplayerId": "570132"
+  },
+  {
+    "id": "jp-s12-paradigm-trigger-026/098",
+    "name": "Shinx",
+    "supertype": "Pokémon",
+    "number": "026/098",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/570084_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/570084_400w.jpg"
+    },
+    "tcgplayerId": "570084"
+  },
+  {
+    "id": "jp-s12-paradigm-trigger-081/098",
+    "name": "Shaymin",
+    "supertype": "Pokémon",
+    "number": "081/098",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/570139_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/570139_400w.jpg"
+    },
+    "tcgplayerId": "570139"
+  },
+  {
+    "id": "jp-s12-paradigm-trigger-053/098",
+    "name": "Rockruff",
+    "supertype": "Pokémon",
+    "number": "053/098",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/570111_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/570111_400w.jpg"
+    },
+    "tcgplayerId": "570111"
+  },
+  {
+    "id": "jp-s12-paradigm-trigger-003/098",
+    "name": "Bellossom",
+    "supertype": "Pokémon",
+    "number": "003/098",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/570061_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/570061_400w.jpg"
+    },
+    "tcgplayerId": "570061"
+  },
+  {
+    "id": "jp-s12-paradigm-trigger-010/098",
+    "name": "Ponyta",
+    "supertype": "Pokémon",
+    "number": "010/098",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/570068_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/570068_400w.jpg"
+    },
+    "tcgplayerId": "570068"
+  },
+  {
+    "id": "jp-s12-paradigm-trigger-091/098",
+    "name": "Earthen Seal Stone",
+    "supertype": "Pokémon",
+    "number": "091/098",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/570149_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/570149_400w.jpg"
+    },
+    "tcgplayerId": "570149"
+  },
+  {
+    "id": "jp-s12-paradigm-trigger-013/098",
+    "name": "Larvesta",
+    "supertype": "Pokémon",
+    "number": "013/098",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/570071_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/570071_400w.jpg"
+    },
+    "tcgplayerId": "570071"
+  },
+  {
+    "id": "jp-s12-paradigm-trigger-040/098",
+    "name": "Solosis",
+    "supertype": "Pokémon",
+    "number": "040/098",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/570098_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/570098_400w.jpg"
+    },
+    "tcgplayerId": "570098"
+  },
+  {
+    "id": "jp-s12-paradigm-trigger-048/098",
+    "name": "Claydol",
+    "supertype": "Pokémon",
+    "number": "048/098",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/570106_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/570106_400w.jpg"
+    },
+    "tcgplayerId": "570106"
+  },
+  {
+    "id": "jp-s12-paradigm-trigger-001/098",
+    "name": "Oddish",
+    "supertype": "Pokémon",
+    "number": "001/098",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/570059_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/570059_400w.jpg"
+    },
+    "tcgplayerId": "570059"
+  },
+  {
+    "id": "jp-s12-paradigm-trigger-073/098",
+    "name": "Noibat",
+    "supertype": "Pokémon",
+    "number": "073/098",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/570131_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/570131_400w.jpg"
+    },
+    "tcgplayerId": "570131"
+  },
+  {
+    "id": "jp-s12-paradigm-trigger-037/098",
+    "name": "Meditite",
+    "supertype": "Pokémon",
+    "number": "037/098",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/570095_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/570095_400w.jpg"
+    },
+    "tcgplayerId": "570095"
+  },
+  {
+    "id": "jp-s12-paradigm-trigger-098/098",
+    "name": "Regenerative Energy",
+    "supertype": "Energy",
+    "number": "098/098",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/570156_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/570156_400w.jpg"
+    },
+    "tcgplayerId": "570156"
+  },
+  {
+    "id": "jp-s12-paradigm-trigger-068/098",
+    "name": "Cobalion",
+    "supertype": "Pokémon",
+    "number": "068/098",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/570126_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/570126_400w.jpg"
+    },
+    "tcgplayerId": "570126"
+  },
+  {
+    "id": "jp-s12-paradigm-trigger-019/098",
+    "name": "Snorunt",
+    "supertype": "Pokémon",
+    "number": "019/098",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/570077_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/570077_400w.jpg"
+    },
+    "tcgplayerId": "570077"
+  },
+  {
+    "id": "jp-s12-paradigm-trigger-089/098",
+    "name": "Quad Stone",
+    "supertype": "Pokémon",
+    "number": "089/098",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/570147_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/570147_400w.jpg"
+    },
+    "tcgplayerId": "570147"
+  },
+  {
+    "id": "jp-s12-paradigm-trigger-008/098",
+    "name": "Virizion",
+    "supertype": "Pokémon",
+    "number": "008/098",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/570066_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/570066_400w.jpg"
+    },
+    "tcgplayerId": "570066"
+  },
+  {
+    "id": "jp-s12-paradigm-trigger-050/098",
+    "name": "Armaldo",
+    "supertype": "Pokémon",
+    "number": "050/098",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/570108_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/570108_400w.jpg"
+    },
+    "tcgplayerId": "570108"
+  },
+  {
+    "id": "jp-s12-paradigm-trigger-043/098",
+    "name": "Elgyem",
+    "supertype": "Pokémon",
+    "number": "043/098",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/570101_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/570101_400w.jpg"
+    },
+    "tcgplayerId": "570101"
+  },
+  {
+    "id": "jp-s12-paradigm-trigger-086/098",
+    "name": "Yungoos",
+    "supertype": "Pokémon",
+    "number": "086/098",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/570144_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/570144_400w.jpg"
+    },
+    "tcgplayerId": "570144"
+  },
+  {
+    "id": "jp-s12-paradigm-trigger-095/098",
+    "name": "Candice - 095/098",
+    "supertype": "Pokémon",
+    "number": "095/098",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/570153_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/570153_400w.jpg"
+    },
+    "tcgplayerId": "570153"
+  },
+  {
+    "id": "jp-s12-paradigm-trigger-094/098",
+    "name": "Brandon - 094/098",
+    "supertype": "Pokémon",
+    "number": "094/098",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/570152_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/570152_400w.jpg"
+    },
+    "tcgplayerId": "570152"
+  },
+  {
+    "id": "jp-s12-paradigm-trigger-093/098",
+    "name": "Worker - 093/098",
+    "supertype": "Pokémon",
+    "number": "093/098",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/570151_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/570151_400w.jpg"
+    },
+    "tcgplayerId": "570151"
+  },
+  {
+    "id": "jp-s12-paradigm-trigger-031/098",
+    "name": "Heliolisk",
+    "supertype": "Pokémon",
+    "number": "031/098",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/570089_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/570089_400w.jpg"
+    },
+    "tcgplayerId": "570089"
+  },
+  {
+    "id": "jp-s12-paradigm-trigger-015/098",
+    "name": "Litten",
+    "supertype": "Pokémon",
+    "number": "015/098",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/570073_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/570073_400w.jpg"
+    },
+    "tcgplayerId": "570073"
+  },
+  {
+    "id": "jp-s12-paradigm-trigger-016/098",
+    "name": "Torracat",
+    "supertype": "Pokémon",
+    "number": "016/098",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/570074_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/570074_400w.jpg"
+    },
+    "tcgplayerId": "570074"
+  },
+  {
+    "id": "jp-s12-paradigm-trigger-047/098",
+    "name": "Baltoy",
+    "supertype": "Pokémon",
+    "number": "047/098",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/570105_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/570105_400w.jpg"
+    },
+    "tcgplayerId": "570105"
+  },
+  {
+    "id": "jp-s12-paradigm-trigger-087/098",
+    "name": "Gumshoos",
+    "supertype": "Pokémon",
+    "number": "087/098",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/570145_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/570145_400w.jpg"
+    },
+    "tcgplayerId": "570145"
+  },
+  {
+    "id": "jp-s12-paradigm-trigger-017/098",
+    "name": "Incineroar",
+    "supertype": "Pokémon",
+    "number": "017/098",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/570075_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/570075_400w.jpg"
+    },
+    "tcgplayerId": "570075"
+  },
+  {
+    "id": "jp-s12-paradigm-trigger-070/098",
+    "name": "Dratini",
+    "supertype": "Pokémon",
+    "number": "070/098",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/570128_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/570128_400w.jpg"
+    },
+    "tcgplayerId": "570128"
+  },
+  {
+    "id": "jp-s12-paradigm-trigger-062/098",
+    "name": "Morpeko",
+    "supertype": "Pokémon",
+    "number": "062/098",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/570120_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/570120_400w.jpg"
+    },
+    "tcgplayerId": "570120"
+  },
+  {
+    "id": "jp-s12-paradigm-trigger-065/098",
+    "name": "Aron",
+    "supertype": "Pokémon",
+    "number": "065/098",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/570123_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/570123_400w.jpg"
+    },
+    "tcgplayerId": "570123"
+  },
+  {
+    "id": "jp-s12-paradigm-trigger-064/098",
+    "name": "Galarian Perrserker",
+    "supertype": "Pokémon",
+    "number": "064/098",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/570122_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/570122_400w.jpg"
+    },
+    "tcgplayerId": "570122"
+  },
+  {
+    "id": "jp-s12-paradigm-trigger-030/098",
+    "name": "Helioptile",
+    "supertype": "Pokémon",
+    "number": "030/098",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/570088_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/570088_400w.jpg"
+    },
+    "tcgplayerId": "570088"
+  },
+  {
+    "id": "jp-s12-paradigm-trigger-006/098",
+    "name": "Spinarak",
+    "supertype": "Pokémon",
+    "number": "006/098",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/570064_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/570064_400w.jpg"
+    },
+    "tcgplayerId": "570064"
+  },
+  {
+    "id": "jp-s12-paradigm-trigger-061/098",
+    "name": "Dragalge",
+    "supertype": "Pokémon",
+    "number": "061/098",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/570119_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/570119_400w.jpg"
+    },
+    "tcgplayerId": "570119"
+  },
+  {
+    "id": "jp-s12-paradigm-trigger-052/098",
+    "name": "Pancham",
+    "supertype": "Pokémon",
+    "number": "052/098",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/570110_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/570110_400w.jpg"
+    },
+    "tcgplayerId": "570110"
+  },
+  {
+    "id": "jp-s12-paradigm-trigger-041/098",
+    "name": "Duosion",
+    "supertype": "Pokémon",
+    "number": "041/098",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/570099_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/570099_400w.jpg"
+    },
+    "tcgplayerId": "570099"
+  },
+  {
+    "id": "jp-s12-paradigm-trigger-057/098",
+    "name": "Purrloin",
+    "supertype": "Pokémon",
+    "number": "057/098",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/570115_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/570115_400w.jpg"
+    },
+    "tcgplayerId": "570115"
+  },
+  {
+    "id": "jp-s12-paradigm-trigger-067/098",
+    "name": "Aggron",
+    "supertype": "Pokémon",
+    "number": "067/098",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/570125_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/570125_400w.jpg"
+    },
+    "tcgplayerId": "570125"
+  },
+  {
+    "id": "jp-s12-paradigm-trigger-045/098",
+    "name": "Dedenne",
+    "supertype": "Pokémon",
+    "number": "045/098",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/570103_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/570103_400w.jpg"
+    },
+    "tcgplayerId": "570103"
+  },
+  {
+    "id": "jp-s12-paradigm-trigger-069/098",
+    "name": "Togedemaru",
+    "supertype": "Pokémon",
+    "number": "069/098",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/570127_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/570127_400w.jpg"
+    },
+    "tcgplayerId": "570127"
+  },
+  {
+    "id": "jp-s12-paradigm-trigger-063/098",
+    "name": "Galarian Meowth",
+    "supertype": "Pokémon",
+    "number": "063/098",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/570121_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/570121_400w.jpg"
+    },
+    "tcgplayerId": "570121"
+  },
+  {
+    "id": "jp-s12-paradigm-trigger-082/098",
+    "name": "Archen",
+    "supertype": "Pokémon",
+    "number": "082/098",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/570140_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/570140_400w.jpg"
+    },
+    "tcgplayerId": "570140"
+  },
+  {
+    "id": "jp-s12-paradigm-trigger-059/098",
+    "name": "Pangoro",
+    "supertype": "Pokémon",
+    "number": "059/098",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/570117_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/570117_400w.jpg"
+    },
+    "tcgplayerId": "570117"
+  },
+  {
+    "id": "jp-s12-paradigm-trigger-049/098",
+    "name": "Anorith",
+    "supertype": "Pokémon",
+    "number": "049/098",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/570107_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/570107_400w.jpg"
+    },
+    "tcgplayerId": "570107"
+  },
+  {
+    "id": "jp-s12-paradigm-trigger-085/098",
+    "name": "Hisuian Braviary",
+    "supertype": "Pokémon",
+    "number": "085/098",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/570143_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/570143_400w.jpg"
+    },
+    "tcgplayerId": "570143"
+  },
+  {
+    "id": "jp-s12-paradigm-trigger-039/098",
+    "name": "Sigilyph",
+    "supertype": "Pokémon",
+    "number": "039/098",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/570097_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/570097_400w.jpg"
+    },
+    "tcgplayerId": "570097"
+  }
+]

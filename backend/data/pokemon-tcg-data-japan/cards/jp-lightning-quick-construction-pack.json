@@ -1,0 +1,62 @@
+[
+  {
+    "id": "jp-lightning-quick-construction-pack-002/015",
+    "name": "Raichu ex",
+    "supertype": "Pokémon",
+    "number": "002/015",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612201_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612201_400w.jpg"
+    },
+    "tcgplayerId": "612201"
+  },
+  {
+    "id": "jp-lightning-quick-construction-pack-001/015",
+    "name": "Pikachu",
+    "supertype": "Pokémon",
+    "number": "001/015",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612200_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612200_400w.jpg"
+    },
+    "tcgplayerId": "612200"
+  },
+  {
+    "id": "jp-lightning-quick-construction-pack-006/015",
+    "name": "Manectric",
+    "supertype": "Pokémon",
+    "number": "006/015",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612203_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612203_400w.jpg"
+    },
+    "tcgplayerId": "612203"
+  },
+  {
+    "id": "jp-lightning-quick-construction-pack-007/015",
+    "name": "Farfetch'd",
+    "supertype": "Pokémon",
+    "number": "007/015",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612202_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612202_400w.jpg"
+    },
+    "tcgplayerId": "612202"
+  },
+  {
+    "id": "jp-lightning-quick-construction-pack-003/015",
+    "name": "Voltorb",
+    "supertype": "Pokémon",
+    "number": "003/015",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612206_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612206_400w.jpg"
+    },
+    "tcgplayerId": "612206"
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "id": "jp-master-kit-side-deck-006/012",
+    "name": "Aura's Lucario ex",
+    "supertype": "Pokémon",
+    "number": "006/012",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/611639_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/611639_400w.jpg"
+    },
+    "tcgplayerId": "611639"
+  },
+  {
+    "id": "jp-master-kit-side-deck-003/012",
+    "name": "Rayquaza ex",
+    "supertype": "Pokémon",
+    "number": "003/012",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/611630_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/611630_400w.jpg"
+    },
+    "tcgplayerId": "611630"
+  }
+]

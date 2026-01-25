@@ -1,0 +1,554 @@
+[
+  {
+    "id": "jp-bw7-plasma-gale-077/070",
+    "name": "Charizard",
+    "supertype": "Pokémon",
+    "number": "077/070",
+    "rarity": "Ultra Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601885_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601885_400w.jpg"
+    },
+    "tcgplayerId": "601885"
+  },
+  {
+    "id": "jp-bw7-plasma-gale-074/070",
+    "name": "Lugia EX (Team Plasma) - 074/070",
+    "supertype": "Pokémon",
+    "number": "074/070",
+    "rarity": "Super Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601881_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601881_400w.jpg"
+    },
+    "tcgplayerId": "601881"
+  },
+  {
+    "id": "jp-bw7-plasma-gale-059/070",
+    "name": "Lugia EX (Team Plasma) - 059/070",
+    "supertype": "Pokémon",
+    "number": "059/070",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601870_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601870_400w.jpg"
+    },
+    "tcgplayerId": "601870"
+  },
+  {
+    "id": "jp-bw7-plasma-gale-071/070",
+    "name": "Victini EX - 071/070",
+    "supertype": "Pokémon",
+    "number": "071/070",
+    "rarity": "Super Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601883_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601883_400w.jpg"
+    },
+    "tcgplayerId": "601883"
+  },
+  {
+    "id": "jp-bw7-plasma-gale-073/070",
+    "name": "Cobalion EX - 073/070",
+    "supertype": "Pokémon",
+    "number": "073/070",
+    "rarity": "Super Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601879_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601879_400w.jpg"
+    },
+    "tcgplayerId": "601879"
+  },
+  {
+    "id": "jp-bw7-plasma-gale-072/070",
+    "name": "Articuno EX (Team Plasma) - 072/070",
+    "supertype": "Pokémon",
+    "number": "072/070",
+    "rarity": "Super Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601878_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601878_400w.jpg"
+    },
+    "tcgplayerId": "601878"
+  },
+  {
+    "id": "jp-bw7-plasma-gale-055/070",
+    "name": "Snorlax (Team Plasma)",
+    "supertype": "Pokémon",
+    "number": "055/070",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601903_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601903_400w.jpg"
+    },
+    "tcgplayerId": "601903"
+  },
+  {
+    "id": "jp-bw7-plasma-gale-043/070",
+    "name": "Lucario",
+    "supertype": "Pokémon",
+    "number": "043/070",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601869_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601869_400w.jpg"
+    },
+    "tcgplayerId": "601869"
+  },
+  {
+    "id": "jp-bw7-plasma-gale-035/070",
+    "name": "Giratina (Team Plasma)",
+    "supertype": "Pokémon",
+    "number": "035/070",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601867_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601867_400w.jpg"
+    },
+    "tcgplayerId": "601867"
+  },
+  {
+    "id": "jp-bw7-plasma-gale-016/070",
+    "name": "Articuno EX (Team Plasma) - 016/070",
+    "supertype": "Pokémon",
+    "number": "016/070",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601862_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601862_400w.jpg"
+    },
+    "tcgplayerId": "601862"
+  },
+  {
+    "id": "jp-bw7-plasma-gale-012/070",
+    "name": "Victini EX - 012/070",
+    "supertype": "Pokémon",
+    "number": "012/070",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601875_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601875_400w.jpg"
+    },
+    "tcgplayerId": "601875"
+  },
+  {
+    "id": "jp-bw7-plasma-gale-017/070",
+    "name": "Lotad",
+    "supertype": "Pokémon",
+    "number": "017/070",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601844_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601844_400w.jpg"
+    },
+    "tcgplayerId": "601844"
+  },
+  {
+    "id": "jp-bw7-plasma-gale-056/070",
+    "name": "Togepi",
+    "supertype": "Pokémon",
+    "number": "056/070",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601856_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601856_400w.jpg"
+    },
+    "tcgplayerId": "601856"
+  },
+  {
+    "id": "jp-bw7-plasma-gale-030/070",
+    "name": "Koffing",
+    "supertype": "Pokémon",
+    "number": "030/070",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601841_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601841_400w.jpg"
+    },
+    "tcgplayerId": "601841"
+  },
+  {
+    "id": "jp-bw7-plasma-gale-032/070",
+    "name": "Ralts",
+    "supertype": "Pokémon",
+    "number": "032/070",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601851_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601851_400w.jpg"
+    },
+    "tcgplayerId": "601851"
+  },
+  {
+    "id": "jp-bw7-plasma-gale-052/070",
+    "name": "Clefable",
+    "supertype": "Pokémon",
+    "number": "052/070",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601889_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601889_400w.jpg"
+    },
+    "tcgplayerId": "601889"
+  },
+  {
+    "id": "jp-bw7-plasma-gale-042/070",
+    "name": "Riolu",
+    "supertype": "Pokémon",
+    "number": "042/070",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601852_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601852_400w.jpg"
+    },
+    "tcgplayerId": "601852"
+  },
+  {
+    "id": "jp-bw7-plasma-gale-049/070",
+    "name": "Cobalion EX - 049/070",
+    "supertype": "Pokémon",
+    "number": "049/070",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601863_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601863_400w.jpg"
+    },
+    "tcgplayerId": "601863"
+  },
+  {
+    "id": "jp-bw7-plasma-gale-051/070",
+    "name": "Clefairy",
+    "supertype": "Pokémon",
+    "number": "051/070",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601831_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601831_400w.jpg"
+    },
+    "tcgplayerId": "601831"
+  },
+  {
+    "id": "jp-bw7-plasma-gale-001/070",
+    "name": "Turtwig",
+    "supertype": "Pokémon",
+    "number": "001/070",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601859_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601859_400w.jpg"
+    },
+    "tcgplayerId": "601859"
+  },
+  {
+    "id": "jp-bw7-plasma-gale-040/070",
+    "name": "Phanpy",
+    "supertype": "Pokémon",
+    "number": "040/070",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601849_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601849_400w.jpg"
+    },
+    "tcgplayerId": "601849"
+  },
+  {
+    "id": "jp-bw7-plasma-gale-034/070",
+    "name": "Gallade",
+    "supertype": "Pokémon",
+    "number": "034/070",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601866_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601866_400w.jpg"
+    },
+    "tcgplayerId": "601866"
+  },
+  {
+    "id": "jp-bw7-plasma-gale-033/070",
+    "name": "Kirlia",
+    "supertype": "Pokémon",
+    "number": "033/070",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601840_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601840_400w.jpg"
+    },
+    "tcgplayerId": "601840"
+  },
+  {
+    "id": "jp-bw7-plasma-gale-061/070",
+    "name": "Watchog (Team Plasma)",
+    "supertype": "Pokémon",
+    "number": "061/070",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601860_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601860_400w.jpg"
+    },
+    "tcgplayerId": "601860"
+  },
+  {
+    "id": "jp-bw7-plasma-gale-050/070",
+    "name": "Druddigon (Team Plasma)",
+    "supertype": "Pokémon",
+    "number": "050/070",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601835_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601835_400w.jpg"
+    },
+    "tcgplayerId": "601835"
+  },
+  {
+    "id": "jp-bw7-plasma-gale-026/070",
+    "name": "Rotom (Team Plasma)",
+    "supertype": "Pokémon",
+    "number": "026/070",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601853_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601853_400w.jpg"
+    },
+    "tcgplayerId": "601853"
+  },
+  {
+    "id": "jp-bw7-plasma-gale-058/070",
+    "name": "Togekiss",
+    "supertype": "Pokémon",
+    "number": "058/070",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601874_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601874_400w.jpg"
+    },
+    "tcgplayerId": "601874"
+  },
+  {
+    "id": "jp-bw7-plasma-gale-008/070",
+    "name": "Amoonguss (Team Plasma)",
+    "supertype": "Pokémon",
+    "number": "008/070",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601827_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601827_400w.jpg"
+    },
+    "tcgplayerId": "601827"
+  },
+  {
+    "id": "jp-bw7-plasma-gale-057/070",
+    "name": "Togetic",
+    "supertype": "Pokémon",
+    "number": "057/070",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601857_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601857_400w.jpg"
+    },
+    "tcgplayerId": "601857"
+  },
+  {
+    "id": "jp-bw7-plasma-gale-002/070",
+    "name": "Grotle",
+    "supertype": "Pokémon",
+    "number": "002/070",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601894_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601894_400w.jpg"
+    },
+    "tcgplayerId": "601894"
+  },
+  {
+    "id": "jp-bw7-plasma-gale-063/070",
+    "name": "Hypnotoxic Laser",
+    "supertype": "Pokémon",
+    "number": "063/070",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601896_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601896_400w.jpg"
+    },
+    "tcgplayerId": "601896"
+  },
+  {
+    "id": "jp-bw7-plasma-gale-021/070",
+    "name": "Cubchoo",
+    "supertype": "Pokémon",
+    "number": "021/070",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601832_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601832_400w.jpg"
+    },
+    "tcgplayerId": "601832"
+  },
+  {
+    "id": "jp-bw7-plasma-gale-006/070",
+    "name": "Maractus",
+    "supertype": "Pokémon",
+    "number": "006/070",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601846_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601846_400w.jpg"
+    },
+    "tcgplayerId": "601846"
+  },
+  {
+    "id": "jp-bw7-plasma-gale-010/070",
+    "name": "Monferno",
+    "supertype": "Pokémon",
+    "number": "010/070",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601899_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601899_400w.jpg"
+    },
+    "tcgplayerId": "601899"
+  },
+  {
+    "id": "jp-bw7-plasma-gale-038/070",
+    "name": "Elgyem",
+    "supertype": "Pokémon",
+    "number": "038/070",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601837_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601837_400w.jpg"
+    },
+    "tcgplayerId": "601837"
+  },
+  {
+    "id": "jp-bw7-plasma-gale-037/070",
+    "name": "Garbodor (Team Plasma)",
+    "supertype": "Pokémon",
+    "number": "037/070",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601839_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601839_400w.jpg"
+    },
+    "tcgplayerId": "601839"
+  },
+  {
+    "id": "jp-bw7-plasma-gale-022/070",
+    "name": "Beartic (Team Plasma)",
+    "supertype": "Pokémon",
+    "number": "022/070",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601887_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601887_400w.jpg"
+    },
+    "tcgplayerId": "601887"
+  },
+  {
+    "id": "jp-bw7-plasma-gale-031/070",
+    "name": "Weezing (Team Plasma)",
+    "supertype": "Pokémon",
+    "number": "031/070",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601877_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601877_400w.jpg"
+    },
+    "tcgplayerId": "601877"
+  },
+  {
+    "id": "jp-bw7-plasma-gale-014/070",
+    "name": "Simisear",
+    "supertype": "Pokémon",
+    "number": "014/070",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601902_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601902_400w.jpg"
+    },
+    "tcgplayerId": "601902"
+  },
+  {
+    "id": "jp-bw7-plasma-gale-045/070",
+    "name": "Liepard (Team Plasma)",
+    "supertype": "Pokémon",
+    "number": "045/070",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601842_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601842_400w.jpg"
+    },
+    "tcgplayerId": "601842"
+  },
+  {
+    "id": "jp-bw7-plasma-gale-048/070",
+    "name": "Durant (Team Plasma)",
+    "supertype": "Pokémon",
+    "number": "048/070",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601836_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601836_400w.jpg"
+    },
+    "tcgplayerId": "601836"
+  },
+  {
+    "id": "jp-bw7-plasma-gale-036/070",
+    "name": "Trubbish",
+    "supertype": "Pokémon",
+    "number": "036/070",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601858_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601858_400w.jpg"
+    },
+    "tcgplayerId": "601858"
+  },
+  {
+    "id": "jp-bw7-plasma-gale-046/070",
+    "name": "Scraggy",
+    "supertype": "Pokémon",
+    "number": "046/070",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601855_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601855_400w.jpg"
+    },
+    "tcgplayerId": "601855"
+  },
+  {
+    "id": "jp-bw7-plasma-gale-003/070",
+    "name": "Torterra (Team Plasma)",
+    "supertype": "Pokémon",
+    "number": "003/070",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601905_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601905_400w.jpg"
+    },
+    "tcgplayerId": "601905"
+  },
+  {
+    "id": "jp-bw7-plasma-gale-039/070",
+    "name": "Beheeyem (Team Plasma)",
+    "supertype": "Pokémon",
+    "number": "039/070",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601828_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601828_400w.jpg"
+    },
+    "tcgplayerId": "601828"
+  },
+  {
+    "id": "jp-bw7-plasma-gale-009/070",
+    "name": "Chimchar",
+    "supertype": "Pokémon",
+    "number": "009/070",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/601830_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/601830_400w.jpg"
+    },
+    "tcgplayerId": "601830"
+  }
+]

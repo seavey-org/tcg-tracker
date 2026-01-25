@@ -1,0 +1,38 @@
+[
+  {
+    "id": "jp-holon-research-tower-water-quarter-deck-003/015",
+    "name": "Vaporeon ex",
+    "supertype": "Pokémon",
+    "number": "003/015",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/611255_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/611255_400w.jpg"
+    },
+    "tcgplayerId": "611255"
+  },
+  {
+    "id": "jp-holon-research-tower-water-quarter-deck-006/015",
+    "name": "Azumarill (Delta Species)",
+    "supertype": "Pokémon",
+    "number": "006/015",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/611258_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/611258_400w.jpg"
+    },
+    "tcgplayerId": "611258"
+  },
+  {
+    "id": "jp-holon-research-tower-water-quarter-deck-015/015",
+    "name": "Holon Energy WP",
+    "supertype": "Energy",
+    "number": "015/015",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/611251_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/611251_400w.jpg"
+    },
+    "tcgplayerId": "611251"
+  }
+]

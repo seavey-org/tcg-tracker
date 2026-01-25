@@ -1,0 +1,74 @@
+[
+  {
+    "id": "jp-palkia-lv-x-constructed-standard-deck-palkia-lv.x",
+    "name": "Palkia LV.X",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/609165_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/609165_400w.jpg"
+    },
+    "tcgplayerId": "609165"
+  },
+  {
+    "id": "jp-palkia-lv-x-constructed-standard-deck-spinda",
+    "name": "Spinda",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/609167_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/609167_400w.jpg"
+    },
+    "tcgplayerId": "609167"
+  },
+  {
+    "id": "jp-palkia-lv-x-constructed-standard-deck-ralts",
+    "name": "Ralts",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/609160_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/609160_400w.jpg"
+    },
+    "tcgplayerId": "609160"
+  },
+  {
+    "id": "jp-palkia-lv-x-constructed-standard-deck-kirlia",
+    "name": "Kirlia",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/609161_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/609161_400w.jpg"
+    },
+    "tcgplayerId": "609161"
+  },
+  {
+    "id": "jp-palkia-lv-x-constructed-standard-deck-palkia",
+    "name": "Palkia",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/609162_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/609162_400w.jpg"
+    },
+    "tcgplayerId": "609162"
+  },
+  {
+    "id": "jp-palkia-lv-x-constructed-standard-deck-gallade",
+    "name": "Gallade",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/609156_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/609156_400w.jpg"
+    },
+    "tcgplayerId": "609156"
+  }
+]

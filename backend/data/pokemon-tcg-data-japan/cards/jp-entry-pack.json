@@ -1,0 +1,134 @@
+[
+  {
+    "id": "jp-entry-pack-infernape",
+    "name": "Infernape",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/609210_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/609210_400w.jpg"
+    },
+    "tcgplayerId": "609210"
+  },
+  {
+    "id": "jp-entry-pack-torterra",
+    "name": "Torterra",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/609209_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/609209_400w.jpg"
+    },
+    "tcgplayerId": "609209"
+  },
+  {
+    "id": "jp-entry-pack-riolu",
+    "name": "Riolu",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/609216_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/609216_400w.jpg"
+    },
+    "tcgplayerId": "609216"
+  },
+  {
+    "id": "jp-entry-pack-wobbuffet",
+    "name": "Wobbuffet",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/609226_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/609226_400w.jpg"
+    },
+    "tcgplayerId": "609226"
+  },
+  {
+    "id": "jp-entry-pack-chimchar",
+    "name": "Chimchar",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/609205_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/609205_400w.jpg"
+    },
+    "tcgplayerId": "609205"
+  },
+  {
+    "id": "jp-entry-pack-lucario",
+    "name": "Lucario",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/609214_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/609214_400w.jpg"
+    },
+    "tcgplayerId": "609214"
+  },
+  {
+    "id": "jp-entry-pack-luxio",
+    "name": "Luxio",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/609225_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/609225_400w.jpg"
+    },
+    "tcgplayerId": "609225"
+  },
+  {
+    "id": "jp-entry-pack-pachirisu",
+    "name": "Pachirisu",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/609206_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/609206_400w.jpg"
+    },
+    "tcgplayerId": "609206"
+  },
+  {
+    "id": "jp-entry-pack-piplup",
+    "name": "Piplup",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/609204_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/609204_400w.jpg"
+    },
+    "tcgplayerId": "609204"
+  },
+  {
+    "id": "jp-entry-pack-shinx",
+    "name": "Shinx",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/609208_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/609208_400w.jpg"
+    },
+    "tcgplayerId": "609208"
+  },
+  {
+    "id": "jp-entry-pack-bidoof",
+    "name": "Bidoof",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/609217_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/609217_400w.jpg"
+    },
+    "tcgplayerId": "609217"
+  }
+]

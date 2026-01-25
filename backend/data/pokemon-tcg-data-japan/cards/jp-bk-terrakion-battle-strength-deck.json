@@ -1,0 +1,50 @@
+[
+  {
+    "id": "jp-bk-terrakion-battle-strength-deck-001/014",
+    "name": "Joltik",
+    "supertype": "Pokémon",
+    "number": "001/014",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/605013_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/605013_400w.jpg"
+    },
+    "tcgplayerId": "605013"
+  },
+  {
+    "id": "jp-bk-terrakion-battle-strength-deck-013/014",
+    "name": "Terrakion",
+    "supertype": "Pokémon",
+    "number": "013/014",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/605020_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/605020_400w.jpg"
+    },
+    "tcgplayerId": "605020"
+  },
+  {
+    "id": "jp-bk-terrakion-battle-strength-deck-006/014",
+    "name": "Boldore",
+    "supertype": "Pokémon",
+    "number": "006/014",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/605018_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/605018_400w.jpg"
+    },
+    "tcgplayerId": "605018"
+  },
+  {
+    "id": "jp-bk-terrakion-battle-strength-deck-005/014",
+    "name": "Roggenrola",
+    "supertype": "Pokémon",
+    "number": "005/014",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/605017_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/605017_400w.jpg"
+    },
+    "tcgplayerId": "605017"
+  }
+]

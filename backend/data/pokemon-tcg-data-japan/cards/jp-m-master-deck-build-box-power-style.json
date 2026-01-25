@@ -1,0 +1,98 @@
+[
+  {
+    "id": "jp-m-master-deck-build-box-power-style-010/049",
+    "name": "Gengar EX",
+    "supertype": "Pokémon",
+    "number": "010/049",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/606421_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/606421_400w.jpg"
+    },
+    "tcgplayerId": "606421"
+  },
+  {
+    "id": "jp-m-master-deck-build-box-power-style-017/049",
+    "name": "Primal Groudon EX",
+    "supertype": "Pokémon",
+    "number": "017/049",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/606428_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/606428_400w.jpg"
+    },
+    "tcgplayerId": "606428"
+  },
+  {
+    "id": "jp-m-master-deck-build-box-power-style-001/049",
+    "name": "Charizard EX",
+    "supertype": "Pokémon",
+    "number": "001/049",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/606404_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/606404_400w.jpg"
+    },
+    "tcgplayerId": "606404"
+  },
+  {
+    "id": "jp-m-master-deck-build-box-power-style-016/049",
+    "name": "Groudon EX",
+    "supertype": "Pokémon",
+    "number": "016/049",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/606426_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/606426_400w.jpg"
+    },
+    "tcgplayerId": "606426"
+  },
+  {
+    "id": "jp-m-master-deck-build-box-power-style-023/049",
+    "name": "Xerneas EX",
+    "supertype": "Pokémon",
+    "number": "023/049",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/606390_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/606390_400w.jpg"
+    },
+    "tcgplayerId": "606390"
+  },
+  {
+    "id": "jp-m-master-deck-build-box-power-style-025/049",
+    "name": "Miltank",
+    "supertype": "Pokémon",
+    "number": "025/049",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/606410_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/606410_400w.jpg"
+    },
+    "tcgplayerId": "606410"
+  },
+  {
+    "id": "jp-m-master-deck-build-box-power-style-009/049",
+    "name": "Crobat",
+    "supertype": "Pokémon",
+    "number": "009/049",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/606420_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/606420_400w.jpg"
+    },
+    "tcgplayerId": "606420"
+  },
+  {
+    "id": "jp-m-master-deck-build-box-power-style-018/049",
+    "name": "Lucario EX",
+    "supertype": "Pokémon",
+    "number": "018/049",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/606411_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/606411_400w.jpg"
+    },
+    "tcgplayerId": "606411"
+  }
+]

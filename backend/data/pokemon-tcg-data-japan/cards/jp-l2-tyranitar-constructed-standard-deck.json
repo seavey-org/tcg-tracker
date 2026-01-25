@@ -1,0 +1,38 @@
+[
+  {
+    "id": "jp-l2-tyranitar-constructed-standard-deck-010/019",
+    "name": "Stunky",
+    "supertype": "Pokémon",
+    "number": "010/019",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/611147_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/611147_400w.jpg"
+    },
+    "tcgplayerId": "611147"
+  },
+  {
+    "id": "jp-l2-tyranitar-constructed-standard-deck-018/019",
+    "name": "Team Rocket's Trickery",
+    "supertype": "Trainer",
+    "number": "018/019",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/611139_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/611139_400w.jpg"
+    },
+    "tcgplayerId": "611139"
+  },
+  {
+    "id": "jp-l2-tyranitar-constructed-standard-deck-005/019",
+    "name": "Murkrow",
+    "supertype": "Pokémon",
+    "number": "005/019",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/611144_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/611144_400w.jpg"
+    },
+    "tcgplayerId": "611144"
+  }
+]

@@ -1,0 +1,1298 @@
+[
+  {
+    "id": "jp-darkness-and-to-light-shining-tyranitar",
+    "name": "Shining Tyranitar",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Shining",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575531_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575531_400w.jpg"
+    },
+    "tcgplayerId": "575531"
+  },
+  {
+    "id": "jp-darkness-and-to-light-shining-steelix",
+    "name": "Shining Steelix",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Shining",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575530_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575530_400w.jpg"
+    },
+    "tcgplayerId": "575530"
+  },
+  {
+    "id": "jp-darkness-and-to-light-shining-kabutops",
+    "name": "Shining Kabutops",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Shining",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575526_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575526_400w.jpg"
+    },
+    "tcgplayerId": "575526"
+  },
+  {
+    "id": "jp-darkness-and-to-light-dark-gengar",
+    "name": "Dark Gengar",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575495_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575495_400w.jpg"
+    },
+    "tcgplayerId": "575495"
+  },
+  {
+    "id": "jp-darkness-and-to-light-dark-espeon",
+    "name": "Dark Espeon",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575493_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575493_400w.jpg"
+    },
+    "tcgplayerId": "575493"
+  },
+  {
+    "id": "jp-darkness-and-to-light-light-arcanine",
+    "name": "Light Arcanine",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575500_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575500_400w.jpg"
+    },
+    "tcgplayerId": "575500"
+  },
+  {
+    "id": "jp-darkness-and-to-light-light-dragonite",
+    "name": "Light Dragonite",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575502_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575502_400w.jpg"
+    },
+    "tcgplayerId": "575502"
+  },
+  {
+    "id": "jp-darkness-and-to-light-dark-tyranitar",
+    "name": "Dark Tyranitar",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575499_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575499_400w.jpg"
+    },
+    "tcgplayerId": "575499"
+  },
+  {
+    "id": "jp-darkness-and-to-light-229",
+    "name": "Dark Houndoom",
+    "supertype": "Pokémon",
+    "number": "229",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/577165_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/577165_400w.jpg"
+    },
+    "tcgplayerId": "577165"
+  },
+  {
+    "id": "jp-darkness-and-to-light-light-vaporeon",
+    "name": "Light Vaporeon",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575555_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575555_400w.jpg"
+    },
+    "tcgplayerId": "575555"
+  },
+  {
+    "id": "jp-darkness-and-to-light-dark-scizor",
+    "name": "Dark Scizor",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575497_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575497_400w.jpg"
+    },
+    "tcgplayerId": "575497"
+  },
+  {
+    "id": "jp-darkness-and-to-light-dark-typhlosion",
+    "name": "Dark Typhlosion",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575498_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575498_400w.jpg"
+    },
+    "tcgplayerId": "575498"
+  },
+  {
+    "id": "jp-darkness-and-to-light-light-jolteon",
+    "name": "Light Jolteon",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575551_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575551_400w.jpg"
+    },
+    "tcgplayerId": "575551"
+  },
+  {
+    "id": "jp-darkness-and-to-light-unown-w",
+    "name": "Unown W",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575522_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575522_400w.jpg"
+    },
+    "tcgplayerId": "575522"
+  },
+  {
+    "id": "jp-darkness-and-to-light-dark-feraligatr",
+    "name": "Dark Feraligatr",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575494_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575494_400w.jpg"
+    },
+    "tcgplayerId": "575494"
+  },
+  {
+    "id": "jp-darkness-and-to-light-dark-crobat",
+    "name": "Dark Crobat",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575491_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575491_400w.jpg"
+    },
+    "tcgplayerId": "575491"
+  },
+  {
+    "id": "jp-darkness-and-to-light-dark-ampharos",
+    "name": "Dark Ampharos",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575490_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575490_400w.jpg"
+    },
+    "tcgplayerId": "575490"
+  },
+  {
+    "id": "jp-darkness-and-to-light-light-togetic",
+    "name": "Light Togetic",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575503_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575503_400w.jpg"
+    },
+    "tcgplayerId": "575503"
+  },
+  {
+    "id": "jp-darkness-and-to-light-dark-slowking",
+    "name": "Dark Slowking",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575509_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575509_400w.jpg"
+    },
+    "tcgplayerId": "575509"
+  },
+  {
+    "id": "jp-darkness-and-to-light-dark-porygon2",
+    "name": "Dark Porygon2",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575496_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575496_400w.jpg"
+    },
+    "tcgplayerId": "575496"
+  },
+  {
+    "id": "jp-darkness-and-to-light-light-dragonair",
+    "name": "Light Dragonair",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575513_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575513_400w.jpg"
+    },
+    "tcgplayerId": "575513"
+  },
+  {
+    "id": "jp-darkness-and-to-light-unown-z",
+    "name": "Unown Z",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575566_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575566_400w.jpg"
+    },
+    "tcgplayerId": "575566"
+  },
+  {
+    "id": "jp-darkness-and-to-light-light-slowbro",
+    "name": "Light Slowbro",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575554_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575554_400w.jpg"
+    },
+    "tcgplayerId": "575554"
+  },
+  {
+    "id": "jp-darkness-and-to-light-unown-x",
+    "name": "Unown X",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575523_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575523_400w.jpg"
+    },
+    "tcgplayerId": "575523"
+  },
+  {
+    "id": "jp-darkness-and-to-light-dark-donphan",
+    "name": "Dark Donphan",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575492_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575492_400w.jpg"
+    },
+    "tcgplayerId": "575492"
+  },
+  {
+    "id": "jp-darkness-and-to-light-light-machamp",
+    "name": "Light Machamp",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575516_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575516_400w.jpg"
+    },
+    "tcgplayerId": "575516"
+  },
+  {
+    "id": "jp-darkness-and-to-light-light-azumarill",
+    "name": "Light Azumarill",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575501_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575501_400w.jpg"
+    },
+    "tcgplayerId": "575501"
+  },
+  {
+    "id": "jp-darkness-and-to-light-light-flareon",
+    "name": "Light Flareon",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575549_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575549_400w.jpg"
+    },
+    "tcgplayerId": "575549"
+  },
+  {
+    "id": "jp-darkness-and-to-light-unown-g",
+    "name": "Unown G",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575520_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575520_400w.jpg"
+    },
+    "tcgplayerId": "575520"
+  },
+  {
+    "id": "jp-darkness-and-to-light-lucky-stadium",
+    "name": "Lucky Stadium",
+    "supertype": "Trainer",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575558_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575558_400w.jpg"
+    },
+    "tcgplayerId": "575558"
+  },
+  {
+    "id": "jp-darkness-and-to-light-dark-haunter",
+    "name": "Dark Haunter",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575538_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575538_400w.jpg"
+    },
+    "tcgplayerId": "575538"
+  },
+  {
+    "id": "jp-darkness-and-to-light-light-ninetales",
+    "name": "Light Ninetales",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575553_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575553_400w.jpg"
+    },
+    "tcgplayerId": "575553"
+  },
+  {
+    "id": "jp-darkness-and-to-light-unown-v",
+    "name": "Unown V",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575487_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575487_400w.jpg"
+    },
+    "tcgplayerId": "575487"
+  },
+  {
+    "id": "jp-darkness-and-to-light-unown-t",
+    "name": "Unown T",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575486_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575486_400w.jpg"
+    },
+    "tcgplayerId": "575486"
+  },
+  {
+    "id": "jp-darkness-and-to-light-light-dewgong",
+    "name": "Light Dewgong",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575548_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575548_400w.jpg"
+    },
+    "tcgplayerId": "575548"
+  },
+  {
+    "id": "jp-darkness-and-to-light-unown-h",
+    "name": "Unown H",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575521_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575521_400w.jpg"
+    },
+    "tcgplayerId": "575521"
+  },
+  {
+    "id": "jp-darkness-and-to-light-unown-l",
+    "name": "Unown L",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575484_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575484_400w.jpg"
+    },
+    "tcgplayerId": "575484"
+  },
+  {
+    "id": "jp-darkness-and-to-light-dark-omastar",
+    "name": "Dark Omastar",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575508_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575508_400w.jpg"
+    },
+    "tcgplayerId": "575508"
+  },
+  {
+    "id": "jp-darkness-and-to-light-togepi",
+    "name": "Togepi",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575482_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575482_400w.jpg"
+    },
+    "tcgplayerId": "575482"
+  },
+  {
+    "id": "jp-darkness-and-to-light-hitmonlee",
+    "name": "Hitmonlee",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575547_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575547_400w.jpg"
+    },
+    "tcgplayerId": "575547"
+  },
+  {
+    "id": "jp-darkness-and-to-light-psyduck",
+    "name": "Psyduck",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575476_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575476_400w.jpg"
+    },
+    "tcgplayerId": "575476"
+  },
+  {
+    "id": "jp-darkness-and-to-light-dark-exeggutor",
+    "name": "Dark Exeggutor",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575535_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575535_400w.jpg"
+    },
+    "tcgplayerId": "575535"
+  },
+  {
+    "id": "jp-darkness-and-to-light-broken-ground-gym",
+    "name": "Broken Ground Gym",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575505_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575505_400w.jpg"
+    },
+    "tcgplayerId": "575505"
+  },
+  {
+    "id": "jp-darkness-and-to-light-chansey",
+    "name": "Chansey",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575532_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575532_400w.jpg"
+    },
+    "tcgplayerId": "575532"
+  },
+  {
+    "id": "jp-darkness-and-to-light-light-wigglytuff",
+    "name": "Light Wigglytuff",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575557_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575557_400w.jpg"
+    },
+    "tcgplayerId": "575557"
+  },
+  {
+    "id": "jp-darkness-and-to-light-miracle-energy",
+    "name": "Miracle Energy",
+    "supertype": "Energy",
+    "number": "N/A",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575504_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575504_400w.jpg"
+    },
+    "tcgplayerId": "575504"
+  },
+  {
+    "id": "jp-darkness-and-to-light-unown-s",
+    "name": "Unown S",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575485_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575485_400w.jpg"
+    },
+    "tcgplayerId": "575485"
+  },
+  {
+    "id": "jp-darkness-and-to-light-unown-q",
+    "name": "Unown Q",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575565_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575565_400w.jpg"
+    },
+    "tcgplayerId": "575565"
+  },
+  {
+    "id": "jp-darkness-and-to-light-light-piloswine",
+    "name": "Light Piloswine",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575517_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575517_400w.jpg"
+    },
+    "tcgplayerId": "575517"
+  },
+  {
+    "id": "jp-darkness-and-to-light-unown-p",
+    "name": "Unown P",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575564_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575564_400w.jpg"
+    },
+    "tcgplayerId": "575564"
+  },
+  {
+    "id": "jp-darkness-and-to-light-pokemon-personality-test",
+    "name": "Pokemon Personality Test",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575560_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575560_400w.jpg"
+    },
+    "tcgplayerId": "575560"
+  },
+  {
+    "id": "jp-darkness-and-to-light-light-ledian",
+    "name": "Light Ledian",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575515_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575515_400w.jpg"
+    },
+    "tcgplayerId": "575515"
+  },
+  {
+    "id": "jp-darkness-and-to-light-dark-croconaw",
+    "name": "Dark Croconaw",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575534_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575534_400w.jpg"
+    },
+    "tcgplayerId": "575534"
+  },
+  {
+    "id": "jp-darkness-and-to-light-dark-ursaring",
+    "name": "Dark Ursaring",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575510_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575510_400w.jpg"
+    },
+    "tcgplayerId": "575510"
+  },
+  {
+    "id": "jp-darkness-and-to-light-radio-tower",
+    "name": "Radio Tower",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575518_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575518_400w.jpg"
+    },
+    "tcgplayerId": "575518"
+  },
+  {
+    "id": "jp-darkness-and-to-light-exeggcute",
+    "name": "Exeggcute",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575457_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575457_400w.jpg"
+    },
+    "tcgplayerId": "575457"
+  },
+  {
+    "id": "jp-darkness-and-to-light-dark-quilava",
+    "name": "Dark Quilava",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575542_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575542_400w.jpg"
+    },
+    "tcgplayerId": "575542"
+  },
+  {
+    "id": "jp-darkness-and-to-light-dark-flaaffy",
+    "name": "Dark Flaaffy",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575536_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575536_400w.jpg"
+    },
+    "tcgplayerId": "575536"
+  },
+  {
+    "id": "jp-darkness-and-to-light-cyndaquil",
+    "name": "Cyndaquil",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575455_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575455_400w.jpg"
+    },
+    "tcgplayerId": "575455"
+  },
+  {
+    "id": "jp-darkness-and-to-light-dark-wigglytuff",
+    "name": "Dark Wigglytuff",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575543_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575543_400w.jpg"
+    },
+    "tcgplayerId": "575543"
+  },
+  {
+    "id": "jp-darkness-and-to-light-totodile",
+    "name": "Totodile",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575483_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575483_400w.jpg"
+    },
+    "tcgplayerId": "575483"
+  },
+  {
+    "id": "jp-darkness-and-to-light-unown-c",
+    "name": "Unown C",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575563_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575563_400w.jpg"
+    },
+    "tcgplayerId": "575563"
+  },
+  {
+    "id": "jp-darkness-and-to-light-light-venomoth",
+    "name": "Light Venomoth",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575556_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575556_400w.jpg"
+    },
+    "tcgplayerId": "575556"
+  },
+  {
+    "id": "jp-darkness-and-to-light-larvitar",
+    "name": "Larvitar",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575466_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575466_400w.jpg"
+    },
+    "tcgplayerId": "575466"
+  },
+  {
+    "id": "jp-darkness-and-to-light-dark-omanyte",
+    "name": "Dark Omanyte",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575540_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575540_400w.jpg"
+    },
+    "tcgplayerId": "575540"
+  },
+  {
+    "id": "jp-darkness-and-to-light-scyther",
+    "name": "Scyther",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575561_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575561_400w.jpg"
+    },
+    "tcgplayerId": "575561"
+  },
+  {
+    "id": "jp-darkness-and-to-light-gastly",
+    "name": "Gastly",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575458_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575458_400w.jpg"
+    },
+    "tcgplayerId": "575458"
+  },
+  {
+    "id": "jp-darkness-and-to-light-jigglypuff",
+    "name": "Jigglypuff",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575465_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575465_400w.jpg"
+    },
+    "tcgplayerId": "575465"
+  },
+  {
+    "id": "jp-darkness-and-to-light-thought-wave-machine",
+    "name": "Thought Wave Machine",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575519_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575519_400w.jpg"
+    },
+    "tcgplayerId": "575519"
+  },
+  {
+    "id": "jp-darkness-and-to-light-counterattack-claws",
+    "name": "Counterattack Claws",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575533_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575533_400w.jpg"
+    },
+    "tcgplayerId": "575533"
+  },
+  {
+    "id": "jp-darkness-and-to-light-dark-pupitar",
+    "name": "Dark Pupitar",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575541_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575541_400w.jpg"
+    },
+    "tcgplayerId": "575541"
+  },
+  {
+    "id": "jp-darkness-and-to-light-dark-ariados",
+    "name": "Dark Ariados",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575506_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575506_400w.jpg"
+    },
+    "tcgplayerId": "575506"
+  },
+  {
+    "id": "jp-darkness-and-to-light-heracross",
+    "name": "Heracross",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575546_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575546_400w.jpg"
+    },
+    "tcgplayerId": "575546"
+  },
+  {
+    "id": "jp-darkness-and-to-light-dratini",
+    "name": "Dratini",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575456_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575456_400w.jpg"
+    },
+    "tcgplayerId": "575456"
+  },
+  {
+    "id": "jp-darkness-and-to-light-growlithe",
+    "name": "Growlithe",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575461_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575461_400w.jpg"
+    },
+    "tcgplayerId": "575461"
+  },
+  {
+    "id": "jp-darkness-and-to-light-light-lanturn",
+    "name": "Light Lanturn",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575514_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575514_400w.jpg"
+    },
+    "tcgplayerId": "575514"
+  },
+  {
+    "id": "jp-darkness-and-to-light-light-machoke",
+    "name": "Light Machoke",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575552_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575552_400w.jpg"
+    },
+    "tcgplayerId": "575552"
+  },
+  {
+    "id": "jp-darkness-and-to-light-exp.-share",
+    "name": "Exp. Share",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575511_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575511_400w.jpg"
+    },
+    "tcgplayerId": "575511"
+  },
+  {
+    "id": "jp-darkness-and-to-light-mareep",
+    "name": "Mareep",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575472_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575472_400w.jpg"
+    },
+    "tcgplayerId": "575472"
+  },
+  {
+    "id": "jp-darkness-and-to-light-light-golduck",
+    "name": "Light Golduck",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575550_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575550_400w.jpg"
+    },
+    "tcgplayerId": "575550"
+  },
+  {
+    "id": "jp-darkness-and-to-light-team-rockets-evil-deeds",
+    "name": "Team Rocket's Evil Deeds",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575562_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575562_400w.jpg"
+    },
+    "tcgplayerId": "575562"
+  },
+  {
+    "id": "jp-darkness-and-to-light-light-sunflora",
+    "name": "Light Sunflora",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575468_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575468_400w.jpg"
+    },
+    "tcgplayerId": "575468"
+  },
+  {
+    "id": "jp-darkness-and-to-light-girafarig",
+    "name": "Girafarig",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575459_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575459_400w.jpg"
+    },
+    "tcgplayerId": "575459"
+  },
+  {
+    "id": "jp-darkness-and-to-light-impostor-professor-oaks-invention",
+    "name": "Impostor Professor Oak's Invention",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575512_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575512_400w.jpg"
+    },
+    "tcgplayerId": "575512"
+  },
+  {
+    "id": "jp-darkness-and-to-light-dark-forretress",
+    "name": "Dark Forretress",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575537_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575537_400w.jpg"
+    },
+    "tcgplayerId": "575537"
+  },
+  {
+    "id": "jp-darkness-and-to-light-machop",
+    "name": "Machop",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575469_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575469_400w.jpg"
+    },
+    "tcgplayerId": "575469"
+  },
+  {
+    "id": "jp-darkness-and-to-light-vulpix",
+    "name": "Vulpix",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575489_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575489_400w.jpg"
+    },
+    "tcgplayerId": "575489"
+  },
+  {
+    "id": "jp-darkness-and-to-light-seel",
+    "name": "Seel",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575478_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575478_400w.jpg"
+    },
+    "tcgplayerId": "575478"
+  },
+  {
+    "id": "jp-darkness-and-to-light-dark-magcargo",
+    "name": "Dark Magcargo",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575507_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575507_400w.jpg"
+    },
+    "tcgplayerId": "575507"
+  },
+  {
+    "id": "jp-darkness-and-to-light-phanpy",
+    "name": "Phanpy",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575473_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575473_400w.jpg"
+    },
+    "tcgplayerId": "575473"
+  },
+  {
+    "id": "jp-darkness-and-to-light-venonat",
+    "name": "Venonat",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575488_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575488_400w.jpg"
+    },
+    "tcgplayerId": "575488"
+  },
+  {
+    "id": "jp-darkness-and-to-light-porygon",
+    "name": "Porygon",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575475_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575475_400w.jpg"
+    },
+    "tcgplayerId": "575475"
+  },
+  {
+    "id": "jp-darkness-and-to-light-dark-octillery",
+    "name": "Dark Octillery",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575539_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575539_400w.jpg"
+    },
+    "tcgplayerId": "575539"
+  },
+  {
+    "id": "jp-darkness-and-to-light-houndour",
+    "name": "Houndour",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575464_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575464_400w.jpg"
+    },
+    "tcgplayerId": "575464"
+  },
+  {
+    "id": "jp-darkness-and-to-light-slugma",
+    "name": "Slugma",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575479_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575479_400w.jpg"
+    },
+    "tcgplayerId": "575479"
+  },
+  {
+    "id": "jp-darkness-and-to-light-ledyba",
+    "name": "Ledyba",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575467_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575467_400w.jpg"
+    },
+    "tcgplayerId": "575467"
+  },
+  {
+    "id": "jp-darkness-and-to-light-remoraid",
+    "name": "Remoraid",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575477_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575477_400w.jpg"
+    },
+    "tcgplayerId": "575477"
+  },
+  {
+    "id": "jp-darkness-and-to-light-gligar",
+    "name": "Gligar",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575460_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575460_400w.jpg"
+    },
+    "tcgplayerId": "575460"
+  },
+  {
+    "id": "jp-darkness-and-to-light-mantine",
+    "name": "Mantine",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575471_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575471_400w.jpg"
+    },
+    "tcgplayerId": "575471"
+  },
+  {
+    "id": "jp-darkness-and-to-light-energy-stadium",
+    "name": "Energy Stadium",
+    "supertype": "Energy",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575545_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575545_400w.jpg"
+    },
+    "tcgplayerId": "575545"
+  },
+  {
+    "id": "jp-darkness-and-to-light-pineco",
+    "name": "Pineco",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575474_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575474_400w.jpg"
+    },
+    "tcgplayerId": "575474"
+  },
+  {
+    "id": "jp-darkness-and-to-light-sunkern",
+    "name": "Sunkern",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575480_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575480_400w.jpg"
+    },
+    "tcgplayerId": "575480"
+  },
+  {
+    "id": "jp-darkness-and-to-light-swinub",
+    "name": "Swinub",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575481_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575481_400w.jpg"
+    },
+    "tcgplayerId": "575481"
+  },
+  {
+    "id": "jp-darkness-and-to-light-hitmonchan",
+    "name": "Hitmonchan",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575463_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575463_400w.jpg"
+    },
+    "tcgplayerId": "575463"
+  },
+  {
+    "id": "jp-darkness-and-to-light-energy-amplifier",
+    "name": "Energy Amplifier",
+    "supertype": "Energy",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575544_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575544_400w.jpg"
+    },
+    "tcgplayerId": "575544"
+  },
+  {
+    "id": "jp-darkness-and-to-light-magnifier",
+    "name": "Magnifier",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575559_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575559_400w.jpg"
+    },
+    "tcgplayerId": "575559"
+  },
+  {
+    "id": "jp-darkness-and-to-light-mail-from-bill",
+    "name": "Mail from Bill",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575470_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575470_400w.jpg"
+    },
+    "tcgplayerId": "575470"
+  },
+  {
+    "id": "jp-darkness-and-to-light-heal-powder",
+    "name": "Heal Powder",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/575462_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/575462_400w.jpg"
+    },
+    "tcgplayerId": "575462"
+  }
+]

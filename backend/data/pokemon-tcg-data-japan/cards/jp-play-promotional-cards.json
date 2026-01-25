@@ -1,0 +1,158 @@
+[
+  {
+    "id": "jp-play-promotional-cards-031/PLAY",
+    "name": "Lugia ex",
+    "supertype": "Pokémon",
+    "number": "031/PLAY",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/613924_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/613924_400w.jpg"
+    },
+    "tcgplayerId": "613924"
+  },
+  {
+    "id": "jp-play-promotional-cards-013/PLAY",
+    "name": "_____'s Mew",
+    "supertype": "Trainer",
+    "number": "013/PLAY",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/613918_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/613918_400w.jpg"
+    },
+    "tcgplayerId": "613918"
+  },
+  {
+    "id": "jp-play-promotional-cards-030/PLAY",
+    "name": "Ho-Oh ex",
+    "supertype": "Pokémon",
+    "number": "030/PLAY",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/613923_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/613923_400w.jpg"
+    },
+    "tcgplayerId": "613923"
+  },
+  {
+    "id": "jp-play-promotional-cards-020/PLAY",
+    "name": "_____'s Groudon",
+    "supertype": "Trainer",
+    "number": "020/PLAY",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/613921_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/613921_400w.jpg"
+    },
+    "tcgplayerId": "613921"
+  },
+  {
+    "id": "jp-play-promotional-cards-012/PLAY",
+    "name": "_____'s Celebi",
+    "supertype": "Trainer",
+    "number": "012/PLAY",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/613917_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/613917_400w.jpg"
+    },
+    "tcgplayerId": "613917"
+  },
+  {
+    "id": "jp-play-promotional-cards-008/PLAY",
+    "name": "Pokemon Card Fan",
+    "supertype": "Pokémon",
+    "number": "008/PLAY",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/613926_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/613926_400w.jpg"
+    },
+    "tcgplayerId": "613926"
+  },
+  {
+    "id": "jp-play-promotional-cards-014/PLAY",
+    "name": "_____'s Jirachi",
+    "supertype": "Trainer",
+    "number": "014/PLAY",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/613919_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/613919_400w.jpg"
+    },
+    "tcgplayerId": "613919"
+  },
+  {
+    "id": "jp-play-promotional-cards-002/PLAY",
+    "name": "Regirock ex",
+    "supertype": "Pokémon",
+    "number": "002/PLAY",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/613910_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/613910_400w.jpg"
+    },
+    "tcgplayerId": "613910"
+  },
+  {
+    "id": "jp-play-promotional-cards-011/PLAY",
+    "name": "Zapdos ex",
+    "supertype": "Pokémon",
+    "number": "011/PLAY",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/613908_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/613908_400w.jpg"
+    },
+    "tcgplayerId": "613908"
+  },
+  {
+    "id": "jp-play-promotional-cards-005/PLAY",
+    "name": "Minun",
+    "supertype": "Pokémon",
+    "number": "005/PLAY",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/613903_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/613903_400w.jpg"
+    },
+    "tcgplayerId": "613903"
+  },
+  {
+    "id": "jp-play-promotional-cards-015/PLAY",
+    "name": "Cyclone Energy",
+    "supertype": "Energy",
+    "number": "015/PLAY",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/613897_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/613897_400w.jpg"
+    },
+    "tcgplayerId": "613897"
+  },
+  {
+    "id": "jp-play-promotional-cards-003/PLAY",
+    "name": "Registeel ex",
+    "supertype": "Pokémon",
+    "number": "003/PLAY",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/613911_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/613911_400w.jpg"
+    },
+    "tcgplayerId": "613911"
+  },
+  {
+    "id": "jp-play-promotional-cards-016/PLAY",
+    "name": "Boost Energy",
+    "supertype": "Energy",
+    "number": "016/PLAY",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/613898_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/613898_400w.jpg"
+    },
+    "tcgplayerId": "613898"
+  }
+]

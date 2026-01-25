@@ -1,0 +1,38 @@
+[
+  {
+    "id": "jp-infernape-vs-gallade-sp-deck-kit-infernape-004/018",
+    "name": "Infernape E4 LV.X",
+    "supertype": "Pokémon",
+    "number": "004/018",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608777_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608777_400w.jpg"
+    },
+    "tcgplayerId": "608777"
+  },
+  {
+    "id": "jp-infernape-vs-gallade-sp-deck-kit-infernape-003/018",
+    "name": "Infernape E4",
+    "supertype": "Pokémon",
+    "number": "003/018",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608776_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608776_400w.jpg"
+    },
+    "tcgplayerId": "608776"
+  },
+  {
+    "id": "jp-infernape-vs-gallade-sp-deck-kit-infernape-018/018",
+    "name": "SP Energy",
+    "supertype": "Energy",
+    "number": "018/018",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/608791_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/608791_400w.jpg"
+    },
+    "tcgplayerId": "608791"
+  }
+]

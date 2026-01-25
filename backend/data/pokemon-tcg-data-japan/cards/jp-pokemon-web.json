@@ -1,0 +1,338 @@
+[
+  {
+    "id": "jp-pokemon-web-045/048",
+    "name": "Articuno",
+    "supertype": "Pokémon",
+    "number": "045/048",
+    "rarity": "Holo Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/613671_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/613671_400w.jpg"
+    },
+    "tcgplayerId": "613671"
+  },
+  {
+    "id": "jp-pokemon-web-009/048",
+    "name": "Wartortle",
+    "supertype": "Pokémon",
+    "number": "009/048",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/613661_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/613661_400w.jpg"
+    },
+    "tcgplayerId": "613661"
+  },
+  {
+    "id": "jp-pokemon-web-034/048",
+    "name": "Ninetales",
+    "supertype": "Pokémon",
+    "number": "034/048",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/613674_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/613674_400w.jpg"
+    },
+    "tcgplayerId": "613674"
+  },
+  {
+    "id": "jp-pokemon-web-033/048",
+    "name": "Nidoking",
+    "supertype": "Pokémon",
+    "number": "033/048",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/613673_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/613673_400w.jpg"
+    },
+    "tcgplayerId": "613673"
+  },
+  {
+    "id": "jp-pokemon-web-022/048",
+    "name": "Dark Charmeleon",
+    "supertype": "Pokémon",
+    "number": "022/048",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/613686_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/613686_400w.jpg"
+    },
+    "tcgplayerId": "613686"
+  },
+  {
+    "id": "jp-pokemon-web-028/048",
+    "name": "Dark Slowbro",
+    "supertype": "Pokémon",
+    "number": "028/048",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/613683_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/613683_400w.jpg"
+    },
+    "tcgplayerId": "613683"
+  },
+  {
+    "id": "jp-pokemon-web-024/048",
+    "name": "Dark Wartortle",
+    "supertype": "Pokémon",
+    "number": "024/048",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/613695_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/613695_400w.jpg"
+    },
+    "tcgplayerId": "613695"
+  },
+  {
+    "id": "jp-pokemon-web-001/048",
+    "name": "Ivysaur",
+    "supertype": "Pokémon",
+    "number": "001/048",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/613660_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/613660_400w.jpg"
+    },
+    "tcgplayerId": "613660"
+  },
+  {
+    "id": "jp-pokemon-web-008/048",
+    "name": "Vulpix",
+    "supertype": "Pokémon",
+    "number": "008/048",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/613664_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/613664_400w.jpg"
+    },
+    "tcgplayerId": "613664"
+  },
+  {
+    "id": "jp-pokemon-web-018/048",
+    "name": "Nidorino",
+    "supertype": "Pokémon",
+    "number": "018/048",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/613693_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/613693_400w.jpg"
+    },
+    "tcgplayerId": "613693"
+  },
+  {
+    "id": "jp-pokemon-web-017/048",
+    "name": "Dark Ivysaur",
+    "supertype": "Pokémon",
+    "number": "017/048",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/613689_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/613689_400w.jpg"
+    },
+    "tcgplayerId": "613689"
+  },
+  {
+    "id": "jp-pokemon-web-012/048",
+    "name": "Slowpoke",
+    "supertype": "Pokémon",
+    "number": "012/048",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/613652_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/613652_400w.jpg"
+    },
+    "tcgplayerId": "613652"
+  },
+  {
+    "id": "jp-pokemon-web-013/048",
+    "name": "Diglett",
+    "supertype": "Pokémon",
+    "number": "013/048",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/613657_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/613657_400w.jpg"
+    },
+    "tcgplayerId": "613657"
+  },
+  {
+    "id": "jp-pokemon-web-006/048",
+    "name": "Growlithe",
+    "supertype": "Pokémon",
+    "number": "006/048",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/613662_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/613662_400w.jpg"
+    },
+    "tcgplayerId": "613662"
+  },
+  {
+    "id": "jp-pokemon-web-027/048",
+    "name": "Dark Kadabra",
+    "supertype": "Pokémon",
+    "number": "027/048",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/613684_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/613684_400w.jpg"
+    },
+    "tcgplayerId": "613684"
+  },
+  {
+    "id": "jp-pokemon-web-040/048",
+    "name": "Rocket's Sneak Attack",
+    "supertype": "Trainer",
+    "number": "040/048",
+    "rarity": "Rare",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/613677_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/613677_400w.jpg"
+    },
+    "tcgplayerId": "613677"
+  },
+  {
+    "id": "jp-pokemon-web-005/048",
+    "name": "Tangela",
+    "supertype": "Pokémon",
+    "number": "005/048",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/613655_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/613655_400w.jpg"
+    },
+    "tcgplayerId": "613655"
+  },
+  {
+    "id": "jp-pokemon-web-010/048",
+    "name": "Marill",
+    "supertype": "Pokémon",
+    "number": "010/048",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/613656_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/613656_400w.jpg"
+    },
+    "tcgplayerId": "613656"
+  },
+  {
+    "id": "jp-pokemon-web-019/048",
+    "name": "Venomoth",
+    "supertype": "Pokémon",
+    "number": "019/048",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/613691_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/613691_400w.jpg"
+    },
+    "tcgplayerId": "613691"
+  },
+  {
+    "id": "jp-pokemon-web-007/048",
+    "name": "Charmeleon",
+    "supertype": "Pokémon",
+    "number": "007/048",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/613649_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/613649_400w.jpg"
+    },
+    "tcgplayerId": "613649"
+  },
+  {
+    "id": "jp-pokemon-web-002/048",
+    "name": "Nidoran",
+    "supertype": "Pokémon",
+    "number": "002/048",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/613658_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/613658_400w.jpg"
+    },
+    "tcgplayerId": "613658"
+  },
+  {
+    "id": "jp-pokemon-web-014/048",
+    "name": "Hitmonlee",
+    "supertype": "Pokémon",
+    "number": "014/048",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/613659_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/613659_400w.jpg"
+    },
+    "tcgplayerId": "613659"
+  },
+  {
+    "id": "jp-pokemon-web-026/048",
+    "name": "Electrode",
+    "supertype": "Pokémon",
+    "number": "026/048",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/613688_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/613688_400w.jpg"
+    },
+    "tcgplayerId": "613688"
+  },
+  {
+    "id": "jp-pokemon-web-020/048",
+    "name": "Exeggutor",
+    "supertype": "Pokémon",
+    "number": "020/048",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/613680_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/613680_400w.jpg"
+    },
+    "tcgplayerId": "613680"
+  },
+  {
+    "id": "jp-pokemon-web-004/048",
+    "name": "Exeggcute",
+    "supertype": "Pokémon",
+    "number": "004/048",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/613651_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/613651_400w.jpg"
+    },
+    "tcgplayerId": "613651"
+  },
+  {
+    "id": "jp-pokemon-web-021/048",
+    "name": "Dark Weezing",
+    "supertype": "Pokémon",
+    "number": "021/048",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/613682_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/613682_400w.jpg"
+    },
+    "tcgplayerId": "613682"
+  },
+  {
+    "id": "jp-pokemon-web-029/048",
+    "name": "Dugtrio",
+    "supertype": "Pokémon",
+    "number": "029/048",
+    "rarity": "Uncommon",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/613690_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/613690_400w.jpg"
+    },
+    "tcgplayerId": "613690"
+  },
+  {
+    "id": "jp-pokemon-web-003/048",
+    "name": "Venonat",
+    "supertype": "Pokémon",
+    "number": "003/048",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/613663_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/613663_400w.jpg"
+    },
+    "tcgplayerId": "613663"
+  }
+]

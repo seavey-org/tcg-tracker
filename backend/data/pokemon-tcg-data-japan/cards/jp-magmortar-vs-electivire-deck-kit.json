@@ -1,0 +1,50 @@
+[
+  {
+    "id": "jp-magmortar-vs-electivire-deck-kit-latias",
+    "name": "Latias",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/609188_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/609188_400w.jpg"
+    },
+    "tcgplayerId": "609188"
+  },
+  {
+    "id": "jp-magmortar-vs-electivire-deck-kit-delibird",
+    "name": "Delibird",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/609190_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/609190_400w.jpg"
+    },
+    "tcgplayerId": "609190"
+  },
+  {
+    "id": "jp-magmortar-vs-electivire-deck-kit-magmar",
+    "name": "Magmar",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/609183_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/609183_400w.jpg"
+    },
+    "tcgplayerId": "609183"
+  },
+  {
+    "id": "jp-magmortar-vs-electivire-deck-kit-aipom",
+    "name": "Aipom",
+    "supertype": "Pokémon",
+    "number": "N/A",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/609194_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/609194_400w.jpg"
+    },
+    "tcgplayerId": "609194"
+  }
+]

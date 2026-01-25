@@ -1,0 +1,206 @@
+[
+  {
+    "id": "jp-magma-deck-kit-001/033",
+    "name": "Entei ex",
+    "supertype": "Pokémon",
+    "number": "001/033",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612789_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612789_400w.jpg"
+    },
+    "tcgplayerId": "612789"
+  },
+  {
+    "id": "jp-magma-deck-kit-018/033",
+    "name": "Team Magma's Aggron - 018/033",
+    "supertype": "Trainer",
+    "number": "018/033",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612799_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612799_400w.jpg"
+    },
+    "tcgplayerId": "612799"
+  },
+  {
+    "id": "jp-magma-deck-kit-019/033",
+    "name": "Team Magma's Groudon",
+    "supertype": "Trainer",
+    "number": "019/033",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612807_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612807_400w.jpg"
+    },
+    "tcgplayerId": "612807"
+  },
+  {
+    "id": "jp-magma-deck-kit-022/033",
+    "name": "Team Magma's Mightyena - 022/033",
+    "supertype": "Trainer",
+    "number": "022/033",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612813_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612813_400w.jpg"
+    },
+    "tcgplayerId": "612813"
+  },
+  {
+    "id": "jp-magma-deck-kit-002/033",
+    "name": "Team Magma's Houndour - 002/033",
+    "supertype": "Trainer",
+    "number": "002/033",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612810_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612810_400w.jpg"
+    },
+    "tcgplayerId": "612810"
+  },
+  {
+    "id": "jp-magma-deck-kit-023/033",
+    "name": "Team Magma's Mightyena - 023/033",
+    "supertype": "Trainer",
+    "number": "023/033",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612814_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612814_400w.jpg"
+    },
+    "tcgplayerId": "612814"
+  },
+  {
+    "id": "jp-magma-deck-kit-004/033",
+    "name": "Team Magma's Houndoom",
+    "supertype": "Trainer",
+    "number": "004/033",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612808_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612808_400w.jpg"
+    },
+    "tcgplayerId": "612808"
+  },
+  {
+    "id": "jp-magma-deck-kit-021/033",
+    "name": "Team Magma's Poochyena - 021/033",
+    "supertype": "Trainer",
+    "number": "021/033",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612817_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612817_400w.jpg"
+    },
+    "tcgplayerId": "612817"
+  },
+  {
+    "id": "jp-magma-deck-kit-020/033",
+    "name": "Team Magma's Poochyena - 020/033",
+    "supertype": "Trainer",
+    "number": "020/033",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612816_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612816_400w.jpg"
+    },
+    "tcgplayerId": "612816"
+  },
+  {
+    "id": "jp-magma-deck-kit-003/033",
+    "name": "Team Magma's Houndour - 003/033",
+    "supertype": "Trainer",
+    "number": "003/033",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612809_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612809_400w.jpg"
+    },
+    "tcgplayerId": "612809"
+  },
+  {
+    "id": "jp-magma-deck-kit-009/033",
+    "name": "Team Magma's Rhydon",
+    "supertype": "Trainer",
+    "number": "009/033",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612818_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612818_400w.jpg"
+    },
+    "tcgplayerId": "612818"
+  },
+  {
+    "id": "jp-magma-deck-kit-008/033",
+    "name": "Team Magma's Rhyhorn - 008/033",
+    "supertype": "Trainer",
+    "number": "008/033",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612820_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612820_400w.jpg"
+    },
+    "tcgplayerId": "612820"
+  },
+  {
+    "id": "jp-magma-deck-kit-010/033",
+    "name": "Team Magma's Aron - 010/033",
+    "supertype": "Trainer",
+    "number": "010/033",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612802_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612802_400w.jpg"
+    },
+    "tcgplayerId": "612802"
+  },
+  {
+    "id": "jp-magma-deck-kit-028/033",
+    "name": "Team Magma Conspirator",
+    "supertype": "Pokémon",
+    "number": "028/033",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612795_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612795_400w.jpg"
+    },
+    "tcgplayerId": "612795"
+  },
+  {
+    "id": "jp-magma-deck-kit-027/033",
+    "name": "Team Magma Schemer",
+    "supertype": "Pokémon",
+    "number": "027/033",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612797_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612797_400w.jpg"
+    },
+    "tcgplayerId": "612797"
+  },
+  {
+    "id": "jp-magma-deck-kit-011/033",
+    "name": "Team Magma's Aron - 011/033",
+    "supertype": "Trainer",
+    "number": "011/033",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612801_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612801_400w.jpg"
+    },
+    "tcgplayerId": "612801"
+  },
+  {
+    "id": "jp-magma-deck-kit-016/033",
+    "name": "Team Magma's Claydol",
+    "supertype": "Trainer",
+    "number": "016/033",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/612806_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/612806_400w.jpg"
+    },
+    "tcgplayerId": "612806"
+  }
+]

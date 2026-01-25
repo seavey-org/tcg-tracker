@@ -1,0 +1,134 @@
+[
+  {
+    "id": "jp-scarlet-violet-energies-WAT",
+    "name": "Basic Water Energy (Terastal Pattern)",
+    "supertype": "Energy",
+    "number": "WAT",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/589070_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/589070_400w.jpg"
+    },
+    "tcgplayerId": "589070"
+  },
+  {
+    "id": "jp-scarlet-violet-energies-LIG",
+    "name": "Basic Lightning Energy (Terastal Pattern)",
+    "supertype": "Energy",
+    "number": "LIG",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/589071_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/589071_400w.jpg"
+    },
+    "tcgplayerId": "589071"
+  },
+  {
+    "id": "jp-scarlet-violet-energies-FIR",
+    "name": "Basic Fire Energy (Terastal Pattern)",
+    "supertype": "Energy",
+    "number": "FIR",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/589074_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/589074_400w.jpg"
+    },
+    "tcgplayerId": "589074"
+  },
+  {
+    "id": "jp-scarlet-violet-energies-basic-psychic-energy",
+    "name": "Basic Psychic Energy",
+    "supertype": "Energy",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/650718_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/650718_400w.jpg"
+    },
+    "tcgplayerId": "650718"
+  },
+  {
+    "id": "jp-scarlet-violet-energies-basic-lightning-energy",
+    "name": "Basic Lightning Energy",
+    "supertype": "Energy",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/650717_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/650717_400w.jpg"
+    },
+    "tcgplayerId": "650717"
+  },
+  {
+    "id": "jp-scarlet-violet-energies-basic-fire-energy",
+    "name": "Basic Fire Energy",
+    "supertype": "Energy",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/650715_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/650715_400w.jpg"
+    },
+    "tcgplayerId": "650715"
+  },
+  {
+    "id": "jp-scarlet-violet-energies-basic-water-energy",
+    "name": "Basic Water Energy",
+    "supertype": "Energy",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/650716_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/650716_400w.jpg"
+    },
+    "tcgplayerId": "650716"
+  },
+  {
+    "id": "jp-scarlet-violet-energies-basic-darkness-energy",
+    "name": "Basic Darkness Energy",
+    "supertype": "Energy",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/650720_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/650720_400w.jpg"
+    },
+    "tcgplayerId": "650720"
+  },
+  {
+    "id": "jp-scarlet-violet-energies-basic-metal-energy",
+    "name": "Basic Metal Energy",
+    "supertype": "Energy",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/650721_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/650721_400w.jpg"
+    },
+    "tcgplayerId": "650721"
+  },
+  {
+    "id": "jp-scarlet-violet-energies-basic-grass-energy",
+    "name": "Basic Grass Energy",
+    "supertype": "Energy",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/650714_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/650714_400w.jpg"
+    },
+    "tcgplayerId": "650714"
+  },
+  {
+    "id": "jp-scarlet-violet-energies-basic-fighting-energy",
+    "name": "Basic Fighting Energy",
+    "supertype": "Energy",
+    "number": "N/A",
+    "rarity": "Common",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/650719_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/650719_400w.jpg"
+    },
+    "tcgplayerId": "650719"
+  }
+]

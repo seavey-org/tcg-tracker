@@ -1,0 +1,62 @@
+[
+  {
+    "id": "jp-sb-sword-shield-premium-trainer-box-019/024",
+    "name": "Cynthia",
+    "supertype": "Pokémon",
+    "number": "019/024",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/596099_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/596099_400w.jpg"
+    },
+    "tcgplayerId": "596099"
+  },
+  {
+    "id": "jp-sb-sword-shield-premium-trainer-box-020/024",
+    "name": "Green's Exploration",
+    "supertype": "Pokémon",
+    "number": "020/024",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/596105_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/596105_400w.jpg"
+    },
+    "tcgplayerId": "596105"
+  },
+  {
+    "id": "jp-sb-sword-shield-premium-trainer-box-006/024",
+    "name": "Pok egear 3.0",
+    "supertype": "Pokémon",
+    "number": "006/024",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/596095_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/596095_400w.jpg"
+    },
+    "tcgplayerId": "596095"
+  },
+  {
+    "id": "jp-sb-sword-shield-premium-trainer-box-022/024",
+    "name": "Red's Challenge",
+    "supertype": "Trainer",
+    "number": "022/024",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/596109_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/596109_400w.jpg"
+    },
+    "tcgplayerId": "596109"
+  },
+  {
+    "id": "jp-sb-sword-shield-premium-trainer-box-012/024",
+    "name": "Switch Raft",
+    "supertype": "Trainer",
+    "number": "012/024",
+    "rarity": "None",
+    "images": {
+      "small": "https://tcgplayer-cdn.tcgplayer.com/product/596101_200w.jpg",
+      "large": "https://tcgplayer-cdn.tcgplayer.com/product/596101_400w.jpg"
+    },
+    "tcgplayerId": "596101"
+  }
+]
