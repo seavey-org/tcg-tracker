@@ -12,6 +12,7 @@ import (
 	"os"
 	"path/filepath"
 	"sort"
+	"strconv"
 	"strings"
 	"sync"
 	"time"
@@ -33,9 +34,11 @@ type PokemonHybridService struct {
 
 // LocalAttack represents an attack on a Pokemon card
 type LocalAttack struct {
-	Name   string `json:"name"`
-	Text   string `json:"text"`
-	Damage string `json:"damage"`
+	Name                string   `json:"name"`
+	Cost                []string `json:"cost"`
+	ConvertedEnergyCost int      `json:"convertedEnergyCost"`
+	Damage              string   `json:"damage"`
+	Text                string   `json:"text"`
 }
 
 // LocalAbility represents an ability on a Pokemon card
@@ -45,13 +48,23 @@ type LocalAbility struct {
 	Type string `json:"type"`
 }
 
+// LocalWeakness represents a weakness on a Pokemon card
+type LocalWeakness struct {
+	Type  string `json:"type"`
+	Value string `json:"value"`
+}
+
 type LocalPokemonCard struct {
 	Subtypes               []string        `json:"subtypes"`
 	Types                  []string        `json:"types"`
 	Images                 LocalCardImages `json:"images"`
 	Attacks                []LocalAttack   `json:"attacks"`
 	Abilities              []LocalAbility  `json:"abilities"`
+	Weaknesses             []LocalWeakness `json:"weaknesses"`
+	Resistances            []LocalWeakness `json:"resistances"`
 	NationalPokedexNumbers []int           `json:"nationalPokedexNumbers"`
+	RetreatCost            []string        `json:"retreatCost"`
+	EvolvesTo              []string        `json:"evolvesTo"`
 	ID                     string          `json:"id"`
 	Name                   string          `json:"name"`
 	Supertype              string          `json:"supertype"`
@@ -61,7 +74,9 @@ type LocalPokemonCard struct {
 	Rarity                 string          `json:"rarity"`
 	FlavorText             string          `json:"flavorText"`
 	EvolvesFrom            string          `json:"evolvesFrom"`
+	RegulationMark         string          `json:"regulationMark"`
 	TCGPlayerID            string          `json:"tcgplayerId,omitempty"` // TCGPlayer product ID (for Japanese cards)
+	ConvertedRetreatCost   int             `json:"convertedRetreatCost"`
 	SetID                  string          // Populated from filename
 	IsJapanese             bool            // True if this is a Japanese-exclusive card
 
@@ -745,6 +760,13 @@ func (s *PokemonHybridService) SearchJapaneseByNameForGemini(ctx context.Context
 			SetName:  set.Name,
 			Number:   lc.Number,
 			ImageURL: imageURL,
+			// Enriched data for Gemini filtering
+			Rarity:      lc.Rarity,
+			Artist:      lc.Artist,
+			ReleaseDate: set.ReleaseDate,
+			Subtypes:    lc.Subtypes,
+			HP:          lc.HP,
+			Types:       lc.Types,
 		})
 	}
 
@@ -1327,6 +1349,13 @@ func (s *PokemonHybridService) SearchByName(ctx context.Context, name string, li
 			SetName:  set.Name,
 			Number:   lc.Number,
 			ImageURL: imageURL,
+			// Enriched data for Gemini filtering
+			Rarity:      lc.Rarity,
+			Artist:      lc.Artist,
+			ReleaseDate: set.ReleaseDate,
+			Subtypes:    lc.Subtypes,
+			HP:          lc.HP,
+			Types:       lc.Types,
 		})
 	}
 
@@ -1335,24 +1364,62 @@ func (s *PokemonHybridService) SearchByName(ctx context.Context, name string, li
 
 // GetBySetAndNumber implements CardSearcher interface for Gemini function calling.
 // Gets a specific Pokemon card by set code and collector number.
+// Tries multiple ID formats to handle variations in how card IDs are stored.
 func (s *PokemonHybridService) GetBySetAndNumber(ctx context.Context, setCode, number string) (*CandidateCard, error) {
-	card := s.GetCardBySetAndNumber(setCode, number)
-	if card == nil {
+	s.mu.RLock()
+	defer s.mu.RUnlock()
+
+	setCodeLower := strings.ToLower(setCode)
+	numberClean := strings.TrimLeft(number, "0")
+
+	// Try multiple ID formats to handle variations
+	// Pokemon TCG data uses various formats: "swsh4-25", "swsh4-025", "base1-4", etc.
+	idVariants := []string{
+		setCodeLower + "-" + numberClean,        // Most common: "swsh4-25"
+		setCodeLower + "-" + number,             // Original input: "swsh4-025"
+		setCodeLower + "-0" + numberClean,       // Single zero pad: "swsh4-025"
+		setCodeLower + "-00" + numberClean,      // Double zero pad: "swsh4-0025"
+		setCodeLower + numberClean,              // No separator: "swsh425"
+		setCodeLower + number,                   // No separator with original: "swsh4025"
+		strings.ToUpper(setCode) + "-" + number, // Upper case set: "SWSH4-025"
+	}
+
+	var idx int
+	var ok bool
+	for _, id := range idVariants {
+		idx, ok = s.idIndex[id]
+		if ok {
+			break
+		}
+	}
+	if !ok {
 		return nil, nil
 	}
 
-	imageURL := card.ImageURLLarge
+	lc := s.cards[idx]
+	imageURL := lc.Images.Large
 	if imageURL == "" {
-		imageURL = card.ImageURL
+		imageURL = lc.Images.Small
+	}
+	if imageURL == "" {
+		return nil, nil
 	}
 
+	set := s.sets[lc.SetID]
 	return &CandidateCard{
-		ID:       card.ID,
-		Name:     card.Name,
-		SetCode:  card.SetCode,
-		SetName:  card.SetName,
-		Number:   card.CardNumber,
+		ID:       lc.ID,
+		Name:     lc.Name,
+		SetCode:  lc.SetID,
+		SetName:  set.Name,
+		Number:   lc.Number,
 		ImageURL: imageURL,
+		// Enriched data for Gemini filtering
+		Rarity:      lc.Rarity,
+		Artist:      lc.Artist,
+		ReleaseDate: set.ReleaseDate,
+		Subtypes:    lc.Subtypes,
+		HP:          lc.HP,
+		Types:       lc.Types,
 	}, nil
 }
 
@@ -1400,6 +1467,251 @@ func (s *PokemonHybridService) GetCardImage(ctx context.Context, cardID string) 
 	}
 
 	return base64.StdEncoding.EncodeToString(data), nil
+}
+
+// GetCardDetails implements CardSearcher interface for Gemini function calling.
+// Returns full card details including attacks, abilities, and other text for verification.
+func (s *PokemonHybridService) GetCardDetails(ctx context.Context, cardID string) (*CardDetails, error) {
+	s.mu.RLock()
+	defer s.mu.RUnlock()
+
+	idx, ok := s.idIndex[cardID]
+	if !ok {
+		return nil, fmt.Errorf("card not found: %s", cardID)
+	}
+
+	lc := s.cards[idx]
+	set := s.sets[lc.SetID]
+
+	imageURL := lc.Images.Large
+	if imageURL == "" {
+		imageURL = lc.Images.Small
+	}
+
+	// Convert attacks with energy cost
+	var attacks []AttackInfo
+	for _, atk := range lc.Attacks {
+		costStr := ""
+		if len(atk.Cost) > 0 {
+			costStr = strings.Join(atk.Cost, " ")
+		}
+		attacks = append(attacks, AttackInfo{
+			Name:   atk.Name,
+			Cost:   costStr,
+			Damage: atk.Damage,
+			Text:   atk.Text,
+		})
+	}
+
+	// Convert abilities
+	var abilities []AbilityInfo
+	for _, ab := range lc.Abilities {
+		abilities = append(abilities, AbilityInfo{
+			Name: ab.Name,
+			Type: ab.Type,
+			Text: ab.Text,
+		})
+	}
+
+	// Convert weaknesses to readable format
+	var weaknesses []string
+	for _, w := range lc.Weaknesses {
+		weaknesses = append(weaknesses, fmt.Sprintf("%s %s", w.Type, w.Value))
+	}
+
+	// Convert resistances to readable format
+	var resistances []string
+	for _, r := range lc.Resistances {
+		resistances = append(resistances, fmt.Sprintf("%s %s", r.Type, r.Value))
+	}
+
+	return &CardDetails{
+		ID:             lc.ID,
+		Name:           lc.Name,
+		SetCode:        lc.SetID,
+		SetName:        set.Name,
+		Number:         lc.Number,
+		Rarity:         lc.Rarity,
+		Artist:         lc.Artist,
+		ImageURL:       imageURL,
+		HP:             lc.HP,
+		Types:          lc.Types,
+		Subtypes:       lc.Subtypes,
+		Attacks:        attacks,
+		Abilities:      abilities,
+		Weaknesses:     weaknesses,
+		Resistances:    resistances,
+		RetreatCost:    lc.ConvertedRetreatCost,
+		RegulationMark: lc.RegulationMark,
+		EvolvesFrom:    lc.EvolvesFrom,
+	}, nil
+}
+
+// ListSets implements CardSearcher interface for Gemini function calling.
+// Returns Pokemon TCG sets matching the query.
+func (s *PokemonHybridService) ListSets(ctx context.Context, query string) ([]SetInfo, error) {
+	s.mu.RLock()
+	defer s.mu.RUnlock()
+
+	queryLower := strings.ToLower(strings.TrimSpace(query))
+	var results []SetInfo
+
+	for _, set := range s.sets {
+		// Match on set name, ID, or series
+		nameLower := strings.ToLower(set.Name)
+		seriesLower := strings.ToLower(set.Series)
+		idLower := strings.ToLower(set.ID)
+
+		if strings.Contains(nameLower, queryLower) ||
+			strings.Contains(seriesLower, queryLower) ||
+			strings.Contains(idLower, queryLower) {
+			results = append(results, SetInfo{
+				ID:          set.ID,
+				Name:        set.Name,
+				Series:      set.Series,
+				ReleaseDate: set.ReleaseDate,
+				TotalCards:  set.Total,
+			})
+		}
+	}
+
+	// Sort by release date (newest first)
+	sort.Slice(results, func(i, j int) bool {
+		return results[i].ReleaseDate > results[j].ReleaseDate
+	})
+
+	// Limit to 20 results
+	if len(results) > 20 {
+		results = results[:20]
+	}
+
+	return results, nil
+}
+
+// SearchInSet implements CardSearcher interface for Gemini function calling.
+// Searches for cards within a specific set, optionally filtered by name.
+func (s *PokemonHybridService) SearchInSet(ctx context.Context, setCode, name string, limit int) ([]CandidateCard, error) {
+	s.mu.RLock()
+	defer s.mu.RUnlock()
+
+	if limit <= 0 {
+		limit = 20
+	}
+	if limit > 50 {
+		limit = 50
+	}
+
+	setCodeLower := strings.ToLower(strings.TrimSpace(setCode))
+	nameLower := strings.ToLower(strings.TrimSpace(name))
+
+	// Check if set exists
+	set, exists := s.sets[setCodeLower]
+	if !exists {
+		return nil, fmt.Errorf("set not found: %s", setCode)
+	}
+
+	var candidates []CandidateCard
+	for _, lc := range s.cards {
+		if lc.setIDLower != setCodeLower {
+			continue
+		}
+
+		// If name filter provided, check for match
+		if nameLower != "" && !strings.Contains(lc.nameLower, nameLower) {
+			continue
+		}
+
+		imageURL := lc.Images.Large
+		if imageURL == "" {
+			imageURL = lc.Images.Small
+		}
+		if imageURL == "" {
+			continue
+		}
+
+		candidates = append(candidates, CandidateCard{
+			ID:             lc.ID,
+			Name:           lc.Name,
+			SetCode:        lc.SetID,
+			SetName:        set.Name,
+			Number:         lc.Number,
+			ImageURL:       imageURL,
+			Rarity:         lc.Rarity,
+			Artist:         lc.Artist,
+			ReleaseDate:    set.ReleaseDate,
+			Subtypes:       lc.Subtypes,
+			HP:             lc.HP,
+			Types:          lc.Types,
+			RegulationMark: lc.RegulationMark,
+		})
+
+		if len(candidates) >= limit {
+			break
+		}
+	}
+
+	// Sort by collector number
+	sort.Slice(candidates, func(i, j int) bool {
+		numI, _ := strconv.Atoi(strings.TrimLeft(candidates[i].Number, "0"))
+		numJ, _ := strconv.Atoi(strings.TrimLeft(candidates[j].Number, "0"))
+		return numI < numJ
+	})
+
+	return candidates, nil
+}
+
+// GetSetInfo implements CardSearcher interface for Gemini function calling.
+// Returns detailed information about a specific set.
+func (s *PokemonHybridService) GetSetInfo(ctx context.Context, setCode string) (*SetDetails, error) {
+	s.mu.RLock()
+	defer s.mu.RUnlock()
+
+	setCodeLower := strings.ToLower(strings.TrimSpace(setCode))
+	set, exists := s.sets[setCodeLower]
+	if !exists {
+		return nil, fmt.Errorf("set not found: %s", setCode)
+	}
+
+	// Generate a symbol description based on set series and name
+	symbolDesc := s.generateSetSymbolDescription(set)
+
+	return &SetDetails{
+		ID:                set.ID,
+		Name:              set.Name,
+		Series:            set.Series,
+		ReleaseDate:       set.ReleaseDate,
+		TotalCards:        set.Total,
+		SymbolDescription: symbolDesc,
+	}, nil
+}
+
+// generateSetSymbolDescription creates a text description of the set symbol for visual matching
+func (s *PokemonHybridService) generateSetSymbolDescription(set LocalSet) string {
+	// Map common series to symbol descriptions
+	symbolDescriptions := map[string]string{
+		"Sword & Shield":         "Shield-shaped emblem with sword",
+		"Scarlet & Violet":       "Hexagonal pattern with Pokemon outline",
+		"Sun & Moon":             "Sun and moon combined symbol",
+		"XY":                     "X and Y intersecting",
+		"Black & White":          "Black and white split design",
+		"HeartGold & SoulSilver": "Heart and soul combined emblem",
+		"Platinum":               "Platinum arc design",
+		"Diamond & Pearl":        "Diamond and pearl shapes",
+		"EX":                     "EX text in stylized font",
+		"Neo":                    "Neo-style geometric pattern",
+		"Gym":                    "Gym badge style symbol",
+		"Base":                   "Simple Pokemon ball or star",
+	}
+
+	// Check for series match
+	for seriesKey, desc := range symbolDescriptions {
+		if strings.Contains(set.Series, seriesKey) {
+			return desc
+		}
+	}
+
+	// Default description
+	return fmt.Sprintf("%s series symbol", set.Series)
 }
 
 func downloadPokemonData(dataDir string) error {

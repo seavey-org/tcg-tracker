@@ -32,7 +32,7 @@ A trading card collection tracker for Magic: The Gathering and Pokemon cards wit
 
 ## Features
 
-- **Gemini AI Card Identification**: Upload card images for automatic identification using Gemini Vision with function calling
+- **Gemini AI Card Identification**: Upload card images for automatic identification using Gemini Vision with 12+ specialized tools (search, lookup, image comparison, set info)
 - **Multi-Language Support**: Automatically detects card language (Japanese, German, French, Italian) with language-specific pricing
 - **Card Search**: Search for MTG and Pokemon cards using external APIs
 - **MTG 2-Phase Selection**: When scanning MTG cards, browse all printings grouped by set and select the exact variant (foil, showcase, borderless, etc.)

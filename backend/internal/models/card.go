@@ -36,6 +36,12 @@ type Card struct {
 	FrameEffects []string `json:"frame_effects,omitempty" gorm:"-"` // showcase, borderless, extendedart
 	PromoTypes   []string `json:"promo_types,omitempty" gorm:"-"`   // buyabox, prerelease
 	ReleasedAt   string   `json:"released_at,omitempty" gorm:"-"`   // Set release date
+
+	// MTG identification fields (from Scryfall, not persisted - for Gemini)
+	TypeLine    string `json:"type_line,omitempty" gorm:"-"`    // "Creature — Goblin Wizard"
+	ManaCost    string `json:"mana_cost,omitempty" gorm:"-"`    // "{2}{R}{R}"
+	BorderColor string `json:"border_color,omitempty" gorm:"-"` // "black", "borderless", "white"
+	Artist      string `json:"artist,omitempty" gorm:"-"`       // Artist name
 }
 
 // GetPrice returns the price for a specific condition, printing type, and language.

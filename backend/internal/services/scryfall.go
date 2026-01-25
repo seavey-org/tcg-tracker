@@ -11,6 +11,7 @@ import (
 	"sort"
 	"strconv"
 	"strings"
+	"sync"
 	"time"
 
 	"github.com/codyseavey/tcg-tracker/backend/internal/models"
@@ -18,9 +19,27 @@ import (
 
 const scryfallBaseURL = "https://api.scryfall.com"
 
+// scryfallSet represents a set from Scryfall's /sets endpoint
+type scryfallSet struct {
+	Code       string `json:"code"`
+	Name       string `json:"name"`
+	SetType    string `json:"set_type"`
+	ReleasedAt string `json:"released_at"`
+	CardCount  int    `json:"card_count"`
+	ParentCode string `json:"parent_set_code"`
+}
+
 type ScryfallService struct {
 	client *http.Client
+
+	// Cache for sets list (refreshed every 24 hours)
+	setsCacheMu   sync.RWMutex
+	setsCache     []scryfallSet
+	setsCacheTime time.Time
 }
+
+// setsCacheTTL is how long the sets cache is valid (24 hours)
+const setsCacheTTL = 24 * time.Hour
 
 func NewScryfallService() *ScryfallService {
 	return &ScryfallService{
@@ -52,6 +71,17 @@ type scryfallCard struct {
 	FrameEffects []string `json:"frame_effects"`
 	PromoTypes   []string `json:"promo_types"`
 	ReleasedAt   string   `json:"released_at"`
+	// Additional fields for Gemini identification
+	TypeLine    string `json:"type_line"`    // "Creature — Goblin Wizard"
+	ManaCost    string `json:"mana_cost"`    // "{2}{R}{R}"
+	BorderColor string `json:"border_color"` // "black", "borderless", "white"
+	Artist      string `json:"artist"`       // Artist name
+	// Additional fields for card details
+	OracleText string `json:"oracle_text"` // Rules text
+	FlavorText string `json:"flavor_text"` // Flavor text
+	Power      string `json:"power"`       // Creature power
+	Toughness  string `json:"toughness"`   // Creature toughness
+	Loyalty    string `json:"loyalty"`     // Planeswalker loyalty
 }
 
 type scryfallImages struct {
@@ -184,6 +214,11 @@ func (s *ScryfallService) convertToCard(sc scryfallCard) models.Card {
 		FrameEffects: sc.FrameEffects,
 		PromoTypes:   sc.PromoTypes,
 		ReleasedAt:   sc.ReleasedAt,
+		// Gemini identification fields
+		TypeLine:    sc.TypeLine,
+		ManaCost:    sc.ManaCost,
+		BorderColor: sc.BorderColor,
+		Artist:      sc.Artist,
 	}
 }
 
@@ -320,6 +355,15 @@ func (s *ScryfallService) SearchByName(ctx context.Context, name string, limit i
 			SetName:  card.SetName,
 			Number:   card.CardNumber,
 			ImageURL: imageURL,
+			// Enriched data for Gemini filtering
+			Rarity:       card.Rarity,
+			Artist:       card.Artist,
+			ReleaseDate:  card.ReleasedAt,
+			TypeLine:     card.TypeLine,
+			ManaCost:     card.ManaCost,
+			BorderColor:  card.BorderColor,
+			FrameEffects: card.FrameEffects,
+			PromoTypes:   card.PromoTypes,
 		})
 	}
 
@@ -349,6 +393,15 @@ func (s *ScryfallService) GetBySetAndNumber(ctx context.Context, setCode, number
 		SetName:  card.SetName,
 		Number:   card.CardNumber,
 		ImageURL: imageURL,
+		// Enriched data for Gemini filtering
+		Rarity:       card.Rarity,
+		Artist:       card.Artist,
+		ReleaseDate:  card.ReleasedAt,
+		TypeLine:     card.TypeLine,
+		ManaCost:     card.ManaCost,
+		BorderColor:  card.BorderColor,
+		FrameEffects: card.FrameEffects,
+		PromoTypes:   card.PromoTypes,
 	}, nil
 }
 
@@ -395,6 +448,283 @@ func (s *ScryfallService) GetCardImage(ctx context.Context, cardID string) (stri
 	}
 
 	return base64.StdEncoding.EncodeToString(data), nil
+}
+
+// GetCardDetails implements CardSearcher interface for Gemini function calling.
+// Returns full card details including oracle text, power/toughness for verification.
+func (s *ScryfallService) GetCardDetails(ctx context.Context, cardID string) (*CardDetails, error) {
+	// Fetch the card from Scryfall by ID
+	reqURL := fmt.Sprintf("%s/cards/%s", scryfallBaseURL, url.PathEscape(cardID))
+
+	req, err := http.NewRequestWithContext(ctx, "GET", reqURL, nil)
+	if err != nil {
+		return nil, fmt.Errorf("failed to create request: %w", err)
+	}
+
+	resp, err := s.client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("failed to fetch card: %w", err)
+	}
+	defer resp.Body.Close()
+
+	if resp.StatusCode == http.StatusNotFound {
+		return nil, fmt.Errorf("card not found: %s", cardID)
+	}
+	if resp.StatusCode != http.StatusOK {
+		return nil, fmt.Errorf("scryfall returned status %d", resp.StatusCode)
+	}
+
+	var sc scryfallCard
+	if err := json.NewDecoder(resp.Body).Decode(&sc); err != nil {
+		return nil, fmt.Errorf("failed to parse response: %w", err)
+	}
+
+	imageURL := ""
+	if sc.ImageURIs != nil {
+		imageURL = sc.ImageURIs.Large
+		if imageURL == "" {
+			imageURL = sc.ImageURIs.Normal
+		}
+	}
+
+	return &CardDetails{
+		ID:         sc.ID,
+		Name:       sc.Name,
+		SetCode:    sc.Set,
+		SetName:    sc.SetName,
+		Number:     sc.CollectorNum,
+		Rarity:     sc.Rarity,
+		Artist:     sc.Artist,
+		ImageURL:   imageURL,
+		TypeLine:   sc.TypeLine,
+		ManaCost:   sc.ManaCost,
+		OracleText: sc.OracleText,
+		Power:      sc.Power,
+		Toughness:  sc.Toughness,
+		Loyalty:    sc.Loyalty,
+		FlavorText: sc.FlavorText,
+	}, nil
+}
+
+// fetchAndCacheSets fetches all sets from Scryfall and caches them.
+// Returns the cached sets (caller should hold no locks when calling).
+func (s *ScryfallService) fetchAndCacheSets(ctx context.Context) ([]scryfallSet, error) {
+	reqURL := fmt.Sprintf("%s/sets", scryfallBaseURL)
+
+	req, err := http.NewRequestWithContext(ctx, "GET", reqURL, nil)
+	if err != nil {
+		return nil, fmt.Errorf("failed to create request: %w", err)
+	}
+
+	resp, err := s.client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("failed to fetch sets: %w", err)
+	}
+	defer resp.Body.Close()
+
+	if resp.StatusCode != http.StatusOK {
+		return nil, fmt.Errorf("scryfall returned status %d", resp.StatusCode)
+	}
+
+	var response struct {
+		Data []scryfallSet `json:"data"`
+	}
+	if err := json.NewDecoder(resp.Body).Decode(&response); err != nil {
+		return nil, fmt.Errorf("failed to parse response: %w", err)
+	}
+
+	// Update cache
+	s.setsCacheMu.Lock()
+	s.setsCache = response.Data
+	s.setsCacheTime = time.Now()
+	s.setsCacheMu.Unlock()
+
+	return response.Data, nil
+}
+
+// getSets returns cached sets if valid, otherwise fetches fresh data.
+func (s *ScryfallService) getSets(ctx context.Context) ([]scryfallSet, error) {
+	// Check cache first (read lock)
+	s.setsCacheMu.RLock()
+	if len(s.setsCache) > 0 && time.Since(s.setsCacheTime) < setsCacheTTL {
+		sets := s.setsCache
+		s.setsCacheMu.RUnlock()
+		return sets, nil
+	}
+	s.setsCacheMu.RUnlock()
+
+	// Cache miss or stale, fetch fresh data
+	return s.fetchAndCacheSets(ctx)
+}
+
+// ListSets implements CardSearcher interface for Gemini function calling.
+// Returns MTG sets matching the query. Results are cached for 24 hours.
+func (s *ScryfallService) ListSets(ctx context.Context, query string) ([]SetInfo, error) {
+	sets, err := s.getSets(ctx)
+	if err != nil {
+		return nil, err
+	}
+
+	queryLower := strings.ToLower(strings.TrimSpace(query))
+	var results []SetInfo
+
+	for _, set := range sets {
+		nameLower := strings.ToLower(set.Name)
+		codeLower := strings.ToLower(set.Code)
+		typeLower := strings.ToLower(set.SetType)
+
+		if strings.Contains(nameLower, queryLower) ||
+			strings.Contains(codeLower, queryLower) ||
+			strings.Contains(typeLower, queryLower) {
+			results = append(results, SetInfo{
+				ID:          set.Code,
+				Name:        set.Name,
+				Series:      set.SetType, // Use set_type as series for MTG
+				ReleaseDate: set.ReleasedAt,
+				TotalCards:  set.CardCount,
+			})
+		}
+	}
+
+	// Sort by release date (newest first)
+	sort.Slice(results, func(i, j int) bool {
+		return results[i].ReleaseDate > results[j].ReleaseDate
+	})
+
+	// Limit to 20 results
+	if len(results) > 20 {
+		results = results[:20]
+	}
+
+	return results, nil
+}
+
+// SearchInSet implements CardSearcher interface for Gemini function calling.
+// Searches for cards within a specific MTG set, optionally filtered by name.
+func (s *ScryfallService) SearchInSet(ctx context.Context, setCode, name string, limit int) ([]CandidateCard, error) {
+	if limit <= 0 {
+		limit = 20
+	}
+	if limit > 50 {
+		limit = 50
+	}
+
+	// Build Scryfall query: set:xxx name:yyy
+	query := fmt.Sprintf("set:%s", strings.ToLower(setCode))
+	if name != "" {
+		query += fmt.Sprintf(" %s", name)
+	}
+
+	result, err := s.SearchCards(query)
+	if err != nil {
+		return nil, fmt.Errorf("failed to search cards in set: %w", err)
+	}
+
+	// Sort by collector number
+	sort.Slice(result.Cards, func(i, j int) bool {
+		numI, _ := strconv.Atoi(strings.TrimLeft(result.Cards[i].CardNumber, "0"))
+		numJ, _ := strconv.Atoi(strings.TrimLeft(result.Cards[j].CardNumber, "0"))
+		return numI < numJ
+	})
+
+	// Convert to CandidateCard
+	var candidates []CandidateCard
+	for i := 0; i < len(result.Cards) && len(candidates) < limit; i++ {
+		card := result.Cards[i]
+		imageURL := card.ImageURLLarge
+		if imageURL == "" {
+			imageURL = card.ImageURL
+		}
+		if imageURL == "" {
+			continue
+		}
+
+		candidates = append(candidates, CandidateCard{
+			ID:           card.ID,
+			Name:         card.Name,
+			SetCode:      card.SetCode,
+			SetName:      card.SetName,
+			Number:       card.CardNumber,
+			ImageURL:     imageURL,
+			Rarity:       card.Rarity,
+			Artist:       card.Artist,
+			ReleaseDate:  card.ReleasedAt,
+			TypeLine:     card.TypeLine,
+			ManaCost:     card.ManaCost,
+			BorderColor:  card.BorderColor,
+			FrameEffects: card.FrameEffects,
+			PromoTypes:   card.PromoTypes,
+		})
+	}
+
+	return candidates, nil
+}
+
+// GetSetInfo implements CardSearcher interface for Gemini function calling.
+// Returns detailed information about a specific MTG set.
+func (s *ScryfallService) GetSetInfo(ctx context.Context, setCode string) (*SetDetails, error) {
+	reqURL := fmt.Sprintf("%s/sets/%s", scryfallBaseURL, url.PathEscape(strings.ToLower(setCode)))
+
+	req, err := http.NewRequestWithContext(ctx, "GET", reqURL, nil)
+	if err != nil {
+		return nil, fmt.Errorf("failed to create request: %w", err)
+	}
+
+	resp, err := s.client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("failed to fetch set: %w", err)
+	}
+	defer resp.Body.Close()
+
+	if resp.StatusCode == http.StatusNotFound {
+		return nil, fmt.Errorf("set not found: %s", setCode)
+	}
+	if resp.StatusCode != http.StatusOK {
+		return nil, fmt.Errorf("scryfall returned status %d", resp.StatusCode)
+	}
+
+	var setData struct {
+		Code       string `json:"code"`
+		Name       string `json:"name"`
+		SetType    string `json:"set_type"`
+		ReleasedAt string `json:"released_at"`
+		CardCount  int    `json:"card_count"`
+		IconSVGURI string `json:"icon_svg_uri"`
+	}
+	if err := json.NewDecoder(resp.Body).Decode(&setData); err != nil {
+		return nil, fmt.Errorf("failed to parse response: %w", err)
+	}
+
+	// Generate symbol description based on set type
+	symbolDesc := generateMTGSymbolDescription(setData.Name, setData.SetType)
+
+	return &SetDetails{
+		ID:                setData.Code,
+		Name:              setData.Name,
+		ReleaseDate:       setData.ReleasedAt,
+		TotalCards:        setData.CardCount,
+		SetType:           setData.SetType,
+		SymbolDescription: symbolDesc,
+	}, nil
+}
+
+// generateMTGSymbolDescription creates a description of MTG set symbols
+func generateMTGSymbolDescription(name, setType string) string {
+	// Common set type descriptions
+	typeDescriptions := map[string]string{
+		"expansion":        "Standard expansion symbol",
+		"core":             "Core set symbol (M-series)",
+		"masters":          "Masters series premium symbol",
+		"draft_innovation": "Special draft format symbol",
+		"commander":        "Commander deck symbol",
+		"promo":            "Promotional card symbol",
+		"funny":            "Un-set style silver-bordered symbol",
+	}
+
+	if desc, ok := typeDescriptions[setType]; ok {
+		return desc
+	}
+	return fmt.Sprintf("%s set symbol", setType)
 }
 
 // GroupCardsBySet groups a flat list of cards by set for 2-phase selection
