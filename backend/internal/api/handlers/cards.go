@@ -328,10 +328,29 @@ func (h *CardHandler) IdentifyCardFromImage(c *gin.Context) {
 		}
 	}
 
-	// ALWAYS search by name to populate candidates so user can pick the right printing/set
-	// This handles: exact match (user picks from variants), mismatch, timeout, low confidence
+	// Build list of search terms to try: canonical name first, then fallback to Gemini's search terms
+	var searchTermsToTry []string
 	if result.CanonicalNameEN != "" {
-		searchName := result.CanonicalNameEN
+		searchTermsToTry = append(searchTermsToTry, result.CanonicalNameEN)
+	}
+	// Add Gemini's search terms as fallback (these are the card names it searched during identification)
+	for _, term := range result.SearchTerms {
+		// Don't duplicate
+		isDupe := false
+		for _, existing := range searchTermsToTry {
+			if existing == term {
+				isDupe = true
+				break
+			}
+		}
+		if !isDupe {
+			searchTermsToTry = append(searchTermsToTry, term)
+		}
+	}
+
+	// Search by each term to populate candidates so user can pick the right card
+	// This handles: exact match (user picks from variants), mismatch, timeout, low confidence
+	for _, searchName := range searchTermsToTry {
 		var searchResult *models.CardSearchResult
 		var err error
 
@@ -342,9 +361,9 @@ func (h *CardHandler) IdentifyCardFromImage(c *gin.Context) {
 		}
 
 		if err == nil && searchResult != nil {
-			// Add search results as candidates (limit to 20 to give user good selection)
-			for i, card := range searchResult.Cards {
-				if i >= 20 {
+			// Add search results as candidates (limit to 20 total to give user good selection)
+			for _, card := range searchResult.Cards {
+				if len(cards) >= 20 {
 					break
 				}
 				// Don't add duplicates (primary match was already added above)
@@ -359,6 +378,11 @@ func (h *CardHandler) IdentifyCardFromImage(c *gin.Context) {
 					cards = append(cards, card)
 				}
 			}
+		}
+
+		// Stop if we have enough candidates
+		if len(cards) >= 20 {
+			break
 		}
 	}
 

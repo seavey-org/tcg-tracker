@@ -88,6 +88,7 @@ type IdentificationResult struct {
 	Reasoning       string          `json:"reasoning"`                   // Gemini's explanation
 	TurnsUsed       int             `json:"turns_used"`                  // Number of API turns used
 	Candidates      []CandidateCard `json:"candidates,omitempty"`        // Alternative candidates if low confidence
+	SearchTerms     []string        `json:"search_terms,omitempty"`      // Card names Gemini searched for (fallback for handler)
 }
 
 // CardSearcher is the interface for searching cards (implemented by Pokemon/Scryfall services)
@@ -143,6 +144,8 @@ func (s *GeminiService) IdentifyCard(
 	var result *IdentificationResult
 	turnsUsed := 0
 	viewCardImageCalled := false // Track if Gemini ever called view_card_image
+	var searchTerms []string     // Track card names Gemini searched for
+	searchTermsSeen := make(map[string]bool)
 
 	// Conversation loop - Gemini calls tools until it has an answer
 	for turn := 0; turn < maxTurns; turn++ {
@@ -162,6 +165,15 @@ func (s *GeminiService) IdentifyCard(
 				log.Printf("Gemini turn %d: calling %s(%s)", turn+1, call.Name, string(argsJSON))
 				if call.Name == "view_card_image" {
 					viewCardImageCalled = true
+				}
+				// Track search terms for fallback
+				if call.Name == "search_pokemon_cards" || call.Name == "search_mtg_cards" {
+					if name, ok := call.Args["name"].(string); ok && name != "" {
+						if !searchTermsSeen[name] {
+							searchTermsSeen[name] = true
+							searchTerms = append(searchTerms, name)
+						}
+					}
 				}
 			}
 
@@ -242,14 +254,18 @@ func (s *GeminiService) IdentifyCard(
 	}
 
 	if result == nil {
-		log.Printf("Gemini identification failed: no result after %d turns, view_card_image_called=%v", turnsUsed, viewCardImageCalled)
+		log.Printf("Gemini identification failed: no result after %d turns, view_card_image_called=%v, search_terms=%v", turnsUsed, viewCardImageCalled, searchTerms)
 		return &IdentificationResult{
-			Game:       "unknown",
-			Confidence: 0,
-			Reasoning:  "Failed to identify card after max turns",
-			TurnsUsed:  turnsUsed,
+			Game:        "pokemon", // Assume Pokemon since that's most common for Japanese cards
+			Confidence:  0,
+			Reasoning:   "Failed to identify card after max turns",
+			TurnsUsed:   turnsUsed,
+			SearchTerms: searchTerms,
 		}, nil
 	}
+
+	// Add search terms to successful result too (for fallback candidates)
+	result.SearchTerms = searchTerms
 
 	// Log summary of identification session
 	log.Printf("Gemini identification complete: card_id=%q, canonical_name=%q, view_card_image_called=%v, turns=%d",
