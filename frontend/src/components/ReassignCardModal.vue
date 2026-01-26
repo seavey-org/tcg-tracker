@@ -51,7 +51,7 @@ async function performSearch(query) {
   searching.value = true
   searchError.value = null
   try {
-    const results = await cardService.searchCards(query, game.value)
+    const results = await cardService.search(query, game.value)
     searchResults.value = results
   } catch {
     searchError.value = 'Search failed'
