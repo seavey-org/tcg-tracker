@@ -198,6 +198,106 @@ func (h *CardHandler) GetCard(c *gin.Context) {
 	c.JSON(http.StatusOK, card)
 }
 
+// ListSets returns sets matching the query, with symbol URLs for display.
+// GET /api/sets?q=<query>&game=<pokemon|mtg>
+func (h *CardHandler) ListSets(c *gin.Context) {
+	query := c.Query("q")
+	game := c.Query("game")
+
+	var sets []services.SetInfo
+	var err error
+
+	switch game {
+	case "mtg":
+		sets, err = h.scryfallService.ListAllSets(c.Request.Context(), query)
+	case "pokemon":
+		sets = h.pokemonService.ListAllSets(query)
+	default:
+		c.JSON(http.StatusBadRequest, gin.H{"error": "game parameter must be 'mtg' or 'pokemon'"})
+		return
+	}
+
+	if err != nil {
+		c.JSON(http.StatusInternalServerError, gin.H{"error": err.Error()})
+		return
+	}
+
+	c.JSON(http.StatusOK, gin.H{"sets": sets})
+}
+
+// GetSetCards returns all cards in a specific set, optionally filtered by name.
+// GET /api/sets/:setCode/cards?game=<pokemon|mtg>&q=<name_filter>
+func (h *CardHandler) GetSetCards(c *gin.Context) {
+	setCode := c.Param("setCode")
+	game := c.Query("game")
+	nameFilter := c.Query("q")
+
+	if setCode == "" {
+		c.JSON(http.StatusBadRequest, gin.H{"error": "setCode parameter is required"})
+		return
+	}
+
+	var result *models.CardSearchResult
+	var err error
+
+	switch game {
+	case "mtg":
+		result, err = h.scryfallService.GetSetCards(setCode, nameFilter)
+	case "pokemon":
+		result, err = h.pokemonService.GetSetCards(setCode, nameFilter)
+	default:
+		c.JSON(http.StatusBadRequest, gin.H{"error": "game parameter must be 'mtg' or 'pokemon'"})
+		return
+	}
+
+	if err != nil {
+		c.JSON(http.StatusInternalServerError, gin.H{"error": err.Error()})
+		return
+	}
+
+	// Cache cards so they can be added to collection
+	cacheCardsAsync(result.Cards)
+
+	c.JSON(http.StatusOK, result)
+}
+
+// SearchCardsGrouped searches for cards by name and groups results by set.
+// GET /api/cards/search/grouped?q=<name>&game=<pokemon|mtg>
+func (h *CardHandler) SearchCardsGrouped(c *gin.Context) {
+	query := c.Query("q")
+	game := c.Query("game")
+
+	if query == "" {
+		c.JSON(http.StatusBadRequest, gin.H{"error": "query parameter 'q' is required"})
+		return
+	}
+
+	var result *models.GroupedSearchResult
+	var err error
+
+	switch game {
+	case "mtg":
+		result, err = h.scryfallService.SearchCardsGrouped(c.Request.Context(), query)
+	case "pokemon":
+		result, err = h.pokemonService.SearchCardsGrouped(query)
+	default:
+		c.JSON(http.StatusBadRequest, gin.H{"error": "game parameter must be 'mtg' or 'pokemon'"})
+		return
+	}
+
+	if err != nil {
+		c.JSON(http.StatusInternalServerError, gin.H{"error": err.Error()})
+		return
+	}
+
+	// Cache all cards so they can be added to collection
+	for _, group := range result.SetGroups {
+		cacheCardsAsync(group.Cards)
+	}
+
+	c.JSON(http.StatusOK, result)
+}
+
 // IdentifyCardFromImage uses Gemini Vision with function calling to identify
 // a trading card from an uploaded image. Gemini can search for cards and
 // compare images to find the exact match.

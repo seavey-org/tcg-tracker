@@ -196,6 +196,8 @@ type SetInfo struct {
 	Series      string `json:"series,omitempty"`       // Series name (e.g., "Sword & Shield")
 	ReleaseDate string `json:"release_date,omitempty"` // YYYY-MM-DD
 	TotalCards  int    `json:"total_cards,omitempty"`  // Number of cards in set
+	SymbolURL   string `json:"symbol_url,omitempty"`   // URL to set symbol image (Pokemon PNG, MTG SVG)
+	LogoURL     string `json:"logo_url,omitempty"`     // URL to set logo image (Pokemon only)
 }
 
 // SetDetails contains detailed information about a specific set

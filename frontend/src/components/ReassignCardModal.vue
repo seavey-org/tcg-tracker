@@ -1,5 +1,5 @@
 <script setup>
-import { ref, watch, onUnmounted } from 'vue'
+import { ref, watch, onUnmounted, computed } from 'vue'
 import { cardService } from '../services/api'
 
 const props = defineProps({
@@ -15,27 +15,34 @@ const props = defineProps({
 
 const emit = defineEmits(['reassign', 'close'])
 
+// UI state
+const phase = ref('search') // 'search', 'set-list', 'card-list'
 const searchQuery = ref('')
-const searchResults = ref([])
 const searching = ref(false)
 const searchError = ref(null)
 const selectedCard = ref(null)
 const game = ref(props.currentCard.game || 'pokemon')
+
+// Data
+const setGroups = ref([]) // Grouped search results
+const selectedSet = ref(null) // Currently expanded set
+const setCards = ref([]) // Cards in selected set
 
 // Debounce search
 let searchTimeout = null
 watch(searchQuery, (newQuery) => {
   if (searchTimeout) clearTimeout(searchTimeout)
   if (!newQuery || newQuery.length < 2) {
-    searchResults.value = []
+    setGroups.value = []
+    phase.value = 'search'
     return
   }
   searchTimeout = setTimeout(() => {
-    performSearch(newQuery)
+    performGroupedSearch(newQuery)
   }, 300)
 })
 
-// Cleanup timeout on unmount to prevent memory leaks
+// Cleanup timeout on unmount
 onUnmounted(() => {
   if (searchTimeout) clearTimeout(searchTimeout)
 })
@@ -43,24 +50,45 @@ onUnmounted(() => {
 // Switch game and clear results
 function switchGame(newGame) {
   game.value = newGame
-  searchResults.value = []
+  setGroups.value = []
+  selectedSet.value = null
+  setCards.value = []
   selectedCard.value = null
+  phase.value = 'search'
 }
 
-async function performSearch(query) {
+// Search for cards grouped by set
+async function performGroupedSearch(query) {
   searching.value = true
   searchError.value = null
   try {
-    const results = await cardService.search(query, game.value)
-    searchResults.value = results
-  } catch {
+    const result = await cardService.searchGrouped(query, game.value)
+    setGroups.value = result.set_groups || []
+    phase.value = setGroups.value.length > 0 ? 'set-list' : 'search'
+  } catch (err) {
     searchError.value = 'Search failed'
-    searchResults.value = []
+    setGroups.value = []
+    phase.value = 'search'
   } finally {
     searching.value = false
   }
 }
 
+// Select a set to view its cards
+function selectSet(setGroup) {
+  selectedSet.value = setGroup
+  setCards.value = setGroup.cards || []
+  phase.value = 'card-list'
+}
+
+// Go back to set list
+function backToSetList() {
+  selectedSet.value = null
+  setCards.value = []
+  phase.value = 'set-list'
+}
+
+// Select a card for reassignment
 function selectCard(card) {
   selectedCard.value = card
 }
@@ -75,6 +103,17 @@ function formatPrice(price) {
   if (!price) return '-'
   return `$${price.toFixed(2)}`
 }
+
+// Extract year from release date (YYYY-MM-DD or YYYY/MM/DD)
+function getReleaseYear(releaseDate) {
+  if (!releaseDate) return ''
+  return releaseDate.substring(0, 4)
+}
+
+// Computed: total cards across all sets
+const totalCards = computed(() => {
+  return setGroups.value.reduce((sum, group) => sum + group.card_count, 0)
+})
 </script>
 
 <template>
@@ -85,7 +124,16 @@ function formatPrice(price) {
     <div class="bg-white dark:bg-gray-800 rounded-lg max-w-4xl w-full max-h-[90vh] overflow-hidden flex flex-col">
       <!-- Header -->
       <div class="p-4 border-b dark:border-gray-700 flex justify-between items-center">
-        <h2 class="text-xl font-bold text-gray-800 dark:text-white">Reassign Card</h2>
+        <div class="flex items-center gap-2">
+          <h2 class="text-xl font-bold text-gray-800 dark:text-white">Reassign Card</h2>
+          <!-- Breadcrumb navigation -->
+          <span v-if="phase === 'set-list'" class="text-sm text-gray-500 dark:text-gray-400">
+            / {{ setGroups.length }} sets
+          </span>
+          <span v-if="phase === 'card-list' && selectedSet" class="text-sm text-gray-500 dark:text-gray-400">
+            / {{ selectedSet.set_name }}
+          </span>
+        </div>
         <button
           @click="emit('close')"
           class="text-gray-400 hover:text-gray-600 dark:hover:text-gray-200"
@@ -149,6 +197,7 @@ function formatPrice(price) {
 
             <!-- Loading -->
             <div v-if="searching" class="text-center py-8 text-gray-500 dark:text-gray-400">
+              <div class="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600 mx-auto mb-2"></div>
               Searching...
             </div>
 
@@ -182,32 +231,103 @@ function formatPrice(price) {
               </div>
             </div>
 
-            <!-- Search results -->
-            <div v-if="searchResults.length > 0 && !selectedCard" class="grid grid-cols-3 sm:grid-cols-4 gap-3 max-h-80 overflow-y-auto">
+            <!-- Phase 1: Set List -->
+            <div v-if="phase === 'set-list' && !selectedCard" class="space-y-2 max-h-80 overflow-y-auto">
+              <p class="text-sm text-gray-500 dark:text-gray-400 mb-2">
+                Found {{ totalCards }} cards in {{ setGroups.length }} sets. Select a set:
+              </p>
               <div
-                v-for="card in searchResults"
-                :key="card.id"
-                @click="selectCard(card)"
-                class="cursor-pointer group"
+                v-for="setGroup in setGroups"
+                :key="setGroup.set_code"
+                @click="selectSet(setGroup)"
+                class="flex items-center gap-3 p-3 rounded-lg border dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-700 cursor-pointer transition"
               >
-                <div class="relative">
+                <!-- Set symbol -->
+                <div class="w-8 h-8 flex-shrink-0 flex items-center justify-center">
                   <img
-                    :src="card.image_url"
-                    :alt="card.name"
-                    class="w-full rounded shadow group-hover:ring-2 group-hover:ring-blue-500 transition"
+                    v-if="setGroup.symbol_url"
+                    :src="setGroup.symbol_url"
+                    :alt="setGroup.set_name"
+                    class="w-6 h-6 object-contain"
+                    @error="$event.target.style.display = 'none'"
                   />
+                  <span v-else class="text-gray-400 text-xs">{{ setGroup.set_code.toUpperCase().slice(0, 3) }}</span>
                 </div>
-                <p class="text-xs text-gray-600 dark:text-gray-400 mt-1 truncate">{{ card.name }}</p>
-                <p class="text-xs text-gray-400 dark:text-gray-500 truncate">{{ card.set_name }}</p>
+                <!-- Set info -->
+                <div class="flex-1 min-w-0">
+                  <p class="font-medium text-gray-800 dark:text-white truncate">{{ setGroup.set_name }}</p>
+                  <p class="text-xs text-gray-500 dark:text-gray-400">
+                    {{ setGroup.series || '' }}
+                    <span v-if="setGroup.release_date" class="ml-1">({{ getReleaseYear(setGroup.release_date) }})</span>
+                  </p>
+                </div>
+                <!-- Card count -->
+                <div class="text-right">
+                  <span class="text-sm font-medium text-blue-600 dark:text-blue-400">
+                    {{ setGroup.card_count }} {{ setGroup.card_count === 1 ? 'card' : 'cards' }}
+                  </span>
+                </div>
+                <!-- Arrow -->
+                <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
               </div>
             </div>
 
-            <!-- Empty state -->
-            <div v-else-if="!searching && searchQuery.length >= 2 && !selectedCard" class="text-center py-8 text-gray-500 dark:text-gray-400">
-              No cards found
+            <!-- Phase 2: Card List -->
+            <div v-if="phase === 'card-list' && selectedSet && !selectedCard">
+              <!-- Back button -->
+              <button
+                @click="backToSetList"
+                class="flex items-center gap-1 text-blue-600 dark:text-blue-400 hover:underline mb-3"
+              >
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                </svg>
+                Back to sets
+              </button>
+
+              <!-- Set header -->
+              <div class="flex items-center gap-2 mb-3 pb-2 border-b dark:border-gray-600">
+                <img
+                  v-if="selectedSet.symbol_url"
+                  :src="selectedSet.symbol_url"
+                  :alt="selectedSet.set_name"
+                  class="w-6 h-6 object-contain"
+                />
+                <span class="font-medium text-gray-800 dark:text-white">{{ selectedSet.set_name }}</span>
+                <span class="text-sm text-gray-500">{{ setCards.length }} cards</span>
+              </div>
+
+              <!-- Card grid -->
+              <div class="grid grid-cols-3 sm:grid-cols-4 gap-3 max-h-64 overflow-y-auto">
+                <div
+                  v-for="card in setCards"
+                  :key="card.id"
+                  @click="selectCard(card)"
+                  class="cursor-pointer group"
+                >
+                  <div class="relative">
+                    <img
+                      :src="card.image_url"
+                      :alt="card.name"
+                      class="w-full rounded shadow group-hover:ring-2 group-hover:ring-blue-500 transition"
+                    />
+                  </div>
+                  <p class="text-xs text-gray-600 dark:text-gray-400 mt-1 truncate">{{ card.name }}</p>
+                  <p class="text-xs text-gray-400 dark:text-gray-500">#{{ card.card_number }}</p>
+                </div>
+              </div>
             </div>
-            <div v-else-if="!selectedCard" class="text-center py-8 text-gray-500 dark:text-gray-400">
+
+            <!-- Empty state: Initial search prompt -->
+            <div v-if="phase === 'search' && !searching && searchQuery.length < 2 && !selectedCard" class="text-center py-8 text-gray-500 dark:text-gray-400">
               Enter at least 2 characters to search
+            </div>
+
+            <!-- Empty state: No results -->
+            <div v-if="phase === 'search' && !searching && searchQuery.length >= 2 && setGroups.length === 0 && !selectedCard" class="text-center py-8 text-gray-500 dark:text-gray-400">
+              No cards found
             </div>
           </div>
         </div>

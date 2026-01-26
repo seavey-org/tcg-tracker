@@ -10,7 +10,9 @@ import '../models/collection_item.dart' show CollectionItem, PrintingType;
 import '../models/collection_stats.dart';
 import '../models/gemini_scan_result.dart';
 import '../models/grouped_collection.dart';
+import '../models/grouped_search_result.dart';
 import '../models/price_status.dart';
+import '../models/set_info.dart';
 import 'auth_service.dart';
 
 class ApiService {
@@ -480,6 +482,94 @@ class ApiService {
     } else {
       final error = _safeJsonDecode(response.body);
       throw Exception(error['error'] ?? 'Failed to identify card from image');
+    }
+  }
+
+  /// List sets with optional query filter
+  /// Returns sets matching the query for set browsing
+  Future<SetListResult> listSets(String game, {String? query}) async {
+    final serverUrl = await getServerUrl();
+
+    final params = <String, String>{'game': game};
+    if (query != null && query.isNotEmpty) {
+      params['q'] = query;
+    }
+
+    final uri = Uri.parse('$serverUrl/api/sets').replace(queryParameters: params);
+
+    final response = await _httpClient
+        .get(uri)
+        .timeout(
+          const Duration(seconds: 35),
+          onTimeout: () => throw Exception('Request timed out'),
+        );
+
+    if (response.statusCode == 200) {
+      return SetListResult.fromJson(json.decode(response.body));
+    } else {
+      final error = _safeJsonDecode(response.body);
+      throw Exception(error['error'] ?? 'Failed to list sets');
+    }
+  }
+
+  /// Get all cards in a specific set
+  /// Returns cards in the set, optionally filtered by name
+  Future<CardSearchResult> getSetCards(
+    String setCode,
+    String game, {
+    String? nameFilter,
+  }) async {
+    final serverUrl = await getServerUrl();
+
+    final params = <String, String>{'game': game};
+    if (nameFilter != null && nameFilter.isNotEmpty) {
+      params['q'] = nameFilter;
+    }
+
+    final uri = Uri.parse(
+      '$serverUrl/api/sets/$setCode/cards',
+    ).replace(queryParameters: params);
+
+    final response = await _httpClient
+        .get(uri)
+        .timeout(
+          const Duration(seconds: 35),
+          onTimeout: () => throw Exception('Request timed out'),
+        );
+
+    if (response.statusCode == 200) {
+      return CardSearchResult.fromJson(json.decode(response.body));
+    } else {
+      final error = _safeJsonDecode(response.body);
+      throw Exception(error['error'] ?? 'Failed to get set cards');
+    }
+  }
+
+  /// Search for cards by name and group results by set
+  /// Returns results organized by set for 2-phase selection
+  Future<GroupedSearchResult> searchCardsGrouped(
+    String query,
+    String game,
+  ) async {
+    final serverUrl = await getServerUrl();
+
+    final params = <String, String>{'q': query, 'game': game};
+    final uri = Uri.parse(
+      '$serverUrl/api/cards/search/grouped',
+    ).replace(queryParameters: params);
+
+    final response = await _httpClient
+        .get(uri)
+        .timeout(
+          const Duration(seconds: 35),
+          onTimeout: () => throw Exception('Request timed out'),
+        );
+
+    if (response.statusCode == 200) {
+      return GroupedSearchResult.fromJson(json.decode(response.body));
+    } else {
+      final error = _safeJsonDecode(response.body);
+      throw Exception(error['error'] ?? 'Failed to search cards');
     }
   }
 }

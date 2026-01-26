@@ -26,6 +26,121 @@ func getTestDataDir() string {
 	return ""
 }
 
+// TestNormalizeApostrophes tests the apostrophe normalization function
+func TestNormalizeApostrophes(t *testing.T) {
+	tests := []struct {
+		name     string
+		input    string
+		expected string
+	}{
+		{
+			name:     "Straight apostrophe unchanged",
+			input:    "Blaine's Charmeleon",
+			expected: "Blaine's Charmeleon",
+		},
+		{
+			name:     "Right single quote normalized",
+			input:    "Blaine's Charmeleon", // Uses ' (U+2019)
+			expected: "Blaine's Charmeleon",
+		},
+		{
+			name:     "Left single quote normalized",
+			input:    "Blaine's Charmeleon", // Uses ' (U+2018)
+			expected: "Blaine's Charmeleon",
+		},
+		{
+			name:     "Multiple curly quotes",
+			input:    "Lt. Surge's Pikachu",
+			expected: "Lt. Surge's Pikachu",
+		},
+		{
+			name:     "Mixed quotes",
+			input:    "Misty's Tears and Blaine's Fire",
+			expected: "Misty's Tears and Blaine's Fire",
+		},
+		{
+			name:     "No apostrophes",
+			input:    "Charizard VMAX",
+			expected: "Charizard VMAX",
+		},
+	}
+
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			result := normalizeApostrophes(tt.input)
+			if result != tt.expected {
+				t.Errorf("normalizeApostrophes(%q) = %q, want %q", tt.input, result, tt.expected)
+			}
+		})
+	}
+}
+
+// TestSearchCardsWithApostrophes tests that card search handles apostrophe variants
+func TestSearchCardsWithApostrophes(t *testing.T) {
+	dataDir := getTestDataDir()
+	if dataDir == "" {
+		t.Skip("Pokemon TCG data not found, skipping integration test")
+	}
+
+	service, err := NewPokemonHybridService(dataDir)
+	if err != nil {
+		t.Fatalf("Failed to initialize PokemonHybridService: %v", err)
+	}
+
+	tests := []struct {
+		name         string
+		query        string
+		expectedName string // Card name should contain this
+	}{
+		{
+			name:         "Search with straight apostrophe",
+			query:        "Blaine's",
+			expectedName: "Blaine",
+		},
+		{
+			name:         "Search with curly apostrophe",
+			query:        "Blaine's", // Uses ' (U+2019)
+			expectedName: "Blaine",
+		},
+		{
+			name:         "Search Lt. Surge's cards",
+			query:        "Lt. Surge's",
+			expectedName: "Lt. Surge",
+		},
+	}
+
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			result, err := service.SearchCards(tt.query)
+			if err != nil {
+				t.Fatalf("SearchCards(%q) error: %v", tt.query, err)
+			}
+
+			if len(result.Cards) == 0 {
+				t.Errorf("SearchCards(%q) returned no results", tt.query)
+				return
+			}
+
+			// Check that at least one result contains the expected name
+			found := false
+			for _, card := range result.Cards {
+				if strings.Contains(card.Name, tt.expectedName) {
+					found = true
+					break
+				}
+			}
+
+			if !found {
+				t.Errorf("SearchCards(%q) did not return any cards containing %q", tt.query, tt.expectedName)
+				t.Logf("Top 3 results:")
+				for i := 0; i < 3 && i < len(result.Cards); i++ {
+					t.Logf("  %d. %s", i+1, result.Cards[i].Name)
+				}
+			}
+		})
+	}
+}
+
 // TestTokenizeText tests the tokenizeText helper function
 func TestTokenizeText(t *testing.T) {
 	tests := []struct {

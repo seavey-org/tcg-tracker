@@ -51,10 +51,13 @@ class _ScanResultScreenState extends State<ScanResultScreen> {
     'Chinese',
   ];
 
-  // Check if we should show MTG 2-phase UI
-  bool get _showMTGGroupedUI {
+  // Check if we should show 2-phase UI (for both MTG and Pokemon with multiple cards)
+  bool get _showGroupedUI {
     final result = widget.geminiResult;
-    return result.game == 'mtg' && result.cards.length > 1;
+    // Show grouped UI for any game with multiple cards from different sets
+    if (result.cards.length <= 1) return false;
+    final uniqueSets = result.cards.map((c) => c.setCode).toSet();
+    return uniqueSets.length > 1;
   }
 
   @override
@@ -572,12 +575,12 @@ class _ScanResultScreenState extends State<ScanResultScreen> {
 
   @override
   Widget build(BuildContext context) {
-    // MTG 2-phase selection UI
-    if (_showMTGGroupedUI) {
-      return _buildMTGGroupedUI(context);
+    // 2-phase selection UI (for both MTG and Pokemon with multiple sets)
+    if (_showGroupedUI) {
+      return _buildGroupedUI(context);
     }
 
-    // Standard single-game or Pokemon flow
+    // Standard single-card or single-set flow
     return _buildStandardUI(context);
   }
 
@@ -721,7 +724,7 @@ class _ScanResultScreenState extends State<ScanResultScreen> {
   // MTG 2-Phase Selection UI
   // ============================================================
 
-  Widget _buildMTGGroupedUI(BuildContext context) {
+  Widget _buildGroupedUI(BuildContext context) {
     final result = widget.geminiResult;
 
     return Scaffold(
@@ -742,13 +745,13 @@ class _ScanResultScreenState extends State<ScanResultScreen> {
             : null,
       ),
       body: _selectedSet != null
-          ? _buildMTGVariantSelection(context, _selectedSet!)
-          : _buildMTGSetSelection(context, result),
+          ? _buildVariantSelection(context, _selectedSet!)
+          : _buildSetSelection(context, result),
     );
   }
 
   /// Phase 1: Set selection list
-  Widget _buildMTGSetSelection(BuildContext context, GeminiScanResult result) {
+  Widget _buildSetSelection(BuildContext context, GeminiScanResult result) {
     final sets = result.getMTGSets();
 
     return Column(
@@ -842,7 +845,7 @@ class _ScanResultScreenState extends State<ScanResultScreen> {
               ),
             ),
           ListTile(
-            leading: _buildSetIcon(setInfo.setCode),
+            leading: _buildSetIcon(setInfo.setCode, symbolUrl: setInfo.symbolUrl),
             title: Text(
               setInfo.setName,
               style: isBestMatch
@@ -864,7 +867,7 @@ class _ScanResultScreenState extends State<ScanResultScreen> {
   }
 
   /// Phase 2: Variant selection within a set
-  Widget _buildMTGVariantSelection(BuildContext context, MTGSetInfo setInfo) {
+  Widget _buildVariantSelection(BuildContext context, MTGSetInfo setInfo) {
     final grouped = widget.geminiResult.groupCardsBySet();
     final variants = grouped[setInfo.setCode] ?? [];
 
@@ -876,7 +879,7 @@ class _ScanResultScreenState extends State<ScanResultScreen> {
           color: Theme.of(context).colorScheme.surfaceContainerHighest,
           child: Row(
             children: [
-              _buildSetIcon(setInfo.setCode),
+              _buildSetIcon(setInfo.setCode, symbolUrl: setInfo.symbolUrl),
               const SizedBox(width: 12),
               Expanded(
                 child: Column(
@@ -957,10 +960,24 @@ class _ScanResultScreenState extends State<ScanResultScreen> {
     }
   }
 
-  /// Build a set icon (uses set code as placeholder)
-  Widget _buildSetIcon(String setCode) {
-    // Could use Scryfall set icon URL in the future:
-    // https://svgs.scryfall.io/sets/${setCode.toLowerCase()}.svg
+  /// Build a set icon with actual symbol image when available
+  Widget _buildSetIcon(String setCode, {String? symbolUrl}) {
+    if (symbolUrl != null && symbolUrl.isNotEmpty) {
+      return SizedBox(
+        width: 40,
+        height: 40,
+        child: Image.network(
+          symbolUrl,
+          fit: BoxFit.contain,
+          errorBuilder: (context, error, stackTrace) => _buildFallbackSetIcon(setCode),
+        ),
+      );
+    }
+    return _buildFallbackSetIcon(setCode);
+  }
+
+  /// Fallback set icon using set code text
+  Widget _buildFallbackSetIcon(String setCode) {
     return Container(
       width: 40,
       height: 40,
@@ -970,7 +987,7 @@ class _ScanResultScreenState extends State<ScanResultScreen> {
       ),
       child: Center(
         child: Text(
-          setCode.toUpperCase(),
+          setCode.toUpperCase().substring(0, setCode.length.clamp(0, 4)),
           style: const TextStyle(fontSize: 10, fontWeight: FontWeight.bold),
         ),
       ),

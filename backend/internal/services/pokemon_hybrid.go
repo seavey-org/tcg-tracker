@@ -91,12 +91,27 @@ type LocalCardImages struct {
 	Large string `json:"large"`
 }
 
+// LocalSetImages contains the image URLs for a Pokemon set
+type LocalSetImages struct {
+	Symbol string `json:"symbol"`
+	Logo   string `json:"logo"`
+}
+
 type LocalSet struct {
-	ID          string `json:"id"`
-	Name        string `json:"name"`
-	Series      string `json:"series"`
-	ReleaseDate string `json:"releaseDate"`
-	Total       int    `json:"total"`
+	ID          string         `json:"id"`
+	Name        string         `json:"name"`
+	Series      string         `json:"series"`
+	ReleaseDate string         `json:"releaseDate"`
+	Total       int            `json:"total"`
+	Images      LocalSetImages `json:"images"`
+}
+
+// normalizeApostrophes converts curly/smart quotes to straight apostrophes for consistent matching.
+// Card data may use ' (U+2019 RIGHT SINGLE QUOTATION MARK) but users type ' (U+0027 APOSTROPHE).
+func normalizeApostrophes(s string) string {
+	s = strings.ReplaceAll(s, "'", "'") // Right single quote -> straight apostrophe
+	s = strings.ReplaceAll(s, "'", "'") // Left single quote -> straight apostrophe
+	return s
 }
 
 // precomputeFields pre-computes lowercase and searchable text fields at load time
@@ -104,7 +119,8 @@ type LocalSet struct {
 // operations during the hot path.
 func (c *LocalPokemonCard) precomputeFields() {
 	// Pre-compute lowercase versions for fast matching
-	c.nameLower = strings.ToLower(c.Name)
+	// Normalize apostrophes so "Blaine's" matches "Blaine's"
+	c.nameLower = strings.ToLower(normalizeApostrophes(c.Name))
 	c.setIDLower = strings.ToLower(c.SetID)
 
 	// Build searchable text from all card content
@@ -133,7 +149,7 @@ func (c *LocalPokemonCard) precomputeFields() {
 		parts = append(parts, c.EvolvesFrom)
 	}
 
-	c.searchableText = strings.ToLower(strings.Join(parts, " "))
+	c.searchableText = strings.ToLower(normalizeApostrophes(strings.Join(parts, " ")))
 }
 
 // tokenizeText splits text into significant words (4+ characters)
@@ -395,7 +411,8 @@ func (s *PokemonHybridService) SearchCards(query string) (*models.CardSearchResu
 	s.mu.RLock()
 	defer s.mu.RUnlock()
 
-	queryLower := strings.ToLower(strings.TrimSpace(query))
+	// Normalize apostrophes for consistent matching (handles "Blaine's" vs "Blaine's")
+	queryLower := strings.ToLower(strings.TrimSpace(normalizeApostrophes(query)))
 
 	// Score cards based on match quality
 	type scoredMatch struct {
@@ -510,6 +527,82 @@ func (s *PokemonHybridService) SearchCards(query string) (*models.CardSearchResu
 		Cards:      cards,
 		TotalCount: len(scored),
 		HasMore:    len(scored) > maxResults,
+	}, nil
+}
+
+// SearchCardsGrouped searches for cards by name and groups results by set.
+// Returns a GroupedSearchResult with cards organized by set for 2-phase selection.
+func (s *PokemonHybridService) SearchCardsGrouped(query string) (*models.GroupedSearchResult, error) {
+	// First do a regular search to get matching cards
+	result, err := s.SearchCards(query)
+	if err != nil {
+		return nil, err
+	}
+
+	if len(result.Cards) == 0 {
+		return &models.GroupedSearchResult{
+			CardName:  query,
+			SetGroups: []models.SetGroup{},
+			TotalSets: 0,
+		}, nil
+	}
+
+	// Lock for accessing s.sets map
+	s.mu.RLock()
+	defer s.mu.RUnlock()
+
+	// Group cards by set
+	setMap := make(map[string]*models.SetGroup)
+	for _, card := range result.Cards {
+		group, exists := setMap[card.SetCode]
+		if !exists {
+			// Get set info, use card's info as fallback if set not found
+			var series, releaseDate, symbolURL string
+			if set, setExists := s.sets[card.SetCode]; setExists {
+				series = set.Series
+				releaseDate = set.ReleaseDate
+				symbolURL = set.Images.Symbol
+			}
+			group = &models.SetGroup{
+				SetCode:     card.SetCode,
+				SetName:     card.SetName,
+				Series:      series,
+				ReleaseDate: releaseDate,
+				SymbolURL:   symbolURL,
+				Cards:       []models.Card{},
+			}
+			setMap[card.SetCode] = group
+		}
+		group.Cards = append(group.Cards, card)
+		group.CardCount = len(group.Cards)
+	}
+
+	// Convert map to slice
+	groups := make([]models.SetGroup, 0, len(setMap))
+	for _, g := range setMap {
+		groups = append(groups, *g)
+	}
+
+	// Sort by release date (newest first)
+	sort.Slice(groups, func(i, j int) bool {
+		return groups[i].ReleaseDate > groups[j].ReleaseDate
+	})
+
+	// Determine the canonical card name (use the first result's name)
+	cardName := result.Cards[0].Name
+	// If query was for a base name (e.g., "Charizard"), use that
+	queryLower := strings.ToLower(strings.TrimSpace(query))
+	for _, card := range result.Cards {
+		if strings.ToLower(card.Name) == queryLower {
+			cardName = card.Name
+			break
+		}
+	}
+
+	return &models.GroupedSearchResult{
+		CardName:  cardName,
+		SetGroups: groups,
+		TotalSets: len(groups),
 	}, nil
 }
 
@@ -1588,6 +1681,8 @@ func (s *PokemonHybridService) ListSets(ctx context.Context, query string) ([]Se
 				Series:      set.Series,
 				ReleaseDate: set.ReleaseDate,
 				TotalCards:  set.Total,
+				SymbolURL:   set.Images.Symbol,
+				LogoURL:     set.Images.Logo,
 			})
 		}
 	}
@@ -1603,6 +1698,104 @@ func (s *PokemonHybridService) ListSets(ctx context.Context, query string) ([]Se
 	}
 
 	return results, nil
+}
+
+// ListAllSets returns all Pokemon sets with optional query filter.
+// Unlike ListSets, this method has no result limit and is intended for browsing.
+func (s *PokemonHybridService) ListAllSets(query string) []SetInfo {
+	s.mu.RLock()
+	defer s.mu.RUnlock()
+
+	queryLower := strings.ToLower(strings.TrimSpace(query))
+	var results []SetInfo
+
+	for _, set := range s.sets {
+		// If query is empty, include all sets
+		if queryLower == "" {
+			results = append(results, SetInfo{
+				ID:          set.ID,
+				Name:        set.Name,
+				Series:      set.Series,
+				ReleaseDate: set.ReleaseDate,
+				TotalCards:  set.Total,
+				SymbolURL:   set.Images.Symbol,
+				LogoURL:     set.Images.Logo,
+			})
+			continue
+		}
+
+		// Match on set name, ID, or series
+		nameLower := strings.ToLower(set.Name)
+		seriesLower := strings.ToLower(set.Series)
+		idLower := strings.ToLower(set.ID)
+
+		if strings.Contains(nameLower, queryLower) ||
+			strings.Contains(seriesLower, queryLower) ||
+			strings.Contains(idLower, queryLower) {
+			results = append(results, SetInfo{
+				ID:          set.ID,
+				Name:        set.Name,
+				Series:      set.Series,
+				ReleaseDate: set.ReleaseDate,
+				TotalCards:  set.Total,
+				SymbolURL:   set.Images.Symbol,
+				LogoURL:     set.Images.Logo,
+			})
+		}
+	}
+
+	// Sort by release date (newest first)
+	sort.Slice(results, func(i, j int) bool {
+		return results[i].ReleaseDate > results[j].ReleaseDate
+	})
+
+	return results
+}
+
+// GetSetCards returns all cards in a specific set, optionally filtered by name.
+// Returns Card models for API responses (not CandidateCards).
+func (s *PokemonHybridService) GetSetCards(setCode, nameFilter string) (*models.CardSearchResult, error) {
+	s.mu.RLock()
+	defer s.mu.RUnlock()
+
+	setCodeLower := strings.ToLower(strings.TrimSpace(setCode))
+	nameLower := strings.ToLower(strings.TrimSpace(nameFilter))
+
+	// Check if set exists
+	_, exists := s.sets[setCodeLower]
+	if !exists {
+		return nil, fmt.Errorf("set not found: %s", setCode)
+	}
+
+	var cards []models.Card
+	for _, lc := range s.cards {
+		if lc.setIDLower != setCodeLower {
+			continue
+		}
+
+		// If name filter provided, check for match
+		if nameLower != "" && !strings.Contains(lc.nameLower, nameLower) {
+			continue
+		}
+
+		cards = append(cards, s.convertToCard(lc))
+	}
+
+	// Sort by collector number
+	sort.Slice(cards, func(i, j int) bool {
+		numI, _ := strconv.Atoi(strings.TrimLeft(cards[i].CardNumber, "0"))
+		numJ, _ := strconv.Atoi(strings.TrimLeft(cards[j].CardNumber, "0"))
+		return numI < numJ
+	})
+
+	// Load cached prices
+	s.loadCachedPrices(cards)
+
+	return &models.CardSearchResult{
+		Cards:      cards,
+		TotalCount: len(cards),
+		HasMore:    false,
+	}, nil
 }
 
 // SearchInSet implements CardSearcher interface for Gemini function calling.

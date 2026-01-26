@@ -157,13 +157,14 @@ class GeminiScanResult {
   }
 }
 
-/// Info about an MTG set for 2-phase selection
+/// Info about a set for 2-phase selection (works for both Pokemon and MTG)
 class MTGSetInfo {
   final String setCode;
   final String setName;
   final int variantCount;
   final String? releaseYear;
   final bool isBestMatch;
+  final String? symbolUrl; // URL to set symbol image (PNG for Pokemon, SVG for MTG)
 
   MTGSetInfo({
     required this.setCode,
@@ -171,6 +172,7 @@ class MTGSetInfo {
     required this.variantCount,
     this.releaseYear,
     this.isBestMatch = false,
+    this.symbolUrl,
   });
 
   String get variantCountLabel =>

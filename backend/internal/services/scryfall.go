@@ -27,6 +27,7 @@ type scryfallSet struct {
 	ReleasedAt string `json:"released_at"`
 	CardCount  int    `json:"card_count"`
 	ParentCode string `json:"parent_set_code"`
+	IconSVGURI string `json:"icon_svg_uri"` // SVG icon URL for set symbol
 }
 
 type ScryfallService struct {
@@ -141,6 +142,73 @@ func (s *ScryfallService) SearchCards(query string) (*models.CardSearchResult, e
 		Cards:      cards,
 		TotalCount: searchResp.TotalCards,
 		HasMore:    searchResp.HasMore,
+	}, nil
+}
+
+// SearchCardsGrouped searches for cards by name and groups results by set.
+// Returns a GroupedSearchResult with cards organized by set for 2-phase selection.
+func (s *ScryfallService) SearchCardsGrouped(ctx context.Context, query string) (*models.GroupedSearchResult, error) {
+	// Use SearchCardPrintings to get all printings of a card
+	result, err := s.SearchCardPrintings(query)
+	if err != nil || len(result.Cards) == 0 {
+		// Fall back to regular search
+		result, err = s.SearchCards(query)
+		if err != nil {
+			return nil, err
+		}
+	}
+
+	if len(result.Cards) == 0 {
+		return &models.GroupedSearchResult{
+			CardName:  query,
+			SetGroups: []models.SetGroup{},
+			TotalSets: 0,
+		}, nil
+	}
+
+	// Get sets cache for symbol URLs
+	sets, _ := s.getSets(ctx)
+	setIconMap := make(map[string]string)
+	for _, set := range sets {
+		setIconMap[set.Code] = set.IconSVGURI
+	}
+
+	// Group cards by set
+	setMap := make(map[string]*models.SetGroup)
+	for _, card := range result.Cards {
+		group, exists := setMap[card.SetCode]
+		if !exists {
+			group = &models.SetGroup{
+				SetCode:     card.SetCode,
+				SetName:     card.SetName,
+				ReleaseDate: card.ReleasedAt,
+				SymbolURL:   setIconMap[card.SetCode],
+				Cards:       []models.Card{},
+			}
+			setMap[card.SetCode] = group
+		}
+		group.Cards = append(group.Cards, card)
+		group.CardCount = len(group.Cards)
+	}
+
+	// Convert map to slice
+	groups := make([]models.SetGroup, 0, len(setMap))
+	for _, g := range setMap {
+		groups = append(groups, *g)
+	}
+
+	// Sort by release date (newest first)
+	sort.Slice(groups, func(i, j int) bool {
+		return groups[i].ReleaseDate > groups[j].ReleaseDate
+	})
+
+	// Use the first card's name as the canonical name
+	cardName := result.Cards[0].Name
+
+	return &models.GroupedSearchResult{
+		CardName:  cardName,
+		SetGroups: groups,
+		TotalSets: len(groups),
 	}, nil
 }
 
@@ -582,6 +650,7 @@ func (s *ScryfallService) ListSets(ctx context.Context, query string) ([]SetInfo
 				Series:      set.SetType, // Use set_type as series for MTG
 				ReleaseDate: set.ReleasedAt,
 				TotalCards:  set.CardCount,
+				SymbolURL:   set.IconSVGURI, // Scryfall provides SVG icons
 			})
 		}
 	}
@@ -597,6 +666,81 @@ func (s *ScryfallService) ListSets(ctx context.Context, query string) ([]SetInfo
 	}
 
 	return results, nil
+}
+
+// ListAllSets returns all MTG sets with optional query filter.
+// Unlike ListSets, this method has no result limit and is intended for browsing.
+func (s *ScryfallService) ListAllSets(ctx context.Context, query string) ([]SetInfo, error) {
+	sets, err := s.getSets(ctx)
+	if err != nil {
+		return nil, err
+	}
+
+	queryLower := strings.ToLower(strings.TrimSpace(query))
+	var results []SetInfo
+
+	for _, set := range sets {
+		// If query is empty, include all sets
+		if queryLower == "" {
+			results = append(results, SetInfo{
+				ID:          set.Code,
+				Name:        set.Name,
+				Series:      set.SetType,
+				ReleaseDate: set.ReleasedAt,
+				TotalCards:  set.CardCount,
+				SymbolURL:   set.IconSVGURI,
+			})
+			continue
+		}
+
+		nameLower := strings.ToLower(set.Name)
+		codeLower := strings.ToLower(set.Code)
+		typeLower := strings.ToLower(set.SetType)
+
+		if strings.Contains(nameLower, queryLower) ||
+			strings.Contains(codeLower, queryLower) ||
+			strings.Contains(typeLower, queryLower) {
+			results = append(results, SetInfo{
+				ID:          set.Code,
+				Name:        set.Name,
+				Series:      set.SetType,
+				ReleaseDate: set.ReleasedAt,
+				TotalCards:  set.CardCount,
+				SymbolURL:   set.IconSVGURI,
+			})
+		}
+	}
+
+	// Sort by release date (newest first)
+	sort.Slice(results, func(i, j int) bool {
+		return results[i].ReleaseDate > results[j].ReleaseDate
+	})
+
+	return results, nil
+}
+
+// GetSetCards returns all cards in a specific MTG set, optionally filtered by name.
+// Returns Card models for API responses.
+func (s *ScryfallService) GetSetCards(setCode, nameFilter string) (*models.CardSearchResult, error) {
+	// Build Scryfall query: set:xxx [name]
+	query := fmt.Sprintf("set:%s", strings.ToLower(setCode))
+	if nameFilter != "" {
+		query += fmt.Sprintf(" %s", nameFilter)
+	}
+
+	result, err := s.SearchCards(query)
+	if err != nil {
+		return nil, fmt.Errorf("failed to search cards in set: %w", err)
+	}
+
+	// Sort by collector number
+	sort.Slice(result.Cards, func(i, j int) bool {
+		numI, _ := strconv.Atoi(strings.TrimLeft(result.Cards[i].CardNumber, "0"))
+		numJ, _ := strconv.Atoi(strings.TrimLeft(result.Cards[j].CardNumber, "0"))
+		return numI < numJ
+	})
+
+	return result, nil
 }
 
 // SearchInSet implements CardSearcher interface for Gemini function calling.

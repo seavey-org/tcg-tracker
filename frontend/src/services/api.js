@@ -78,6 +78,19 @@ export const cardService = {
     return response.data
   },
 
+  /**
+   * Search for cards by name and group results by set for 2-phase selection
+   * @param {string} query - Card name to search for
+   * @param {string} game - 'pokemon' or 'mtg'
+   * @returns {Promise<Object>} - { card_name, set_groups: [...], total_sets }
+   */
+  async searchGrouped(query, game) {
+    const response = await api.get('/cards/search/grouped', {
+      params: { q: query, game }
+    })
+    return response.data
+  },
+
   async getCard(id, game) {
     const response = await api.get(`/cards/${id}`, {
       params: { game }
@@ -103,6 +116,35 @@ export const cardService = {
       headers: { 'Content-Type': 'multipart/form-data' },
       timeout: 90000, // 90 second timeout for Gemini multi-turn identification
     })
+    return response.data
+  }
+}
+
+export const setService = {
+  /**
+   * List sets with optional query filter
+   * @param {string} query - Optional search query (name, series, or code)
+   * @param {string} game - 'pokemon' or 'mtg'
+   * @returns {Promise<Object>} - { sets: [...] }
+   */
+  async list(query, game) {
+    const response = await api.get('/sets', {
+      params: { q: query, game }
+    })
+    return response.data
+  },
+
+  /**
+   * Get all cards in a specific set
+   * @param {string} setCode - Set code (e.g., 'swsh4', 'MH2')
+   * @param {string} game - 'pokemon' or 'mtg'
+   * @param {string} [nameFilter] - Optional name filter
+   * @returns {Promise<Object>} - { cards: [...], total_count, has_more }
+   */
+  async getCards(setCode, game, nameFilter = '') {
+    const params = { game }
+    if (nameFilter) params.q = nameFilter
+    const response = await api.get(`/sets/${setCode}/cards`, { params })
     return response.data
   }
 }

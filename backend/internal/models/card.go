@@ -288,6 +288,27 @@ type MTGSetGroup struct {
 	Variants    []Card `json:"variants"`
 }
 
+// SetGroup represents a set containing cards for grouped search results
+// Used for 2-phase card browsing (search by name -> see sets -> select card)
+type SetGroup struct {
+	SetCode     string `json:"set_code"`
+	SetName     string `json:"set_name"`
+	Series      string `json:"series,omitempty"`
+	ReleaseDate string `json:"release_date,omitempty"`
+	SymbolURL   string `json:"symbol_url,omitempty"`
+	CardCount   int    `json:"card_count"`
+	Cards       []Card `json:"cards"`
+}
+
+// GroupedSearchResult is returned for card name searches to enable 2-phase selection
+// Phase 1: User sees sets containing cards matching the name
+// Phase 2: User selects set to see variants
+type GroupedSearchResult struct {
+	CardName  string     `json:"card_name"`
+	SetGroups []SetGroup `json:"set_groups"`
+	TotalSets int        `json:"total_sets"`
+}
+
 // MTGGroupedResult is returned for MTG card scans to enable 2-phase selection
 // Phase 1: User selects set from SetGroups
 // Phase 2: User selects variant within the chosen set

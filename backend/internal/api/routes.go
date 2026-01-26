@@ -62,10 +62,18 @@ func SetupRouter(scryfallService *services.ScryfallService, pokemonService *serv
 			auth.POST("/verify", middleware.VerifyAdminKey)
 		}
 
+		// Set routes (public, for browsing)
+		sets := api.Group("/sets")
+		{
+			sets.GET("", cardHandler.ListSets)
+			sets.GET("/:setCode/cards", cardHandler.GetSetCards)
+		}
+
 		// Card routes (all public)
 		cards := api.Group("/cards")
 		{
 			cards.GET("/search", cardHandler.SearchCards)
+			cards.GET("/search/grouped", cardHandler.SearchCardsGrouped)
 			cards.GET("/:id", cardHandler.GetCard)
 			cards.GET("/:id/prices", priceHandler.GetCardPrices)
 			cards.POST("/identify-image", cardHandler.IdentifyCardFromImage)
