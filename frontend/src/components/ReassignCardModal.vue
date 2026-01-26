@@ -147,19 +147,40 @@ const totalCards = computed(() => {
       <!-- Content -->
       <div class="flex-1 overflow-y-auto p-4">
         <div class="flex flex-col md:flex-row gap-6">
-          <!-- Left: Current card -->
+          <!-- Left: Scanned image (if available) or current card -->
           <div class="md:w-1/3">
-            <h3 class="text-sm font-medium text-gray-600 dark:text-gray-400 mb-2">Current Card</h3>
-            <div class="bg-gray-50 dark:bg-gray-700 rounded-lg p-3">
-              <img
-                :src="currentCard.image_url"
-                :alt="currentCard.name"
-                class="w-full rounded mb-2"
-              />
-              <p class="font-medium text-gray-800 dark:text-white text-sm">{{ currentCard.name }}</p>
-              <p class="text-xs text-gray-500 dark:text-gray-400">{{ currentCard.set_name }}</p>
-              <p class="text-xs text-gray-400 dark:text-gray-500 font-mono mt-1">{{ currentCard.id }}</p>
-            </div>
+            <!-- Scanned Image - shown prominently if available -->
+            <template v-if="item.scanned_image_path">
+              <h3 class="text-sm font-medium text-gray-600 dark:text-gray-400 mb-2">Scanned Card</h3>
+              <div class="bg-gray-50 dark:bg-gray-700 rounded-lg p-3 mb-3">
+                <img
+                  :src="`/images/scanned/${item.scanned_image_path.split('/').pop()}`"
+                  alt="Scanned card"
+                  class="w-full rounded shadow-lg"
+                />
+              </div>
+              <!-- Current assignment info below scan -->
+              <div class="bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-700 rounded-lg p-3">
+                <p class="text-xs text-amber-600 dark:text-amber-400 font-medium mb-1">Currently assigned to:</p>
+                <p class="font-medium text-gray-800 dark:text-white text-sm">{{ currentCard.name }}</p>
+                <p class="text-xs text-gray-500 dark:text-gray-400">{{ currentCard.set_name }}</p>
+                <p class="text-xs text-gray-400 dark:text-gray-500 font-mono mt-1">{{ currentCard.id }}</p>
+              </div>
+            </template>
+            <!-- No scan - just show current card -->
+            <template v-else>
+              <h3 class="text-sm font-medium text-gray-600 dark:text-gray-400 mb-2">Current Card</h3>
+              <div class="bg-gray-50 dark:bg-gray-700 rounded-lg p-3">
+                <img
+                  :src="currentCard.image_url"
+                  :alt="currentCard.name"
+                  class="w-full rounded mb-2"
+                />
+                <p class="font-medium text-gray-800 dark:text-white text-sm">{{ currentCard.name }}</p>
+                <p class="text-xs text-gray-500 dark:text-gray-400">{{ currentCard.set_name }}</p>
+                <p class="text-xs text-gray-400 dark:text-gray-500 font-mono mt-1">{{ currentCard.id }}</p>
+              </div>
+            </template>
           </div>
 
           <!-- Right: Search and selection -->

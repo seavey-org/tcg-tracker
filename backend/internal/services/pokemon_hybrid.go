@@ -341,9 +341,18 @@ func (s *PokemonHybridService) loadData(dataDir string) error {
 		if japanSetsData, err := os.ReadFile(japanSetsFile); err == nil {
 			var japanSets []LocalSet
 			if err := json.Unmarshal(japanSetsData, &japanSets); err == nil {
+				// Build normalized symbol lookup (handle apostrophe variants)
+				normalizedSymbols := make(map[string]string)
+				for name, url := range japanSymbols {
+					normalizedSymbols[normalizeApostrophes(name)] = url
+				}
+
 				for _, set := range japanSets {
-					// Apply symbol URL from mapping if available
-					if symbolURL, ok := japanSymbols[set.Name]; ok {
+					// Normalize set name for symbol lookup (handle apostrophes and trailing ellipsis)
+					normalizedName := normalizeApostrophes(set.Name)
+					normalizedName = strings.TrimSuffix(normalizedName, "...")
+
+					if symbolURL, ok := normalizedSymbols[normalizedName]; ok {
 						set.Images.Symbol = symbolURL
 					}
 					s.sets[set.ID] = set
@@ -715,7 +724,15 @@ func (s *PokemonHybridService) GetCard(id string) (*models.Card, error) {
 					card.PriceSource = "pending"
 				}
 			} else {
+				// Card not in database - save it so price worker can update it
+				// This handles Japanese cards loaded from JSON that were added to
+				// collection before cacheCardsAsync was properly called
 				card.PriceSource = "pending"
+				go func(c models.Card) {
+					if err := db.Save(&c).Error; err != nil {
+						log.Printf("Warning: failed to cache card %s: %v", c.ID, err)
+					}
+				}(card)
 			}
 
 			return &card, nil
