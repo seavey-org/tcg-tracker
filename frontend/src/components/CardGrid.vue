@@ -50,7 +50,8 @@ function hasPriceFallback(item) {
   if (props.grouped && item.variants) {
     return item.variants.some(v => v.price_fallback)
   }
-  return false
+  // Support flat collection view (individual items have price_fallback directly)
+  return item.price_fallback || false
 }
 
 // Get the primary printing badge to show (if not Normal)

@@ -28,6 +28,7 @@ type PokemonHybridService struct {
 	cardIndex map[string][]int // name -> card indices for fast lookup
 	wordIndex map[string][]int // word -> card indices for full-text search
 	idIndex   map[string]int   // card ID -> card index for O(1) lookup
+	setIndex  map[string][]int // set ID -> card indices for O(1) set lookups
 	cards     []LocalPokemonCard
 	mu        sync.RWMutex
 }
@@ -257,6 +258,7 @@ func NewPokemonHybridService(dataDir string) (*PokemonHybridService, error) {
 		cardIndex: make(map[string][]int),
 		wordIndex: make(map[string][]int),
 		idIndex:   make(map[string]int),
+		setIndex:  make(map[string][]int),
 	}
 
 	if err := service.loadData(dataDir); err != nil {
@@ -327,7 +329,11 @@ func (s *PokemonHybridService) loadData(dataDir string) error {
 		if symbolsData, err := os.ReadFile(japanSymbolsFile); err == nil {
 			if err := json.Unmarshal(symbolsData, &japanSymbols); err != nil {
 				log.Printf("Warning: failed to parse Japanese set symbols: %v", err)
+			} else {
+				log.Printf("Loaded %d Japanese set symbol mappings", len(japanSymbols))
 			}
+		} else if !os.IsNotExist(err) {
+			log.Printf("Warning: failed to read Japanese set symbols file: %v", err)
 		}
 
 		// Load Japanese sets
@@ -397,6 +403,9 @@ func (s *PokemonHybridService) loadCardsFromDirectory(cardsDir string, isJapanes
 			// Index by ID for O(1) lookups
 			s.idIndex[cards[i].ID] = idx
 
+			// Index by set ID for O(1) set lookups
+			s.setIndex[cards[i].setIDLower] = append(s.setIndex[cards[i].setIDLower], idx)
+
 			// Index by lowercase name for search (using pre-computed field)
 			s.cardIndex[cards[i].nameLower] = append(s.cardIndex[cards[i].nameLower], idx)
 
@@ -423,7 +432,12 @@ func (s *PokemonHybridService) loadCardsFromDirectory(cardsDir string, isJapanes
 func (s *PokemonHybridService) SearchCards(query string) (*models.CardSearchResult, error) {
 	s.mu.RLock()
 	defer s.mu.RUnlock()
+	return s.searchCardsLocked(query)
+}
 
+// searchCardsLocked performs the search assuming the caller holds at least an RLock.
+// This internal method allows SearchCardsGrouped to search and group under a single lock.
+func (s *PokemonHybridService) searchCardsLocked(query string) (*models.CardSearchResult, error) {
 	// Normalize apostrophes for consistent matching (handles "Blaine's" vs "Blaine's")
 	queryLower := strings.ToLower(strings.TrimSpace(normalizeApostrophes(query)))
 
@@ -546,8 +560,12 @@ func (s *PokemonHybridService) SearchCards(query string) (*models.CardSearchResu
 // SearchCardsGrouped searches for cards by name and groups results by set.
 // Returns a GroupedSearchResult with cards organized by set for 2-phase selection.
 func (s *PokemonHybridService) SearchCardsGrouped(query string) (*models.GroupedSearchResult, error) {
-	// First do a regular search to get matching cards
-	result, err := s.SearchCards(query)
+	// Hold lock for entire operation to avoid lock/unlock/lock pattern
+	s.mu.RLock()
+	defer s.mu.RUnlock()
+
+	// Search using internal method (already under lock)
+	result, err := s.searchCardsLocked(query)
 	if err != nil {
 		return nil, err
 	}
@@ -560,11 +578,7 @@ func (s *PokemonHybridService) SearchCardsGrouped(query string) (*models.Grouped
 		}, nil
 	}
 
-	// Lock for accessing s.sets map
-	s.mu.RLock()
-	defer s.mu.RUnlock()
-
-	// Group cards by set
+	// Group cards by set (s.sets access is safe, we hold the lock)
 	setMap := make(map[string]*models.SetGroup)
 	for _, card := range result.Cards {
 		group, exists := setMap[card.SetCode]
@@ -1776,17 +1790,15 @@ func (s *PokemonHybridService) GetSetCards(setCode, nameFilter string) (*models.
 	setCodeLower := strings.ToLower(strings.TrimSpace(setCode))
 	nameLower := strings.ToLower(strings.TrimSpace(nameFilter))
 
-	// Check if set exists
-	_, exists := s.sets[setCodeLower]
+	// Use setIndex for O(1) lookup instead of iterating all cards
+	cardIndices, exists := s.setIndex[setCodeLower]
 	if !exists {
 		return nil, fmt.Errorf("set not found: %s", setCode)
 	}
 
 	var cards []models.Card
-	for _, lc := range s.cards {
-		if lc.setIDLower != setCodeLower {
-			continue
-		}
+	for _, idx := range cardIndices {
+		lc := s.cards[idx]
 
 		// If name filter provided, check for match
 		if nameLower != "" && !strings.Contains(lc.nameLower, nameLower) {
