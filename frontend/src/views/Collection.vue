@@ -197,8 +197,8 @@ const handleSelect = (groupedItem) => {
   selectedItem.value = groupedItem
 }
 
-const handleUpdate = async ({ id, quantity, condition, printing, language }) => {
-  const result = await store.updateItem(id, { quantity, condition, printing, language })
+const handleUpdate = async ({ id, quantity, condition, printing, language, card_id }) => {
+  const result = await store.updateItem(id, { quantity, condition, printing, language, card_id })
   // Show feedback about the operation
   if (result.message) {
     // Could show a toast here
