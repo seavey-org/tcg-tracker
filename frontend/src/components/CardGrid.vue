@@ -45,6 +45,14 @@ function getScannedCount(item) {
   return props.grouped ? (item.scanned_count || 0) : (item.scanned_image_path ? 1 : 0)
 }
 
+// Check if any variant has a price fallback (language mismatch warning)
+function hasPriceFallback(item) {
+  if (props.grouped && item.variants) {
+    return item.variants.some(v => v.price_fallback)
+  }
+  return false
+}
+
 // Get the primary printing badge to show (if not Normal)
 // For grouped items, show badge if any variant has special printing
 function getPrintingBadge(item) {
@@ -104,6 +112,16 @@ function getPrintingLabel(printing) {
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 13a3 3 0 11-6 0 3 3 0 016 0z" />
           </svg>
           {{ getScannedCount(item) }}
+        </div>
+        <!-- Warning indicator for price fallback (bottom left) -->
+        <div
+          v-if="showQuantity && hasPriceFallback(item)"
+          class="absolute bottom-2 left-2 bg-amber-500 text-white text-xs px-2 py-1 rounded-full flex items-center gap-1"
+          title="Price from different language market"
+        >
+          <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+          </svg>
         </div>
         <!-- Printing badge (top left) -->
         <div
