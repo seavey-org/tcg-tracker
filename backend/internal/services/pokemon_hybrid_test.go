@@ -1061,3 +1061,364 @@ func TestJapaneseCardLoading(t *testing.T) {
 		t.Logf("Found Misty's Tears: %s (%s)", mistysTearsCards[0].ID, mistysTearsCards[0].SetCode)
 	}
 }
+
+// TestSearchCardsGrouped tests the 2-phase search functionality
+func TestSearchCardsGrouped(t *testing.T) {
+	dataDir := getTestDataDir()
+	if dataDir == "" {
+		t.Skip("Pokemon TCG data not found, skipping integration test")
+	}
+
+	service, err := NewPokemonHybridService(dataDir)
+	if err != nil {
+		t.Fatalf("Failed to initialize PokemonHybridService: %v", err)
+	}
+
+	tests := []struct {
+		name            string
+		query           string
+		expectSets      int  // Minimum expected sets (-1 to skip)
+		expectCards     int  // Minimum expected total cards (-1 to skip)
+		expectError     bool
+		checkSetSymbols bool // Verify set symbols are populated
+	}{
+		{
+			name:        "Search for Charizard - multiple sets expected",
+			query:       "Charizard",
+			expectSets:  5,  // Charizard appears in many sets
+			expectCards: 10, // Many Charizard cards exist
+		},
+		{
+			name:            "Search for Pikachu - check symbols",
+			query:           "Pikachu",
+			expectSets:      5,
+			expectCards:     10,
+			checkSetSymbols: true,
+		},
+		{
+			name:        "Search with apostrophe - Blaine's",
+			query:       "Blaine's",
+			expectSets:  1, // At least gym sets
+			expectCards: 1,
+		},
+		{
+			name:        "Search with curly apostrophe",
+			query:       "Blaine's", // U+2019
+			expectSets:  1,
+			expectCards: 1,
+		},
+		{
+			name:        "Empty query returns empty results",
+			query:       "",
+			expectSets:  0,
+			expectCards: 0,
+		},
+	}
+
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			result, err := service.SearchCardsGrouped(tt.query)
+
+			if tt.expectError {
+				if err == nil {
+					t.Errorf("Expected error for query %q but got none", tt.query)
+				}
+				return
+			}
+
+			if err != nil {
+				t.Fatalf("SearchCardsGrouped(%q) error: %v", tt.query, err)
+			}
+
+			if result == nil {
+				t.Fatalf("SearchCardsGrouped(%q) returned nil result", tt.query)
+			}
+
+			// Check set count
+			if tt.expectSets >= 0 && len(result.SetGroups) < tt.expectSets {
+				t.Errorf("SearchCardsGrouped(%q) returned %d sets, want at least %d",
+					tt.query, len(result.SetGroups), tt.expectSets)
+			}
+
+			// Check total cards
+			totalCards := 0
+			for _, group := range result.SetGroups {
+				totalCards += group.CardCount
+				// Verify CardCount matches actual cards length
+				if group.CardCount != len(group.Cards) {
+					t.Errorf("Set %s: CardCount=%d but len(Cards)=%d",
+						group.SetCode, group.CardCount, len(group.Cards))
+				}
+			}
+
+			if tt.expectCards >= 0 && totalCards < tt.expectCards {
+				t.Errorf("SearchCardsGrouped(%q) returned %d total cards, want at least %d",
+					tt.query, totalCards, tt.expectCards)
+			}
+
+			// Check TotalSets matches actual length
+			if result.TotalSets != len(result.SetGroups) {
+				t.Errorf("TotalSets=%d but len(SetGroups)=%d",
+					result.TotalSets, len(result.SetGroups))
+			}
+
+			// Check set symbols if requested
+			if tt.checkSetSymbols && len(result.SetGroups) > 0 {
+				symbolCount := 0
+				for _, group := range result.SetGroups {
+					if group.SymbolURL != "" {
+						symbolCount++
+					}
+				}
+				t.Logf("Sets with symbols: %d/%d", symbolCount, len(result.SetGroups))
+			}
+
+			// Log results for debugging
+			if len(result.SetGroups) > 0 {
+				t.Logf("Found %d sets with %d total cards for query %q",
+					len(result.SetGroups), totalCards, tt.query)
+				for i, group := range result.SetGroups {
+					if i >= 3 {
+						t.Logf("  ... and %d more sets", len(result.SetGroups)-3)
+						break
+					}
+					t.Logf("  - %s (%s): %d cards", group.SetName, group.SetCode, group.CardCount)
+				}
+			}
+		})
+	}
+}
+
+// TestListAllSets tests the set listing functionality
+func TestListAllSets(t *testing.T) {
+	dataDir := getTestDataDir()
+	if dataDir == "" {
+		t.Skip("Pokemon TCG data not found, skipping integration test")
+	}
+
+	service, err := NewPokemonHybridService(dataDir)
+	if err != nil {
+		t.Fatalf("Failed to initialize PokemonHybridService: %v", err)
+	}
+
+	tests := []struct {
+		name        string
+		query       string
+		expectMin   int    // Minimum expected results
+		expectMatch string // A set name that should be in results (empty to skip)
+	}{
+		{
+			name:        "Empty query returns all sets (limited)",
+			query:       "",
+			expectMin:   20, // Should return top 20
+			expectMatch: "",
+		},
+		{
+			name:        "Search for Base Set",
+			query:       "base",
+			expectMin:   1,
+			expectMatch: "Base",
+		},
+		{
+			name:        "Search for Vivid Voltage",
+			query:       "vivid",
+			expectMin:   1,
+			expectMatch: "Vivid Voltage",
+		},
+		{
+			name:        "Search for Sword & Shield series",
+			query:       "sword",
+			expectMin:   1,
+			expectMatch: "Sword",
+		},
+		{
+			name:      "No results for gibberish",
+			query:     "xyznonexistent123",
+			expectMin: 0,
+		},
+	}
+
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			results := service.ListAllSets(tt.query)
+
+			if len(results) < tt.expectMin {
+				t.Errorf("ListAllSets(%q) returned %d sets, want at least %d",
+					tt.query, len(results), tt.expectMin)
+			}
+
+			// Check for expected match
+			if tt.expectMatch != "" {
+				found := false
+				for _, set := range results {
+					if strings.Contains(set.Name, tt.expectMatch) {
+						found = true
+						break
+					}
+				}
+				if !found {
+					t.Errorf("ListAllSets(%q) should contain a set with %q in name",
+						tt.query, tt.expectMatch)
+				}
+			}
+
+			// Verify set info is populated
+			for i, set := range results {
+				if i >= 5 {
+					break
+				}
+				if set.ID == "" {
+					t.Errorf("Set %d has empty ID", i)
+				}
+				if set.Name == "" {
+					t.Errorf("Set %d has empty Name", i)
+				}
+			}
+
+			t.Logf("ListAllSets(%q) returned %d sets", tt.query, len(results))
+		})
+	}
+}
+
+// TestGetSetCards tests retrieving cards from a specific set
+func TestGetSetCards(t *testing.T) {
+	dataDir := getTestDataDir()
+	if dataDir == "" {
+		t.Skip("Pokemon TCG data not found, skipping integration test")
+	}
+
+	service, err := NewPokemonHybridService(dataDir)
+	if err != nil {
+		t.Fatalf("Failed to initialize PokemonHybridService: %v", err)
+	}
+
+	tests := []struct {
+		name        string
+		setCode     string
+		nameFilter  string
+		expectMin   int  // Minimum expected cards
+		expectMax   int  // Maximum expected cards (-1 for no max)
+		expectError bool
+	}{
+		{
+			name:      "Base Set - all cards",
+			setCode:   "base1",
+			expectMin: 100, // Base set has 102 cards
+			expectMax: 110,
+		},
+		{
+			name:       "Base Set - filter by Charizard",
+			setCode:    "base1",
+			nameFilter: "Charizard",
+			expectMin:  1,
+			expectMax:  5,
+		},
+		{
+			name:      "Vivid Voltage - all cards",
+			setCode:   "swsh4",
+			expectMin: 150, // Vivid Voltage has 200+ cards
+			expectMax: -1,  // No max limit
+		},
+		{
+			name:       "Vivid Voltage - filter by Pikachu",
+			setCode:    "swsh4",
+			nameFilter: "Pikachu",
+			expectMin:  1,
+			expectMax:  20,
+		},
+		{
+			name:        "Invalid set code returns error",
+			setCode:     "invalidsetxyz",
+			expectError: true,
+		},
+	}
+
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			result, err := service.GetSetCards(tt.setCode, tt.nameFilter)
+
+			if tt.expectError {
+				if err == nil {
+					t.Errorf("Expected error for set %q but got none", tt.setCode)
+				}
+				return
+			}
+
+			if err != nil {
+				t.Fatalf("GetSetCards(%q, %q) error: %v", tt.setCode, tt.nameFilter, err)
+			}
+
+			if result == nil {
+				t.Fatalf("GetSetCards(%q, %q) returned nil", tt.setCode, tt.nameFilter)
+			}
+
+			if len(result.Cards) < tt.expectMin {
+				t.Errorf("GetSetCards(%q, %q) returned %d cards, want at least %d",
+					tt.setCode, tt.nameFilter, len(result.Cards), tt.expectMin)
+			}
+
+			if tt.expectMax >= 0 && len(result.Cards) > tt.expectMax {
+				t.Errorf("GetSetCards(%q, %q) returned %d cards, want at most %d",
+					tt.setCode, tt.nameFilter, len(result.Cards), tt.expectMax)
+			}
+
+			// Verify cards belong to the requested set
+			for _, card := range result.Cards {
+				if card.SetCode != tt.setCode {
+					t.Errorf("Card %s has SetCode=%s, want %s",
+						card.ID, card.SetCode, tt.setCode)
+				}
+			}
+
+			// Verify name filter is applied
+			if tt.nameFilter != "" {
+				filterLower := strings.ToLower(tt.nameFilter)
+				for _, card := range result.Cards {
+					if !strings.Contains(strings.ToLower(card.Name), filterLower) {
+						t.Errorf("Card %s (name=%s) doesn't match filter %q",
+							card.ID, card.Name, tt.nameFilter)
+					}
+				}
+			}
+
+			t.Logf("GetSetCards(%q, %q) returned %d cards", tt.setCode, tt.nameFilter, len(result.Cards))
+		})
+	}
+}
+
+// TestSearchCardsGroupedSorting verifies sets are sorted by release date (newest first)
+func TestSearchCardsGroupedSorting(t *testing.T) {
+	dataDir := getTestDataDir()
+	if dataDir == "" {
+		t.Skip("Pokemon TCG data not found, skipping integration test")
+	}
+
+	service, err := NewPokemonHybridService(dataDir)
+	if err != nil {
+		t.Fatalf("Failed to initialize PokemonHybridService: %v", err)
+	}
+
+	// Pikachu appears in many sets across different release dates
+	result, err := service.SearchCardsGrouped("Pikachu")
+	if err != nil {
+		t.Fatalf("SearchCardsGrouped error: %v", err)
+	}
+
+	if len(result.SetGroups) < 2 {
+		t.Skip("Not enough sets to test sorting")
+	}
+
+	// Verify sets are sorted by release date (newest first)
+	for i := 1; i < len(result.SetGroups); i++ {
+		prev := result.SetGroups[i-1].ReleaseDate
+		curr := result.SetGroups[i].ReleaseDate
+		// Empty dates should come after dated ones
+		if prev != "" && curr != "" && prev < curr {
+			t.Errorf("Sets not sorted by release date: %s (%s) before %s (%s)",
+				result.SetGroups[i-1].SetName, prev,
+				result.SetGroups[i].SetName, curr)
+		}
+	}
+
+	t.Logf("Verified %d sets are sorted by release date", len(result.SetGroups))
+}
