@@ -37,7 +37,7 @@ func (h *CollectionHandler) GetCollection(c *gin.Context) {
 	db := database.GetDB()
 
 	var items []models.CollectionItem
-	query := db.Preload("Card").Order("added_at DESC")
+	query := db.Preload("Card").Preload("Card.Prices").Order("added_at DESC")
 
 	// Optional filters
 	if game := c.Query("game"); game != "" {

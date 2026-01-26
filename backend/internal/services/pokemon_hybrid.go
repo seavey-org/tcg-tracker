@@ -685,11 +685,13 @@ func (s *PokemonHybridService) GetCard(id string) (*models.Card, error) {
 			card := s.convertToCard(localCard)
 
 			// Load cached price from database - PriceWorker handles updates via JustTCG
+			// Preload Prices to ensure condition-specific prices are available for GetPriceWithSource()
 			var cachedCard models.Card
-			if err := db.First(&cachedCard, "id = ?", id).Error; err == nil {
+			if err := db.Preload("Prices").First(&cachedCard, "id = ?", id).Error; err == nil {
 				card.PriceUSD = cachedCard.PriceUSD
 				card.PriceFoilUSD = cachedCard.PriceFoilUSD
 				card.PriceUpdatedAt = cachedCard.PriceUpdatedAt
+				card.Prices = cachedCard.Prices // Include condition-specific prices
 
 				if cachedCard.PriceUpdatedAt != nil && time.Since(*cachedCard.PriceUpdatedAt) < cacheThreshold {
 					card.PriceSource = "cached"
