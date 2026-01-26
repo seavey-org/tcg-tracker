@@ -1077,8 +1077,8 @@ func TestSearchCardsGrouped(t *testing.T) {
 	tests := []struct {
 		name            string
 		query           string
-		expectSets      int  // Minimum expected sets (-1 to skip)
-		expectCards     int  // Minimum expected total cards (-1 to skip)
+		expectSets      int // Minimum expected sets (-1 to skip)
+		expectCards     int // Minimum expected total cards (-1 to skip)
 		expectError     bool
 		checkSetSymbols bool // Verify set symbols are populated
 	}{
@@ -1296,8 +1296,8 @@ func TestGetSetCards(t *testing.T) {
 		name        string
 		setCode     string
 		nameFilter  string
-		expectMin   int  // Minimum expected cards
-		expectMax   int  // Maximum expected cards (-1 for no max)
+		expectMin   int // Minimum expected cards
+		expectMax   int // Maximum expected cards (-1 for no max)
 		expectError bool
 	}{
 		{
