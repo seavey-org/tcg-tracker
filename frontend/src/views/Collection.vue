@@ -23,7 +23,8 @@ const filters = ref({
   sets: [],
   conditions: [],
   rarities: [],
-  languages: []
+  languages: [],
+  hasPriceWarning: false
 })
 
 // Extract available filter options from collection data
@@ -158,6 +159,13 @@ const filteredItems = computed(() => {
     )
   }
 
+  // Price warning filter - match if ANY variant has price_fallback
+  if (filters.value.hasPriceWarning) {
+    items = items.filter(group =>
+      group.variants?.some(v => v.price_fallback)
+    )
+  }
+
   // Sorting
   items.sort((a, b) => {
     switch (sortBy.value) {
@@ -190,7 +198,8 @@ const activeFilterCount = computed(() => {
          filters.value.sets.length +
          filters.value.conditions.length +
          filters.value.rarities.length +
-         filters.value.languages.length
+         filters.value.languages.length +
+         (filters.value.hasPriceWarning ? 1 : 0)
 })
 
 const handleSelect = (groupedItem) => {
@@ -277,6 +286,9 @@ const syncFiltersToUrl = () => {
   if (filters.value.languages.length > 0) {
     query.languages = filters.value.languages.join(',')
   }
+  if (filters.value.hasPriceWarning) {
+    query.warning = '1'
+  }
   if (filterGame.value !== 'all') {
     query.game = filterGame.value
   }
@@ -306,7 +318,8 @@ const initFiltersFromUrl = () => {
     sets: parseQueryArray(q.sets),
     conditions: parseQueryArray(q.conditions),
     rarities: parseQueryArray(q.rarities),
-    languages: parseQueryArray(q.languages)
+    languages: parseQueryArray(q.languages),
+    hasPriceWarning: q.warning === '1'
   }
 
   if (q.game && ['mtg', 'pokemon'].includes(q.game)) {

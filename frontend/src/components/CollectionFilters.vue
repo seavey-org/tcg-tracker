@@ -40,7 +40,8 @@ const activeCount = computed(() => {
          (f.sets?.length || 0) +
          (f.conditions?.length || 0) +
          (f.rarities?.length || 0) +
-         (f.languages?.length || 0)
+         (f.languages?.length || 0) +
+         (f.hasPriceWarning ? 1 : 0)
 })
 
 // Filter sets by search query
@@ -81,9 +82,18 @@ const clearAll = () => {
     sets: [],
     conditions: [],
     rarities: [],
-    languages: []
+    languages: [],
+    hasPriceWarning: false
   })
   setSearch.value = ''
+}
+
+// Toggle the price warning filter
+const togglePriceWarning = () => {
+  emit('update:modelValue', {
+    ...props.modelValue,
+    hasPriceWarning: !props.modelValue.hasPriceWarning
+  })
 }
 
 // Human-readable condition labels
@@ -168,6 +178,25 @@ const getLanguageDisplay = (language) => {
         v-show="expanded"
         class="mt-3 p-4 bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 shadow-sm space-y-4"
       >
+        <!-- Price Warning Filter -->
+        <div class="space-y-2">
+          <label class="text-sm font-medium text-gray-700 dark:text-gray-300">Alerts</label>
+          <div class="flex flex-wrap gap-2">
+            <button
+              @click="togglePriceWarning"
+              class="px-3 py-1.5 text-sm rounded-full border transition-colors flex items-center gap-1.5"
+              :class="modelValue.hasPriceWarning
+                ? 'bg-amber-500 border-amber-500 text-white'
+                : 'bg-white dark:bg-gray-700 border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:border-amber-400 dark:hover:border-amber-500'"
+            >
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd" />
+              </svg>
+              Price Warning
+            </button>
+          </div>
+        </div>
+
         <!-- Printing Type Filter -->
         <div v-if="availablePrintings.length > 0" class="space-y-2">
           <label class="text-sm font-medium text-gray-700 dark:text-gray-300">Printing</label>
