@@ -136,6 +136,8 @@ class GeminiScanResult {
             releaseYear: _extractYear(cardsInSet.first.releasedAt),
             // Best match indicator: if the primary cardId is in this set
             isBestMatch: cardsInSet.any((c) => c.id == cardId),
+            // Extract symbol URL from the first card in this set
+            symbolUrl: cardsInSet.first.setSymbolUrl,
           ),
         );
       }
@@ -164,7 +166,8 @@ class MTGSetInfo {
   final int variantCount;
   final String? releaseYear;
   final bool isBestMatch;
-  final String? symbolUrl; // URL to set symbol image (PNG for Pokemon, SVG for MTG)
+  final String?
+  symbolUrl; // URL to set symbol image (PNG for Pokemon, SVG for MTG)
 
   MTGSetInfo({
     required this.setCode,

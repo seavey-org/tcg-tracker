@@ -127,6 +127,103 @@ func normalizeSetNameForSymbols(s string) string {
 	return s
 }
 
+// seriesFallbackSymbols maps series identifiers to their primary set symbol URL.
+// Used when Japanese sets don't have a direct symbol mapping in set_symbols.json.
+var seriesFallbackSymbols = map[string]string{
+	// Scarlet & Violet Era (2023+)
+	"scarlet_violet": "https://archives.bulbagarden.net/media/upload/d/d7/SetSymbolScarlet_ex.png",
+	// Sword & Shield Era (S-series in Japan, 2020-2023)
+	"sword_shield": "https://archives.bulbagarden.net/media/upload/4/43/SetSymbolSword.png",
+	// Sun & Moon Era (2017-2019)
+	"sun_moon": "https://archives.bulbagarden.net/media/upload/f/fb/SetSymbolCollection_Sun.png",
+	// XY Era (2014-2016)
+	"xy": "https://archives.bulbagarden.net/media/upload/6/65/SetSymbolCollection_X.png",
+	// Black & White Era (2011-2013)
+	"black_white": "https://archives.bulbagarden.net/media/upload/3/3e/SetSymbolBlack_Collection.png",
+	// Platinum Era (2009-2010)
+	"platinum": "https://archives.bulbagarden.net/media/upload/8/82/SetSymbolGalactic%27s_Conquest.png",
+	// Diamond & Pearl Era (2007-2009)
+	"diamond_pearl": "https://archives.bulbagarden.net/media/upload/0/0d/SetSymbolSpace-Time_Creation.png",
+	// HeartGold & SoulSilver Era (2010)
+	"hgss": "https://archives.bulbagarden.net/media/upload/1/1c/SetSymbolHeartGold_Collection.png",
+	// ADV/EX Era - Ruby & Sapphire (2003-2007)
+	"adv": "https://archives.bulbagarden.net/media/upload/f/f2/SetSymbolRuby_and_Sapphire.png",
+	// Neo Era (2000-2002)
+	"neo": "https://archives.bulbagarden.net/media/upload/7/75/SetSymbolNeo_Genesis.png",
+	// Classic Era symbols
+	"classic_base":   "https://archives.bulbagarden.net/media/upload/7/7f/SetSymbolBase_Expansion_Pack.png",
+	"classic_jungle": "https://archives.bulbagarden.net/media/upload/2/2f/SetSymbolJungle.png",
+	"classic_fossil": "https://archives.bulbagarden.net/media/upload/e/e6/SetSymbolFossil.png",
+	"classic_rocket": "https://archives.bulbagarden.net/media/upload/7/7e/SetSymbolTeam_Rocket.png",
+	"classic_gym":    "https://archives.bulbagarden.net/media/upload/3/38/SetSymbolGym_Booster.png",
+}
+
+// inferSeriesFromSet determines the series for a Japanese set based on ID/name patterns.
+// Used to find a fallback symbol when the set doesn't have a direct mapping.
+func inferSeriesFromSet(setID, setName string) string {
+	id := strings.ToLower(setID)
+	name := strings.ToLower(setName)
+
+	// Prefix-based detection (most reliable)
+	switch {
+	case strings.HasPrefix(id, "jp-sv") || strings.HasPrefix(name, "sv"):
+		return "scarlet_violet"
+	case strings.HasPrefix(id, "jp-s") && len(id) > 4 && id[4] >= '0' && id[4] <= '9':
+		return "sword_shield"
+	case len(name) > 1 && name[0] == 's' && name[1] >= '0' && name[1] <= '9':
+		return "sword_shield"
+	case strings.HasPrefix(id, "jp-sm") || strings.HasPrefix(name, "sm"):
+		return "sun_moon"
+	case strings.HasPrefix(id, "jp-xy") || strings.HasPrefix(name, "xy"):
+		return "xy"
+	case strings.HasPrefix(id, "jp-bw") || strings.HasPrefix(name, "bw"):
+		return "black_white"
+	case strings.HasPrefix(id, "jp-pt") || strings.HasPrefix(name, "pt"):
+		return "platinum"
+	case strings.HasPrefix(id, "jp-dpt") || strings.Contains(name, "dpt"):
+		return "platinum"
+	case strings.HasPrefix(id, "jp-dp") || strings.HasPrefix(name, "dp"):
+		return "diamond_pearl"
+	case strings.HasPrefix(id, "jp-hgss") || strings.Contains(name, "heartgold") || strings.Contains(name, "soulsilver"):
+		return "hgss"
+	case strings.HasPrefix(id, "jp-adv") || strings.HasPrefix(name, "adv"):
+		return "adv"
+	case strings.HasPrefix(id, "jp-ex") || strings.HasPrefix(name, "ex "):
+		return "adv"
+	case strings.HasPrefix(id, "jp-cp"):
+		// Collection Packs span XY and SM eras, default to XY
+		return "xy"
+	}
+
+	// Keyword-based detection for sets without clear prefixes
+	switch {
+	case strings.Contains(name, "jungle"):
+		return "classic_jungle"
+	case strings.Contains(name, "fossil"):
+		return "classic_fossil"
+	case strings.Contains(name, "rocket"):
+		return "classic_rocket"
+	case strings.Contains(name, "gym") || strings.Contains(name, "leaders") || strings.Contains(name, "stadium"):
+		return "classic_gym"
+	case strings.Contains(name, "neo") || (strings.Contains(name, "gold") && strings.Contains(name, "silver")):
+		return "neo"
+	// Legendary Pokemon keywords for era detection
+	case strings.Contains(name, "arceus") || strings.Contains(name, "dialga") || strings.Contains(name, "palkia") || strings.Contains(name, "giratina"):
+		return "diamond_pearl"
+	case strings.Contains(name, "reshiram") || strings.Contains(name, "zekrom") || strings.Contains(name, "kyurem"):
+		return "black_white"
+	case strings.Contains(name, "xerneas") || strings.Contains(name, "yveltal"):
+		return "xy"
+	case strings.Contains(name, "solgaleo") || strings.Contains(name, "lunala"):
+		return "sun_moon"
+	case strings.Contains(name, "zacian") || strings.Contains(name, "zamazenta"):
+		return "sword_shield"
+	}
+
+	// Default to classic base if nothing matches
+	return "classic_base"
+}
+
 // precomputeFields pre-computes lowercase and searchable text fields at load time
 // for efficient matching during OCR identification. This avoids repeated string
 // operations during the hot path.
@@ -452,14 +549,37 @@ func (s *PokemonHybridService) loadCardsFromDirectory(cardsDir string, isJapanes
 func (s *PokemonHybridService) SearchCards(query string) (*models.CardSearchResult, error) {
 	s.mu.RLock()
 	defer s.mu.RUnlock()
-	return s.searchCardsLocked(query)
+	return s.searchCardsLocked(query, "")
+}
+
+// SearchCardsWithLanguage searches for Pokemon cards by name with language filtering.
+// Language parameter:
+//   - "japanese" -> only Japanese cards (IsJapanese=true)
+//   - "english" -> only English cards (IsJapanese=false)
+//   - "" or other -> no filtering, return all cards
+//
+// This is used after Gemini identifies a card's language to ensure the search results
+// match the detected language (e.g., Japanese cards for Japanese-language scans).
+func (s *PokemonHybridService) SearchCardsWithLanguage(query string, language string) (*models.CardSearchResult, error) {
+	s.mu.RLock()
+	defer s.mu.RUnlock()
+	return s.searchCardsLocked(query, language)
 }
 
 // searchCardsLocked performs the search assuming the caller holds at least an RLock.
 // This internal method allows SearchCardsGrouped to search and group under a single lock.
-func (s *PokemonHybridService) searchCardsLocked(query string) (*models.CardSearchResult, error) {
+// Language parameter:
+//   - "japanese" -> only Japanese cards (IsJapanese=true)
+//   - "english" -> only English cards (IsJapanese=false)
+//   - "" or other -> no filtering, return all cards
+func (s *PokemonHybridService) searchCardsLocked(query string, language string) (*models.CardSearchResult, error) {
 	// Normalize apostrophes for consistent matching (handles "Blaine's" vs "Blaine's")
 	queryLower := strings.ToLower(strings.TrimSpace(normalizeApostrophes(query)))
+
+	// Normalize language filter
+	langFilter := strings.ToLower(strings.TrimSpace(language))
+	filterJapanese := langFilter == "japanese"
+	filterEnglish := langFilter == "english"
 
 	// Score cards based on match quality
 	type scoredMatch struct {
@@ -471,6 +591,13 @@ func (s *PokemonHybridService) searchCardsLocked(query string) (*models.CardSear
 
 	// First pass: Find all cards that contain the query in their name
 	for idx, card := range s.cards {
+		// Apply language filter
+		if filterJapanese && !card.IsJapanese {
+			continue
+		}
+		if filterEnglish && card.IsJapanese {
+			continue
+		}
 		nameLower := strings.ToLower(card.Name)
 
 		score := 0
@@ -508,6 +635,14 @@ func (s *PokemonHybridService) searchCardsLocked(query string) (*models.CardSear
 		for name, indices := range s.cardIndex {
 			if strings.Contains(name, queryLower) || strings.Contains(queryLower, name) {
 				for _, idx := range indices {
+					// Apply language filter
+					card := s.cards[idx]
+					if filterJapanese && !card.IsJapanese {
+						continue
+					}
+					if filterEnglish && card.IsJapanese {
+						continue
+					}
 					if !seen[idx] {
 						seen[idx] = true
 						scored = append(scored, scoredMatch{idx: idx, score: 400})
@@ -538,6 +673,13 @@ func (s *PokemonHybridService) searchCardsLocked(query string) (*models.CardSear
 			if setScore > 0 {
 				// Add all cards from this set
 				for idx, card := range s.cards {
+					// Apply language filter
+					if filterJapanese && !card.IsJapanese {
+						continue
+					}
+					if filterEnglish && card.IsJapanese {
+						continue
+					}
 					if card.SetID == setID && !seen[idx] {
 						seen[idx] = true
 						scored = append(scored, scoredMatch{idx: idx, score: setScore})
@@ -615,8 +757,8 @@ func (s *PokemonHybridService) SearchCardsGrouped(query string, sortBy SetSortOr
 	s.mu.RLock()
 	defer s.mu.RUnlock()
 
-	// Search using internal method (already under lock)
-	result, err := s.searchCardsLocked(query)
+	// Search using internal method (already under lock), no language filter
+	result, err := s.searchCardsLocked(query, "")
 	if err != nil {
 		return nil, err
 	}
@@ -803,10 +945,34 @@ func (s *PokemonHybridService) GetCard(id string) (*models.Card, error) {
 	return nil, nil
 }
 
+// getSetSymbolURL returns the symbol URL for a set, using series fallback if needed.
+// Must be called while holding at least an RLock on s.mu.
+func (s *PokemonHybridService) getSetSymbolURL(setID string) string {
+	set, exists := s.sets[setID]
+	if !exists {
+		return ""
+	}
+
+	// If set has a direct symbol mapping, use it
+	if set.Images.Symbol != "" {
+		return set.Images.Symbol
+	}
+
+	// Fallback to series symbol for sets without direct mapping (common for Japanese deck kits, promos)
+	series := inferSeriesFromSet(setID, set.Name)
+	if symbolURL, ok := seriesFallbackSymbols[series]; ok {
+		return symbolURL
+	}
+
+	return ""
+}
+
 func (s *PokemonHybridService) convertToCard(lc LocalPokemonCard) models.Card {
 	setName := lc.SetID
+	symbolURL := ""
 	if set, ok := s.sets[lc.SetID]; ok {
 		setName = set.Name
+		symbolURL = s.getSetSymbolURL(lc.SetID)
 	}
 
 	return models.Card{
@@ -821,6 +987,7 @@ func (s *PokemonHybridService) convertToCard(lc LocalPokemonCard) models.Card {
 		ImageURLLarge: lc.Images.Large,
 		TCGPlayerID:   lc.TCGPlayerID, // Include TCGPlayerID for Japanese cards
 		PriceSource:   "pending",
+		SetSymbolURL:  symbolURL,
 	}
 }
 
@@ -895,99 +1062,6 @@ func (s *PokemonHybridService) SearchJapaneseByName(name string) []*models.Card 
 	}
 
 	return results
-}
-
-// SearchJapaneseByNameForGemini implements JapaneseCardSearcher interface for Gemini function calling.
-// Searches for Japanese-exclusive Pokemon cards by name and returns candidates with images.
-func (s *PokemonHybridService) SearchJapaneseByNameForGemini(ctx context.Context, name string, limit int) ([]CandidateCard, error) {
-	s.mu.RLock()
-	defer s.mu.RUnlock()
-
-	if limit <= 0 {
-		limit = 10
-	}
-	if limit > 20 {
-		limit = 20
-	}
-
-	nameLower := strings.ToLower(strings.TrimSpace(name))
-	if nameLower == "" {
-		return nil, nil
-	}
-
-	// Score cards based on match quality
-	type scoredMatch struct {
-		card  LocalPokemonCard
-		score int
-	}
-	var matches []scoredMatch
-
-	for _, localCard := range s.cards {
-		// Only include Japanese cards
-		if !localCard.IsJapanese {
-			continue
-		}
-
-		score := 0
-
-		// Exact name match (highest priority)
-		if localCard.nameLower == nameLower {
-			score = 1000
-		} else if strings.HasPrefix(localCard.nameLower, nameLower+" ") {
-			// Name with suffix
-			score = 800
-		} else if strings.HasSuffix(localCard.nameLower, " "+nameLower) {
-			// Name with prefix
-			score = 700
-		} else if strings.Contains(localCard.nameLower, nameLower) {
-			// Partial name match
-			score = 500
-		}
-
-		if score > 0 {
-			matches = append(matches, scoredMatch{card: localCard, score: score})
-		}
-	}
-
-	// Sort by score descending, then by name
-	sort.Slice(matches, func(i, j int) bool {
-		if matches[i].score != matches[j].score {
-			return matches[i].score > matches[j].score
-		}
-		return matches[i].card.Name < matches[j].card.Name
-	})
-
-	// Convert to CandidateCard
-	var candidates []CandidateCard
-	for i := 0; i < len(matches) && len(candidates) < limit; i++ {
-		lc := matches[i].card
-		imageURL := lc.Images.Large
-		if imageURL == "" {
-			imageURL = lc.Images.Small
-		}
-		if imageURL == "" {
-			continue // Skip cards without images
-		}
-
-		set := s.sets[lc.SetID]
-		candidates = append(candidates, CandidateCard{
-			ID:       lc.ID,
-			Name:     lc.Name,
-			SetCode:  lc.SetID,
-			SetName:  set.Name,
-			Number:   lc.Number,
-			ImageURL: imageURL,
-			// Enriched data for Gemini filtering
-			Rarity:      lc.Rarity,
-			Artist:      lc.Artist,
-			ReleaseDate: set.ReleaseDate,
-			Subtypes:    lc.Subtypes,
-			HP:          lc.HP,
-			Types:       lc.Types,
-		})
-	}
-
-	return candidates, nil
 }
 
 // GetJapaneseCardByID finds a Japanese card by its ID (prefixed with "jp-")
@@ -1579,6 +1653,111 @@ func (s *PokemonHybridService) SearchByName(ctx context.Context, name string, li
 	return candidates, nil
 }
 
+// SearchByNameWithLanguage implements CardSearcher interface for Gemini function calling.
+// Searches for Pokemon cards by name with optional language filtering.
+// Language parameter:
+//   - "japanese" -> only Japanese cards (IsJapanese=true)
+//   - "english" -> only English cards (IsJapanese=false)
+//   - "" or other -> no filtering, return all cards
+func (s *PokemonHybridService) SearchByNameWithLanguage(ctx context.Context, name string, language string, limit int) ([]CandidateCard, error) {
+	s.mu.RLock()
+	defer s.mu.RUnlock()
+
+	if limit <= 0 {
+		limit = 10
+	}
+	if limit > 20 {
+		limit = 20
+	}
+
+	nameLower := strings.ToLower(strings.TrimSpace(name))
+	if nameLower == "" {
+		return nil, nil
+	}
+
+	// Normalize language filter
+	langFilter := strings.ToLower(strings.TrimSpace(language))
+	filterJapanese := langFilter == "japanese"
+	filterEnglish := langFilter == "english"
+
+	// Score cards based on match quality
+	type scoredMatch struct {
+		card  LocalPokemonCard
+		score int
+	}
+	var matches []scoredMatch
+
+	for _, localCard := range s.cards {
+		// Apply language filter
+		if filterJapanese && !localCard.IsJapanese {
+			continue
+		}
+		if filterEnglish && localCard.IsJapanese {
+			continue
+		}
+
+		score := 0
+
+		// Exact name match (highest priority)
+		if localCard.nameLower == nameLower {
+			score = 1000
+		} else if strings.HasPrefix(localCard.nameLower, nameLower+" ") {
+			// Name with suffix (e.g., "Charizard" matches "Charizard V")
+			score = 800
+		} else if strings.HasSuffix(localCard.nameLower, " "+nameLower) {
+			// Name with prefix
+			score = 700
+		} else if strings.Contains(localCard.nameLower, nameLower) {
+			// Partial name match
+			score = 500
+		}
+
+		if score > 0 {
+			matches = append(matches, scoredMatch{card: localCard, score: score})
+		}
+	}
+
+	// Sort by score descending, then by name
+	sort.Slice(matches, func(i, j int) bool {
+		if matches[i].score != matches[j].score {
+			return matches[i].score > matches[j].score
+		}
+		return matches[i].card.Name < matches[j].card.Name
+	})
+
+	// Convert to CandidateCard
+	var candidates []CandidateCard
+	for i := 0; i < len(matches) && len(candidates) < limit; i++ {
+		lc := matches[i].card
+		imageURL := lc.Images.Large
+		if imageURL == "" {
+			imageURL = lc.Images.Small
+		}
+		if imageURL == "" {
+			continue // Skip cards without images
+		}
+
+		set := s.sets[lc.SetID]
+		candidates = append(candidates, CandidateCard{
+			ID:       lc.ID,
+			Name:     lc.Name,
+			SetCode:  lc.SetID,
+			SetName:  set.Name,
+			Number:   lc.Number,
+			ImageURL: imageURL,
+			// Enriched data for Gemini filtering
+			Rarity:      lc.Rarity,
+			Artist:      lc.Artist,
+			ReleaseDate: set.ReleaseDate,
+			Subtypes:    lc.Subtypes,
+			HP:          lc.HP,
+			Types:       lc.Types,
+		})
+	}
+
+	return candidates, nil
+}
+
 // GetBySetAndNumber implements CardSearcher interface for Gemini function calling.
 // Gets a specific Pokemon card by set code and collector number.
 // Tries multiple ID formats to handle variations in how card IDs are stored.
@@ -1857,6 +2036,106 @@ func (s *PokemonHybridService) ListAllSets(query string) []SetInfo {
 	})
 
 	return results
+}
+
+// GetSetSymbolImages implements SetSymbolFetcher interface for Gemini.
+// Fetches symbol images for sets matching the query.
+func (s *PokemonHybridService) GetSetSymbolImages(ctx context.Context, query string, limit int) ([]SetSymbolImage, error) {
+	if limit <= 0 {
+		limit = 10
+	}
+	if limit > 10 {
+		limit = 10
+	}
+
+	// Search sets by query
+	sets, err := s.ListSets(ctx, query)
+	if err != nil {
+		return nil, err
+	}
+
+	if len(sets) > limit {
+		sets = sets[:limit]
+	}
+
+	// Download symbols in parallel
+	results := make([]SetSymbolImage, len(sets))
+	var wg sync.WaitGroup
+	var mu sync.Mutex
+	successCount := 0
+
+	for i, set := range sets {
+		wg.Add(1)
+		go func(idx int, setInfo SetInfo) {
+			defer wg.Done()
+
+			// Get symbol URL (with fallback for Japanese sets)
+			symbolURL := setInfo.SymbolURL
+			if symbolURL == "" {
+				symbolURL = s.getSetSymbolURL(setInfo.ID)
+			}
+			if symbolURL == "" {
+				return
+			}
+
+			// Download symbol image
+			imageData, err := s.downloadSymbolImage(ctx, symbolURL)
+			if err != nil {
+				log.Printf("Failed to download symbol for set %s: %v", setInfo.ID, err)
+				return
+			}
+
+			mu.Lock()
+			results[idx] = SetSymbolImage{
+				SetID:       setInfo.ID,
+				SetName:     setInfo.Name,
+				Series:      setInfo.Series,
+				ReleaseDate: setInfo.ReleaseDate,
+				ImageData:   imageData,
+			}
+			successCount++
+			mu.Unlock()
+		}(i, set)
+	}
+
+	wg.Wait()
+
+	// Filter out empty results (failed downloads)
+	filtered := make([]SetSymbolImage, 0, successCount)
+	for _, r := range results {
+		if r.ImageData != "" {
+			filtered = append(filtered, r)
+		}
+	}
+
+	return filtered, nil
+}
+
+// downloadSymbolImage downloads a symbol image and returns base64-encoded data.
+func (s *PokemonHybridService) downloadSymbolImage(ctx context.Context, url string) (string, error) {
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return "", err
+	}
+
+	client := &http.Client{Timeout: 10 * time.Second}
+	resp, err := client.Do(req)
+	if err != nil {
+		return "", err
+	}
+	defer resp.Body.Close()
+
+	if resp.StatusCode != http.StatusOK {
+		return "", fmt.Errorf("HTTP %d fetching symbol", resp.StatusCode)
+	}
+
+	// Read image (limit to 1MB for symbols)
+	data, err := io.ReadAll(io.LimitReader(resp.Body, 1*1024*1024))
+	if err != nil {
+		return "", err
+	}
+
+	return base64.StdEncoding.EncodeToString(data), nil
 }
 
 // GetSetCards returns all cards in a specific set, optionally filtered by name.

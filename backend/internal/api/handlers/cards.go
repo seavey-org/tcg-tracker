@@ -460,6 +460,19 @@ func (h *CardHandler) IdentifyCardFromImage(c *gin.Context) {
 		}
 	}
 
+	// Determine language filter for search based on detected language
+	// - Japanese -> search only Japanese cards (different product line)
+	// - German/French/Italian/Spanish -> search English cards (same artwork, no separate pricing)
+	// - English or unknown -> no filter
+	searchLanguage := ""
+	observedLangLower := strings.ToLower(result.ObservedLang)
+	if observedLangLower == "japanese" {
+		searchLanguage = "japanese"
+	} else if observedLangLower == "german" || observedLangLower == "french" ||
+		observedLangLower == "italian" || observedLangLower == "spanish" {
+		searchLanguage = "english"
+	}
+
 	// Search by each term to populate candidates so user can pick the right card
 	// This handles: exact match (user picks from variants), mismatch, timeout, low confidence
 	for _, searchName := range searchTermsToTry {
@@ -467,7 +480,7 @@ func (h *CardHandler) IdentifyCardFromImage(c *gin.Context) {
 		var err error
 
 		if result.Game == "pokemon" {
-			searchResult, err = h.pokemonService.SearchCards(searchName)
+			searchResult, err = h.pokemonService.SearchCardsWithLanguage(searchName, searchLanguage)
 		} else if result.Game == "mtg" {
 			searchResult, err = h.scryfallService.SearchCards(searchName)
 		}

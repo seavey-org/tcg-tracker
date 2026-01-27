@@ -22,18 +22,19 @@ import (
 const (
 	geminiModel          = "gemini-2.0-flash"
 	geminiAPIURL         = "https://generativelanguage.googleapis.com/v1beta/models/%s:generateContent"
-	geminiTimeout        = 60 * time.Second // Longer timeout for multi-turn
+	geminiTimeout        = 90 * time.Second // Longer timeout for multi-turn identification
 	imageDownloadTimeout = 10 * time.Second
-	maxTurns             = 10 // Max conversation turns before giving up
+	maxTurns             = 15 // Max conversation turns before giving up
 )
 
 // GeminiService handles card identification via Gemini Vision API with function calling
 type GeminiService struct {
-	apiKey     string
-	httpClient *http.Client
-	imgClient  *http.Client
-	enabled    bool
-	imageCache *lru.Cache[string, string] // cardID -> base64 image, max 50 entries
+	apiKey      string
+	httpClient  *http.Client
+	imgClient   *http.Client
+	enabled     bool
+	imageCache  *lru.Cache[string, string] // cardID -> base64 image, max 50 entries
+	symbolCache *lru.Cache[string, string] // setID -> base64 symbol image, max 100 entries
 }
 
 // NewGeminiService creates a new Gemini service
@@ -47,22 +48,29 @@ func NewGeminiService() *GeminiService {
 		}
 	}
 
-	// Create LRU cache for images (max 50 images, ~50MB)
+	// Create LRU cache for card images (max 50 images, ~50MB)
 	imageCache, err := lru.New[string, string](50)
 	if err != nil {
 		log.Printf("Failed to create image cache: %v", err)
 	}
 
+	// Create LRU cache for set symbols (max 100, ~500KB - symbols are small)
+	symbolCache, err := lru.New[string, string](100)
+	if err != nil {
+		log.Printf("Failed to create symbol cache: %v", err)
+	}
+
 	svc := &GeminiService{
-		apiKey:     apiKey,
-		httpClient: &http.Client{Timeout: geminiTimeout},
-		imgClient:  &http.Client{Timeout: imageDownloadTimeout},
-		enabled:    apiKey != "",
-		imageCache: imageCache,
+		apiKey:      apiKey,
+		httpClient:  &http.Client{Timeout: geminiTimeout},
+		imgClient:   &http.Client{Timeout: imageDownloadTimeout},
+		enabled:     apiKey != "",
+		imageCache:  imageCache,
+		symbolCache: symbolCache,
 	}
 
 	if svc.enabled {
-		log.Printf("Gemini service: enabled (model=%s, image_cache=50)", geminiModel)
+		log.Printf("Gemini service: enabled (model=%s, image_cache=50, symbol_cache=100)", geminiModel)
 	} else {
 		log.Printf("Gemini service: disabled (no GOOGLE_API_KEY)")
 	}
@@ -142,6 +150,14 @@ type CardSearcher interface {
 	GetSetInfo(ctx context.Context, setCode string) (*SetDetails, error)
 }
 
+// LanguageFilteredSearcher is an optional interface for searchers that support language filtering.
+// Currently only Pokemon cards support this (Japanese vs English card databases).
+type LanguageFilteredSearcher interface {
+	// SearchByNameWithLanguage searches for cards by name with optional language filtering.
+	// Language parameter: "japanese", "english", or "" for no filter.
+	SearchByNameWithLanguage(ctx context.Context, name string, language string, limit int) ([]CandidateCard, error)
+}
+
 // CardDetails contains full card information for text verification
 type CardDetails struct {
 	ID       string `json:"id"`
@@ -212,11 +228,20 @@ type SetDetails struct {
 	SetType           string `json:"set_type,omitempty"`           // expansion, promo, masters, etc. (MTG)
 }
 
-// JapaneseCardSearcher is an optional interface for searching Japanese-exclusive cards.
-// Implemented by PokemonHybridService when Japanese card data is loaded.
-type JapaneseCardSearcher interface {
-	// SearchJapaneseByName searches for Japanese-exclusive cards by name
-	SearchJapaneseByName(ctx context.Context, name string, limit int) ([]CandidateCard, error)
+// SetSymbolImage contains a set's symbol image data for Gemini visual comparison
+type SetSymbolImage struct {
+	SetID       string `json:"set_id"`
+	SetName     string `json:"name"`
+	Series      string `json:"series,omitempty"`
+	ReleaseDate string `json:"release_date,omitempty"`
+	ImageData   string `json:"-"` // base64 encoded, not serialized to JSON response
+}
+
+// SetSymbolFetcher is an optional interface for fetching set symbol images.
+// Used by Gemini to visually compare set symbols on scanned cards.
+type SetSymbolFetcher interface {
+	// GetSetSymbolImages fetches symbol images for sets matching the query
+	GetSetSymbolImages(ctx context.Context, query string, limit int) ([]SetSymbolImage, error)
 }
 
 // detectMimeType returns the MIME type for image bytes
@@ -338,6 +363,17 @@ func (s *GeminiService) IdentifyCard(
 						},
 					})
 				}
+
+				// If this was a view_set_symbols call, inject symbol images
+				for _, sym := range result.symbolImages {
+					contents = append(contents, geminiContent{
+						Role: "user",
+						Parts: []geminiPart{
+							{Text: fmt.Sprintf("Set symbol for %s (%s):", sym.SetName, sym.SetID)},
+							{InlineData: &geminiInlineData{MimeType: "image/png", Data: sym.ImageData}},
+						},
+					})
+				}
 			}
 
 			log.Printf("Gemini turn %d: executed %d function calls", turn+1, len(resp.FunctionCalls))
@@ -417,6 +453,8 @@ type functionCallResult struct {
 	imageCardID string // Card ID for context (single image)
 	// For view_multiple_card_images: all images to inject
 	batchImages []cardImage
+	// For view_set_symbols: symbol images to inject
+	symbolImages []SetSymbolImage
 }
 
 // executeFunctionCalls processes Gemini's function calls in parallel and returns responses.
@@ -465,21 +503,13 @@ func (s *GeminiService) executeSingleFunctionCall(
 	var err error
 	var imageData, imageCardID string
 	var batchImages []cardImage
+	var symbolImages []SetSymbolImage
 
 	switch call.Name {
 	case "search_pokemon_cards":
 		resultJSON, err = s.handleSearchCards(ctx, call.Args, pokemonSearcher)
 	case "search_mtg_cards":
 		resultJSON, err = s.handleSearchCards(ctx, call.Args, mtgSearcher)
-	case "search_japanese_pokemon_cards":
-		// Check if the Pokemon searcher implements JapaneseCardSearcher
-		if japaneseSearcher, ok := pokemonSearcher.(interface {
-			SearchJapaneseByNameForGemini(ctx context.Context, name string, limit int) ([]CandidateCard, error)
-		}); ok {
-			resultJSON, err = s.handleSearchJapaneseCards(ctx, call.Args, japaneseSearcher)
-		} else {
-			err = fmt.Errorf("Japanese card search not available (no Japanese card data loaded)")
-		}
 	case "get_pokemon_card":
 		resultJSON, err = s.handleGetCard(ctx, call.Args, pokemonSearcher)
 	case "get_mtg_card":
@@ -529,6 +559,29 @@ func (s *GeminiService) executeSingleFunctionCall(
 		} else {
 			resultJSON, err = s.handleGetSetInfo(ctx, call.Args, pokemonSearcher)
 		}
+	case "view_set_symbols":
+		symbols, symbolErr := s.handleViewSetSymbols(ctx, call.Args, pokemonSearcher, mtgSearcher)
+		if symbolErr == nil && len(symbols) > 0 {
+			// Build JSON response with set info (without image data)
+			setInfos := make([]map[string]interface{}, len(symbols))
+			for i, sym := range symbols {
+				setInfos[i] = map[string]interface{}{
+					"set_id":       sym.SetID,
+					"name":         sym.SetName,
+					"series":       sym.Series,
+					"release_date": sym.ReleaseDate,
+				}
+			}
+			resultJSON, _ = json.Marshal(map[string]interface{}{
+				"sets":   setInfos,
+				"count":  len(symbols),
+				"status": "symbols_loaded",
+			})
+			// Store symbols for injection
+			symbolImages = symbols
+		} else {
+			err = symbolErr
+		}
 	default:
 		err = fmt.Errorf("unknown function: %s", call.Name)
 	}
@@ -549,10 +602,11 @@ func (s *GeminiService) executeSingleFunctionCall(
 	}
 
 	return functionCallResult{
-		response:    response,
-		imageData:   imageData,
-		imageCardID: imageCardID,
-		batchImages: batchImages,
+		response:     response,
+		imageData:    imageData,
+		imageCardID:  imageCardID,
+		batchImages:  batchImages,
+		symbolImages: symbolImages,
 	}
 }
 
@@ -562,35 +616,7 @@ func (s *GeminiService) handleSearchCards(ctx context.Context, args map[string]i
 		return json.Marshal(map[string]interface{}{"error": "name is required"})
 	}
 
-	limit := 10
-	if l, ok := args["limit"].(float64); ok {
-		limit = int(l)
-		if limit > 20 {
-			limit = 20
-		}
-	}
-
-	cards, err := searcher.SearchByName(ctx, name, limit)
-	if err != nil {
-		return json.Marshal(map[string]interface{}{"error": err.Error()})
-	}
-
-	return json.Marshal(map[string]interface{}{
-		"cards": cards,
-		"count": len(cards),
-	})
-}
-
-// JapaneseSearcher is the interface for the SearchJapaneseByNameForGemini method
-type JapaneseSearcher interface {
-	SearchJapaneseByNameForGemini(ctx context.Context, name string, limit int) ([]CandidateCard, error)
-}
-
-func (s *GeminiService) handleSearchJapaneseCards(ctx context.Context, args map[string]interface{}, searcher JapaneseSearcher) ([]byte, error) {
-	name, _ := args["name"].(string)
-	if name == "" {
-		return json.Marshal(map[string]interface{}{"error": "name is required"})
-	}
+	language, _ := args["language"].(string) // Optional: "japanese", "english", or ""
 
 	limit := 10
 	if l, ok := args["limit"].(float64); ok {
@@ -600,17 +626,23 @@ func (s *GeminiService) handleSearchJapaneseCards(ctx context.Context, args map[
 		}
 	}
 
-	cards, err := searcher.SearchJapaneseByNameForGemini(ctx, name, limit)
-	if err != nil {
-		return json.Marshal(map[string]interface{}{"error": err.Error()})
+	var cards []CandidateCard
+	var err error
+
+	// Use language-filtered search if supported and language is specified
+	if language != "" {
+		if langSearcher, ok := searcher.(LanguageFilteredSearcher); ok {
+			cards, err = langSearcher.SearchByNameWithLanguage(ctx, name, language, limit)
+		} else {
+			// Searcher doesn't support language filtering, fall back to regular search
+			cards, err = searcher.SearchByName(ctx, name, limit)
+		}
+	} else {
+		cards, err = searcher.SearchByName(ctx, name, limit)
 	}
 
-	if len(cards) == 0 {
-		return json.Marshal(map[string]interface{}{
-			"cards":   cards,
-			"count":   0,
-			"message": "No Japanese-exclusive cards found. The card may be available in the English database if it was released internationally.",
-		})
+	if err != nil {
+		return json.Marshal(map[string]interface{}{"error": err.Error()})
 	}
 
 	return json.Marshal(map[string]interface{}{
@@ -731,8 +763,8 @@ func (s *GeminiService) handleViewMultipleCardImages(ctx context.Context, args m
 	if len(cardIDsRaw) == 0 {
 		return nil, fmt.Errorf("card_ids array is required")
 	}
-	if len(cardIDsRaw) > 3 {
-		return nil, fmt.Errorf("maximum 3 card_ids allowed per call")
+	if len(cardIDsRaw) > 5 {
+		return nil, fmt.Errorf("maximum 5 card_ids allowed per call")
 	}
 
 	var searcher CardSearcher
@@ -840,6 +872,56 @@ func (s *GeminiService) handleGetSetInfo(ctx context.Context, args map[string]in
 	}
 
 	return json.Marshal(setInfo)
+}
+
+// handleViewSetSymbols fetches set symbol images for visual comparison
+func (s *GeminiService) handleViewSetSymbols(ctx context.Context, args map[string]interface{}, pokemonSearcher, mtgSearcher CardSearcher) ([]SetSymbolImage, error) {
+	query, _ := args["query"].(string)
+	game, _ := args["game"].(string)
+
+	if query == "" {
+		return nil, fmt.Errorf("query is required")
+	}
+
+	limit := 10
+	if l, ok := args["limit"].(float64); ok && l > 0 {
+		limit = int(l)
+		if limit > 10 {
+			limit = 10
+		}
+	}
+
+	// Determine which searcher to use
+	var fetcher SetSymbolFetcher
+	if game == "mtg" {
+		fetcher, _ = mtgSearcher.(SetSymbolFetcher)
+	} else {
+		fetcher, _ = pokemonSearcher.(SetSymbolFetcher)
+	}
+
+	if fetcher == nil {
+		return nil, fmt.Errorf("set symbol fetching not available for %s", game)
+	}
+
+	// Fetch symbols (service handles downloading)
+	symbols, err := fetcher.GetSetSymbolImages(ctx, query, limit)
+	if err != nil {
+		return nil, err
+	}
+
+	// Check cache and update for each symbol
+	for i, sym := range symbols {
+		cacheKey := fmt.Sprintf("symbol:%s:%s", game, sym.SetID)
+		if cached, ok := s.symbolCache.Get(cacheKey); ok {
+			// Use cached version
+			symbols[i].ImageData = cached
+		} else if sym.ImageData != "" {
+			// Cache the newly fetched symbol
+			s.symbolCache.Add(cacheKey, sym.ImageData)
+		}
+	}
+
+	return symbols, nil
 }
 
 func (s *GeminiService) parseIdentificationResult(text string) (*IdentificationResult, error) {
@@ -1114,9 +1196,8 @@ Return the matching card_id with confidence score.
 === TOOLS REFERENCE ===
 
 SEARCH TOOLS (return rich metadata for filtering):
-- search_pokemon_cards: Returns id, name, set, number, rarity, hp, types, subtypes, artist, release_date, regulation_mark
+- search_pokemon_cards(name, language?, limit?): Returns id, name, set, number, rarity, hp, types, subtypes, artist, release_date. Use language="japanese" for Japanese-exclusive cards (jp-* IDs), language="english" for standard English cards, or omit for all.
 - search_mtg_cards: Returns id, name, set, number, rarity, type_line, mana_cost, border_color, frame_effects, artist
-- search_japanese_pokemon_cards: For Japanese-exclusive cards with different artwork
 - search_cards_in_set(set_code, name?, game): Search within a specific set (more targeted, use after identifying set)
 
 LOOKUP TOOLS (for exact matches):
@@ -1129,7 +1210,8 @@ LOOKUP TOOLS (for exact matches):
 VERIFICATION TOOLS:
 - get_card_details: Get full card data (attacks, abilities, oracle text) to verify text matches
 - view_card_image: REQUIRED before returning card_id - compare actual artwork
-- view_multiple_card_images(card_ids, game): View 2-3 images at once (more efficient than multiple single calls)
+- view_multiple_card_images(card_ids, game): View up to 5 images at once (more efficient than multiple single calls)
+- view_set_symbols(query, game, limit?): View up to 10 set symbol images for visual comparison with the scanned card's set symbol
 
 === IMPORTANT RULES ===
 
@@ -1142,8 +1224,8 @@ VERIFICATION TOOLS:
 
 JAPANESE CARDS:
 - Read Japanese text (ポケモン = Pokemon, etc.)
-- Most Japanese cards share artwork with English → search English database first
-- If artwork doesn't match ANY English version → use search_japanese_pokemon_cards
+- Most Japanese cards share artwork with English → search with language="english" first
+- If artwork doesn't match ANY English version → search with language="japanese" for Japanese-exclusive cards
 - Japanese-exclusive sets: "Leaders' Stadium", "Gym" sets (IDs prefixed with "jp-")
 
 1ST EDITION DETECTION (Pokemon):
@@ -1162,6 +1244,13 @@ LANGUAGE DETECTION:
 - French: "PV" for HP, French text
 - Spanish: "PS" for HP
 - Set observed_language to the detected language
+
+SET SYMBOL MATCHING:
+- If you can clearly see the set symbol on the card but cannot read the set name text, use view_set_symbols
+- Search by era (e.g., "neo", "sword & shield") or partial set name (e.g., "vivid", "base")
+- Compare the scanned symbol's shape, color, and style against the returned symbol images
+- Set symbols are most distinctive in older sets (Base Set: pokeball, Jungle: flower, Fossil: shell, Neo: temple gate)
+- Modern sets often share similar symbols within a series - use other clues (card number, release date) to narrow down
 
 === RESPONSE FORMAT ===
 
@@ -1198,13 +1287,18 @@ If NO match found after verification:
 var toolDeclarations = []geminiFunctionDecl{
 	{
 		Name:        "search_pokemon_cards",
-		Description: "Search for Pokemon TCG cards by name. Returns RICH DATA for each card: id, name, set_code, set_name, number, rarity, hp, types (energy), subtypes (V/VMAX/ex/GX), artist, release_date. Use this metadata to FILTER candidates before calling view_card_image. For example, if scanned card shows HP 320 and 'VMAX', filter results by hp='320' and subtypes containing 'VMAX'.",
+		Description: "Search for Pokemon TCG cards by name. Returns RICH DATA for each card: id, name, set_code, set_name, number, rarity, hp, types (energy), subtypes (V/VMAX/ex/GX), artist, release_date. Use this metadata to FILTER candidates before calling view_card_image. For example, if scanned card shows HP 320 and 'VMAX', filter results by hp='320' and subtypes containing 'VMAX'. Use 'language' parameter to filter results when the scanned card's language is known.",
 		Parameters: map[string]interface{}{
 			"type": "object",
 			"properties": map[string]interface{}{
 				"name": map[string]interface{}{
 					"type":        "string",
 					"description": "Card name to search for in ENGLISH (e.g., 'Charizard', 'Pikachu V', 'Professor's Research')",
+				},
+				"language": map[string]interface{}{
+					"type":        "string",
+					"description": "Filter by card language: 'japanese' (Japanese-exclusive cards with jp- prefixed IDs), 'english' (standard English cards), or omit for all cards. Use 'japanese' when the scanned card is Japanese and has different artwork from English versions.",
+					"enum":        []string{"japanese", "english"},
 				},
 				"limit": map[string]interface{}{
 					"type":        "integer",
@@ -1286,24 +1380,7 @@ var toolDeclarations = []geminiFunctionDecl{
 			"required": []string{"card_id", "game"},
 		},
 	},
-	{
-		Name:        "search_japanese_pokemon_cards",
-		Description: "Search for Japanese-exclusive Pokemon TCG cards by name. Use this when the card is Japanese AND the English versions have different artwork (e.g., censored artwork like Misty's Tears, Japanese-only sets like Leaders' Stadium). Returns Japanese cards with their IDs, names, set info, and image URLs.",
-		Parameters: map[string]interface{}{
-			"type": "object",
-			"properties": map[string]interface{}{
-				"name": map[string]interface{}{
-					"type":        "string",
-					"description": "Card name to search for in English (e.g., 'Misty\\'s Tears', 'Sabrina')",
-				},
-				"limit": map[string]interface{}{
-					"type":        "integer",
-					"description": "Maximum number of results (default 10, max 20)",
-				},
-			},
-			"required": []string{"name"},
-		},
-	},
+
 	{
 		Name:        "get_card_details",
 		Description: "Get full details for a specific card including HP, attacks, abilities (Pokemon) or oracle text, power/toughness (MTG). Use this to VERIFY that readable text on the scanned card matches a candidate. For example, if you can read HP '320' and attack 'Max Blaze' on the scanned card, use this to verify the candidate has the same values.",
@@ -1352,14 +1429,14 @@ var toolDeclarations = []geminiFunctionDecl{
 	},
 	{
 		Name:        "view_multiple_card_images",
-		Description: "View 2-3 card images at once for efficient comparison. More efficient than multiple view_card_image calls. Use after filtering candidates by metadata (HP, subtypes, rarity). Maximum 3 cards per call.",
+		Description: "View up to 5 card images at once for efficient comparison. More efficient than multiple view_card_image calls. Use after filtering candidates by metadata (HP, subtypes, rarity). Maximum 5 cards per call.",
 		Parameters: map[string]interface{}{
 			"type": "object",
 			"properties": map[string]interface{}{
 				"card_ids": map[string]interface{}{
 					"type":        "array",
 					"items":       map[string]interface{}{"type": "string"},
-					"description": "Array of card IDs to view (max 3)",
+					"description": "Array of card IDs to view (max 5)",
 				},
 				"game": map[string]interface{}{
 					"type":        "string",
@@ -1411,6 +1488,29 @@ var toolDeclarations = []geminiFunctionDecl{
 				},
 			},
 			"required": []string{"set_code", "game"},
+		},
+	},
+	{
+		Name:        "view_set_symbols",
+		Description: "View set symbol images for visual comparison with the scanned card's set symbol. Use when you can clearly see the set symbol on the card but cannot read the set name text. Search for sets by name, series, or era (e.g., 'neo', 'Vivid Voltage', 'sword & shield', 'base set'). Returns up to 10 set symbols as images for direct visual comparison.",
+		Parameters: map[string]interface{}{
+			"type": "object",
+			"properties": map[string]interface{}{
+				"query": map[string]interface{}{
+					"type":        "string",
+					"description": "Search query for sets - can be set name, series name, or era (e.g., 'neo', 'sword & shield', 'vivid voltage', 'double masters')",
+				},
+				"game": map[string]interface{}{
+					"type":        "string",
+					"enum":        []string{"pokemon", "mtg"},
+					"description": "Game type: 'pokemon' or 'mtg'",
+				},
+				"limit": map[string]interface{}{
+					"type":        "integer",
+					"description": "Maximum symbols to return (default 10, max 10)",
+				},
+			},
+			"required": []string{"query", "game"},
 		},
 	},
 }

@@ -6,6 +6,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"io"
+	"log"
 	"net/http"
 	"net/url"
 	"sort"
@@ -737,6 +738,102 @@ func (s *ScryfallService) ListAllSets(ctx context.Context, query string) ([]SetI
 	})
 
 	return results, nil
+}
+
+// GetSetSymbolImages implements SetSymbolFetcher interface for Gemini.
+// Fetches symbol images for MTG sets matching the query.
+// SVG icons are converted to PNG for consistent handling.
+func (s *ScryfallService) GetSetSymbolImages(ctx context.Context, query string, limit int) ([]SetSymbolImage, error) {
+	if limit <= 0 {
+		limit = 10
+	}
+	if limit > 10 {
+		limit = 10
+	}
+
+	// Search sets by query
+	sets, err := s.ListSets(ctx, query)
+	if err != nil {
+		return nil, err
+	}
+
+	if len(sets) > limit {
+		sets = sets[:limit]
+	}
+
+	// Download and convert symbols in parallel
+	results := make([]SetSymbolImage, len(sets))
+	var wg sync.WaitGroup
+	var mu sync.Mutex
+	successCount := 0
+
+	for i, set := range sets {
+		wg.Add(1)
+		go func(idx int, setInfo SetInfo) {
+			defer wg.Done()
+
+			if setInfo.SymbolURL == "" {
+				return
+			}
+
+			// Download SVG
+			req, err := http.NewRequestWithContext(ctx, "GET", setInfo.SymbolURL, nil)
+			if err != nil {
+				log.Printf("Failed to create request for set %s symbol: %v", setInfo.ID, err)
+				return
+			}
+
+			client := &http.Client{Timeout: 10 * time.Second}
+			resp, err := client.Do(req)
+			if err != nil {
+				log.Printf("Failed to download symbol for set %s: %v", setInfo.ID, err)
+				return
+			}
+			defer resp.Body.Close()
+
+			if resp.StatusCode != http.StatusOK {
+				log.Printf("HTTP %d fetching symbol for set %s", resp.StatusCode, setInfo.ID)
+				return
+			}
+
+			// Read SVG data (limit to 100KB for symbols)
+			svgData, err := io.ReadAll(io.LimitReader(resp.Body, 100*1024))
+			if err != nil {
+				log.Printf("Failed to read symbol for set %s: %v", setInfo.ID, err)
+				return
+			}
+
+			// Convert SVG to PNG
+			pngData, err := svgToPNG(svgData, 128)
+			if err != nil {
+				log.Printf("Failed to convert SVG to PNG for set %s: %v", setInfo.ID, err)
+				return
+			}
+
+			mu.Lock()
+			results[idx] = SetSymbolImage{
+				SetID:       setInfo.ID,
+				SetName:     setInfo.Name,
+				Series:      setInfo.Series,
+				ReleaseDate: setInfo.ReleaseDate,
+				ImageData:   base64.StdEncoding.EncodeToString(pngData),
+			}
+			successCount++
+			mu.Unlock()
+		}(i, set)
+	}
+
+	wg.Wait()
+
+	// Filter out empty results (failed downloads/conversions)
+	filtered := make([]SetSymbolImage, 0, successCount)
+	for _, r := range results {
+		if r.ImageData != "" {
+			filtered = append(filtered, r)
+		}
+	}
+
+	return filtered, nil
 }
 
 // GetSetCards returns all cards in a specific MTG set, optionally filtered by name.

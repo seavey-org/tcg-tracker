@@ -20,6 +20,9 @@ class CardModel {
   final List<String>? promoTypes; // buyabox, prerelease
   final String? releasedAt;
 
+  // Set symbol URL (from backend, populated for all cards)
+  final String? setSymbolUrl;
+
   CardModel({
     required this.id,
     required this.game,
@@ -36,6 +39,7 @@ class CardModel {
     this.frameEffects,
     this.promoTypes,
     this.releasedAt,
+    this.setSymbolUrl,
   });
 
   factory CardModel.fromJson(Map<String, dynamic> json) {
@@ -55,6 +59,7 @@ class CardModel {
       frameEffects: (json['frame_effects'] as List<dynamic>?)?.cast<String>(),
       promoTypes: (json['promo_types'] as List<dynamic>?)?.cast<String>(),
       releasedAt: json['released_at'],
+      setSymbolUrl: json['set_symbol_url'],
     );
   }
 

@@ -42,6 +42,9 @@ type Card struct {
 	ManaCost    string `json:"mana_cost,omitempty" gorm:"-"`    // "{2}{R}{R}"
 	BorderColor string `json:"border_color,omitempty" gorm:"-"` // "black", "borderless", "white"
 	Artist      string `json:"artist,omitempty" gorm:"-"`       // Artist name
+
+	// Set symbol URL (not persisted, populated at runtime from set cache)
+	SetSymbolURL string `json:"set_symbol_url,omitempty" gorm:"-"`
 }
 
 // GetPrice returns the price for a specific condition, printing type, and language.

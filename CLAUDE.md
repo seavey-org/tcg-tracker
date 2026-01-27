@@ -169,9 +169,8 @@ The `GeminiService` uses Gemini's function calling capability to identify cards 
 1. **Image Analysis**: Gemini receives the card image and analyzes visual features (artwork, text, layout, symbols)
 2. **Function Calling**: Gemini can call these tools during identification:
    - **Search tools** (return rich metadata for filtering):
-     - `search_pokemon_cards(name)` - Returns hp, types, subtypes, regulation_mark, artist, release_date
+     - `search_pokemon_cards(name, language?)` - Returns hp, types, subtypes, regulation_mark, artist, release_date. Optional language filter ("Japanese" for jp-* cards, "English" for standard cards)
      - `search_mtg_cards(name)` - Returns type_line, mana_cost, border_color, frame_effects, artist
-     - `search_japanese_pokemon_cards(name)` - For Japanese-exclusive artwork
      - `search_cards_in_set(set_code, name?, game)` - Targeted search within a specific set
    - **Lookup tools**:
      - `get_pokemon_card(set_code, number)` / `get_mtg_card(set_code, number)` - Get exact card
@@ -179,7 +178,8 @@ The `GeminiService` uses Gemini's function calling capability to identify cards 
      - `get_set_info(set_code, game)` - Get set details with symbol description
    - **Verification tools**:
      - `view_card_image(card_id, game)` - View single card image for comparison
-     - `view_multiple_card_images(card_ids, game)` - Batch view 2-3 images at once
+     - `view_multiple_card_images(card_ids, game)` - Batch view up to 5 images at once
+     - `view_set_symbols(set_codes, game)` - View set symbol images for visual comparison
      - `get_card_details(card_id, game)` - Get full card data (attacks, abilities, text)
 3. **Multi-turn Conversation**: Gemini iterates, calling tools as needed until confident
 4. **Result**: Returns the matched card ID with confidence score
@@ -218,11 +218,12 @@ Key fields:
 ### Configuration
 - Requires `GOOGLE_API_KEY` environment variable
 - Model: `gemini-2.0-flash` (configurable in `gemini_service.go`)
-- Max 10 tool call iterations per identification
+- Max 15 tool call iterations per identification
+- Timeout: 90 seconds
 
 ### Performance Optimizations
 - **Parallel Function Execution**: When Gemini calls multiple tools in a single turn (e.g., searching both Pokemon and MTG, or viewing multiple card images), the calls execute in parallel using goroutines
-- **Batch Image Injection**: `view_multiple_card_images` properly injects all requested images (up to 3) into the conversation for comparison
+- **Batch Image Injection**: `view_multiple_card_images` properly injects all requested images (up to 5) into the conversation for comparison
 
 ## Important Implementation Details
 
@@ -332,6 +333,13 @@ The `ScryfallService` caches the list of all MTG sets (from Scryfall API):
 - **TTL**: 24 hours
 - **Purpose**: Avoids fetching ~700 sets on every `list_mtg_sets` call
 - **Size**: ~100KB
+
+### Set Symbol Cache
+Set symbols fetched for `view_set_symbols` are cached:
+- **Size**: 100 symbols max (LRU eviction)
+- **Memory**: ~1-2MB (base64-encoded PNG images)
+- **Purpose**: Speeds up repeated set symbol comparisons during identification
+- **MTG**: Scryfall SVG icons are converted to 128x128 PNG for Gemini compatibility
 
 ### Inverted Index for Card Matching
 The `PokemonHybridService` uses an inverted index for fast full-text card matching:
