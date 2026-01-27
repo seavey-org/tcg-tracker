@@ -262,14 +262,26 @@ func (h *CardHandler) GetSetCards(c *gin.Context) {
 }
 
 // SearchCardsGrouped searches for cards by name and groups results by set.
-// GET /api/cards/search/grouped?q=<name>&game=<pokemon|mtg>
+// GET /api/cards/search/grouped?q=<name>&game=<pokemon|mtg>&sort=<release_date|release_date_asc|name|cards>
 func (h *CardHandler) SearchCardsGrouped(c *gin.Context) {
 	query := c.Query("q")
 	game := c.Query("game")
+	sortParam := c.Query("sort")
 
 	if query == "" {
 		c.JSON(http.StatusBadRequest, gin.H{"error": "query parameter 'q' is required"})
 		return
+	}
+
+	// Parse sort parameter (default: release_date)
+	sortBy := services.SortByReleaseDesc
+	switch sortParam {
+	case "release_date_asc":
+		sortBy = services.SortByReleaseAsc
+	case "name":
+		sortBy = services.SortByName
+	case "cards":
+		sortBy = services.SortByCards
 	}
 
 	var result *models.GroupedSearchResult
@@ -277,9 +289,9 @@ func (h *CardHandler) SearchCardsGrouped(c *gin.Context) {
 
 	switch game {
 	case "mtg":
-		result, err = h.scryfallService.SearchCardsGrouped(c.Request.Context(), query)
+		result, err = h.scryfallService.SearchCardsGrouped(c.Request.Context(), query, sortBy)
 	case "pokemon":
-		result, err = h.pokemonService.SearchCardsGrouped(query)
+		result, err = h.pokemonService.SearchCardsGrouped(query, sortBy)
 	default:
 		c.JSON(http.StatusBadRequest, gin.H{"error": "game parameter must be 'mtg' or 'pokemon'"})
 		return

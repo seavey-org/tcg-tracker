@@ -147,7 +147,8 @@ func (s *ScryfallService) SearchCards(query string) (*models.CardSearchResult, e
 
 // SearchCardsGrouped searches for cards by name and groups results by set.
 // Returns a GroupedSearchResult with cards organized by set for 2-phase selection.
-func (s *ScryfallService) SearchCardsGrouped(ctx context.Context, query string) (*models.GroupedSearchResult, error) {
+// sortBy controls set ordering: SortByReleaseDesc (default), SortByReleaseAsc, SortByName, or SortByCards
+func (s *ScryfallService) SearchCardsGrouped(ctx context.Context, query string, sortBy SetSortOrder) (*models.GroupedSearchResult, error) {
 	// Use SearchCardPrintings to get all printings of a card
 	result, err := s.SearchCardPrintings(query)
 	if err != nil || len(result.Cards) == 0 {
@@ -197,10 +198,29 @@ func (s *ScryfallService) SearchCardsGrouped(ctx context.Context, query string) 
 		groups = append(groups, *g)
 	}
 
-	// Sort by release date (newest first)
-	sort.Slice(groups, func(i, j int) bool {
-		return groups[i].ReleaseDate > groups[j].ReleaseDate
-	})
+	// Sort sets based on requested order
+	switch sortBy {
+	case SortByReleaseAsc:
+		// Oldest first
+		sort.Slice(groups, func(i, j int) bool {
+			return groups[i].ReleaseDate < groups[j].ReleaseDate
+		})
+	case SortByName:
+		// Alphabetical by set name
+		sort.Slice(groups, func(i, j int) bool {
+			return groups[i].SetName < groups[j].SetName
+		})
+	case SortByCards:
+		// Most cards first
+		sort.Slice(groups, func(i, j int) bool {
+			return groups[i].CardCount > groups[j].CardCount
+		})
+	default:
+		// Default: newest first (SortByReleaseDesc)
+		sort.Slice(groups, func(i, j int) bool {
+			return groups[i].ReleaseDate > groups[j].ReleaseDate
+		})
+	}
 
 	// Use the first card's name as the canonical name
 	cardName := result.Cards[0].Name

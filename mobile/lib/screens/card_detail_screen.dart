@@ -10,6 +10,7 @@ import '../services/api_service.dart';
 import '../services/auth_service.dart';
 import '../utils/constants.dart';
 import '../widgets/admin_key_dialog.dart';
+import 'reassign_card_screen.dart';
 
 class CardDetailScreen extends StatefulWidget {
   final CollectionItem? collectionItem;
@@ -117,6 +118,13 @@ class _CardDetailScreenState extends State<CardDetailScreen>
       appBar: AppBar(
         title: Text(_card.name),
         actions: [
+          // Reassign button for scanned items (may have been misidentified)
+          if (_isCollectionItem && _hasScannedImage)
+            IconButton(
+              icon: const Icon(Icons.swap_horiz),
+              onPressed: _openReassignScreen,
+              tooltip: 'Reassign Card',
+            ),
           if (_isCollectionItem)
             IconButton(
               icon: const Icon(Icons.delete_outline),
@@ -1330,6 +1338,21 @@ class _CardDetailScreenState extends State<CardDetailScreen>
       );
     } finally {
       if (mounted) setState(() => _priceRefreshing = false);
+    }
+  }
+
+  /// Open the reassign screen to change which card this item is assigned to
+  Future<void> _openReassignScreen() async {
+    final result = await Navigator.push<bool>(
+      context,
+      MaterialPageRoute(
+        builder: (context) => ReassignCardScreen(item: widget.collectionItem!),
+      ),
+    );
+
+    // If reassignment was successful, pop back to collection
+    if (result == true && mounted) {
+      Navigator.pop(context);
     }
   }
 

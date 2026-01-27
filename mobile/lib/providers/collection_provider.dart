@@ -397,12 +397,14 @@ class CollectionProvider extends ChangeNotifier {
 
   /// Update a collection item
   /// Returns the update response which may indicate a split or merge occurred
+  /// [cardId] - If provided, reassigns the item to a different card
   Future<CollectionUpdateResponse> updateItem(
     int id, {
     int? quantity,
     String? condition,
     PrintingType? printing,
     String? notes,
+    String? cardId,
   }) async {
     try {
       final response = await _apiService.updateCollectionItem(
@@ -411,14 +413,15 @@ class CollectionProvider extends ChangeNotifier {
         condition: condition,
         printing: printing,
         notes: notes,
+        cardId: cardId,
       );
 
       // Store the last update result for UI feedback
       _lastUpdateResult = response;
 
-      // If a split or merge occurred, we need to refresh the full collection
-      // because items may have been created or removed
-      if (response.isSplit || response.isMerged) {
+      // If a split, merge, or reassign occurred, we need to refresh the full collection
+      // because items may have been created, removed, or moved to different cards
+      if (response.isSplit || response.isMerged || response.isReassigned) {
         await fetchCollection();
         await fetchGroupedCollection();
       } else {
@@ -429,8 +432,11 @@ class CollectionProvider extends ChangeNotifier {
         }
       }
 
-      // Refresh stats if quantity or condition/printing changed
-      if (quantity != null || condition != null || printing != null) {
+      // Refresh stats if quantity or condition/printing changed, or if reassigned
+      if (quantity != null ||
+          condition != null ||
+          printing != null ||
+          cardId != null) {
         await fetchStats();
       }
 

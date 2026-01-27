@@ -82,11 +82,12 @@ export const cardService = {
    * Search for cards by name and group results by set for 2-phase selection
    * @param {string} query - Card name to search for
    * @param {string} game - 'pokemon' or 'mtg'
+   * @param {string} [sort='release_date'] - Sort order: 'release_date', 'release_date_asc', 'name', 'cards'
    * @returns {Promise<Object>} - { card_name, set_groups: [...], total_sets }
    */
-  async searchGrouped(query, game) {
+  async searchGrouped(query, game, sort = 'release_date') {
     const response = await api.get('/cards/search/grouped', {
-      params: { q: query, game }
+      params: { q: query, game, sort }
     })
     return response.data
   },

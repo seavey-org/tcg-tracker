@@ -105,6 +105,7 @@ Base URL: `http://localhost:8080/api`
 
 ### Cards
 - `GET /cards/search?q=<query>&game=<pokemon|mtg>` - Search cards
+- `GET /cards/search/grouped?q=<query>&game=<pokemon|mtg>&sort=<release_date|release_date_asc|name|cards>` - Search cards grouped by set (for 2-phase selection UI)
 - `GET /cards/:id` - Get card by ID
 - `GET /cards/:id/prices` - Get condition-specific prices for a card
 - `POST /cards/identify-image` - Identify card from uploaded image (Gemini-powered)
@@ -118,7 +119,7 @@ Base URL: `http://localhost:8080/api`
 - `GET /collection` - Get user's collection (flat list)
 - `GET /collection/grouped?q=<search>&game=<pokemon|mtg>&sort=<added_at|name|price_updated>` - Get collection grouped by card_id with variants summary (supports search and sorting)
 - `POST /collection` - Add card to collection (requires admin key)
-- `PUT /collection/:id` - Update collection item with smart split/merge (requires admin key)
+- `PUT /collection/:id` - Update collection item with smart split/merge/reassign (requires admin key)
 - `DELETE /collection/:id` - Remove from collection (requires admin key)
 - `GET /collection/stats` - Get collection statistics
 - `GET /collection/stats/history` - Get historical collection value snapshots (for charting)

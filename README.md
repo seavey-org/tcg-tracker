@@ -131,6 +131,7 @@ Configure the server URL in settings to point to your backend IP.
 
 ### Cards
 - `GET /api/cards/search?q={query}&game={mtg|pokemon}` - Search for cards
+- `GET /api/cards/search/grouped?q={query}&game={mtg|pokemon}&sort={release_date|release_date_asc|name|cards}` - Search cards grouped by set
 - `GET /api/cards/:id?game={mtg|pokemon}` - Get card details
 - `GET /api/cards/:id/prices` - Get condition-specific prices for a card
 - `POST /api/cards/identify` - Identify card from OCR text
@@ -145,7 +146,7 @@ Configure the server URL in settings to point to your backend IP.
 - `GET /api/collection` - Get all collection items (flat list)
 - `GET /api/collection/grouped` - Get collection grouped by card with variants
 - `POST /api/collection` - Add card to collection (🔒)
-- `PUT /api/collection/:id` - Update collection item with smart split/merge (🔒)
+- `PUT /api/collection/:id` - Update collection item with smart split/merge/reassign (🔒)
 - `DELETE /api/collection/:id` - Remove from collection (🔒)
 - `GET /api/collection/stats` - Get collection statistics
 - `GET /api/collection/stats/history` - Get historical collection value snapshots (for charting)

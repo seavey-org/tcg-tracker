@@ -84,7 +84,8 @@ class GroupedCollectionItem {
 /// Response from update operation including operation info
 class CollectionUpdateResponse {
   final CollectionItem item;
-  final String operation; // 'updated', 'split', 'merged'
+  final String
+  operation; // 'updated', 'split', 'merged', 'reassigned', 'reassigned_merged'
   final String? message;
 
   CollectionUpdateResponse({
@@ -103,4 +104,6 @@ class CollectionUpdateResponse {
 
   bool get isSplit => operation == 'split';
   bool get isMerged => operation == 'merged';
+  bool get isReassigned =>
+      operation == 'reassigned' || operation == 'reassigned_merged';
 }

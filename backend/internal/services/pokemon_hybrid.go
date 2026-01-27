@@ -115,6 +115,18 @@ func normalizeApostrophes(s string) string {
 	return s
 }
 
+// normalizeSetNameForSymbols normalizes set names for matching between sets.json and set_symbols.json.
+// Handles: apostrophes, accented characters (é->e), and trailing ellipsis.
+func normalizeSetNameForSymbols(s string) string {
+	s = normalizeApostrophes(s)
+	// Normalize accented characters (common in "Pokémon")
+	s = strings.ReplaceAll(s, "é", "e")
+	s = strings.ReplaceAll(s, "É", "E")
+	// Remove trailing ellipsis (some set names end with "...")
+	s = strings.TrimSuffix(s, "...")
+	return s
+}
+
 // precomputeFields pre-computes lowercase and searchable text fields at load time
 // for efficient matching during OCR identification. This avoids repeated string
 // operations during the hot path.
@@ -341,16 +353,15 @@ func (s *PokemonHybridService) loadData(dataDir string) error {
 		if japanSetsData, err := os.ReadFile(japanSetsFile); err == nil {
 			var japanSets []LocalSet
 			if err := json.Unmarshal(japanSetsData, &japanSets); err == nil {
-				// Build normalized symbol lookup (handle apostrophe variants)
+				// Build normalized symbol lookup (handle apostrophes, accents, ellipsis)
 				normalizedSymbols := make(map[string]string)
 				for name, url := range japanSymbols {
-					normalizedSymbols[normalizeApostrophes(name)] = url
+					normalizedSymbols[normalizeSetNameForSymbols(name)] = url
 				}
 
 				for _, set := range japanSets {
-					// Normalize set name for symbol lookup (handle apostrophes and trailing ellipsis)
-					normalizedName := normalizeApostrophes(set.Name)
-					normalizedName = strings.TrimSuffix(normalizedName, "...")
+					// Normalize set name for symbol lookup
+					normalizedName := normalizeSetNameForSymbols(set.Name)
 
 					if symbolURL, ok := normalizedSymbols[normalizedName]; ok {
 						set.Images.Symbol = symbolURL
@@ -544,14 +555,30 @@ func (s *PokemonHybridService) searchCardsLocked(query string) (*models.CardSear
 		return s.cards[scored[i].idx].Name < s.cards[scored[j].idx].Name
 	})
 
-	// Convert to cards (limit to 50 for performance)
-	maxResults := 50
-	if len(scored) < maxResults {
-		maxResults = len(scored)
+	// Filter out low-quality matches for short queries to reduce noise
+	// For queries < 5 chars, require at least score 600 (word match or prefix match)
+	// This prevents "Blaine" from matching random cards with "blaine" substring
+	minScore := 0
+	if len(queryLower) < 5 && len(scored) > 10 {
+		minScore = 600
 	}
 
+	// Count results that pass the minimum score filter
+	filteredCount := 0
+	for _, match := range scored {
+		if match.score >= minScore {
+			filteredCount++
+		}
+	}
+
+	// Convert to cards (limit to 50 for performance)
+	maxResults := 50
+
 	cards := make([]models.Card, 0, maxResults)
-	for i := 0; i < maxResults; i++ {
+	for i := 0; i < len(scored) && len(cards) < maxResults; i++ {
+		if scored[i].score < minScore {
+			continue
+		}
 		card := s.convertToCard(s.cards[scored[i].idx])
 		cards = append(cards, card)
 	}
@@ -561,14 +588,29 @@ func (s *PokemonHybridService) searchCardsLocked(query string) (*models.CardSear
 
 	return &models.CardSearchResult{
 		Cards:      cards,
-		TotalCount: len(scored),
-		HasMore:    len(scored) > maxResults,
+		TotalCount: filteredCount,
+		HasMore:    filteredCount > maxResults,
 	}, nil
 }
 
+// SetSortOrder defines how sets should be sorted in grouped search results
+type SetSortOrder string
+
+const (
+	// SortByReleaseDesc sorts sets by release date, newest first (default)
+	SortByReleaseDesc SetSortOrder = "release_date"
+	// SortByReleaseAsc sorts sets by release date, oldest first
+	SortByReleaseAsc SetSortOrder = "release_date_asc"
+	// SortByName sorts sets alphabetically by name
+	SortByName SetSortOrder = "name"
+	// SortByCards sorts sets by card count, most cards first
+	SortByCards SetSortOrder = "cards"
+)
+
 // SearchCardsGrouped searches for cards by name and groups results by set.
 // Returns a GroupedSearchResult with cards organized by set for 2-phase selection.
-func (s *PokemonHybridService) SearchCardsGrouped(query string) (*models.GroupedSearchResult, error) {
+// sortBy controls set ordering: "release_date" (default), "release_date_asc", "name", or "cards"
+func (s *PokemonHybridService) SearchCardsGrouped(query string, sortBy SetSortOrder) (*models.GroupedSearchResult, error) {
 	// Hold lock for entire operation to avoid lock/unlock/lock pattern
 	s.mu.RLock()
 	defer s.mu.RUnlock()
@@ -619,10 +661,29 @@ func (s *PokemonHybridService) SearchCardsGrouped(query string) (*models.Grouped
 		groups = append(groups, *g)
 	}
 
-	// Sort by release date (newest first)
-	sort.Slice(groups, func(i, j int) bool {
-		return groups[i].ReleaseDate > groups[j].ReleaseDate
-	})
+	// Sort sets based on requested order
+	switch sortBy {
+	case SortByReleaseAsc:
+		// Oldest first
+		sort.Slice(groups, func(i, j int) bool {
+			return groups[i].ReleaseDate < groups[j].ReleaseDate
+		})
+	case SortByName:
+		// Alphabetical by set name
+		sort.Slice(groups, func(i, j int) bool {
+			return groups[i].SetName < groups[j].SetName
+		})
+	case SortByCards:
+		// Most cards first
+		sort.Slice(groups, func(i, j int) bool {
+			return groups[i].CardCount > groups[j].CardCount
+		})
+	default:
+		// Default: newest first (SortByReleaseDesc)
+		sort.Slice(groups, func(i, j int) bool {
+			return groups[i].ReleaseDate > groups[j].ReleaseDate
+		})
+	}
 
 	// Determine the canonical card name (use the first result's name)
 	cardName := result.Cards[0].Name

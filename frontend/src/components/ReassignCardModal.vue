@@ -22,6 +22,7 @@ const searching = ref(false)
 const searchError = ref(null)
 const selectedCard = ref(null)
 const game = ref(props.currentCard.game || 'pokemon')
+const sortOrder = ref('release_date') // 'release_date', 'release_date_asc', 'name', 'cards'
 
 // Data
 const setGroups = ref([]) // Grouped search results
@@ -62,7 +63,7 @@ async function performGroupedSearch(query) {
   searching.value = true
   searchError.value = null
   try {
-    const result = await cardService.searchGrouped(query, game.value)
+    const result = await cardService.searchGrouped(query, game.value, sortOrder.value)
     setGroups.value = result.set_groups || []
     phase.value = setGroups.value.length > 0 ? 'set-list' : 'search'
   } catch {
@@ -71,6 +72,14 @@ async function performGroupedSearch(query) {
     phase.value = 'search'
   } finally {
     searching.value = false
+  }
+}
+
+// Re-sort when sort order changes
+function changeSortOrder(newOrder) {
+  sortOrder.value = newOrder
+  if (searchQuery.value.length >= 2) {
+    performGroupedSearch(searchQuery.value)
   }
 }
 
@@ -254,9 +263,22 @@ const totalCards = computed(() => {
 
             <!-- Phase 1: Set List -->
             <div v-if="phase === 'set-list' && !selectedCard" class="space-y-2 max-h-80 overflow-y-auto">
-              <p class="text-sm text-gray-500 dark:text-gray-400 mb-2">
-                Found {{ totalCards }} cards in {{ setGroups.length }} sets. Select a set:
-              </p>
+              <div class="flex items-center justify-between mb-2">
+                <p class="text-sm text-gray-500 dark:text-gray-400">
+                  Found {{ totalCards }} cards in {{ setGroups.length }} sets. Select a set:
+                </p>
+                <!-- Sort dropdown -->
+                <select
+                  :value="sortOrder"
+                  @change="changeSortOrder($event.target.value)"
+                  class="text-xs border dark:border-gray-600 rounded px-2 py-1 bg-white dark:bg-gray-700 text-gray-700 dark:text-gray-300"
+                >
+                  <option value="release_date">Newest First</option>
+                  <option value="release_date_asc">Oldest First</option>
+                  <option value="name">Alphabetical</option>
+                  <option value="cards">Most Cards</option>
+                </select>
+              </div>
               <div
                 v-for="setGroup in setGroups"
                 :key="setGroup.set_code"

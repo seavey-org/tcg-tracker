@@ -1117,7 +1117,7 @@ func TestSearchCardsGrouped(t *testing.T) {
 
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			result, err := service.SearchCardsGrouped(tt.query)
+			result, err := service.SearchCardsGrouped(tt.query, SortByReleaseDesc)
 
 			if tt.expectError {
 				if err == nil {
@@ -1399,7 +1399,7 @@ func TestSearchCardsGroupedSorting(t *testing.T) {
 	}
 
 	// Pikachu appears in many sets across different release dates
-	result, err := service.SearchCardsGrouped("Pikachu")
+	result, err := service.SearchCardsGrouped("Pikachu", SortByReleaseDesc)
 	if err != nil {
 		t.Fatalf("SearchCardsGrouped error: %v", err)
 	}
@@ -1420,5 +1420,21 @@ func TestSearchCardsGroupedSorting(t *testing.T) {
 		}
 	}
 
-	t.Logf("Verified %d sets are sorted by release date", len(result.SetGroups))
+	t.Logf("Verified %d sets are sorted by release date (newest first)", len(result.SetGroups))
+
+	// Test alphabetical sorting
+	resultByName, err := service.SearchCardsGrouped("Pikachu", SortByName)
+	if err != nil {
+		t.Fatalf("SearchCardsGrouped (by name) error: %v", err)
+	}
+
+	for i := 1; i < len(resultByName.SetGroups); i++ {
+		prev := resultByName.SetGroups[i-1].SetName
+		curr := resultByName.SetGroups[i].SetName
+		if prev > curr {
+			t.Errorf("Sets not sorted alphabetically: %s before %s", prev, curr)
+		}
+	}
+
+	t.Logf("Verified %d sets are sorted alphabetically", len(resultByName.SetGroups))
 }

@@ -260,13 +260,15 @@ class ApiService {
   }
 
   /// Update a collection item
-  /// Returns CollectionUpdateResponse with operation info (updated/split/merged)
+  /// Returns CollectionUpdateResponse with operation info (updated/split/merged/reassigned)
+  /// [cardId] - If provided, reassigns the collection item to a different card
   Future<CollectionUpdateResponse> updateCollectionItem(
     int id, {
     int? quantity,
     String? condition,
     PrintingType? printing,
     String? notes,
+    String? cardId,
   }) async {
     final serverUrl = await getServerUrl();
     final uri = Uri.parse('$serverUrl/api/collection/$id');
@@ -276,6 +278,7 @@ class ApiService {
     if (condition != null) body['condition'] = condition;
     if (printing != null) body['printing'] = printing.value;
     if (notes != null) body['notes'] = notes;
+    if (cardId != null) body['card_id'] = cardId;
 
     // Get auth headers for protected endpoint
     final authHeaders = await _authService.getAuthHeaders();
@@ -495,7 +498,9 @@ class ApiService {
       params['q'] = query;
     }
 
-    final uri = Uri.parse('$serverUrl/api/sets').replace(queryParameters: params);
+    final uri = Uri.parse(
+      '$serverUrl/api/sets',
+    ).replace(queryParameters: params);
 
     final response = await _httpClient
         .get(uri)
@@ -547,13 +552,19 @@ class ApiService {
 
   /// Search for cards by name and group results by set
   /// Returns results organized by set for 2-phase selection
+  /// [sort] options: 'release_date' (newest first), 'release_date_asc' (oldest first),
+  ///                 'name' (alphabetical), 'cards' (most cards first)
   Future<GroupedSearchResult> searchCardsGrouped(
     String query,
-    String game,
-  ) async {
+    String game, {
+    String? sort,
+  }) async {
     final serverUrl = await getServerUrl();
 
     final params = <String, String>{'q': query, 'game': game};
+    if (sort != null && sort.isNotEmpty) {
+      params['sort'] = sort;
+    }
     final uri = Uri.parse(
       '$serverUrl/api/cards/search/grouped',
     ).replace(queryParameters: params);
