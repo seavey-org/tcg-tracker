@@ -51,13 +51,26 @@ class _ScanResultScreenState extends State<ScanResultScreen> {
     'Chinese',
   ];
 
-  // Check if we should show 2-phase UI (for both MTG and Pokemon with multiple cards)
+  // Check if we should show 2-phase UI (sets -> variants)
+  // Only triggers for actual reprints: same card name in multiple sets
   bool get _showGroupedUI {
     final result = widget.geminiResult;
-    // Show grouped UI for any game with multiple cards from different sets
     if (result.cards.length <= 1) return false;
-    final uniqueSets = result.cards.map((c) => c.setCode).toSet();
-    return uniqueSets.length > 1;
+
+    final uniqueSets = result.cards.map((c) => c.setCode ?? 'unknown').toSet();
+    if (uniqueSets.length <= 1) return false;
+
+    // Smart detection: only use 2-phase for actual reprints
+    // (same card name appearing in different sets)
+    final setsPerName = <String, Set<String>>{};
+    for (final card in result.cards) {
+      final normalizedName = card.name.toLowerCase().trim();
+      final setCode = card.setCode ?? 'unknown';
+      setsPerName.putIfAbsent(normalizedName, () => <String>{}).add(setCode);
+    }
+
+    // If any card name appears in multiple sets, use 2-phase UI
+    return setsPerName.values.any((sets) => sets.length > 1);
   }
 
   @override
@@ -845,7 +858,10 @@ class _ScanResultScreenState extends State<ScanResultScreen> {
               ),
             ),
           ListTile(
-            leading: _buildSetIcon(setInfo.setCode, symbolUrl: setInfo.symbolUrl),
+            leading: _buildSetIcon(
+              setInfo.setCode,
+              symbolUrl: setInfo.symbolUrl,
+            ),
             title: Text(
               setInfo.setName,
               style: isBestMatch
@@ -969,7 +985,8 @@ class _ScanResultScreenState extends State<ScanResultScreen> {
         child: Image.network(
           symbolUrl,
           fit: BoxFit.contain,
-          errorBuilder: (context, error, stackTrace) => _buildFallbackSetIcon(setCode),
+          errorBuilder: (context, error, stackTrace) =>
+              _buildFallbackSetIcon(setCode),
         ),
       );
     }

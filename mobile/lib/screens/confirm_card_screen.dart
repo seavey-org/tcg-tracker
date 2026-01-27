@@ -1,3 +1,5 @@
+import 'dart:typed_data';
+
 import 'package:flutter/material.dart';
 import '../models/card.dart';
 import '../services/api_service.dart';
@@ -44,6 +46,12 @@ class _ConfirmCardScreenState extends State<ConfirmCardScreen> {
   bool _isSearching = false;
   String? _searchError;
   List<CardModel>? _searchResults;
+
+  // Toggle between scanned photo and official image
+  bool _showScannedImage = true;
+
+  bool get _hasScannedImage =>
+      widget.scannedImageBytes != null && widget.scannedImageBytes!.isNotEmpty;
 
   @override
   void initState() {
@@ -93,6 +101,51 @@ class _ConfirmCardScreenState extends State<ConfirmCardScreen> {
     Navigator.pop(context, const ConfirmCardResult.retake());
   }
 
+  Widget _buildCardImage() {
+    if (_hasScannedImage && _showScannedImage) {
+      return Image.memory(
+        Uint8List.fromList(widget.scannedImageBytes!),
+        key: const ValueKey('scanned'),
+        fit: BoxFit.cover,
+        errorBuilder: (context, error, stackTrace) => const Icon(Icons.image),
+      );
+    }
+
+    if (widget.card.imageUrl != null) {
+      return Image.network(
+        widget.card.imageUrl!,
+        key: const ValueKey('official'),
+        fit: BoxFit.cover,
+        errorBuilder: (context, error, stackTrace) => const Icon(Icons.image),
+      );
+    }
+
+    return const Icon(Icons.image, key: ValueKey('placeholder'));
+  }
+
+  Widget _buildTogglePill(String label, bool isActive) {
+    final theme = Theme.of(context);
+    return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
+      decoration: BoxDecoration(
+        color: isActive
+            ? theme.colorScheme.primary
+            : theme.colorScheme.surfaceContainerHighest,
+        borderRadius: BorderRadius.circular(8),
+      ),
+      child: Text(
+        label,
+        style: TextStyle(
+          fontSize: 10,
+          fontWeight: isActive ? FontWeight.bold : FontWeight.normal,
+          color: isActive
+              ? theme.colorScheme.onPrimary
+              : theme.colorScheme.onSurfaceVariant,
+        ),
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
@@ -111,22 +164,50 @@ class _ConfirmCardScreenState extends State<ConfirmCardScreen> {
               Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  SizedBox(
-                    width: 120,
-                    child: AspectRatio(
-                      aspectRatio: 2.5 / 3.5,
-                      child: Card(
-                        clipBehavior: Clip.antiAlias,
-                        child: widget.card.imageUrl != null
-                            ? Image.network(
-                                widget.card.imageUrl!,
-                                fit: BoxFit.cover,
-                                errorBuilder: (context, error, stackTrace) =>
-                                    const Icon(Icons.image),
+                  // Image section with toggle support
+                  Column(
+                    children: [
+                      GestureDetector(
+                        onTap: _hasScannedImage
+                            ? () => setState(
+                                () => _showScannedImage = !_showScannedImage,
                               )
-                            : const Icon(Icons.image),
+                            : null,
+                        child: SizedBox(
+                          width: 120,
+                          child: AspectRatio(
+                            aspectRatio: 2.5 / 3.5,
+                            child: Card(
+                              clipBehavior: Clip.antiAlias,
+                              child: AnimatedSwitcher(
+                                duration: const Duration(milliseconds: 200),
+                                child: _buildCardImage(),
+                              ),
+                            ),
+                          ),
+                        ),
                       ),
-                    ),
+                      // Toggle indicator (only if scanned image available)
+                      if (_hasScannedImage) ...[
+                        const SizedBox(height: 8),
+                        Row(
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            _buildTogglePill('Your Photo', _showScannedImage),
+                            const SizedBox(width: 4),
+                            _buildTogglePill('Official', !_showScannedImage),
+                          ],
+                        ),
+                        const SizedBox(height: 4),
+                        Text(
+                          'Tap image to compare',
+                          style: theme.textTheme.bodySmall?.copyWith(
+                            color: theme.colorScheme.onSurfaceVariant,
+                            fontSize: 10,
+                          ),
+                        ),
+                      ],
+                    ],
                   ),
                   const SizedBox(width: 16),
                   Expanded(
@@ -174,14 +255,6 @@ class _ConfirmCardScreenState extends State<ConfirmCardScreen> {
                         ),
                         icon: const Icon(Icons.check),
                         label: const Text('Yes, this is correct'),
-                      ),
-                      const SizedBox(height: 8),
-                      OutlinedButton.icon(
-                        onPressed: () {
-                          // Stay on page; user can use search below.
-                        },
-                        icon: const Icon(Icons.search),
-                        label: const Text('No, search instead'),
                       ),
                       const SizedBox(height: 8),
                       OutlinedButton.icon(

@@ -350,8 +350,13 @@ The `PokemonHybridService` uses an inverted index for fast full-text card matchi
 | With set filter | ~37μs | 720x faster than full scan |
 | Poor match (fallback) | ~27ms | Falls back to full scan |
 
-### MTG 2-Phase Card Selection
-MTG cards often have many printings across different sets. The 2-phase selection UI helps users pick the exact printing:
+### 2-Phase Card Selection
+Cards with many printings across different sets use a 2-phase selection UI to help users pick the exact printing:
+
+**When it triggers:**
+- Only activates for actual **reprints**: same card name appearing in multiple sets
+- Does NOT trigger when scan returns different cards from different sets (e.g., "Pikachu" and "Charizard")
+- This prevents confusion for Pokemon scans where different sets usually mean different cards
 
 **How it works:**
 1. Scan returns a `cards` array containing all candidate printings
