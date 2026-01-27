@@ -445,7 +445,7 @@ class _CardDetailScreenState extends State<CardDetailScreen>
                     );
                   },
                 ),
-                // Overlay with condition/printing info
+                // Overlay with condition/printing info and price
                 Positioned(
                   bottom: 0,
                   left: 0,
@@ -462,24 +462,39 @@ class _CardDetailScreenState extends State<CardDetailScreen>
                         ],
                       ),
                     ),
-                    child: Row(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisSize: MainAxisSize.min,
                       children: [
-                        Text(
-                          item.condition,
-                          style: theme.textTheme.labelSmall?.copyWith(
-                            color: Colors.white,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                        const Spacer(),
-                        if (item.printing != PrintingType.normal)
-                          Text(
-                            _printingBadgeLabel(item.printing),
-                            style: theme.textTheme.labelSmall?.copyWith(
-                              color: Colors.white,
-                              fontWeight: FontWeight.bold,
+                        Row(
+                          children: [
+                            Text(
+                              item.condition,
+                              style: theme.textTheme.labelSmall?.copyWith(
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold,
+                              ),
                             ),
-                          ),
+                            if (item.printing != PrintingType.normal) ...[
+                              const SizedBox(width: 4),
+                              Text(
+                                '/ ${_printingBadgeLabel(item.printing)}',
+                                style: theme.textTheme.labelSmall?.copyWith(
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                            ],
+                            const Spacer(),
+                            Text(
+                              item.displayTotalValue,
+                              style: theme.textTheme.labelSmall?.copyWith(
+                                color: Colors.green.shade300,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ],
+                        ),
                       ],
                     ),
                   ),

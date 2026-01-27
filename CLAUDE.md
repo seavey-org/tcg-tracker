@@ -220,6 +220,10 @@ Key fields:
 - Model: `gemini-2.0-flash` (configurable in `gemini_service.go`)
 - Max 10 tool call iterations per identification
 
+### Performance Optimizations
+- **Parallel Function Execution**: When Gemini calls multiple tools in a single turn (e.g., searching both Pokemon and MTG, or viewing multiple card images), the calls execute in parallel using goroutines
+- **Batch Image Injection**: `view_multiple_card_images` properly injects all requested images (up to 3) into the conversation for comparison
+
 ## Important Implementation Details
 
 ### Authentication
@@ -399,6 +403,9 @@ SQLite database with GORM models in `internal/models/`:
 - `Card` - Card data with prices, images, metadata
 - `CardPrice` - Condition, printing, and language-specific prices (NM, LP, MP, HP, DMG) for each card/printing/language combo
 - `CollectionItem` - User's collection entries with quantity, condition, printing type, and language
+  - `ItemValue` (computed, not persisted) - Condition-specific value calculated by backend
+  - `PriceLanguage` (computed) - Which language's price was used (may differ if fallback)
+  - `PriceFallback` (computed) - True if price is from a different language than the card's language
 
 ### Printing Types
 Cards support multiple printing variants via the `PrintingType` enum:

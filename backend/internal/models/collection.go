@@ -27,6 +27,11 @@ type CollectionItem struct {
 	Notes            string       `json:"notes"`
 	AddedAt          time.Time    `json:"added_at"`
 	ScannedImagePath string       `json:"scanned_image_path" gorm:"default:null"`
+
+	// Calculated fields (not persisted to database)
+	ItemValue     float64      `json:"item_value" gorm:"-"`               // Condition-specific value for this item
+	PriceLanguage CardLanguage `json:"price_language,omitempty" gorm:"-"` // Language of price used (may differ if fallback)
+	PriceFallback bool         `json:"price_fallback,omitempty" gorm:"-"` // True if price is from different language than card
 }
 
 type CollectionStats struct {

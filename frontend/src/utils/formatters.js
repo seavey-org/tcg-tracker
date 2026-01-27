@@ -50,11 +50,19 @@ export function isFoilPrinting(printing) {
 }
 
 /**
- * Calculate the value of a collection item (respecting printing type and quantity).
+ * Calculate the value of a collection item.
+ * Prefers backend-calculated item_value (condition-specific pricing) when available,
+ * otherwise falls back to base card price calculation.
  * @param {object} item - Collection item with card, quantity, printing properties
  * @returns {number} Total value
  */
 export function getItemValue(item) {
+  // Use backend-calculated item_value if available (accounts for condition, printing, language)
+  if (item?.item_value !== undefined && item.item_value !== null) {
+    return item.item_value
+  }
+
+  // Fallback to base card price calculation (for search results, etc.)
   const card = item?.card || item
   const quantity = item?.quantity || 1
   const useFoilPrice = isFoilPrinting(item?.printing)

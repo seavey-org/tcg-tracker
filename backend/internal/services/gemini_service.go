@@ -11,6 +11,7 @@ import (
 	"net/http"
 	"os"
 	"strings"
+	"sync"
 	"time"
 
 	lru "github.com/hashicorp/golang-lru/v2"
@@ -316,13 +317,24 @@ func (s *GeminiService) IdentifyCard(
 					},
 				})
 
-				// If this was a view_card_image call, inject the actual image
+				// If this was a view_card_image call (single image), inject the actual image
 				if result.imageData != "" {
 					contents = append(contents, geminiContent{
 						Role: "user",
 						Parts: []geminiPart{
 							{Text: fmt.Sprintf("Here is the image for card %s:", result.imageCardID)},
 							{InlineData: &geminiInlineData{MimeType: "image/jpeg", Data: result.imageData}},
+						},
+					})
+				}
+
+				// If this was a view_multiple_card_images call, inject ALL images
+				for _, img := range result.batchImages {
+					contents = append(contents, geminiContent{
+						Role: "user",
+						Parts: []geminiPart{
+							{Text: fmt.Sprintf("Here is the image for card %s:", img.cardID)},
+							{InlineData: &geminiInlineData{MimeType: "image/jpeg", Data: img.imageData}},
 						},
 					})
 				}
@@ -391,119 +403,157 @@ func (s *GeminiService) IdentifyCard(
 	return result, nil
 }
 
+// cardImage holds an image for injection into the conversation
+type cardImage struct {
+	cardID    string
+	imageData string // base64-encoded
+}
+
 // functionCallResult holds the result of a function call, which may include images
 type functionCallResult struct {
 	response *geminiFunctionResponse
 	// If non-empty, this image should be injected into the conversation after the function response
-	imageData   string // base64-encoded image
-	imageCardID string // Card ID for context
+	imageData   string // base64-encoded image (single image)
+	imageCardID string // Card ID for context (single image)
+	// For view_multiple_card_images: all images to inject
+	batchImages []cardImage
 }
 
-// executeFunctionCalls processes Gemini's function calls and returns responses
+// executeFunctionCalls processes Gemini's function calls in parallel and returns responses.
+// This significantly reduces latency when Gemini calls multiple functions in one turn
+// (e.g., searching both Pokemon and MTG, or viewing multiple card images).
 func (s *GeminiService) executeFunctionCalls(
 	ctx context.Context,
 	calls []geminiFunctionCall,
 	pokemonSearcher CardSearcher,
 	mtgSearcher CardSearcher,
 ) ([]functionCallResult, error) {
-	var results []functionCallResult
-
-	for _, call := range calls {
-		var resultJSON []byte
-		var err error
-		var imageData, imageCardID string
-
-		switch call.Name {
-		case "search_pokemon_cards":
-			resultJSON, err = s.handleSearchCards(ctx, call.Args, pokemonSearcher)
-		case "search_mtg_cards":
-			resultJSON, err = s.handleSearchCards(ctx, call.Args, mtgSearcher)
-		case "search_japanese_pokemon_cards":
-			// Check if the Pokemon searcher implements JapaneseCardSearcher
-			if japaneseSearcher, ok := pokemonSearcher.(interface {
-				SearchJapaneseByNameForGemini(ctx context.Context, name string, limit int) ([]CandidateCard, error)
-			}); ok {
-				resultJSON, err = s.handleSearchJapaneseCards(ctx, call.Args, japaneseSearcher)
-			} else {
-				err = fmt.Errorf("Japanese card search not available (no Japanese card data loaded)")
-			}
-		case "get_pokemon_card":
-			resultJSON, err = s.handleGetCard(ctx, call.Args, pokemonSearcher)
-		case "get_mtg_card":
-			resultJSON, err = s.handleGetCard(ctx, call.Args, mtgSearcher)
-		case "view_card_image":
-			// Special handling - returns image data to inject into conversation
-			imageData, imageCardID, err = s.handleViewCardImage(ctx, call.Args, pokemonSearcher, mtgSearcher)
-			if err == nil {
-				resultJSON = []byte(fmt.Sprintf(`{"card_id": "%s", "status": "image_loaded"}`, imageCardID))
-			}
-		case "get_card_details":
-			resultJSON, err = s.handleGetCardDetails(ctx, call.Args, pokemonSearcher, mtgSearcher)
-		case "list_pokemon_sets":
-			resultJSON, err = s.handleListSets(ctx, call.Args, pokemonSearcher)
-		case "list_mtg_sets":
-			resultJSON, err = s.handleListSets(ctx, call.Args, mtgSearcher)
-		case "view_multiple_card_images":
-			// Special handling - returns multiple images to inject into conversation
-			images, batchErr := s.handleViewMultipleCardImages(ctx, call.Args, pokemonSearcher, mtgSearcher)
-			if batchErr == nil && len(images) > 0 {
-				// Return the first image as the primary, others will be in batchImages
-				imageData = images[0].imageData
-				imageCardID = images[0].cardID
-				// Build response with all card IDs
-				cardIDs := make([]string, len(images))
-				for i, img := range images {
-					cardIDs[i] = img.cardID
-				}
-				resultJSON, _ = json.Marshal(map[string]interface{}{
-					"card_ids": cardIDs,
-					"count":    len(images),
-					"status":   "images_loaded",
-				})
-			} else {
-				err = batchErr
-			}
-		case "search_cards_in_set":
-			game, _ := call.Args["game"].(string)
-			if game == "mtg" {
-				resultJSON, err = s.handleSearchCardsInSet(ctx, call.Args, mtgSearcher)
-			} else {
-				resultJSON, err = s.handleSearchCardsInSet(ctx, call.Args, pokemonSearcher)
-			}
-		case "get_set_info":
-			game, _ := call.Args["game"].(string)
-			if game == "mtg" {
-				resultJSON, err = s.handleGetSetInfo(ctx, call.Args, mtgSearcher)
-			} else {
-				resultJSON, err = s.handleGetSetInfo(ctx, call.Args, pokemonSearcher)
-			}
-		default:
-			err = fmt.Errorf("unknown function: %s", call.Name)
-		}
-
-		response := &geminiFunctionResponse{
-			Name: call.Name,
-		}
-
-		if err != nil {
-			response.Response = map[string]interface{}{"error": err.Error()}
-		} else {
-			var result interface{}
-			if err := json.Unmarshal(resultJSON, &result); err != nil {
-				response.Response = map[string]interface{}{"error": "invalid response format"}
-			} else {
-				response.Response = result
-			}
-		}
-
-		results = append(results, functionCallResult{
-			response:    response,
-			imageData:   imageData,
-			imageCardID: imageCardID,
-		})
+	if len(calls) == 0 {
+		return nil, nil
 	}
 
+	// For a single call, skip the goroutine overhead
+	if len(calls) == 1 {
+		result := s.executeSingleFunctionCall(ctx, calls[0], pokemonSearcher, mtgSearcher)
+		return []functionCallResult{result}, nil
+	}
+
+	// Execute multiple calls in parallel
+	results := make([]functionCallResult, len(calls))
+	var wg sync.WaitGroup
+
+	for i, call := range calls {
+		wg.Add(1)
+		go func(i int, call geminiFunctionCall) {
+			defer wg.Done()
+			results[i] = s.executeSingleFunctionCall(ctx, call, pokemonSearcher, mtgSearcher)
+		}(i, call)
+	}
+
+	wg.Wait()
 	return results, nil
+}
+
+// executeSingleFunctionCall processes a single Gemini function call and returns the result.
+func (s *GeminiService) executeSingleFunctionCall(
+	ctx context.Context,
+	call geminiFunctionCall,
+	pokemonSearcher CardSearcher,
+	mtgSearcher CardSearcher,
+) functionCallResult {
+	var resultJSON []byte
+	var err error
+	var imageData, imageCardID string
+	var batchImages []cardImage
+
+	switch call.Name {
+	case "search_pokemon_cards":
+		resultJSON, err = s.handleSearchCards(ctx, call.Args, pokemonSearcher)
+	case "search_mtg_cards":
+		resultJSON, err = s.handleSearchCards(ctx, call.Args, mtgSearcher)
+	case "search_japanese_pokemon_cards":
+		// Check if the Pokemon searcher implements JapaneseCardSearcher
+		if japaneseSearcher, ok := pokemonSearcher.(interface {
+			SearchJapaneseByNameForGemini(ctx context.Context, name string, limit int) ([]CandidateCard, error)
+		}); ok {
+			resultJSON, err = s.handleSearchJapaneseCards(ctx, call.Args, japaneseSearcher)
+		} else {
+			err = fmt.Errorf("Japanese card search not available (no Japanese card data loaded)")
+		}
+	case "get_pokemon_card":
+		resultJSON, err = s.handleGetCard(ctx, call.Args, pokemonSearcher)
+	case "get_mtg_card":
+		resultJSON, err = s.handleGetCard(ctx, call.Args, mtgSearcher)
+	case "view_card_image":
+		// Special handling - returns image data to inject into conversation
+		imageData, imageCardID, err = s.handleViewCardImage(ctx, call.Args, pokemonSearcher, mtgSearcher)
+		if err == nil {
+			resultJSON = []byte(fmt.Sprintf(`{"card_id": "%s", "status": "image_loaded"}`, imageCardID))
+		}
+	case "get_card_details":
+		resultJSON, err = s.handleGetCardDetails(ctx, call.Args, pokemonSearcher, mtgSearcher)
+	case "list_pokemon_sets":
+		resultJSON, err = s.handleListSets(ctx, call.Args, pokemonSearcher)
+	case "list_mtg_sets":
+		resultJSON, err = s.handleListSets(ctx, call.Args, mtgSearcher)
+	case "view_multiple_card_images":
+		// Special handling - returns multiple images to inject into conversation
+		images, batchErr := s.handleViewMultipleCardImages(ctx, call.Args, pokemonSearcher, mtgSearcher)
+		if batchErr == nil && len(images) > 0 {
+			// Build response with all card IDs
+			cardIDs := make([]string, len(images))
+			for i, img := range images {
+				cardIDs[i] = img.cardID
+			}
+			resultJSON, _ = json.Marshal(map[string]interface{}{
+				"card_ids": cardIDs,
+				"count":    len(images),
+				"status":   "images_loaded",
+			})
+			// Store all images for batch injection
+			batchImages = images
+		} else {
+			err = batchErr
+		}
+	case "search_cards_in_set":
+		game, _ := call.Args["game"].(string)
+		if game == "mtg" {
+			resultJSON, err = s.handleSearchCardsInSet(ctx, call.Args, mtgSearcher)
+		} else {
+			resultJSON, err = s.handleSearchCardsInSet(ctx, call.Args, pokemonSearcher)
+		}
+	case "get_set_info":
+		game, _ := call.Args["game"].(string)
+		if game == "mtg" {
+			resultJSON, err = s.handleGetSetInfo(ctx, call.Args, mtgSearcher)
+		} else {
+			resultJSON, err = s.handleGetSetInfo(ctx, call.Args, pokemonSearcher)
+		}
+	default:
+		err = fmt.Errorf("unknown function: %s", call.Name)
+	}
+
+	response := &geminiFunctionResponse{
+		Name: call.Name,
+	}
+
+	if err != nil {
+		response.Response = map[string]interface{}{"error": err.Error()}
+	} else {
+		var result interface{}
+		if err := json.Unmarshal(resultJSON, &result); err != nil {
+			response.Response = map[string]interface{}{"error": "invalid response format"}
+		} else {
+			response.Response = result
+		}
+	}
+
+	return functionCallResult{
+		response:    response,
+		imageData:   imageData,
+		imageCardID: imageCardID,
+		batchImages: batchImages,
+	}
 }
 
 func (s *GeminiService) handleSearchCards(ctx context.Context, args map[string]interface{}, searcher CardSearcher) ([]byte, error) {
@@ -674,7 +724,7 @@ func (s *GeminiService) handleListSets(ctx context.Context, args map[string]inte
 
 // handleViewMultipleCardImages fetches multiple card images at once
 // Returns images to be injected into the conversation
-func (s *GeminiService) handleViewMultipleCardImages(ctx context.Context, args map[string]interface{}, pokemonSearcher, mtgSearcher CardSearcher) ([]struct{ cardID, imageData string }, error) {
+func (s *GeminiService) handleViewMultipleCardImages(ctx context.Context, args map[string]interface{}, pokemonSearcher, mtgSearcher CardSearcher) ([]cardImage, error) {
 	cardIDsRaw, _ := args["card_ids"].([]interface{})
 	game, _ := args["game"].(string)
 
@@ -692,7 +742,7 @@ func (s *GeminiService) handleViewMultipleCardImages(ctx context.Context, args m
 		searcher = pokemonSearcher
 	}
 
-	var results []struct{ cardID, imageData string }
+	var results []cardImage
 	for _, idRaw := range cardIDsRaw {
 		cardID, ok := idRaw.(string)
 		if !ok || cardID == "" {
@@ -723,7 +773,7 @@ func (s *GeminiService) handleViewMultipleCardImages(ctx context.Context, args m
 			}
 		}
 
-		results = append(results, struct{ cardID, imageData string }{cardID, imageB64})
+		results = append(results, cardImage{cardID: cardID, imageData: imageB64})
 	}
 
 	return results, nil

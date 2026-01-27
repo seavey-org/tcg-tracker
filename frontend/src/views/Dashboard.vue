@@ -12,22 +12,12 @@ const priceStatus = ref(null)
 const priceStatusError = ref(null)
 const selectedItem = ref(null)
 
-// Get the appropriate price for a collection item based on its printing
-const getItemPrice = (item) => {
-  if (!item.card) return 0
-  const printing = item.printing || 'Normal'
-  // Use foil price for foil variants (Foil, 1st Edition, Reverse Holofoil)
-  const useFoilPrice = ['Foil', '1st Edition', 'Reverse Holofoil'].includes(printing)
-  if (useFoilPrice) {
-    return item.card.price_foil_usd || item.card.price_usd || 0
-  }
-  return item.card.price_usd || 0
-}
-
-// Show most valuable cards, sorted by price (high to low)
-const topValueCards = computed(() => {
+// Show most valuable scanned cards, sorted by actual condition-based price (high to low)
+// Uses item_value from backend which accounts for condition, printing, and language
+const topValueScans = computed(() => {
   return [...store.items]
-    .sort((a, b) => getItemPrice(b) - getItemPrice(a))
+    .filter(item => item.scanned_image_path) // Only show scanned items
+    .sort((a, b) => (b.item_value || 0) - (a.item_value || 0))
     .slice(0, 12)
 })
 
@@ -221,7 +211,7 @@ const handlePriceUpdated = (updatedCard) => {
 
     <div>
       <div class="flex justify-between items-center mb-4">
-        <h2 class="text-xl font-semibold text-gray-800 dark:text-white">Most Valuable Cards</h2>
+        <h2 class="text-xl font-semibold text-gray-800 dark:text-white">Most Valuable Scans</h2>
         <router-link to="/collection" class="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300">
           View All &rarr;
         </router-link>
@@ -231,19 +221,14 @@ const handlePriceUpdated = (updatedCard) => {
         <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto"></div>
       </div>
 
-      <div v-else-if="topValueCards.length === 0" class="text-center py-12 bg-white dark:bg-gray-800 rounded-lg">
-        <p class="text-gray-500 dark:text-gray-400 mb-4">Your collection is empty</p>
-        <router-link
-          to="/add"
-          class="inline-block bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700"
-        >
-          Add Your First Card
-        </router-link>
+      <div v-else-if="topValueScans.length === 0" class="text-center py-12 bg-white dark:bg-gray-800 rounded-lg">
+        <p class="text-gray-500 dark:text-gray-400 mb-4">No scanned cards yet</p>
+        <p class="text-sm text-gray-400 dark:text-gray-500">Scan cards with the mobile app to see them here</p>
       </div>
 
       <CardGrid
         v-else
-        :cards="topValueCards"
+        :cards="topValueScans"
         :show-quantity="true"
         @select="handleSelect"
       />

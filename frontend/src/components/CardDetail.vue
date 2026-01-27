@@ -478,7 +478,10 @@ const handleRemove = () => {
                   class="w-full aspect-[2.5/3.5] object-cover rounded-lg shadow group-hover:ring-2 group-hover:ring-blue-500"
                 />
                 <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-60 text-white text-xs p-1 rounded-b-lg">
-                  {{ scanItem.printing }} / {{ scanItem.condition }}
+                  <div class="flex justify-between items-center">
+                    <span>{{ scanItem.printing }} / {{ scanItem.condition }}</span>
+                    <span class="font-medium text-green-400">{{ formatPrice(scanItem.item_value) }}</span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -615,6 +618,7 @@ const handleRemove = () => {
                       </span>
                       <span class="text-gray-800 dark:text-white">{{ getConditionLabel(collectionItem.condition) }}</span>
                       <span class="text-gray-500 dark:text-gray-400">x{{ collectionItem.quantity }}</span>
+                      <span class="font-medium text-green-600 dark:text-green-400">{{ formatPrice(collectionItem.item_value) }}</span>
                     </div>
                     <div v-if="collectionItem.scanned_image_path" class="text-xs text-purple-500 mt-1">
                       Scanned card

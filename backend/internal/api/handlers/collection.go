@@ -51,12 +51,20 @@ func (h *CollectionHandler) GetCollection(c *gin.Context) {
 	}
 
 	// For cards not in database (Japanese cards loaded from JSON), fetch from pokemon service
+	// Also calculate item values using condition-specific pricing
 	for i := range items {
 		if items[i].Card.Name == "" && items[i].Card.ImageURL == "" {
 			if card, err := h.pokemonService.GetCard(items[i].CardID); err == nil && card != nil {
 				items[i].Card = *card
 			}
 		}
+
+		// Calculate condition-specific item value
+		priceCondition := models.MapCollectionConditionToPriceCondition(items[i].Condition)
+		priceResult := items[i].Card.GetPriceWithSource(priceCondition, items[i].Printing, items[i].Language)
+		items[i].ItemValue = priceResult.Price * float64(items[i].Quantity)
+		items[i].PriceLanguage = priceResult.PriceLanguage
+		items[i].PriceFallback = priceResult.IsFallback
 	}
 
 	c.JSON(http.StatusOK, items)
@@ -776,7 +784,8 @@ func (h *CollectionHandler) GetGroupedCollection(c *gin.Context) {
 		// Track variants by printing+condition
 		variantMap := make(map[string]*models.CollectionVariant)
 
-		for _, item := range groupItems {
+		for i := range groupItems {
+			item := &groupItems[i]
 			totalQty += item.Quantity
 
 			// Calculate item value using condition-specific pricing with language
@@ -785,6 +794,11 @@ func (h *CollectionHandler) GetGroupedCollection(c *gin.Context) {
 			priceResult := card.GetPriceWithSource(priceCondition, item.Printing, item.Language)
 			itemValue := priceResult.Price * float64(item.Quantity)
 			totalValue += itemValue
+
+			// Set calculated values on the item itself for API response
+			item.ItemValue = itemValue
+			item.PriceLanguage = priceResult.PriceLanguage
+			item.PriceFallback = priceResult.IsFallback
 
 			// Count scanned cards
 			if item.ScannedImagePath != "" {

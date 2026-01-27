@@ -38,6 +38,15 @@ class CollectionItem {
   final DateTime addedAt;
   final String? scannedImagePath;
 
+  /// Backend-calculated value using condition-specific pricing
+  final double? itemValue;
+
+  /// Which language's price was used (may differ from card language if fallback)
+  final String? priceLanguage;
+
+  /// True if the price is from a different language than the card's language
+  final bool priceFallback;
+
   CollectionItem({
     required this.id,
     required this.cardId,
@@ -48,6 +57,9 @@ class CollectionItem {
     this.notes,
     required this.addedAt,
     this.scannedImagePath,
+    this.itemValue,
+    this.priceLanguage,
+    this.priceFallback = false,
   });
 
   factory CollectionItem.fromJson(Map<String, dynamic> json) {
@@ -63,11 +75,20 @@ class CollectionItem {
           ? DateTime.parse(json['added_at'])
           : DateTime.now(),
       scannedImagePath: json['scanned_image_path'],
+      itemValue: (json['item_value'] as num?)?.toDouble(),
+      priceLanguage: json['price_language'],
+      priceFallback: json['price_fallback'] ?? false,
     );
   }
 
-  /// Calculate total value of this item (quantity * appropriate price)
+  /// Get total value of this item.
+  /// Prefers backend-calculated itemValue (condition-specific) when available,
+  /// otherwise falls back to card base price calculation.
   double get totalValue {
+    if (itemValue != null) {
+      return itemValue!;
+    }
+    // Fallback to base card price calculation
     final price = printing.usesFoilPricing
         ? (card.priceFoilUsd ?? card.priceUsd)
         : card.priceUsd;
@@ -101,6 +122,9 @@ class CollectionItem {
     String? notes,
     DateTime? addedAt,
     String? scannedImagePath,
+    double? itemValue,
+    String? priceLanguage,
+    bool? priceFallback,
   }) {
     return CollectionItem(
       id: id ?? this.id,
@@ -112,6 +136,9 @@ class CollectionItem {
       notes: notes ?? this.notes,
       addedAt: addedAt ?? this.addedAt,
       scannedImagePath: scannedImagePath ?? this.scannedImagePath,
+      itemValue: itemValue ?? this.itemValue,
+      priceLanguage: priceLanguage ?? this.priceLanguage,
+      priceFallback: priceFallback ?? this.priceFallback,
     );
   }
 }
