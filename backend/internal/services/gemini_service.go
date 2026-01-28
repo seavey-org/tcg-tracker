@@ -1208,6 +1208,7 @@ type geminiPart struct {
 	InlineData       *geminiInlineData       `json:"inline_data,omitempty"`
 	FunctionCall     *geminiFunctionCall     `json:"functionCall,omitempty"`
 	FunctionResponse *geminiFunctionResponse `json:"functionResponse,omitempty"`
+	ThoughtSignature string                  `json:"thoughtSignature,omitempty"` // Required for Gemini 2.5+/3 models with function calling
 }
 
 type geminiInlineData struct {
