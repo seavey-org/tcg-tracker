@@ -801,9 +801,8 @@ func (s *JustTCGService) DebugSearchCard(name string) {
 
 	log.Printf("JustTCG debug search for %q: found %d cards", name, len(apiResp.Data))
 	for _, card := range apiResp.Data {
-		if strings.Contains(strings.ToLower(card.Name), strings.ToLower(name)) {
-			log.Printf("  - %s | #%s | set: %s | tcgplayerId: %s", card.Name, card.Number, card.Set, card.TCGPlayerID)
-		}
+		// Log ALL results to see what's in the search
+		log.Printf("  - %s | #%s | set: %s | tcgplayerId: %s", card.Name, card.Number, card.Set, card.TCGPlayerID)
 	}
 }
 
