@@ -695,6 +695,10 @@ func (s *JustTCGService) FetchSetTCGPlayerIDs(setID string) (*SetTCGPlayerIDMap,
 
 		// Extract TCGPlayerIDs from cards
 		for _, card := range apiResp.Data {
+			// Debug: log cards with "machamp" in name (case-insensitive)
+			if strings.Contains(strings.ToLower(card.Name), "machamp") {
+				log.Printf("JustTCG debug: found Machamp variant: name=%q number=%q tcgplayerId=%s", card.Name, card.Number, card.TCGPlayerID)
+			}
 			if card.TCGPlayerID == "" {
 				continue
 			}

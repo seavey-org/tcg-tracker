@@ -204,6 +204,24 @@ func (s *TCGPlayerSyncService) SyncMissingTCGPlayerIDs(ctx context.Context) (*Sy
 				normalizedName := normalizeNameForPriceMatch(card.Name)
 				log.Printf("TCGPlayerSync: no match for %q #%s in set %s (normalized name: %q)",
 					card.Name, card.CardNumber, justTCGSetID, normalizedName)
+				// Extra debug for Machamp
+				if strings.Contains(strings.ToLower(card.Name), "machamp") {
+					log.Printf("TCGPlayerSync debug: Machamp lookup failed. CardsByNum has %d entries, CardsByName has %d entries",
+						len(setData.CardsByNum), len(setData.CardsByName))
+					log.Printf("TCGPlayerSync debug: Looking for num=%q or normalizedNum=%q, name=%q",
+						card.CardNumber, strings.TrimLeft(card.CardNumber, "0"), normalizedName)
+					// Check if there's anything with "8" in the keys
+					for k, v := range setData.CardsByNum {
+						if k == "8" || k == "08" || k == "8/102" {
+							log.Printf("TCGPlayerSync debug: Found key %q -> %s", k, v)
+						}
+					}
+					for k, v := range setData.CardsByName {
+						if strings.Contains(k, "machamp") {
+							log.Printf("TCGPlayerSync debug: Found name key %q -> %s", k, v)
+						}
+					}
+				}
 				result.CardsSkipped++
 			}
 		}
