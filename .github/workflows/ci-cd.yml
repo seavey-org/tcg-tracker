@@ -32,6 +32,7 @@ env:
 jobs:
   # Detect which components changed
   check-changes:
+    if: github.event_name != 'pull_request' || !github.event.pull_request.head.repo.fork
     runs-on: ubuntu-latest
     outputs:
       backend: ${{ steps.filter.outputs.backend }}
@@ -60,7 +61,7 @@ jobs:
     runs-on:
       group: homelab-runners
     needs: check-changes
-    if: needs.check-changes.outputs.backend == 'true' || github.event_name == 'workflow_dispatch'
+    if: (github.event_name != 'pull_request' || !github.event.pull_request.head.repo.fork) && (needs.check-changes.outputs.backend == 'true' || github.event_name == 'workflow_dispatch')
     defaults:
       run:
         working-directory: backend
@@ -76,7 +77,7 @@ jobs:
     runs-on:
       group: homelab-runners
     needs: check-changes
-    if: needs.check-changes.outputs.backend == 'true' || github.event_name == 'workflow_dispatch'
+    if: (github.event_name != 'pull_request' || !github.event.pull_request.head.repo.fork) && (needs.check-changes.outputs.backend == 'true' || github.event_name == 'workflow_dispatch')
     defaults:
       run:
         working-directory: backend
@@ -92,7 +93,7 @@ jobs:
     runs-on:
       group: homelab-runners
     needs: check-changes
-    if: needs.check-changes.outputs.frontend == 'true' || needs.check-changes.outputs.backend == 'true' || github.event_name == 'workflow_dispatch'
+    if: (github.event_name != 'pull_request' || !github.event.pull_request.head.repo.fork) && (needs.check-changes.outputs.frontend == 'true' || needs.check-changes.outputs.backend == 'true' || github.event_name == 'workflow_dispatch')
     defaults:
       run:
         working-directory: frontend

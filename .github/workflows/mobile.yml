@@ -22,6 +22,7 @@ on:
 jobs:
   # ============== LINT & TEST ==============
   lint-test:
+    if: github.event_name != 'pull_request' || !github.event.pull_request.head.repo.fork
     runs-on:
       group: homelab-runners
     defaults:
