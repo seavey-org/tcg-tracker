@@ -192,7 +192,7 @@ jobs:
 
       - name: Login to GHCR on production server
         run: |
-          ssh $PROD_USER@$PROD_HOST "echo '${{ secrets.GH_ACTIONS_READ_TOKEN }}' | docker login ghcr.io -u codyseavey --password-stdin"
+          ssh $PROD_USER@$PROD_HOST "echo '${{ github.token }}' | docker login ghcr.io -u ${{ github.actor }} --password-stdin"
 
       - name: Pre-pull images on production (while old containers still running)
         run: |
