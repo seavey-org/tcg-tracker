@@ -92,8 +92,8 @@ class CollectionCard extends StatelessWidget {
                         decoration: BoxDecoration(
                           gradient: LinearGradient(
                             colors: [
-                              Colors.purple.shade300,
-                              Colors.blue.shade300,
+                              colorScheme.primary,
+                              colorScheme.primaryContainer,
                             ],
                           ),
                           borderRadius: BorderRadius.circular(12),
@@ -154,14 +154,16 @@ class CollectionCard extends StatelessWidget {
                       ),
                       decoration: BoxDecoration(
                         color: _card.game == 'mtg'
-                            ? Colors.purple.shade700
-                            : Colors.amber.shade700,
+                            ? colorScheme.primary
+                            : colorScheme.secondary,
                         borderRadius: BorderRadius.circular(8),
                       ),
                       child: Text(
                         _card.game.toUpperCase(),
                         style: theme.textTheme.labelSmall?.copyWith(
-                          color: Colors.white,
+                          color: _card.game == 'mtg'
+                              ? colorScheme.onPrimary
+                              : colorScheme.onSecondary,
                           fontWeight: FontWeight.bold,
                           fontSize: 9,
                         ),

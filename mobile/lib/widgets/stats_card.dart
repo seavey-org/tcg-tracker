@@ -100,7 +100,7 @@ class GameBreakdownCard extends StatelessWidget {
               'MTG',
               mtgCount,
               mtgValue,
-              Colors.purple.shade700,
+              colorScheme.primary,
             ),
             const SizedBox(height: 8),
             _buildGameRow(
@@ -108,7 +108,7 @@ class GameBreakdownCard extends StatelessWidget {
               'Pokemon',
               pokemonCount,
               pokemonValue,
-              Colors.amber.shade700,
+              colorScheme.secondary,
             ),
           ],
         ),
@@ -178,11 +178,11 @@ class PriceQuotaCard extends StatelessWidget {
 
     Color progressColor;
     if (percentage > 0.5) {
-      progressColor = Colors.green;
+      progressColor = colorScheme.tertiary;
     } else if (percentage > 0.2) {
-      progressColor = Colors.orange;
+      progressColor = colorScheme.primary;
     } else {
-      progressColor = Colors.red;
+      progressColor = colorScheme.error;
     }
 
     return Card(
@@ -265,10 +265,11 @@ class _UnmatchedCardsWarningState extends State<UnmatchedCardsWarning> {
     }
 
     final theme = Theme.of(context);
+    final colorScheme = theme.colorScheme;
     final count = widget.unmatchedCards.length;
 
     return Card(
-      color: Colors.amber.shade50,
+      color: colorScheme.errorContainer,
       child: Theme(
         data: theme.copyWith(dividerColor: Colors.transparent),
         child: ExpansionTile(
@@ -276,21 +277,18 @@ class _UnmatchedCardsWarningState extends State<UnmatchedCardsWarning> {
           onExpansionChanged: (expanded) {
             setState(() => _expanded = expanded);
           },
-          leading: Icon(
-            Icons.warning_amber_rounded,
-            color: Colors.amber.shade700,
-          ),
+          leading: Icon(Icons.warning_amber_rounded, color: colorScheme.error),
           title: Text(
             '$count card${count == 1 ? '' : 's'} cannot receive price updates',
             style: theme.textTheme.bodyMedium?.copyWith(
               fontWeight: FontWeight.w600,
-              color: Colors.amber.shade900,
+              color: colorScheme.onErrorContainer,
             ),
           ),
           subtitle: Text(
             'These cards could not be matched in the pricing database',
             style: theme.textTheme.bodySmall?.copyWith(
-              color: Colors.amber.shade800,
+              color: colorScheme.onErrorContainer.withValues(alpha: 0.85),
             ),
           ),
           children: [
@@ -299,8 +297,10 @@ class _UnmatchedCardsWarningState extends State<UnmatchedCardsWarning> {
               shrinkWrap: true,
               physics: const NeverScrollableScrollPhysics(),
               itemCount: widget.unmatchedCards.length,
-              separatorBuilder: (context, index) =>
-                  Divider(height: 1, color: Colors.amber.shade200),
+              separatorBuilder: (context, index) => Divider(
+                height: 1,
+                color: colorScheme.onErrorContainer.withValues(alpha: 0.2),
+              ),
               itemBuilder: (context, index) {
                 final card = widget.unmatchedCards[index];
                 return ListTile(
@@ -309,13 +309,15 @@ class _UnmatchedCardsWarningState extends State<UnmatchedCardsWarning> {
                     card.name,
                     style: theme.textTheme.bodyMedium?.copyWith(
                       fontWeight: FontWeight.w500,
-                      color: Colors.amber.shade900,
+                      color: colorScheme.onErrorContainer,
                     ),
                   ),
                   subtitle: Text(
                     '${card.setName}${card.cardNumber.isNotEmpty ? ' #${card.cardNumber}' : ''}',
                     style: theme.textTheme.bodySmall?.copyWith(
-                      color: Colors.amber.shade700,
+                      color: colorScheme.onErrorContainer.withValues(
+                        alpha: 0.9,
+                      ),
                     ),
                   ),
                 );

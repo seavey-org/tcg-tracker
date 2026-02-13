@@ -298,8 +298,8 @@ class _CardDetailScreenState extends State<CardDetailScreen>
                     gradient: variant.printing.usesFoilPricing
                         ? LinearGradient(
                             colors: [
-                              Colors.purple.shade300,
-                              Colors.blue.shade300,
+                              colorScheme.primary,
+                              colorScheme.primaryContainer,
                             ],
                           )
                         : null,
@@ -819,6 +819,7 @@ class _CardDetailScreenState extends State<CardDetailScreen>
 
   Widget _buildInfoSection(BuildContext context) {
     final theme = Theme.of(context);
+    final colorScheme = theme.colorScheme;
 
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -830,14 +831,16 @@ class _CardDetailScreenState extends State<CardDetailScreen>
               padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
               decoration: BoxDecoration(
                 color: _card.game == 'mtg'
-                    ? Colors.purple.shade700
-                    : Colors.amber.shade700,
+                    ? colorScheme.primary
+                    : colorScheme.secondary,
                 borderRadius: BorderRadius.circular(8),
               ),
               child: Text(
                 _card.game.toUpperCase(),
                 style: theme.textTheme.labelSmall?.copyWith(
-                  color: Colors.white,
+                  color: _card.game == 'mtg'
+                      ? colorScheme.onPrimary
+                      : colorScheme.onSecondary,
                   fontWeight: FontWeight.bold,
                 ),
               ),
@@ -850,20 +853,20 @@ class _CardDetailScreenState extends State<CardDetailScreen>
                   gradient: _printing.usesFoilPricing
                       ? LinearGradient(
                           colors: [
-                            Colors.purple.shade300,
-                            Colors.blue.shade300,
+                            colorScheme.primary,
+                            colorScheme.primaryContainer,
                           ],
                         )
                       : null,
                   color: _printing.usesFoilPricing
                       ? null
-                      : Colors.amber.shade700,
+                      : colorScheme.secondary,
                   borderRadius: BorderRadius.circular(8),
                 ),
                 child: Text(
                   _printingBadgeLabel(_printing),
                   style: theme.textTheme.labelSmall?.copyWith(
-                    color: Colors.white,
+                    color: colorScheme.onSecondary,
                     fontWeight: FontWeight.bold,
                   ),
                 ),

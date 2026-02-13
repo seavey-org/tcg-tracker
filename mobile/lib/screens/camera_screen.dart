@@ -302,18 +302,12 @@ class _CameraScreenState extends State<CameraScreen> {
               padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
               decoration: BoxDecoration(
                 color: _isQualityAcceptable
-                    ? const Color.fromRGBO(
-                        76,
-                        175,
-                        80,
-                        0.8,
-                      ) // Colors.green with 0.8 alpha
-                    : const Color.fromRGBO(
-                        255,
-                        152,
-                        0,
-                        0.8,
-                      ), // Colors.orange with 0.8 alpha
+                    ? Theme.of(
+                        context,
+                      ).colorScheme.tertiary.withValues(alpha: 0.8)
+                    : Theme.of(
+                        context,
+                      ).colorScheme.error.withValues(alpha: 0.8),
                 borderRadius: BorderRadius.circular(20),
               ),
               child: Text(

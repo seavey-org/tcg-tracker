@@ -1,6 +1,91 @@
 @import "tailwindcss";
 @custom-variant dark (&:where(.dark, .dark *));
 
+@theme {
+  --color-blue-50: #fef2f2;
+  --color-blue-100: #fee2e2;
+  --color-blue-200: #fecaca;
+  --color-blue-300: #fca5a5;
+  --color-blue-400: #f87171;
+  --color-blue-500: #ef4444;
+  --color-blue-600: #dc2626;
+  --color-blue-700: #b91c1c;
+  --color-blue-800: #991b1b;
+  --color-blue-900: #7f1d1d;
+  --color-blue-950: #450a0a;
+  --color-indigo-50: #fef2f2;
+  --color-indigo-100: #fee2e2;
+  --color-indigo-200: #fecaca;
+  --color-indigo-300: #fca5a5;
+  --color-indigo-400: #f87171;
+  --color-indigo-500: #ef4444;
+  --color-indigo-600: #dc2626;
+  --color-indigo-700: #b91c1c;
+  --color-indigo-800: #991b1b;
+  --color-indigo-900: #7f1d1d;
+  --color-indigo-950: #450a0a;
+  --color-cyan-50: #fef2f2;
+  --color-cyan-100: #fee2e2;
+  --color-cyan-200: #fecaca;
+  --color-cyan-300: #fca5a5;
+  --color-cyan-400: #f87171;
+  --color-cyan-500: #ef4444;
+  --color-cyan-600: #dc2626;
+  --color-cyan-700: #b91c1c;
+  --color-cyan-800: #991b1b;
+  --color-cyan-900: #7f1d1d;
+  --color-cyan-950: #450a0a;
+  --color-sky-50: #fef2f2;
+  --color-sky-100: #fee2e2;
+  --color-sky-200: #fecaca;
+  --color-sky-300: #fca5a5;
+  --color-sky-400: #f87171;
+  --color-sky-500: #ef4444;
+  --color-sky-600: #dc2626;
+  --color-sky-700: #b91c1c;
+  --color-sky-800: #991b1b;
+  --color-sky-900: #7f1d1d;
+  --color-sky-950: #450a0a;
+  --color-slate-50: #f9fafb;
+  --color-slate-100: #f3f4f6;
+  --color-slate-200: #e5e7eb;
+  --color-slate-300: #d1d5db;
+  --color-slate-400: #9ca3af;
+  --color-slate-500: #6b7280;
+  --color-slate-600: #4b5563;
+  --color-slate-700: #374151;
+  --color-slate-800: #1f2937;
+  --color-slate-900: #111827;
+  --color-slate-950: #030712;
+}
+
+:root {
+  color-scheme: light;
+}
+
+.dark {
+  color-scheme: dark;
+  --color-blue-600: #ef4444;
+  --color-blue-700: #f87171;
+  --color-blue-800: #ef4444;
+  --color-indigo-600: #ef4444;
+  --color-indigo-700: #f87171;
+  --color-indigo-800: #ef4444;
+  --color-cyan-600: #ef4444;
+  --color-cyan-700: #f87171;
+  --color-cyan-800: #ef4444;
+  --color-sky-600: #ef4444;
+  --color-sky-700: #f87171;
+  --color-sky-800: #ef4444;
+}
+
 body {
   min-height: 100vh;
+  background-color: #f3f4f6;
+  color: #1f2937;
+}
+
+.dark body {
+  background-color: #111827;
+  color: #ffffff;
 }
