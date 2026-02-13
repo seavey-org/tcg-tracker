@@ -13,7 +13,7 @@
 services:
   # Go Backend API (serves frontend static files)
   backend:
-    image: ghcr.io/codyseavey/tcg-tracker/app:${IMAGE_TAG:-latest}
+    image: ghcr.io/seavey-org/tcg-tracker/app:${IMAGE_TAG:-latest}
     container_name: tcg-backend
     ports:
       - "3080:8080"

@@ -73,7 +73,7 @@ Images are automatically built and pushed to GitHub Container Registry on each c
 
 | Image | Description |
 |-------|-------------|
-| `ghcr.io/codyseavey/tcg-tracker/app` | Combined Go API + Vue.js frontend |
+| `ghcr.io/seavey-org/tcg-tracker/app` | Combined Go API + Vue.js frontend |
 
 The `app` image is a multi-stage build that compiles the Vue.js frontend and Go backend into a single image, with the Go server serving the static frontend files.
 

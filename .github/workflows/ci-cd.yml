@@ -27,7 +27,7 @@ on:
 
 env:
   REGISTRY: ghcr.io
-  IMAGE_PREFIX: ghcr.io/${{ github.repository }}
+  IMAGE_PREFIX: ghcr.io/seavey-org/tcg-tracker
 
 jobs:
   # Detect which components changed
@@ -57,7 +57,8 @@ jobs:
 
   # ============== BACKEND ==============
   lint-backend:
-    runs-on: [self-hosted, fedora]
+    runs-on:
+      group: homelab-runners
     needs: check-changes
     if: needs.check-changes.outputs.backend == 'true' || github.event_name == 'workflow_dispatch'
     defaults:
@@ -72,7 +73,8 @@ jobs:
           golangci-lint run --timeout=5m
 
   test-backend:
-    runs-on: [self-hosted, fedora]
+    runs-on:
+      group: homelab-runners
     needs: check-changes
     if: needs.check-changes.outputs.backend == 'true' || github.event_name == 'workflow_dispatch'
     defaults:
@@ -87,7 +89,8 @@ jobs:
 
   # ============== FRONTEND ==============
   lint-build-frontend:
-    runs-on: [self-hosted, fedora]
+    runs-on:
+      group: homelab-runners
     needs: check-changes
     if: needs.check-changes.outputs.frontend == 'true' || needs.check-changes.outputs.backend == 'true' || github.event_name == 'workflow_dispatch'
     defaults:
@@ -150,7 +153,8 @@ jobs:
 
   # ============== DEPLOY (SSH to production server) ==============
   deploy:
-    runs-on: [self-hosted, fedora]
+    runs-on:
+      group: homelab-runners
     needs: [check-changes, build-push-app]
     if: |
       always() &&
@@ -192,7 +196,7 @@ jobs:
 
       - name: Pre-pull images on production (while old containers still running)
         run: |
-          ssh $PROD_USER@$PROD_HOST "docker pull ghcr.io/codyseavey/tcg-tracker/app:${{ github.sha }}"
+          ssh $PROD_USER@$PROD_HOST "docker pull ghcr.io/seavey-org/tcg-tracker/app:${{ github.sha }}"
 
       - name: Deploy on production
         run: |

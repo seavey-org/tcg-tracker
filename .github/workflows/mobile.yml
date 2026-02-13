@@ -22,7 +22,8 @@ on:
 jobs:
   # ============== LINT & TEST ==============
   lint-test:
-    runs-on: [self-hosted, fedora]
+    runs-on:
+      group: homelab-runners
     defaults:
       run:
         working-directory: mobile
@@ -37,7 +38,8 @@ jobs:
 
   # ============== BUILD APK (main branch + manual only) ==============
   build-apk:
-    runs-on: [self-hosted, fedora]
+    runs-on:
+      group: homelab-runners
     needs: lint-test
     if: |
       (github.event_name == 'push' && github.ref == 'refs/heads/main') ||

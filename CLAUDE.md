@@ -37,7 +37,7 @@ IMAGE_TAG=abc123def docker compose up -d
 
 ### CI/CD & Docker Images
 - Images are built and pushed to GHCR on each commit to main
-- Images: `ghcr.io/codyseavey/tcg-tracker/app`
+- Images: `ghcr.io/seavey-org/tcg-tracker/app`
 - Tags: `latest` (most recent) and `<commit-sha>` (for rollback)
 - Deploy pulls images instead of building on server
 - The `app` image is a combined frontend+backend build (Go serves the Vue.js static files)
