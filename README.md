@@ -105,7 +105,8 @@ Environment variables:
 - `GOOGLE_API_KEY` - Gemini API key for card identification (**required** for scanning)
 - `ADMIN_KEY` - Admin key for collection modification (optional, auth disabled if not set)
 - `JUSTTCG_API_KEY` - JustTCG API key for condition-based pricing
-- `JUSTTCG_DAILY_LIMIT` - Daily API request limit (default: 1000)
+- `JUSTTCG_DAILY_LIMIT` - Daily API request limit (default: 100)
+- `JUSTTCG_MONTHLY_LIMIT` - Monthly API request limit (default: 1000)
 - `SYNC_TCGPLAYER_IDS_ON_STARTUP` - Set to "true" to sync missing Pokemon TCGPlayerIDs on startup
 - `BULK_IMPORT_CONCURRENCY` - Number of concurrent Gemini calls for bulk import (default: 10)
 - `BULK_IMPORT_IMAGES_DIR` - Directory for bulk import images (default: ./data/bulk_import_images)
@@ -289,8 +290,9 @@ go run cmd/migrate-japanese-collection/main.go -db=./data/tcg_tracker.db -data=.
 ### JustTCG (Pricing)
 - Provides condition-specific pricing for Pokemon and MTG cards
 - API key required
-- Daily limit configurable via `JUSTTCG_DAILY_LIMIT` (free tier 100/day, paid tier 1000/day)
-- Batch pricing uses TCGPlayerIDs (Pokemon) or ScryfallIDs (MTG) for up to 100 cards per request
+- Free tier: 100 requests/day, 1000 requests/month, 20 cards/request
+- Both daily and monthly limits enforced; configure via `JUSTTCG_DAILY_LIMIT` and `JUSTTCG_MONTHLY_LIMIT`
+- Batch pricing uses TCGPlayerIDs (Pokemon) or ScryfallIDs (MTG) for up to 20 cards per request
 - Pokemon Japan is a separate game with unique TCGPlayerIDs
 
 ## Monitoring

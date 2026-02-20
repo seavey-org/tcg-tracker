@@ -39,11 +39,11 @@ func TestGetJustTCGRequestsRemaining(t *testing.T) {
 		t.Error("Should return 0 when JustTCG service is nil")
 	}
 
-	// With JustTCG service
-	justTCG := NewJustTCGService("", 100)
+	// With JustTCG service (daily limit 100, monthly limit 1000)
+	justTCG := NewJustTCGService("", 100, 1000)
 	svc = &PriceService{justTCG: justTCG}
 	remaining := svc.GetJustTCGRequestsRemaining()
 	if remaining != 100 {
-		t.Errorf("Expected 100 remaining, got %d", remaining)
+		t.Errorf("Expected 100 remaining (daily is tighter), got %d", remaining)
 	}
 }

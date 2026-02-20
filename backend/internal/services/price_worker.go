@@ -14,9 +14,9 @@ import (
 
 // Constants for price worker configuration
 const (
-	// defaultBatchSize is the number of cards to update per batch
-	// Paid tier allows 100 cards per request
-	defaultBatchSize = 100
+	// defaultBatchSize is the number of cards to update per batch.
+	// Free tier allows 20 cards per request.
+	defaultBatchSize = 20
 )
 
 // UnmatchedCard represents a card that couldn't be matched for price updates
@@ -59,9 +59,12 @@ type PriceStatus struct {
 	QueueSize         int       `json:"queue_size"`
 
 	// JustTCG quota info
-	DailyLimit int       `json:"daily_limit"`
-	Remaining  int       `json:"remaining"`
-	ResetsAt   time.Time `json:"resets_at,omitempty"`
+	DailyLimit       int       `json:"daily_limit"`
+	Remaining        int       `json:"remaining"`
+	ResetsAt         time.Time `json:"resets_at,omitempty"`
+	MonthlyLimit     int       `json:"monthly_limit"`
+	MonthlyRemaining int       `json:"monthly_remaining"`
+	MonthlyResetsAt  time.Time `json:"monthly_resets_at,omitempty"`
 
 	// Cards that can't receive price updates (missing TCGPlayerID)
 	UnmatchedCards []UnmatchedCard `json:"unmatched_cards,omitempty"`
@@ -73,7 +76,7 @@ func NewPriceWorker(priceService *PriceService, pokemonService *PokemonHybridSer
 		justTCG:        justTCG,
 		pokemonService: pokemonService,
 		batchSize:      defaultBatchSize,
-		updateInterval: 15 * time.Minute,
+		updateInterval: 1 * time.Hour, // Free tier: 24 batches/day = ~744 requests/month
 	}
 }
 
@@ -512,6 +515,8 @@ func (w *PriceWorker) batchUpdatePrices(cards []models.Card) (int, error) {
 	// Update JustTCG quota metrics
 	metrics.JustTCGQuotaRemaining.Set(float64(w.priceService.GetJustTCGRequestsRemaining()))
 	metrics.JustTCGQuotaLimit.Set(float64(w.priceService.GetJustTCGDailyLimit()))
+	metrics.JustTCGMonthlyQuotaRemaining.Set(float64(w.priceService.GetJustTCGMonthlyRequestsRemaining()))
+	metrics.JustTCGMonthlyQuotaLimit.Set(float64(w.priceService.GetJustTCGMonthlyLimit()))
 
 	// Update collection metrics (includes updated values)
 	metrics.UpdateCollectionMetrics(db)
@@ -535,6 +540,9 @@ func (w *PriceWorker) GetStatus() PriceStatus {
 		DailyLimit:        w.priceService.GetJustTCGDailyLimit(),
 		Remaining:         w.priceService.GetJustTCGRequestsRemaining(),
 		ResetsAt:          w.priceService.GetJustTCGResetTime(),
+		MonthlyLimit:      w.priceService.GetJustTCGMonthlyLimit(),
+		MonthlyRemaining:  w.priceService.GetJustTCGMonthlyRequestsRemaining(),
+		MonthlyResetsAt:   w.priceService.GetJustTCGMonthlyResetTime(),
 		UnmatchedCards:    w.unmatchedCards,
 	}
 }

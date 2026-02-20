@@ -45,15 +45,21 @@ func main() {
 	// Initialize Gemini service for card identification
 	geminiService := services.NewGeminiService()
 
-	// Initialize JustTCG service for condition-based pricing
+	// Initialize JustTCG service for condition-based pricing (free tier: 100/day, 1000/month)
 	justTCGAPIKey := os.Getenv("JUSTTCG_API_KEY")
-	justTCGDailyLimit := 100 // Default free tier limit
+	justTCGDailyLimit := 100 // Default free tier daily limit
 	if limitStr := os.Getenv("JUSTTCG_DAILY_LIMIT"); limitStr != "" {
 		if limit, err := strconv.Atoi(limitStr); err == nil {
 			justTCGDailyLimit = limit
 		}
 	}
-	justTCGService := services.NewJustTCGService(justTCGAPIKey, justTCGDailyLimit)
+	justTCGMonthlyLimit := 1000 // Default free tier monthly limit
+	if limitStr := os.Getenv("JUSTTCG_MONTHLY_LIMIT"); limitStr != "" {
+		if limit, err := strconv.Atoi(limitStr); err == nil {
+			justTCGMonthlyLimit = limit
+		}
+	}
+	justTCGService := services.NewJustTCGService(justTCGAPIKey, justTCGDailyLimit, justTCGMonthlyLimit)
 
 	// Initialize price service (JustTCG only, no fallbacks)
 	priceService := services.NewPriceService(justTCGService, database.GetDB())

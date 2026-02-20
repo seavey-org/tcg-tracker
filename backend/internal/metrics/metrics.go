@@ -78,6 +78,20 @@ var (
 		},
 	)
 
+	JustTCGMonthlyQuotaRemaining = promauto.NewGauge(
+		prometheus.GaugeOpts{
+			Name: "tcg_justtcg_monthly_quota_remaining",
+			Help: "Remaining JustTCG API requests for this month",
+		},
+	)
+
+	JustTCGMonthlyQuotaLimit = promauto.NewGauge(
+		prometheus.GaugeOpts{
+			Name: "tcg_justtcg_monthly_quota_limit",
+			Help: "Monthly JustTCG API request limit",
+		},
+	)
+
 	// Collection Metrics
 	CollectionCardsTotal = promauto.NewGauge(
 		prometheus.GaugeOpts{

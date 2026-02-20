@@ -24,7 +24,8 @@ services:
       - FRONTEND_DIST_PATH=/app/frontend/dist
       - GIN_MODE=release
       - JUSTTCG_API_KEY=${JUSTTCG_API_KEY:-}
-      - JUSTTCG_DAILY_LIMIT=${JUSTTCG_DAILY_LIMIT:-1000}
+      - JUSTTCG_DAILY_LIMIT=${JUSTTCG_DAILY_LIMIT:-100}
+      - JUSTTCG_MONTHLY_LIMIT=${JUSTTCG_MONTHLY_LIMIT:-1000}
       - ADMIN_KEY=${ADMIN_KEY:-}
       - SYNC_TCGPLAYER_IDS_ON_STARTUP=${SYNC_TCGPLAYER_IDS_ON_STARTUP:-true}
       # Gemini API for card identification (required for scanning)

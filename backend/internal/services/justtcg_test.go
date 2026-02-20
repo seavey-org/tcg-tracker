@@ -7,24 +7,30 @@ import (
 )
 
 func TestNewJustTCGService(t *testing.T) {
-	// Test with default limit (paid tier)
-	svc := NewJustTCGService("test-key", 0)
-	if svc.dailyLimit != 1000 {
-		t.Errorf("Expected default daily limit of 1000, got %d", svc.dailyLimit)
+	// Test with default limits (free tier)
+	svc := NewJustTCGService("test-key", 0, 0)
+	if svc.dailyLimit != 100 {
+		t.Errorf("Expected default daily limit of 100 (free tier), got %d", svc.dailyLimit)
+	}
+	if svc.monthlyLimit != 1000 {
+		t.Errorf("Expected default monthly limit of 1000 (free tier), got %d", svc.monthlyLimit)
 	}
 	if svc.apiKey != "test-key" {
 		t.Errorf("Expected API key 'test-key', got %s", svc.apiKey)
 	}
 
-	// Test with custom limit
-	svc = NewJustTCGService("", 200)
+	// Test with custom limits
+	svc = NewJustTCGService("", 200, 5000)
 	if svc.dailyLimit != 200 {
 		t.Errorf("Expected daily limit of 200, got %d", svc.dailyLimit)
+	}
+	if svc.monthlyLimit != 5000 {
+		t.Errorf("Expected monthly limit of 5000, got %d", svc.monthlyLimit)
 	}
 }
 
 func TestDailyLimiting(t *testing.T) {
-	svc := NewJustTCGService("", 3)
+	svc := NewJustTCGService("", 3, 1000)
 
 	// Should allow 3 requests via checkDailyLimit
 	for i := 0; i < 3; i++ {
@@ -42,6 +48,65 @@ func TestDailyLimiting(t *testing.T) {
 	remaining := svc.GetRequestsRemaining()
 	if remaining != 0 {
 		t.Errorf("Expected 0 remaining, got %d", remaining)
+	}
+}
+
+func TestMonthlyLimiting(t *testing.T) {
+	// Monthly limit of 3, daily limit high enough not to interfere
+	svc := NewJustTCGService("", 1000, 3)
+
+	// Should allow 3 requests
+	for i := 0; i < 3; i++ {
+		if !svc.checkDailyLimit() {
+			t.Errorf("Request %d should be allowed by monthly limit", i+1)
+		}
+	}
+
+	// 4th request should be blocked by monthly limit
+	if svc.checkDailyLimit() {
+		t.Error("4th request should be blocked by monthly limit")
+	}
+
+	// Verify monthly remaining is 0
+	remaining := svc.GetMonthlyRequestsRemaining()
+	if remaining != 0 {
+		t.Errorf("Expected 0 monthly remaining, got %d", remaining)
+	}
+}
+
+func TestGetRequestsRemainingReturnsMinOfDailyAndMonthly(t *testing.T) {
+	// Daily limit is the tighter constraint
+	svc := NewJustTCGService("", 5, 1000)
+	// Use 3 requests
+	for i := 0; i < 3; i++ {
+		svc.checkDailyLimit()
+	}
+	remaining := svc.GetRequestsRemaining()
+	if remaining != 2 {
+		t.Errorf("Expected 2 remaining (daily is tighter: 5-3=2), got %d", remaining)
+	}
+
+	// Monthly limit is the tighter constraint
+	svc2 := NewJustTCGService("", 1000, 5)
+	for i := 0; i < 3; i++ {
+		svc2.checkDailyLimit()
+	}
+	remaining2 := svc2.GetRequestsRemaining()
+	if remaining2 != 2 {
+		t.Errorf("Expected 2 remaining (monthly is tighter: 5-3=2), got %d", remaining2)
+	}
+}
+
+func TestMonthlyResetTime(t *testing.T) {
+	svc := NewJustTCGService("", 100, 1000)
+	resetTime := svc.GetMonthlyResetTime()
+
+	// Should be the 1st of next month
+	if resetTime.Day() != 1 {
+		t.Errorf("Expected monthly reset on day 1, got day %d", resetTime.Day())
+	}
+	if resetTime.Hour() != 0 || resetTime.Minute() != 0 || resetTime.Second() != 0 {
+		t.Errorf("Expected monthly reset at midnight, got %v", resetTime)
 	}
 }
 

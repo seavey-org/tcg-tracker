@@ -204,7 +204,7 @@ func (s *PriceService) isFresh(updatedAt *time.Time) bool {
 	return time.Since(*updatedAt) < PriceStalenessThreshold
 }
 
-// GetJustTCGRequestsRemaining returns remaining JustTCG API requests for today
+// GetJustTCGRequestsRemaining returns the effective remaining requests (min of daily and monthly).
 func (s *PriceService) GetJustTCGRequestsRemaining() int {
 	if s.justTCG == nil {
 		return 0
@@ -220,10 +220,34 @@ func (s *PriceService) GetJustTCGDailyLimit() int {
 	return s.justTCG.GetDailyLimit()
 }
 
-// GetJustTCGResetTime returns the next reset time
+// GetJustTCGResetTime returns the next daily reset time (midnight)
 func (s *PriceService) GetJustTCGResetTime() time.Time {
 	if s.justTCG == nil {
 		return time.Time{}
 	}
 	return s.justTCG.GetResetTime()
+}
+
+// GetJustTCGMonthlyLimit returns the configured monthly limit
+func (s *PriceService) GetJustTCGMonthlyLimit() int {
+	if s.justTCG == nil {
+		return 0
+	}
+	return s.justTCG.GetMonthlyLimit()
+}
+
+// GetJustTCGMonthlyRequestsRemaining returns remaining JustTCG API requests for this month
+func (s *PriceService) GetJustTCGMonthlyRequestsRemaining() int {
+	if s.justTCG == nil {
+		return 0
+	}
+	return s.justTCG.GetMonthlyRequestsRemaining()
+}
+
+// GetJustTCGMonthlyResetTime returns the 1st of next month (monthly reset)
+func (s *PriceService) GetJustTCGMonthlyResetTime() time.Time {
+	if s.justTCG == nil {
+		return time.Time{}
+	}
+	return s.justTCG.GetMonthlyResetTime()
 }

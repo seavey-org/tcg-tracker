@@ -18,8 +18,8 @@ import (
 
 const (
 	justTCGBaseURL   = "https://api.justtcg.com/v1"
-	justTCGBatchSize = 100 // Max cards per request (paid tier)
-	justTCGRateLimit = 50  // Requests per minute (paid tier)
+	justTCGBatchSize = 20 // Max cards per request (free tier)
+	justTCGRateLimit = 50 // Requests per minute (kept for safety, irrelevant at 100/day)
 )
 
 // JustTCGService handles API calls to JustTCG for card pricing
@@ -28,14 +28,17 @@ type JustTCGService struct {
 	apiKey  string
 	baseURL string
 
-	// Rate limiting (50 requests per minute for paid tier)
+	// Rate limiting (kept for safety, irrelevant at free tier volumes)
 	rateLimiter *rate.Limiter
 
-	// Daily/monthly tracking
-	mu             sync.Mutex
-	dailyLimit     int
-	requestsToday  int
-	lastRequestDay time.Time
+	// Daily and monthly quota tracking (free tier: 100/day, 1000/month)
+	mu                sync.Mutex
+	dailyLimit        int
+	requestsToday     int
+	lastRequestDay    time.Time
+	monthlyLimit      int
+	requestsThisMonth int
+	lastRequestMonth  time.Time
 }
 
 // JustTCG API response structures (matching actual API)
@@ -112,62 +115,108 @@ type BatchPriceResult struct {
 }
 
 // NewJustTCGService creates a new JustTCG API service
-func NewJustTCGService(apiKey string, dailyLimit int) *JustTCGService {
+func NewJustTCGService(apiKey string, dailyLimit int, monthlyLimit int) *JustTCGService {
 	if dailyLimit <= 0 {
-		dailyLimit = 1000 // Default paid tier limit
+		dailyLimit = 100 // Default free tier daily limit
+	}
+	if monthlyLimit <= 0 {
+		monthlyLimit = 1000 // Default free tier monthly limit
 	}
 
-	// Rate limiter: 50 requests per minute (paid tier) = 1 request every 1.2 seconds
+	// Rate limiter: kept for safety, irrelevant at free tier volumes (100/day)
 	limiter := rate.NewLimiter(rate.Every(1200*time.Millisecond), 1)
 
 	return &JustTCGService{
 		client: &http.Client{
-			Timeout: 30 * time.Second, // Longer timeout for batch requests
+			Timeout: 30 * time.Second,
 		},
-		apiKey:      apiKey,
-		baseURL:     justTCGBaseURL,
-		dailyLimit:  dailyLimit,
-		rateLimiter: limiter,
+		apiKey:       apiKey,
+		baseURL:      justTCGBaseURL,
+		dailyLimit:   dailyLimit,
+		monthlyLimit: monthlyLimit,
+		rateLimiter:  limiter,
 	}
 }
 
-// checkDailyLimit checks if we can make another request today
-// Returns true if request can proceed, false if rate limited
+// checkDailyLimit checks if we can make another request, enforcing both daily and monthly quotas.
+// Returns true if request can proceed, false if either limit is exhausted.
 func (s *JustTCGService) checkDailyLimit() bool {
 	s.mu.Lock()
 	defer s.mu.Unlock()
 
 	now := time.Now()
 	today := time.Date(now.Year(), now.Month(), now.Day(), 0, 0, 0, 0, now.Location())
+	thisMonth := time.Date(now.Year(), now.Month(), 1, 0, 0, 0, 0, now.Location())
 
-	// Reset counter if new day
+	// Reset daily counter if new day
 	if s.lastRequestDay.Before(today) {
 		s.requestsToday = 0
 		s.lastRequestDay = today
 	}
 
+	// Reset monthly counter if new month
+	if s.lastRequestMonth.Before(thisMonth) {
+		s.requestsThisMonth = 0
+		s.lastRequestMonth = thisMonth
+	}
+
 	if s.requestsToday >= s.dailyLimit {
+		return false
+	}
+	if s.requestsThisMonth >= s.monthlyLimit {
 		return false
 	}
 
 	s.requestsToday++
+	s.requestsThisMonth++
 	return true
 }
 
-// GetRequestsRemaining returns the number of requests remaining today
+// GetRequestsRemaining returns the number of requests we can still make,
+// which is the minimum of daily and monthly remaining.
 func (s *JustTCGService) GetRequestsRemaining() int {
 	s.mu.Lock()
 	defer s.mu.Unlock()
 
 	now := time.Now()
 	today := time.Date(now.Year(), now.Month(), now.Day(), 0, 0, 0, 0, now.Location())
+	thisMonth := time.Date(now.Year(), now.Month(), 1, 0, 0, 0, 0, now.Location())
 
-	// Reset counter if new day
-	if s.lastRequestDay.Before(today) {
-		return s.dailyLimit
+	dailyRemaining := s.dailyLimit
+	if !s.lastRequestDay.Before(today) {
+		dailyRemaining = s.dailyLimit - s.requestsToday
+	}
+	if dailyRemaining < 0 {
+		dailyRemaining = 0
 	}
 
-	remaining := s.dailyLimit - s.requestsToday
+	monthlyRemaining := s.monthlyLimit
+	if !s.lastRequestMonth.Before(thisMonth) {
+		monthlyRemaining = s.monthlyLimit - s.requestsThisMonth
+	}
+	if monthlyRemaining < 0 {
+		monthlyRemaining = 0
+	}
+
+	if dailyRemaining < monthlyRemaining {
+		return dailyRemaining
+	}
+	return monthlyRemaining
+}
+
+// GetMonthlyRequestsRemaining returns the number of requests remaining this month.
+func (s *JustTCGService) GetMonthlyRequestsRemaining() int {
+	s.mu.Lock()
+	defer s.mu.Unlock()
+
+	now := time.Now()
+	thisMonth := time.Date(now.Year(), now.Month(), 1, 0, 0, 0, 0, now.Location())
+
+	if s.lastRequestMonth.Before(thisMonth) {
+		return s.monthlyLimit
+	}
+
+	remaining := s.monthlyLimit - s.requestsThisMonth
 	if remaining < 0 {
 		return 0
 	}
@@ -182,10 +231,26 @@ func (s *JustTCGService) GetDailyLimit() int {
 	return s.dailyLimit
 }
 
-// GetResetTime returns the next local midnight reset time
+// GetMonthlyLimit returns the configured monthly limit
+func (s *JustTCGService) GetMonthlyLimit() int {
+	s.mu.Lock()
+	defer s.mu.Unlock()
+
+	return s.monthlyLimit
+}
+
+// GetResetTime returns the next local midnight reset time (daily reset)
 func (s *JustTCGService) GetResetTime() time.Time {
 	now := time.Now()
 	return time.Date(now.Year(), now.Month(), now.Day()+1, 0, 0, 0, 0, now.Location())
+}
+
+// GetMonthlyResetTime returns the 1st of next month (monthly reset)
+func (s *JustTCGService) GetMonthlyResetTime() time.Time {
+	now := time.Now()
+	// First day of next month
+	firstOfNextMonth := time.Date(now.Year(), now.Month()+1, 1, 0, 0, 0, 0, now.Location())
+	return firstOfNextMonth
 }
 
 // GetCardPrices fetches condition-specific prices for a single card by name.
@@ -207,13 +272,13 @@ func (s *JustTCGService) GetCardPrices(cardName, setCode string, game models.Gam
 	}
 
 	if !s.checkDailyLimit() {
-		return nil, fmt.Errorf("JustTCG daily rate limit exceeded")
+		return nil, fmt.Errorf("JustTCG quota exceeded (daily or monthly limit reached)")
 	}
 
 	params := url.Values{}
 	params.Set("game", gameStr)
 	params.Set("q", cardName)
-	params.Set("limit", "50")
+	params.Set("limit", fmt.Sprintf("%d", justTCGBatchSize))
 	params.Set("include_price_history", "false")
 	params.Set("include_statistics", "")
 
@@ -256,7 +321,7 @@ func (s *JustTCGService) GetCardPrices(cardName, setCode string, game models.Gam
 		return nil, fmt.Errorf("JustTCG API error: %s", apiResp.Error)
 	}
 
-	s.updateRemaining(apiResp.Metadata.APIDailyRequestsRemaining)
+	s.updateRemaining(apiResp.Metadata)
 
 	if len(apiResp.Data) == 0 {
 		return nil, nil
@@ -319,7 +384,7 @@ func (s *JustTCGService) GetCardPrices(cardName, setCode string, game models.Gam
 // BatchGetPrices fetches prices for multiple cards using the batch POST endpoint.
 // All cards must have either TCGPlayerID or ScryfallID - cards without are skipped.
 // The price worker is responsible for syncing sets to discover TCGPlayerIDs before calling this.
-// Uses 1 API request for up to 100 cards (paid tier).
+// Uses 1 API request for up to 20 cards (free tier).
 func (s *JustTCGService) BatchGetPrices(lookups []CardLookup) (*BatchPriceResult, error) {
 	if len(lookups) == 0 {
 		return &BatchPriceResult{
@@ -354,7 +419,7 @@ func (s *JustTCGService) BatchGetPrices(lookups []CardLookup) (*BatchPriceResult
 
 // fetchCardsBatchPost fetches multiple cards using a single POST request.
 // This is the efficient path for cards with TCGPlayerID or ScryfallID.
-// Uses 1 API request for up to 100 cards (paid tier).
+// Uses 1 API request for up to 20 cards (free tier).
 func (s *JustTCGService) fetchCardsBatchPost(lookups []CardLookup) (*BatchPriceResult, error) {
 	if len(lookups) == 0 {
 		return &BatchPriceResult{
@@ -372,7 +437,7 @@ func (s *JustTCGService) fetchCardsBatchPost(lookups []CardLookup) (*BatchPriceR
 
 	// Check daily limit (counts as 1 request regardless of batch size)
 	if !s.checkDailyLimit() {
-		return nil, fmt.Errorf("JustTCG daily rate limit exceeded")
+		return nil, fmt.Errorf("JustTCG quota exceeded (daily or monthly limit reached)")
 	}
 
 	// Build request body - prefer TCGPlayerID, fallback to ScryfallID
@@ -470,10 +535,10 @@ func (s *JustTCGService) fetchCardsBatchPost(lookups []CardLookup) (*BatchPriceR
 		result.Prices[cardID] = prices
 	}
 
-	s.updateRemaining(apiResp.Metadata.APIDailyRequestsRemaining)
+	s.updateRemaining(apiResp.Metadata)
 
-	log.Printf("JustTCG: batch POST fetched %d/%d cards with prices (remaining: %d daily)",
-		len(result.Prices), len(lookups), apiResp.Metadata.APIDailyRequestsRemaining)
+	log.Printf("JustTCG: batch POST fetched %d/%d cards with prices (remaining: %d daily, %d monthly)",
+		len(result.Prices), len(lookups), apiResp.Metadata.APIDailyRequestsRemaining, apiResp.Metadata.APIRequestsRemaining)
 
 	return result, nil
 }
@@ -486,25 +551,35 @@ func (s *JustTCGService) setHeaders(req *http.Request) {
 	req.Header.Set("Accept", "application/json")
 }
 
-// updateRemaining syncs our counters with JustTCG metadata
-func (s *JustTCGService) updateRemaining(remaining int) {
+// updateRemaining syncs our local counters with the JustTCG API response metadata.
+// This keeps our tracking accurate even if requests are made outside this process.
+func (s *JustTCGService) updateRemaining(meta JustTCGUsage) {
 	s.mu.Lock()
 	defer s.mu.Unlock()
 
-	if remaining < 0 {
-		return
-	}
-
-	// Infer requestsToday from remaining, keep same daily limit
-	requestsToday := s.dailyLimit - remaining
-	if requestsToday < 0 {
-		requestsToday = 0
-	}
-
 	now := time.Now()
 	today := time.Date(now.Year(), now.Month(), now.Day(), 0, 0, 0, 0, now.Location())
-	s.requestsToday = requestsToday
-	s.lastRequestDay = today
+	thisMonth := time.Date(now.Year(), now.Month(), 1, 0, 0, 0, 0, now.Location())
+
+	// Sync daily counter from API
+	if meta.APIDailyRequestsRemaining >= 0 {
+		requestsToday := s.dailyLimit - meta.APIDailyRequestsRemaining
+		if requestsToday < 0 {
+			requestsToday = 0
+		}
+		s.requestsToday = requestsToday
+		s.lastRequestDay = today
+	}
+
+	// Sync monthly counter from API
+	if meta.APIRequestsRemaining >= 0 {
+		requestsThisMonth := s.monthlyLimit - meta.APIRequestsRemaining
+		if requestsThisMonth < 0 {
+			requestsThisMonth = 0
+		}
+		s.requestsThisMonth = requestsThisMonth
+		s.lastRequestMonth = thisMonth
+	}
 }
 
 // convertVariantsToPrices converts JustTCG variants to our CardPrice model
@@ -644,7 +719,7 @@ func (s *JustTCGService) FetchSetTCGPlayerIDs(setID string) (*SetTCGPlayerIDMap,
 
 	// Check daily limit
 	if !s.checkDailyLimit() {
-		return nil, fmt.Errorf("JustTCG daily rate limit exceeded")
+		return nil, fmt.Errorf("JustTCG quota exceeded (daily or monthly limit reached)")
 	}
 
 	result := &SetTCGPlayerIDMap{
@@ -655,7 +730,7 @@ func (s *JustTCGService) FetchSetTCGPlayerIDs(setID string) (*SetTCGPlayerIDMap,
 
 	// Fetch all cards from the set (paginated)
 	offset := 0
-	limit := 100 // Paid tier allows 100 per request
+	limit := justTCGBatchSize // Free tier: 20 cards per request
 
 	for {
 		params := url.Values{}
@@ -691,7 +766,7 @@ func (s *JustTCGService) FetchSetTCGPlayerIDs(setID string) (*SetTCGPlayerIDMap,
 			return nil, fmt.Errorf("JustTCG API error: %s", apiResp.Error)
 		}
 
-		s.updateRemaining(apiResp.Metadata.APIDailyRequestsRemaining)
+		s.updateRemaining(apiResp.Metadata)
 
 		// Extract TCGPlayerIDs from cards
 		for _, card := range apiResp.Data {
@@ -765,7 +840,7 @@ func (s *JustTCGService) FetchAllPokemonSets() ([]string, error) {
 
 	// Check daily limit
 	if !s.checkDailyLimit() {
-		return nil, fmt.Errorf("JustTCG daily rate limit exceeded")
+		return nil, fmt.Errorf("JustTCG quota exceeded (daily or monthly limit reached)")
 	}
 
 	params := url.Values{}
@@ -799,7 +874,7 @@ func (s *JustTCGService) FetchAllPokemonSets() ([]string, error) {
 		return nil, fmt.Errorf("failed to decode response: %w", err)
 	}
 
-	s.updateRemaining(setsResp.Metadata.APIDailyRequestsRemaining)
+	s.updateRemaining(setsResp.Metadata)
 
 	var setIDs []string
 	for _, set := range setsResp.Data {
